@@ -1,0 +1,11 @@
+import Link from "next/link";
+import { ArrowUpRight } from "lucide-react";
+import { interiorBrands, type InteriorBrand } from "@/lib/interior-brands";
+
+export function InteriorBrands() {
+  return <section id="factories" className="container-page section-pad"><div className="max-w-2xl"><p className="eyebrow">Міжкімнатні двері</p><h1 className="heading mt-3">Оберіть фабрику</h1><p className="mt-5 text-lg leading-8 text-stone-600">Переходьте до колекцій, порівнюйте моделі та залишайте заявку на прорахунок.</p></div><div className="mt-10 grid gap-5 sm:grid-cols-2 xl:grid-cols-3">{interiorBrands.map((brand) => <BrandCard key={brand.slug} brand={brand} />)}</div></section>;
+}
+
+export function BrandCard({ brand }: { brand: InteriorBrand }) {
+  return <article className="group overflow-hidden rounded-[1.5rem] bg-sand"><img src={brand.image} alt={brand.name} className="aspect-[1.3] w-full object-cover transition duration-500 group-hover:scale-105" /><div className="p-6"><p className="eyebrow">Фабрика</p><h2 className="mt-2 font-display text-3xl font-semibold tracking-[-.04em]">{brand.name}</h2><p className="mt-3 min-h-12 text-sm leading-6 text-stone-600">{brand.description}</p><p className="mt-4 text-xs font-semibold text-stone-500">Колекцій: {brand.collections.length || "незабаром"}</p><Link href={`/mizhkimnatni-dveri/${brand.slug}`} className="mt-5 inline-flex items-center gap-1 text-sm font-bold text-clay hover:text-ink">Переглянути колекції <ArrowUpRight size={16} /></Link></div></article>;
+}

@@ -8,11 +8,11 @@ const categoryFilters = [{ id: "all", label: "Усі моделі" }, ...Object.
 const materials = [...new Set(products.map((product) => product.material))];
 const styles = [...new Set(products.map((product) => product.style))];
 
-export function CatalogBrowser({ initialCategory = "all" }: { initialCategory?: string }) {
+export function CatalogBrowser({ initialCategory = "all", initialQuery = "" }: { initialCategory?: string; initialQuery?: string }) {
   const [category, setCategory] = useState(initialCategory);
   const [material, setMaterial] = useState("all");
   const [style, setStyle] = useState("all");
-  const [query, setQuery] = useState("");
+  const [query, setQuery] = useState(initialQuery);
   const result = useMemo(() => products.filter((product) => (category === "all" || product.category === category) && (material === "all" || product.material === material) && (style === "all" || product.style === style) && `${product.name} ${product.features.join(" ")} ${product.description}`.toLowerCase().includes(query.toLowerCase())), [category, material, style, query]);
   const reset = () => { setCategory("all"); setMaterial("all"); setStyle("all"); setQuery(""); };
   const active = category !== "all" || material !== "all" || style !== "all" || query.length > 0;
