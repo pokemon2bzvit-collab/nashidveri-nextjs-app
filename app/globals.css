@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 html { scroll-behavior: smooth; }
-body { @apply bg-[#FCFBF8] text-ink antialiased; }
+body { @apply bg-[#FAF9F6] text-ink antialiased; }
 * { @apply border-stone-200; }
 .container-page { @apply mx-auto w-full max-w-7xl px-5 sm:px-8 lg:px-10; }
 .section-pad { @apply py-16 sm:py-24; }
@@ -11,3 +11,5 @@ body { @apply bg-[#FCFBF8] text-ink antialiased; }
 .heading { @apply font-display tracking-[-.035em] text-4xl leading-[1.04] sm:text-5xl lg:text-6xl; }
 .button-primary { @apply inline-flex items-center justify-center gap-2 rounded-full bg-ink px-6 py-3.5 text-sm font-semibold text-white transition hover:bg-clay focus:outline-none focus:ring-2 focus:ring-clay focus:ring-offset-2; }
 .button-light { @apply inline-flex items-center justify-center gap-2 rounded-full border border-stone-300 bg-white px-6 py-3.5 text-sm font-semibold transition hover:border-ink hover:bg-stone-50; }
+.surface-card { @apply rounded-[1.5rem] border border-stone-200/80 bg-white shadow-soft; }
+.grain { background-image: radial-gradient(rgba(255,255,255,.24) 1px, transparent 1px); background-size: 5px 5px; }
