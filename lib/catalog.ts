@@ -17,6 +17,20 @@ export const products: Product[] = [
   { slug: "comfort-70", category: "windows", name: "Comfort 70", material: "ПВХ", style: "Енергоефективні", price: "від 4 600 грн/м²", description: "Практична віконна система для міської квартири.", features: ["5 камер", "Склопакет 40 мм", "ПВХ"], image: "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=900&q=80" },
   { slug: "alu-slide", category: "windows", name: "Alu Slide", material: "Алюміній", style: "Панорамні", price: "від 12 400 грн/м²", description: "Розсувна алюмінієва система для просторих отворів.", features: ["Алюміній", "Панорамна система", "Розсувна"], image: "https://images.unsplash.com/photo-1600573472550-8090b5e0745e?auto=format&fit=crop&w=900&q=80" },
   { slug: "energy-pro", category: "windows", name: "Energy Pro", material: "ПВХ", style: "Енергоефективні", price: "від 6 200 грн/м²", description: "Теплий профіль для приватних будинків та холодних фасадів.", features: ["7 камер", "Енергозбереження", "Теплий монтаж"], image: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=900&q=80" },
+  ...Array.from({ length: 35 }, (_, index): Product => {
+    const model = String(index + 1).padStart(2, "0");
+    return {
+      slug: `papa-carlo-style-st-${model}`,
+      category: "interior",
+      name: `Papa Carlo STYLE ST-${model}`,
+      material: "Екошпон",
+      style: "Сучасний",
+      price: "Ціна за запитом",
+      description: "Міжкімнатні двері фабрики Papa Carlo, колекція STYLE.",
+      features: ["Papa Carlo", "Колекція STYLE", "Екошпон", "Кромка ABC / алюмінієва", "Декори: білий ясен, дуб, бетон, емаліт"],
+      image: "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=900&q=80",
+    };
+  }),
 ];
 
 export const getProduct = (slug: string) => products.find((product) => product.slug === slug);
