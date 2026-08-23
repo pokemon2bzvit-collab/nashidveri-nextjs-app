@@ -1,0 +1,7 @@
+"use client";
+import { X } from "lucide-react";
+import { useForm } from "react-hook-form";
+import { z } from "zod";
+import { zodResolver } from "@hookform/resolvers/zod";
+const schema = z.object({ phone: z.string().regex(/^\+380\d{9}$/, "Вкажіть номер формату +380XXXXXXXXX") });
+export function MeasureModal({ open, onClose }: { open: boolean; onClose: () => void }) { const { register, handleSubmit, formState: { errors } } = useForm<z.infer<typeof schema>>({ resolver: zodResolver(schema), defaultValues: { phone: "+380" } }); if (!open) return null; return <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/45 p-5" role="dialog" aria-modal="true"><form onSubmit={handleSubmit(onClose)} className="relative w-full max-w-md rounded-2xl bg-white p-7 shadow-2xl"><button aria-label="Закрити" type="button" onClick={onClose} className="absolute right-5 top-5 text-stone-500"><X /></button><p className="eyebrow">Безкоштовний замір</p><h2 className="mt-3 font-display text-3xl">Залиште номер — ми передзвонимо</h2><p className="mt-3 text-sm leading-6 text-stone-500">Узгодимо зручний час візиту майстра до вас в Ужгороді.</p><input autoFocus className="mt-6 w-full rounded-xl border px-4 py-3 outline-none focus:border-clay" aria-label="Телефон" {...register("phone")} />{errors.phone && <p className="mt-2 text-sm text-red-600">{errors.phone.message}</p>}<button className="button-primary mt-5 w-full" type="submit">Замовити замір</button></form></div> }
