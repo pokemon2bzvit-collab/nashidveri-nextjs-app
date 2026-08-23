@@ -1,2 +1,2 @@
 import type { Config } from "tailwindcss";
-export default { content: ["./app/**/*.{ts,tsx}", "./components/**/*.{ts,tsx}"], theme: { extend: { colors: { ink: "#1F211C", clay: "#B56C45", sand: "#F5F1E9", pine: "#36523D" }, fontFamily: { display: ["Georgia", "serif"] }, boxShadow: { soft: "0 18px 50px -28px rgba(31,33,28,.32)" } } }, plugins: [] } satisfies Config;
+export default { content: ["./app/**/*.{ts,tsx}", "./components/**/*.{ts,tsx}"], theme: { extend: { colors: { ink: "#1D1D1F", clay: "#A96B37", sand: "#F5F5F7", pine: "#36523D" }, fontFamily: { display: ["-apple-system", "BlinkMacSystemFont", "Segoe UI", "sans-serif"] }, boxShadow: { soft: "0 18px 50px -28px rgba(31,33,28,.24)" } } }, plugins: [] } satisfies Config;
