@@ -4,3 +4,5 @@ out/
 .env*
 !.env.example
 *.log
+*.tsbuildinfo
+nashi-dveri-uzhhorod/
