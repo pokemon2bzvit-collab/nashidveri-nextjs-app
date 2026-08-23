@@ -1,14 +1,8 @@
 import Link from "next/link";
-import { ArrowDownRight } from "lucide-react";
+import { ArrowDownRight, Ruler, ShieldCheck, Truck } from "lucide-react";
 
-const primaryLinks = [
-  ["Головна", "/"],
-  ["Міжкімнатні двері", "/mizhkimnatni-dveri"],
-  ["Вхідні двері", "/vhidni-dveri"],
-  ["Вікна", "/vikna"],
-  ["Контакти", "/contacts"],
-] as const;
+const benefits = [[Ruler, "Безкоштовний замір"], [Truck, "Доставка по Ужгороду"], [ShieldCheck, "Гарантія від виробника"]] as const;
 
 export function Hero({ onMeasure }: { onMeasure: () => void }) {
-  return <section id="home" className="flex min-h-[calc(100vh-3.5rem)] items-center bg-white text-center lg:min-h-[calc(100vh-5.75rem)]"><div className="container-page py-20 sm:py-28"><p className="eyebrow">Магазин «Наші двері» · Ужгород</p><h1 className="mx-auto mt-4 max-w-4xl font-display text-5xl font-semibold tracking-[-.065em] text-ink sm:text-7xl lg:text-8xl">Гарантія вашого<br /><span className="text-clay">затишку.</span></h1><p className="mx-auto mt-6 max-w-lg text-base leading-7 text-stone-600 sm:text-lg">Двері та вікна для оселі, у якій хочеться бути.</p><div className="mt-9 flex flex-col justify-center gap-3 sm:flex-row"><Link className="button-primary" href="/catalog">Переглянути каталог <ArrowDownRight size={17} /></Link><button className="button-light" onClick={onMeasure}>Замовити прорахунок</button></div><nav aria-label="Основна навігація" className="mx-auto mt-12 flex max-w-3xl flex-wrap justify-center gap-x-5 gap-y-3 border-t pt-6 text-sm font-semibold text-stone-600 sm:gap-x-7">{primaryLinks.map(([label, href]) => <Link key={href} href={href} className="transition hover:text-clay">{label}</Link>)}</nav></div></section>;
+  return <section id="home" className="bg-[#fafafa]"><div className="container-page grid min-h-[calc(100vh-3.5rem)] items-center gap-10 py-12 lg:grid-cols-[1fr_.9fr] lg:py-16"><div className="text-center lg:text-left"><p className="eyebrow">Магазин «Наші двері» · Ужгород</p><h1 className="mt-4 max-w-3xl font-display text-5xl font-semibold tracking-[-.065em] text-ink sm:text-7xl">Двері, що<br /><span className="text-clay">створюють затишок.</span></h1><p className="mx-auto mt-6 max-w-xl text-base leading-7 text-stone-600 sm:text-lg lg:mx-0">Вхідні та міжкімнатні двері в Ужгороді з монтажем і гарантією. Безкоштовний виїзд замірника.</p><div className="mt-9 flex flex-col justify-center gap-3 sm:flex-row lg:justify-start"><Link className="button-primary" href="/catalog">Переглянути каталог <ArrowDownRight size={17} /></Link><button className="button-light" onClick={onMeasure}>Замовити прорахунок</button></div><div className="mt-10 grid gap-3 text-left sm:grid-cols-3">{benefits.map(([Icon, text]) => <div key={text} className="flex items-center gap-2 rounded-xl bg-white px-3 py-3 text-xs font-semibold text-ink shadow-sm"><Icon size={17} className="shrink-0 text-clay" />{text}</div>)}</div></div><div className="relative overflow-hidden rounded-[2rem] shadow-soft"><img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1400&q=90" alt="Світлий інтер’єр із сучасними дверима" className="h-[380px] w-full object-cover sm:h-[520px]" /><div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" /></div></div></section>;
 }
