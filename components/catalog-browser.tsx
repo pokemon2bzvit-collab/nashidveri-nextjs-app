@@ -3,18 +3,14 @@
 import { Search, SlidersHorizontal, X } from "lucide-react";
 import { useEffect, useMemo, useState } from "react";
 import { ProductGrid } from "./product-grid";
-import { categories, products } from "@/lib/catalog";
+import { categories, type Product } from "@/lib/catalog";
 
 const PAGE_SIZE = 24;
 const categoryFilters = [{ id: "all", label: "Усі моделі" }, ...Object.entries(categories).map(([id, category]) => ({ id, label: category.title }))];
-const materials = [...new Set(products.map((product) => product.material))];
-const styles = [...new Set(products.map((product) => product.style))];
-const colors = [...new Set(products.map((product) => product.color))];
-const brands = [...new Set(products.map((product) => product.brand))];
 const priceRanges = [{ id: "under-10000", label: "до 10 000 грн", max: 10000 }, { id: "10000-25000", label: "10 000–25 000 грн", min: 10000, max: 25000 }, { id: "over-25000", label: "від 25 000 грн", min: 25000 }];
 const getPriceNumber = (price: string) => Number(price.replace(/[^\d]/g, "")) || null;
 
-export function CatalogBrowser({ initialCategory = "all", initialQuery = "", initialBrand = "all", initialCollection = "all" }: { initialCategory?: string; initialQuery?: string; initialBrand?: string; initialCollection?: string }) {
+export function CatalogBrowser({ products, initialCategory = "all", initialQuery = "", initialBrand = "all", initialCollection = "all" }: { products: Product[]; initialCategory?: string; initialQuery?: string; initialBrand?: string; initialCollection?: string }) {
   const [category, setCategory] = useState(initialCategory);
   const [brand, setBrand] = useState(initialBrand);
   const [collection, setCollection] = useState(initialCollection);
@@ -25,6 +21,10 @@ export function CatalogBrowser({ initialCategory = "all", initialQuery = "", ini
   const [query, setQuery] = useState(initialQuery);
   const [filtersOpen, setFiltersOpen] = useState(false);
   const [visibleCount, setVisibleCount] = useState(PAGE_SIZE);
+  const materials = useMemo(() => [...new Set(products.map((product) => product.material))], [products]);
+  const styles = useMemo(() => [...new Set(products.map((product) => product.style))], [products]);
+  const colors = useMemo(() => [...new Set(products.map((product) => product.color))], [products]);
+  const brands = useMemo(() => [...new Set(products.map((product) => product.brand))], [products]);
   const result = useMemo(() => products.filter((product) => {
     const price = getPriceNumber(product.price);
     const range = priceRanges.find((item) => item.id === priceRange);

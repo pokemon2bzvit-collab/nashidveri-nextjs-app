@@ -10,4 +10,36 @@ export const categories: Record<Category, { title: string; short: string; descri
 };
 
 export const products: Product[] = importedProducts;
-export const getProduct = (slug: string) => products.find((product) => product.slug === slug);
+
+type ProductRow = Omit<Product, "image" | "features"> & { features: string[] | null; image_path: string };
+const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL?.replace(/\/$/, "");
+const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
+
+export const catalogImageUrl = (image: string) => {
+  if (!supabaseUrl) return image;
+  const fileName = image.split("/").pop();
+  return fileName ? `${supabaseUrl}/storage/v1/object/public/catalog-images/${encodeURIComponent(fileName)}` : image;
+};
+
+const mapProduct = (product: ProductRow): Product => ({ ...product, features: product.features || [], image: catalogImageUrl(product.image_path) });
+
+export async function getProducts(): Promise<Product[]> {
+  if (!supabaseUrl || !supabaseKey) return products;
+  try {
+    const response = await fetch(`${supabaseUrl}/rest/v1/products?select=slug,category,brand,collection,name,material,style,color,price,description,features,image_path&is_available=eq.true&order=sort_order.asc`, {
+      headers: { apikey: supabaseKey, Authorization: `Bearer ${supabaseKey}` },
+      next: { revalidate: 3600 },
+    });
+    if (!response.ok) throw new Error(`Supabase returned ${response.status}`);
+    const rows = await response.json() as ProductRow[];
+    return rows.map(mapProduct);
+  } catch (error) {
+    console.error("Could not load catalog from Supabase", error);
+    return products;
+  }
+}
+
+export async function getProduct(slug: string) {
+  const catalog = await getProducts();
+  return catalog.find((product) => product.slug === slug);
+}

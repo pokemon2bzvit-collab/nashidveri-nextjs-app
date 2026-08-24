@@ -1,9 +1,10 @@
 import Link from "next/link";
 import { ArrowUpRight, PanelsTopLeft } from "lucide-react";
+import { catalogImageUrl } from "@/lib/catalog";
 
 const items = [
-  { number: "01", title: "Міжкімнатні двері", text: "Сучасний та класичний дизайн для інтер’єру, у якому важливі якість, комфорт і натуральність.", href: "/mizhkimnatni-dveri", image: "/catalog-assets/products/product-85.jpg" },
-  { number: "02", title: "Вхідні двері", text: "Безпека, теплоізоляція, шумоізоляція та моделі на будь-який смак.", href: "/vhidni-dveri", image: "/catalog-assets/products/product-1.webp" },
+  { number: "01", title: "Міжкімнатні двері", text: "Сучасний та класичний дизайн для інтер’єру, у якому важливі якість, комфорт і натуральність.", href: "/mizhkimnatni-dveri", image: catalogImageUrl("/catalog-assets/products/product-85.jpg") },
+  { number: "02", title: "Вхідні двері", text: "Безпека, теплоізоляція, шумоізоляція та моделі на будь-який смак.", href: "/vhidni-dveri", image: catalogImageUrl("/catalog-assets/products/product-1.webp") },
   { number: "03", title: "Вікна", text: "Металопластикові та алюмінієві системи для квартири, будинку чи тераси.", href: "/vikna", image: null },
 ];
 
