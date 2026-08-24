@@ -14,7 +14,9 @@ export const importedProducts: Product[] = [
       "Фабрика Abwehr",
       "Колекція Квартира"
     ],
-    "image": "/catalog-assets/products/product-1.webp"
+    "image": "/catalog-assets/products/product-1.webp",
+    "brand": "Abwehr",
+    "collection": "Квартира"
   },
   {
     "slug": "catalog-2",
@@ -29,7 +31,9 @@ export const importedProducts: Product[] = [
       "Фабрика Abwehr",
       "Колекція Квартира"
     ],
-    "image": "/catalog-assets/products/product-2.webp"
+    "image": "/catalog-assets/products/product-2.webp",
+    "brand": "Abwehr",
+    "collection": "Квартира"
   },
   {
     "slug": "catalog-3",
@@ -44,7 +48,9 @@ export const importedProducts: Product[] = [
       "Фабрика Abwehr",
       "Колекція Квартира"
     ],
-    "image": "/catalog-assets/products/product-3.webp"
+    "image": "/catalog-assets/products/product-3.webp",
+    "brand": "Abwehr",
+    "collection": "Квартира"
   },
   {
     "slug": "catalog-4",
@@ -59,7 +65,9 @@ export const importedProducts: Product[] = [
       "Фабрика Abwehr",
       "Колекція Квартира"
     ],
-    "image": "/catalog-assets/products/product-4.webp"
+    "image": "/catalog-assets/products/product-4.webp",
+    "brand": "Abwehr",
+    "collection": "Квартира"
   },
   {
     "slug": "catalog-5",
@@ -74,7 +82,9 @@ export const importedProducts: Product[] = [
       "Фабрика Abwehr",
       "Колекція Квартира"
     ],
-    "image": "/catalog-assets/products/product-5.webp"
+    "image": "/catalog-assets/products/product-5.webp",
+    "brand": "Abwehr",
+    "collection": "Квартира"
   },
   {
     "slug": "catalog-6",
@@ -89,7 +99,9 @@ export const importedProducts: Product[] = [
       "Фабрика Abwehr",
       "Колекція Квартира"
     ],
-    "image": "/catalog-assets/products/product-6.webp"
+    "image": "/catalog-assets/products/product-6.webp",
+    "brand": "Abwehr",
+    "collection": "Квартира"
   },
   {
     "slug": "catalog-7",
@@ -104,7 +116,9 @@ export const importedProducts: Product[] = [
       "Фабрика Abwehr",
       "Колекція Квартира"
     ],
-    "image": "/catalog-assets/products/product-7.webp"
+    "image": "/catalog-assets/products/product-7.webp",
+    "brand": "Abwehr",
+    "collection": "Квартира"
   },
   {
     "slug": "catalog-8",
@@ -119,7 +133,9 @@ export const importedProducts: Product[] = [
       "Фабрика Abwehr",
       "Колекція Квартира"
     ],
-    "image": "/catalog-assets/products/product-8.webp"
+    "image": "/catalog-assets/products/product-8.webp",
+    "brand": "Abwehr",
+    "collection": "Квартира"
   },
   {
     "slug": "catalog-9",
@@ -134,7 +150,9 @@ export const importedProducts: Product[] = [
       "Фабрика Abwehr",
       "Колекція Склад"
     ],
-    "image": "/catalog-assets/products/product-9.jpg"
+    "image": "/catalog-assets/products/product-9.jpg",
+    "brand": "Abwehr",
+    "collection": "Склад"
   },
   {
     "slug": "catalog-10",
@@ -149,7 +167,9 @@ export const importedProducts: Product[] = [
       "Фабрика Abwehr",
       "Колекція Склад"
     ],
-    "image": "/catalog-assets/products/product-10.jpg"
+    "image": "/catalog-assets/products/product-10.jpg",
+    "brand": "Abwehr",
+    "collection": "Склад"
   },
   {
     "slug": "catalog-11",
@@ -164,7 +184,9 @@ export const importedProducts: Product[] = [
       "Фабрика Abwehr",
       "Колекція Склад"
     ],
-    "image": "/catalog-assets/products/product-11.jpg"
+    "image": "/catalog-assets/products/product-11.jpg",
+    "brand": "Abwehr",
+    "collection": "Склад"
   },
   {
     "slug": "catalog-12",
@@ -179,7 +201,9 @@ export const importedProducts: Product[] = [
       "Фабрика Abwehr",
       "Колекція Склад"
     ],
-    "image": "/catalog-assets/products/product-12.jpg"
+    "image": "/catalog-assets/products/product-12.jpg",
+    "brand": "Abwehr",
+    "collection": "Склад"
   },
   {
     "slug": "catalog-13",
@@ -194,7 +218,9 @@ export const importedProducts: Product[] = [
       "Фабрика Abwehr",
       "Колекція Склад"
     ],
-    "image": "/catalog-assets/products/product-13.jpg"
+    "image": "/catalog-assets/products/product-13.jpg",
+    "brand": "Abwehr",
+    "collection": "Склад"
   },
   {
     "slug": "catalog-14",
@@ -209,7 +235,9 @@ export const importedProducts: Product[] = [
       "Фабрика Abwehr",
       "Колекція Склад"
     ],
-    "image": "/catalog-assets/products/product-14.jpg"
+    "image": "/catalog-assets/products/product-14.jpg",
+    "brand": "Abwehr",
+    "collection": "Склад"
   },
   {
     "slug": "catalog-15",
@@ -224,7 +252,9 @@ export const importedProducts: Product[] = [
       "Фабрика Grand",
       "Колекція DELUX"
     ],
-    "image": "/catalog-assets/products/product-15.jpg"
+    "image": "/catalog-assets/products/product-15.jpg",
+    "brand": "Grand",
+    "collection": "DELUX"
   },
   {
     "slug": "catalog-16",
@@ -239,7 +269,9 @@ export const importedProducts: Product[] = [
       "Фабрика Grand",
       "Колекція DELUX"
     ],
-    "image": "/catalog-assets/products/product-16.jpg"
+    "image": "/catalog-assets/products/product-16.jpg",
+    "brand": "Grand",
+    "collection": "DELUX"
   },
   {
     "slug": "catalog-17",
@@ -254,7 +286,9 @@ export const importedProducts: Product[] = [
       "Фабрика Grand",
       "Колекція DELUX"
     ],
-    "image": "/catalog-assets/products/product-17.jpg"
+    "image": "/catalog-assets/products/product-17.jpg",
+    "brand": "Grand",
+    "collection": "DELUX"
   },
   {
     "slug": "catalog-18",
@@ -269,7 +303,9 @@ export const importedProducts: Product[] = [
       "Фабрика Grand",
       "Колекція DELUX"
     ],
-    "image": "/catalog-assets/products/product-18.jpg"
+    "image": "/catalog-assets/products/product-18.jpg",
+    "brand": "Grand",
+    "collection": "DELUX"
   },
   {
     "slug": "catalog-19",
@@ -284,7 +320,9 @@ export const importedProducts: Product[] = [
       "Фабрика Grand",
       "Колекція DELUX"
     ],
-    "image": "/catalog-assets/products/product-19.jpg"
+    "image": "/catalog-assets/products/product-19.jpg",
+    "brand": "Grand",
+    "collection": "DELUX"
   },
   {
     "slug": "catalog-20",
@@ -299,7 +337,9 @@ export const importedProducts: Product[] = [
       "Фабрика Grand",
       "Колекція DELUX"
     ],
-    "image": "/catalog-assets/products/product-20.jpg"
+    "image": "/catalog-assets/products/product-20.jpg",
+    "brand": "Grand",
+    "collection": "DELUX"
   },
   {
     "slug": "catalog-21",
@@ -314,7 +354,9 @@ export const importedProducts: Product[] = [
       "Фабрика Grand",
       "Колекція DELUX"
     ],
-    "image": "/catalog-assets/products/product-21.jpg"
+    "image": "/catalog-assets/products/product-21.jpg",
+    "brand": "Grand",
+    "collection": "DELUX"
   },
   {
     "slug": "catalog-22",
@@ -329,7 +371,9 @@ export const importedProducts: Product[] = [
       "Фабрика Grand",
       "Колекція DELUX"
     ],
-    "image": "/catalog-assets/products/product-22.jpg"
+    "image": "/catalog-assets/products/product-22.jpg",
+    "brand": "Grand",
+    "collection": "DELUX"
   },
   {
     "slug": "catalog-23",
@@ -344,7 +388,9 @@ export const importedProducts: Product[] = [
       "Фабрика Grand",
       "Колекція DELUX"
     ],
-    "image": "/catalog-assets/products/product-23.jpg"
+    "image": "/catalog-assets/products/product-23.jpg",
+    "brand": "Grand",
+    "collection": "DELUX"
   },
   {
     "slug": "catalog-24",
@@ -359,7 +405,9 @@ export const importedProducts: Product[] = [
       "Фабрика Grand",
       "Колекція DELUX"
     ],
-    "image": "/catalog-assets/products/product-24.jpg"
+    "image": "/catalog-assets/products/product-24.jpg",
+    "brand": "Grand",
+    "collection": "DELUX"
   },
   {
     "slug": "catalog-25",
@@ -374,7 +422,9 @@ export const importedProducts: Product[] = [
       "Фабрика Grand",
       "Колекція DELUX"
     ],
-    "image": "/catalog-assets/products/product-25.jpg"
+    "image": "/catalog-assets/products/product-25.jpg",
+    "brand": "Grand",
+    "collection": "DELUX"
   },
   {
     "slug": "catalog-26",
@@ -389,7 +439,9 @@ export const importedProducts: Product[] = [
       "Фабрика Grand",
       "Колекція DELUX"
     ],
-    "image": "/catalog-assets/products/product-26.jpg"
+    "image": "/catalog-assets/products/product-26.jpg",
+    "brand": "Grand",
+    "collection": "DELUX"
   },
   {
     "slug": "catalog-27",
@@ -404,7 +456,9 @@ export const importedProducts: Product[] = [
       "Фабрика Grand",
       "Колекція DELUX"
     ],
-    "image": "/catalog-assets/products/product-27.jpg"
+    "image": "/catalog-assets/products/product-27.jpg",
+    "brand": "Grand",
+    "collection": "DELUX"
   },
   {
     "slug": "catalog-28",
@@ -419,7 +473,9 @@ export const importedProducts: Product[] = [
       "Фабрика Grand",
       "Колекція DELUX"
     ],
-    "image": "/catalog-assets/products/product-28.jpg"
+    "image": "/catalog-assets/products/product-28.jpg",
+    "brand": "Grand",
+    "collection": "DELUX"
   },
   {
     "slug": "catalog-29",
@@ -434,7 +490,9 @@ export const importedProducts: Product[] = [
       "Фабрика Grand",
       "Колекція DELUX"
     ],
-    "image": "/catalog-assets/products/product-29.jpg"
+    "image": "/catalog-assets/products/product-29.jpg",
+    "brand": "Grand",
+    "collection": "DELUX"
   },
   {
     "slug": "catalog-30",
@@ -449,7 +507,9 @@ export const importedProducts: Product[] = [
       "Фабрика Grand",
       "Колекція LUX"
     ],
-    "image": "/catalog-assets/products/product-30.jpg"
+    "image": "/catalog-assets/products/product-30.jpg",
+    "brand": "Grand",
+    "collection": "LUX"
   },
   {
     "slug": "catalog-31",
@@ -464,7 +524,9 @@ export const importedProducts: Product[] = [
       "Фабрика Grand",
       "Колекція LUX"
     ],
-    "image": "/catalog-assets/products/product-31.jpg"
+    "image": "/catalog-assets/products/product-31.jpg",
+    "brand": "Grand",
+    "collection": "LUX"
   },
   {
     "slug": "catalog-32",
@@ -479,7 +541,9 @@ export const importedProducts: Product[] = [
       "Фабрика Grand",
       "Колекція LUX"
     ],
-    "image": "/catalog-assets/products/product-32.jpg"
+    "image": "/catalog-assets/products/product-32.jpg",
+    "brand": "Grand",
+    "collection": "LUX"
   },
   {
     "slug": "catalog-33",
@@ -494,7 +558,9 @@ export const importedProducts: Product[] = [
       "Фабрика Grand",
       "Колекція LUX"
     ],
-    "image": "/catalog-assets/products/product-33.jpg"
+    "image": "/catalog-assets/products/product-33.jpg",
+    "brand": "Grand",
+    "collection": "LUX"
   },
   {
     "slug": "catalog-34",
@@ -509,7 +575,9 @@ export const importedProducts: Product[] = [
       "Фабрика Grand",
       "Колекція LUX"
     ],
-    "image": "/catalog-assets/products/product-34.jpg"
+    "image": "/catalog-assets/products/product-34.jpg",
+    "brand": "Grand",
+    "collection": "LUX"
   },
   {
     "slug": "catalog-35",
@@ -524,7 +592,9 @@ export const importedProducts: Product[] = [
       "Фабрика Grand",
       "Колекція LUX"
     ],
-    "image": "/catalog-assets/products/product-35.jpg"
+    "image": "/catalog-assets/products/product-35.jpg",
+    "brand": "Grand",
+    "collection": "LUX"
   },
   {
     "slug": "catalog-36",
@@ -539,7 +609,9 @@ export const importedProducts: Product[] = [
       "Фабрика Grand",
       "Колекція LUX"
     ],
-    "image": "/catalog-assets/products/product-36.jpg"
+    "image": "/catalog-assets/products/product-36.jpg",
+    "brand": "Grand",
+    "collection": "LUX"
   },
   {
     "slug": "catalog-37",
@@ -554,7 +626,9 @@ export const importedProducts: Product[] = [
       "Фабрика Grand",
       "Колекція LUX"
     ],
-    "image": "/catalog-assets/products/product-37.jpg"
+    "image": "/catalog-assets/products/product-37.jpg",
+    "brand": "Grand",
+    "collection": "LUX"
   },
   {
     "slug": "catalog-38",
@@ -569,7 +643,9 @@ export const importedProducts: Product[] = [
       "Фабрика Grand",
       "Колекція LUX"
     ],
-    "image": "/catalog-assets/products/product-38.jpg"
+    "image": "/catalog-assets/products/product-38.jpg",
+    "brand": "Grand",
+    "collection": "LUX"
   },
   {
     "slug": "catalog-39",
@@ -584,7 +660,9 @@ export const importedProducts: Product[] = [
       "Фабрика Grand",
       "Колекція LUX"
     ],
-    "image": "/catalog-assets/products/product-39.jpg"
+    "image": "/catalog-assets/products/product-39.jpg",
+    "brand": "Grand",
+    "collection": "LUX"
   },
   {
     "slug": "catalog-40",
@@ -599,7 +677,9 @@ export const importedProducts: Product[] = [
       "Фабрика Grand",
       "Колекція Paint"
     ],
-    "image": "/catalog-assets/products/product-40.jpg"
+    "image": "/catalog-assets/products/product-40.jpg",
+    "brand": "Grand",
+    "collection": "Paint"
   },
   {
     "slug": "catalog-41",
@@ -614,7 +694,9 @@ export const importedProducts: Product[] = [
       "Фабрика Grand",
       "Колекція Paint"
     ],
-    "image": "/catalog-assets/products/product-41.jpg"
+    "image": "/catalog-assets/products/product-41.jpg",
+    "brand": "Grand",
+    "collection": "Paint"
   },
   {
     "slug": "catalog-42",
@@ -629,7 +711,9 @@ export const importedProducts: Product[] = [
       "Фабрика Grand",
       "Колекція Paint"
     ],
-    "image": "/catalog-assets/products/product-42.jpg"
+    "image": "/catalog-assets/products/product-42.jpg",
+    "brand": "Grand",
+    "collection": "Paint"
   },
   {
     "slug": "catalog-43",
@@ -644,7 +728,9 @@ export const importedProducts: Product[] = [
       "Фабрика Grand",
       "Колекція Paint"
     ],
-    "image": "/catalog-assets/products/product-43.jpg"
+    "image": "/catalog-assets/products/product-43.jpg",
+    "brand": "Grand",
+    "collection": "Paint"
   },
   {
     "slug": "catalog-44",
@@ -659,7 +745,9 @@ export const importedProducts: Product[] = [
       "Фабрика Grand",
       "Колекція Paint"
     ],
-    "image": "/catalog-assets/products/product-44.jpg"
+    "image": "/catalog-assets/products/product-44.jpg",
+    "brand": "Grand",
+    "collection": "Paint"
   },
   {
     "slug": "catalog-45",
@@ -674,7 +762,9 @@ export const importedProducts: Product[] = [
       "Фабрика Grand",
       "Колекція Paint"
     ],
-    "image": "/catalog-assets/products/product-45.jpg"
+    "image": "/catalog-assets/products/product-45.jpg",
+    "brand": "Grand",
+    "collection": "Paint"
   },
   {
     "slug": "catalog-46",
@@ -689,7 +779,9 @@ export const importedProducts: Product[] = [
       "Фабрика Grand",
       "Колекція Paint"
     ],
-    "image": "/catalog-assets/products/product-46.jpg"
+    "image": "/catalog-assets/products/product-46.jpg",
+    "brand": "Grand",
+    "collection": "Paint"
   },
   {
     "slug": "catalog-47",
@@ -704,7 +796,9 @@ export const importedProducts: Product[] = [
       "Фабрика Grand",
       "Колекція Paint"
     ],
-    "image": "/catalog-assets/products/product-47.jpg"
+    "image": "/catalog-assets/products/product-47.jpg",
+    "brand": "Grand",
+    "collection": "Paint"
   },
   {
     "slug": "catalog-48",
@@ -719,7 +813,9 @@ export const importedProducts: Product[] = [
       "Фабрика Grand",
       "Колекція Paint"
     ],
-    "image": "/catalog-assets/products/product-48.jpg"
+    "image": "/catalog-assets/products/product-48.jpg",
+    "brand": "Grand",
+    "collection": "Paint"
   },
   {
     "slug": "catalog-49",
@@ -734,7 +830,9 @@ export const importedProducts: Product[] = [
       "Фабрика Grand",
       "Колекція Paint"
     ],
-    "image": "/catalog-assets/products/product-49.jpg"
+    "image": "/catalog-assets/products/product-49.jpg",
+    "brand": "Grand",
+    "collection": "Paint"
   },
   {
     "slug": "catalog-50",
@@ -749,7 +847,9 @@ export const importedProducts: Product[] = [
       "Фабрика Grand",
       "Колекція Paint"
     ],
-    "image": "/catalog-assets/products/product-50.jpg"
+    "image": "/catalog-assets/products/product-50.jpg",
+    "brand": "Grand",
+    "collection": "Paint"
   },
   {
     "slug": "catalog-51",
@@ -764,7 +864,9 @@ export const importedProducts: Product[] = [
       "Фабрика Grand",
       "Колекція Paint"
     ],
-    "image": "/catalog-assets/products/product-51.jpg"
+    "image": "/catalog-assets/products/product-51.jpg",
+    "brand": "Grand",
+    "collection": "Paint"
   },
   {
     "slug": "catalog-52",
@@ -779,7 +881,9 @@ export const importedProducts: Product[] = [
       "Фабрика Magda",
       "Колекція Вулиця"
     ],
-    "image": "/catalog-assets/products/product-52.png"
+    "image": "/catalog-assets/products/product-52.png",
+    "brand": "Magda",
+    "collection": "Вулиця"
   },
   {
     "slug": "catalog-53",
@@ -794,7 +898,9 @@ export const importedProducts: Product[] = [
       "Фабрика Magda",
       "Колекція Вулиця"
     ],
-    "image": "/catalog-assets/products/product-53.webp"
+    "image": "/catalog-assets/products/product-53.webp",
+    "brand": "Magda",
+    "collection": "Вулиця"
   },
   {
     "slug": "catalog-54",
@@ -809,7 +915,9 @@ export const importedProducts: Product[] = [
       "Фабрика Q Doors",
       "Колекція Вулиця"
     ],
-    "image": "/catalog-assets/products/product-54.webp"
+    "image": "/catalog-assets/products/product-54.webp",
+    "brand": "Q Doors",
+    "collection": "Вулиця"
   },
   {
     "slug": "catalog-55",
@@ -824,7 +932,9 @@ export const importedProducts: Product[] = [
       "Фабрика Q Doors",
       "Колекція Вулиця"
     ],
-    "image": "/catalog-assets/products/product-55.webp"
+    "image": "/catalog-assets/products/product-55.webp",
+    "brand": "Q Doors",
+    "collection": "Вулиця"
   },
   {
     "slug": "catalog-56",
@@ -839,7 +949,9 @@ export const importedProducts: Product[] = [
       "Фабрика Q Doors",
       "Колекція Вулиця"
     ],
-    "image": "/catalog-assets/products/product-56.webp"
+    "image": "/catalog-assets/products/product-56.webp",
+    "brand": "Q Doors",
+    "collection": "Вулиця"
   },
   {
     "slug": "catalog-57",
@@ -854,7 +966,9 @@ export const importedProducts: Product[] = [
       "Фабрика Q Doors",
       "Колекція Вулиця"
     ],
-    "image": "/catalog-assets/products/product-57.webp"
+    "image": "/catalog-assets/products/product-57.webp",
+    "brand": "Q Doors",
+    "collection": "Вулиця"
   },
   {
     "slug": "catalog-58",
@@ -869,7 +983,9 @@ export const importedProducts: Product[] = [
       "Фабрика Q Doors",
       "Колекція Вулиця"
     ],
-    "image": "/catalog-assets/products/product-58.webp"
+    "image": "/catalog-assets/products/product-58.webp",
+    "brand": "Q Doors",
+    "collection": "Вулиця"
   },
   {
     "slug": "catalog-59",
@@ -884,7 +1000,9 @@ export const importedProducts: Product[] = [
       "Фабрика Q Doors",
       "Колекція Вулиця"
     ],
-    "image": "/catalog-assets/products/product-59.webp"
+    "image": "/catalog-assets/products/product-59.webp",
+    "brand": "Q Doors",
+    "collection": "Вулиця"
   },
   {
     "slug": "catalog-60",
@@ -899,7 +1017,9 @@ export const importedProducts: Product[] = [
       "Фабрика Q Doors",
       "Колекція Квартира"
     ],
-    "image": "/catalog-assets/products/product-60.webp"
+    "image": "/catalog-assets/products/product-60.webp",
+    "brand": "Q Doors",
+    "collection": "Квартира"
   },
   {
     "slug": "catalog-61",
@@ -914,7 +1034,9 @@ export const importedProducts: Product[] = [
       "Фабрика Q Doors",
       "Колекція Квартира"
     ],
-    "image": "/catalog-assets/products/product-61.webp"
+    "image": "/catalog-assets/products/product-61.webp",
+    "brand": "Q Doors",
+    "collection": "Квартира"
   },
   {
     "slug": "catalog-62",
@@ -929,7 +1051,9 @@ export const importedProducts: Product[] = [
       "Фабрика Q Doors",
       "Колекція Квартира"
     ],
-    "image": "/catalog-assets/products/product-62.webp"
+    "image": "/catalog-assets/products/product-62.webp",
+    "brand": "Q Doors",
+    "collection": "Квартира"
   },
   {
     "slug": "catalog-63",
@@ -944,7 +1068,9 @@ export const importedProducts: Product[] = [
       "Фабрика Q Doors",
       "Колекція Квартира"
     ],
-    "image": "/catalog-assets/products/product-63.webp"
+    "image": "/catalog-assets/products/product-63.webp",
+    "brand": "Q Doors",
+    "collection": "Квартира"
   },
   {
     "slug": "catalog-64",
@@ -959,7 +1085,9 @@ export const importedProducts: Product[] = [
       "Фабрика Q Doors",
       "Колекція Квартира"
     ],
-    "image": "/catalog-assets/products/product-64.webp"
+    "image": "/catalog-assets/products/product-64.webp",
+    "brand": "Q Doors",
+    "collection": "Квартира"
   },
   {
     "slug": "catalog-65",
@@ -974,7 +1102,9 @@ export const importedProducts: Product[] = [
       "Фабрика Q Doors",
       "Колекція Квартира"
     ],
-    "image": "/catalog-assets/products/product-65.webp"
+    "image": "/catalog-assets/products/product-65.webp",
+    "brand": "Q Doors",
+    "collection": "Квартира"
   },
   {
     "slug": "catalog-66",
@@ -989,7 +1119,9 @@ export const importedProducts: Product[] = [
       "Фабрика Q Doors",
       "Колекція Квартира"
     ],
-    "image": "/catalog-assets/products/product-66.webp"
+    "image": "/catalog-assets/products/product-66.webp",
+    "brand": "Q Doors",
+    "collection": "Квартира"
   },
   {
     "slug": "catalog-67",
@@ -1004,7 +1136,9 @@ export const importedProducts: Product[] = [
       "Фабрика Q Doors",
       "Колекція Квартира"
     ],
-    "image": "/catalog-assets/products/product-67.webp"
+    "image": "/catalog-assets/products/product-67.webp",
+    "brand": "Q Doors",
+    "collection": "Квартира"
   },
   {
     "slug": "catalog-68",
@@ -1019,7 +1153,9 @@ export const importedProducts: Product[] = [
       "Фабрика StilDoors",
       "Колекція Presto"
     ],
-    "image": "/catalog-assets/products/product-68.jpg"
+    "image": "/catalog-assets/products/product-68.jpg",
+    "brand": "StilDoors",
+    "collection": "Presto"
   },
   {
     "slug": "catalog-69",
@@ -1034,7 +1170,9 @@ export const importedProducts: Product[] = [
       "Фабрика StilDoors",
       "Колекція Presto"
     ],
-    "image": "/catalog-assets/products/product-69.jpg"
+    "image": "/catalog-assets/products/product-69.jpg",
+    "brand": "StilDoors",
+    "collection": "Presto"
   },
   {
     "slug": "catalog-70",
@@ -1049,7 +1187,9 @@ export const importedProducts: Product[] = [
       "Фабрика StilDoors",
       "Колекція Presto"
     ],
-    "image": "/catalog-assets/products/product-70.jpg"
+    "image": "/catalog-assets/products/product-70.jpg",
+    "brand": "StilDoors",
+    "collection": "Presto"
   },
   {
     "slug": "catalog-71",
@@ -1064,7 +1204,9 @@ export const importedProducts: Product[] = [
       "Фабрика StilDoors",
       "Колекція Presto"
     ],
-    "image": "/catalog-assets/products/product-71.jpg"
+    "image": "/catalog-assets/products/product-71.jpg",
+    "brand": "StilDoors",
+    "collection": "Presto"
   },
   {
     "slug": "catalog-72",
@@ -1079,7 +1221,9 @@ export const importedProducts: Product[] = [
       "Фабрика StilDoors",
       "Колекція Presto"
     ],
-    "image": "/catalog-assets/products/product-72.jpg"
+    "image": "/catalog-assets/products/product-72.jpg",
+    "brand": "StilDoors",
+    "collection": "Presto"
   },
   {
     "slug": "catalog-73",
@@ -1094,7 +1238,9 @@ export const importedProducts: Product[] = [
       "Фабрика StilDoors",
       "Колекція Presto"
     ],
-    "image": "/catalog-assets/products/product-73.jpg"
+    "image": "/catalog-assets/products/product-73.jpg",
+    "brand": "StilDoors",
+    "collection": "Presto"
   },
   {
     "slug": "catalog-74",
@@ -1109,7 +1255,9 @@ export const importedProducts: Product[] = [
       "Фабрика StilDoors",
       "Колекція Presto"
     ],
-    "image": "/catalog-assets/products/product-74.jpg"
+    "image": "/catalog-assets/products/product-74.jpg",
+    "brand": "StilDoors",
+    "collection": "Presto"
   },
   {
     "slug": "catalog-75",
@@ -1124,7 +1272,9 @@ export const importedProducts: Product[] = [
       "Фабрика StilDoors",
       "Колекція Presto"
     ],
-    "image": "/catalog-assets/products/product-75.jpg"
+    "image": "/catalog-assets/products/product-75.jpg",
+    "brand": "StilDoors",
+    "collection": "Presto"
   },
   {
     "slug": "catalog-76",
@@ -1139,7 +1289,9 @@ export const importedProducts: Product[] = [
       "Фабрика StilDoors",
       "Колекція Presto"
     ],
-    "image": "/catalog-assets/products/product-76.jpg"
+    "image": "/catalog-assets/products/product-76.jpg",
+    "brand": "StilDoors",
+    "collection": "Presto"
   },
   {
     "slug": "catalog-77",
@@ -1154,7 +1306,9 @@ export const importedProducts: Product[] = [
       "Фабрика StilDoors",
       "Колекція Presto"
     ],
-    "image": "/catalog-assets/products/product-77.jpg"
+    "image": "/catalog-assets/products/product-77.jpg",
+    "brand": "StilDoors",
+    "collection": "Presto"
   },
   {
     "slug": "catalog-78",
@@ -1169,7 +1323,9 @@ export const importedProducts: Product[] = [
       "Фабрика StilDoors",
       "Колекція Stil"
     ],
-    "image": "/catalog-assets/products/product-78.jpg"
+    "image": "/catalog-assets/products/product-78.jpg",
+    "brand": "StilDoors",
+    "collection": "Stil"
   },
   {
     "slug": "catalog-79",
@@ -1184,7 +1340,9 @@ export const importedProducts: Product[] = [
       "Фабрика StilDoors",
       "Колекція Stil"
     ],
-    "image": "/catalog-assets/products/product-79.jpg"
+    "image": "/catalog-assets/products/product-79.jpg",
+    "brand": "StilDoors",
+    "collection": "Stil"
   },
   {
     "slug": "catalog-80",
@@ -1199,7 +1357,9 @@ export const importedProducts: Product[] = [
       "Фабрика StilDoors",
       "Колекція Stil"
     ],
-    "image": "/catalog-assets/products/product-80.jpg"
+    "image": "/catalog-assets/products/product-80.jpg",
+    "brand": "StilDoors",
+    "collection": "Stil"
   },
   {
     "slug": "catalog-81",
@@ -1214,7 +1374,9 @@ export const importedProducts: Product[] = [
       "Фабрика StilDoors",
       "Колекція Stil"
     ],
-    "image": "/catalog-assets/products/product-81.jpg"
+    "image": "/catalog-assets/products/product-81.jpg",
+    "brand": "StilDoors",
+    "collection": "Stil"
   },
   {
     "slug": "catalog-82",
@@ -1229,7 +1391,9 @@ export const importedProducts: Product[] = [
       "Фабрика StilDoors",
       "Колекція Stil"
     ],
-    "image": "/catalog-assets/products/product-82.jpg"
+    "image": "/catalog-assets/products/product-82.jpg",
+    "brand": "StilDoors",
+    "collection": "Stil"
   },
   {
     "slug": "catalog-83",
@@ -1244,7 +1408,9 @@ export const importedProducts: Product[] = [
       "Фабрика StilDoors",
       "Колекція Stil"
     ],
-    "image": "/catalog-assets/products/product-83.jpg"
+    "image": "/catalog-assets/products/product-83.jpg",
+    "brand": "StilDoors",
+    "collection": "Stil"
   },
   {
     "slug": "catalog-84",
@@ -1259,7 +1425,9 @@ export const importedProducts: Product[] = [
       "Фабрика StilDoors",
       "Колекція Stil"
     ],
-    "image": "/catalog-assets/products/product-84.jpg"
+    "image": "/catalog-assets/products/product-84.jpg",
+    "brand": "StilDoors",
+    "collection": "Stil"
   },
   {
     "slug": "catalog-85",
@@ -1274,7 +1442,9 @@ export const importedProducts: Product[] = [
       "Фабрика Papa Carlo",
       "Колекція Milenium"
     ],
-    "image": "/catalog-assets/products/product-85.jpg"
+    "image": "/catalog-assets/products/product-85.jpg",
+    "brand": "Papa Carlo",
+    "collection": "Milenium"
   },
   {
     "slug": "catalog-86",
@@ -1289,7 +1459,9 @@ export const importedProducts: Product[] = [
       "Фабрика Papa Carlo",
       "Колекція Milenium"
     ],
-    "image": "/catalog-assets/products/product-86.jpg"
+    "image": "/catalog-assets/products/product-86.jpg",
+    "brand": "Papa Carlo",
+    "collection": "Milenium"
   },
   {
     "slug": "catalog-87",
@@ -1304,7 +1476,9 @@ export const importedProducts: Product[] = [
       "Фабрика Papa Carlo",
       "Колекція Milenium"
     ],
-    "image": "/catalog-assets/products/product-87.jpg"
+    "image": "/catalog-assets/products/product-87.jpg",
+    "brand": "Papa Carlo",
+    "collection": "Milenium"
   },
   {
     "slug": "catalog-88",
@@ -1319,7 +1493,9 @@ export const importedProducts: Product[] = [
       "Фабрика Papa Carlo",
       "Колекція Milenium"
     ],
-    "image": "/catalog-assets/products/product-88.jpg"
+    "image": "/catalog-assets/products/product-88.jpg",
+    "brand": "Papa Carlo",
+    "collection": "Milenium"
   },
   {
     "slug": "catalog-89",
@@ -1334,7 +1510,9 @@ export const importedProducts: Product[] = [
       "Фабрика Papa Carlo",
       "Колекція Milenium"
     ],
-    "image": "/catalog-assets/products/product-89.jpg"
+    "image": "/catalog-assets/products/product-89.jpg",
+    "brand": "Papa Carlo",
+    "collection": "Milenium"
   },
   {
     "slug": "catalog-90",
@@ -1349,7 +1527,9 @@ export const importedProducts: Product[] = [
       "Фабрика Papa Carlo",
       "Колекція Milenium"
     ],
-    "image": "/catalog-assets/products/product-90.jpg"
+    "image": "/catalog-assets/products/product-90.jpg",
+    "brand": "Papa Carlo",
+    "collection": "Milenium"
   },
   {
     "slug": "catalog-91",
@@ -1364,7 +1544,9 @@ export const importedProducts: Product[] = [
       "Фабрика Papa Carlo",
       "Колекція Milenium"
     ],
-    "image": "/catalog-assets/products/product-91.jpg"
+    "image": "/catalog-assets/products/product-91.jpg",
+    "brand": "Papa Carlo",
+    "collection": "Milenium"
   },
   {
     "slug": "catalog-92",
@@ -1379,7 +1561,9 @@ export const importedProducts: Product[] = [
       "Фабрика Papa Carlo",
       "Колекція Milenium"
     ],
-    "image": "/catalog-assets/products/product-92.jpg"
+    "image": "/catalog-assets/products/product-92.jpg",
+    "brand": "Papa Carlo",
+    "collection": "Milenium"
   },
   {
     "slug": "catalog-93",
@@ -1394,7 +1578,9 @@ export const importedProducts: Product[] = [
       "Фабрика Papa Carlo",
       "Колекція Milenium"
     ],
-    "image": "/catalog-assets/products/product-93.jpg"
+    "image": "/catalog-assets/products/product-93.jpg",
+    "brand": "Papa Carlo",
+    "collection": "Milenium"
   },
   {
     "slug": "catalog-94",
@@ -1409,7 +1595,9 @@ export const importedProducts: Product[] = [
       "Фабрика Papa Carlo",
       "Колекція Milenium"
     ],
-    "image": "/catalog-assets/products/product-94.jpg"
+    "image": "/catalog-assets/products/product-94.jpg",
+    "brand": "Papa Carlo",
+    "collection": "Milenium"
   },
   {
     "slug": "catalog-95",
@@ -1424,7 +1612,9 @@ export const importedProducts: Product[] = [
       "Фабрика Papa Carlo",
       "Колекція Milenium"
     ],
-    "image": "/catalog-assets/products/product-95.jpg"
+    "image": "/catalog-assets/products/product-95.jpg",
+    "brand": "Papa Carlo",
+    "collection": "Milenium"
   },
   {
     "slug": "catalog-96",
@@ -1439,7 +1629,9 @@ export const importedProducts: Product[] = [
       "Фабрика Papa Carlo",
       "Колекція Milenium"
     ],
-    "image": "/catalog-assets/products/product-96.jpg"
+    "image": "/catalog-assets/products/product-96.jpg",
+    "brand": "Papa Carlo",
+    "collection": "Milenium"
   },
   {
     "slug": "catalog-97",
@@ -1454,7 +1646,9 @@ export const importedProducts: Product[] = [
       "Фабрика Papa Carlo",
       "Колекція Milenium"
     ],
-    "image": "/catalog-assets/products/product-97.jpg"
+    "image": "/catalog-assets/products/product-97.jpg",
+    "brand": "Papa Carlo",
+    "collection": "Milenium"
   },
   {
     "slug": "catalog-98",
@@ -1469,7 +1663,9 @@ export const importedProducts: Product[] = [
       "Фабрика Papa Carlo",
       "Колекція Milenium"
     ],
-    "image": "/catalog-assets/products/product-98.jpg"
+    "image": "/catalog-assets/products/product-98.jpg",
+    "brand": "Papa Carlo",
+    "collection": "Milenium"
   },
   {
     "slug": "catalog-99",
@@ -1484,7 +1680,9 @@ export const importedProducts: Product[] = [
       "Фабрика Papa Carlo",
       "Колекція Milenium"
     ],
-    "image": "/catalog-assets/products/product-99.jpg"
+    "image": "/catalog-assets/products/product-99.jpg",
+    "brand": "Papa Carlo",
+    "collection": "Milenium"
   },
   {
     "slug": "catalog-100",
@@ -1499,7 +1697,9 @@ export const importedProducts: Product[] = [
       "Фабрика Papa Carlo",
       "Колекція Milenium"
     ],
-    "image": "/catalog-assets/products/product-100.jpg"
+    "image": "/catalog-assets/products/product-100.jpg",
+    "brand": "Papa Carlo",
+    "collection": "Milenium"
   },
   {
     "slug": "catalog-101",
@@ -1514,7 +1714,9 @@ export const importedProducts: Product[] = [
       "Фабрика Papa Carlo",
       "Колекція Milenium"
     ],
-    "image": "/catalog-assets/products/product-101.jpg"
+    "image": "/catalog-assets/products/product-101.jpg",
+    "brand": "Papa Carlo",
+    "collection": "Milenium"
   },
   {
     "slug": "catalog-102",
@@ -1529,7 +1731,9 @@ export const importedProducts: Product[] = [
       "Фабрика Papa Carlo",
       "Колекція Plato"
     ],
-    "image": "/catalog-assets/products/product-102.jpg"
+    "image": "/catalog-assets/products/product-102.jpg",
+    "brand": "Papa Carlo",
+    "collection": "Plato"
   },
   {
     "slug": "catalog-103",
@@ -1544,7 +1748,9 @@ export const importedProducts: Product[] = [
       "Фабрика Papa Carlo",
       "Колекція Plato"
     ],
-    "image": "/catalog-assets/products/product-103.jpg"
+    "image": "/catalog-assets/products/product-103.jpg",
+    "brand": "Papa Carlo",
+    "collection": "Plato"
   },
   {
     "slug": "catalog-104",
@@ -1559,7 +1765,9 @@ export const importedProducts: Product[] = [
       "Фабрика Papa Carlo",
       "Колекція Plato"
     ],
-    "image": "/catalog-assets/products/product-104.jpg"
+    "image": "/catalog-assets/products/product-104.jpg",
+    "brand": "Papa Carlo",
+    "collection": "Plato"
   },
   {
     "slug": "catalog-105",
@@ -1574,7 +1782,9 @@ export const importedProducts: Product[] = [
       "Фабрика Papa Carlo",
       "Колекція Plato"
     ],
-    "image": "/catalog-assets/products/product-105.jpg"
+    "image": "/catalog-assets/products/product-105.jpg",
+    "brand": "Papa Carlo",
+    "collection": "Plato"
   },
   {
     "slug": "catalog-106",
@@ -1589,7 +1799,9 @@ export const importedProducts: Product[] = [
       "Фабрика Papa Carlo",
       "Колекція Plato"
     ],
-    "image": "/catalog-assets/products/product-106.jpg"
+    "image": "/catalog-assets/products/product-106.jpg",
+    "brand": "Papa Carlo",
+    "collection": "Plato"
   },
   {
     "slug": "catalog-107",
@@ -1604,7 +1816,9 @@ export const importedProducts: Product[] = [
       "Фабрика Papa Carlo",
       "Колекція Plato"
     ],
-    "image": "/catalog-assets/products/product-107.jpg"
+    "image": "/catalog-assets/products/product-107.jpg",
+    "brand": "Papa Carlo",
+    "collection": "Plato"
   },
   {
     "slug": "catalog-108",
@@ -1619,7 +1833,9 @@ export const importedProducts: Product[] = [
       "Фабрика Papa Carlo",
       "Колекція Plato"
     ],
-    "image": "/catalog-assets/products/product-108.jpg"
+    "image": "/catalog-assets/products/product-108.jpg",
+    "brand": "Papa Carlo",
+    "collection": "Plato"
   },
   {
     "slug": "catalog-109",
@@ -1634,7 +1850,9 @@ export const importedProducts: Product[] = [
       "Фабрика Papa Carlo",
       "Колекція Plato"
     ],
-    "image": "/catalog-assets/products/product-109.jpg"
+    "image": "/catalog-assets/products/product-109.jpg",
+    "brand": "Papa Carlo",
+    "collection": "Plato"
   },
   {
     "slug": "catalog-110",
@@ -1649,7 +1867,9 @@ export const importedProducts: Product[] = [
       "Фабрика Papa Carlo",
       "Колекція Plato"
     ],
-    "image": "/catalog-assets/products/product-110.jpg"
+    "image": "/catalog-assets/products/product-110.jpg",
+    "brand": "Papa Carlo",
+    "collection": "Plato"
   },
   {
     "slug": "catalog-111",
@@ -1664,7 +1884,9 @@ export const importedProducts: Product[] = [
       "Фабрика Papa Carlo",
       "Колекція Style"
     ],
-    "image": "/catalog-assets/products/product-111.jpg"
+    "image": "/catalog-assets/products/product-111.jpg",
+    "brand": "Papa Carlo",
+    "collection": "Style"
   },
   {
     "slug": "catalog-112",
@@ -1679,7 +1901,9 @@ export const importedProducts: Product[] = [
       "Фабрика Papa Carlo",
       "Колекція Style"
     ],
-    "image": "/catalog-assets/products/product-112.jpg"
+    "image": "/catalog-assets/products/product-112.jpg",
+    "brand": "Papa Carlo",
+    "collection": "Style"
   },
   {
     "slug": "catalog-113",
@@ -1694,7 +1918,9 @@ export const importedProducts: Product[] = [
       "Фабрика Papa Carlo",
       "Колекція Style"
     ],
-    "image": "/catalog-assets/products/product-113.jpg"
+    "image": "/catalog-assets/products/product-113.jpg",
+    "brand": "Papa Carlo",
+    "collection": "Style"
   },
   {
     "slug": "catalog-114",
@@ -1709,7 +1935,9 @@ export const importedProducts: Product[] = [
       "Фабрика Papa Carlo",
       "Колекція Style"
     ],
-    "image": "/catalog-assets/products/product-114.jpg"
+    "image": "/catalog-assets/products/product-114.jpg",
+    "brand": "Papa Carlo",
+    "collection": "Style"
   },
   {
     "slug": "catalog-115",
@@ -1724,7 +1952,9 @@ export const importedProducts: Product[] = [
       "Фабрика Papa Carlo",
       "Колекція Style"
     ],
-    "image": "/catalog-assets/products/product-115.jpg"
+    "image": "/catalog-assets/products/product-115.jpg",
+    "brand": "Papa Carlo",
+    "collection": "Style"
   },
   {
     "slug": "catalog-116",
@@ -1739,7 +1969,9 @@ export const importedProducts: Product[] = [
       "Фабрика Papa Carlo",
       "Колекція Style"
     ],
-    "image": "/catalog-assets/products/product-116.jpg"
+    "image": "/catalog-assets/products/product-116.jpg",
+    "brand": "Papa Carlo",
+    "collection": "Style"
   },
   {
     "slug": "catalog-117",
@@ -1754,7 +1986,9 @@ export const importedProducts: Product[] = [
       "Фабрика Papa Carlo",
       "Колекція Style"
     ],
-    "image": "/catalog-assets/products/product-117.jpg"
+    "image": "/catalog-assets/products/product-117.jpg",
+    "brand": "Papa Carlo",
+    "collection": "Style"
   },
   {
     "slug": "catalog-118",
@@ -1769,7 +2003,9 @@ export const importedProducts: Product[] = [
       "Фабрика Papa Carlo",
       "Колекція Style"
     ],
-    "image": "/catalog-assets/products/product-118.jpg"
+    "image": "/catalog-assets/products/product-118.jpg",
+    "brand": "Papa Carlo",
+    "collection": "Style"
   },
   {
     "slug": "catalog-119",
@@ -1784,7 +2020,9 @@ export const importedProducts: Product[] = [
       "Фабрика Papa Carlo",
       "Колекція Tetra"
     ],
-    "image": "/catalog-assets/products/product-119.jpg"
+    "image": "/catalog-assets/products/product-119.jpg",
+    "brand": "Papa Carlo",
+    "collection": "Tetra"
   },
   {
     "slug": "catalog-120",
@@ -1799,7 +2037,9 @@ export const importedProducts: Product[] = [
       "Фабрика Papa Carlo",
       "Колекція Tetra"
     ],
-    "image": "/catalog-assets/products/product-120.jpg"
+    "image": "/catalog-assets/products/product-120.jpg",
+    "brand": "Papa Carlo",
+    "collection": "Tetra"
   },
   {
     "slug": "catalog-121",
@@ -1814,7 +2054,9 @@ export const importedProducts: Product[] = [
       "Фабрика Papa Carlo",
       "Колекція Tetra"
     ],
-    "image": "/catalog-assets/products/product-121.jpg"
+    "image": "/catalog-assets/products/product-121.jpg",
+    "brand": "Papa Carlo",
+    "collection": "Tetra"
   },
   {
     "slug": "catalog-122",
@@ -1829,7 +2071,9 @@ export const importedProducts: Product[] = [
       "Фабрика Papa Carlo",
       "Колекція Tetra"
     ],
-    "image": "/catalog-assets/products/product-122.jpg"
+    "image": "/catalog-assets/products/product-122.jpg",
+    "brand": "Papa Carlo",
+    "collection": "Tetra"
   },
   {
     "slug": "catalog-123",
@@ -1844,7 +2088,9 @@ export const importedProducts: Product[] = [
       "Фабрика Papa Carlo",
       "Колекція Tetra"
     ],
-    "image": "/catalog-assets/products/product-123.jpg"
+    "image": "/catalog-assets/products/product-123.jpg",
+    "brand": "Papa Carlo",
+    "collection": "Tetra"
   },
   {
     "slug": "catalog-124",
@@ -1859,7 +2105,9 @@ export const importedProducts: Product[] = [
       "Фабрика Papa Carlo",
       "Колекція Tetra"
     ],
-    "image": "/catalog-assets/products/product-124.jpg"
+    "image": "/catalog-assets/products/product-124.jpg",
+    "brand": "Papa Carlo",
+    "collection": "Tetra"
   },
   {
     "slug": "catalog-125",
@@ -1874,7 +2122,9 @@ export const importedProducts: Product[] = [
       "Фабрика Papa Carlo",
       "Колекція Tetra"
     ],
-    "image": "/catalog-assets/products/product-125.jpg"
+    "image": "/catalog-assets/products/product-125.jpg",
+    "brand": "Papa Carlo",
+    "collection": "Tetra"
   },
   {
     "slug": "catalog-126",
@@ -1889,7 +2139,9 @@ export const importedProducts: Product[] = [
       "Фабрика Papa Carlo",
       "Колекція Tetra"
     ],
-    "image": "/catalog-assets/products/product-126.jpg"
+    "image": "/catalog-assets/products/product-126.jpg",
+    "brand": "Papa Carlo",
+    "collection": "Tetra"
   },
   {
     "slug": "catalog-127",
@@ -1904,7 +2156,9 @@ export const importedProducts: Product[] = [
       "Фабрика Papa Carlo",
       "Колекція Tetra"
     ],
-    "image": "/catalog-assets/products/product-127.jpg"
+    "image": "/catalog-assets/products/product-127.jpg",
+    "brand": "Papa Carlo",
+    "collection": "Tetra"
   },
   {
     "slug": "catalog-128",
@@ -1919,7 +2173,9 @@ export const importedProducts: Product[] = [
       "Фабрика Papa Carlo",
       "Колекція Tetra"
     ],
-    "image": "/catalog-assets/products/product-128.jpg"
+    "image": "/catalog-assets/products/product-128.jpg",
+    "brand": "Papa Carlo",
+    "collection": "Tetra"
   },
   {
     "slug": "catalog-129",
@@ -1934,7 +2190,9 @@ export const importedProducts: Product[] = [
       "Фабрика Papa Carlo",
       "Колекція Tetra"
     ],
-    "image": "/catalog-assets/products/product-129.jpg"
+    "image": "/catalog-assets/products/product-129.jpg",
+    "brand": "Papa Carlo",
+    "collection": "Tetra"
   },
   {
     "slug": "catalog-130",
@@ -1949,7 +2207,9 @@ export const importedProducts: Product[] = [
       "Фабрика Papa Carlo",
       "Колекція Tetra"
     ],
-    "image": "/catalog-assets/products/product-130.jpg"
+    "image": "/catalog-assets/products/product-130.jpg",
+    "brand": "Papa Carlo",
+    "collection": "Tetra"
   },
   {
     "slug": "catalog-131",
@@ -1964,7 +2224,9 @@ export const importedProducts: Product[] = [
       "Фабрика Papa Carlo",
       "Колекція Tetra"
     ],
-    "image": "/catalog-assets/products/product-131.jpg"
+    "image": "/catalog-assets/products/product-131.jpg",
+    "brand": "Papa Carlo",
+    "collection": "Tetra"
   },
   {
     "slug": "catalog-132",
@@ -1979,7 +2241,9 @@ export const importedProducts: Product[] = [
       "Фабрика Papa Carlo",
       "Колекція Tetra"
     ],
-    "image": "/catalog-assets/products/product-132.jpg"
+    "image": "/catalog-assets/products/product-132.jpg",
+    "brand": "Papa Carlo",
+    "collection": "Tetra"
   },
   {
     "slug": "catalog-133",
@@ -1994,7 +2258,9 @@ export const importedProducts: Product[] = [
       "Фабрика Papa Carlo",
       "Колекція Tetra"
     ],
-    "image": "/catalog-assets/products/product-133.jpg"
+    "image": "/catalog-assets/products/product-133.jpg",
+    "brand": "Papa Carlo",
+    "collection": "Tetra"
   },
   {
     "slug": "catalog-134",
@@ -2009,7 +2275,9 @@ export const importedProducts: Product[] = [
       "Фабрика Papa Carlo",
       "Колекція Tetra"
     ],
-    "image": "/catalog-assets/products/product-134.jpg"
+    "image": "/catalog-assets/products/product-134.jpg",
+    "brand": "Papa Carlo",
+    "collection": "Tetra"
   },
   {
     "slug": "catalog-135",
@@ -2024,7 +2292,9 @@ export const importedProducts: Product[] = [
       "Фабрика Papa Carlo",
       "Колекція Tetra"
     ],
-    "image": "/catalog-assets/products/product-135.jpg"
+    "image": "/catalog-assets/products/product-135.jpg",
+    "brand": "Papa Carlo",
+    "collection": "Tetra"
   },
   {
     "slug": "catalog-136",
@@ -2039,7 +2309,9 @@ export const importedProducts: Product[] = [
       "Фабрика Papa Carlo",
       "Колекція Tetra"
     ],
-    "image": "/catalog-assets/products/product-136.jpg"
+    "image": "/catalog-assets/products/product-136.jpg",
+    "brand": "Papa Carlo",
+    "collection": "Tetra"
   },
   {
     "slug": "catalog-137",
@@ -2054,7 +2326,9 @@ export const importedProducts: Product[] = [
       "Фабрика Papa Carlo",
       "Колекція Tetra"
     ],
-    "image": "/catalog-assets/products/product-137.jpg"
+    "image": "/catalog-assets/products/product-137.jpg",
+    "brand": "Papa Carlo",
+    "collection": "Tetra"
   },
   {
     "slug": "catalog-138",
@@ -2069,7 +2343,9 @@ export const importedProducts: Product[] = [
       "Фабрика Papa Carlo",
       "Колекція Склад"
     ],
-    "image": "/catalog-assets/products/product-138.jpg"
+    "image": "/catalog-assets/products/product-138.jpg",
+    "brand": "Papa Carlo",
+    "collection": "Склад"
   },
   {
     "slug": "catalog-139",
@@ -2084,7 +2360,9 @@ export const importedProducts: Product[] = [
       "Фабрика Papa Carlo",
       "Колекція Склад"
     ],
-    "image": "/catalog-assets/products/product-139.jpg"
+    "image": "/catalog-assets/products/product-139.jpg",
+    "brand": "Papa Carlo",
+    "collection": "Склад"
   },
   {
     "slug": "catalog-140",
@@ -2099,7 +2377,9 @@ export const importedProducts: Product[] = [
       "Фабрика Papa Carlo",
       "Колекція Склад"
     ],
-    "image": "/catalog-assets/products/product-140.jpg"
+    "image": "/catalog-assets/products/product-140.jpg",
+    "brand": "Papa Carlo",
+    "collection": "Склад"
   },
   {
     "slug": "catalog-141",
@@ -2114,7 +2394,9 @@ export const importedProducts: Product[] = [
       "Фабрика Papa Carlo",
       "Колекція Склад"
     ],
-    "image": "/catalog-assets/products/product-141.jpg"
+    "image": "/catalog-assets/products/product-141.jpg",
+    "brand": "Papa Carlo",
+    "collection": "Склад"
   },
   {
     "slug": "catalog-142",
@@ -2129,7 +2411,9 @@ export const importedProducts: Product[] = [
       "Фабрика Papa Carlo",
       "Колекція Склад"
     ],
-    "image": "/catalog-assets/products/product-142.jpg"
+    "image": "/catalog-assets/products/product-142.jpg",
+    "brand": "Papa Carlo",
+    "collection": "Склад"
   },
   {
     "slug": "catalog-143",
@@ -2144,7 +2428,9 @@ export const importedProducts: Product[] = [
       "Фабрика Papa Carlo",
       "Колекція Склад"
     ],
-    "image": "/catalog-assets/products/product-143.jpg"
+    "image": "/catalog-assets/products/product-143.jpg",
+    "brand": "Papa Carlo",
+    "collection": "Склад"
   },
   {
     "slug": "catalog-144",
@@ -2159,7 +2445,9 @@ export const importedProducts: Product[] = [
       "Фабрика Papa Carlo",
       "Колекція Склад"
     ],
-    "image": "/catalog-assets/products/product-144.jpg"
+    "image": "/catalog-assets/products/product-144.jpg",
+    "brand": "Papa Carlo",
+    "collection": "Склад"
   },
   {
     "slug": "catalog-145",
@@ -2174,7 +2462,9 @@ export const importedProducts: Product[] = [
       "Фабрика Papa Carlo",
       "Колекція Склад"
     ],
-    "image": "/catalog-assets/products/product-145.jpg"
+    "image": "/catalog-assets/products/product-145.jpg",
+    "brand": "Papa Carlo",
+    "collection": "Склад"
   },
   {
     "slug": "catalog-146",
@@ -2189,7 +2479,9 @@ export const importedProducts: Product[] = [
       "Фабрика Papa Carlo",
       "Колекція Склад"
     ],
-    "image": "/catalog-assets/products/product-146.jpg"
+    "image": "/catalog-assets/products/product-146.jpg",
+    "brand": "Papa Carlo",
+    "collection": "Склад"
   },
   {
     "slug": "catalog-147",
@@ -2204,7 +2496,9 @@ export const importedProducts: Product[] = [
       "Фабрика Papa Carlo",
       "Колекція Склад"
     ],
-    "image": "/catalog-assets/products/product-147.jpg"
+    "image": "/catalog-assets/products/product-147.jpg",
+    "brand": "Papa Carlo",
+    "collection": "Склад"
   },
   {
     "slug": "catalog-148",
@@ -2219,7 +2513,9 @@ export const importedProducts: Product[] = [
       "Фабрика Papa Carlo",
       "Колекція Склад"
     ],
-    "image": "/catalog-assets/products/product-148.jpg"
+    "image": "/catalog-assets/products/product-148.jpg",
+    "brand": "Papa Carlo",
+    "collection": "Склад"
   },
   {
     "slug": "catalog-149",
@@ -2234,7 +2530,9 @@ export const importedProducts: Product[] = [
       "Фабрика Papa Carlo",
       "Колекція Склад"
     ],
-    "image": "/catalog-assets/products/product-149.jpg"
+    "image": "/catalog-assets/products/product-149.jpg",
+    "brand": "Papa Carlo",
+    "collection": "Склад"
   },
   {
     "slug": "catalog-150",
@@ -2249,7 +2547,9 @@ export const importedProducts: Product[] = [
       "Фабрика Papa Carlo",
       "Колекція Склад"
     ],
-    "image": "/catalog-assets/products/product-150.jpg"
+    "image": "/catalog-assets/products/product-150.jpg",
+    "brand": "Papa Carlo",
+    "collection": "Склад"
   },
   {
     "slug": "catalog-151",
@@ -2264,7 +2564,9 @@ export const importedProducts: Product[] = [
       "Фабрика Papa Carlo",
       "Колекція Склад"
     ],
-    "image": "/catalog-assets/products/product-151.jpg"
+    "image": "/catalog-assets/products/product-151.jpg",
+    "brand": "Papa Carlo",
+    "collection": "Склад"
   },
   {
     "slug": "catalog-152",
@@ -2279,7 +2581,9 @@ export const importedProducts: Product[] = [
       "Фабрика Rodos Steel",
       "Колекція Вулиця"
     ],
-    "image": "/catalog-assets/products/product-152.jpg"
+    "image": "/catalog-assets/products/product-152.jpg",
+    "brand": "Rodos Steel",
+    "collection": "Вулиця"
   },
   {
     "slug": "catalog-153",
@@ -2294,7 +2598,9 @@ export const importedProducts: Product[] = [
       "Фабрика Rodos Steel",
       "Колекція Вулиця"
     ],
-    "image": "/catalog-assets/products/product-153.jpg"
+    "image": "/catalog-assets/products/product-153.jpg",
+    "brand": "Rodos Steel",
+    "collection": "Вулиця"
   },
   {
     "slug": "catalog-154",
@@ -2309,7 +2615,9 @@ export const importedProducts: Product[] = [
       "Фабрика Rodos Steel",
       "Колекція Вулиця"
     ],
-    "image": "/catalog-assets/products/product-154.jpg"
+    "image": "/catalog-assets/products/product-154.jpg",
+    "brand": "Rodos Steel",
+    "collection": "Вулиця"
   },
   {
     "slug": "catalog-155",
@@ -2324,7 +2632,9 @@ export const importedProducts: Product[] = [
       "Фабрика Rodos Steel",
       "Колекція Вулиця"
     ],
-    "image": "/catalog-assets/products/product-155.jpg"
+    "image": "/catalog-assets/products/product-155.jpg",
+    "brand": "Rodos Steel",
+    "collection": "Вулиця"
   },
   {
     "slug": "catalog-156",
@@ -2339,7 +2649,9 @@ export const importedProducts: Product[] = [
       "Фабрика Rodos Steel",
       "Колекція Вулиця"
     ],
-    "image": "/catalog-assets/products/product-156.jpg"
+    "image": "/catalog-assets/products/product-156.jpg",
+    "brand": "Rodos Steel",
+    "collection": "Вулиця"
   },
   {
     "slug": "catalog-157",
@@ -2354,7 +2666,9 @@ export const importedProducts: Product[] = [
       "Фабрика Rodos Steel",
       "Колекція Вулиця"
     ],
-    "image": "/catalog-assets/products/product-157.jpg"
+    "image": "/catalog-assets/products/product-157.jpg",
+    "brand": "Rodos Steel",
+    "collection": "Вулиця"
   },
   {
     "slug": "catalog-158",
@@ -2369,7 +2683,9 @@ export const importedProducts: Product[] = [
       "Фабрика Rodos Steel",
       "Колекція Вулиця"
     ],
-    "image": "/catalog-assets/products/product-158.jpg"
+    "image": "/catalog-assets/products/product-158.jpg",
+    "brand": "Rodos Steel",
+    "collection": "Вулиця"
   },
   {
     "slug": "catalog-159",
@@ -2384,7 +2700,9 @@ export const importedProducts: Product[] = [
       "Фабрика Rodos Steel",
       "Колекція Вулиця"
     ],
-    "image": "/catalog-assets/products/product-159.jpg"
+    "image": "/catalog-assets/products/product-159.jpg",
+    "brand": "Rodos Steel",
+    "collection": "Вулиця"
   },
   {
     "slug": "catalog-160",
@@ -2399,7 +2717,9 @@ export const importedProducts: Product[] = [
       "Фабрика Rodos Steel",
       "Колекція Вулиця"
     ],
-    "image": "/catalog-assets/products/product-160.jpg"
+    "image": "/catalog-assets/products/product-160.jpg",
+    "brand": "Rodos Steel",
+    "collection": "Вулиця"
   },
   {
     "slug": "catalog-161",
@@ -2414,7 +2734,9 @@ export const importedProducts: Product[] = [
       "Фабрика Rodos Steel",
       "Колекція Вулиця"
     ],
-    "image": "/catalog-assets/products/product-161.jpg"
+    "image": "/catalog-assets/products/product-161.jpg",
+    "brand": "Rodos Steel",
+    "collection": "Вулиця"
   },
   {
     "slug": "catalog-162",
@@ -2429,7 +2751,9 @@ export const importedProducts: Product[] = [
       "Фабрика Rodos Steel",
       "Колекція Вулиця"
     ],
-    "image": "/catalog-assets/products/product-162.jpg"
+    "image": "/catalog-assets/products/product-162.jpg",
+    "brand": "Rodos Steel",
+    "collection": "Вулиця"
   },
   {
     "slug": "catalog-163",
@@ -2444,7 +2768,9 @@ export const importedProducts: Product[] = [
       "Фабрика Rodos Steel",
       "Колекція Квартира"
     ],
-    "image": "/catalog-assets/products/product-163.jpg"
+    "image": "/catalog-assets/products/product-163.jpg",
+    "brand": "Rodos Steel",
+    "collection": "Квартира"
   },
   {
     "slug": "catalog-164",
@@ -2459,7 +2785,9 @@ export const importedProducts: Product[] = [
       "Фабрика Rodos Steel",
       "Колекція Квартира"
     ],
-    "image": "/catalog-assets/products/product-164.jpg"
+    "image": "/catalog-assets/products/product-164.jpg",
+    "brand": "Rodos Steel",
+    "collection": "Квартира"
   },
   {
     "slug": "catalog-165",
@@ -2474,7 +2802,9 @@ export const importedProducts: Product[] = [
       "Фабрика Rodos Steel",
       "Колекція Квартира"
     ],
-    "image": "/catalog-assets/products/product-165.jpg"
+    "image": "/catalog-assets/products/product-165.jpg",
+    "brand": "Rodos Steel",
+    "collection": "Квартира"
   },
   {
     "slug": "catalog-166",
@@ -2489,7 +2819,9 @@ export const importedProducts: Product[] = [
       "Фабрика Rodos Steel",
       "Колекція Квартира"
     ],
-    "image": "/catalog-assets/products/product-166.jpg"
+    "image": "/catalog-assets/products/product-166.jpg",
+    "brand": "Rodos Steel",
+    "collection": "Квартира"
   },
   {
     "slug": "catalog-167",
@@ -2504,7 +2836,9 @@ export const importedProducts: Product[] = [
       "Фабрика Rodos Steel",
       "Колекція Квартира"
     ],
-    "image": "/catalog-assets/products/product-167.jpg"
+    "image": "/catalog-assets/products/product-167.jpg",
+    "brand": "Rodos Steel",
+    "collection": "Квартира"
   },
   {
     "slug": "catalog-168",
@@ -2519,7 +2853,9 @@ export const importedProducts: Product[] = [
       "Фабрика Rodos Steel",
       "Колекція Квартира"
     ],
-    "image": "/catalog-assets/products/product-168.jpg"
+    "image": "/catalog-assets/products/product-168.jpg",
+    "brand": "Rodos Steel",
+    "collection": "Квартира"
   },
   {
     "slug": "catalog-169",
@@ -2534,7 +2870,9 @@ export const importedProducts: Product[] = [
       "Фабрика Rodos Steel",
       "Колекція Квартира"
     ],
-    "image": "/catalog-assets/products/product-169.jpg"
+    "image": "/catalog-assets/products/product-169.jpg",
+    "brand": "Rodos Steel",
+    "collection": "Квартира"
   },
   {
     "slug": "catalog-170",
@@ -2549,7 +2887,9 @@ export const importedProducts: Product[] = [
       "Фабрика Rodos Steel",
       "Колекція Квартира"
     ],
-    "image": "/catalog-assets/products/product-170.jpg"
+    "image": "/catalog-assets/products/product-170.jpg",
+    "brand": "Rodos Steel",
+    "collection": "Квартира"
   },
   {
     "slug": "catalog-171",
@@ -2564,7 +2904,9 @@ export const importedProducts: Product[] = [
       "Фабрика Rodos Steel",
       "Колекція Квартира"
     ],
-    "image": "/catalog-assets/products/product-171.jpg"
+    "image": "/catalog-assets/products/product-171.jpg",
+    "brand": "Rodos Steel",
+    "collection": "Квартира"
   },
   {
     "slug": "catalog-172",
@@ -2579,7 +2921,9 @@ export const importedProducts: Product[] = [
       "Фабрика Rodos Steel",
       "Колекція Квартира"
     ],
-    "image": "/catalog-assets/products/product-172.jpg"
+    "image": "/catalog-assets/products/product-172.jpg",
+    "brand": "Rodos Steel",
+    "collection": "Квартира"
   },
   {
     "slug": "catalog-173",
@@ -2594,7 +2938,9 @@ export const importedProducts: Product[] = [
       "Фабрика Rodos Steel",
       "Колекція Квартира"
     ],
-    "image": "/catalog-assets/products/product-173.jpg"
+    "image": "/catalog-assets/products/product-173.jpg",
+    "brand": "Rodos Steel",
+    "collection": "Квартира"
   },
   {
     "slug": "catalog-174",
@@ -2609,7 +2955,9 @@ export const importedProducts: Product[] = [
       "Фабрика Rodos Steel",
       "Колекція Квартира"
     ],
-    "image": "/catalog-assets/products/product-174.jpg"
+    "image": "/catalog-assets/products/product-174.jpg",
+    "brand": "Rodos Steel",
+    "collection": "Квартира"
   },
   {
     "slug": "catalog-175",
@@ -2624,7 +2972,9 @@ export const importedProducts: Product[] = [
       "Фабрика Rodos Steel",
       "Колекція Квартира"
     ],
-    "image": "/catalog-assets/products/product-175.jpg"
+    "image": "/catalog-assets/products/product-175.jpg",
+    "brand": "Rodos Steel",
+    "collection": "Квартира"
   },
   {
     "slug": "catalog-176",
@@ -2639,7 +2989,9 @@ export const importedProducts: Product[] = [
       "Фабрика Rodos Steel",
       "Колекція Квартира"
     ],
-    "image": "/catalog-assets/products/product-176.jpg"
+    "image": "/catalog-assets/products/product-176.jpg",
+    "brand": "Rodos Steel",
+    "collection": "Квартира"
   },
   {
     "slug": "catalog-177",
@@ -2654,7 +3006,9 @@ export const importedProducts: Product[] = [
       "Фабрика Rodos Steel",
       "Колекція Квартира"
     ],
-    "image": "/catalog-assets/products/product-177.jpg"
+    "image": "/catalog-assets/products/product-177.jpg",
+    "brand": "Rodos Steel",
+    "collection": "Квартира"
   },
   {
     "slug": "catalog-178",
@@ -2669,7 +3023,9 @@ export const importedProducts: Product[] = [
       "Фабрика Rodos Steel",
       "Колекція Квартира"
     ],
-    "image": "/catalog-assets/products/product-178.jpg"
+    "image": "/catalog-assets/products/product-178.jpg",
+    "brand": "Rodos Steel",
+    "collection": "Квартира"
   },
   {
     "slug": "catalog-179",
@@ -2684,7 +3040,9 @@ export const importedProducts: Product[] = [
       "Фабрика Rodos Steel",
       "Колекція Квартира"
     ],
-    "image": "/catalog-assets/products/product-179.jpg"
+    "image": "/catalog-assets/products/product-179.jpg",
+    "brand": "Rodos Steel",
+    "collection": "Квартира"
   },
   {
     "slug": "catalog-180",
@@ -2699,7 +3057,9 @@ export const importedProducts: Product[] = [
       "Фабрика Rodos",
       "Колекція Atlantic ПВХ"
     ],
-    "image": "/catalog-assets/products/product-180.jpg"
+    "image": "/catalog-assets/products/product-180.jpg",
+    "brand": "Rodos",
+    "collection": "Atlantic ПВХ"
   },
   {
     "slug": "catalog-181",
@@ -2714,7 +3074,9 @@ export const importedProducts: Product[] = [
       "Фабрика Rodos",
       "Колекція Atlantic ПВХ"
     ],
-    "image": "/catalog-assets/products/product-181.jpg"
+    "image": "/catalog-assets/products/product-181.jpg",
+    "brand": "Rodos",
+    "collection": "Atlantic ПВХ"
   },
   {
     "slug": "catalog-182",
@@ -2729,7 +3091,9 @@ export const importedProducts: Product[] = [
       "Фабрика Rodos",
       "Колекція Atlantic ПВХ"
     ],
-    "image": "/catalog-assets/products/product-182.jpg"
+    "image": "/catalog-assets/products/product-182.jpg",
+    "brand": "Rodos",
+    "collection": "Atlantic ПВХ"
   },
   {
     "slug": "catalog-183",
@@ -2744,7 +3108,9 @@ export const importedProducts: Product[] = [
       "Фабрика Rodos",
       "Колекція Atlantic ПВХ"
     ],
-    "image": "/catalog-assets/products/product-183.jpg"
+    "image": "/catalog-assets/products/product-183.jpg",
+    "brand": "Rodos",
+    "collection": "Atlantic ПВХ"
   },
   {
     "slug": "catalog-184",
@@ -2759,7 +3125,9 @@ export const importedProducts: Product[] = [
       "Фабрика Rodos",
       "Колекція Atlantic ПВХ"
     ],
-    "image": "/catalog-assets/products/product-184.jpg"
+    "image": "/catalog-assets/products/product-184.jpg",
+    "brand": "Rodos",
+    "collection": "Atlantic ПВХ"
   },
   {
     "slug": "catalog-185",
@@ -2774,7 +3142,9 @@ export const importedProducts: Product[] = [
       "Фабрика Rodos",
       "Колекція Atlantic ПВХ"
     ],
-    "image": "/catalog-assets/products/product-185.jpg"
+    "image": "/catalog-assets/products/product-185.jpg",
+    "brand": "Rodos",
+    "collection": "Atlantic ПВХ"
   },
   {
     "slug": "catalog-186",
@@ -2789,7 +3159,9 @@ export const importedProducts: Product[] = [
       "Фабрика Rodos",
       "Колекція Atlantic ПВХ"
     ],
-    "image": "/catalog-assets/products/product-186.jpg"
+    "image": "/catalog-assets/products/product-186.jpg",
+    "brand": "Rodos",
+    "collection": "Atlantic ПВХ"
   },
   {
     "slug": "catalog-187",
@@ -2804,7 +3176,9 @@ export const importedProducts: Product[] = [
       "Фабрика Rodos",
       "Колекція Atlantic ПВХ"
     ],
-    "image": "/catalog-assets/products/product-187.jpg"
+    "image": "/catalog-assets/products/product-187.jpg",
+    "brand": "Rodos",
+    "collection": "Atlantic ПВХ"
   },
   {
     "slug": "catalog-188",
@@ -2819,7 +3193,9 @@ export const importedProducts: Product[] = [
       "Фабрика Rodos",
       "Колекція Atlantic ПВХ"
     ],
-    "image": "/catalog-assets/products/product-188.jpg"
+    "image": "/catalog-assets/products/product-188.jpg",
+    "brand": "Rodos",
+    "collection": "Atlantic ПВХ"
   },
   {
     "slug": "catalog-189",
@@ -2834,7 +3210,9 @@ export const importedProducts: Product[] = [
       "Фабрика Rodos",
       "Колекція Atlantic ПВХ"
     ],
-    "image": "/catalog-assets/products/product-189.jpg"
+    "image": "/catalog-assets/products/product-189.jpg",
+    "brand": "Rodos",
+    "collection": "Atlantic ПВХ"
   },
   {
     "slug": "catalog-190",
@@ -2849,7 +3227,9 @@ export const importedProducts: Product[] = [
       "Фабрика Rodos",
       "Колекція Atlantic ПВХ"
     ],
-    "image": "/catalog-assets/products/product-190.jpg"
+    "image": "/catalog-assets/products/product-190.jpg",
+    "brand": "Rodos",
+    "collection": "Atlantic ПВХ"
   },
   {
     "slug": "catalog-191",
@@ -2864,7 +3244,9 @@ export const importedProducts: Product[] = [
       "Фабрика Rodos",
       "Колекція Atlantic ПВХ"
     ],
-    "image": "/catalog-assets/products/product-191.jpg"
+    "image": "/catalog-assets/products/product-191.jpg",
+    "brand": "Rodos",
+    "collection": "Atlantic ПВХ"
   },
   {
     "slug": "catalog-192",
@@ -2879,7 +3261,9 @@ export const importedProducts: Product[] = [
       "Фабрика Rodos",
       "Колекція Atlantic ПВХ"
     ],
-    "image": "/catalog-assets/products/product-192.jpg"
+    "image": "/catalog-assets/products/product-192.jpg",
+    "brand": "Rodos",
+    "collection": "Atlantic ПВХ"
   },
   {
     "slug": "catalog-193",
@@ -2894,7 +3278,9 @@ export const importedProducts: Product[] = [
       "Фабрика Rodos",
       "Колекція Atlantic ПВХ"
     ],
-    "image": "/catalog-assets/products/product-193.jpg"
+    "image": "/catalog-assets/products/product-193.jpg",
+    "brand": "Rodos",
+    "collection": "Atlantic ПВХ"
   },
   {
     "slug": "catalog-194",
@@ -2909,7 +3295,9 @@ export const importedProducts: Product[] = [
       "Фабрика Rodos",
       "Колекція Cortes фарба"
     ],
-    "image": "/catalog-assets/products/product-194.jpg"
+    "image": "/catalog-assets/products/product-194.jpg",
+    "brand": "Rodos",
+    "collection": "Cortes фарба"
   },
   {
     "slug": "catalog-195",
@@ -2924,7 +3312,9 @@ export const importedProducts: Product[] = [
       "Фабрика Rodos",
       "Колекція Cortes фарба"
     ],
-    "image": "/catalog-assets/products/product-195.jpg"
+    "image": "/catalog-assets/products/product-195.jpg",
+    "brand": "Rodos",
+    "collection": "Cortes фарба"
   },
   {
     "slug": "catalog-196",
@@ -2939,7 +3329,9 @@ export const importedProducts: Product[] = [
       "Фабрика Rodos",
       "Колекція Cortes фарба"
     ],
-    "image": "/catalog-assets/products/product-196.jpg"
+    "image": "/catalog-assets/products/product-196.jpg",
+    "brand": "Rodos",
+    "collection": "Cortes фарба"
   },
   {
     "slug": "catalog-197",
@@ -2954,7 +3346,9 @@ export const importedProducts: Product[] = [
       "Фабрика Rodos",
       "Колекція Cortes фарба"
     ],
-    "image": "/catalog-assets/products/product-197.jpg"
+    "image": "/catalog-assets/products/product-197.jpg",
+    "brand": "Rodos",
+    "collection": "Cortes фарба"
   },
   {
     "slug": "catalog-198",
@@ -2969,7 +3363,9 @@ export const importedProducts: Product[] = [
       "Фабрика Rodos",
       "Колекція Cortes фарба"
     ],
-    "image": "/catalog-assets/products/product-198.jpg"
+    "image": "/catalog-assets/products/product-198.jpg",
+    "brand": "Rodos",
+    "collection": "Cortes фарба"
   },
   {
     "slug": "catalog-199",
@@ -2984,7 +3380,9 @@ export const importedProducts: Product[] = [
       "Фабрика Rodos",
       "Колекція Cortes фарба"
     ],
-    "image": "/catalog-assets/products/product-199.jpg"
+    "image": "/catalog-assets/products/product-199.jpg",
+    "brand": "Rodos",
+    "collection": "Cortes фарба"
   },
   {
     "slug": "catalog-200",
@@ -2999,7 +3397,9 @@ export const importedProducts: Product[] = [
       "Фабрика Rodos",
       "Колекція Cortes фарба"
     ],
-    "image": "/catalog-assets/products/product-200.jpg"
+    "image": "/catalog-assets/products/product-200.jpg",
+    "brand": "Rodos",
+    "collection": "Cortes фарба"
   },
   {
     "slug": "catalog-201",
@@ -3014,7 +3414,9 @@ export const importedProducts: Product[] = [
       "Фабрика Rodos",
       "Колекція Cortes фарба"
     ],
-    "image": "/catalog-assets/products/product-201.jpg"
+    "image": "/catalog-assets/products/product-201.jpg",
+    "brand": "Rodos",
+    "collection": "Cortes фарба"
   },
   {
     "slug": "catalog-202",
@@ -3029,7 +3431,9 @@ export const importedProducts: Product[] = [
       "Фабрика Rodos",
       "Колекція Cortes фарба"
     ],
-    "image": "/catalog-assets/products/product-202.jpg"
+    "image": "/catalog-assets/products/product-202.jpg",
+    "brand": "Rodos",
+    "collection": "Cortes фарба"
   },
   {
     "slug": "catalog-203",
@@ -3044,7 +3448,9 @@ export const importedProducts: Product[] = [
       "Фабрика Rodos",
       "Колекція Cortes фарба"
     ],
-    "image": "/catalog-assets/products/product-203.jpg"
+    "image": "/catalog-assets/products/product-203.jpg",
+    "brand": "Rodos",
+    "collection": "Cortes фарба"
   },
   {
     "slug": "catalog-204",
@@ -3059,7 +3465,9 @@ export const importedProducts: Product[] = [
       "Фабрика Rodos",
       "Колекція Cortes фарба"
     ],
-    "image": "/catalog-assets/products/product-204.jpg"
+    "image": "/catalog-assets/products/product-204.jpg",
+    "brand": "Rodos",
+    "collection": "Cortes фарба"
   },
   {
     "slug": "catalog-205",
@@ -3074,7 +3482,9 @@ export const importedProducts: Product[] = [
       "Фабрика Rodos",
       "Колекція Cortes фарба"
     ],
-    "image": "/catalog-assets/products/product-205.jpg"
+    "image": "/catalog-assets/products/product-205.jpg",
+    "brand": "Rodos",
+    "collection": "Cortes фарба"
   },
   {
     "slug": "catalog-206",
@@ -3089,7 +3499,9 @@ export const importedProducts: Product[] = [
       "Фабрика Rodos",
       "Колекція Cortes фарба"
     ],
-    "image": "/catalog-assets/products/product-206.jpg"
+    "image": "/catalog-assets/products/product-206.jpg",
+    "brand": "Rodos",
+    "collection": "Cortes фарба"
   },
   {
     "slug": "catalog-207",
@@ -3104,7 +3516,9 @@ export const importedProducts: Product[] = [
       "Фабрика Rodos",
       "Колекція Cortes фарба"
     ],
-    "image": "/catalog-assets/products/product-207.jpg"
+    "image": "/catalog-assets/products/product-207.jpg",
+    "brand": "Rodos",
+    "collection": "Cortes фарба"
   },
   {
     "slug": "catalog-208",
@@ -3119,7 +3533,9 @@ export const importedProducts: Product[] = [
       "Фабрика Rodos",
       "Колекція Cortes фарба"
     ],
-    "image": "/catalog-assets/products/product-208.jpg"
+    "image": "/catalog-assets/products/product-208.jpg",
+    "brand": "Rodos",
+    "collection": "Cortes фарба"
   },
   {
     "slug": "catalog-209",
@@ -3134,7 +3550,9 @@ export const importedProducts: Product[] = [
       "Фабрика Rodos",
       "Колекція Cortes фарба"
     ],
-    "image": "/catalog-assets/products/product-209.jpg"
+    "image": "/catalog-assets/products/product-209.jpg",
+    "brand": "Rodos",
+    "collection": "Cortes фарба"
   },
   {
     "slug": "catalog-210",
@@ -3149,7 +3567,9 @@ export const importedProducts: Product[] = [
       "Фабрика Rodos",
       "Колекція Cortes фарба"
     ],
-    "image": "/catalog-assets/products/product-210.jpg"
+    "image": "/catalog-assets/products/product-210.jpg",
+    "brand": "Rodos",
+    "collection": "Cortes фарба"
   },
   {
     "slug": "catalog-211",
@@ -3164,7 +3584,9 @@ export const importedProducts: Product[] = [
       "Фабрика Rodos",
       "Колекція Cortes фарба"
     ],
-    "image": "/catalog-assets/products/product-211.jpg"
+    "image": "/catalog-assets/products/product-211.jpg",
+    "brand": "Rodos",
+    "collection": "Cortes фарба"
   },
   {
     "slug": "catalog-212",
@@ -3179,7 +3601,9 @@ export const importedProducts: Product[] = [
       "Фабрика Rodos",
       "Колекція Cortes фарба"
     ],
-    "image": "/catalog-assets/products/product-212.jpg"
+    "image": "/catalog-assets/products/product-212.jpg",
+    "brand": "Rodos",
+    "collection": "Cortes фарба"
   },
   {
     "slug": "catalog-213",
@@ -3194,7 +3618,9 @@ export const importedProducts: Product[] = [
       "Фабрика Rodos",
       "Колекція Cortes фарба"
     ],
-    "image": "/catalog-assets/products/product-213.jpg"
+    "image": "/catalog-assets/products/product-213.jpg",
+    "brand": "Rodos",
+    "collection": "Cortes фарба"
   },
   {
     "slug": "catalog-214",
@@ -3209,7 +3635,9 @@ export const importedProducts: Product[] = [
       "Фабрика Rodos",
       "Колекція Cortes фарба"
     ],
-    "image": "/catalog-assets/products/product-214.jpg"
+    "image": "/catalog-assets/products/product-214.jpg",
+    "brand": "Rodos",
+    "collection": "Cortes фарба"
   },
   {
     "slug": "catalog-215",
@@ -3224,7 +3652,9 @@ export const importedProducts: Product[] = [
       "Фабрика Rodos",
       "Колекція Cortes фарба"
     ],
-    "image": "/catalog-assets/products/product-215.jpg"
+    "image": "/catalog-assets/products/product-215.jpg",
+    "brand": "Rodos",
+    "collection": "Cortes фарба"
   },
   {
     "slug": "catalog-216",
@@ -3239,7 +3669,9 @@ export const importedProducts: Product[] = [
       "Фабрика Rodos",
       "Колекція Loft фарба"
     ],
-    "image": "/catalog-assets/products/product-216.jpg"
+    "image": "/catalog-assets/products/product-216.jpg",
+    "brand": "Rodos",
+    "collection": "Loft фарба"
   },
   {
     "slug": "catalog-217",
@@ -3254,7 +3686,9 @@ export const importedProducts: Product[] = [
       "Фабрика Rodos",
       "Колекція Loft фарба"
     ],
-    "image": "/catalog-assets/products/product-217.jpg"
+    "image": "/catalog-assets/products/product-217.jpg",
+    "brand": "Rodos",
+    "collection": "Loft фарба"
   },
   {
     "slug": "catalog-218",
@@ -3269,7 +3703,9 @@ export const importedProducts: Product[] = [
       "Фабрика Rodos",
       "Колекція Loft фарба"
     ],
-    "image": "/catalog-assets/products/product-218.jpg"
+    "image": "/catalog-assets/products/product-218.jpg",
+    "brand": "Rodos",
+    "collection": "Loft фарба"
   },
   {
     "slug": "catalog-219",
@@ -3284,7 +3720,9 @@ export const importedProducts: Product[] = [
       "Фабрика Rodos",
       "Колекція Loft фарба"
     ],
-    "image": "/catalog-assets/products/product-219.jpg"
+    "image": "/catalog-assets/products/product-219.jpg",
+    "brand": "Rodos",
+    "collection": "Loft фарба"
   },
   {
     "slug": "catalog-220",
@@ -3299,7 +3737,9 @@ export const importedProducts: Product[] = [
       "Фабрика Rodos",
       "Колекція Loft фарба"
     ],
-    "image": "/catalog-assets/products/product-220.jpg"
+    "image": "/catalog-assets/products/product-220.jpg",
+    "brand": "Rodos",
+    "collection": "Loft фарба"
   },
   {
     "slug": "catalog-221",
@@ -3314,7 +3754,9 @@ export const importedProducts: Product[] = [
       "Фабрика Rodos",
       "Колекція Loft фарба"
     ],
-    "image": "/catalog-assets/products/product-221.jpg"
+    "image": "/catalog-assets/products/product-221.jpg",
+    "brand": "Rodos",
+    "collection": "Loft фарба"
   },
   {
     "slug": "catalog-222",
@@ -3329,7 +3771,9 @@ export const importedProducts: Product[] = [
       "Фабрика Rodos",
       "Колекція Loft фарба"
     ],
-    "image": "/catalog-assets/products/product-222.jpg"
+    "image": "/catalog-assets/products/product-222.jpg",
+    "brand": "Rodos",
+    "collection": "Loft фарба"
   },
   {
     "slug": "catalog-223",
@@ -3344,7 +3788,9 @@ export const importedProducts: Product[] = [
       "Фабрика Rodos",
       "Колекція Loft фарба"
     ],
-    "image": "/catalog-assets/products/product-223.jpg"
+    "image": "/catalog-assets/products/product-223.jpg",
+    "brand": "Rodos",
+    "collection": "Loft фарба"
   },
   {
     "slug": "catalog-224",
@@ -3359,7 +3805,9 @@ export const importedProducts: Product[] = [
       "Фабрика Rodos",
       "Колекція Loft фарба"
     ],
-    "image": "/catalog-assets/products/product-224.jpg"
+    "image": "/catalog-assets/products/product-224.jpg",
+    "brand": "Rodos",
+    "collection": "Loft фарба"
   },
   {
     "slug": "catalog-225",
@@ -3374,7 +3822,9 @@ export const importedProducts: Product[] = [
       "Фабрика Rodos",
       "Колекція Loft фарба"
     ],
-    "image": "/catalog-assets/products/product-225.jpg"
+    "image": "/catalog-assets/products/product-225.jpg",
+    "brand": "Rodos",
+    "collection": "Loft фарба"
   },
   {
     "slug": "catalog-226",
@@ -3389,7 +3839,9 @@ export const importedProducts: Product[] = [
       "Фабрика Rodos",
       "Колекція Loft фарба"
     ],
-    "image": "/catalog-assets/products/product-226.jpg"
+    "image": "/catalog-assets/products/product-226.jpg",
+    "brand": "Rodos",
+    "collection": "Loft фарба"
   },
   {
     "slug": "catalog-227",
@@ -3404,7 +3856,9 @@ export const importedProducts: Product[] = [
       "Фабрика Rodos",
       "Колекція Loft фарба"
     ],
-    "image": "/catalog-assets/products/product-227.jpg"
+    "image": "/catalog-assets/products/product-227.jpg",
+    "brand": "Rodos",
+    "collection": "Loft фарба"
   },
   {
     "slug": "catalog-228",
@@ -3419,7 +3873,9 @@ export const importedProducts: Product[] = [
       "Фабрика Rodos",
       "Колекція Loft фарба"
     ],
-    "image": "/catalog-assets/products/product-228.jpg"
+    "image": "/catalog-assets/products/product-228.jpg",
+    "brand": "Rodos",
+    "collection": "Loft фарба"
   },
   {
     "slug": "catalog-229",
@@ -3434,7 +3890,9 @@ export const importedProducts: Product[] = [
       "Фабрика Rodos",
       "Колекція Loft фарба"
     ],
-    "image": "/catalog-assets/products/product-229.jpg"
+    "image": "/catalog-assets/products/product-229.jpg",
+    "brand": "Rodos",
+    "collection": "Loft фарба"
   },
   {
     "slug": "catalog-230",
@@ -3449,7 +3907,9 @@ export const importedProducts: Product[] = [
       "Фабрика Rodos",
       "Колекція Loft фарба"
     ],
-    "image": "/catalog-assets/products/product-230.jpg"
+    "image": "/catalog-assets/products/product-230.jpg",
+    "brand": "Rodos",
+    "collection": "Loft фарба"
   },
   {
     "slug": "catalog-231",
@@ -3464,7 +3924,9 @@ export const importedProducts: Product[] = [
       "Фабрика Rodos",
       "Колекція Loft фарба"
     ],
-    "image": "/catalog-assets/products/product-231.jpg"
+    "image": "/catalog-assets/products/product-231.jpg",
+    "brand": "Rodos",
+    "collection": "Loft фарба"
   },
   {
     "slug": "catalog-232",
@@ -3479,7 +3941,9 @@ export const importedProducts: Product[] = [
       "Фабрика Rodos",
       "Колекція Loft фарба"
     ],
-    "image": "/catalog-assets/products/product-232.jpg"
+    "image": "/catalog-assets/products/product-232.jpg",
+    "brand": "Rodos",
+    "collection": "Loft фарба"
   },
   {
     "slug": "catalog-233",
@@ -3494,7 +3958,9 @@ export const importedProducts: Product[] = [
       "Фабрика Rodos",
       "Колекція Loft фарба"
     ],
-    "image": "/catalog-assets/products/product-233.jpg"
+    "image": "/catalog-assets/products/product-233.jpg",
+    "brand": "Rodos",
+    "collection": "Loft фарба"
   },
   {
     "slug": "catalog-234",
@@ -3509,7 +3975,9 @@ export const importedProducts: Product[] = [
       "Фабрика Rodos",
       "Колекція Loft фарба"
     ],
-    "image": "/catalog-assets/products/product-234.png"
+    "image": "/catalog-assets/products/product-234.png",
+    "brand": "Rodos",
+    "collection": "Loft фарба"
   },
   {
     "slug": "catalog-235",
@@ -3524,7 +3992,9 @@ export const importedProducts: Product[] = [
       "Фабрика Rodos",
       "Колекція Loft фарба"
     ],
-    "image": "/catalog-assets/products/product-235.jpg"
+    "image": "/catalog-assets/products/product-235.jpg",
+    "brand": "Rodos",
+    "collection": "Loft фарба"
   },
   {
     "slug": "catalog-236",
@@ -3539,7 +4009,9 @@ export const importedProducts: Product[] = [
       "Фабрика Rodos",
       "Колекція Loft фарба"
     ],
-    "image": "/catalog-assets/products/product-236.jpg"
+    "image": "/catalog-assets/products/product-236.jpg",
+    "brand": "Rodos",
+    "collection": "Loft фарба"
   },
   {
     "slug": "catalog-237",
@@ -3554,7 +4026,9 @@ export const importedProducts: Product[] = [
       "Фабрика Rodos",
       "Колекція Loft шпон"
     ],
-    "image": "/catalog-assets/products/product-237.jpg"
+    "image": "/catalog-assets/products/product-237.jpg",
+    "brand": "Rodos",
+    "collection": "Loft шпон"
   },
   {
     "slug": "catalog-238",
@@ -3569,7 +4043,9 @@ export const importedProducts: Product[] = [
       "Фабрика Rodos",
       "Колекція Royal шпон"
     ],
-    "image": "/catalog-assets/products/product-238.jpg"
+    "image": "/catalog-assets/products/product-238.jpg",
+    "brand": "Rodos",
+    "collection": "Royal шпон"
   },
   {
     "slug": "catalog-239",
@@ -3584,7 +4060,9 @@ export const importedProducts: Product[] = [
       "Фабрика Rodos",
       "Колекція Royal шпон"
     ],
-    "image": "/catalog-assets/products/product-239.jpg"
+    "image": "/catalog-assets/products/product-239.jpg",
+    "brand": "Rodos",
+    "collection": "Royal шпон"
   },
   {
     "slug": "catalog-240",
@@ -3599,7 +4077,9 @@ export const importedProducts: Product[] = [
       "Фабрика Rodos",
       "Колекція Siena фарба"
     ],
-    "image": "/catalog-assets/products/product-240.jpg"
+    "image": "/catalog-assets/products/product-240.jpg",
+    "brand": "Rodos",
+    "collection": "Siena фарба"
   },
   {
     "slug": "catalog-241",
@@ -3614,7 +4094,9 @@ export const importedProducts: Product[] = [
       "Фабрика Rodos",
       "Колекція Siena фарба"
     ],
-    "image": "/catalog-assets/products/product-241.png"
+    "image": "/catalog-assets/products/product-241.png",
+    "brand": "Rodos",
+    "collection": "Siena фарба"
   },
   {
     "slug": "catalog-242",
@@ -3629,7 +4111,9 @@ export const importedProducts: Product[] = [
       "Фабрика Rodos",
       "Колекція Siena фарба"
     ],
-    "image": "/catalog-assets/products/product-242.png"
+    "image": "/catalog-assets/products/product-242.png",
+    "brand": "Rodos",
+    "collection": "Siena фарба"
   },
   {
     "slug": "catalog-243",
@@ -3644,7 +4128,9 @@ export const importedProducts: Product[] = [
       "Фабрика Rodos",
       "Колекція Siena фарба"
     ],
-    "image": "/catalog-assets/products/product-243.jpg"
+    "image": "/catalog-assets/products/product-243.jpg",
+    "brand": "Rodos",
+    "collection": "Siena фарба"
   },
   {
     "slug": "catalog-244",
@@ -3659,7 +4145,9 @@ export const importedProducts: Product[] = [
       "Фабрика Rodos",
       "Колекція Siena фарба"
     ],
-    "image": "/catalog-assets/products/product-244.png"
+    "image": "/catalog-assets/products/product-244.png",
+    "brand": "Rodos",
+    "collection": "Siena фарба"
   },
   {
     "slug": "catalog-245",
@@ -3674,7 +4162,9 @@ export const importedProducts: Product[] = [
       "Фабрика Rodos",
       "Колекція Siena фарба"
     ],
-    "image": "/catalog-assets/products/product-245.png"
+    "image": "/catalog-assets/products/product-245.png",
+    "brand": "Rodos",
+    "collection": "Siena фарба"
   },
   {
     "slug": "catalog-246",
@@ -3689,7 +4179,9 @@ export const importedProducts: Product[] = [
       "Фабрика Rodos",
       "Колекція Style ПВХ"
     ],
-    "image": "/catalog-assets/products/product-246.jpg"
+    "image": "/catalog-assets/products/product-246.jpg",
+    "brand": "Rodos",
+    "collection": "Style ПВХ"
   },
   {
     "slug": "catalog-247",
@@ -3704,7 +4196,9 @@ export const importedProducts: Product[] = [
       "Фабрика Rodos",
       "Колекція Style ПВХ"
     ],
-    "image": "/catalog-assets/products/product-247.jpg"
+    "image": "/catalog-assets/products/product-247.jpg",
+    "brand": "Rodos",
+    "collection": "Style ПВХ"
   },
   {
     "slug": "catalog-248",
@@ -3719,7 +4213,9 @@ export const importedProducts: Product[] = [
       "Фабрика Rodos",
       "Колекція Style ПВХ"
     ],
-    "image": "/catalog-assets/products/product-248.jpg"
+    "image": "/catalog-assets/products/product-248.jpg",
+    "brand": "Rodos",
+    "collection": "Style ПВХ"
   },
   {
     "slug": "catalog-249",
@@ -3734,7 +4230,9 @@ export const importedProducts: Product[] = [
       "Фабрика Rodos",
       "Колекція Style ПВХ"
     ],
-    "image": "/catalog-assets/products/product-249.jpg"
+    "image": "/catalog-assets/products/product-249.jpg",
+    "brand": "Rodos",
+    "collection": "Style ПВХ"
   },
   {
     "slug": "catalog-250",
@@ -3749,7 +4247,9 @@ export const importedProducts: Product[] = [
       "Фабрика Rodos",
       "Колекція Style ПВХ"
     ],
-    "image": "/catalog-assets/products/product-250.jpg"
+    "image": "/catalog-assets/products/product-250.jpg",
+    "brand": "Rodos",
+    "collection": "Style ПВХ"
   },
   {
     "slug": "catalog-251",
@@ -3764,7 +4264,9 @@ export const importedProducts: Product[] = [
       "Фабрика Rodos",
       "Колекція Style ПВХ"
     ],
-    "image": "/catalog-assets/products/product-251.jpg"
+    "image": "/catalog-assets/products/product-251.jpg",
+    "brand": "Rodos",
+    "collection": "Style ПВХ"
   },
   {
     "slug": "catalog-252",
@@ -3779,7 +4281,9 @@ export const importedProducts: Product[] = [
       "Фабрика Rodos",
       "Колекція Style ПВХ"
     ],
-    "image": "/catalog-assets/products/product-252.jpg"
+    "image": "/catalog-assets/products/product-252.jpg",
+    "brand": "Rodos",
+    "collection": "Style ПВХ"
   },
   {
     "slug": "catalog-253",
@@ -3794,7 +4298,9 @@ export const importedProducts: Product[] = [
       "Фабрика Rodos",
       "Колекція Style ПВХ"
     ],
-    "image": "/catalog-assets/products/product-253.jpg"
+    "image": "/catalog-assets/products/product-253.jpg",
+    "brand": "Rodos",
+    "collection": "Style ПВХ"
   },
   {
     "slug": "catalog-254",
@@ -3809,7 +4315,9 @@ export const importedProducts: Product[] = [
       "Фабрика Rodos",
       "Колекція Style ПВХ"
     ],
-    "image": "/catalog-assets/products/product-254.jpg"
+    "image": "/catalog-assets/products/product-254.jpg",
+    "brand": "Rodos",
+    "collection": "Style ПВХ"
   },
   {
     "slug": "catalog-255",
@@ -3824,7 +4332,9 @@ export const importedProducts: Product[] = [
       "Фабрика Rodos",
       "Колекція Style ПВХ"
     ],
-    "image": "/catalog-assets/products/product-255.jpg"
+    "image": "/catalog-assets/products/product-255.jpg",
+    "brand": "Rodos",
+    "collection": "Style ПВХ"
   },
   {
     "slug": "catalog-256",
@@ -3839,7 +4349,9 @@ export const importedProducts: Product[] = [
       "Фабрика Страж",
       "Колекція Вулиця"
     ],
-    "image": "/catalog-assets/products/product-256.webp"
+    "image": "/catalog-assets/products/product-256.webp",
+    "brand": "Страж",
+    "collection": "Вулиця"
   },
   {
     "slug": "catalog-257",
@@ -3854,7 +4366,9 @@ export const importedProducts: Product[] = [
       "Фабрика Страж",
       "Колекція Вулиця"
     ],
-    "image": "/catalog-assets/products/product-257.webp"
+    "image": "/catalog-assets/products/product-257.webp",
+    "brand": "Страж",
+    "collection": "Вулиця"
   },
   {
     "slug": "catalog-258",
@@ -3869,7 +4383,9 @@ export const importedProducts: Product[] = [
       "Фабрика Страж",
       "Колекція Вулиця"
     ],
-    "image": "/catalog-assets/products/product-258.webp"
+    "image": "/catalog-assets/products/product-258.webp",
+    "brand": "Страж",
+    "collection": "Вулиця"
   },
   {
     "slug": "catalog-259",
@@ -3884,7 +4400,9 @@ export const importedProducts: Product[] = [
       "Фабрика Страж",
       "Колекція Вулиця"
     ],
-    "image": "/catalog-assets/products/product-259.webp"
+    "image": "/catalog-assets/products/product-259.webp",
+    "brand": "Страж",
+    "collection": "Вулиця"
   },
   {
     "slug": "catalog-260",
@@ -3899,7 +4417,9 @@ export const importedProducts: Product[] = [
       "Фабрика Страж",
       "Колекція Вулиця"
     ],
-    "image": "/catalog-assets/products/product-260.webp"
+    "image": "/catalog-assets/products/product-260.webp",
+    "brand": "Страж",
+    "collection": "Вулиця"
   },
   {
     "slug": "catalog-261",
@@ -3914,7 +4434,9 @@ export const importedProducts: Product[] = [
       "Фабрика Страж",
       "Колекція Вулиця"
     ],
-    "image": "/catalog-assets/products/product-261.webp"
+    "image": "/catalog-assets/products/product-261.webp",
+    "brand": "Страж",
+    "collection": "Вулиця"
   },
   {
     "slug": "catalog-262",
@@ -3929,7 +4451,9 @@ export const importedProducts: Product[] = [
       "Фабрика Страж",
       "Колекція Вулиця"
     ],
-    "image": "/catalog-assets/products/product-262.webp"
+    "image": "/catalog-assets/products/product-262.webp",
+    "brand": "Страж",
+    "collection": "Вулиця"
   },
   {
     "slug": "catalog-263",
@@ -3944,7 +4468,9 @@ export const importedProducts: Product[] = [
       "Фабрика Страж",
       "Колекція Вулиця"
     ],
-    "image": "/catalog-assets/products/product-263.webp"
+    "image": "/catalog-assets/products/product-263.webp",
+    "brand": "Страж",
+    "collection": "Вулиця"
   },
   {
     "slug": "catalog-264",
@@ -3959,7 +4485,9 @@ export const importedProducts: Product[] = [
       "Фабрика Страж",
       "Колекція Вулиця"
     ],
-    "image": "/catalog-assets/products/product-264.webp"
+    "image": "/catalog-assets/products/product-264.webp",
+    "brand": "Страж",
+    "collection": "Вулиця"
   },
   {
     "slug": "catalog-265",
@@ -3974,7 +4502,9 @@ export const importedProducts: Product[] = [
       "Фабрика Страж",
       "Колекція Вулиця"
     ],
-    "image": "/catalog-assets/products/product-265.webp"
+    "image": "/catalog-assets/products/product-265.webp",
+    "brand": "Страж",
+    "collection": "Вулиця"
   },
   {
     "slug": "catalog-266",
@@ -3989,7 +4519,9 @@ export const importedProducts: Product[] = [
       "Фабрика Страж",
       "Колекція Вулиця"
     ],
-    "image": "/catalog-assets/products/product-266.webp"
+    "image": "/catalog-assets/products/product-266.webp",
+    "brand": "Страж",
+    "collection": "Вулиця"
   },
   {
     "slug": "catalog-267",
@@ -4004,7 +4536,9 @@ export const importedProducts: Product[] = [
       "Фабрика Страж",
       "Колекція Вулиця"
     ],
-    "image": "/catalog-assets/products/product-267.webp"
+    "image": "/catalog-assets/products/product-267.webp",
+    "brand": "Страж",
+    "collection": "Вулиця"
   },
   {
     "slug": "catalog-268",
@@ -4019,7 +4553,9 @@ export const importedProducts: Product[] = [
       "Фабрика Страж",
       "Колекція Квартира"
     ],
-    "image": "/catalog-assets/products/product-268.webp"
+    "image": "/catalog-assets/products/product-268.webp",
+    "brand": "Страж",
+    "collection": "Квартира"
   },
   {
     "slug": "catalog-269",
@@ -4034,7 +4570,9 @@ export const importedProducts: Product[] = [
       "Фабрика Страж",
       "Колекція Квартира"
     ],
-    "image": "/catalog-assets/products/product-269.webp"
+    "image": "/catalog-assets/products/product-269.webp",
+    "brand": "Страж",
+    "collection": "Квартира"
   },
   {
     "slug": "catalog-270",
@@ -4049,7 +4587,9 @@ export const importedProducts: Product[] = [
       "Фабрика Страж",
       "Колекція Квартира"
     ],
-    "image": "/catalog-assets/products/product-270.webp"
+    "image": "/catalog-assets/products/product-270.webp",
+    "brand": "Страж",
+    "collection": "Квартира"
   },
   {
     "slug": "catalog-271",
@@ -4064,7 +4604,9 @@ export const importedProducts: Product[] = [
       "Фабрика Страж",
       "Колекція Квартира"
     ],
-    "image": "/catalog-assets/products/product-271.webp"
+    "image": "/catalog-assets/products/product-271.webp",
+    "brand": "Страж",
+    "collection": "Квартира"
   },
   {
     "slug": "catalog-272",
@@ -4079,7 +4621,9 @@ export const importedProducts: Product[] = [
       "Фабрика Страж",
       "Колекція Квартира"
     ],
-    "image": "/catalog-assets/products/product-272.webp"
+    "image": "/catalog-assets/products/product-272.webp",
+    "brand": "Страж",
+    "collection": "Квартира"
   },
   {
     "slug": "catalog-273",
@@ -4094,7 +4638,9 @@ export const importedProducts: Product[] = [
       "Фабрика Страж",
       "Колекція Квартира"
     ],
-    "image": "/catalog-assets/products/product-273.webp"
+    "image": "/catalog-assets/products/product-273.webp",
+    "brand": "Страж",
+    "collection": "Квартира"
   },
   {
     "slug": "catalog-274",
@@ -4109,7 +4655,9 @@ export const importedProducts: Product[] = [
       "Фабрика Страж",
       "Колекція Квартира"
     ],
-    "image": "/catalog-assets/products/product-274.webp"
+    "image": "/catalog-assets/products/product-274.webp",
+    "brand": "Страж",
+    "collection": "Квартира"
   },
   {
     "slug": "catalog-275",
@@ -4124,7 +4672,9 @@ export const importedProducts: Product[] = [
       "Фабрика Страж",
       "Колекція Квартира"
     ],
-    "image": "/catalog-assets/products/product-275.webp"
+    "image": "/catalog-assets/products/product-275.webp",
+    "brand": "Страж",
+    "collection": "Квартира"
   },
   {
     "slug": "catalog-276",
@@ -4139,7 +4689,9 @@ export const importedProducts: Product[] = [
       "Фабрика Страж",
       "Колекція Квартира"
     ],
-    "image": "/catalog-assets/products/product-276.webp"
+    "image": "/catalog-assets/products/product-276.webp",
+    "brand": "Страж",
+    "collection": "Квартира"
   },
   {
     "slug": "catalog-277",
@@ -4154,7 +4706,9 @@ export const importedProducts: Product[] = [
       "Фабрика Страж",
       "Колекція Склад"
     ],
-    "image": "/catalog-assets/products/product-277.webp"
+    "image": "/catalog-assets/products/product-277.webp",
+    "brand": "Страж",
+    "collection": "Склад"
   },
   {
     "slug": "catalog-278",
@@ -4169,7 +4723,9 @@ export const importedProducts: Product[] = [
       "Фабрика Страж",
       "Колекція Склад"
     ],
-    "image": "/catalog-assets/products/product-278.webp"
+    "image": "/catalog-assets/products/product-278.webp",
+    "brand": "Страж",
+    "collection": "Склад"
   },
   {
     "slug": "catalog-279",
@@ -4184,7 +4740,9 @@ export const importedProducts: Product[] = [
       "Фабрика Страж",
       "Колекція Склад"
     ],
-    "image": "/catalog-assets/products/product-279.webp"
+    "image": "/catalog-assets/products/product-279.webp",
+    "brand": "Страж",
+    "collection": "Склад"
   },
   {
     "slug": "catalog-280",
@@ -4199,7 +4757,9 @@ export const importedProducts: Product[] = [
       "Фабрика Страж",
       "Колекція Склад"
     ],
-    "image": "/catalog-assets/products/product-280.webp"
+    "image": "/catalog-assets/products/product-280.webp",
+    "brand": "Страж",
+    "collection": "Склад"
   },
   {
     "slug": "catalog-281",
@@ -4214,7 +4774,9 @@ export const importedProducts: Product[] = [
       "Фабрика Страж",
       "Колекція Склад"
     ],
-    "image": "/catalog-assets/products/product-281.webp"
+    "image": "/catalog-assets/products/product-281.webp",
+    "brand": "Страж",
+    "collection": "Склад"
   },
   {
     "slug": "catalog-282",
@@ -4229,7 +4791,9 @@ export const importedProducts: Product[] = [
       "Фабрика Страж",
       "Колекція Склад"
     ],
-    "image": "/catalog-assets/products/product-282.webp"
+    "image": "/catalog-assets/products/product-282.webp",
+    "brand": "Страж",
+    "collection": "Склад"
   },
   {
     "slug": "catalog-283",
@@ -4244,7 +4808,9 @@ export const importedProducts: Product[] = [
       "Фабрика Страж",
       "Колекція Склад"
     ],
-    "image": "/catalog-assets/products/product-283.webp"
+    "image": "/catalog-assets/products/product-283.webp",
+    "brand": "Страж",
+    "collection": "Склад"
   },
   {
     "slug": "catalog-284",
@@ -4259,7 +4825,9 @@ export const importedProducts: Product[] = [
       "Фабрика Страж",
       "Колекція Склад"
     ],
-    "image": "/catalog-assets/products/product-284.webp"
+    "image": "/catalog-assets/products/product-284.webp",
+    "brand": "Страж",
+    "collection": "Склад"
   },
   {
     "slug": "catalog-285",
@@ -4274,7 +4842,9 @@ export const importedProducts: Product[] = [
       "Фабрика Страж",
       "Колекція Склад"
     ],
-    "image": "/catalog-assets/products/product-285.webp"
+    "image": "/catalog-assets/products/product-285.webp",
+    "brand": "Страж",
+    "collection": "Склад"
   },
   {
     "slug": "catalog-286",
@@ -4289,7 +4859,9 @@ export const importedProducts: Product[] = [
       "Фабрика Страж",
       "Колекція Склад"
     ],
-    "image": "/catalog-assets/products/product-286.webp"
+    "image": "/catalog-assets/products/product-286.webp",
+    "brand": "Страж",
+    "collection": "Склад"
   },
   {
     "slug": "catalog-287",
@@ -4304,7 +4876,9 @@ export const importedProducts: Product[] = [
       "Фабрика Страж",
       "Колекція Склад"
     ],
-    "image": "/catalog-assets/products/product-287.webp"
+    "image": "/catalog-assets/products/product-287.webp",
+    "brand": "Страж",
+    "collection": "Склад"
   },
   {
     "slug": "catalog-288",
@@ -4319,7 +4893,9 @@ export const importedProducts: Product[] = [
       "Фабрика Страж",
       "Колекція Склад"
     ],
-    "image": "/catalog-assets/products/product-288.webp"
+    "image": "/catalog-assets/products/product-288.webp",
+    "brand": "Страж",
+    "collection": "Склад"
   },
   {
     "slug": "catalog-289",
@@ -4334,7 +4910,9 @@ export const importedProducts: Product[] = [
       "Фабрика Страж",
       "Колекція Склад"
     ],
-    "image": "/catalog-assets/products/product-289.webp"
+    "image": "/catalog-assets/products/product-289.webp",
+    "brand": "Страж",
+    "collection": "Склад"
   },
   {
     "slug": "catalog-290",
@@ -4349,7 +4927,9 @@ export const importedProducts: Product[] = [
       "Фабрика Страж",
       "Колекція Склад"
     ],
-    "image": "/catalog-assets/products/product-290.webp"
+    "image": "/catalog-assets/products/product-290.webp",
+    "brand": "Страж",
+    "collection": "Склад"
   },
   {
     "slug": "catalog-291",
@@ -4364,7 +4944,9 @@ export const importedProducts: Product[] = [
       "Фабрика Страж",
       "Колекція Склад"
     ],
-    "image": "/catalog-assets/products/product-291.webp"
+    "image": "/catalog-assets/products/product-291.webp",
+    "brand": "Страж",
+    "collection": "Склад"
   },
   {
     "slug": "catalog-292",
@@ -4379,7 +4961,9 @@ export const importedProducts: Product[] = [
       "Фабрика Страж",
       "Колекція Склад"
     ],
-    "image": "/catalog-assets/products/product-292.webp"
+    "image": "/catalog-assets/products/product-292.webp",
+    "brand": "Страж",
+    "collection": "Склад"
   },
   {
     "slug": "catalog-293",
@@ -4394,7 +4978,9 @@ export const importedProducts: Product[] = [
       "Фабрика Страж",
       "Колекція Склад"
     ],
-    "image": "/catalog-assets/products/product-293.webp"
+    "image": "/catalog-assets/products/product-293.webp",
+    "brand": "Страж",
+    "collection": "Склад"
   },
   {
     "slug": "catalog-294",
@@ -4409,7 +4995,9 @@ export const importedProducts: Product[] = [
       "Фабрика Страж",
       "Колекція Склад"
     ],
-    "image": "/catalog-assets/products/product-294.webp"
+    "image": "/catalog-assets/products/product-294.webp",
+    "brand": "Страж",
+    "collection": "Склад"
   },
   {
     "slug": "catalog-295",
@@ -4424,7 +5012,9 @@ export const importedProducts: Product[] = [
       "Фабрика Термінус",
       "Колекція Caro"
     ],
-    "image": "/catalog-assets/products/product-295.webp"
+    "image": "/catalog-assets/products/product-295.webp",
+    "brand": "Термінус",
+    "collection": "Caro"
   },
   {
     "slug": "catalog-296",
@@ -4439,7 +5029,9 @@ export const importedProducts: Product[] = [
       "Фабрика Термінус",
       "Колекція Caro"
     ],
-    "image": "/catalog-assets/products/product-296.webp"
+    "image": "/catalog-assets/products/product-296.webp",
+    "brand": "Термінус",
+    "collection": "Caro"
   },
   {
     "slug": "catalog-297",
@@ -4454,7 +5046,9 @@ export const importedProducts: Product[] = [
       "Фабрика Термінус",
       "Колекція Caro"
     ],
-    "image": "/catalog-assets/products/product-297.webp"
+    "image": "/catalog-assets/products/product-297.webp",
+    "brand": "Термінус",
+    "collection": "Caro"
   },
   {
     "slug": "catalog-298",
@@ -4469,7 +5063,9 @@ export const importedProducts: Product[] = [
       "Фабрика Термінус",
       "Колекція Caro"
     ],
-    "image": "/catalog-assets/products/product-298.webp"
+    "image": "/catalog-assets/products/product-298.webp",
+    "brand": "Термінус",
+    "collection": "Caro"
   },
   {
     "slug": "catalog-299",
@@ -4484,7 +5080,9 @@ export const importedProducts: Product[] = [
       "Фабрика Термінус",
       "Колекція Caro"
     ],
-    "image": "/catalog-assets/products/product-299.webp"
+    "image": "/catalog-assets/products/product-299.webp",
+    "brand": "Термінус",
+    "collection": "Caro"
   },
   {
     "slug": "catalog-300",
@@ -4499,7 +5097,9 @@ export const importedProducts: Product[] = [
       "Фабрика Термінус",
       "Колекція Elit plus"
     ],
-    "image": "/catalog-assets/products/product-300.webp"
+    "image": "/catalog-assets/products/product-300.webp",
+    "brand": "Термінус",
+    "collection": "Elit plus"
   },
   {
     "slug": "catalog-301",
@@ -4514,7 +5114,9 @@ export const importedProducts: Product[] = [
       "Фабрика Термінус",
       "Колекція Elit plus"
     ],
-    "image": "/catalog-assets/products/product-301.webp"
+    "image": "/catalog-assets/products/product-301.webp",
+    "brand": "Термінус",
+    "collection": "Elit plus"
   },
   {
     "slug": "catalog-302",
@@ -4529,7 +5131,9 @@ export const importedProducts: Product[] = [
       "Фабрика Термінус",
       "Колекція Elit plus"
     ],
-    "image": "/catalog-assets/products/product-302.webp"
+    "image": "/catalog-assets/products/product-302.webp",
+    "brand": "Термінус",
+    "collection": "Elit plus"
   },
   {
     "slug": "catalog-303",
@@ -4544,7 +5148,9 @@ export const importedProducts: Product[] = [
       "Фабрика Термінус",
       "Колекція Frezato"
     ],
-    "image": "/catalog-assets/products/product-303.webp"
+    "image": "/catalog-assets/products/product-303.webp",
+    "brand": "Термінус",
+    "collection": "Frezato"
   },
   {
     "slug": "catalog-304",
@@ -4559,7 +5165,9 @@ export const importedProducts: Product[] = [
       "Фабрика Термінус",
       "Колекція Frezato"
     ],
-    "image": "/catalog-assets/products/product-304.webp"
+    "image": "/catalog-assets/products/product-304.webp",
+    "brand": "Термінус",
+    "collection": "Frezato"
   },
   {
     "slug": "catalog-305",
@@ -4574,7 +5182,9 @@ export const importedProducts: Product[] = [
       "Фабрика Термінус",
       "Колекція Frezato"
     ],
-    "image": "/catalog-assets/products/product-305.webp"
+    "image": "/catalog-assets/products/product-305.webp",
+    "brand": "Термінус",
+    "collection": "Frezato"
   },
   {
     "slug": "catalog-306",
@@ -4589,7 +5199,9 @@ export const importedProducts: Product[] = [
       "Фабрика Термінус",
       "Колекція Frezato"
     ],
-    "image": "/catalog-assets/products/product-306.webp"
+    "image": "/catalog-assets/products/product-306.webp",
+    "brand": "Термінус",
+    "collection": "Frezato"
   },
   {
     "slug": "catalog-307",
@@ -4604,7 +5216,9 @@ export const importedProducts: Product[] = [
       "Фабрика Термінус",
       "Колекція Frezato"
     ],
-    "image": "/catalog-assets/products/product-307.webp"
+    "image": "/catalog-assets/products/product-307.webp",
+    "brand": "Термінус",
+    "collection": "Frezato"
   },
   {
     "slug": "catalog-308",
@@ -4619,7 +5233,9 @@ export const importedProducts: Product[] = [
       "Фабрика Термінус",
       "Колекція Frezato"
     ],
-    "image": "/catalog-assets/products/product-308.webp"
+    "image": "/catalog-assets/products/product-308.webp",
+    "brand": "Термінус",
+    "collection": "Frezato"
   },
   {
     "slug": "catalog-309",
@@ -4634,7 +5250,9 @@ export const importedProducts: Product[] = [
       "Фабрика Термінус",
       "Колекція Frezato"
     ],
-    "image": "/catalog-assets/products/product-309.webp"
+    "image": "/catalog-assets/products/product-309.webp",
+    "brand": "Термінус",
+    "collection": "Frezato"
   },
   {
     "slug": "catalog-310",
@@ -4649,7 +5267,9 @@ export const importedProducts: Product[] = [
       "Фабрика Термінус",
       "Колекція Frezato"
     ],
-    "image": "/catalog-assets/products/product-310.webp"
+    "image": "/catalog-assets/products/product-310.webp",
+    "brand": "Термінус",
+    "collection": "Frezato"
   },
   {
     "slug": "catalog-311",
@@ -4664,7 +5284,9 @@ export const importedProducts: Product[] = [
       "Фабрика Термінус",
       "Колекція Frezato"
     ],
-    "image": "/catalog-assets/products/product-311.webp"
+    "image": "/catalog-assets/products/product-311.webp",
+    "brand": "Термінус",
+    "collection": "Frezato"
   },
   {
     "slug": "catalog-312",
@@ -4679,7 +5301,9 @@ export const importedProducts: Product[] = [
       "Фабрика Термінус",
       "Колекція Frezato"
     ],
-    "image": "/catalog-assets/products/product-312.webp"
+    "image": "/catalog-assets/products/product-312.webp",
+    "brand": "Термінус",
+    "collection": "Frezato"
   },
   {
     "slug": "catalog-313",
@@ -4694,7 +5318,9 @@ export const importedProducts: Product[] = [
       "Фабрика Термінус",
       "Колекція Frezato"
     ],
-    "image": "/catalog-assets/products/product-313.webp"
+    "image": "/catalog-assets/products/product-313.webp",
+    "brand": "Термінус",
+    "collection": "Frezato"
   },
   {
     "slug": "catalog-314",
@@ -4709,7 +5335,9 @@ export const importedProducts: Product[] = [
       "Фабрика Термінус",
       "Колекція Frezato"
     ],
-    "image": "/catalog-assets/products/product-314.webp"
+    "image": "/catalog-assets/products/product-314.webp",
+    "brand": "Термінус",
+    "collection": "Frezato"
   },
   {
     "slug": "catalog-315",
@@ -4724,7 +5352,9 @@ export const importedProducts: Product[] = [
       "Фабрика Термінус",
       "Колекція Frezato"
     ],
-    "image": "/catalog-assets/products/product-315.webp"
+    "image": "/catalog-assets/products/product-315.webp",
+    "brand": "Термінус",
+    "collection": "Frezato"
   },
   {
     "slug": "catalog-316",
@@ -4739,7 +5369,9 @@ export const importedProducts: Product[] = [
       "Фабрика Термінус",
       "Колекція Frezato"
     ],
-    "image": "/catalog-assets/products/product-316.webp"
+    "image": "/catalog-assets/products/product-316.webp",
+    "brand": "Термінус",
+    "collection": "Frezato"
   },
   {
     "slug": "catalog-317",
@@ -4754,7 +5386,9 @@ export const importedProducts: Product[] = [
       "Фабрика Термінус",
       "Колекція Frezato"
     ],
-    "image": "/catalog-assets/products/product-317.webp"
+    "image": "/catalog-assets/products/product-317.webp",
+    "brand": "Термінус",
+    "collection": "Frezato"
   },
   {
     "slug": "catalog-318",
@@ -4769,7 +5403,9 @@ export const importedProducts: Product[] = [
       "Фабрика Термінус",
       "Колекція Frezato"
     ],
-    "image": "/catalog-assets/products/product-318.webp"
+    "image": "/catalog-assets/products/product-318.webp",
+    "brand": "Термінус",
+    "collection": "Frezato"
   },
   {
     "slug": "catalog-319",
@@ -4784,7 +5420,9 @@ export const importedProducts: Product[] = [
       "Фабрика Термінус",
       "Колекція Frezato"
     ],
-    "image": "/catalog-assets/products/product-319.webp"
+    "image": "/catalog-assets/products/product-319.webp",
+    "brand": "Термінус",
+    "collection": "Frezato"
   },
   {
     "slug": "catalog-320",
@@ -4799,7 +5437,9 @@ export const importedProducts: Product[] = [
       "Фабрика Термінус",
       "Колекція Frezato"
     ],
-    "image": "/catalog-assets/products/product-320.webp"
+    "image": "/catalog-assets/products/product-320.webp",
+    "brand": "Термінус",
+    "collection": "Frezato"
   },
   {
     "slug": "catalog-321",
@@ -4814,7 +5454,9 @@ export const importedProducts: Product[] = [
       "Фабрика Термінус",
       "Колекція Frezato"
     ],
-    "image": "/catalog-assets/products/product-321.webp"
+    "image": "/catalog-assets/products/product-321.webp",
+    "brand": "Термінус",
+    "collection": "Frezato"
   },
   {
     "slug": "catalog-322",
@@ -4829,7 +5471,9 @@ export const importedProducts: Product[] = [
       "Фабрика Термінус",
       "Колекція Frezato"
     ],
-    "image": "/catalog-assets/products/product-322.webp"
+    "image": "/catalog-assets/products/product-322.webp",
+    "brand": "Термінус",
+    "collection": "Frezato"
   },
   {
     "slug": "catalog-323",
@@ -4844,7 +5488,9 @@ export const importedProducts: Product[] = [
       "Фабрика Термінус",
       "Колекція Frezato"
     ],
-    "image": "/catalog-assets/products/product-323.webp"
+    "image": "/catalog-assets/products/product-323.webp",
+    "brand": "Термінус",
+    "collection": "Frezato"
   },
   {
     "slug": "catalog-324",
@@ -4859,7 +5505,9 @@ export const importedProducts: Product[] = [
       "Фабрика Термінус",
       "Колекція Light"
     ],
-    "image": "/catalog-assets/products/product-324.webp"
+    "image": "/catalog-assets/products/product-324.webp",
+    "brand": "Термінус",
+    "collection": "Light"
   },
   {
     "slug": "catalog-325",
@@ -4874,7 +5522,9 @@ export const importedProducts: Product[] = [
       "Фабрика Термінус",
       "Колекція Light"
     ],
-    "image": "/catalog-assets/products/product-325.webp"
+    "image": "/catalog-assets/products/product-325.webp",
+    "brand": "Термінус",
+    "collection": "Light"
   },
   {
     "slug": "catalog-326",
@@ -4889,7 +5539,9 @@ export const importedProducts: Product[] = [
       "Фабрика Термінус",
       "Колекція Light"
     ],
-    "image": "/catalog-assets/products/product-326.webp"
+    "image": "/catalog-assets/products/product-326.webp",
+    "brand": "Термінус",
+    "collection": "Light"
   },
   {
     "slug": "catalog-327",
@@ -4904,7 +5556,9 @@ export const importedProducts: Product[] = [
       "Фабрика Термінус",
       "Колекція Light"
     ],
-    "image": "/catalog-assets/products/product-327.webp"
+    "image": "/catalog-assets/products/product-327.webp",
+    "brand": "Термінус",
+    "collection": "Light"
   },
   {
     "slug": "catalog-328",
@@ -4919,7 +5573,9 @@ export const importedProducts: Product[] = [
       "Фабрика Термінус",
       "Колекція Light"
     ],
-    "image": "/catalog-assets/products/product-328.webp"
+    "image": "/catalog-assets/products/product-328.webp",
+    "brand": "Термінус",
+    "collection": "Light"
   },
   {
     "slug": "catalog-329",
@@ -4934,7 +5590,9 @@ export const importedProducts: Product[] = [
       "Фабрика Термінус",
       "Колекція Light"
     ],
-    "image": "/catalog-assets/products/product-329.webp"
+    "image": "/catalog-assets/products/product-329.webp",
+    "brand": "Термінус",
+    "collection": "Light"
   },
   {
     "slug": "catalog-330",
@@ -4949,7 +5607,9 @@ export const importedProducts: Product[] = [
       "Фабрика Термінус",
       "Колекція Light"
     ],
-    "image": "/catalog-assets/products/product-330.webp"
+    "image": "/catalog-assets/products/product-330.webp",
+    "brand": "Термінус",
+    "collection": "Light"
   },
   {
     "slug": "catalog-331",
@@ -4964,7 +5624,9 @@ export const importedProducts: Product[] = [
       "Фабрика Термінус",
       "Колекція Light"
     ],
-    "image": "/catalog-assets/products/product-331.webp"
+    "image": "/catalog-assets/products/product-331.webp",
+    "brand": "Термінус",
+    "collection": "Light"
   },
   {
     "slug": "catalog-332",
@@ -4979,7 +5641,9 @@ export const importedProducts: Product[] = [
       "Фабрика Термінус",
       "Колекція Light"
     ],
-    "image": "/catalog-assets/products/product-332.webp"
+    "image": "/catalog-assets/products/product-332.webp",
+    "brand": "Термінус",
+    "collection": "Light"
   },
   {
     "slug": "catalog-333",
@@ -4994,7 +5658,9 @@ export const importedProducts: Product[] = [
       "Фабрика Термінус",
       "Колекція Light"
     ],
-    "image": "/catalog-assets/products/product-333.webp"
+    "image": "/catalog-assets/products/product-333.webp",
+    "brand": "Термінус",
+    "collection": "Light"
   },
   {
     "slug": "catalog-334",
@@ -5009,7 +5675,9 @@ export const importedProducts: Product[] = [
       "Фабрика Термінус",
       "Колекція Light"
     ],
-    "image": "/catalog-assets/products/product-334.webp"
+    "image": "/catalog-assets/products/product-334.webp",
+    "brand": "Термінус",
+    "collection": "Light"
   },
   {
     "slug": "catalog-335",
@@ -5024,7 +5692,9 @@ export const importedProducts: Product[] = [
       "Фабрика Термінус",
       "Колекція Light"
     ],
-    "image": "/catalog-assets/products/product-335.webp"
+    "image": "/catalog-assets/products/product-335.webp",
+    "brand": "Термінус",
+    "collection": "Light"
   },
   {
     "slug": "catalog-336",
@@ -5039,7 +5709,9 @@ export const importedProducts: Product[] = [
       "Фабрика Термінус",
       "Колекція Light"
     ],
-    "image": "/catalog-assets/products/product-336.webp"
+    "image": "/catalog-assets/products/product-336.webp",
+    "brand": "Термінус",
+    "collection": "Light"
   },
   {
     "slug": "catalog-337",
@@ -5054,7 +5726,9 @@ export const importedProducts: Product[] = [
       "Фабрика Термінус",
       "Колекція Light"
     ],
-    "image": "/catalog-assets/products/product-337.webp"
+    "image": "/catalog-assets/products/product-337.webp",
+    "brand": "Термінус",
+    "collection": "Light"
   },
   {
     "slug": "catalog-338",
@@ -5069,7 +5743,9 @@ export const importedProducts: Product[] = [
       "Фабрика Термінус",
       "Колекція Light"
     ],
-    "image": "/catalog-assets/products/product-338.webp"
+    "image": "/catalog-assets/products/product-338.webp",
+    "brand": "Термінус",
+    "collection": "Light"
   },
   {
     "slug": "catalog-339",
@@ -5084,7 +5760,9 @@ export const importedProducts: Product[] = [
       "Фабрика Термінус",
       "Колекція Light"
     ],
-    "image": "/catalog-assets/products/product-339.webp"
+    "image": "/catalog-assets/products/product-339.webp",
+    "brand": "Термінус",
+    "collection": "Light"
   },
   {
     "slug": "catalog-340",
@@ -5099,7 +5777,9 @@ export const importedProducts: Product[] = [
       "Фабрика Термінус",
       "Колекція Light"
     ],
-    "image": "/catalog-assets/products/product-340.webp"
+    "image": "/catalog-assets/products/product-340.webp",
+    "brand": "Термінус",
+    "collection": "Light"
   },
   {
     "slug": "catalog-341",
@@ -5114,7 +5794,9 @@ export const importedProducts: Product[] = [
       "Фабрика Термінус",
       "Колекція Neoclassico"
     ],
-    "image": "/catalog-assets/products/product-341.webp"
+    "image": "/catalog-assets/products/product-341.webp",
+    "brand": "Термінус",
+    "collection": "Neoclassico"
   },
   {
     "slug": "catalog-342",
@@ -5129,7 +5811,9 @@ export const importedProducts: Product[] = [
       "Фабрика Термінус",
       "Колекція Neoclassico"
     ],
-    "image": "/catalog-assets/products/product-342.webp"
+    "image": "/catalog-assets/products/product-342.webp",
+    "brand": "Термінус",
+    "collection": "Neoclassico"
   },
   {
     "slug": "catalog-343",
@@ -5144,7 +5828,9 @@ export const importedProducts: Product[] = [
       "Фабрика Термінус",
       "Колекція Neoclassico"
     ],
-    "image": "/catalog-assets/products/product-343.webp"
+    "image": "/catalog-assets/products/product-343.webp",
+    "brand": "Термінус",
+    "collection": "Neoclassico"
   },
   {
     "slug": "catalog-344",
@@ -5159,7 +5845,9 @@ export const importedProducts: Product[] = [
       "Фабрика Термінус",
       "Колекція Neoclassico"
     ],
-    "image": "/catalog-assets/products/product-344.webp"
+    "image": "/catalog-assets/products/product-344.webp",
+    "brand": "Термінус",
+    "collection": "Neoclassico"
   },
   {
     "slug": "catalog-345",
@@ -5174,7 +5862,9 @@ export const importedProducts: Product[] = [
       "Фабрика Термінус",
       "Колекція Neoclassico"
     ],
-    "image": "/catalog-assets/products/product-345.webp"
+    "image": "/catalog-assets/products/product-345.webp",
+    "brand": "Термінус",
+    "collection": "Neoclassico"
   },
   {
     "slug": "catalog-346",
@@ -5189,7 +5879,9 @@ export const importedProducts: Product[] = [
       "Фабрика Термінус",
       "Колекція Neoclassico"
     ],
-    "image": "/catalog-assets/products/product-346.webp"
+    "image": "/catalog-assets/products/product-346.webp",
+    "brand": "Термінус",
+    "collection": "Neoclassico"
   },
   {
     "slug": "catalog-347",
@@ -5204,7 +5896,9 @@ export const importedProducts: Product[] = [
       "Фабрика Термінус",
       "Колекція Neoclassico"
     ],
-    "image": "/catalog-assets/products/product-347.webp"
+    "image": "/catalog-assets/products/product-347.webp",
+    "brand": "Термінус",
+    "collection": "Neoclassico"
   },
   {
     "slug": "catalog-348",
@@ -5219,7 +5913,9 @@ export const importedProducts: Product[] = [
       "Фабрика Термінус",
       "Колекція Neoclassico"
     ],
-    "image": "/catalog-assets/products/product-348.webp"
+    "image": "/catalog-assets/products/product-348.webp",
+    "brand": "Термінус",
+    "collection": "Neoclassico"
   },
   {
     "slug": "catalog-349",
@@ -5234,7 +5930,9 @@ export const importedProducts: Product[] = [
       "Фабрика Термінус",
       "Колекція Neoclassico"
     ],
-    "image": "/catalog-assets/products/product-349.webp"
+    "image": "/catalog-assets/products/product-349.webp",
+    "brand": "Термінус",
+    "collection": "Neoclassico"
   },
   {
     "slug": "catalog-350",
@@ -5249,7 +5947,9 @@ export const importedProducts: Product[] = [
       "Фабрика Термінус",
       "Колекція Neoclassico"
     ],
-    "image": "/catalog-assets/products/product-350.webp"
+    "image": "/catalog-assets/products/product-350.webp",
+    "brand": "Термінус",
+    "collection": "Neoclassico"
   },
   {
     "slug": "catalog-351",
@@ -5264,7 +5964,9 @@ export const importedProducts: Product[] = [
       "Фабрика Термінус",
       "Колекція Neoclassico"
     ],
-    "image": "/catalog-assets/products/product-351.webp"
+    "image": "/catalog-assets/products/product-351.webp",
+    "brand": "Термінус",
+    "collection": "Neoclassico"
   },
   {
     "slug": "catalog-352",
@@ -5279,7 +5981,9 @@ export const importedProducts: Product[] = [
       "Фабрика Термінус",
       "Колекція Neoclassico"
     ],
-    "image": "/catalog-assets/products/product-352.webp"
+    "image": "/catalog-assets/products/product-352.webp",
+    "brand": "Термінус",
+    "collection": "Neoclassico"
   },
   {
     "slug": "catalog-353",
@@ -5294,7 +5998,9 @@ export const importedProducts: Product[] = [
       "Фабрика Термінус",
       "Колекція Solid"
     ],
-    "image": "/catalog-assets/products/product-353.webp"
+    "image": "/catalog-assets/products/product-353.webp",
+    "brand": "Термінус",
+    "collection": "Solid"
   },
   {
     "slug": "catalog-354",
@@ -5309,7 +6015,9 @@ export const importedProducts: Product[] = [
       "Фабрика Термінус",
       "Колекція Solid"
     ],
-    "image": "/catalog-assets/products/product-354.webp"
+    "image": "/catalog-assets/products/product-354.webp",
+    "brand": "Термінус",
+    "collection": "Solid"
   },
   {
     "slug": "catalog-355",
@@ -5324,7 +6032,9 @@ export const importedProducts: Product[] = [
       "Фабрика Термінус",
       "Колекція Solid"
     ],
-    "image": "/catalog-assets/products/product-355.webp"
+    "image": "/catalog-assets/products/product-355.webp",
+    "brand": "Термінус",
+    "collection": "Solid"
   },
   {
     "slug": "catalog-356",
@@ -5339,7 +6049,9 @@ export const importedProducts: Product[] = [
       "Фабрика Термінус",
       "Колекція Solid"
     ],
-    "image": "/catalog-assets/products/product-356.webp"
+    "image": "/catalog-assets/products/product-356.webp",
+    "brand": "Термінус",
+    "collection": "Solid"
   },
   {
     "slug": "catalog-357",
@@ -5354,7 +6066,9 @@ export const importedProducts: Product[] = [
       "Фабрика Термінус",
       "Колекція Solid"
     ],
-    "image": "/catalog-assets/products/product-357.webp"
+    "image": "/catalog-assets/products/product-357.webp",
+    "brand": "Термінус",
+    "collection": "Solid"
   },
   {
     "slug": "catalog-358",
@@ -5369,7 +6083,9 @@ export const importedProducts: Product[] = [
       "Фабрика Термінус",
       "Колекція Solid"
     ],
-    "image": "/catalog-assets/products/product-358.webp"
+    "image": "/catalog-assets/products/product-358.webp",
+    "brand": "Термінус",
+    "collection": "Solid"
   },
   {
     "slug": "catalog-359",
@@ -5384,7 +6100,9 @@ export const importedProducts: Product[] = [
       "Фабрика Термінус",
       "Колекція Solid"
     ],
-    "image": "/catalog-assets/products/product-359.webp"
+    "image": "/catalog-assets/products/product-359.webp",
+    "brand": "Термінус",
+    "collection": "Solid"
   },
   {
     "slug": "catalog-360",
@@ -5399,7 +6117,9 @@ export const importedProducts: Product[] = [
       "Фабрика Термінус",
       "Колекція Solid"
     ],
-    "image": "/catalog-assets/products/product-360.webp"
+    "image": "/catalog-assets/products/product-360.webp",
+    "brand": "Термінус",
+    "collection": "Solid"
   },
   {
     "slug": "catalog-361",
@@ -5414,7 +6134,9 @@ export const importedProducts: Product[] = [
       "Фабрика Термінус",
       "Колекція Solid"
     ],
-    "image": "/catalog-assets/products/product-361.webp"
+    "image": "/catalog-assets/products/product-361.webp",
+    "brand": "Термінус",
+    "collection": "Solid"
   },
   {
     "slug": "catalog-362",
@@ -5429,7 +6151,9 @@ export const importedProducts: Product[] = [
       "Фабрика Термінус",
       "Колекція Solid"
     ],
-    "image": "/catalog-assets/products/product-362.webp"
+    "image": "/catalog-assets/products/product-362.webp",
+    "brand": "Термінус",
+    "collection": "Solid"
   },
   {
     "slug": "catalog-363",
@@ -5444,6 +6168,8 @@ export const importedProducts: Product[] = [
       "Фабрика Термінус",
       "Колекція Solid"
     ],
-    "image": "/catalog-assets/products/product-363.webp"
+    "image": "/catalog-assets/products/product-363.webp",
+    "brand": "Термінус",
+    "collection": "Solid"
   }
 ];

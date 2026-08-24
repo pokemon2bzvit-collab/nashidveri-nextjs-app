@@ -10,11 +10,14 @@ const categoryFilters = [{ id: "all", label: "Усі моделі" }, ...Object.
 const materials = [...new Set(products.map((product) => product.material))];
 const styles = [...new Set(products.map((product) => product.style))];
 const colors = [...new Set(products.map((product) => product.color))];
+const brands = [...new Set(products.map((product) => product.brand))];
 const priceRanges = [{ id: "under-10000", label: "до 10 000 грн", max: 10000 }, { id: "10000-25000", label: "10 000–25 000 грн", min: 10000, max: 25000 }, { id: "over-25000", label: "від 25 000 грн", min: 25000 }];
 const getPriceNumber = (price: string) => Number(price.replace(/[^\d]/g, "")) || null;
 
-export function CatalogBrowser({ initialCategory = "all", initialQuery = "" }: { initialCategory?: string; initialQuery?: string }) {
+export function CatalogBrowser({ initialCategory = "all", initialQuery = "", initialBrand = "all", initialCollection = "all" }: { initialCategory?: string; initialQuery?: string; initialBrand?: string; initialCollection?: string }) {
   const [category, setCategory] = useState(initialCategory);
+  const [brand, setBrand] = useState(initialBrand);
+  const [collection, setCollection] = useState(initialCollection);
   const [material, setMaterial] = useState("all");
   const [style, setStyle] = useState("all");
   const [color, setColor] = useState("all");
@@ -26,12 +29,13 @@ export function CatalogBrowser({ initialCategory = "all", initialQuery = "" }: {
     const price = getPriceNumber(product.price);
     const range = priceRanges.find((item) => item.id === priceRange);
     const matchesPrice = !range || (price !== null && (!range.min || price >= range.min) && (!range.max || price < range.max));
-    return (category === "all" || product.category === category) && (material === "all" || product.material === material) && (style === "all" || product.style === style) && (color === "all" || product.color === color) && matchesPrice && `${product.name} ${product.features.join(" ")} ${product.description}`.toLowerCase().includes(query.toLowerCase());
-  }), [category, material, style, color, priceRange, query]);
-  useEffect(() => setVisibleCount(PAGE_SIZE), [category, material, style, color, priceRange, query]);
+    return (category === "all" || product.category === category) && (brand === "all" || product.brand === brand) && (collection === "all" || product.collection === collection) && (material === "all" || product.material === material) && (style === "all" || product.style === style) && (color === "all" || product.color === color) && matchesPrice && `${product.name} ${product.features.join(" ")} ${product.description}`.toLowerCase().includes(query.toLowerCase());
+  }), [category, brand, collection, material, style, color, priceRange, query]);
+  const availableCollections = useMemo(() => [...new Set(products.filter((product) => brand === "all" || product.brand === brand).map((product) => product.collection))], [brand]);
+  useEffect(() => setVisibleCount(PAGE_SIZE), [category, brand, collection, material, style, color, priceRange, query]);
   const visibleProducts = result.slice(0, visibleCount);
-  const reset = () => { setCategory("all"); setMaterial("all"); setStyle("all"); setColor("all"); setPriceRange("all"); setQuery(""); };
-  const active = category !== "all" || material !== "all" || style !== "all" || color !== "all" || priceRange !== "all" || query.length > 0;
+  const reset = () => { setCategory("all"); setBrand("all"); setCollection("all"); setMaterial("all"); setStyle("all"); setColor("all"); setPriceRange("all"); setQuery(""); };
+  const active = category !== "all" || brand !== "all" || collection !== "all" || material !== "all" || style !== "all" || color !== "all" || priceRange !== "all" || query.length > 0;
 
   return <div className="mt-8 grid gap-8 lg:grid-cols-[255px_minmax(0,1fr)]">
     <button aria-label="Відкрити фільтри" className="fixed left-0 top-1/2 z-30 -translate-y-1/2 rounded-r-xl bg-ink px-2.5 py-4 text-xs font-bold text-white shadow-lg lg:hidden" onClick={() => setFiltersOpen(true)}><span className="[writing-mode:vertical-rl]">Фільтри</span></button>
@@ -39,6 +43,8 @@ export function CatalogBrowser({ initialCategory = "all", initialQuery = "" }: {
     <aside className={`surface-card fixed inset-y-0 left-0 z-50 h-full w-[min(88vw,330px)] overflow-y-auto p-5 shadow-2xl transition-transform lg:sticky lg:top-28 lg:z-auto lg:h-fit lg:w-auto lg:translate-x-0 lg:shadow-none ${filtersOpen ? "translate-x-0" : "-translate-x-full"}`}>
       <div className="flex items-center justify-between"><p className="flex items-center gap-2 text-sm font-bold"><SlidersHorizontal size={17} className="text-clay" /> Фільтри</p><div className="flex items-center gap-3">{active && <button onClick={reset} className="text-xs font-bold text-clay hover:underline">Очистити</button>}<button aria-label="Закрити фільтри" className="lg:hidden" onClick={() => setFiltersOpen(false)}><X size={19} /></button></div></div>
       <FilterGroup title="Категорія">{categoryFilters.map((filter) => <FilterButton key={filter.id} selected={category === filter.id} onClick={() => setCategory(filter.id)}>{filter.label}</FilterButton>)}</FilterGroup>
+      <FilterGroup title="Фабрика">{brands.map((item) => <FilterButton key={item} selected={brand === item} onClick={() => { setBrand(brand === item ? "all" : item); setCollection("all"); }}>{item}</FilterButton>)}</FilterGroup>
+      <FilterGroup title="Колекція">{availableCollections.map((item) => <FilterButton key={item} selected={collection === item} onClick={() => setCollection(collection === item ? "all" : item)}>{item}</FilterButton>)}</FilterGroup>
       <FilterGroup title="Матеріал">{materials.map((item) => <FilterButton key={item} selected={material === item} onClick={() => setMaterial(material === item ? "all" : item)}>{item}</FilterButton>)}</FilterGroup>
       <FilterGroup title="Стиль / призначення">{styles.map((item) => <FilterButton key={item} selected={style === item} onClick={() => setStyle(style === item ? "all" : item)}>{item}</FilterButton>)}</FilterGroup>
       <FilterGroup title="Колір">{colors.map((item) => <FilterButton key={item} selected={color === item} onClick={() => setColor(color === item ? "all" : item)}>{item}</FilterButton>)}</FilterGroup>
