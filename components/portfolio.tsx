@@ -1,7 +1,21 @@
+import { ArrowUpRight } from "lucide-react";
+import Link from "next/link";
 import { catalogImageUrl } from "@/lib/catalog";
+
 const works = [
-  ["Сучасна класика", "Міжкімнатні двері Papa Carlo", catalogImageUrl("/catalog-assets/products/product-85.jpg")],
-  ["Захищений вхід", "Вхідні двері Abwehr", catalogImageUrl("/catalog-assets/products/product-1.webp")],
-  ["Лаконічний дизайн", "Міжкімнатні двері Термінус", catalogImageUrl("/catalog-assets/products/product-295.webp")]
+  { title: "Сучасна класика", subtitle: "Міжкімнатні двері Papa Carlo", image: catalogImageUrl("/catalog-assets/products/product-85.jpg"), href: "/mizhkimnatni-dveri/papa-carlo" },
+  { title: "Захищений вхід", subtitle: "Вхідні двері Abwehr", image: catalogImageUrl("/catalog-assets/products/product-1.webp"), href: "/vhidni-dveri/abwehr" },
+  { title: "Лаконічний дизайн", subtitle: "Міжкімнатні двері Термінус", image: catalogImageUrl("/catalog-assets/products/product-295.webp"), href: "/mizhkimnatni-dveri/terminus" },
 ];
-export function Portfolio() { return <section id="portfolio" className="container-page section-pad"><div className="flex items-end justify-between gap-6"><div><p className="eyebrow">Натхнення</p><h2 className="heading mt-3">Рішення для<br />вашого простору</h2></div><span className="hidden text-sm text-stone-500 sm:block">Додамо сюди ваші реальні виконані об’єкти</span></div><div className="mt-10 grid gap-4 md:grid-cols-2 lg:grid-cols-3">{works.map(([title, subtitle, image], i) => <figure key={title} className={`group relative overflow-hidden rounded-2xl ${i === 0 ? "md:col-span-2 lg:col-span-1" : ""}`}><img src={image} alt={title} className="h-80 w-full object-cover transition duration-500 group-hover:scale-105" /><figcaption className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/70 to-transparent px-5 pb-5 pt-14 text-white"><p className="font-bold">{title}</p><p className="mt-1 text-sm text-white/70">{subtitle}</p></figcaption></figure>)}</div></section> }
+
+export function Portfolio() {
+  return <section id="portfolio" className="container-page section-pad">
+    <div className="max-w-2xl"><p className="eyebrow">Натхнення</p><h2 className="heading mt-3">Рішення для<br />вашого простору</h2><p className="mt-5 text-base leading-7 text-stone-600">Добірка моделей із нашого каталогу — для сучасного інтер’єру та надійного входу.</p></div>
+    <div className="mt-10 grid gap-5 md:grid-cols-3">
+      {works.map((work, index) => <article key={work.title} className="group overflow-hidden rounded-[1.5rem] border border-stone-200 bg-white shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-xl">
+        <div className="flex aspect-[4/3] items-center justify-center bg-[#f7f5f1] p-6 sm:p-8"><img loading="lazy" src={work.image} alt={work.subtitle} className="h-full w-full object-contain transition duration-500 group-hover:scale-[1.03]" /></div>
+        <div className="p-5 sm:p-6"><p className="eyebrow">0{index + 1}</p><h3 className="mt-2 font-display text-2xl font-semibold tracking-[-.03em] text-ink">{work.title}</h3><p className="mt-2 text-sm leading-6 text-stone-600">{work.subtitle}</p><Link href={work.href} className="mt-5 inline-flex items-center gap-1 text-sm font-bold text-clay transition hover:text-ink">Переглянути колекцію <ArrowUpRight size={16} /></Link></div>
+      </article>)}
+    </div>
+  </section>;
+}
