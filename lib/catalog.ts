@@ -12,7 +12,7 @@ export const categories: Record<Category, { title: string; short: string; descri
 export const products: Product[] = importedProducts;
 
 type ProductRow = Omit<Product, "image" | "features"> & { features: string[] | null; image_path: string };
-const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL?.replace(/\/$/, "");
+const supabaseUrl = (process.env.NEXT_PUBLIC_SUPABASE_URL || "https://vfdfvqlvxkwgizauxusm.supabase.co").replace(/\/$/, "");
 const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
 
 export const catalogImageUrl = (image: string) => {
@@ -24,7 +24,7 @@ export const catalogImageUrl = (image: string) => {
 const mapProduct = (product: ProductRow): Product => ({ ...product, features: product.features || [], image: catalogImageUrl(product.image_path) });
 
 export async function getProducts(): Promise<Product[]> {
-  if (!supabaseUrl || !supabaseKey) return products;
+  if (!supabaseKey) return products.map((product) => ({ ...product, image: catalogImageUrl(product.image) }));
   try {
     const response = await fetch(`${supabaseUrl}/rest/v1/products?select=slug,category,brand,collection,name,material,style,color,price,description,features,image_path&is_available=eq.true&order=sort_order.asc`, {
       headers: { apikey: supabaseKey, Authorization: `Bearer ${supabaseKey}` },
@@ -35,7 +35,7 @@ export async function getProducts(): Promise<Product[]> {
     return rows.map(mapProduct);
   } catch (error) {
     console.error("Could not load catalog from Supabase", error);
-    return products;
+    return products.map((product) => ({ ...product, image: catalogImageUrl(product.image) }));
   }
 }
 
