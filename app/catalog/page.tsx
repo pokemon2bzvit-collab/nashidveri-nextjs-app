@@ -1,4 +1,20 @@
+import Link from "next/link";
 import { CatalogBrowser } from "@/components/catalog-browser";
 import { SiteShell } from "@/components/site-shell";
-import { getProducts } from "@/lib/catalog";
-export default async function CatalogPage({ searchParams }: { searchParams: Promise<{ category?: string; search?: string; brand?: string; collection?: string }> }) { const params = await searchParams; const current = params.category || "all"; const products = await getProducts(); return <SiteShell><main><section className="border-b bg-ink py-12 text-white sm:py-16"><div className="container-page"><p className="eyebrow text-[#E8AE83]">Інтернет-каталог</p><h1 className="mt-3 font-display text-4xl leading-tight sm:text-6xl">Двері й вікна<br />для вашого простору</h1><p className="mt-5 max-w-xl text-sm leading-6 text-stone-300 sm:text-base">Порівнюйте моделі, матеріали й орієнтовні ціни. Остаточну комплектацію допоможе підібрати менеджер.</p></div></section><section className="container-page section-pad"><CatalogBrowser products={products} initialCategory={current} initialQuery={params.search || ""} initialBrand={params.brand || "all"} initialCollection={params.collection || "all"} /></section></main></SiteShell> }
+import { categories, getProducts } from "@/lib/catalog";
+
+export default async function CatalogPage({ searchParams }: { searchParams: Promise<{ category?: string; search?: string; brand?: string; collection?: string }> }) {
+  const params = await searchParams;
+  const current = params.category || "all";
+  const products = await getProducts();
+  const categoryLinks = Object.entries(categories).filter(([id]) => products.some((product) => product.category === id));
+
+  return <SiteShell><main>
+    <section className="border-b bg-ink py-8 text-white sm:py-10"><div className="container-page">
+      <p className="eyebrow text-[#E8AE83]">Інтернет-каталог</p>
+      <div className="mt-2 flex flex-col justify-between gap-5 lg:flex-row lg:items-end"><div><h1 className="font-display text-4xl leading-tight sm:text-5xl">Двері для вашого простору</h1><p className="mt-3 max-w-2xl text-sm leading-6 text-stone-300 sm:text-base">Оберіть категорію, фабрику та колекцію. Допоможемо з комплектацією й прорахунком.</p></div><p className="text-sm text-stone-300">У каталозі: <span className="font-bold text-white">{products.length} моделей</span></p></div>
+      <div className="mt-6 flex gap-2 overflow-x-auto pb-1">{categoryLinks.map(([id, category]) => <Link key={id} href={`/catalog?category=${id}`} className={`whitespace-nowrap rounded-full border px-4 py-2 text-sm font-bold transition ${current === id ? "border-clay bg-clay text-white" : "border-white/20 text-white hover:border-white hover:bg-white/10"}`}>{category.title}</Link>)}</div>
+    </div></section>
+    <section className="container-page section-pad pt-8 sm:pt-10"><CatalogBrowser products={products} initialCategory={current} initialQuery={params.search || ""} initialBrand={params.brand || "all"} initialCollection={params.collection || "all"} /></section>
+  </main></SiteShell>;
+}
