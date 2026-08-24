@@ -1,16 +1,17 @@
 import Link from "next/link";
 import { ArrowUpRight, Layers3 } from "lucide-react";
 import { categories, type Product } from "@/lib/catalog";
+import { ImageLightbox } from "./image-lightbox";
 
 export function ProductGrid({ products }: { products: Product[] }) {
   return <div className="grid grid-cols-2 gap-3 sm:gap-5 lg:grid-cols-3">
     {products.map((product) => { const hasPrice = product.price !== "Ціна за запитом"; return <article key={product.slug} className="group flex min-w-0 flex-col overflow-hidden rounded-2xl border border-stone-200/80 bg-white shadow-sm transition duration-300 hover:-translate-y-1 hover:border-stone-300 hover:shadow-xl">
-      <Link href={`/catalog/${product.slug}`} className="flex h-full flex-col" aria-label={`Детальніше: ${product.name}`}>
-        <div className="relative aspect-[4/5] overflow-hidden bg-[#f7f5f1] p-3 sm:p-5">
-          <img loading="lazy" decoding="async" className="h-full w-full object-contain transition duration-500 group-hover:scale-[1.035]" src={product.image} alt={product.name} />
+      <div className="relative aspect-[4/5] overflow-hidden bg-[#f7f5f1] p-3 sm:p-5">
+          <ImageLightbox src={product.image} alt={product.name} className="h-full w-full" imageClassName="h-full w-full object-contain transition duration-500 group-hover:scale-[1.035]" />
           <span className="absolute left-2 top-2 rounded-full bg-white/95 px-2 py-1 text-[8px] font-bold uppercase tracking-wider text-ink shadow-sm sm:left-3 sm:top-3 sm:px-3 sm:py-1.5 sm:text-[10px]">{categories[product.category].short}</span>
-          <span className="absolute right-2 top-2 flex h-7 w-7 items-center justify-center rounded-full bg-ink text-white shadow-sm transition group-hover:bg-clay sm:right-3 sm:top-3 sm:h-8 sm:w-8"><ArrowUpRight size={15} /></span>
-        </div>
+          <Link href={`/catalog/${product.slug}`} aria-label={`Детальніше: ${product.name}`} className="absolute right-2 top-2 flex h-7 w-7 items-center justify-center rounded-full bg-ink text-white shadow-sm transition hover:bg-clay sm:right-3 sm:top-3 sm:h-8 sm:w-8"><ArrowUpRight size={15} /></Link>
+      </div>
+      <Link href={`/catalog/${product.slug}`} className="flex flex-1 flex-col" aria-label={`Детальніше: ${product.name}`}>
         <div className="flex flex-1 flex-col p-3 sm:p-5">
           <p className="truncate text-[9px] font-bold uppercase tracking-[.1em] text-clay sm:text-[11px] sm:tracking-[.14em]">{product.brand}</p>
           <h3 className="mt-1 line-clamp-2 min-h-10 text-base font-bold leading-tight text-ink sm:min-h-12 sm:text-xl">{product.name}</h3>
