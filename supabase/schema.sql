@@ -25,16 +25,40 @@ create index if not exists products_category_idx on public.products(category);
 create index if not exists products_brand_collection_idx on public.products(brand, collection);
 create index if not exists products_available_idx on public.products(is_available);
 
+-- Додаткові матеріали моделі: головне фото, варіанти дверей і палітри.
+-- image_path — шлях усередині bucket `catalog-images`, наприклад
+-- `media/rodos/loft-surf/main.jpg`.
+create table if not exists public.product_media (
+  id uuid primary key default gen_random_uuid(),
+  product_slug text not null references public.products(slug) on delete cascade,
+  kind text not null check (kind in ('main', 'gallery', 'palette')),
+  label text,
+  image_path text not null,
+  sort_order integer not null default 0,
+  is_active boolean not null default true,
+  created_at timestamptz not null default now()
+);
+
+create index if not exists product_media_product_idx on public.product_media(product_slug, kind, sort_order);
+
 alter table public.products enable row level security;
 
 -- Дозволяємо публічному каталогу читати лише рядки, які пройшли RLS-політику нижче.
 grant usage on schema public to anon, authenticated;
 grant select on table public.products to anon, authenticated;
+grant select on table public.product_media to anon, authenticated;
 
 drop policy if exists "Public catalog is readable" on public.products;
 create policy "Public catalog is readable"
   on public.products for select
   using (is_available = true);
+
+alter table public.product_media enable row level security;
+
+drop policy if exists "Public product media is readable" on public.product_media;
+create policy "Public product media is readable"
+  on public.product_media for select
+  using (is_active = true);
 
 -- Публічний bucket для фотографій каталогу.
 -- Для прямих public URL окрема SELECT-політика не потрібна: вона дозволила б
