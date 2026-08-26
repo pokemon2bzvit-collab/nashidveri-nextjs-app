@@ -8,6 +8,18 @@ const groups = [
   { title: "Вхідні двері", href: "/vhidni-dveri", brands: entranceBrands, prefix: "/vhidni-dveri" },
 ];
 
+const logoByBrand: Record<string, string> = {
+  "Papa Carlo": "/brand-logos/papa-carlo.svg",
+  Rodos: "/brand-logos/rodos.png",
+  StilDoors: "/brand-logos/stildoors.jpg",
+  "Термінус": "/brand-logos/terminus.png",
+  Abwehr: "/brand-logos/abwehr.png",
+  "Страж": "/brand-logos/strazh.jpg",
+  "Q Doors": "/brand-logos/qdoors.png",
+  "Rodos Steel": "/brand-logos/rodos.png",
+  Magda: "/brand-logos/magda.svg",
+};
+
 export function HomeCategories() {
   return <section className="container-page py-14 sm:py-20">
     <div className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
@@ -15,7 +27,7 @@ export function HomeCategories() {
       <Link href="/catalog" className="inline-flex w-fit items-center gap-2 text-sm font-bold text-clay transition hover:text-ink">Увесь каталог <ArrowUpRight size={17} /></Link>
     </div>
     <div className="mt-9 space-y-8">
-      {groups.map((group) => <div key={group.title}><div className="flex items-center justify-between"><h3 className="font-display text-2xl tracking-[-.035em] text-ink sm:text-3xl">{group.title}</h3><Link href={group.href} className="text-sm font-bold text-clay hover:text-ink">Усі фабрики</Link></div><div className="mt-4 grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-5">{group.brands.map((brand) => <Link key={brand.slug} href={`${group.prefix}/${brand.slug}`} className="group rounded-2xl border border-stone-200 bg-white p-4 transition hover:-translate-y-0.5 hover:border-clay hover:shadow-soft sm:p-5"><p className="font-display text-xl tracking-[-.035em] text-ink sm:text-2xl">{brand.name}</p><p className="mt-2 line-clamp-2 min-h-10 text-xs leading-5 text-stone-500">{brand.collections.slice(0, 2).join(" · ")}</p><span className="mt-5 inline-flex items-center gap-1 text-xs font-bold text-clay">Колекції <ArrowUpRight size={14} className="transition group-hover:translate-x-0.5 group-hover:-translate-y-0.5" /></span></Link>)}</div></div>)}
+      {groups.map((group) => <div key={group.title}><div className="flex items-center justify-between"><h3 className="font-display text-2xl tracking-[-.035em] text-ink sm:text-3xl">{group.title}</h3><Link href={group.href} className="text-sm font-bold text-clay hover:text-ink">Усі фабрики</Link></div><div className="mt-4 grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-5">{group.brands.map((brand) => { const logo = logoByBrand[brand.name]; return <Link key={brand.slug} href={`${group.prefix}/${brand.slug}`} className="group rounded-2xl border border-stone-200 bg-white p-4 transition hover:-translate-y-0.5 hover:border-clay hover:shadow-soft sm:p-5"><div className="flex h-12 items-center">{logo ? <img src={logo} alt={`${brand.name} — логотип виробника`} className="max-h-11 w-auto max-w-full object-contain" /> : <p className="font-display text-xl tracking-[-.035em] text-ink sm:text-2xl">{brand.name}</p>}</div>{logo && <p className="mt-3 text-sm font-bold text-ink">{brand.name}</p>}<p className="mt-2 line-clamp-2 min-h-10 text-xs leading-5 text-stone-500">{brand.collections.slice(0, 2).join(" · ")}</p><span className="mt-5 inline-flex items-center gap-1 text-xs font-bold text-clay">Колекції <ArrowUpRight size={14} className="transition group-hover:translate-x-0.5 group-hover:-translate-y-0.5" /></span></Link> })}</div></div>)}
     </div>
     <div className="mt-10 flex flex-col items-start justify-between gap-4 rounded-[1.5rem] bg-sand px-6 py-6 sm:flex-row sm:items-center sm:px-8"><p className="max-w-xl font-display text-2xl leading-tight text-ink sm:text-3xl">Не знаєте, з якої фабрики почати? Підберемо двері під ваш простір і бюджет.</p><Link href="/contacts" className="button-primary shrink-0">Замовити прорахунок <ArrowUpRight size={17} /></Link></div>
   </section>;
