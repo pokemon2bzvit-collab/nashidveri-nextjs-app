@@ -19,7 +19,8 @@ const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
 
 export const catalogImageUrl = (image: string) => {
   if (!supabaseUrl) return image;
-  const encodedPath = image.split("/").filter(Boolean).map(encodeURIComponent).join("/");
+  const storagePath = image.startsWith("/catalog-assets/products/") ? image.split("/").pop() || image : image;
+  const encodedPath = storagePath.split("/").filter(Boolean).map(encodeURIComponent).join("/");
   return encodedPath ? `${supabaseUrl}/storage/v1/object/public/catalog-images/${encodedPath}` : image;
 };
 
