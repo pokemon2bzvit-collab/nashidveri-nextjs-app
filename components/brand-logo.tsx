@@ -1,4 +1,5 @@
 const logoByBrand: Record<string, string> = {
+  Grand: "/brand-logos/grand.svg",
   "Papa Carlo": "/brand-logos/papa-carlo.svg",
   Rodos: "/brand-logos/rodos.png",
   StilDoors: "/brand-logos/stildoors.jpg",
