@@ -27,17 +27,20 @@ create index if not exists products_available_idx on public.products(is_availabl
 
 alter table public.products enable row level security;
 
+-- Дозволяємо публічному каталогу читати лише рядки, які пройшли RLS-політику нижче.
+grant usage on schema public to anon, authenticated;
+grant select on table public.products to anon, authenticated;
+
 drop policy if exists "Public catalog is readable" on public.products;
 create policy "Public catalog is readable"
   on public.products for select
   using (is_available = true);
 
 -- Публічний bucket для фотографій каталогу.
+-- Для прямих public URL окрема SELECT-політика не потрібна: вона дозволила б
+-- через API отримувати список усіх файлів у bucket.
 insert into storage.buckets (id, name, public)
 values ('catalog-images', 'catalog-images', true)
 on conflict (id) do update set public = true;
 
 drop policy if exists "Public catalog images are readable" on storage.objects;
-create policy "Public catalog images are readable"
-  on storage.objects for select
-  using (bucket_id = 'catalog-images');
