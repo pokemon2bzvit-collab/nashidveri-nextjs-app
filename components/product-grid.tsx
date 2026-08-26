@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { ArrowUpRight, Layers3 } from "lucide-react";
 import { categories, type Product } from "@/lib/catalog";
+import { BrandLogo } from "./brand-logo";
 
 export function ProductGrid({ products }: { products: Product[] }) {
   return <div className="grid grid-cols-2 gap-3 sm:gap-5 lg:grid-cols-3">
@@ -12,7 +13,7 @@ export function ProductGrid({ products }: { products: Product[] }) {
       </Link>
       <Link href={`/catalog/${product.slug}`} className="flex flex-1 flex-col" aria-label={`Детальніше: ${product.name}`}>
         <div className="flex flex-1 flex-col p-3 sm:p-5">
-          <p className="truncate text-[9px] font-bold uppercase tracking-[.1em] text-clay sm:text-[11px] sm:tracking-[.14em]">{product.brand}</p>
+          <BrandLogo brand={product.brand} className="h-4 max-w-[125px] sm:h-5 sm:max-w-[145px]" />
           <h3 className="mt-1 line-clamp-2 min-h-10 text-base font-bold leading-tight text-ink sm:min-h-12 sm:text-xl">{product.name}</h3>
           <p className="mt-1 truncate text-[11px] text-stone-500 sm:text-sm">Колекція: {product.collection}</p>
           <div className="mt-3 hidden min-h-7 items-center gap-1.5 text-xs text-stone-600 sm:flex"><Layers3 size={14} className="shrink-0 text-clay" /><span className="truncate">{product.material} · {product.color}</span></div>
