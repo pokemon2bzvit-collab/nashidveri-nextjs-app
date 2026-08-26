@@ -40,6 +40,7 @@ create table if not exists public.product_media (
 );
 
 create index if not exists product_media_product_idx on public.product_media(product_slug, kind, sort_order);
+create unique index if not exists product_media_unique_file_idx on public.product_media(product_slug, kind, image_path);
 
 alter table public.products enable row level security;
 
