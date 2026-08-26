@@ -31,13 +31,13 @@ export async function getProducts(): Promise<Product[]> {
   try {
     const response = await fetch(`${supabaseUrl}/rest/v1/products?select=slug,category,brand,collection,name,material,style,color,price,description,features,image_path&is_available=eq.true&order=sort_order.asc`, {
       headers: { apikey: supabaseKey, Authorization: `Bearer ${supabaseKey}` },
-      next: { revalidate: 3600 },
+      next: { revalidate: 300 },
     });
     if (!response.ok) throw new Error(`Supabase returned ${response.status}`);
     const rows = await response.json() as ProductRow[];
     const mediaResponse = await fetch(`${supabaseUrl}/rest/v1/product_media?select=product_slug,kind,label,image_path,sort_order&is_active=eq.true&order=sort_order.asc`, {
       headers: { apikey: supabaseKey, Authorization: `Bearer ${supabaseKey}` },
-      next: { revalidate: 3600 },
+      next: { revalidate: 300 },
     });
     const mediaByProduct = new Map<string, ProductMedia[]>();
     if (mediaResponse.ok) {
