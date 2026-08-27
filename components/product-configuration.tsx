@@ -1,16 +1,24 @@
 "use client";
 
 import { Check, Palette } from "lucide-react";
-import { useMemo, useState } from "react";
-import type { ProductOption } from "@/lib/catalog";
+import { useEffect, useMemo, useState } from "react";
+import type { ProductOption, ProductVariant } from "@/lib/catalog";
 
-export function ProductConfiguration({ options, onImageChange }: { options: ProductOption[]; onImageChange: (image: string | null) => void }) {
+export function ProductConfiguration({ options, variants, onImageChange }: { options: ProductOption[]; variants: ProductVariant[]; onImageChange: (image: string | null) => void }) {
   const groups = useMemo(() => {
     const collection = new Map<string, ProductOption[]>();
     options.forEach((option) => collection.set(option.group, [...(collection.get(option.group) || []), option]));
     return [...collection.values()];
   }, [options]);
   const [selected, setSelected] = useState<Record<string, number>>({});
+
+  const selectionValues = useMemo(() => Object.fromEntries(groups.map((group) => [group[0].group, group[selected[group[0].group] ?? 0]?.label || ""])), [groups, selected]);
+
+  useEffect(() => {
+    const matchingVariant = variants.find((variant) => Object.entries(selectionValues).every(([group, label]) => variant.selections[group] === label));
+    const selectedOptionImage = groups.flatMap((group) => group).reverse().find((option) => option.label === selectionValues[option.group])?.image;
+    onImageChange(matchingVariant?.image || selectedOptionImage || null);
+  }, [groups, onImageChange, selectionValues, variants]);
 
   if (!groups.length) return null;
 
@@ -22,7 +30,8 @@ export function ProductConfiguration({ options, onImageChange }: { options: Prod
       const selectedIndex = selected[groupKey] ?? 0;
       return <div key={groupKey}><p className="text-sm font-bold text-ink">{group[0].groupLabel}</p><div className="mt-2.5 flex flex-wrap gap-2">{group.map((option, index) => {
         const isSelected = selectedIndex === index;
-        return <button type="button" key={`${option.group}-${option.label}`} onClick={() => { setSelected((current) => ({ ...current, [groupKey]: index })); onImageChange(option.image); }} className={`inline-flex min-h-10 items-center gap-2 rounded-xl border px-3 py-2 text-sm font-semibold transition ${isSelected ? "border-ink bg-ink text-white" : "border-stone-200 bg-white text-stone-700 hover:border-clay"}`}>
+        const isAvailable = !variants.length || variants.some((variant) => variant.selections[groupKey] === option.label && Object.entries(selectionValues).every(([group, label]) => group === groupKey || variant.selections[group] === label));
+        return <button type="button" disabled={!isAvailable} key={`${option.group}-${option.label}`} onClick={() => setSelected((current) => ({ ...current, [groupKey]: index }))} className={`inline-flex min-h-10 items-center gap-2 rounded-xl border px-3 py-2 text-sm font-semibold transition disabled:cursor-not-allowed disabled:opacity-35 ${isSelected ? "border-ink bg-ink text-white" : "border-stone-200 bg-white text-stone-700 hover:border-clay"}`}>
           {option.swatch && <span aria-hidden="true" className={`h-4 w-4 rounded-full border border-black/10 ${isSelected ? "ring-1 ring-white/80" : ""}`} style={{ backgroundColor: option.swatch }} />}{option.label}{isSelected && <Check size={14} />}
         </button>;
       })}</div></div>;

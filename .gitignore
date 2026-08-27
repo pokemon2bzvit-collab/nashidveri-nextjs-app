@@ -9,3 +9,6 @@ out/
 nashi-dveri-uzhhorod/
 old-site-export/
 public/catalog-assets/papa-carlo/
+tmp/
+tmp-*.html
+tmp-*.js
