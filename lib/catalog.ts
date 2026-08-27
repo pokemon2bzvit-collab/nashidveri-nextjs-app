@@ -33,6 +33,21 @@ const mapMedia = (media: ProductMediaRow): ProductMedia => ({ kind: media.kind, 
 const mapOption = (option: ProductOptionRow): ProductOption => ({ group: option.option_group, groupLabel: option.group_label, label: option.label, swatch: option.swatch, image: option.image_path ? catalogImageUrl(option.image_path) : null, sortOrder: option.sort_order });
 const mapVariant = (variant: ProductVariantRow): ProductVariant => ({ selections: variant.selections, image: catalogImageUrl(variant.image_path), sortOrder: variant.sort_order });
 
+async function getProductExtras(slug: string) {
+  if (!supabaseKey) return { media: [] as ProductMedia[], options: [] as ProductOption[], variants: [] as ProductVariant[] };
+  const filter = `product_slug=eq.${encodeURIComponent(slug)}`;
+  const headers = { apikey: supabaseKey, Authorization: `Bearer ${supabaseKey}` };
+  const [mediaResponse, optionsResponse, variantsResponse] = await Promise.all([
+    fetch(`${supabaseUrl}/rest/v1/product_media?select=product_slug,kind,label,image_path,sort_order&is_active=eq.true&${filter}&order=sort_order.asc`, { headers, next: { revalidate: 300 } }),
+    fetch(`${supabaseUrl}/rest/v1/product_options?select=product_slug,option_group,group_label,label,swatch,image_path,sort_order&is_active=eq.true&${filter}&order=sort_order.asc`, { headers, next: { revalidate: 300 } }),
+    fetch(`${supabaseUrl}/rest/v1/product_variants?select=product_slug,selections,image_path,sort_order&is_active=eq.true&${filter}&order=sort_order.asc`, { headers, next: { revalidate: 300 } }),
+  ]);
+  const media = mediaResponse.ok ? (await mediaResponse.json() as ProductMediaRow[]).map(mapMedia) : [];
+  const options = optionsResponse.ok ? (await optionsResponse.json() as ProductOptionRow[]).map(mapOption) : [];
+  const variants = variantsResponse.ok ? (await variantsResponse.json() as ProductVariantRow[]).map(mapVariant) : [];
+  return { media, options, variants };
+}
+
 export async function getProducts(): Promise<Product[]> {
   if (!supabaseKey) return products.map((product) => ({ ...product, image: catalogImageUrl(product.image) }));
   try {
@@ -42,48 +57,7 @@ export async function getProducts(): Promise<Product[]> {
     });
     if (!response.ok) throw new Error(`Supabase returned ${response.status}`);
     const rows = await response.json() as ProductRow[];
-    const mediaResponse = await fetch(`${supabaseUrl}/rest/v1/product_media?select=product_slug,kind,label,image_path,sort_order&is_active=eq.true&order=sort_order.asc`, {
-      headers: { apikey: supabaseKey, Authorization: `Bearer ${supabaseKey}` },
-      next: { revalidate: 300 },
-    });
-    const mediaByProduct = new Map<string, ProductMedia[]>();
-    if (mediaResponse.ok) {
-      (await mediaResponse.json() as ProductMediaRow[]).forEach((media) => {
-        const current = mediaByProduct.get(media.product_slug) || [];
-        current.push(mapMedia(media));
-        mediaByProduct.set(media.product_slug, current);
-      });
-    }
-    const optionsResponse = await fetch(`${supabaseUrl}/rest/v1/product_options?select=product_slug,option_group,group_label,label,swatch,image_path,sort_order&is_active=eq.true&order=sort_order.asc`, {
-      headers: { apikey: supabaseKey, Authorization: `Bearer ${supabaseKey}` },
-      next: { revalidate: 300 },
-    });
-    const optionsByProduct = new Map<string, ProductOption[]>();
-    if (optionsResponse.ok) {
-      (await optionsResponse.json() as ProductOptionRow[]).forEach((option) => {
-        const current = optionsByProduct.get(option.product_slug) || [];
-        current.push(mapOption(option));
-        optionsByProduct.set(option.product_slug, current);
-      });
-    }
-    const variantsResponse = await fetch(`${supabaseUrl}/rest/v1/product_variants?select=product_slug,selections,image_path,sort_order&is_active=eq.true&order=sort_order.asc`, {
-      headers: { apikey: supabaseKey, Authorization: `Bearer ${supabaseKey}` },
-      next: { revalidate: 300 },
-    });
-    const variantsByProduct = new Map<string, ProductVariant[]>();
-    if (variantsResponse.ok) {
-      (await variantsResponse.json() as ProductVariantRow[]).forEach((variant) => {
-        const current = variantsByProduct.get(variant.product_slug) || [];
-        current.push(mapVariant(variant));
-        variantsByProduct.set(variant.product_slug, current);
-      });
-    }
-    return rows.map((row) => {
-      const product = mapProduct(row);
-      const media = mediaByProduct.get(product.slug) || [];
-      const mainImage = media.find((item) => item.kind === "main");
-      return { ...product, image: mainImage?.image || product.image, media, options: optionsByProduct.get(product.slug) || [], variants: variantsByProduct.get(product.slug) || [] };
-    });
+    return rows.map(mapProduct);
   } catch (error) {
     console.error("Could not load catalog from Supabase", error);
     return products.map((product) => ({ ...product, image: catalogImageUrl(product.image) }));
@@ -92,5 +66,14 @@ export async function getProducts(): Promise<Product[]> {
 
 export async function getProduct(slug: string) {
   const catalog = await getProducts();
-  return catalog.find((product) => product.slug === slug);
+  const product = catalog.find((item) => item.slug === slug);
+  if (!product) return undefined;
+  try {
+    const { media, options, variants } = await getProductExtras(slug);
+    const mainImage = media.find((item) => item.kind === "main");
+    return { ...product, image: mainImage?.image || product.image, media, options, variants };
+  } catch (error) {
+    console.error(`Could not load product configuration for ${slug}`, error);
+    return product;
+  }
 }
