@@ -8,7 +8,7 @@ if (!productSlug || !productUrl) {
 
 const origin = "https://papa-carlo.com.ua";
 const outputDirectory = join("tmp", "papa-carlo-variants", productSlug);
-const storageDirectory = `variants/papa-carlo/${productSlug}`;
+const storageDirectory = "";
 const page = await fetch(productUrl).then(async (response) => {
   if (!response.ok) throw new Error(`Papa Carlo returned ${response.status} for ${productUrl}`);
   return response.text();
@@ -30,7 +30,7 @@ const rows = [];
 for (const variant of variants) {
   const relativeImage = variant.image_cover.replaceAll("\\/", "/");
   const extension = relativeImage.match(/\.(jpg|jpeg|png|webp)$/i)?.[1] || "jpg";
-  const filename = `${variant.variant_id}.${extension}`;
+  const filename = `papa-carlo-${productSlug}-${variant.variant_id}.${extension}`;
   const response = await fetch(`${origin}${relativeImage}`);
   if (!response.ok) throw new Error(`Could not download variant ${variant.variant_id}: ${response.status}`);
   await writeFile(join(outputDirectory, filename), Buffer.from(await response.arrayBuffer()));
@@ -38,12 +38,12 @@ for (const variant of variants) {
   if (colors.has(variant.material_id)) selections.color = colors.get(variant.material_id);
   if (edges.has(variant.edge_id)) selections.edge = edges.get(variant.edge_id);
   if (glass.has(variant.glass_id)) selections.glass = glass.get(variant.glass_id);
-  rows.push({ selections, imagePath: `${storageDirectory}/${filename}`, sortOrder: Number(variant.variant_id) });
+  rows.push({ selections, imagePath: storageDirectory ? `${storageDirectory}/${filename}` : filename, sortOrder: Number(variant.variant_id) });
 }
 
 const sqlString = (value) => String(value).replaceAll("'", "''");
 const values = rows.map((row) => `('${sqlString(productSlug)}', '${sqlString(JSON.stringify(row.selections))}'::jsonb, '${sqlString(row.imagePath)}', ${row.sortOrder})`).join(",\n");
-const sql = `-- Фото з офіційної сторінки Papa Carlo: ${productUrl}\n-- Завантажте вміст папки ${outputDirectory.replaceAll("\\\\", "/")} у bucket catalog-images, зберігши шлях ${storageDirectory}.\n\ninsert into public.product_variants (product_slug, selections, image_path, sort_order)\nvalues\n${values}\non conflict (product_slug, selections) do update\nset image_path = excluded.image_path, sort_order = excluded.sort_order, is_active = true;\n`;
+const sql = `-- Фото з офіційної сторінки Papa Carlo: ${productUrl}\n-- Завантажте вміст папки ${outputDirectory.replaceAll("\\\\", "/")} у корінь bucket catalog-images.\n\ninsert into public.product_variants (product_slug, selections, image_path, sort_order)\nvalues\n${values}\non conflict (product_slug, selections) do update\nset image_path = excluded.image_path, sort_order = excluded.sort_order, is_active = true;\n`;
 await writeFile(join("supabase", `${productSlug}-variants-seed.sql`), sql);
 
 const optionMetadata = {
