@@ -41,8 +41,12 @@ for (const variant of variants) {
   rows.push({ selections, imagePath: storageDirectory ? `${storageDirectory}/${filename}` : filename, sortOrder: Number(variant.variant_id) });
 }
 
+// The manufacturer's feed can contain the same set of options more than once
+// (for example, distinct internal identifiers for the same finish). The site
+// stores one image per selectable combination, so retain the first match.
+const uniqueRows = [...new Map(rows.map((row) => [JSON.stringify(row.selections), row])).values()];
 const sqlString = (value) => String(value).replaceAll("'", "''");
-const values = rows.map((row) => `('${sqlString(productSlug)}', '${sqlString(JSON.stringify(row.selections))}'::jsonb, '${sqlString(row.imagePath)}', ${row.sortOrder})`).join(",\n");
+const values = uniqueRows.map((row) => `('${sqlString(productSlug)}', '${sqlString(JSON.stringify(row.selections))}'::jsonb, '${sqlString(row.imagePath)}', ${row.sortOrder})`).join(",\n");
 const sql = `-- Фото з офіційної сторінки Papa Carlo: ${productUrl}\n-- Завантажте вміст папки ${outputDirectory.replaceAll("\\\\", "/")} у корінь bucket catalog-images.\n\ninsert into public.product_variants (product_slug, selections, image_path, sort_order)\nvalues\n${values}\non conflict (product_slug, selections) do update\nset image_path = excluded.image_path, sort_order = excluded.sort_order, is_active = true;\n`;
 await writeFile(join("supabase", `${productSlug}-variants-seed.sql`), sql);
 
