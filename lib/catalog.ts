@@ -2,7 +2,8 @@ import { importedProducts } from "./imported-catalog";
 
 export type Category = "interior" | "entrance" | "windows";
 export type ProductMedia = { kind: "main" | "gallery" | "palette"; label: string | null; image: string; sortOrder: number };
-export type Product = { slug: string; category: Category; brand: string; collection: string; name: string; material: string; style: string; color: string; price: string; description: string; features: string[]; image: string; media?: ProductMedia[] };
+export type ProductOption = { group: "color" | "finish" | "glass" | "edge" | "configuration"; groupLabel: string; label: string; swatch: string | null; image: string | null; sortOrder: number };
+export type Product = { slug: string; category: Category; brand: string; collection: string; name: string; material: string; style: string; color: string; price: string; description: string; features: string[]; image: string; media?: ProductMedia[]; options?: ProductOption[] };
 
 export const categories: Record<Category, { title: string; short: string; description: string; image: string }> = {
   interior: { title: "Міжкімнатні двері", short: "Міжкімнатні", description: "Колекції дверей від Papa Carlo, Rodos, Термінус, Grand та StilDoors.", image: "/catalog-assets/products/product-85.jpg" },
@@ -14,6 +15,7 @@ export const products: Product[] = importedProducts;
 
 type ProductRow = Omit<Product, "image" | "features"> & { features: string[] | null; image_path: string };
 type ProductMediaRow = { product_slug: string; kind: ProductMedia["kind"]; label: string | null; image_path: string; sort_order: number };
+type ProductOptionRow = { product_slug: string; option_group: ProductOption["group"]; group_label: string; label: string; swatch: string | null; image_path: string | null; sort_order: number };
 const supabaseUrl = (process.env.NEXT_PUBLIC_SUPABASE_URL || "https://vfdfvqlvxkwgizauxusm.supabase.co").replace(/\/$/, "");
 const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
 
@@ -26,6 +28,7 @@ export const catalogImageUrl = (image: string) => {
 
 const mapProduct = (product: ProductRow): Product => ({ ...product, features: product.features || [], image: catalogImageUrl(product.image_path) });
 const mapMedia = (media: ProductMediaRow): ProductMedia => ({ kind: media.kind, label: media.label, image: catalogImageUrl(media.image_path), sortOrder: media.sort_order });
+const mapOption = (option: ProductOptionRow): ProductOption => ({ group: option.option_group, groupLabel: option.group_label, label: option.label, swatch: option.swatch, image: option.image_path ? catalogImageUrl(option.image_path) : null, sortOrder: option.sort_order });
 
 export async function getProducts(): Promise<Product[]> {
   if (!supabaseKey) return products.map((product) => ({ ...product, image: catalogImageUrl(product.image) }));
@@ -48,11 +51,23 @@ export async function getProducts(): Promise<Product[]> {
         mediaByProduct.set(media.product_slug, current);
       });
     }
+    const optionsResponse = await fetch(`${supabaseUrl}/rest/v1/product_options?select=product_slug,option_group,group_label,label,swatch,image_path,sort_order&is_active=eq.true&order=sort_order.asc`, {
+      headers: { apikey: supabaseKey, Authorization: `Bearer ${supabaseKey}` },
+      next: { revalidate: 300 },
+    });
+    const optionsByProduct = new Map<string, ProductOption[]>();
+    if (optionsResponse.ok) {
+      (await optionsResponse.json() as ProductOptionRow[]).forEach((option) => {
+        const current = optionsByProduct.get(option.product_slug) || [];
+        current.push(mapOption(option));
+        optionsByProduct.set(option.product_slug, current);
+      });
+    }
     return rows.map((row) => {
       const product = mapProduct(row);
       const media = mediaByProduct.get(product.slug) || [];
       const mainImage = media.find((item) => item.kind === "main");
-      return { ...product, image: mainImage?.image || product.image, media };
+      return { ...product, image: mainImage?.image || product.image, media, options: optionsByProduct.get(product.slug) || [] };
     });
   } catch (error) {
     console.error("Could not load catalog from Supabase", error);
