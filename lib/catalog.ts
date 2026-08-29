@@ -22,6 +22,7 @@ const supabaseUrl = (process.env.NEXT_PUBLIC_SUPABASE_URL || "https://vfdfvqlvxk
 const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
 
 export const catalogImageUrl = (image: string) => {
+  if (/^https?:\/\//i.test(image)) return image;
   if (!supabaseUrl) return image;
   const storagePath = image.startsWith("/catalog-assets/products/") ? image.split("/").pop() || image : image;
   const encodedPath = storagePath.split("/").filter(Boolean).map(encodeURIComponent).join("/");
