@@ -8,9 +8,11 @@ type ProductConfigurationProps = {
   options: ProductOption[];
   variants: ProductVariant[];
   onImageChange: (image: string | null) => void;
+  previewImage: string;
+  productName: string;
 };
 
-export function ProductConfiguration({ options, variants, onImageChange }: ProductConfigurationProps) {
+export function ProductConfiguration({ options, variants, onImageChange, previewImage, productName }: ProductConfigurationProps) {
   const groups = useMemo(() => {
     const collection = new Map<string, ProductOption[]>();
     options.forEach((option) => collection.set(option.group, [...(collection.get(option.group) || []), option]));
@@ -79,7 +81,7 @@ export function ProductConfiguration({ options, variants, onImageChange }: Produ
         <div className="mx-auto mb-5 h-1.5 w-12 rounded-full bg-stone-300 lg:hidden" />
         <div className="flex items-start justify-between gap-4">
           <div><p className="text-xs font-bold uppercase tracking-[.14em] text-clay">Ваша комплектація</p><h2 className="mt-1 font-display text-3xl text-ink">Оберіть декор</h2></div>
-          <button type="button" onClick={() => setIsOpen(false)} aria-label="Закрити панель" className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-stone-200 bg-white text-ink transition hover:border-clay hover:text-clay"><X size={19} /></button>
+          <div className="flex items-start gap-2"><div className="w-12 shrink-0 rounded-xl border border-stone-200 bg-white p-1.5 sm:w-14"><img src={previewImage} alt={`Обраний вигляд: ${productName}`} className="aspect-[3/4] w-full object-contain" /></div><button type="button" onClick={() => setIsOpen(false)} aria-label="Закрити панель" className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-stone-200 bg-white text-ink transition hover:border-clay hover:text-clay"><X size={19} /></button></div>
         </div>
         <p className="mt-3 text-sm leading-6 text-stone-600">Доступні лише параметри для цієї моделі. Фото оновлюється, коли для варіанту є точне зображення.</p>
 

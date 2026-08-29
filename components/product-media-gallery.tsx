@@ -29,7 +29,7 @@ export function ProductMediaGallery({ product }: { product: Product }) {
         {palettes.map((item, index) => <div key={`${item.image}-${index}`} className="w-24 shrink-0"><ImageLightbox src={item.image} alt={item.label || "Палітра кольорів"} className="h-20 w-24 rounded-lg bg-sand" imageClassName="h-full w-full rounded-lg object-cover" /><p className="mt-1 line-clamp-2 text-xs font-semibold text-stone-700">{item.label || "Палітра"}</p></div>)}
       </div>
     </section>}
-    <ProductConfiguration options={product.options || []} variants={product.variants || []} onImageChange={setOptionImage} />
+    <ProductConfiguration options={product.options || []} variants={product.variants || []} onImageChange={setOptionImage} previewImage={optionImage || selected.image} productName={product.name} />
     {visualMedia.length > 1 && <p className="mt-3 flex items-center gap-2 text-xs font-medium text-stone-500"><Images size={15} /> Натисніть мініатюру, щоб переглянути варіант.</p>}
   </div>;
 }
