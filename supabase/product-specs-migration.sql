@@ -13,6 +13,7 @@ create table if not exists public.product_specs (
 );
 
 alter table public.product_specs enable row level security;
+grant select on table public.product_specs to anon, authenticated;
 
 drop policy if exists "Public product specs are readable" on public.product_specs;
 create policy "Public product specs are readable"
