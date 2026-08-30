@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowUpRight, Layers3, Palette } from "lucide-react";
+import { AlignLeft, ArrowUpRight, Layers3, Palette } from "lucide-react";
 import { categories, type Product } from "@/lib/catalog";
 import { BrandLogo } from "./brand-logo";
 
@@ -16,6 +16,10 @@ export function ProductGrid({ products }: { products: Product[] }) {
           <BrandLogo brand={product.brand} className="h-4 max-w-[125px] sm:h-5 sm:max-w-[145px]" />
           <h3 className="mt-1 line-clamp-2 min-h-10 text-base font-bold leading-tight text-ink sm:min-h-12 sm:text-xl">{product.name}</h3>
           <p className="mt-1 truncate text-[11px] text-stone-500 sm:text-sm">Колекція: {product.collection}</p>
+          <div className="mt-3 min-h-14 border-l-2 border-clay/35 pl-2.5 sm:min-h-16 sm:pl-3">
+            <p className="flex items-center gap-1 text-[8px] font-bold uppercase tracking-[.12em] text-stone-400 sm:text-[10px]"><AlignLeft size={11} className="text-clay" /> Опис моделі</p>
+            <p className="mt-1 line-clamp-2 text-[11px] leading-4 text-stone-600 sm:text-xs sm:leading-5">{product.description}</p>
+          </div>
           {decorCount > 1 && <p className="mt-2 inline-flex items-center gap-1.5 text-[10px] font-bold text-clay sm:text-xs"><Palette size={13} /> {decorCount} декорів на вибір</p>}
           <div className="mt-3 hidden min-h-7 items-center gap-1.5 text-xs text-stone-600 sm:flex"><Layers3 size={14} className="shrink-0 text-clay" /><span className="truncate">{product.material} · {product.color}</span></div>
           <div className="mt-3 flex items-end justify-between border-t border-stone-100 pt-3 sm:mt-5 sm:pt-4">
