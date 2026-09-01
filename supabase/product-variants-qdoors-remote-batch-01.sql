@@ -28,6 +28,36 @@ values
     '{"finish":"Дуб артизан + біла емаль"}'::jsonb,
     'https://e-c.storage.googleapis.com/res/4fa04ee9-bad4-4e80-9cbc-0116b619cc1b/original',
     1
+  ),
+  (
+    'catalog-60',
+    '{"finish":"Дуб табак + біле дерево"}'::jsonb,
+    'https://e-c.storage.googleapis.com/res/715f0470-96dd-4a7d-a869-e298f91e3211/original',
+    1
+  ),
+  (
+    'catalog-64',
+    '{"finish":"Спил дерева коньячний"}'::jsonb,
+    'https://e-c.storage.googleapis.com/res/0faa8f85-3f1f-45c6-8338-1fd2e76f276c/original',
+    1
+  ),
+  (
+    'catalog-65',
+    '{"finish":"Мрамор темний + біла емаль","glass":"Дзеркало"}'::jsonb,
+    'https://e-c.storage.googleapis.com/res/2f25ad7d-8367-48af-8ded-ef83da78e84d/original',
+    1
+  ),
+  (
+    'catalog-56',
+    '{"finish":"RAL 8019 + гладь дуб темний, лакобель"}'::jsonb,
+    'https://e-c.storage.googleapis.com/res/7b2e8fa1-eaac-4f36-bde3-dfa7d871ee26/original',
+    1
+  ),
+  (
+    'catalog-66',
+    '{"finish":"Венге сірий горизонтальний + білий"}'::jsonb,
+    'https://e-c.storage.googleapis.com/res/0af5b6a2-51e6-4141-9198-79db9e26f496/original',
+    1
   )
 on conflict (product_slug, selections) do update set
   image_path = excluded.image_path,
@@ -65,6 +95,41 @@ values
     'Q Doors',
     'https://qdoors.ua/shop/avangard-tiffani-1',
     'Авангард Босфор-АК — дуб артизан / біла емаль',
+    'verified', now(), 'Офіційна картка: модель, обидва кольори й основне фото збігаються.'
+  ),
+  (
+    'catalog-60',
+    'Q Doors',
+    'https://qdoors.ua/shop',
+    'Ультра Аккорд-Ас — дуб табак / біле дерево',
+    'verified', now(), 'Офіційний каталог: модель, обидва кольори й прев’ю збігаються.'
+  ),
+  (
+    'catalog-64',
+    'Q Doors',
+    'https://qdoors.ua/shop',
+    'Преміум Люксор — спил дерева коньячний',
+    'verified', now(), 'Офіційний каталог: модель, декор і прев’ю збігаються.'
+  ),
+  (
+    'catalog-65',
+    'Q Doors',
+    'https://qdoors.ua/shop/ultra-ukkord-as',
+    'Ультра Міроу — мрамор темний / біла емаль + дзеркало',
+    'verified', now(), 'Офіційна картка: модель, кольори, дзеркало й основне фото збігаються.'
+  ),
+  (
+    'catalog-56',
+    'Q Doors',
+    'https://qdoors.ua/shop/qdoors-strit-elegantglad-950-pr-bila-shagren-lakabel-chb3kruchka-1450',
+    'Qdoors Стріт Елегант — RAL 8019 / гладь дуб темний, лакобель',
+    'verified', now(), 'Офіційна картка: модель, кольори, лакобель і основне фото збігаються.'
+  ),
+  (
+    'catalog-66',
+    'Q Doors',
+    'https://qdoors.ua/shop/premium-provans',
+    'Преміум Стиль-М — венге сірий горизонтальний / білий',
     'verified', now(), 'Офіційна картка: модель, обидва кольори й основне фото збігаються.'
   )
 on conflict (product_slug, source_url) do update set
