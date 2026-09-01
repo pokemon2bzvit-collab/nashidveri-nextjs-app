@@ -12,6 +12,12 @@ values
     1
   ),
   (
+    'catalog-58',
+    '{"finish":"RAL 7021 + біла шагрень"}'::jsonb,
+    'https://e-c.storage.googleapis.com/res/4a12c5a6-fd8e-42d1-be59-8f0e2fc81422/original',
+    1
+  ),
+  (
     'catalog-61',
     '{"finish":"Бетон темний + бетон світлий"}'::jsonb,
     'https://e-c.storage.googleapis.com/res/718d89af-dd7d-4ca2-ab00-8446d767d826/original',
@@ -38,6 +44,13 @@ values
     'Q Doors',
     'https://qdoors.ua/shop/qdoors-strit-flaj-ral7021bila-shagren-2k-chb',
     'Qdoors Стріт Лайт RAL7021 / біла шагрень',
+    'verified', now(), 'Офіційна картка: модель, обидва кольори й основне фото збігаються.'
+  ),
+  (
+    'catalog-58',
+    'Q Doors',
+    'https://qdoors.ua/shop/qdoors-strit-elegantglad-950-pr-bila-shagren-lakabel-chb3kruchka-1450-1',
+    'Qdoors Стріт Спейс RAL7021 / біла шагрень',
     'verified', now(), 'Офіційна картка: модель, обидва кольори й основне фото збігаються.'
   ),
   (
