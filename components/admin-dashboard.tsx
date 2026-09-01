@@ -4,6 +4,7 @@ import { FormEvent, type ReactNode, useEffect, useMemo, useState } from "react";
 import { Check, ExternalLink, FileImage, Link2, LoaderCircle, LogOut, PackageSearch, Paintbrush, Plus, Save, Search, ShieldCheck, SlidersHorizontal, Trash2, Upload } from "lucide-react";
 import type { Session } from "@supabase/supabase-js";
 import { CatalogManagement } from "@/components/catalog-management";
+import { LeadsDashboard } from "@/components/leads-dashboard";
 import { adminEmail, getSupabaseBrowserClient } from "@/lib/supabase-browser";
 
 type Product = {
@@ -243,9 +244,9 @@ function SourceLibrary() {
 function ManagementDisclosure() {
   const [open, setOpen] = useState(false);
   return <details className="mt-5 rounded-xl border border-stone-200 bg-white p-3" onToggle={(event) => setOpen(event.currentTarget.open)}>
-    <summary className="cursor-pointer text-sm font-bold text-stone-700">Керувати фабриками, колекціями та товарами</summary>
-    <p className="mt-2 text-xs leading-5 text-stone-500">Відкрийте, щоб додати, змінити, приховати або видалити структуру каталогу.</p>
-    {open && <div className="mt-4"><CatalogManagement /></div>}
+    <summary className="cursor-pointer text-sm font-bold text-stone-700">Керувати каталогом і заявками</summary>
+    <p className="mt-2 text-xs leading-5 text-stone-500">Тут можна керувати фабриками, колекціями, товарами та заявками клієнтів.</p>
+    {open && <div className="mt-4 space-y-5"><LeadsDashboard /><CatalogManagement /></div>}
   </details>;
 }
 function Sources({ sources, sourceName, sourceUrl, setSourceName, setSourceUrl, onAdd }: { sources: Source[]; sourceName: string; sourceUrl: string; setSourceName: (value: string) => void; setSourceUrl: (value: string) => void; onAdd: () => void }) {
