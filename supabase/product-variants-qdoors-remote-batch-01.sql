@@ -58,6 +58,12 @@ values
     '{"finish":"Венге сірий горизонтальний + білий"}'::jsonb,
     'https://e-c.storage.googleapis.com/res/0af5b6a2-51e6-4141-9198-79db9e26f496/original',
     1
+  ),
+  (
+    'catalog-55',
+    '{"finish":"RAL 8019 + гладь дуб темний, лакобель"}'::jsonb,
+    'https://e-c.storage.googleapis.com/res/af68049c-73f5-4a0a-b9d1-4c5dc04652d6/original',
+    1
   )
 on conflict (product_slug, selections) do update set
   image_path = excluded.image_path,
@@ -131,6 +137,13 @@ values
     'https://qdoors.ua/shop/premium-provans',
     'Преміум Стиль-М — венге сірий горизонтальний / білий',
     'verified', now(), 'Офіційна картка: модель, обидва кольори й основне фото збігаються.'
+  ),
+  (
+    'catalog-55',
+    'Q Doors',
+    'https://qdoors.ua/shop/qdoors-strit-elegantglad-dub-temnij-lakobel-kb-3k-8019-ruchka-1450',
+    'Qdoors Стріт Горизонталь — RAL 8019 / гладь дуб темний, лакобель',
+    'verified', now(), 'Офіційна картка: модель, кольори, лакобель і основне фото збігаються.'
   )
 on conflict (product_slug, source_url) do update set
   source_name = excluded.source_name,
