@@ -33,6 +33,8 @@
 
 # Аудит якості каталогу
 
-Перед великим доповненням каталогу запустіть [catalog-quality-audit.sql](catalog-quality-audit.sql) у Supabase SQL Editor. Він нічого не змінює: перевіряє записи товарів і фактичну наявність файлів у bucket `catalog-images`.
+Для одного простого зведення спершу запустіть [catalog-quality-overview.sql](catalog-quality-overview.sql) у Supabase SQL Editor. Він повертає загальний рядок і показники за кожною фабрикою в одній таблиці.
+
+Для детальних списків проблем запустіть [catalog-quality-audit.sql](catalog-quality-audit.sql) у Supabase SQL Editor. Він нічого не змінює: перевіряє записи товарів і фактичну наявність файлів у bucket `catalog-images`.
 
 Звіт показує загальну картину, проблеми за фабриками та окремі черги: головні фото, описи, технічні характеристики, декори без фото й відсутні джерела.
