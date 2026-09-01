@@ -13,6 +13,7 @@ type ProductConfigurationProps = {
 };
 
 export function ProductConfiguration({ options, variants, onImageChange, previewImage, productName }: ProductConfigurationProps) {
+  const visualVariants = useMemo(() => variants.filter((variant) => Boolean(variant.image)), [variants]);
   const groups = useMemo(() => {
     const collection = new Map<string, ProductOption[]>();
     options.forEach((option) => collection.set(option.group, [...(collection.get(option.group) || []), option]));
@@ -22,12 +23,14 @@ export function ProductConfiguration({ options, variants, onImageChange, preview
   const [draftSelected, setDraftSelected] = useState<Record<string, number>>({});
   const [isOpen, setIsOpen] = useState(false);
 
-  const hasPhotoForOption = (groupKey: string, label: string) => variants.some(
+  const hasPhotoForOption = (groupKey: string, label: string) => visualVariants.some(
     (variant) => Boolean(variant.image) && variant.selections[groupKey] === label,
   );
   const selectedIndexFor = (group: ProductOption[], selection: Record<string, number>) => {
     const savedIndex = selection[group[0].group];
     if (savedIndex !== undefined) return savedIndex;
+    const defaultIndex = group.findIndex((option) => visualVariants[0]?.selections[group[0].group] === option.label);
+    if (defaultIndex >= 0) return defaultIndex;
     const firstWithPhoto = group.findIndex((option) => hasPhotoForOption(group[0].group, option.label));
     return firstWithPhoto >= 0 ? firstWithPhoto : 0;
   };
@@ -67,6 +70,8 @@ export function ProductConfiguration({ options, variants, onImageChange, preview
 
   if (!groups.length) return null;
 
+  if (!visualVariants.length) return <section className="mt-5 rounded-2xl border border-stone-200 bg-white p-4 shadow-sm sm:p-5"><div className="flex items-start gap-3"><span className="grid size-9 shrink-0 place-items-center rounded-xl bg-sand text-clay"><Palette size={17} /></span><div><h2 className="text-sm font-bold text-ink">Варіанти покриття</h2><p className="mt-1 text-sm leading-6 text-stone-600">{options.map((option) => option.label).join(" · ")}</p><p className="mt-2 text-xs leading-5 text-stone-500">Фото для інших декорів цієї моделі ще не підтверджені. У салоні покажемо точні зразки.</p></div></div></section>;
+
   const openConfigurator = () => {
     setDraftSelected(selected);
     setIsOpen(true);
@@ -84,7 +89,7 @@ export function ProductConfiguration({ options, variants, onImageChange, preview
         <div className="flex items-center gap-2 text-sm font-bold text-ink"><Palette size={17} className="text-clay" /> Декор і комплектація</div>
         <p className="mt-1 text-xs leading-5 text-stone-500">Оберіть колір, скло або кромку для цієї моделі.</p>
       </div>
-      <span className="rounded-full bg-sand px-2.5 py-1 text-[11px] font-bold text-stone-600">{variants.filter((variant) => variant.image).length} з фото</span>
+      <span className="rounded-full bg-sand px-2.5 py-1 text-[11px] font-bold text-stone-600">{visualVariants.length} з фото</span>
     </div>
 
     <div className="mt-4 flex gap-2 overflow-hidden">
@@ -117,7 +122,7 @@ export function ProductConfiguration({ options, variants, onImageChange, preview
               <div className="mt-3 grid grid-cols-2 gap-2 sm:grid-cols-3">
                 {group.map((option, index) => {
                   const isSelected = selectedIndex === index;
-                  const isAvailable = hasPhotoForOption(groupKey, option.label);
+                  const isAvailable = visualVariants.some((variant) => Object.entries(variant.selections).every(([key, label]) => key === groupKey ? label === option.label : label === draftSelectionValues[key]));
                   return <button type="button" disabled={!isAvailable} key={`${option.group}-${option.label}`} onClick={() => selectOption(groupKey, index)} className={`relative flex min-h-14 items-center gap-2 rounded-xl border p-2.5 text-left text-xs font-bold transition disabled:cursor-not-allowed disabled:opacity-35 ${isSelected ? "border-ink bg-ink text-white shadow-sm" : "border-stone-200 bg-white text-stone-700 hover:border-clay"}`}>
                     {option.image ? <img src={option.image} alt="" className="h-9 w-9 shrink-0 rounded-lg object-cover" /> : option.swatch ? <span aria-hidden="true" className={`h-7 w-7 shrink-0 rounded-full border border-black/10 ${isSelected ? "ring-1 ring-white" : ""}`} style={{ backgroundColor: option.swatch }} /> : <ImageIcon size={18} className={isSelected ? "text-white" : "text-clay"} />}
                     <span className="line-clamp-2">{option.label}</span>{isSelected && <Check size={14} className="absolute right-2 top-2" />}
