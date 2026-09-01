@@ -3,6 +3,7 @@
 import { FormEvent, type ReactNode, useEffect, useMemo, useState } from "react";
 import { Check, ExternalLink, FileImage, Link2, LoaderCircle, LogOut, PackageSearch, Paintbrush, Plus, Save, Search, ShieldCheck, SlidersHorizontal, Trash2, Upload } from "lucide-react";
 import type { Session } from "@supabase/supabase-js";
+import { CatalogManagement } from "@/components/catalog-management";
 import { adminEmail, getSupabaseBrowserClient } from "@/lib/supabase-browser";
 
 type Product = {
@@ -233,7 +234,19 @@ export function AdminDashboard() {
 }
 
 function SourceLibrary() {
-  return <Card icon={<Link2 size={19} />} title="Бібліотека джерел" help="Відкрийте каталог, знайдіть точну модель і збережіть URL в джерелах. Загальна сторінка фабрики не підтверджує конкретний декор."><div className="grid gap-2 sm:grid-cols-2 xl:grid-cols-3">{catalogSources.map((source) => <a key={source.name} href={source.url} target="_blank" rel="noreferrer" className="rounded-xl border border-stone-200 bg-stone-50 p-3 transition hover:border-clay hover:bg-sand"><b className="flex items-center gap-2 text-sm">{source.name}<ExternalLink size={13} /></b><span className="mt-1 block text-xs leading-5 text-stone-500">{source.info}</span></a>)}</div></Card>;
+  return <Card icon={<Link2 size={19} />} title="Бібліотека джерел" help="Відкрийте каталог, знайдіть точну модель і збережіть URL в джерелах. Загальна сторінка фабрики не підтверджує конкретний декор.">
+    <div className="grid gap-2 sm:grid-cols-2 xl:grid-cols-3">{catalogSources.map((source) => <a key={source.name} href={source.url} target="_blank" rel="noreferrer" className="rounded-xl border border-stone-200 bg-stone-50 p-3 transition hover:border-clay hover:bg-sand"><b className="flex items-center gap-2 text-sm">{source.name}<ExternalLink size={13} /></b><span className="mt-1 block text-xs leading-5 text-stone-500">{source.info}</span></a>)}</div>
+    <ManagementDisclosure />
+  </Card>;
+}
+
+function ManagementDisclosure() {
+  const [open, setOpen] = useState(false);
+  return <details className="mt-5 rounded-xl border border-stone-200 bg-white p-3" onToggle={(event) => setOpen(event.currentTarget.open)}>
+    <summary className="cursor-pointer text-sm font-bold text-stone-700">Керувати фабриками, колекціями та товарами</summary>
+    <p className="mt-2 text-xs leading-5 text-stone-500">Відкрийте, щоб додати, змінити, приховати або видалити структуру каталогу.</p>
+    {open && <div className="mt-4"><CatalogManagement /></div>}
+  </details>;
 }
 function Sources({ sources, sourceName, sourceUrl, setSourceName, setSourceUrl, onAdd }: { sources: Source[]; sourceName: string; sourceUrl: string; setSourceName: (value: string) => void; setSourceUrl: (value: string) => void; onAdd: () => void }) {
   return <div className="space-y-4"><SourceLibrary /><Card icon={<Link2 size={19} />} title="Перевірені джерела моделі" help="Збережіть URL точної картки цієї моделі. Так легко повернутися до першоджерела."><div className="grid gap-3 md:grid-cols-[190px_1fr_auto]"><label className="text-sm font-bold">Джерело<select className={inputClass} value={sourceName} onChange={(event) => setSourceName(event.target.value)}>{catalogSources.map((source) => <option key={source.name}>{source.name}</option>)}<option>Інше джерело</option></select></label><label className="text-sm font-bold">Посилання на модель<input className={inputClass} value={sourceUrl} onChange={(event) => setSourceUrl(event.target.value)} placeholder="Вставте URL саме картки товару" /></label><button onClick={onAdd} className="button-primary self-end"><Plus size={16} /> Додати</button></div><div className="mt-5 space-y-2">{sources.map((source) => <a key={source.id} className="block rounded-xl border border-stone-200 bg-stone-50 p-3 text-sm hover:border-clay" href={source.source_url} target="_blank" rel="noreferrer"><b className="flex items-center gap-2">{source.source_name}<ExternalLink size={14} /></b><span className="mt-1 block break-all text-xs leading-5 text-stone-500">{source.source_url}</span></a>)}{!sources.length && <p className="rounded-xl bg-stone-50 p-4 text-sm text-stone-500">Посилань на першоджерела ще немає.</p>}</div></Card></div>;
