@@ -1,0 +1,70 @@
+-- Market Dveri — Terminus Caro: точні комбінації декору та варіанта полотна.
+-- Варіанти додаються тільки там, де джерело має окреме фото моделі.
+
+update public.products as product
+set description = format('Термінус Caro %s — міжкімнатні двері зі шпоновим покриттям у класичному стилі. Для цієї моделі доступні перевірені комбінації декору й варіанта полотна: оберіть їх, щоб переглянути відповідне фото.', source.model)
+from (values ('catalog-295','41'),('catalog-296','50'),('catalog-297','52'),('catalog-298','53'),('catalog-299','55')) as source(slug,model)
+where product.slug=source.slug;
+
+insert into public.product_variants (product_slug,selections,image_path,sort_order) values
+('catalog-295','{"color":"Горіх американський","configuration":"ПГ"}'::jsonb,'https://market-dveri.ua/image/catalog/product/mizhkimnatni-dveri/terminus/17297/dveri-terminus-caro-41-gorih-amerikanskij-pg-main.jpg',1),
+('catalog-295','{"color":"Горіх американський","configuration":"ПО 05"}'::jsonb,'https://market-dveri.ua/image/catalog/product/mizhkimnatni-dveri/terminus/17298/dveri-terminus-caro-41-gorih-amerikanskij-po-05-main.jpg',2),
+('catalog-295','{"color":"Горіх американський","configuration":"ПО 09"}'::jsonb,'https://market-dveri.ua/image/catalog/product/mizhkimnatni-dveri/terminus/17299/dveri-terminus-caro-41-gorih-amerikanskij-po-09-main.jpg',3),
+('catalog-295','{"color":"Даймон","configuration":"ПГ"}'::jsonb,'https://market-dveri.ua/image/catalog/product/mizhkimnatni-dveri/terminus/20912/dveri-terminus-caro-41-dajmon-pg-main.jpg',4),
+('catalog-295','{"color":"Даймон","configuration":"ПО"}'::jsonb,'https://market-dveri.ua/image/catalog/product/mizhkimnatni-dveri/terminus/20913/dveri-terminus-caro-41-dajmon-po-main.jpg',5),
+('catalog-295','{"color":"Ясень білий емаль","configuration":"ПГ"}'::jsonb,'https://market-dveri.ua/image/catalog/product/mizhkimnatni-dveri/terminus/21252/dveri-terminus-caro-41-jasen-bilij-emal-pg-main.jpg',6),
+('catalog-295','{"color":"Ясень білий емаль","configuration":"ПО 03"}'::jsonb,'https://market-dveri.ua/image/catalog/product/mizhkimnatni-dveri/terminus/21251/dveri-terminus-caro-41-jasen-bilij-emal-po-03-main.jpg',7),
+('catalog-296','{"color":"Базовий декор","configuration":"ПГ"}'::jsonb,'https://market-dveri.ua/image/catalog/product/mizhkimnatni-dveri/terminus/17404/dveri-terminus-caro-50-pg-main.jpg',1),
+('catalog-296','{"color":"Базовий декор","configuration":"ПО 02"}'::jsonb,'https://market-dveri.ua/image/catalog/product/mizhkimnatni-dveri/terminus/17405/dveri-terminus-caro-50-po-02-main.jpg',2),
+('catalog-296','{"color":"Базовий декор","configuration":"ПО 03"}'::jsonb,'https://market-dveri.ua/image/catalog/product/mizhkimnatni-dveri/terminus/17406/dveri-terminus-caro-50-po-03-main.jpg',3),
+('catalog-296','{"color":"Ясень білий емаль","configuration":"ПО"}'::jsonb,'https://market-dveri.ua/image/catalog/product/mizhkimnatni-dveri/terminus/20914/dveri-terminus-caro-50-jasen-bilij-emal-po-main.jpg',4),
+('catalog-296','{"color":"Ясень білий емаль","configuration":"ПО 1"}'::jsonb,'https://market-dveri.ua/image/catalog/product/mizhkimnatni-dveri/terminus/20915/dveri-terminus-caro-50-jasen-bilij-emal-po1-main.jpg',5),
+('catalog-296','{"color":"Ясень крема","configuration":"ПО"}'::jsonb,'https://market-dveri.ua/image/catalog/product/mizhkimnatni-dveri/terminus/20916/dveri-terminus-caro-50-jasen-krema-po-main.jpg',6),
+('catalog-297','{"color":"Дуб браун","configuration":"ПГ"}'::jsonb,'https://market-dveri.ua/image/catalog/product/mizhkimnatni-dveri/terminus/21253/dveri-terminus-caro-52-dub-braun-pg-main.jpg',1),
+('catalog-297','{"color":"Дуб браун","configuration":"ПО C21"}'::jsonb,'https://market-dveri.ua/image/catalog/product/mizhkimnatni-dveri/terminus/21255/dveri-terminus-caro-52-dub-braun-po-s21-main.jpg',2),
+('catalog-297','{"color":"Ясень крема","configuration":"ПГ"}'::jsonb,'https://market-dveri.ua/image/catalog/product/mizhkimnatni-dveri/terminus/21254/dveri-terminus-caro-52-jasen-krema-pg-main.jpg',3),
+('catalog-297','{"color":"Ясень крема","configuration":"ПО C21"}'::jsonb,'https://market-dveri.ua/image/catalog/product/mizhkimnatni-dveri/terminus/21256/dveri-terminus-caro-52-jasen-krema-po-s21-main.jpg',4),
+('catalog-298','{"color":"Дуб браун","configuration":"ПГ"}'::jsonb,'https://market-dveri.ua/image/catalog/product/mizhkimnatni-dveri/terminus/21258/dveri-terminus-caro-53-dub-braun-pg-main.jpg',1),
+('catalog-298','{"color":"Дуб браун","configuration":"ПО 02"}'::jsonb,'https://market-dveri.ua/image/catalog/product/mizhkimnatni-dveri/terminus/21260/dveri-terminus-caro-53-dub-braun-po-02-main.jpg',2),
+('catalog-298','{"color":"Дуб браун","configuration":"ПО 03"}'::jsonb,'https://market-dveri.ua/image/catalog/product/mizhkimnatni-dveri/terminus/21261/dveri-terminus-caro-53-dub-braun-po-03-main.jpg',3),
+('catalog-298','{"color":"Ясень білий емаль","configuration":"ПГ"}'::jsonb,'https://market-dveri.ua/image/catalog/product/mizhkimnatni-dveri/terminus/21262/dveri-terminus-caro-53-jasen-bilij-emal-pg-main.jpg',4),
+('catalog-298','{"color":"Ясень білий емаль","configuration":"ПО 8C"}'::jsonb,'https://market-dveri.ua/image/catalog/product/mizhkimnatni-dveri/terminus/21259/dveri-terminus-caro-53-jasen-bilij-emal-po-8s-main.jpg',5),
+('catalog-298','{"color":"Ясень білий емаль","configuration":"ПО 1 8C"}'::jsonb,'https://market-dveri.ua/image/catalog/product/mizhkimnatni-dveri/terminus/21263/dveri-terminus-caro-53-jasen-bilij-emal-po1-8c-main.jpg',6),
+('catalog-299','{"color":"Дуб браун","configuration":"ПГ"}'::jsonb,'https://market-dveri.ua/image/catalog/product/mizhkimnatni-dveri/terminus/21265/dveri-terminus-caro-55-dub-braun-pg-main.jpg',1),
+('catalog-299','{"color":"Дуб браун","configuration":"ПО 13T"}'::jsonb,'https://market-dveri.ua/image/catalog/product/mizhkimnatni-dveri/terminus/21267/dveri-terminus-caro-55-dub-braun-po-13t-main.jpg',2),
+('catalog-299','{"color":"Дуб браун","configuration":"ПО 27T"}'::jsonb,'https://market-dveri.ua/image/catalog/product/mizhkimnatni-dveri/terminus/21268/dveri-terminus-caro-55-dub-braun-po-27t-main.jpg',3),
+('catalog-299','{"color":"Ясень крема","configuration":"ПГ"}'::jsonb,'https://market-dveri.ua/image/catalog/product/mizhkimnatni-dveri/terminus/21266/dveri-terminus-caro-55-jasen-krema-pg-main.jpg',4),
+('catalog-299','{"color":"Ясень крема","configuration":"ПО 13C"}'::jsonb,'https://market-dveri.ua/image/catalog/product/mizhkimnatni-dveri/terminus/21270/dveri-terminus-caro-55-jasen-krema-po-13c-main.jpg',5),
+('catalog-299','{"color":"Ясень крема","configuration":"ПО 27C"}'::jsonb,'https://market-dveri.ua/image/catalog/product/mizhkimnatni-dveri/terminus/21269/dveri-terminus-caro-55-jasen-krema-po-27c-main.jpg',6),
+('catalog-299','{"color":"Ясень крема","configuration":"ПО 1 13C"}'::jsonb,'https://market-dveri.ua/image/catalog/product/mizhkimnatni-dveri/terminus/21274/dveri-terminus-caro-55-jasen-krema-po1-13c-main.jpg',7),
+('catalog-299','{"color":"Ясень крема","configuration":"ПО 1 27C"}'::jsonb,'https://market-dveri.ua/image/catalog/product/mizhkimnatni-dveri/terminus/21273/dveri-terminus-caro-55-jasen-krema-po1-27c-main.jpg',8)
+on conflict (product_slug,selections) do update set image_path=excluded.image_path,sort_order=excluded.sort_order,is_active=true;
+
+insert into public.product_options (product_slug,option_group,group_label,label,image_path,sort_order)
+select distinct on (product_slug,label) product_slug,'color','Декор полотна',selections->>'color',image_path,sort_order
+from public.product_variants where product_slug in ('catalog-295','catalog-296','catalog-297','catalog-298','catalog-299') and image_path like 'https://market-dveri.ua/%'
+order by product_slug,label,sort_order
+on conflict (product_slug,option_group,label) do update set group_label=excluded.group_label,image_path=excluded.image_path,sort_order=excluded.sort_order,is_active=true;
+
+insert into public.product_options (product_slug,option_group,group_label,label,image_path,sort_order)
+select distinct on (product_slug,label) product_slug,'configuration','Варіант полотна',selections->>'configuration',image_path,sort_order
+from public.product_variants where product_slug in ('catalog-295','catalog-296','catalog-297','catalog-298','catalog-299') and image_path like 'https://market-dveri.ua/%'
+order by product_slug,label,sort_order
+on conflict (product_slug,option_group,label) do update set group_label=excluded.group_label,image_path=excluded.image_path,sort_order=excluded.sort_order,is_active=true;
+
+insert into public.product_media (product_slug,kind,label,image_path,sort_order) values
+('catalog-295','main','Термінус Caro 41 — горіх американський ПГ','https://market-dveri.ua/image/catalog/product/mizhkimnatni-dveri/terminus/17297/dveri-terminus-caro-41-gorih-amerikanskij-pg-main.jpg',0),
+('catalog-296','main','Термінус Caro 50 — ПГ','https://market-dveri.ua/image/catalog/product/mizhkimnatni-dveri/terminus/17404/dveri-terminus-caro-50-pg-main.jpg',0),
+('catalog-297','main','Термінус Caro 52 — дуб браун ПГ','https://market-dveri.ua/image/catalog/product/mizhkimnatni-dveri/terminus/21253/dveri-terminus-caro-52-dub-braun-pg-main.jpg',0),
+('catalog-298','main','Термінус Caro 53 — дуб браун ПГ','https://market-dveri.ua/image/catalog/product/mizhkimnatni-dveri/terminus/21258/dveri-terminus-caro-53-dub-braun-pg-main.jpg',0),
+('catalog-299','main','Термінус Caro 55 — дуб браун ПГ','https://market-dveri.ua/image/catalog/product/mizhkimnatni-dveri/terminus/21265/dveri-terminus-caro-55-dub-braun-pg-main.jpg',0)
+on conflict (product_slug,image_path) do update set label=excluded.label,sort_order=excluded.sort_order;
+
+insert into public.product_specs (product_slug,label,value,sort_order)
+select product_slug,label,value,sort_order from unnest(array['catalog-295','catalog-297','catalog-298','catalog-299']) as products(product_slug)
+cross join (values ('Покриття','Шпон',100),('Наповнення','Фільончасті',110),('Стиль','Класика',120),('Розміри полотна','600 / 700 / 800 / 900 мм',130),('Висота полотна','2000 мм',140),('Товщина полотна','40 мм',150),('Відкривання','Розпашні, одностулкові',160),('Погонаж','Стандартний, телескопічний',170),('Можливість підрізки','До 20 мм',180),('Додатково','Ущільнювач',190),('Шумоізоляція','Середня',200),('Країна виробник','Україна',210),('Місто виробник','Вінниця',220)) as shared(label,value,sort_order)
+on conflict (product_slug,label) do update set value=excluded.value,sort_order=excluded.sort_order,is_active=true;
+
+insert into public.product_specs (product_slug,label,value,sort_order) values
+('catalog-296','Покриття','Шпон',100),('catalog-296','Наповнення','Дерев''яний каркас + МДФ-плити',110),('catalog-296','Стиль','Класика',120),('catalog-296','Розміри полотна','600 / 700 / 800 / 900 мм',130),('catalog-296','Висота полотна','2000 мм',140),('catalog-296','Товщина полотна','40 мм',150),('catalog-296','Відкривання','Розпашні, одностулкові',160),('catalog-296','Погонаж','Стандартний, телескопічний',170),('catalog-296','Можливість підрізки','До 20 мм',180),('catalog-296','Додатково','Ущільнювач',190),('catalog-296','Шумоізоляція','Середня',200),('catalog-296','Країна виробник','Україна',210),('catalog-296','Місто виробник','Вінниця',220)
+on conflict (product_slug,label) do update set value=excluded.value,sort_order=excluded.sort_order,is_active=true;
