@@ -30,6 +30,7 @@ export function CatalogBrowser({ products, initialCategory = "all", initialQuery
   const materials = useMemo(() => [...new Set(facetProducts.map((product) => product.material))], [facetProducts]);
   const styles = useMemo(() => [...new Set(facetProducts.map((product) => product.style))], [facetProducts]);
   const colors = useMemo(() => [...new Set(facetProducts.map((product) => product.color))], [facetProducts]);
+  const materialDuplicatesCategory = useMemo(() => materials.length > 0 && materials.every((material) => ["Вхідні", "Міжкімнатні"].includes(material)), [materials]);
   const styleDuplicatesCollections = useMemo(() => styles.length > 0 && styles.every((style) => availableCollections.includes(style.replace(/^Колекція\s+/i, ""))), [availableCollections, styles]);
   const hasPrices = useMemo(() => products.some((product) => getPriceNumber(product.price) !== null), [products]);
 
@@ -63,7 +64,7 @@ export function CatalogBrowser({ products, initialCategory = "all", initialQuery
       <FilterGroup title="Категорія">{categoryFilters.map((filter) => <FilterButton key={filter.id} selected={category === filter.id} onClick={() => { setCategory(filter.id); setBrand("all"); setCollection("all"); setMaterial("all"); setStyle("all"); setColor("all"); }}>{filter.label}</FilterButton>)}</FilterGroup>
       {availableBrands.length > 1 && <FilterGroup title="Фабрика">{availableBrands.map((item) => <FilterButton key={item} selected={brand === item} onClick={() => { setBrand(brand === item ? "all" : item); setCollection("all"); }}>{item}</FilterButton>)}</FilterGroup>}
       {availableCollections.length > 1 && <FilterGroup title="Колекція">{availableCollections.map((item) => <FilterButton key={item} selected={collection === item} onClick={() => setCollection(collection === item ? "all" : item)}>{item}</FilterButton>)}</FilterGroup>}
-      {materials.length > 1 && <FilterGroup title="Матеріал">{materials.map((item) => <FilterButton key={item} selected={material === item} onClick={() => setMaterial(material === item ? "all" : item)}>{item}</FilterButton>)}</FilterGroup>}
+      {materials.length > 1 && !materialDuplicatesCategory && <FilterGroup title="Матеріал">{materials.map((item) => <FilterButton key={item} selected={material === item} onClick={() => setMaterial(material === item ? "all" : item)}>{item}</FilterButton>)}</FilterGroup>}
       {styles.length > 1 && !styleDuplicatesCollections && <FilterGroup title="Стиль / призначення">{styles.map((item) => <FilterButton key={item} selected={style === item} onClick={() => setStyle(style === item ? "all" : item)}>{item}</FilterButton>)}</FilterGroup>}
       {colors.length > 1 && <FilterGroup title="Колір">{colors.map((item) => <FilterButton key={item} selected={color === item} onClick={() => setColor(color === item ? "all" : item)}>{item}</FilterButton>)}</FilterGroup>}
       {hasPrices && <FilterGroup title="Ціновий діапазон">{priceRanges.map((item) => <FilterButton key={item.id} selected={priceRange === item.id} onClick={() => setPriceRange(priceRange === item.id ? "all" : item.id)}>{item.label}</FilterButton>)}</FilterGroup>}
