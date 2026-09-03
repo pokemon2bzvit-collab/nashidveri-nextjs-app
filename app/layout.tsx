@@ -22,6 +22,10 @@ const storeSchema = {
   telephone: ["+380950729341", "+380688155408"],
   email: "nashidveri.uzh@gmail.com",
   address: { "@type": "PostalAddress", streetAddress: "вулиця Івана Чендея, 44", addressLocality: "Ужгород", addressRegion: "Закарпатська область", postalCode: "88000", addressCountry: "UA" },
+  openingHoursSpecification: [
+    { "@type": "OpeningHoursSpecification", dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"], opens: "10:00", closes: "18:00" },
+    { "@type": "OpeningHoursSpecification", dayOfWeek: "Saturday", opens: "10:00", closes: "15:00" },
+  ],
   sameAs: ["https://www.facebook.com/nashidveriuz", "https://www.instagram.com/nashi_dveri_uzh/"],
 };
 

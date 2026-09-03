@@ -1,6 +1,6 @@
 "use client";
 
-import { Facebook, Instagram, LoaderCircle, Mail, MapPin, Phone } from "lucide-react";
+import { Clock3, Facebook, Instagram, LoaderCircle, Mail, MapPin, Phone } from "lucide-react";
 import Link from "next/link";
 import { BrandMark } from "./brand-mark";
 import { useForm } from "react-hook-form";
@@ -41,6 +41,16 @@ export function Contacts() {
     reset({ phone: "+380", contactMethod: "phone", website: "" });
   }
   return <section id="contacts" className="bg-sand py-16 sm:py-24"><div className="container-page grid gap-10 lg:grid-cols-2"><div><p className="eyebrow">Контакти</p><h2 className="heading mt-3">Завітайте до нас<br />у салон</h2><div className="mt-8 space-y-5">{[[MapPin, "вул. Івана Чендея, 44, Ужгород, 88000"], [Phone, "+38 (095) 072-93-41 · +38 (068) 815-54-08"], [Mail, "nashidveri.uzh@gmail.com"]].map(([Icon, text]) => { const IconComp = Icon as typeof MapPin; return <div key={text as string} className="flex gap-4"><span className="rounded-full bg-white p-3 text-clay"><IconComp size={20} /></span><span className="pt-2 text-sm font-medium leading-6">{text as string}</span></div>; })}</div><div className="mt-8 overflow-hidden rounded-2xl bg-[#d8d0c0] p-6 sm:p-8"><MapPin className="text-clay" /><p className="mt-16 font-display text-3xl">Наш салон<br />на карті Ужгорода</p><a target="_blank" rel="noreferrer" className="mt-3 inline-block text-sm font-bold underline" href="https://www.google.com/maps/search/?api=1&query=вул.+Івана+Чендея,+44,+Ужгород,+88000">Відкрити маршрут →</a></div></div><form onSubmit={handleSubmit(submit)} className="rounded-2xl bg-white p-6 shadow-soft sm:p-8"><h3 className="font-display text-3xl">Напишіть нам</h3><p className="mt-2 text-sm text-stone-500">Допоможемо вибрати та відповімо на запитання.</p><input className="hidden" tabIndex={-1} autoComplete="off" {...register("website")} /><label className="mt-7 block text-sm font-semibold">Ваше ім’я<input className="mt-2 w-full rounded-xl border px-4 py-3 outline-none focus:border-clay" {...register("name")} /></label>{errors.name && <p className="mt-1 text-xs text-red-600">{errors.name.message}</p>}<label className="mt-4 block text-sm font-semibold">Телефон<input className="mt-2 w-full rounded-xl border px-4 py-3 outline-none focus:border-clay" {...register("phone")} /></label>{errors.phone && <p className="mt-1 text-xs text-red-600">{errors.phone.message}</p>}<label className="mt-4 block text-sm font-semibold">Як з вами зв’язатися<select className="mt-2 w-full rounded-xl border px-4 py-3 outline-none focus:border-clay" {...register("contactMethod")}><option value="phone">Телефоном</option><option value="viber">Viber</option><option value="telegram">Telegram</option></select></label><label className="mt-4 block text-sm font-semibold">Повідомлення<textarea rows={3} className="mt-2 w-full resize-none rounded-xl border px-4 py-3 outline-none focus:border-clay" placeholder="Наприклад, хочу підібрати двері…" {...register("message")} /></label>{errors.message && <p className="mt-1 text-xs text-red-600">{errors.message.message}</p>}<label className="mt-4 flex items-start gap-2 text-xs leading-5 text-stone-600"><input className="mt-1" type="checkbox" {...register("consent")} /> Погоджуюся на обробку контактних даних для відповіді на заявку.</label>{errors.consent && <p className="mt-1 text-xs text-red-600">{errors.consent.message}</p>}{serverError && <p className="mt-4 rounded-lg bg-red-50 p-3 text-sm text-red-700">{serverError}</p>}{sent && <p className="mt-4 rounded-lg bg-green-50 p-3 text-sm text-pine">Дякуємо! Менеджер зв’яжеться з вами найближчим часом.</p>}<button className="button-primary mt-6 w-full" disabled={isSubmitting} type="submit">{isSubmitting ? <><LoaderCircle className="animate-spin" size={17} /> Надсилання…</> : "Надіслати повідомлення"}</button></form></div></section>;
+}
+
+const openingHours = [
+  ["Понеділок — пʼятниця", "10:00–18:00"],
+  ["Субота", "10:00–15:00"],
+  ["Неділя", "Зачинено"],
+] as const;
+
+export function OpeningHours() {
+  return <section className="container-page pb-16 sm:pb-24"><div className="mx-auto max-w-2xl rounded-2xl border border-stone-200 bg-white p-6 shadow-sm sm:p-8"><div className="flex items-center gap-3"><span className="rounded-full bg-sand p-3 text-clay"><Clock3 size={20} /></span><div><p className="eyebrow">Графік роботи</p><h2 className="mt-1 font-display text-3xl text-ink">Чекаємо на вас у салоні</h2></div></div><dl className="mt-7 divide-y divide-stone-100">{openingHours.map(([day, hours]) => <div key={day} className="flex items-center justify-between gap-5 py-3 text-sm"><dt className="font-medium text-stone-600">{day}</dt><dd className={`font-bold ${hours === "Зачинено" ? "text-stone-400" : "text-ink"}`}>{hours}</dd></div>)}</dl></div></section>;
 }
 
 export function Footer() {
