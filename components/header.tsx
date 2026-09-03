@@ -6,7 +6,7 @@ import { useState } from "react";
 import { BrandMark } from "./brand-mark";
 import { Button } from "./ui/button";
 
-const links = [["Головна", "/"], ["Міжкімнатні двері", "/mizhkimnatni-dveri"], ["Вхідні двері", "/vhidni-dveri"], ["Вікна", "/vikna"], ["Контакти", "/contacts"]];
+const links = [["Головна", "/"], ["Міжкімнатні двері", "/mizhkimnatni-dveri"], ["Вхідні двері", "/vhidni-dveri"], ["Вікна", "/vikna"], ["Про нас", "/pro-nas"], ["Контакти", "/contacts"]];
 
 export function Header({ onMeasure }: { onMeasure: () => void }) {
   const [open, setOpen] = useState(false);
