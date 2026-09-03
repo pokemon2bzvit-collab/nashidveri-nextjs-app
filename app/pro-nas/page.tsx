@@ -1,6 +1,9 @@
 import { ArrowRight, HeartHandshake, MapPin, Ruler, ShieldCheck, Truck } from "lucide-react";
 import Link from "next/link";
+import type { Metadata } from "next";
 import { SiteShell } from "@/components/site-shell";
+
+export const metadata: Metadata = { title: "Про салон «Наші двері» в Ужгороді", description: "«Наші двері» — салон дверей і вікон в Ужгороді. Підбір, замір, комплектація, доставка та професійний монтаж.", alternates: { canonical: "/pro-nas" } };
 
 const steps = [
   { number: "01", title: "Знайомимось із простором", text: "Вислухаємо ваші побажання, підкажемо тип дверей, покриття та комплектацію." },

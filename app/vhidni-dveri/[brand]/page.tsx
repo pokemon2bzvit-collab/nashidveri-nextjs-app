@@ -1,5 +1,6 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
+import type { Metadata } from "next";
 import { ArrowLeft, ArrowUpRight } from "lucide-react";
 import { SiteShell } from "@/components/site-shell";
 import { ProductGrid } from "@/components/product-grid";
@@ -8,6 +9,12 @@ import { entranceBrands, getEntranceBrand } from "@/lib/entrance-brands";
 import { catalogImageUrl, getProducts } from "@/lib/catalog";
 
 export function generateStaticParams() { return entranceBrands.map((brand) => ({ brand: brand.slug })); }
+
+export async function generateMetadata({ params }: { params: Promise<{ brand: string }> }): Promise<Metadata> {
+  const brand = getEntranceBrand((await params).brand);
+  if (!brand) return { title: "Фабрика не знайдена" };
+  return { title: `${brand.name} — вхідні двері в Ужгороді`, description: `${brand.name}: ${brand.description} Моделі для квартири й будинку, характеристики, замір і монтаж у салоні «Наші двері» в Ужгороді.`, alternates: { canonical: `/vhidni-dveri/${brand.slug}` } };
+}
 
 export default async function EntranceBrandPage({ params }: { params: Promise<{ brand: string }> }) {
   const brand = getEntranceBrand((await params).brand);

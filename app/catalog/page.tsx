@@ -1,8 +1,15 @@
 import Link from "next/link";
+import type { Metadata } from "next";
 import { CatalogBrowser } from "@/components/catalog-browser";
 import { BrandLogo } from "@/components/brand-logo";
 import { SiteShell } from "@/components/site-shell";
 import { categories, getProducts } from "@/lib/catalog";
+
+export const metadata: Metadata = {
+  title: "Каталог дверей — фабрики, моделі та декори",
+  description: "Каталог вхідних і міжкімнатних дверей в Ужгороді: фабрики, колекції, декори, фото, технічні характеристики та консультація.",
+  alternates: { canonical: "/catalog" },
+};
 
 export default async function CatalogPage({ searchParams }: { searchParams: Promise<{ category?: string; search?: string; brand?: string; collection?: string }> }) {
   const params = await searchParams;

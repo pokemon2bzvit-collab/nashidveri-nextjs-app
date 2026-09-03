@@ -1,5 +1,6 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
+import type { Metadata } from "next";
 import { ArrowLeft, ArrowUpRight } from "lucide-react";
 import { SiteShell } from "@/components/site-shell";
 import { ProductGrid } from "@/components/product-grid";
@@ -8,6 +9,12 @@ import { getInteriorBrand, interiorBrands } from "@/lib/interior-brands";
 import { catalogImageUrl, getProducts } from "@/lib/catalog";
 
 export function generateStaticParams() { return interiorBrands.map((brand) => ({ brand: brand.slug })); }
+
+export async function generateMetadata({ params }: { params: Promise<{ brand: string }> }): Promise<Metadata> {
+  const brand = getInteriorBrand((await params).brand);
+  if (!brand) return { title: "Фабрика не знайдена" };
+  return { title: `${brand.name} — міжкімнатні двері в Ужгороді`, description: `${brand.name}: ${brand.description} Колекції, моделі, декори, замір і монтаж у салоні «Наші двері» в Ужгороді.`, alternates: { canonical: `/mizhkimnatni-dveri/${brand.slug}` } };
+}
 
 export default async function InteriorBrandPage({ params }: { params: Promise<{ brand: string }> }) {
   const brand = getInteriorBrand((await params).brand);
