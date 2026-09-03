@@ -1,6 +1,6 @@
 import type { Product } from './catalog';
 
-export const importedProducts: Product[] = [
+const rawImportedProducts: Product[] = [
   {
     "slug": "catalog-1",
     "category": "entrance",
@@ -6173,3 +6173,27 @@ export const importedProducts: Product[] = [
     "collection": "Solid"
   }
 ];
+
+// «Склад» був технічною групою імпорту, а не колекцією для покупців.
+// Нормалізація потрібна для локального резервного каталогу, якщо Supabase тимчасово недоступний.
+const collectionCorrections: Record<string, string> = {
+  "catalog-9": "Вулиця", "catalog-10": "Вулиця", "catalog-11": "Вулиця", "catalog-12": "Вулиця", "catalog-13": "Вулиця", "catalog-14": "Вулиця",
+  "catalog-138": "Milenium",
+  "catalog-139": "Plato", "catalog-140": "Plato", "catalog-141": "Plato", "catalog-142": "Plato", "catalog-143": "Plato",
+  "catalog-144": "iDoors", "catalog-145": "iDoors",
+  "catalog-146": "Tetra", "catalog-147": "Tetra", "catalog-148": "Tetra", "catalog-149": "Tetra", "catalog-150": "Tetra", "catalog-151": "Tetra",
+  "catalog-277": "Квартира", "catalog-278": "Квартира", "catalog-279": "Квартира", "catalog-280": "Квартира", "catalog-281": "Квартира", "catalog-282": "Квартира", "catalog-283": "Квартира",
+  "catalog-284": "Вулиця", "catalog-285": "Вулиця", "catalog-286": "Вулиця", "catalog-287": "Вулиця", "catalog-288": "Вулиця", "catalog-289": "Вулиця", "catalog-290": "Вулиця", "catalog-291": "Вулиця", "catalog-292": "Квартира", "catalog-293": "Квартира", "catalog-294": "Вулиця",
+};
+
+export const importedProducts: Product[] = rawImportedProducts.map((product) => {
+  const collection = collectionCorrections[product.slug];
+  if (!collection) return product;
+  return {
+    ...product,
+    collection,
+    style: `Колекція ${collection}`,
+    features: [`Фабрика ${product.brand}`, `Колекція ${collection}`],
+    description: product.description.replace(/колекція Склад/gi, `колекція ${collection}`),
+  };
+});
