@@ -380,3 +380,31 @@ on conflict (slug) do update set
   image_path = excluded.image_path,
   sort_order = excluded.sort_order,
   updated_at = now();
+
+-- «Склад» був тимчасовим джерелом імпорту, а не колекцією каталогу.
+-- Цей блок зберігає правильний розподіл навіть при повторному запуску seed.
+with moves(slug, collection) as (
+  values
+    ('catalog-9','Вулиця'),('catalog-10','Вулиця'),('catalog-11','Вулиця'),
+    ('catalog-12','Вулиця'),('catalog-13','Вулиця'),('catalog-14','Вулиця'),
+    ('catalog-138','Milenium'),
+    ('catalog-139','Plato'),('catalog-140','Plato'),('catalog-141','Plato'),
+    ('catalog-142','Plato'),('catalog-143','Plato'),
+    ('catalog-144','iDoors'),('catalog-145','iDoors'),
+    ('catalog-146','Tetra'),('catalog-147','Tetra'),('catalog-148','Tetra'),
+    ('catalog-149','Tetra'),('catalog-150','Tetra'),('catalog-151','Tetra'),
+    ('catalog-277','Квартира'),('catalog-278','Квартира'),('catalog-279','Квартира'),
+    ('catalog-280','Квартира'),('catalog-281','Квартира'),('catalog-282','Квартира'),
+    ('catalog-283','Квартира'),
+    ('catalog-284','Вулиця'),('catalog-285','Вулиця'),('catalog-286','Вулиця'),
+    ('catalog-287','Вулиця'),('catalog-288','Вулиця'),('catalog-289','Вулиця'),
+    ('catalog-290','Вулиця'),('catalog-291','Вулиця'),
+    ('catalog-292','Квартира'),('catalog-293','Квартира'),('catalog-294','Вулиця')
+)
+update public.products as product
+set collection = moves.collection,
+    style = 'Колекція ' || moves.collection,
+    features = jsonb_build_array('Фабрика ' || product.brand, 'Колекція ' || moves.collection),
+    description = regexp_replace(product.description, 'колекція Склад', 'колекція ' || moves.collection, 'gi')
+from moves
+where product.slug = moves.slug;
