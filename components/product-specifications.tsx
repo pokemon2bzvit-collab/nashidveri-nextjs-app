@@ -4,10 +4,24 @@ import { ChevronDown } from "lucide-react";
 import { useState } from "react";
 import type { ProductSpec } from "@/lib/catalog";
 
+const previewPriority = (label: string) => {
+  const normalized = label.toLowerCase();
+  if (/розмір|габарит/.test(normalized)) return 0;
+  if (/товщина.*полот/.test(normalized)) return 1;
+  if (/(товщина|глибина).*короб/.test(normalized)) return 2;
+  if (/відкриван/.test(normalized)) return 3;
+  if (/покрит|оздоблен/.test(normalized)) return 4;
+  if (/терморозрив|контур|утеплен/.test(normalized)) return 5;
+  return 10;
+};
+
 export function ProductSpecifications({ specs }: { specs?: ProductSpec[] }) {
   const [isOpen, setIsOpen] = useState(false);
   if (!specs?.length) return null;
-  const visibleSpecs = isOpen ? specs : specs.slice(0, 3);
+  // Найперше покупцеві потрібні габарити та сумісність із прорізом.
+  // Повний список нижче зберігає порядок, який задав менеджер в адмінці.
+  const previewSpecs = [...specs].sort((left, right) => previewPriority(left.label) - previewPriority(right.label) || left.sortOrder - right.sortOrder).slice(0, 3);
+  const visibleSpecs = isOpen ? specs : previewSpecs;
   const hiddenCount = Math.max(specs.length - visibleSpecs.length, 0);
 
   return (
