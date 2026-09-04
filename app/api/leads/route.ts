@@ -14,6 +14,38 @@ const leadSchema = z.object({
   website: z.string().max(0).optional(),
 });
 
+async function notifyTelegram(payload: z.infer<typeof leadSchema>, request: Request) {
+  const token = process.env.TELEGRAM_BOT_TOKEN;
+  const chatId = process.env.TELEGRAM_CHAT_ID;
+  if (!token || !chatId) return;
+
+  const siteUrl = new URL(request.url).origin;
+  const message = [
+    "🔔 Нова заявка — Наші двері",
+    "",
+    `Ім’я: ${payload.name}`,
+    `Телефон: ${payload.phone}`,
+    `Зв’язок: ${payload.contactMethod === "phone" ? "телефоном" : payload.contactMethod}`,
+    `Тип: ${payload.requestType === "measurement" ? "замір" : payload.requestType === "price_request" ? "прорахунок" : payload.requestType === "consultation" ? "консультація" : "повідомлення"}`,
+    payload.productName ? `Товари: ${payload.productName}` : "",
+    payload.message ? `Коментар: ${payload.message}` : "",
+    "",
+    `Адмінка: ${siteUrl}/admin/leads`,
+  ].filter(Boolean).join("\n").slice(0, 4000);
+
+  try {
+    const response = await fetch(`https://api.telegram.org/bot${token}/sendMessage`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ chat_id: chatId, text: message, disable_web_page_preview: true }),
+      cache: "no-store",
+    });
+    if (!response.ok) console.error("Telegram notification error:", await response.text());
+  } catch (error) {
+    console.error("Telegram notification failed:", error);
+  }
+}
+
 export async function POST(request: Request) {
   try {
     const payload = leadSchema.parse(await request.json());
@@ -47,6 +79,7 @@ export async function POST(request: Request) {
       console.error("Lead save error:", details);
       return NextResponse.json({ message: "Не вдалося зберегти заявку. Спробуйте ще раз або зателефонуйте нам." }, { status: 500 });
     }
+    await notifyTelegram(payload, request);
     return NextResponse.json({ ok: true });
   } catch (error) {
     if (error instanceof z.ZodError) return NextResponse.json({ message: error.issues[0]?.message || "Перевірте дані форми." }, { status: 400 });
