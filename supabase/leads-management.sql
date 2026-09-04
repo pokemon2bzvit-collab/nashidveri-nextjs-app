@@ -12,6 +12,7 @@ create table if not exists public.leads (
   product_slug text references public.products(slug) on delete set null,
   product_name text,
   source_path text,
+  manager_note text,
   status text not null default 'new' check (status in ('new', 'in_progress', 'measurement', 'offer_sent', 'won', 'lost')),
   priority text not null default 'normal' check (priority in ('normal', 'important', 'urgent')),
   consent boolean not null default false,
