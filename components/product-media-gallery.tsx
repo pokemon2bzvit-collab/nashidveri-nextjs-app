@@ -14,10 +14,12 @@ export function ProductMediaGallery({ product }: { product: Product }) {
   const [selectedIndex, setSelectedIndex] = useState(0);
   const [optionImage, setOptionImage] = useState<string | null>(null);
   const selected = gallery[selectedIndex] || gallery[0];
+  const productImageAlt = `${product.category === "windows" ? "Вікна" : `${product.category === "entrance" ? "Вхідні" : "Міжкімнатні"} двері`} ${product.brand} ${product.name}, колекція ${product.collection}`;
+  const selectedImageAlt = optionImage ? `Обраний декор: ${productImageAlt}` : selected.label ? `${productImageAlt} — ${selected.label}` : productImageAlt;
 
   return <div>
     <div className="aspect-[4/5] overflow-hidden rounded-[2rem] bg-[#f7f5f1] p-5 sm:p-8">
-      <ImageLightbox src={optionImage || selected.image} alt={selected.label || product.name} className="h-full w-full" imageClassName="h-full w-full object-contain" />
+      <ImageLightbox src={optionImage || selected.image} alt={selectedImageAlt} className="h-full w-full" imageClassName="h-full w-full object-contain" />
     </div>
     {gallery.length > 1 && <div className="mt-3 flex gap-2 overflow-x-auto pb-1">
       {gallery.map((item, index) => <button type="button" key={`${item.image}-${index}`} aria-label={`Обрати фото: ${item.label || index + 1}`} onClick={() => { setSelectedIndex(index); setOptionImage(null); }} className={`h-16 w-12 shrink-0 overflow-hidden rounded-lg border-2 bg-[#f7f5f1] transition ${selectedIndex === index ? "border-clay" : "border-transparent hover:border-stone-300"}`}><img src={item.image} alt="" className="h-full w-full object-contain" /></button>)}
