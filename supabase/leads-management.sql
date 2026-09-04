@@ -13,12 +13,14 @@ create table if not exists public.leads (
   product_name text,
   source_path text,
   status text not null default 'new' check (status in ('new', 'in_progress', 'measurement', 'offer_sent', 'won', 'lost')),
+  priority text not null default 'normal' check (priority in ('normal', 'important', 'urgent')),
   consent boolean not null default false,
   updated_at timestamptz not null default now()
 );
 
 create index if not exists leads_status_created_idx on public.leads(status, created_at desc);
 create index if not exists leads_phone_idx on public.leads(phone);
+create index if not exists leads_priority_created_idx on public.leads(priority, created_at desc);
 
 alter table public.leads enable row level security;
 
