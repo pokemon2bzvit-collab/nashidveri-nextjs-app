@@ -2,6 +2,7 @@
 
 import { FormEvent, useEffect, useMemo, useState } from "react";
 import { Building2, Eye, EyeOff, FolderInput, FolderTree, LoaderCircle, PackagePlus, Pencil, Plus, Save, Trash2, X } from "lucide-react";
+import { useSearchParams } from "next/navigation";
 import { getSupabaseBrowserClient } from "@/lib/supabase-browser";
 
 type Brand = { id: string; name: string; description: string; image_path: string | null; is_active: boolean; sort_order: number };
@@ -27,6 +28,7 @@ function categoryName(category: string) {
 
 export function CatalogManagement() {
   const supabase = useMemo(() => getSupabaseBrowserClient(), []);
+  const searchParams = useSearchParams();
   const [tab, setTab] = useState<ManageTab>("brands");
   const [brands, setBrands] = useState<Brand[]>([]);
   const [collections, setCollections] = useState<Collection[]>([]);
@@ -61,6 +63,15 @@ export function CatalogManagement() {
     setReady(true);
   }
   useEffect(() => { load(); }, []);
+  useEffect(() => {
+    if (searchParams.get("tab") !== "products" || !brands.length) return;
+    const requestedBrand = searchParams.get("brand");
+    setTab("products");
+    if (requestedBrand && brands.some((brand) => brand.name === requestedBrand)) {
+      setEditProductSlug(null);
+      setProductDraft({ ...blankProduct, brand: requestedBrand });
+    }
+  }, [searchParams, brands]);
 
   const collectionsForDraftBrand = collections.filter((item) => item.brand_id === collectionDraft.brand_id);
   const productCollections = collections.filter((item) => {
