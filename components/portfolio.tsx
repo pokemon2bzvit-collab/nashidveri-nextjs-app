@@ -8,9 +8,10 @@ const works = [
   { title: "Лаконічний дизайн", subtitle: "Міжкімнатні двері Термінус", image: catalogImageUrl("/catalog-assets/products/product-295.webp"), href: "/mizhkimnatni-dveri/terminus" },
 ];
 
-export function Portfolio() {
+export function Portfolio({ standalone = false }: { standalone?: boolean }) {
+  const Heading = standalone ? "h1" : "h2";
   return <section id="portfolio" className="container-page section-pad">
-    <div className="max-w-2xl"><p className="eyebrow">Натхнення</p><h2 className="heading mt-3">Рішення для<br />вашого простору</h2><p className="mt-5 text-base leading-7 text-stone-600">Добірка моделей із нашого каталогу — для сучасного інтер’єру та надійного входу.</p></div>
+    <div className="max-w-2xl"><p className="eyebrow">Натхнення</p><Heading className="heading mt-3">Рішення для<br />вашого простору</Heading><p className="mt-5 text-base leading-7 text-stone-600">Добірка моделей із нашого каталогу — для сучасного інтер’єру та надійного входу.</p></div>
     <div className="mt-10 grid gap-5 md:grid-cols-3">
       {works.map((work, index) => <article key={work.title} className="group overflow-hidden rounded-[1.5rem] border border-stone-200 bg-white shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-xl">
         <div className="flex aspect-[4/3] items-center justify-center bg-[#f7f5f1] p-6 sm:p-8"><img loading="lazy" src={work.image} alt={work.subtitle} className="h-full w-full object-contain transition duration-500 group-hover:scale-[1.03]" /></div>
