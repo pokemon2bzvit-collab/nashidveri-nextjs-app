@@ -17,7 +17,10 @@ const leadSchema = z.object({
 async function notifyTelegram(payload: z.infer<typeof leadSchema>, request: Request) {
   const token = process.env.TELEGRAM_BOT_TOKEN;
   const chatId = process.env.TELEGRAM_CHAT_ID;
-  if (!token || !chatId) return;
+  if (!token || !chatId) {
+    console.warn("Telegram notification skipped: TELEGRAM_BOT_TOKEN or TELEGRAM_CHAT_ID is not configured.");
+    return;
+  }
 
   const siteUrl = new URL(request.url).origin;
   const message = [
@@ -40,7 +43,8 @@ async function notifyTelegram(payload: z.infer<typeof leadSchema>, request: Requ
       body: JSON.stringify({ chat_id: chatId, text: message, disable_web_page_preview: true }),
       cache: "no-store",
     });
-    if (!response.ok) console.error("Telegram notification error:", await response.text());
+    if (!response.ok) console.error(`Telegram notification error (${response.status}):`, await response.text());
+    else console.info("Telegram notification delivered.");
   } catch (error) {
     console.error("Telegram notification failed:", error);
   }
