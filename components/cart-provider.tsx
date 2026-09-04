@@ -44,7 +44,7 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
     addItem: (item) => {
       setItems((current) => {
         const existing = current.find((entry) => entry.slug === item.slug);
-        if (existing) return current.map((entry) => entry.slug === item.slug && item.configuration?.length ? { ...entry, configuration: item.configuration } : entry);
+        if (existing) return current.map((entry) => entry.slug === item.slug && item.configuration?.length ? { ...entry, configuration: item.configuration, image: item.image || entry.image } : entry);
         return [...current, { ...item, quantity: 1 }].slice(0, 12);
       });
       setIsOpen(true);

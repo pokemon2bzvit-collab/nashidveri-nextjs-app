@@ -85,7 +85,10 @@ export function ProductConfiguration({ options, variants, onImageChange, preview
       const option = group[selectedIndexFor(group, draftSelected)];
       return option ? `${option.groupLabel}: ${option.label}` : "";
     }).filter(Boolean);
-    window.localStorage.setItem(`nashi-dveri-config-${productSlug}`, JSON.stringify(configuration));
+    window.localStorage.setItem(`nashi-dveri-config-${productSlug}`, JSON.stringify({
+      configuration,
+      image: draftMatchingVariant?.image || null,
+    }));
     setIsOpen(false);
   };
 
