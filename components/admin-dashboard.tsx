@@ -276,18 +276,21 @@ export function AdminDashboard() {
       ...preview.facts.map((fact, index) => ({ product_slug: selected.slug, label: fact.label, value: fact.value, sort_order: 100 + index * 10, is_active: true })),
       ...(preview.productCode ? [{ product_slug: selected.slug, label: "Код виробника", value: preview.productCode, sort_order: 90, is_active: true }] : []),
     ];
-    const [specificationsResult, optionResult, variantResult, sourceResult] = await Promise.all([
+    const [productResult, specificationsResult, optionResult, variantResult, sourceResult] = await Promise.all([
+      preview.description ? supabase.from("products").update({ description: preview.description }).eq("slug", selected.slug) : Promise.resolve({ error: null }),
       supabase.from("product_specs").upsert(specifications, { onConflict: "product_slug,label" }),
       supabase.from("product_options").upsert({ product_slug: selected.slug, option_group: "finish", group_label: "Підтверджені покриття", label: preview.finish, image_path: image, sort_order: 20, is_active: true }, { onConflict: "product_slug,option_group,label" }),
       supabase.from("product_variants").upsert({ product_slug: selected.slug, selections: { finish: preview.finish }, image_path: image, sort_order: 20, is_active: true }, { onConflict: "product_slug,selections" }),
       supabase.from("product_sources").upsert({ product_slug: selected.slug, source_name: "Q Doors", source_url: preview.sourceUrl, source_product_name: preview.title + (preview.productCode ? " · код " + preview.productCode : ""), verification_status: "verified", verified_at: new Date().toISOString(), notes: "Імпортовано з офіційної картки Qdoors: характеристики, декор і пряме оригінальне фото." }, { onConflict: "product_slug,source_url" }),
     ]);
     setSaving(false);
-    const error = specificationsResult.error || optionResult.error || variantResult.error || sourceResult.error;
+    const error = productResult.error || specificationsResult.error || optionResult.error || variantResult.error || sourceResult.error;
     if (error) return error.message;
-    await choose(selected);
+    const updatedProduct = { ...selected, description: preview.description || selected.description };
+    setProducts((items) => items.map((item) => item.slug === updatedProduct.slug ? updatedProduct : item));
+    await choose(updatedProduct);
     setTab("configuration");
-    setNotice("Імпорт Qdoors завершено: декор, оригінальне фото, характеристики й джерело збережено.");
+    setNotice("Імпорт Qdoors завершено: опис, декор, оригінальне фото, характеристики й джерело збережено.");
     return null;
   }
 
