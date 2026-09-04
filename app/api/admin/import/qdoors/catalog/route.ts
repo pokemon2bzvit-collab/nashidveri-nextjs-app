@@ -23,7 +23,9 @@ export async function GET(request: NextRequest) {
   if (!(await isAdmin(request))) return NextResponse.json({ message: "Немає доступу до імпорту." }, { status: 401 });
   const source = request.nextUrl.searchParams.get("url")?.trim() || "https://qdoors.ua/shop";
   let sourceUrl: URL;
-  try { sourceUrl = new URL(source); } catch { return NextResponse.json({ message: "Вставте URL каталогу Qdoors." }, { status: 400 }); }
+  try { sourceUrl = new URL(/^https?:\/\//i.test(source) ? source : "https://" + source); } catch { return NextResponse.json({ message: "Вставте URL каталогу Qdoors." }, { status: 400 }); }
+  if (sourceUrl.hostname === "www.qdoors.ua") sourceUrl.hostname = "qdoors.ua";
+  if (sourceUrl.hostname === "qdoors.ua" && sourceUrl.pathname === "/") sourceUrl.pathname = "/shop";
   if (sourceUrl.protocol !== "https:" || sourceUrl.hostname !== "qdoors.ua" || !sourceUrl.pathname.startsWith("/shop")) {
     return NextResponse.json({ message: "Дозволені лише сторінки каталогу qdoors.ua/shop…" }, { status: 400 });
   }

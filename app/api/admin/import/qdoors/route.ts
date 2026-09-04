@@ -112,10 +112,11 @@ export async function GET(request: NextRequest) {
   const source = request.nextUrl.searchParams.get("url")?.trim() || "";
   let sourceUrl: URL;
   try {
-    sourceUrl = new URL(source);
+    sourceUrl = new URL(/^https?:\/\//i.test(source) ? source : "https://" + source);
   } catch {
     return NextResponse.json({ message: "Вставте повне посилання на картку Qdoors." }, { status: 400 });
   }
+  if (sourceUrl.hostname === "www.qdoors.ua") sourceUrl.hostname = "qdoors.ua";
   if (sourceUrl.protocol !== "https:" || sourceUrl.hostname !== "qdoors.ua" || !sourceUrl.pathname.startsWith("/shop/")) {
     return NextResponse.json({ message: "Дозволені лише посилання формату https://qdoors.ua/shop/…" }, { status: 400 });
   }
