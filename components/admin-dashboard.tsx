@@ -62,8 +62,11 @@ function getQdoorsMatch(title: string, products: Product[]): QdoorsMatch | null 
   const matches = products.filter((product) => product.brand === "Q Doors").map((product) => {
     const productTokens = qdoorsTokens(product.name);
     const common = productTokens.filter((token) => candidate.some((candidateToken) => qdoorsTokensMatch(token, candidateToken)));
-    return { product, common };
-  }).filter(({ common }) => common.length > 0).sort((a, b) => b.common.length - a.common.length);
+    const candidateSeries = candidate.filter((token) => series.has(token));
+    const productSeries = productTokens.filter((token) => series.has(token));
+    const hasConflictingSeries = candidateSeries.length > 0 && productSeries.length > 0 && !candidateSeries.some((token) => productSeries.includes(token));
+    return { product, common, hasConflictingSeries };
+  }).filter(({ common, hasConflictingSeries }) => common.length > 0 && !hasConflictingSeries).sort((a, b) => b.common.length - a.common.length);
   const best = matches[0];
   if (!best) return null;
   const commonSeries = best.common.some((token) => series.has(token));
