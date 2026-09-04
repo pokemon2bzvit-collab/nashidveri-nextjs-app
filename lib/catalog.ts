@@ -62,23 +62,27 @@ export async function getProducts(): Promise<Product[]> {
   if (!supabaseKey) return products.map((product) => ({ ...product, image: catalogImageUrl(product.image) }));
   try {
     const headers = { apikey: supabaseKey, Authorization: `Bearer ${supabaseKey}` };
-    // Дані для карток отримуємо трьома пакетними запитами, а не окремим
+    // Дані для карток отримуємо пакетними запитами, а не окремим
     // запитом до кожної моделі. Так каталог лишається швидким, але картки
     // можуть чесно показати лише декори з підтвердженим фото.
-    const [productsResponse, optionsResponse, variantsResponse] = await Promise.all([
+    const [productsResponse, optionsResponse, variantsResponse, specsResponse] = await Promise.all([
       fetch(`${supabaseUrl}/rest/v1/products?select=slug,category,brand,collection,name,material,style,color,price,description,features,image_path&is_available=eq.true&order=sort_order.asc`, { headers, next: { revalidate: 300 } }),
       fetch(`${supabaseUrl}/rest/v1/product_options?select=product_slug,option_group,group_label,label,swatch,image_path,sort_order&is_active=eq.true&order=sort_order.asc`, { headers, next: { revalidate: 300 } }),
       fetch(`${supabaseUrl}/rest/v1/product_variants?select=product_slug,selections,image_path,sort_order&is_active=eq.true&order=sort_order.asc`, { headers, next: { revalidate: 300 } }),
+      fetch(`${supabaseUrl}/rest/v1/product_specs?select=product_slug,label,value,sort_order&is_active=eq.true&order=sort_order.asc`, { headers, next: { revalidate: 300 } }),
     ]);
     if (!productsResponse.ok) throw new Error(`Supabase returned ${productsResponse.status}`);
     const rows = await productsResponse.json() as ProductRow[];
     const optionRows = optionsResponse.ok ? await optionsResponse.json() as ProductOptionRow[] : [];
     const variantRows = variantsResponse.ok ? await variantsResponse.json() as ProductVariantRow[] : [];
+    const specRows = specsResponse.ok ? await specsResponse.json() as ProductSpecRow[] : [];
     const optionsByProduct = new Map<string, ProductOption[]>();
     const variantsByProduct = new Map<string, ProductVariant[]>();
+    const specsByProduct = new Map<string, ProductSpec[]>();
     optionRows.forEach((option) => optionsByProduct.set(option.product_slug, [...(optionsByProduct.get(option.product_slug) || []), mapOption(option)]));
     variantRows.forEach((variant) => variantsByProduct.set(variant.product_slug, [...(variantsByProduct.get(variant.product_slug) || []), mapVariant(variant)]));
-    return rows.map((row) => ({ ...mapProduct(row), options: optionsByProduct.get(row.slug) || [], variants: variantsByProduct.get(row.slug) || [] }));
+    specRows.forEach((spec) => specsByProduct.set(spec.product_slug, [...(specsByProduct.get(spec.product_slug) || []), mapSpec(spec)]));
+    return rows.map((row) => ({ ...mapProduct(row), options: optionsByProduct.get(row.slug) || [], variants: variantsByProduct.get(row.slug) || [], specs: specsByProduct.get(row.slug) || [] }));
   } catch (error) {
     console.error("Could not load catalog from Supabase", error);
     return products.map((product) => ({ ...product, image: catalogImageUrl(product.image) }));
