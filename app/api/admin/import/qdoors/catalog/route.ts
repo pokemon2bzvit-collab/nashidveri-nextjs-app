@@ -5,7 +5,7 @@ const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
 const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
 
 function decode(value: string) {
-  return value.replace(/&nbsp;/gi, " ").replace(/&amp;/gi, "&").replace(/&quot;/gi, '"').replace(/&#039;|&#39;/gi, "'");
+  return value.replace(/&nbsp;/gi, " ").replace(/&amp;/gi, "&").replace(/&quot;/gi, '"').replace(/&#x2f;|&#47;/gi, "/").replace(/&#039;|&#39;/gi, "'");
 }
 function textFromHtml(value: string) {
   return decode(value.replace(/<[^>]+>/g, " ").replace(/\s+/g, " ").trim());
