@@ -10,9 +10,10 @@ type ProductConfigurationProps = {
   onImageChange: (image: string | null) => void;
   previewImage: string;
   productName: string;
+  productSlug: string;
 };
 
-export function ProductConfiguration({ options, variants, onImageChange, previewImage, productName }: ProductConfigurationProps) {
+export function ProductConfiguration({ options, variants, onImageChange, previewImage, productName, productSlug }: ProductConfigurationProps) {
   const visualVariants = useMemo(() => variants.filter((variant) => Boolean(variant.image)), [variants]);
   const groups = useMemo(() => {
     const collection = new Map<string, ProductOption[]>();
@@ -80,6 +81,11 @@ export function ProductConfiguration({ options, variants, onImageChange, preview
   const selectOption = (groupKey: string, index: number) => setDraftSelected((current) => ({ ...current, [groupKey]: index }));
   const applySelection = () => {
     setSelected(draftSelected);
+    const configuration = groups.map((group) => {
+      const option = group[selectedIndexFor(group, draftSelected)];
+      return option ? `${option.groupLabel}: ${option.label}` : "";
+    }).filter(Boolean);
+    window.localStorage.setItem(`nashi-dveri-config-${productSlug}`, JSON.stringify(configuration));
     setIsOpen(false);
   };
 

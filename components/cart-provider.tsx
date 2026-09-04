@@ -2,7 +2,7 @@
 
 import { createContext, useContext, useEffect, useMemo, useState } from "react";
 
-export type CartProduct = { slug: string; name: string; brand: string; collection: string; image: string };
+export type CartProduct = { slug: string; name: string; brand: string; collection: string; image: string; configuration?: string[] };
 export type CartItem = CartProduct & { quantity: number };
 type CartContextValue = {
   items: CartItem[];
@@ -25,7 +25,11 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
   useEffect(() => {
     try {
       const saved = JSON.parse(window.localStorage.getItem(storageKey) || "[]") as CartItem[];
-      if (Array.isArray(saved)) setItems(saved.filter((item) => item?.slug && item?.name).slice(0, 12).map((item) => ({ ...item, quantity: Math.min(99, Math.max(1, Number(item.quantity) || 1)) })));
+      if (Array.isArray(saved)) setItems(saved.filter((item) => item?.slug && item?.name).slice(0, 12).map((item) => ({
+        ...item,
+        quantity: Math.min(99, Math.max(1, Number(item.quantity) || 1)),
+        configuration: Array.isArray(item.configuration) ? item.configuration.filter((value): value is string => typeof value === "string").slice(0, 5) : [],
+      })));
     } catch {
       window.localStorage.removeItem(storageKey);
     }
@@ -38,7 +42,11 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
     items,
     isOpen,
     addItem: (item) => {
-      setItems((current) => current.some((entry) => entry.slug === item.slug) ? current : [...current, { ...item, quantity: 1 }].slice(0, 12));
+      setItems((current) => {
+        const existing = current.find((entry) => entry.slug === item.slug);
+        if (existing) return current.map((entry) => entry.slug === item.slug && item.configuration?.length ? { ...entry, configuration: item.configuration } : entry);
+        return [...current, { ...item, quantity: 1 }].slice(0, 12);
+      });
       setIsOpen(true);
     },
     removeItem: (slug) => setItems((current) => current.filter((item) => item.slug !== slug)),
