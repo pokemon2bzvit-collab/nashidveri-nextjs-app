@@ -89,6 +89,53 @@ export async function getProducts(): Promise<Product[]> {
   }
 }
 
+export async function getRelatedProducts(product: Pick<Product, "slug" | "brand" | "collection">, limit = 3): Promise<Product[]> {
+  const fallback = () => products
+    .filter((item) => item.brand === product.brand && item.collection === product.collection && item.slug !== product.slug)
+    .concat(products.filter((item) => item.brand === product.brand && item.collection !== product.collection && item.slug !== product.slug))
+    .slice(0, limit)
+    .map((item) => ({ ...item, image: catalogImageUrl(item.image) }));
+
+  if (!supabaseKey) return fallback();
+  const headers = { apikey: supabaseKey, Authorization: `Bearer ${supabaseKey}` };
+  const select = "slug,category,brand,collection,name,material,style,color,price,description,features,image_path";
+  const common = `select=${select}&is_available=eq.true&brand=eq.${encodeURIComponent(product.brand)}&slug=neq.${encodeURIComponent(product.slug)}&order=sort_order.asc&limit=${limit}`;
+
+  try {
+    const fromCollection = await fetch(`${supabaseUrl}/rest/v1/products?${common}&collection=eq.${encodeURIComponent(product.collection)}`, { headers, next: { revalidate: 300 } });
+    if (!fromCollection.ok) throw new Error(`Supabase returned ${fromCollection.status}`);
+    let rows = await fromCollection.json() as ProductRow[];
+    if (!rows.length) {
+      const fromBrand = await fetch(`${supabaseUrl}/rest/v1/products?${common}`, { headers, next: { revalidate: 300 } });
+      if (!fromBrand.ok) throw new Error(`Supabase returned ${fromBrand.status}`);
+      rows = await fromBrand.json() as ProductRow[];
+    }
+    if (!rows.length) return [];
+
+    // Для трьох рекомендацій підвантажуємо лише їхні декори й параметри,
+    // зберігаючи вигляд карток без завантаження даних усіх моделей.
+    const productFilter = `product_slug=in.(${rows.map((row) => encodeURIComponent(row.slug)).join(",")})`;
+    const [optionsResponse, variantsResponse, specsResponse] = await Promise.all([
+      fetch(`${supabaseUrl}/rest/v1/product_options?select=product_slug,option_group,group_label,label,swatch,image_path,sort_order&is_active=eq.true&${productFilter}&order=sort_order.asc`, { headers, next: { revalidate: 300 } }),
+      fetch(`${supabaseUrl}/rest/v1/product_variants?select=product_slug,selections,image_path,sort_order&is_active=eq.true&${productFilter}&order=sort_order.asc`, { headers, next: { revalidate: 300 } }),
+      fetch(`${supabaseUrl}/rest/v1/product_specs?select=product_slug,label,value,sort_order&is_active=eq.true&${productFilter}&order=sort_order.asc`, { headers, next: { revalidate: 300 } }),
+    ]);
+    const optionRows = optionsResponse.ok ? await optionsResponse.json() as ProductOptionRow[] : [];
+    const variantRows = variantsResponse.ok ? await variantsResponse.json() as ProductVariantRow[] : [];
+    const specRows = specsResponse.ok ? await specsResponse.json() as ProductSpecRow[] : [];
+    const optionsByProduct = new Map<string, ProductOption[]>();
+    const variantsByProduct = new Map<string, ProductVariant[]>();
+    const specsByProduct = new Map<string, ProductSpec[]>();
+    optionRows.forEach((option) => optionsByProduct.set(option.product_slug, [...(optionsByProduct.get(option.product_slug) || []), mapOption(option)]));
+    variantRows.forEach((variant) => variantsByProduct.set(variant.product_slug, [...(variantsByProduct.get(variant.product_slug) || []), mapVariant(variant)]));
+    specRows.forEach((spec) => specsByProduct.set(spec.product_slug, [...(specsByProduct.get(spec.product_slug) || []), mapSpec(spec)]));
+    return rows.map((row) => ({ ...mapProduct(row), options: optionsByProduct.get(row.slug) || [], variants: variantsByProduct.get(row.slug) || [], specs: specsByProduct.get(row.slug) || [] }));
+  } catch (error) {
+    console.error(`Could not load related products for ${product.slug}`, error);
+    return fallback();
+  }
+}
+
 export async function getProduct(slug: string) {
   let product: Product | undefined;
   let directLookupCompleted = false;

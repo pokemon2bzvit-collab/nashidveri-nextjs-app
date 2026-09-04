@@ -2,7 +2,7 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import type { Metadata } from "next";
 import { Check, ChevronLeft, Phone } from "lucide-react";
-import { categories, getProduct, getProducts } from "@/lib/catalog";
+import { categories, getProduct, getRelatedProducts } from "@/lib/catalog";
 import { ProductGrid } from "@/components/product-grid";
 import { SiteShell } from "@/components/site-shell";
 import { BrandLogo } from "@/components/brand-logo";
@@ -30,14 +30,11 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 
 export default async function ProductPage({ params }: { params: Promise<{ slug: string }> }) {
   const slug = (await params).slug;
-  // Модель і картки «Ще в колекції» завантажуємо паралельно, без двох послідовних очікувань.
-  const [product, catalog] = await Promise.all([getProduct(slug), getProducts()]);
+  const product = await getProduct(slug);
   if (!product) notFound();
-  const fromCollection = catalog.filter((item) => item.brand === product.brand && item.collection === product.collection && item.slug !== product.slug);
-  const fromBrand = catalog.filter((item) => item.brand === product.brand && item.slug !== product.slug);
-  const similar = (fromCollection.length ? fromCollection : fromBrand).slice(0, 3);
+  const similar = await getRelatedProducts(product);
   const collectionHref = `/catalog?brand=${encodeURIComponent(product.brand)}&collection=${encodeURIComponent(product.collection)}`;
-  const similarTitle = fromCollection.length ? `Ще в колекції ${product.collection}` : `Інші моделі ${product.brand}`;
+  const similarTitle = similar.some((item) => item.collection === product.collection) ? `Ще в колекції ${product.collection}` : `Інші моделі ${product.brand}`;
   const visibleColors = [...new Set((product.options || []).filter((option) => option.group === "color" || option.group === "finish").map((option) => option.label))];
   const productSchema = { "@context": "https://schema.org", "@type": "Product", name: product.name, image: [absoluteUrl(product.image), ...(product.media || []).filter((media) => media.kind !== "palette").map((media) => absoluteUrl(media.image))], description: product.description, sku: product.slug, brand: { "@type": "Brand", name: product.brand }, category: categories[product.category].title, color: visibleColors.length ? visibleColors.join(", ") : undefined, url: absoluteUrl(`/catalog/${product.slug}`), additionalProperty: (product.specs || []).map((spec) => ({ "@type": "PropertyValue", name: spec.label, value: spec.value })) };
   const breadcrumbSchema = { "@context": "https://schema.org", "@type": "BreadcrumbList", itemListElement: [{ "@type": "ListItem", position: 1, name: "Головна", item: absoluteUrl("/") }, { "@type": "ListItem", position: 2, name: categories[product.category].title, item: absoluteUrl(`/catalog?category=${product.category}`) }, { "@type": "ListItem", position: 3, name: product.brand, item: absoluteUrl(`/catalog?brand=${encodeURIComponent(product.brand)}`) }, { "@type": "ListItem", position: 4, name: product.name, item: absoluteUrl(`/catalog/${product.slug}`) }] };
