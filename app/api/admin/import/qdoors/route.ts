@@ -79,12 +79,20 @@ function parseQdoorsPage(html: string, sourceUrl: string): QdoorsPreview {
   const displayedInnerColor = /гладь\s+біла\s+шагрень/iu.test(extractHeading(html, text)) ? "гладь біла шагрень" : innerColor;
   const finish = outerColor && displayedInnerColor ? `RAL ${outerColor.replace(/^RAL\s*/i, "")} + ${displayedInnerColor}` : outerColor || displayedInnerColor;
   if (finish) facts.splice(3, 0, { label: "Підтверджене виконання", value: finish });
-  const descriptionStart = text.toLocaleLowerCase("uk-UA").indexOf("опис товару");
-  const descriptionEnd = text.toLocaleLowerCase("uk-UA").indexOf("бренд", Math.max(descriptionStart, 0));
-  const description = descriptionStart >= 0 && descriptionEnd > descriptionStart
-    ? cleanLine(text.slice(descriptionStart, descriptionEnd).replace(/опис товару\s*деталі і характеристики вкладення/iu, ""))
-    : "";
-  return { sourceUrl, title: extractHeading(html, text), productCode, description, images, facts, finish: finish || null };
+  const title = extractHeading(html, text).replace(/\s*\(008\)\s*$/u, "");
+  const purpose = facts.find((fact) => fact.label === "Призначення")?.value.toLocaleLowerCase("uk-UA");
+  const purposeText = purpose?.includes("вулиц") ? "вхідні двері для приватного будинку" : purpose?.includes("квартир") ? "вхідні двері для квартири" : "вхідні двері";
+  const box = facts.find((fact) => fact.label === "Товщина коробу")?.value;
+  const leaf = facts.find((fact) => fact.label === "Товщина полотна")?.value;
+  const steel = facts.find((fact) => fact.label === "Товщина металу")?.value;
+  const technicalSummary = [leaf ? `полотно ${leaf}` : "", box ? `короб ${box}` : "", steel ? `сталь ${steel}` : ""].filter(Boolean).join(", ");
+  const description = [
+    `${title} — ${purposeText}.`,
+    finish ? `Підтверджене виконання: ${finish}.` : "",
+    technicalSummary ? `Основні параметри: ${technicalSummary}.` : "",
+    "Комплектацію та актуальну ціну уточнюйте у менеджера.",
+  ].filter(Boolean).join(" ");
+  return { sourceUrl, title, productCode, description, images, facts, finish: finish || null };
 }
 
 async function isAdmin(request: NextRequest) {
