@@ -2,6 +2,7 @@
 
 import { FormEvent, type ReactNode, useEffect, useMemo, useState } from "react";
 import { Check, ExternalLink, FileImage, Link2, LoaderCircle, LogOut, PackageSearch, Paintbrush, Plus, Save, Search, ShieldCheck, SlidersHorizontal, Trash2, Upload } from "lucide-react";
+import { useSearchParams } from "next/navigation";
 import type { Session } from "@supabase/supabase-js";
 import { CatalogManagement } from "@/components/catalog-management";
 import { LeadsDashboard } from "@/components/leads-dashboard";
@@ -23,6 +24,7 @@ type Source = { id: string; source_name: string; source_url: string; verificatio
 type Row = Record<string, unknown>;
 type Tab = "basic" | "media" | "configuration" | "sources";
 type EditorKind = "specs" | "options" | "variants";
+type QualityFilter = "all" | "photo" | "description" | "source" | "hidden";
 
 const catalogSources = [
   { name: "Market Dveri", info: "Описи, характеристики та фото багатьох моделей", url: "https://market-dveri.ua/uk/" },
@@ -57,6 +59,7 @@ function Card({ icon, title, help, children }: { icon: ReactNode; title: string;
 
 export function AdminDashboard() {
   const supabase = useMemo(() => getSupabaseBrowserClient(), []);
+  const searchParams = useSearchParams();
   const [session, setSession] = useState<Session | null>(null);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -67,6 +70,8 @@ export function AdminDashboard() {
   const [products, setProducts] = useState<Product[]>([]);
   const [query, setQuery] = useState("");
   const [brand, setBrand] = useState("all");
+  const [quality, setQuality] = useState<QualityFilter>("all");
+  const [sourcedSlugs, setSourcedSlugs] = useState<Set<string>>(new Set());
   const [selected, setSelected] = useState<Product | null>(null);
   const [draft, setDraft] = useState<Partial<Product>>({});
   const [tab, setTab] = useState<Tab>("basic");
@@ -85,7 +90,14 @@ export function AdminDashboard() {
   const brands = useMemo(() => Array.from(new Set(products.map((item) => item.brand))).sort(), [products]);
   const filtered = products.filter((item) => {
     const text = (item.name + " " + item.brand + " " + item.collection).toLowerCase();
-    return text.includes(query.toLowerCase()) && (brand === "all" || item.brand === brand);
+    const hasPhoto = Boolean(item.image_path?.trim());
+    const hasDescription = Boolean(item.description?.trim());
+    const matchesQuality = quality === "all"
+      || (quality === "photo" && !hasPhoto)
+      || (quality === "description" && !hasDescription)
+      || (quality === "source" && !sourcedSlugs.has(item.slug))
+      || (quality === "hidden" && !item.is_available);
+    return text.includes(query.toLowerCase()) && (brand === "all" || item.brand === brand) && matchesQuality;
   });
   const basicDirty = Boolean(selected && (draft.price !== selected.price || draft.description !== selected.description || draft.image_path !== selected.image_path || draft.is_available !== selected.is_available));
 
@@ -96,11 +108,20 @@ export function AdminDashboard() {
   }, [supabase]);
   useEffect(() => {
     if (!isAdmin) return;
-    supabase.from("products").select("slug,name,brand,collection,category,price,description,is_available,image_path").order("brand").order("name").then(({ data, error }) => {
-      if (error) setNotice(error.message);
-      else setProducts((data || []) as Product[]);
+    Promise.all([
+      supabase.from("products").select("slug,name,brand,collection,category,price,description,is_available,image_path").order("brand").order("name"),
+      supabase.from("product_sources").select("product_slug"),
+    ]).then(([productsResult, sourcesResult]) => {
+      if (productsResult.error) setNotice(productsResult.error.message);
+      else setProducts((productsResult.data || []) as Product[]);
+      if (!sourcesResult.error) setSourcedSlugs(new Set((sourcesResult.data || []).map((item) => item.product_slug)));
     });
   }, [isAdmin, supabase]);
+  useEffect(() => {
+    const requested = searchParams.get("quality");
+    if (requested === "photo" || requested === "description" || requested === "source" || requested === "hidden") setQuality(requested);
+    else setQuality("all");
+  }, [searchParams]);
 
   async function login(event: FormEvent) {
     event.preventDefault();
@@ -225,7 +246,7 @@ export function AdminDashboard() {
     <div className="mx-auto max-w-[1600px] p-4 sm:p-6">
       <div className="mb-5 rounded-2xl border border-clay/20 bg-sand/50 px-4 py-3 text-sm text-stone-700"><b>Як працювати:</b> 1. Оберіть модель. 2. Відкрийте потрібний розділ. 3. Збережіть зміни.</div>
       <div className="grid gap-5 xl:grid-cols-[330px_minmax(0,1fr)]">
-        <aside className="rounded-2xl border bg-white p-3 shadow-sm xl:sticky xl:top-20 xl:max-h-[calc(100vh-6rem)]"><div className="p-1"><div className="relative"><Search className="pointer-events-none absolute left-3 top-3.5 text-stone-400" size={17} /><input className={inputClass + " mt-0 pl-10"} value={query} onChange={(event) => setQuery(event.target.value)} placeholder="Пошук моделі чи фабрики" /></div><select className={inputClass} value={brand} onChange={(event) => setBrand(event.target.value)}><option value="all">Усі фабрики</option>{brands.map((item) => <option key={item} value={item}>{item}</option>)}</select><p className="mt-3 text-xs font-bold uppercase tracking-[.14em] text-stone-400">Показано {filtered.length} з {products.length} моделей</p></div><div className="mt-2 max-h-[45vh] space-y-1 overflow-y-auto pr-1 xl:max-h-[calc(100vh-15rem)]">{filtered.map((item) => <button key={item.slug} onClick={() => choose(item)} className={"w-full rounded-xl p-3 text-left transition " + (selected?.slug === item.slug ? "bg-ink text-white" : "hover:bg-sand")}><span className="line-clamp-2 block text-sm font-bold">{item.name}</span><span className={"mt-1 block text-xs " + (selected?.slug === item.slug ? "text-white/70" : "text-stone-500")}>{item.brand} · {item.collection}</span></button>)}{!filtered.length && <p className="p-4 text-center text-sm text-stone-500">Нічого не знайдено.</p>}</div></aside>
+        <aside className="rounded-2xl border bg-white p-3 shadow-sm xl:sticky xl:top-20 xl:max-h-[calc(100vh-6rem)]"><div className="p-1"><div className="relative"><Search className="pointer-events-none absolute left-3 top-3.5 text-stone-400" size={17} /><input className={inputClass + " mt-0 pl-10"} value={query} onChange={(event) => setQuery(event.target.value)} placeholder="Пошук моделі чи фабрики" /></div><select className={inputClass} value={brand} onChange={(event) => setBrand(event.target.value)}><option value="all">Усі фабрики</option>{brands.map((item) => <option key={item} value={item}>{item}</option>)}</select><div className="mt-3"><p className="text-xs font-bold uppercase tracking-[.14em] text-stone-400">Швидка перевірка</p><div className="mt-2 flex flex-wrap gap-1.5">{([['all', 'Усі'], ['source', 'Без джерела'], ['photo', 'Без фото'], ['description', 'Без опису'], ['hidden', 'Приховані']] as const).map(([id, label]) => <button key={id} type="button" onClick={() => setQuality(id)} className={"rounded-full px-2.5 py-1.5 text-xs font-bold transition " + (quality === id ? "bg-ink text-white" : "bg-stone-100 text-stone-600 hover:bg-sand")}>{label}</button>)}</div></div><p className="mt-3 text-xs font-bold uppercase tracking-[.14em] text-stone-400">Показано {filtered.length} з {products.length} моделей</p></div><div className="mt-2 max-h-[45vh] space-y-1 overflow-y-auto pr-1 xl:max-h-[calc(100vh-17.5rem)]">{filtered.map((item) => { const hasPhoto = Boolean(item.image_path?.trim()); const hasDescription = Boolean(item.description?.trim()); const hasSource = sourcedSlugs.has(item.slug); return <button key={item.slug} onClick={() => choose(item)} className={"w-full rounded-xl p-3 text-left transition " + (selected?.slug === item.slug ? "bg-ink text-white" : "hover:bg-sand")}><span className="line-clamp-2 block text-sm font-bold">{item.name}</span><span className={"mt-1 block text-xs " + (selected?.slug === item.slug ? "text-white/70" : "text-stone-500")}>{item.brand} · {item.collection}</span>{selected?.slug !== item.slug && (!hasPhoto || !hasDescription || !hasSource || !item.is_available) && <span className="mt-2 flex flex-wrap gap-1">{!hasPhoto && <i className="rounded bg-amber-100 px-1.5 py-0.5 text-[10px] not-italic font-bold text-amber-800">Фото</i>}{!hasDescription && <i className="rounded bg-amber-100 px-1.5 py-0.5 text-[10px] not-italic font-bold text-amber-800">Опис</i>}{!hasSource && <i className="rounded bg-amber-100 px-1.5 py-0.5 text-[10px] not-italic font-bold text-amber-800">Джерело</i>}{!item.is_available && <i className="rounded bg-stone-200 px-1.5 py-0.5 text-[10px] not-italic font-bold text-stone-600">Приховано</i>}</span>}</button>; })}{!filtered.length && <p className="p-4 text-center text-sm text-stone-500">Нічого не знайдено.</p>}</div></aside>
         {!selected ? <section className="grid min-h-80 place-items-center rounded-2xl border border-dashed bg-white p-8 text-center"><div><PackageSearch className="mx-auto text-clay" size={34} /><h2 className="mt-4 font-display text-3xl">Оберіть модель</h2><p className="mt-2 max-w-sm text-sm leading-6 text-stone-500">Скористайтеся пошуком або фабрикою, а потім натисніть на товар у списку.</p></div></section> : <section className="min-w-0">
           <div className="rounded-2xl border bg-white p-5 shadow-sm"><div className="flex flex-wrap items-start justify-between gap-3"><div><p className="text-xs font-bold uppercase tracking-[.14em] text-clay">{selected.brand} · {selected.collection}</p><h2 className="mt-2 font-display text-3xl sm:text-4xl">{selected.name}</h2></div><a href={"/catalog/" + selected.slug} target="_blank" rel="noreferrer" className="button-light px-3 py-2 text-sm">На сайті <ExternalLink size={15} /></a></div><div className="mt-4 flex flex-wrap gap-2 text-xs font-bold"><span className="rounded-full bg-sand px-3 py-1.5 text-stone-700">{categoryLabel(selected.category)}</span><span className={"rounded-full px-3 py-1.5 " + (selected.is_available ? "bg-green-100 text-green-800" : "bg-stone-100 text-stone-600")}>{selected.is_available ? "Показується у каталозі" : "Прихований"}</span>{basicDirty && <span className="rounded-full bg-amber-100 px-3 py-1.5 text-amber-800">Є незбережені зміни</span>}</div></div>
           <nav className="mt-4 flex gap-2 overflow-x-auto pb-1">{([["basic", "Основне", <SlidersHorizontal key="basic" size={16} />], ["media", "Фото", <FileImage key="media" size={16} />], ["configuration", "Декори", <Paintbrush key="configuration" size={16} />], ["sources", "Джерела", <Link2 key="sources" size={16} />]] as const).map(([id, label, icon]) => <button key={id} onClick={() => setTab(id)} className={"inline-flex shrink-0 items-center gap-2 rounded-full px-4 py-2.5 text-sm font-bold " + (tab === id ? "bg-ink text-white" : "border bg-white text-stone-600")}>{icon}{label}</button>)}</nav>
