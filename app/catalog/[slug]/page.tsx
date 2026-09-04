@@ -15,7 +15,7 @@ import { absoluteUrl, jsonLd, siteName } from "@/lib/site";
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const slug = (await params).slug;
-  const product = (await getProducts()).find((item) => item.slug === slug);
+  const product = await getProduct(slug);
   if (!product) return { title: "Модель не знайдена" };
   const category = categories[product.category].short.toLowerCase();
   const keySpecs = (product.specs || []).slice(0, 2).map((spec) => `${spec.label}: ${spec.value}`).join(". ");
@@ -29,9 +29,10 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 }
 
 export default async function ProductPage({ params }: { params: Promise<{ slug: string }> }) {
-  const product = await getProduct((await params).slug);
+  const slug = (await params).slug;
+  // Модель і картки «Ще в колекції» завантажуємо паралельно, без двох послідовних очікувань.
+  const [product, catalog] = await Promise.all([getProduct(slug), getProducts()]);
   if (!product) notFound();
-  const catalog = await getProducts();
   const fromCollection = catalog.filter((item) => item.brand === product.brand && item.collection === product.collection && item.slug !== product.slug);
   const fromBrand = catalog.filter((item) => item.brand === product.brand && item.slug !== product.slug);
   const similar = (fromCollection.length ? fromCollection : fromBrand).slice(0, 3);

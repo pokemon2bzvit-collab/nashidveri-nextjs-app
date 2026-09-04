@@ -90,8 +90,26 @@ export async function getProducts(): Promise<Product[]> {
 }
 
 export async function getProduct(slug: string) {
-  const catalog = await getProducts();
-  const product = catalog.find((item) => item.slug === slug);
+  let product: Product | undefined;
+  let directLookupCompleted = false;
+
+  if (supabaseKey) {
+    try {
+      const headers = { apikey: supabaseKey, Authorization: `Bearer ${supabaseKey}` };
+      const response = await fetch(`${supabaseUrl}/rest/v1/products?select=slug,category,brand,collection,name,material,style,color,price,description,features,image_path&slug=eq.${encodeURIComponent(slug)}&is_available=eq.true&limit=1`, { headers, cache: "no-store" });
+      if (!response.ok) throw new Error(`Supabase returned ${response.status}`);
+      directLookupCompleted = true;
+      const rows = await response.json() as ProductRow[];
+      product = rows[0] ? mapProduct(rows[0]) : undefined;
+    } catch (error) {
+      // Якщо Supabase тимчасово недоступний, сайт збереже резервний каталог.
+      console.error(`Could not load product ${slug} from Supabase`, error);
+    }
+  }
+
+  // Порожня успішна відповідь означає, що товар прихований або не існує.
+  if (directLookupCompleted && !product) return undefined;
+  if (!product) product = products.find((item) => item.slug === slug);
   if (!product) return undefined;
   try {
     const { media, options, variants, specs } = await getProductExtras(slug);
