@@ -36,7 +36,7 @@ export async function GET(request: NextRequest) {
     const candidates = new Map<string, { url: string; title: string }>();
     for (const match of html.matchAll(/<a\b[^>]*href=["']([^"']+)["'][^>]*>([\s\S]*?)<\/a>/gi)) {
       try {
-        const url = new URL(match[1], sourceUrl).toString();
+        const url = new URL(decode(match[1]), sourceUrl).toString();
         const parsed = new URL(url);
         const title = textFromHtml(match[2]);
         if (parsed.hostname !== "qdoors.ua" || !parsed.pathname.startsWith("/shop/") || parsed.pathname.startsWith("/shop/cat/") || !title || title.length < 3 || title.length > 180) continue;
