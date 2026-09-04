@@ -107,6 +107,7 @@ export function AdminDashboard() {
   const [brand, setBrand] = useState("all");
   const [quality, setQuality] = useState<QualityFilter>("all");
   const [sourcedSlugs, setSourcedSlugs] = useState<Set<string>>(new Set());
+  const [sourceProductSlugs, setSourceProductSlugs] = useState<Record<string, string>>({});
   const [selected, setSelected] = useState<Product | null>(null);
   const [draft, setDraft] = useState<Partial<Product>>({});
   const [tab, setTab] = useState<Tab>("basic");
@@ -147,11 +148,15 @@ export function AdminDashboard() {
     if (!isAdmin) return;
     Promise.all([
       supabase.from("products").select("slug,name,brand,collection,category,price,description,is_available,image_path").order("brand").order("name"),
-      supabase.from("product_sources").select("product_slug"),
+      supabase.from("product_sources").select("product_slug,source_url"),
     ]).then(([productsResult, sourcesResult]) => {
       if (productsResult.error) setNotice(productsResult.error.message);
       else setProducts((productsResult.data || []) as Product[]);
-      if (!sourcesResult.error) setSourcedSlugs(new Set((sourcesResult.data || []).map((item) => item.product_slug)));
+      if (!sourcesResult.error) {
+        const sourceRows = (sourcesResult.data || []) as Array<{ product_slug: string; source_url: string }>;
+        setSourcedSlugs(new Set(sourceRows.map((item) => item.product_slug)));
+        setSourceProductSlugs(Object.fromEntries(sourceRows.map((item) => [item.source_url, item.product_slug])));
+      }
     });
   }, [isAdmin, supabase]);
   useEffect(() => {
@@ -314,6 +319,15 @@ export function AdminDashboard() {
       setNotice("Джерело збережено.");
     }
   }
+  async function markQdoorsExisting(item: QdoorsCatalogItem, target: Product) {
+    setSaving(true);
+    const { error } = await supabase.from("product_sources").upsert({ product_slug: target.slug, source_name: "Q Doors", source_url: item.url, source_product_name: item.title, verification_status: "verified", verified_at: new Date().toISOString(), notes: "Вручну підтверджено в сканері Qdoors як наявна модель." }, { onConflict: "product_slug,source_url" });
+    setSaving(false);
+    if (error) return error.message;
+    setSourceProductSlugs((items) => ({ ...items, [item.url]: target.slug }));
+    setSourcedSlugs((items) => new Set([...items, target.slug]));
+    return null;
+  }
   async function importQdoors(preview: QdoorsPreview, target: Product | null = selected) {
     if (!target) return "Спершу оберіть модель у каталозі.";
     const image = preview.images[0];
@@ -373,7 +387,7 @@ export function AdminDashboard() {
             {tab === "basic" && <Card icon={<SlidersHorizontal size={19} />} title="Основні дані" help="Ці дані показуються клієнтам у каталозі та на сторінці товару."><div className="grid gap-5 lg:grid-cols-[minmax(0,1fr)_240px]"><div><div className="grid gap-4 md:grid-cols-2"><label className="text-sm font-bold">Ціна або текст ціни<input className={inputClass} value={draft.price || ""} onChange={(event) => setDraft({ ...draft, price: event.target.value })} placeholder="Наприклад: від 12 500 грн" /></label><label className="text-sm font-bold">Головне фото<input className={inputClass} value={draft.image_path || ""} onChange={(event) => setDraft({ ...draft, image_path: event.target.value })} placeholder="Шлях у Storage або URL" /></label></div><label className="mt-4 block text-sm font-bold">Опис для клієнта<textarea className={areaClass} value={draft.description || ""} onChange={(event) => setDraft({ ...draft, description: event.target.value })} placeholder="Коротко й зрозуміло опишіть модель." /></label><label className="mt-4 inline-flex items-center gap-2 text-sm font-bold"><input type="checkbox" checked={Boolean(draft.is_available)} onChange={(event) => setDraft({ ...draft, is_available: event.target.checked })} /> Показувати товар у каталозі</label></div><div><p className="mb-2 text-sm font-bold">Як побачить клієнт</p><ImagePreview path={draft.image_path} label={selected.name} /><p className="mt-2 text-xs leading-5 text-stone-500">Натисніть фото, щоб відкрити його окремо й перевірити якість.</p></div></div><button onClick={saveBasic} disabled={saving} className="button-primary mt-5"><Save size={16} /> {saving ? "Зберігаємо…" : "Зберегти основні дані"}</button></Card>}
             {tab === "media" && <Card icon={<FileImage size={19} />} title="Фото та палітри" help="Завантажте фото з пристрою або вставте URL / шлях до Supabase Storage."><div className="grid gap-3 md:grid-cols-[170px_1fr_1fr_auto]"><label className="text-sm font-bold">Тип фото<select className={inputClass} value={mediaKind} onChange={(event) => setMediaKind(event.target.value as Media["kind"])}><option value="gallery">Галерея</option><option value="main">Головне фото</option><option value="palette">Палітра</option></select></label><label className="text-sm font-bold">Підпис<input className={inputClass} value={mediaLabel} onChange={(event) => setMediaLabel(event.target.value)} placeholder="Наприклад: дуб золотий" /></label><label className="text-sm font-bold">Посилання або шлях<input className={inputClass} value={mediaUrl} onChange={(event) => setMediaUrl(event.target.value)} placeholder="https://… або папка/файл.jpg" /></label><button onClick={() => addMedia(mediaUrl)} className="button-light self-end"><Plus size={16} /> Додати</button></div><label className="mt-4 inline-flex cursor-pointer items-center gap-2 rounded-full border border-stone-300 bg-white px-4 py-2.5 text-sm font-bold hover:border-clay"><Upload size={16} /> Завантажити фото з пристрою<input className="hidden" type="file" accept="image/*" onChange={(event) => { const file = event.target.files?.[0]; if (file) uploadMedia(file); }} /></label><div className="mt-5 grid gap-3 sm:grid-cols-2 xl:grid-cols-3">{media.map((item) => <div key={item.id} className="flex items-start justify-between gap-3 rounded-xl border border-stone-200 bg-stone-50 p-3 text-sm"><span className="min-w-0"><b className="block">{item.kind}{item.label ? " · " + item.label : ""}</b><span className="mt-1 block break-all text-xs leading-5 text-stone-500">{item.image_path}</span></span><button onClick={() => removeMedia(item.id)} className="shrink-0 text-stone-400 hover:text-red-600" aria-label="Видалити фото"><Trash2 size={17} /></button></div>)}{!media.length && <p className="rounded-xl bg-stone-50 p-4 text-sm text-stone-500">Додаткових фото ще немає.</p>}</div></Card>}
             {tab === "configuration" && <Configuration specsText={specsText} optionsText={optionsText} variantsText={variantsText} setSpecsText={setSpecsText} setOptionsText={setOptionsText} setVariantsText={setVariantsText} onSave={saveRows} onUploadVariant={uploadVariantPhoto} />}
-            {tab === "sources" && <><QdoorsImporter accessToken={session.access_token} onImport={importQdoors} onCreate={createQdoorsProduct} saving={saving} products={products} /><Sources sources={sources} sourceName={sourceName} sourceUrl={sourceUrl} setSourceName={setSourceName} setSourceUrl={setSourceUrl} onAdd={addSource} /></>}
+            {tab === "sources" && <><QdoorsImporter accessToken={session.access_token} onImport={importQdoors} onCreate={createQdoorsProduct} onMarkExisting={markQdoorsExisting} saving={saving} products={products} sourceProductSlugs={sourceProductSlugs} /><Sources sources={sources} sourceName={sourceName} sourceUrl={sourceUrl} setSourceName={setSourceName} setSourceUrl={setSourceUrl} onAdd={addSource} /></>}
           </div>}
         </section>}
       </div>
@@ -389,12 +403,14 @@ function SourceLibrary() {
   </Card>;
 }
 
-function QdoorsImporter({ accessToken, onImport, onCreate, saving, products }: { accessToken: string; onImport: (preview: QdoorsPreview, target?: Product) => Promise<string | null>; onCreate: (preview: QdoorsPreview) => Promise<string | null>; saving: boolean; products: Product[] }) {
+function QdoorsImporter({ accessToken, onImport, onCreate, onMarkExisting, saving, products, sourceProductSlugs }: { accessToken: string; onImport: (preview: QdoorsPreview, target?: Product) => Promise<string | null>; onCreate: (preview: QdoorsPreview) => Promise<string | null>; onMarkExisting: (item: QdoorsCatalogItem, target: Product) => Promise<string | null>; saving: boolean; products: Product[]; sourceProductSlugs: Record<string, string> }) {
   const [url, setUrl] = useState("");
   const [catalogUrl, setCatalogUrl] = useState("https://qdoors.ua/shop");
   const [loading, setLoading] = useState(false);
   const [scanning, setScanning] = useState(false);
   const [addingUrl, setAddingUrl] = useState("");
+  const [linkingItem, setLinkingItem] = useState<QdoorsCatalogItem | null>(null);
+  const [linkTargetSlug, setLinkTargetSlug] = useState("");
   const [error, setError] = useState("");
   const [scanError, setScanError] = useState("");
   const [importNotice, setImportNotice] = useState("");
@@ -444,6 +460,17 @@ function QdoorsImporter({ accessToken, onImport, onCreate, saving, products }: {
       setAddingUrl("");
     }
   }
+  async function saveExistingLink() {
+    const target = products.find((product) => product.slug === linkTargetSlug);
+    if (!linkingItem || !target) return;
+    setImportNotice("");
+    const message = await onMarkExisting(linkingItem, target);
+    setImportNotice(message || `Позначено як наявну модель: ${target.name}.`);
+    if (!message) {
+      setLinkingItem(null);
+      setLinkTargetSlug("");
+    }
+  }
   async function importIntoProduct() {
     if (!preview) return;
     setImportNotice("");
@@ -475,7 +502,11 @@ function QdoorsImporter({ accessToken, onImport, onCreate, saving, products }: {
   const previewMatch = preview ? getQdoorsMatch(preview.title, products) : null;
   return <div className="space-y-4">
     <Card icon={<PackageSearch size={19} />} title="Сканер каталогу Qdoors" help="Зберіть посилання з каталогу або однієї серії. Нічого не змінюється без вашого підтвердження.">
-      <p className="text-sm leading-6 text-stone-600">Сканер збере посилання на моделі, позначить уже наявні у нас і покаже нові. Він не створює та не змінює товари автоматично.</p><div className="mt-3 flex flex-col gap-3 sm:flex-row"><input className={inputClass + " mt-0 flex-1"} value={catalogUrl} onChange={(event) => setCatalogUrl(event.target.value)} placeholder="https://qdoors.ua/shop або /shop/cat/…" /><button type="button" onClick={scanCatalog} disabled={scanning || !catalogUrl.trim()} className="button-light shrink-0 disabled:opacity-50"><Search size={16} /> {scanning ? "Скануємо…" : "Сканувати"}</button></div>{scanError && <p className="mt-3 rounded-xl bg-red-50 p-3 text-sm text-red-700">{scanError}</p>}{catalogItems.length > 0 && <div className="mt-4"><p className="text-sm font-bold">Знайдено {catalogItems.length} карток</p><div className="mt-3 max-h-96 space-y-2 overflow-y-auto pr-1">{catalogItems.map((item) => { const match = getQdoorsMatch(item.title, products); const statusClass = match?.confidence === "exact" ? "bg-green-100 text-green-800" : match ? "bg-blue-100 text-blue-800" : "bg-amber-100 text-amber-800"; const status = match?.confidence === "exact" ? "Точний збіг: " + match.product.name : match ? "Схожа модель: " + match.product.name + " — перевірте" : "Нова модель — потребує додавання"; return <div key={item.url} className="flex flex-wrap items-center justify-between gap-2 rounded-xl border bg-white p-3"><div className="min-w-0"><b className="block text-sm">{item.title}</b><span className={"mt-1 inline-block rounded-full px-2 py-1 text-xs font-bold " + statusClass}>{status}</span></div><div className="flex shrink-0 gap-2">{!match && <button type="button" onClick={() => addNewFromCatalog(item)} disabled={Boolean(addingUrl) || saving || loading} className="button-primary px-3 py-2 text-sm disabled:opacity-50"><Plus size={15} /> {addingUrl === item.url ? "Додаємо…" : "Додати"}</button>}<button type="button" onClick={() => { setUrl(item.url); inspect(item.url); }} disabled={loading || Boolean(addingUrl)} className="button-light px-3 py-2 text-sm disabled:opacity-50"><Search size={15} /> {loading ? "Перевіряємо…" : "Перевірити"}</button></div></div>; })}</div></div>}
+      <p className="text-sm leading-6 text-stone-600">Сканер збере посилання на моделі, позначить уже наявні у нас і покаже нові. Він не створює та не змінює товари автоматично.</p>
+      <div className="mt-3 flex flex-col gap-3 sm:flex-row"><input className={inputClass + " mt-0 flex-1"} value={catalogUrl} onChange={(event) => setCatalogUrl(event.target.value)} placeholder="https://qdoors.ua/shop або /shop/cat/…" /><button type="button" onClick={scanCatalog} disabled={scanning || !catalogUrl.trim()} className="button-light shrink-0 disabled:opacity-50"><Search size={16} /> {scanning ? "Скануємо…" : "Сканувати"}</button></div>
+      {scanError && <p className="mt-3 rounded-xl bg-red-50 p-3 text-sm text-red-700">{scanError}</p>}
+      {catalogItems.length > 0 && <div className="mt-4"><p className="text-sm font-bold">Знайдено {catalogItems.length} карток</p><div className="mt-3 max-h-96 space-y-2 overflow-y-auto pr-1">{catalogItems.map((item) => { const linkedProduct = products.find((product) => product.slug === sourceProductSlugs[item.url]); const match = linkedProduct ? { product: linkedProduct, confidence: "exact" as const } : getQdoorsMatch(item.title, products); const statusClass = linkedProduct || match?.confidence === "exact" ? "bg-green-100 text-green-800" : match ? "bg-blue-100 text-blue-800" : "bg-amber-100 text-amber-800"; const status = linkedProduct ? "Позначено як наявна: " + linkedProduct.name : match?.confidence === "exact" ? "Точний збіг: " + match.product.name : match ? "Схожа модель: " + match.product.name + " — перевірте" : "Нова модель — потребує додавання"; return <div key={item.url} className="flex flex-wrap items-center justify-between gap-2 rounded-xl border bg-white p-3"><div className="min-w-0"><b className="block text-sm">{item.title}</b><span className={"mt-1 inline-block rounded-full px-2 py-1 text-xs font-bold " + statusClass}>{status}</span></div><div className="flex shrink-0 flex-wrap gap-2">{!match && <button type="button" onClick={() => addNewFromCatalog(item)} disabled={Boolean(addingUrl) || saving || loading} className="button-primary px-3 py-2 text-sm disabled:opacity-50"><Plus size={15} /> {addingUrl === item.url ? "Додаємо…" : "Додати"}</button>}{!linkedProduct && <button type="button" onClick={() => { setLinkingItem(item); setLinkTargetSlug(""); }} disabled={saving || loading} className="button-light px-3 py-2 text-sm disabled:opacity-50">Ця модель уже є</button>}<button type="button" onClick={() => { setUrl(item.url); inspect(item.url); }} disabled={loading || Boolean(addingUrl)} className="button-light px-3 py-2 text-sm disabled:opacity-50"><Search size={15} /> {loading ? "Перевіряємо…" : "Перевірити"}</button></div></div>; })}</div></div>}
+      {linkingItem && <div className="mt-4 rounded-xl border border-blue-200 bg-blue-50 p-4"><b className="block text-sm">Позначити як наявну: {linkingItem.title}</b><p className="mt-1 text-xs leading-5 text-blue-900">Оберіть точну модель з нашого каталогу. Це збереже посилання Qdoors і надалі сканер не вважатиме її новою.</p><div className="mt-3 flex flex-col gap-3 sm:flex-row"><select className={inputClass + " mt-0 flex-1"} value={linkTargetSlug} onChange={(event) => setLinkTargetSlug(event.target.value)}><option value="">Оберіть нашу модель</option>{products.filter((product) => product.brand === "Q Doors").map((product) => <option key={product.slug} value={product.slug}>{product.name} · {product.collection}</option>)}</select><button type="button" onClick={saveExistingLink} disabled={!linkTargetSlug || saving} className="button-primary shrink-0 disabled:opacity-50"><Check size={16} /> {saving ? "Зберігаємо…" : "Підтвердити"}</button><button type="button" onClick={() => { setLinkingItem(null); setLinkTargetSlug(""); }} className="button-light shrink-0">Скасувати</button></div></div>}
     </Card>
     <div ref={resultRef}><Card icon={<Link2 size={19} />} title="Імпорт однієї моделі Qdoors" help="Вставте URL конкретної моделі. Нічого не записується у каталог, доки ви не перевірите результат.">
     <div className="flex flex-col gap-3 sm:flex-row"><input className={inputClass + " mt-0 flex-1"} value={url} onChange={(event) => setUrl(event.target.value)} placeholder="https://qdoors.ua/shop/…" /><button type="button" onClick={() => inspect()} disabled={loading || !url.trim()} className="button-primary shrink-0 disabled:opacity-50"><Search size={16} /> {loading ? "Перевіряємо…" : "Перевірити"}</button></div>
