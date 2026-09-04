@@ -76,7 +76,8 @@ function parseQdoorsPage(html: string, sourceUrl: string): QdoorsPreview {
     .filter((item): item is { label: string; value: string } => Boolean(item.value));
   const outerColor = lineAfter(lines, "колір");
   const innerColor = lineAfter(lines, "колір 2");
-  const finish = outerColor && innerColor ? `RAL ${outerColor.replace(/^RAL\s*/i, "")} + ${innerColor}` : outerColor || innerColor;
+  const displayedInnerColor = /гладь\s+біла\s+шагрень/iu.test(extractHeading(html, text)) ? "гладь біла шагрень" : innerColor;
+  const finish = outerColor && displayedInnerColor ? `RAL ${outerColor.replace(/^RAL\s*/i, "")} + ${displayedInnerColor}` : outerColor || displayedInnerColor;
   if (finish) facts.splice(3, 0, { label: "Підтверджене виконання", value: finish });
   const descriptionStart = text.toLocaleLowerCase("uk-UA").indexOf("опис товару");
   const descriptionEnd = text.toLocaleLowerCase("uk-UA").indexOf("бренд", Math.max(descriptionStart, 0));

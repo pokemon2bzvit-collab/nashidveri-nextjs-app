@@ -267,6 +267,29 @@ export function AdminDashboard() {
       setNotice("Джерело збережено.");
     }
   }
+  async function importQdoors(preview: QdoorsPreview) {
+    if (!selected) return "Спершу оберіть модель у каталозі.";
+    const image = preview.images[0];
+    if (!image || !preview.finish) return "У картці Qdoors немає підтвердженого фото або декору.";
+    setSaving(true);
+    const specifications = [
+      ...preview.facts.map((fact, index) => ({ product_slug: selected.slug, label: fact.label, value: fact.value, sort_order: 100 + index * 10, is_active: true })),
+      ...(preview.productCode ? [{ product_slug: selected.slug, label: "Код виробника", value: preview.productCode, sort_order: 90, is_active: true }] : []),
+    ];
+    const [specificationsResult, optionResult, variantResult, sourceResult] = await Promise.all([
+      supabase.from("product_specs").upsert(specifications, { onConflict: "product_slug,label" }),
+      supabase.from("product_options").upsert({ product_slug: selected.slug, option_group: "finish", group_label: "Підтверджені покриття", label: preview.finish, image_path: image, sort_order: 20, is_active: true }, { onConflict: "product_slug,option_group,label" }),
+      supabase.from("product_variants").upsert({ product_slug: selected.slug, selections: { finish: preview.finish }, image_path: image, sort_order: 20, is_active: true }, { onConflict: "product_slug,selections" }),
+      supabase.from("product_sources").upsert({ product_slug: selected.slug, source_name: "Q Doors", source_url: preview.sourceUrl, source_product_name: preview.title + (preview.productCode ? " · код " + preview.productCode : ""), verification_status: "verified", verified_at: new Date().toISOString(), notes: "Імпортовано з офіційної картки Qdoors: характеристики, декор і пряме оригінальне фото." }, { onConflict: "product_slug,source_url" }),
+    ]);
+    setSaving(false);
+    const error = specificationsResult.error || optionResult.error || variantResult.error || sourceResult.error;
+    if (error) return error.message;
+    await choose(selected);
+    setTab("configuration");
+    setNotice("Імпорт Qdoors завершено: декор, оригінальне фото, характеристики й джерело збережено.");
+    return null;
+  }
 
   if (loading) return <main className="grid min-h-screen place-items-center bg-stone-50 text-stone-600"><LoaderCircle className="animate-spin" /> Завантаження…</main>;
   if (!session) return <AdminLogin email={email} password={password} notice={notice} saving={saving} setEmail={setEmail} setPassword={setPassword} onPasswordLogin={passwordLogin} onMagicLogin={login} />;
@@ -285,7 +308,7 @@ export function AdminDashboard() {
             {tab === "basic" && <Card icon={<SlidersHorizontal size={19} />} title="Основні дані" help="Ці дані показуються клієнтам у каталозі та на сторінці товару."><div className="grid gap-5 lg:grid-cols-[minmax(0,1fr)_240px]"><div><div className="grid gap-4 md:grid-cols-2"><label className="text-sm font-bold">Ціна або текст ціни<input className={inputClass} value={draft.price || ""} onChange={(event) => setDraft({ ...draft, price: event.target.value })} placeholder="Наприклад: від 12 500 грн" /></label><label className="text-sm font-bold">Головне фото<input className={inputClass} value={draft.image_path || ""} onChange={(event) => setDraft({ ...draft, image_path: event.target.value })} placeholder="Шлях у Storage або URL" /></label></div><label className="mt-4 block text-sm font-bold">Опис для клієнта<textarea className={areaClass} value={draft.description || ""} onChange={(event) => setDraft({ ...draft, description: event.target.value })} placeholder="Коротко й зрозуміло опишіть модель." /></label><label className="mt-4 inline-flex items-center gap-2 text-sm font-bold"><input type="checkbox" checked={Boolean(draft.is_available)} onChange={(event) => setDraft({ ...draft, is_available: event.target.checked })} /> Показувати товар у каталозі</label></div><div><p className="mb-2 text-sm font-bold">Як побачить клієнт</p><ImagePreview path={draft.image_path} label={selected.name} /><p className="mt-2 text-xs leading-5 text-stone-500">Натисніть фото, щоб відкрити його окремо й перевірити якість.</p></div></div><button onClick={saveBasic} disabled={saving} className="button-primary mt-5"><Save size={16} /> {saving ? "Зберігаємо…" : "Зберегти основні дані"}</button></Card>}
             {tab === "media" && <Card icon={<FileImage size={19} />} title="Фото та палітри" help="Завантажте фото з пристрою або вставте URL / шлях до Supabase Storage."><div className="grid gap-3 md:grid-cols-[170px_1fr_1fr_auto]"><label className="text-sm font-bold">Тип фото<select className={inputClass} value={mediaKind} onChange={(event) => setMediaKind(event.target.value as Media["kind"])}><option value="gallery">Галерея</option><option value="main">Головне фото</option><option value="palette">Палітра</option></select></label><label className="text-sm font-bold">Підпис<input className={inputClass} value={mediaLabel} onChange={(event) => setMediaLabel(event.target.value)} placeholder="Наприклад: дуб золотий" /></label><label className="text-sm font-bold">Посилання або шлях<input className={inputClass} value={mediaUrl} onChange={(event) => setMediaUrl(event.target.value)} placeholder="https://… або папка/файл.jpg" /></label><button onClick={() => addMedia(mediaUrl)} className="button-light self-end"><Plus size={16} /> Додати</button></div><label className="mt-4 inline-flex cursor-pointer items-center gap-2 rounded-full border border-stone-300 bg-white px-4 py-2.5 text-sm font-bold hover:border-clay"><Upload size={16} /> Завантажити фото з пристрою<input className="hidden" type="file" accept="image/*" onChange={(event) => { const file = event.target.files?.[0]; if (file) uploadMedia(file); }} /></label><div className="mt-5 grid gap-3 sm:grid-cols-2 xl:grid-cols-3">{media.map((item) => <div key={item.id} className="flex items-start justify-between gap-3 rounded-xl border border-stone-200 bg-stone-50 p-3 text-sm"><span className="min-w-0"><b className="block">{item.kind}{item.label ? " · " + item.label : ""}</b><span className="mt-1 block break-all text-xs leading-5 text-stone-500">{item.image_path}</span></span><button onClick={() => removeMedia(item.id)} className="shrink-0 text-stone-400 hover:text-red-600" aria-label="Видалити фото"><Trash2 size={17} /></button></div>)}{!media.length && <p className="rounded-xl bg-stone-50 p-4 text-sm text-stone-500">Додаткових фото ще немає.</p>}</div></Card>}
             {tab === "configuration" && <Configuration specsText={specsText} optionsText={optionsText} variantsText={variantsText} setSpecsText={setSpecsText} setOptionsText={setOptionsText} setVariantsText={setVariantsText} onSave={saveRows} onUploadVariant={uploadVariantPhoto} />}
-            {tab === "sources" && <><QdoorsImporter accessToken={session.access_token} /><Sources sources={sources} sourceName={sourceName} sourceUrl={sourceUrl} setSourceName={setSourceName} setSourceUrl={setSourceUrl} onAdd={addSource} /></>}
+            {tab === "sources" && <><QdoorsImporter accessToken={session.access_token} onImport={importQdoors} saving={saving} /><Sources sources={sources} sourceName={sourceName} sourceUrl={sourceUrl} setSourceName={setSourceName} setSourceUrl={setSourceUrl} onAdd={addSource} /></>}
           </div>}
         </section>}
       </div>
@@ -301,14 +324,16 @@ function SourceLibrary() {
   </Card>;
 }
 
-function QdoorsImporter({ accessToken }: { accessToken: string }) {
+function QdoorsImporter({ accessToken, onImport, saving }: { accessToken: string; onImport: (preview: QdoorsPreview) => Promise<string | null>; saving: boolean }) {
   const [url, setUrl] = useState("");
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
+  const [importNotice, setImportNotice] = useState("");
   const [preview, setPreview] = useState<QdoorsPreview | null>(null);
   async function inspect() {
     setLoading(true);
     setError("");
+    setImportNotice("");
     setPreview(null);
     try {
       const response = await fetch("/api/admin/import/qdoors?url=" + encodeURIComponent(url), { headers: { Authorization: "Bearer " + accessToken } });
@@ -321,10 +346,16 @@ function QdoorsImporter({ accessToken }: { accessToken: string }) {
       setLoading(false);
     }
   }
+  async function importIntoProduct() {
+    if (!preview) return;
+    setImportNotice("");
+    const message = await onImport(preview);
+    setImportNotice(message || "Імпорт завершено: декор, оригінальне фото, характеристики й джерело збережено.");
+  }
   return <Card icon={<PackageSearch size={19} />} title="Імпорт із Qdoors — перевірка" help="Вставте URL конкретної моделі. Нічого не записується у каталог, доки ви не перевірите результат.">
     <div className="flex flex-col gap-3 sm:flex-row"><input className={inputClass + " mt-0 flex-1"} value={url} onChange={(event) => setUrl(event.target.value)} placeholder="https://qdoors.ua/shop/…" /><button type="button" onClick={inspect} disabled={loading || !url.trim()} className="button-primary shrink-0 disabled:opacity-50"><Search size={16} /> {loading ? "Перевіряємо…" : "Перевірити"}</button></div>
     {error && <p className="mt-4 rounded-xl bg-red-50 p-3 text-sm text-red-700">{error}</p>}
-    {preview && <div className="mt-5 rounded-2xl border border-stone-200 bg-stone-50 p-4"><div className="flex flex-wrap items-start justify-between gap-2"><div><p className="text-xs font-bold uppercase tracking-[.14em] text-clay">Знайдено у Qdoors</p><h4 className="mt-1 font-display text-2xl">{preview.title}</h4>{preview.productCode && <p className="mt-1 text-sm text-stone-500">Код виробника: {preview.productCode}</p>}</div><a href={preview.sourceUrl} target="_blank" rel="noreferrer" className="button-light px-3 py-2 text-sm">Джерело <ExternalLink size={15} /></a></div>{preview.finish && <p className="mt-4 inline-flex rounded-full bg-white px-3 py-1.5 text-sm font-bold text-stone-700">{preview.finish}</p>}<div className="mt-4 grid gap-3 sm:grid-cols-3">{preview.images.slice(0, 3).map((image, index) => <a key={image} href={image} target="_blank" rel="noreferrer" className="overflow-hidden rounded-xl border bg-white"><img src={image} alt={preview.title + " — фото " + (index + 1)} className="aspect-[4/5] w-full object-contain p-2" /></a>)}</div><p className="mt-2 text-xs text-stone-500">Показано оригінали фото. На цьому етапі дані ще не зберігаються.</p>{preview.description && <details className="mt-4 rounded-xl border bg-white p-3"><summary className="cursor-pointer text-sm font-bold">Опис із картки</summary><p className="mt-3 whitespace-pre-line text-sm leading-6 text-stone-600">{preview.description}</p></details>}<details className="mt-3 rounded-xl border bg-white p-3"><summary className="cursor-pointer text-sm font-bold">Характеристики ({preview.facts.length})</summary><dl className="mt-3 grid gap-x-5 gap-y-2 text-sm sm:grid-cols-2">{preview.facts.map((fact) => <div key={fact.label} className="flex justify-between gap-3 border-b border-stone-100 pb-2"><dt className="text-stone-500">{fact.label}</dt><dd className="text-right font-semibold">{fact.value}</dd></div>)}</dl></details></div>}
+    {preview && <div className="mt-5 rounded-2xl border border-stone-200 bg-stone-50 p-4"><div className="flex flex-wrap items-start justify-between gap-2"><div><p className="text-xs font-bold uppercase tracking-[.14em] text-clay">Знайдено у Qdoors</p><h4 className="mt-1 font-display text-2xl">{preview.title}</h4>{preview.productCode && <p className="mt-1 text-sm text-stone-500">Код виробника: {preview.productCode}</p>}</div><a href={preview.sourceUrl} target="_blank" rel="noreferrer" className="button-light px-3 py-2 text-sm">Джерело <ExternalLink size={15} /></a></div>{preview.finish && <p className="mt-4 inline-flex rounded-full bg-white px-3 py-1.5 text-sm font-bold text-stone-700">{preview.finish}</p>}<div className="mt-4 grid gap-3 sm:grid-cols-3">{preview.images.slice(0, 3).map((image, index) => <a key={image} href={image} target="_blank" rel="noreferrer" className="overflow-hidden rounded-xl border bg-white"><img src={image} alt={preview.title + " — фото " + (index + 1)} className="aspect-[4/5] w-full object-contain p-2" /></a>)}</div><p className="mt-2 text-xs text-stone-500">Показано оригінали фото. Переконайтеся, що це саме потрібне виконання.</p><button type="button" onClick={importIntoProduct} disabled={saving || !preview.finish || !preview.images[0]} className="button-primary mt-4 disabled:opacity-50"><Check size={16} /> {saving ? "Імпортуємо…" : "Імпортувати у вибраний товар"}</button>{importNotice && <p className="mt-3 rounded-xl bg-white p-3 text-sm font-medium text-stone-700">{importNotice}</p>}{preview.description && <details className="mt-4 rounded-xl border bg-white p-3"><summary className="cursor-pointer text-sm font-bold">Опис із картки</summary><p className="mt-3 whitespace-pre-line text-sm leading-6 text-stone-600">{preview.description}</p></details>}<details className="mt-3 rounded-xl border bg-white p-3"><summary className="cursor-pointer text-sm font-bold">Характеристики ({preview.facts.length})</summary><dl className="mt-3 grid gap-x-5 gap-y-2 text-sm sm:grid-cols-2">{preview.facts.map((fact) => <div key={fact.label} className="flex justify-between gap-3 border-b border-stone-100 pb-2"><dt className="text-stone-500">{fact.label}</dt><dd className="text-right font-semibold">{fact.value}</dd></div>)}</dl></details></div>}
   </Card>;
 }
 
