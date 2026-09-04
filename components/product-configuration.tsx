@@ -23,6 +23,7 @@ export function ProductConfiguration({ options, variants, onImageChange, preview
   const [selected, setSelected] = useState<Record<string, number>>({});
   const [draftSelected, setDraftSelected] = useState<Record<string, number>>({});
   const [isOpen, setIsOpen] = useState(false);
+  const [hasAppliedSelection, setHasAppliedSelection] = useState(false);
 
   const hasPhotoForOption = (groupKey: string, label: string) => visualVariants.some(
     (variant) => Boolean(variant.image) && variant.selections[groupKey] === label,
@@ -59,8 +60,10 @@ export function ProductConfiguration({ options, variants, onImageChange, preview
   const hasVisualPreview = Boolean(matchingVariant?.image);
 
   useEffect(() => {
-    onImageChange(matchingVariant?.image || null);
-  }, [matchingVariant?.image, onImageChange]);
+    // Головне фото картки є перевіреним виконанням моделі. Не замінюємо його
+    // першим доступним варіантом, доки покупець сам не застосує свій вибір.
+    onImageChange(hasAppliedSelection ? matchingVariant?.image || null : null);
+  }, [hasAppliedSelection, matchingVariant?.image, onImageChange]);
 
   useEffect(() => {
     if (!isOpen) return;
@@ -81,6 +84,7 @@ export function ProductConfiguration({ options, variants, onImageChange, preview
   const selectOption = (groupKey: string, index: number) => setDraftSelected((current) => ({ ...current, [groupKey]: index }));
   const applySelection = () => {
     setSelected(draftSelected);
+    setHasAppliedSelection(true);
     const configuration = groups.map((group) => {
       const option = group[selectedIndexFor(group, draftSelected)];
       return option ? `${option.groupLabel}: ${option.label}` : "";
