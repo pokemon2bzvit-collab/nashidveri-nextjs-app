@@ -343,7 +343,8 @@ export function AdminDashboard() {
     const slug = "qdoors-" + preview.productCode;
     if (products.some((product) => product.slug === slug)) return "Модель із кодом " + preview.productCode + " уже є в каталозі.";
     const purpose = preview.facts.find((fact) => fact.label === "Призначення")?.value.toLocaleLowerCase("uk-UA") || "";
-    const collection = purpose.includes("вулиц") ? "Вулиця" : "Квартира";
+    const sourceTitle = preview.title.toLocaleLowerCase("uk-UA");
+    const collection = purpose.includes("вулиц") || sourceTitle.includes("стріт") || sourceTitle.includes("street") ? "Вулиця" : "Квартира";
     const product: Product = { slug, name: preview.title.replace(/^qdoors\s*/iu, "Q Doors "), brand: "Q Doors", collection, category: "entrance", price: "Ціна за запитом", description: preview.description, is_available: true, image_path: image };
     setSaving(true);
     const { error } = await supabase.from("products").insert({ slug, category: "entrance", brand: "Q Doors", collection, name: product.name, material: "Вхідні", style: "Колекція " + collection, color: "Варіанти декорів", price: product.price, description: product.description, features: ["Фабрика Q Doors", "Колекція " + collection], image_path: image, sort_order: 99999, is_available: true });
@@ -390,25 +391,50 @@ function QdoorsImporter({ accessToken, onImport, onCreate, saving, products }: {
   const [catalogUrl, setCatalogUrl] = useState("https://qdoors.ua/shop");
   const [loading, setLoading] = useState(false);
   const [scanning, setScanning] = useState(false);
+  const [addingUrl, setAddingUrl] = useState("");
   const [error, setError] = useState("");
   const [scanError, setScanError] = useState("");
   const [importNotice, setImportNotice] = useState("");
   const [preview, setPreview] = useState<QdoorsPreview | null>(null);
   const [catalogItems, setCatalogItems] = useState<QdoorsCatalogItem[]>([]);
+  async function requestPreview(source: string) {
+    const response = await fetch("/api/admin/import/qdoors?url=" + encodeURIComponent(source), { headers: { Authorization: "Bearer " + accessToken } });
+    const data = await response.json() as QdoorsPreview & { message?: string };
+    if (!response.ok) throw new Error(data.message || "Не вдалося перевірити модель.");
+    return data;
+  }
   async function inspect() {
     setLoading(true);
     setError("");
     setImportNotice("");
     setPreview(null);
     try {
-      const response = await fetch("/api/admin/import/qdoors?url=" + encodeURIComponent(url), { headers: { Authorization: "Bearer " + accessToken } });
-      const data = await response.json() as QdoorsPreview & { message?: string };
-      if (!response.ok) throw new Error(data.message || "Не вдалося перевірити модель.");
-      setPreview(data);
+      setPreview(await requestPreview(url));
     } catch (cause) {
       setError(cause instanceof Error ? cause.message : "Не вдалося перевірити модель.");
     } finally {
       setLoading(false);
+    }
+  }
+  async function addNewFromCatalog(item: QdoorsCatalogItem) {
+    setAddingUrl(item.url);
+    setError("");
+    setImportNotice("");
+    try {
+      const nextPreview = await requestPreview(item.url);
+      setUrl(item.url);
+      setPreview(nextPreview);
+      const match = getQdoorsMatch(nextPreview.title, products);
+      if (match) {
+        setImportNotice(`Модель потребує ручної перевірки: знайдено ${match.confidence === "exact" ? "точний" : "схожий"} збіг «${match.product.name}».`);
+        return;
+      }
+      const message = await onCreate(nextPreview);
+      setImportNotice(message || "Нову модель додано до каталогу: фото, опис, характеристики, декор і джерело збережено.");
+    } catch (cause) {
+      setError(cause instanceof Error ? cause.message : "Не вдалося додати модель.");
+    } finally {
+      setAddingUrl("");
     }
   }
   async function importIntoProduct() {
@@ -442,7 +468,7 @@ function QdoorsImporter({ accessToken, onImport, onCreate, saving, products }: {
   const previewMatch = preview ? getQdoorsMatch(preview.title, products) : null;
   return <div className="space-y-4">
     <Card icon={<PackageSearch size={19} />} title="Сканер каталогу Qdoors" help="Зберіть посилання з каталогу або однієї серії. Нічого не змінюється без вашого підтвердження.">
-      <p className="text-sm leading-6 text-stone-600">Сканер збере посилання на моделі, позначить уже наявні у нас і покаже нові. Він не створює та не змінює товари автоматично.</p><div className="mt-3 flex flex-col gap-3 sm:flex-row"><input className={inputClass + " mt-0 flex-1"} value={catalogUrl} onChange={(event) => setCatalogUrl(event.target.value)} placeholder="https://qdoors.ua/shop або /shop/cat/…" /><button type="button" onClick={scanCatalog} disabled={scanning || !catalogUrl.trim()} className="button-light shrink-0 disabled:opacity-50"><Search size={16} /> {scanning ? "Скануємо…" : "Сканувати"}</button></div>{scanError && <p className="mt-3 rounded-xl bg-red-50 p-3 text-sm text-red-700">{scanError}</p>}{catalogItems.length > 0 && <div className="mt-4"><p className="text-sm font-bold">Знайдено {catalogItems.length} карток</p><div className="mt-3 max-h-96 space-y-2 overflow-y-auto pr-1">{catalogItems.map((item) => { const match = getQdoorsMatch(item.title, products); const statusClass = match?.confidence === "exact" ? "bg-green-100 text-green-800" : match ? "bg-blue-100 text-blue-800" : "bg-amber-100 text-amber-800"; const status = match?.confidence === "exact" ? "Точний збіг: " + match.product.name : match ? "Схожа модель: " + match.product.name + " — перевірте" : "Нова модель — потребує додавання"; return <div key={item.url} className="flex flex-wrap items-center justify-between gap-2 rounded-xl border bg-white p-3"><div className="min-w-0"><b className="block text-sm">{item.title}</b><span className={"mt-1 inline-block rounded-full px-2 py-1 text-xs font-bold " + statusClass}>{status}</span></div><button type="button" onClick={() => { setUrl(item.url); setPreview(null); setError(""); }} className="button-light shrink-0 px-3 py-2 text-sm">Перевірити картку</button></div>; })}</div></div>}
+      <p className="text-sm leading-6 text-stone-600">Сканер збере посилання на моделі, позначить уже наявні у нас і покаже нові. Він не створює та не змінює товари автоматично.</p><div className="mt-3 flex flex-col gap-3 sm:flex-row"><input className={inputClass + " mt-0 flex-1"} value={catalogUrl} onChange={(event) => setCatalogUrl(event.target.value)} placeholder="https://qdoors.ua/shop або /shop/cat/…" /><button type="button" onClick={scanCatalog} disabled={scanning || !catalogUrl.trim()} className="button-light shrink-0 disabled:opacity-50"><Search size={16} /> {scanning ? "Скануємо…" : "Сканувати"}</button></div>{scanError && <p className="mt-3 rounded-xl bg-red-50 p-3 text-sm text-red-700">{scanError}</p>}{catalogItems.length > 0 && <div className="mt-4"><p className="text-sm font-bold">Знайдено {catalogItems.length} карток</p><div className="mt-3 max-h-96 space-y-2 overflow-y-auto pr-1">{catalogItems.map((item) => { const match = getQdoorsMatch(item.title, products); const statusClass = match?.confidence === "exact" ? "bg-green-100 text-green-800" : match ? "bg-blue-100 text-blue-800" : "bg-amber-100 text-amber-800"; const status = match?.confidence === "exact" ? "Точний збіг: " + match.product.name : match ? "Схожа модель: " + match.product.name + " — перевірте" : "Нова модель — потребує додавання"; return <div key={item.url} className="flex flex-wrap items-center justify-between gap-2 rounded-xl border bg-white p-3"><div className="min-w-0"><b className="block text-sm">{item.title}</b><span className={"mt-1 inline-block rounded-full px-2 py-1 text-xs font-bold " + statusClass}>{status}</span></div><div className="flex shrink-0 gap-2">{!match && <button type="button" onClick={() => addNewFromCatalog(item)} disabled={Boolean(addingUrl) || saving} className="button-primary px-3 py-2 text-sm disabled:opacity-50"><Plus size={15} /> {addingUrl === item.url ? "Додаємо…" : "Додати"}</button>}<button type="button" onClick={() => { setUrl(item.url); setPreview(null); setError(""); }} className="button-light px-3 py-2 text-sm">Перевірити</button></div></div>; })}</div></div>}
     </Card>
     <Card icon={<Link2 size={19} />} title="Імпорт однієї моделі Qdoors" help="Вставте URL конкретної моделі. Нічого не записується у каталог, доки ви не перевірите результат.">
     <div className="flex flex-col gap-3 sm:flex-row"><input className={inputClass + " mt-0 flex-1"} value={url} onChange={(event) => setUrl(event.target.value)} placeholder="https://qdoors.ua/shop/…" /><button type="button" onClick={inspect} disabled={loading || !url.trim()} className="button-primary shrink-0 disabled:opacity-50"><Search size={16} /> {loading ? "Перевіряємо…" : "Перевірити"}</button></div>
