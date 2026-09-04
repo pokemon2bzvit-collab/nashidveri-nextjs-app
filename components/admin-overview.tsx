@@ -2,14 +2,26 @@
 
 import Link from "next/link";
 import { useEffect, useMemo, useState } from "react";
-import { AlertTriangle, ArrowRight, ClipboardList, FileImage, LoaderCircle, Package, PencilLine, Settings2, ShieldCheck } from "lucide-react";
+import { AlertTriangle, ArrowRight, ClipboardList, FileImage, LoaderCircle, Package, PackageSearch, PencilLine, Settings2, ShieldCheck } from "lucide-react";
 import { AdminRouteGuard } from "@/components/admin-route-guard";
 import { getSupabaseBrowserClient } from "@/lib/supabase-browser";
 
-type Product = { slug: string; is_available: boolean; image_path: string | null; description: string | null };
+type Product = { slug: string; brand: string; is_available: boolean; image_path: string | null; description: string | null };
 type Lead = { id: string; name: string; phone: string; status: string; created_at: string; request_type: string };
 type Stats = { total: number; published: number; withoutPhoto: number; withoutDescription: number; withoutSource: number };
 const leadLabels: Record<string, string> = { measurement: "Замір", price_request: "Прорахунок", contact_form: "Повідомлення", consultation: "Консультація" };
+const manufacturerHub = [
+  { brand: "Abwehr", note: "Вхідні двері · офіційний каталог" },
+  { brand: "Grand", note: "Міжкімнатні та вхідні двері" },
+  { brand: "Magda", note: "Вхідні двері для будинку й квартири" },
+  { brand: "Q Doors", note: "Імпорт із офіційного каталогу Qdoors", importer: "qdoors" },
+  { brand: "StilDoors", note: "Вхідні двері" },
+  { brand: "Papa Carlo", note: "Міжкімнатні двері та колекції" },
+  { brand: "Rodos Steel", note: "Вхідні двері" },
+  { brand: "Rodos", note: "Міжкімнатні двері та покриття" },
+  { brand: "Страж", note: "Вхідні двері для квартири й будинку" },
+  { brand: "Термінус", note: "Міжкімнатні двері" },
+];
 
 function ActionCard({ href, icon, title, text, action }: { href: string; icon: React.ReactNode; title: string; text: string; action: string }) {
   return <Link href={href} className="group rounded-2xl border bg-white p-5 shadow-sm transition hover:-translate-y-0.5 hover:border-clay hover:shadow-md"><span className="grid size-11 place-items-center rounded-xl bg-sand text-clay">{icon}</span><h2 className="mt-5 font-display text-2xl">{title}</h2><p className="mt-2 min-h-12 text-sm leading-6 text-stone-600">{text}</p><span className="mt-5 inline-flex items-center gap-2 text-sm font-bold text-clay">{action}<ArrowRight className="transition group-hover:translate-x-1" size={16} /></span></Link>;
@@ -18,6 +30,7 @@ function ActionCard({ href, icon, title, text, action }: { href: string; icon: R
 function AdminOverviewContent() {
   const supabase = useMemo(() => getSupabaseBrowserClient(), []);
   const [stats, setStats] = useState<Stats | null>(null);
+  const [products, setProducts] = useState<Product[]>([]);
   const [leads, setLeads] = useState<Lead[]>([]);
   const [leadsAvailable, setLeadsAvailable] = useState(true);
   const [loading, setLoading] = useState(true);
@@ -25,11 +38,12 @@ function AdminOverviewContent() {
   useEffect(() => {
     async function load() {
       const [productsResult, sourcesResult, leadsResult] = await Promise.all([
-        supabase.from("products").select("slug,is_available,image_path,description"),
+        supabase.from("products").select("slug,brand,is_available,image_path,description"),
         supabase.from("product_sources").select("product_slug"),
         supabase.from("leads").select("id,name,phone,status,created_at,request_type").order("created_at", { ascending: false }).limit(5),
       ]);
       const products = (productsResult.data || []) as Product[];
+      setProducts(products);
       const sourced = new Set((sourcesResult.data || []).map((item) => item.product_slug));
       setStats({ total: products.length, published: products.filter((item) => item.is_available).length, withoutPhoto: products.filter((item) => !item.image_path).length, withoutDescription: products.filter((item) => !item.description?.trim()).length, withoutSource: products.filter((item) => !sourced.has(item.slug)).length });
       if (leadsResult.error) setLeadsAvailable(false); else setLeads(leadsResult.data as Lead[] || []);
@@ -41,6 +55,7 @@ function AdminOverviewContent() {
   return <><section className="rounded-3xl bg-ink px-5 py-8 text-white sm:px-8"><p className="text-xs font-bold uppercase tracking-[.16em] text-sand">Робоча панель</p><h1 className="mt-2 font-display text-4xl sm:text-5xl">Керування каталогом</h1><p className="mt-3 max-w-2xl text-sm leading-6 text-white/70 sm:text-base">Тут видно, що потребує уваги, і можна одразу перейти до товарів, заявок або структури каталогу.</p></section>
   {loading ? <div className="grid min-h-52 place-items-center"><span className="inline-flex items-center gap-2 text-sm text-stone-500"><LoaderCircle className="animate-spin" size={18} /> Оновлюємо дані…</span></div> : <><section className="mt-5 grid gap-3 sm:grid-cols-2 lg:grid-cols-4"><div className="rounded-2xl border bg-white p-4"><Package className="text-clay" size={20} /><b className="mt-4 block font-display text-3xl">{stats?.total || 0}</b><span className="text-sm text-stone-600">усього моделей</span></div><div className="rounded-2xl border bg-white p-4"><ShieldCheck className="text-clay" size={20} /><b className="mt-4 block font-display text-3xl">{stats?.published || 0}</b><span className="text-sm text-stone-600">показується в каталозі</span></div><Link href="/admin/leads" className="rounded-2xl border bg-white p-4 transition hover:border-clay"><ClipboardList className="text-clay" size={20} /><b className="mt-4 block font-display text-3xl">{leadsAvailable ? leads.length : "—"}</b><span className="text-sm text-stone-600">останні заявки</span></Link><Link href="/admin/catalog?quality=photo" className="rounded-2xl border bg-white p-4 transition hover:border-clay"><AlertTriangle className="text-clay" size={20} /><b className="mt-4 block font-display text-3xl">{(stats?.withoutPhoto || 0) + (stats?.withoutDescription || 0)}</b><span className="text-sm text-stone-600">товарів без даних</span></Link></section>
   <section className="mt-5 grid gap-4 md:grid-cols-2 xl:grid-cols-4"><ActionCard href="/admin/catalog" icon={<PencilLine size={21} />} title="Товари" text="Редагуйте опис, ціну, фото, декори, характеристики та джерела." action="Відкрити товари" /><ActionCard href="/admin/leads" icon={<ClipboardList size={21} />} title="Заявки" text="Передзвонюйте клієнтам і відмічайте етап роботи із заявкою." action="Відкрити заявки" /><ActionCard href="/admin/structure" icon={<Settings2 size={21} />} title="Структура" text="Керуйте фабриками, колекціями та складом каталогу." action="Відкрити структуру" /><ActionCard href="/admin/password" icon={<ShieldCheck size={21} />} title="Доступ" text="Змініть пароль адміністратора, якщо це потрібно." action="Налаштувати доступ" /></section>
+  <section className="mt-5 rounded-2xl border bg-white p-5 shadow-sm"><div className="flex flex-wrap items-end justify-between gap-3"><div><p className="text-xs font-bold uppercase tracking-[.14em] text-clay">Поповнення каталогу</p><h2 className="mt-1 font-display text-3xl">Наші виробники</h2><p className="mt-2 max-w-2xl text-sm leading-6 text-stone-600">Оберіть фабрику, щоб швидко перевірити її моделі, додати фото, опис, характеристики або оновити існуючий товар.</p></div><Link href="/admin/catalog" className="button-light px-3 py-2 text-sm">Усі товари <ArrowRight size={16} /></Link></div><div className="mt-5 grid gap-3 sm:grid-cols-2 xl:grid-cols-3">{manufacturerHub.map((manufacturer) => { const count = products.filter((product) => product.brand === manufacturer.brand).length; const href = "/admin/catalog?brand=" + encodeURIComponent(manufacturer.brand) + (manufacturer.importer ? "&importer=" + manufacturer.importer : ""); return <Link key={manufacturer.brand} href={href} className="group rounded-xl border border-stone-200 bg-stone-50 p-4 transition hover:-translate-y-0.5 hover:border-clay hover:bg-sand"><span className="grid size-10 place-items-center rounded-xl bg-white text-clay shadow-sm"><PackageSearch size={18} /></span><div className="mt-4 flex items-start justify-between gap-3"><div><h3 className="font-display text-xl">{manufacturer.brand}</h3><p className="mt-1 text-sm leading-5 text-stone-600">{manufacturer.note}</p></div><b className="shrink-0 rounded-full bg-white px-2.5 py-1 text-xs text-stone-600">{count}</b></div><span className="mt-4 inline-flex items-center gap-2 text-sm font-bold text-clay">{manufacturer.importer ? "Сканувати та імпортувати" : "Керувати моделями"}<ArrowRight className="transition group-hover:translate-x-1" size={16} /></span></Link>; })}</div></section>
   <section className="mt-5 grid gap-5 xl:grid-cols-[1.15fr_.85fr]"><div className="rounded-2xl border bg-white p-5 shadow-sm"><div className="flex items-center justify-between gap-3"><div><p className="text-xs font-bold uppercase tracking-[.14em] text-clay">Контроль якості</p><h2 className="mt-1 font-display text-3xl">Що варто доповнити</h2></div><Link className="text-sm font-bold text-clay" href="/admin/catalog">До товарів</Link></div><div className="mt-5 space-y-3"><Link href="/admin/catalog?quality=photo" className="flex items-center justify-between rounded-xl bg-stone-50 px-4 py-3 text-sm transition hover:bg-sand"><span className="inline-flex items-center gap-2"><FileImage size={17} className="text-clay" /> Без головного фото</span><b>{stats?.withoutPhoto || 0}</b></Link><Link href="/admin/catalog?quality=description" className="flex items-center justify-between rounded-xl bg-stone-50 px-4 py-3 text-sm transition hover:bg-sand"><span className="inline-flex items-center gap-2"><PencilLine size={17} className="text-clay" /> Без опису</span><b>{stats?.withoutDescription || 0}</b></Link><Link href="/admin/catalog?quality=source" className="flex items-center justify-between rounded-xl bg-stone-50 px-4 py-3 text-sm transition hover:bg-sand"><span className="inline-flex items-center gap-2"><AlertTriangle size={17} className="text-clay" /> Без посилання на джерело</span><b>{stats?.withoutSource || 0}</b></Link></div></div><div className="rounded-2xl border bg-white p-5 shadow-sm"><div className="flex items-center justify-between gap-3"><div><p className="text-xs font-bold uppercase tracking-[.14em] text-clay">Нові звернення</p><h2 className="mt-1 font-display text-3xl">Останні заявки</h2></div><Link className="text-sm font-bold text-clay" href="/admin/leads">Усі</Link></div>{!leadsAvailable ? <p className="mt-5 rounded-xl bg-sand p-4 text-sm leading-6 text-stone-700">Щоб увімкнути заявки, виконайте SQL-файл <b>supabase/leads-management.sql</b> у Supabase.</p> : <div className="mt-5 space-y-3">{leads.map((lead) => <Link key={lead.id} href="/admin/leads" className="block rounded-xl bg-stone-50 p-3 transition hover:bg-sand"><div className="flex justify-between gap-3"><b className="text-sm">{lead.name}</b><span className="text-xs text-stone-500">{leadLabels[lead.request_type] || lead.request_type}</span></div><p className="mt-1 text-sm text-stone-600">{lead.phone}</p></Link>)}{!leads.length && <p className="rounded-xl bg-stone-50 p-4 text-sm text-stone-600">Поки що заявок немає.</p>}</div>}</div></section></>}</>;
 }
 

@@ -142,6 +142,18 @@ export function AdminDashboard() {
     if (requested === "photo" || requested === "description" || requested === "source" || requested === "hidden") setQuality(requested);
     else setQuality("all");
   }, [searchParams]);
+  useEffect(() => {
+    const requested = searchParams.get("brand");
+    setBrand(requested && brands.includes(requested) ? requested : "all");
+  }, [searchParams, brands]);
+  useEffect(() => {
+    if (searchParams.get("importer") !== "qdoors" || selected || !products.length) return;
+    const firstQdoorsProduct = products.find((product) => product.brand === "Q Doors");
+    if (firstQdoorsProduct) {
+      choose(firstQdoorsProduct);
+      setTab("sources");
+    }
+  }, [searchParams, products, selected]);
 
   async function login(event: FormEvent) {
     event.preventDefault();
