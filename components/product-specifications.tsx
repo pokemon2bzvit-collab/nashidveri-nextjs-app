@@ -20,9 +20,8 @@ export function ProductSpecifications({ specs }: { specs?: ProductSpec[] }) {
   if (!specs?.length) return null;
   // Найперше покупцеві потрібні габарити та сумісність із прорізом.
   // Повний список нижче зберігає порядок, який задав менеджер в адмінці.
-  const previewSpecs = [...specs].sort((left, right) => previewPriority(left.label) - previewPriority(right.label) || left.sortOrder - right.sortOrder).slice(0, 3);
-  const visibleSpecs = isOpen ? specs : previewSpecs;
-  const hiddenCount = Math.max(specs.length - visibleSpecs.length, 0);
+  const orderedSpecs = [...specs].sort((left, right) => previewPriority(left.label) - previewPriority(right.label) || left.sortOrder - right.sortOrder);
+  const hiddenCount = Math.max(orderedSpecs.length - 3, 0);
 
   return (
     <section className="mt-7 rounded-2xl border border-stone-200 bg-white p-5 shadow-sm">
@@ -34,8 +33,8 @@ export function ProductSpecifications({ specs }: { specs?: ProductSpec[] }) {
         <span className="rounded-full bg-sand px-3 py-1.5 text-xs font-bold text-stone-600">Перевірено</span>
       </div>
       <dl className="mt-5 grid gap-2.5 sm:grid-cols-2">
-        {visibleSpecs.map((spec) => (
-          <div key={`${spec.label}-${spec.value}`} className="rounded-xl bg-sand/70 p-3.5">
+        {orderedSpecs.map((spec, index) => (
+          <div key={`${spec.label}-${spec.value}`} className={`rounded-xl bg-sand/70 p-3.5 ${index >= 3 && !isOpen ? "hidden sm:block" : ""}`}>
             <dt className="text-[10px] font-bold uppercase tracking-[.12em] text-stone-400">{spec.label}</dt>
             <dd className="mt-1 text-sm font-semibold leading-6 text-stone-800">{spec.value}</dd>
           </div>
@@ -45,7 +44,7 @@ export function ProductSpecifications({ specs }: { specs?: ProductSpec[] }) {
         type="button"
         onClick={() => setIsOpen((open) => !open)}
         aria-expanded={isOpen}
-        className="mt-5 flex w-full items-center justify-center gap-2 rounded-xl border border-stone-200 bg-white px-4 py-3 text-sm font-bold text-ink transition hover:border-clay hover:text-clay"
+        className="mt-5 flex w-full items-center justify-center gap-2 rounded-xl border border-stone-200 bg-white px-4 py-3 text-sm font-bold text-ink transition hover:border-clay hover:text-clay sm:hidden"
       >
         {isOpen ? "Згорнути характеристики" : `Показати ще ${hiddenCount} параметрів`}
         <ChevronDown className={`transition-transform duration-300 ${isOpen ? "rotate-180" : ""}`} size={18} />
