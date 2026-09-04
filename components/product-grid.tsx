@@ -2,6 +2,7 @@ import Link from "next/link";
 import { ArrowUpRight, Palette, Sparkles } from "lucide-react";
 import { categories, type Product, type ProductOption } from "@/lib/catalog";
 import { BrandLogo } from "./brand-logo";
+import { ProductCartButton } from "./product-cart-button";
 
 const visualDecorOptions = (product: Product) => {
   const visualKeys = new Set((product.variants || []).flatMap((variant) => Object.entries(variant.selections)
@@ -53,6 +54,7 @@ export function ProductGrid({ products }: { products: Product[] }) {
           </div>
         </div>
       </Link>
+      <div className="border-t border-stone-100 px-3 py-2.5 sm:px-5 sm:py-3"><ProductCartButton compact item={{ slug: product.slug, name: product.name, brand: product.brand, collection: product.collection, image: product.image }} /></div>
     </article>})}
   </div>;
 }

@@ -4,4 +4,6 @@ import { Footer } from "./contacts";
 import { Header } from "./header";
 import { MeasureModal } from "./measure-modal";
 import { MobileBar } from "./mobile-bar";
-export function SiteShell({ children }: { children: React.ReactNode }) { const [modal, setModal] = useState(false); return <><Header onMeasure={() => setModal(true)} />{children}<Footer /><MobileBar /><MeasureModal open={modal} onClose={() => setModal(false)} /></>; }
+import { CartDrawer } from "./cart-drawer";
+import { CartProvider } from "./cart-provider";
+export function SiteShell({ children }: { children: React.ReactNode }) { const [modal, setModal] = useState(false); return <CartProvider><Header onMeasure={() => setModal(true)} />{children}<Footer /><MobileBar /><CartDrawer /><MeasureModal open={modal} onClose={() => setModal(false)} /></CartProvider>; }
