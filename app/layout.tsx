@@ -15,15 +15,25 @@ export const metadata: Metadata = {
 
 const storeSchema = {
   "@context": "https://schema.org",
-  "@type": "Store",
+  "@type": ["Store", "HomeGoodsStore"],
+  "@id": `${siteUrl}/#store`,
   name: siteName,
-  description: "Салон вхідних і міжкімнатних дверей та вікон в Ужгороді.",
+  description: "Салон вхідних і міжкімнатних дверей та вікон в Ужгороді: підбір, замір, доставка і монтаж.",
   url: siteUrl,
   logo: absoluteUrl("/nashi-dveri-logo-v3.png"),
   image: absoluteUrl("/nashi-dveri-logo-v3.png"),
   telephone: ["+380950729341", "+380688155408"],
   email: "nashidveri.uzh@gmail.com",
+  priceRange: "₴₴",
+  currenciesAccepted: "UAH",
+  paymentAccepted: "Готівка, банківська картка, безготівковий розрахунок",
+  areaServed: { "@type": "City", name: "Ужгород" },
+  hasMap: "https://www.google.com/maps/search/?api=1&query=вул.+Івана+Чендея,+44,+Ужгород,+88000",
   address: { "@type": "PostalAddress", streetAddress: "вулиця Івана Чендея, 44", addressLocality: "Ужгород", addressRegion: "Закарпатська область", postalCode: "88000", addressCountry: "UA" },
+  contactPoint: [
+    { "@type": "ContactPoint", telephone: "+380950729341", contactType: "sales", areaServed: "UA", availableLanguage: ["uk"] },
+    { "@type": "ContactPoint", telephone: "+380688155408", contactType: "sales", areaServed: "UA", availableLanguage: ["uk"] },
+  ],
   openingHoursSpecification: [
     { "@type": "OpeningHoursSpecification", dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"], opens: "10:00", closes: "18:00" },
     { "@type": "OpeningHoursSpecification", dayOfWeek: "Saturday", opens: "10:00", closes: "15:00" },

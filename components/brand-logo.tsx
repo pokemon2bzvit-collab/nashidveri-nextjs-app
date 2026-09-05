@@ -15,12 +15,12 @@ export function BrandLogo({ brand, className = "", imageClassName = "" }: { bran
     return (
       <span className={`inline-flex min-w-0 items-center gap-1.5 ${className}`}>
         <img src="/brand-logos/grand-mark.svg" alt="" aria-hidden="true" className={`h-full w-auto shrink-0 object-contain ${imageClassName}`} />
-        <img src="/brand-logos/grand.svg" alt="Grand — логотип виробника" className={`h-[84%] min-w-0 max-w-[78%] object-contain object-left ${imageClassName}`} />
+        <img src="/brand-logos/grand.svg" alt="Grand — двері в каталозі магазину «Наші двері», Ужгород" className={`h-[84%] min-w-0 max-w-[78%] object-contain object-left ${imageClassName}`} />
       </span>
     );
   }
   const logo = logoByBrand[brand];
   if (!logo) return <span className={`font-display font-semibold tracking-[-.03em] text-ink ${className}`}>{brand}</span>;
   const visualSize = brand === "StilDoors" ? "scale-[1.28] origin-left" : "";
-  return <span className={`inline-flex min-w-0 items-center ${className}`}><img src={logo} alt={`${brand} — логотип виробника`} className={`h-full max-w-full object-contain object-left ${visualSize} ${imageClassName}`} /></span>;
+  return <span className={`inline-flex min-w-0 items-center ${className}`}><img src={logo} alt={`${brand} — двері в каталозі магазину «Наші двері», Ужгород`} className={`h-full max-w-full object-contain object-left ${visualSize} ${imageClassName}`} /></span>;
 }
