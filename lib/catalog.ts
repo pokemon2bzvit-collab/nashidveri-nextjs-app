@@ -119,14 +119,12 @@ async function getProductExtras(slug: string) {
   const filter = `product_slug=eq.${encodeURIComponent(slug)}`;
   const headers = { apikey: supabaseKey, Authorization: `Bearer ${supabaseKey}` };
   const [mediaResponse, optionsResponse, variantsResponse, specsResponse] = await Promise.all([
-    // Декори та їхні фото менеджер може оновити в Supabase у будь-який момент.
-    // Не кешуємо ці дані, щоб зміна варіанта одразу була видима на телефоні.
-    fetch(`${supabaseUrl}/rest/v1/product_media?select=product_slug,kind,label,image_path,sort_order&is_active=eq.true&${filter}&order=sort_order.asc`, { headers, cache: "no-store" }),
-    fetch(`${supabaseUrl}/rest/v1/product_options?select=product_slug,option_group,group_label,label,swatch,image_path,sort_order&is_active=eq.true&${filter}&order=sort_order.asc`, { headers, cache: "no-store" }),
-    fetch(`${supabaseUrl}/rest/v1/product_variants?select=product_slug,selections,image_path,sort_order&is_active=eq.true&${filter}&order=sort_order.asc`, { headers, cache: "no-store" }),
-    // Характеристики змінюються менеджером частіше, ніж медіа. Не кешуємо
-    // порожню відповідь після створення нової таблиці або оновлення даних.
-    fetch(`${supabaseUrl}/rest/v1/product_specs?select=product_slug,label,value,sort_order&is_active=eq.true&${filter}&order=sort_order.asc`, { headers, cache: "no-store" }),
+    // Кеш на хвилину помітно прискорює перше відкриття картки. Зміни з адмінки
+    // потрапляють на сайт максимум через 60 секунд.
+    fetch(`${supabaseUrl}/rest/v1/product_media?select=product_slug,kind,label,image_path,sort_order&is_active=eq.true&${filter}&order=sort_order.asc`, { headers, next: { revalidate: 60 } }),
+    fetch(`${supabaseUrl}/rest/v1/product_options?select=product_slug,option_group,group_label,label,swatch,image_path,sort_order&is_active=eq.true&${filter}&order=sort_order.asc`, { headers, next: { revalidate: 60 } }),
+    fetch(`${supabaseUrl}/rest/v1/product_variants?select=product_slug,selections,image_path,sort_order&is_active=eq.true&${filter}&order=sort_order.asc`, { headers, next: { revalidate: 60 } }),
+    fetch(`${supabaseUrl}/rest/v1/product_specs?select=product_slug,label,value,sort_order&is_active=eq.true&${filter}&order=sort_order.asc`, { headers, next: { revalidate: 60 } }),
   ]);
   const media = mediaResponse.ok ? (await mediaResponse.json() as ProductMediaRow[]).map(mapMedia) : [];
   const options = optionsResponse.ok ? (await optionsResponse.json() as ProductOptionRow[]).map(mapOption) : [];
@@ -220,7 +218,7 @@ export async function getProduct(slug: string) {
   if (supabaseKey) {
     try {
       const headers = { apikey: supabaseKey, Authorization: `Bearer ${supabaseKey}` };
-      const response = await fetch(`${supabaseUrl}/rest/v1/products?select=slug,category,brand,collection,name,material,style,color,price,description,features,image_path&slug=eq.${encodeURIComponent(slug)}&is_available=eq.true&limit=1`, { headers, cache: "no-store" });
+      const response = await fetch(`${supabaseUrl}/rest/v1/products?select=slug,category,brand,collection,name,material,style,color,price,description,features,image_path&slug=eq.${encodeURIComponent(slug)}&is_available=eq.true&limit=1`, { headers, next: { revalidate: 60 } });
       if (!response.ok) throw new Error(`Supabase returned ${response.status}`);
       directLookupCompleted = true;
       const rows = await response.json() as ProductRow[];
