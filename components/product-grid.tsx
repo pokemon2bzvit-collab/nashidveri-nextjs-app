@@ -70,7 +70,7 @@ export function ProductGrid({ products }: { products: (Product | CatalogCardProd
           {specs.length > 0 ? <dl className="mt-3 hidden divide-y divide-stone-100 border-y border-stone-100 text-[10px] leading-4 text-stone-600 sm:block">{specs.map((spec) => <div key={spec.label} className="flex items-baseline justify-between gap-3 py-1.5"><dt className="truncate text-stone-400">{spec.label}</dt><dd className="max-w-[58%] text-right font-semibold text-ink">{spec.value}</dd></div>)}</dl> : null}
           <div className="mt-3 flex items-end justify-between border-t border-stone-100 pt-3 sm:mt-5 sm:pt-4">
             <div><p className="text-[8px] font-bold uppercase tracking-wider text-stone-400 sm:text-[10px]">{hasPrice ? "Вартість" : "Консультація"}</p><span className="mt-1 block font-display text-base leading-tight text-ink sm:text-2xl">{hasPrice ? product.price : "Дізнатися ціну"}</span></div>
-            <span className="inline-flex items-center gap-1 rounded-full bg-sand px-2.5 py-2 text-[10px] font-bold text-ink transition group-hover:bg-ink group-hover:text-white sm:px-3 sm:text-xs">Детальніше <Sparkles size={12} /></span>
+            <span aria-label="Детальніше" className="inline-flex items-center gap-1 rounded-full bg-sand px-2.5 py-2 text-[10px] font-bold text-ink transition group-hover:bg-ink group-hover:text-white sm:px-3 sm:text-xs"><span className="hidden sm:inline">Детальніше</span><Sparkles size={12} /></span>
           </div>
         </div>
       </Link>
