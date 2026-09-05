@@ -21,5 +21,6 @@ export function BrandLogo({ brand, className = "", imageClassName = "" }: { bran
   }
   const logo = logoByBrand[brand];
   if (!logo) return <span className={`font-display font-semibold tracking-[-.03em] text-ink ${className}`}>{brand}</span>;
-  return <span className={`inline-flex min-w-0 items-center ${className}`}><img src={logo} alt={`${brand} — логотип виробника`} className={`h-full max-w-full object-contain object-left ${imageClassName}`} /></span>;
+  const visualSize = brand === "StilDoors" ? "scale-[1.28] origin-left" : "";
+  return <span className={`inline-flex min-w-0 items-center ${className}`}><img src={logo} alt={`${brand} — логотип виробника`} className={`h-full max-w-full object-contain object-left ${visualSize} ${imageClassName}`} /></span>;
 }
