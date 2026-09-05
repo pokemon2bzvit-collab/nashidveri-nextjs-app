@@ -4,13 +4,13 @@ import { Phone, Ruler, Search, SlidersHorizontal, X } from "lucide-react";
 import Link from "next/link";
 import { useEffect, useMemo, useState } from "react";
 import { ProductGrid } from "./product-grid";
-import { categories, type Product } from "@/lib/catalog";
+import { categories, type CatalogCardProduct } from "@/lib/catalog";
 
 const PAGE_SIZE = 24;
 const priceRanges = [{ id: "under-10000", label: "до 10 000 грн", max: 10000 }, { id: "10000-25000", label: "10 000–25 000 грн", min: 10000, max: 25000 }, { id: "over-25000", label: "від 25 000 грн", min: 25000 }];
 const getPriceNumber = (price: string) => Number(price.replace(/[^\d]/g, "")) || null;
 
-export function CatalogBrowser({ products, initialCategory = "all", initialQuery = "", initialBrand = "all", initialCollection = "all" }: { products: Product[]; initialCategory?: string; initialQuery?: string; initialBrand?: string; initialCollection?: string }) {
+export function CatalogBrowser({ products, initialCategory = "all", initialQuery = "", initialBrand = "all", initialCollection = "all" }: { products: CatalogCardProduct[]; initialCategory?: string; initialQuery?: string; initialBrand?: string; initialCollection?: string }) {
   const [category, setCategory] = useState(initialCategory);
   const [brand, setBrand] = useState(initialBrand);
   const [collection, setCollection] = useState(initialCollection);
@@ -38,8 +38,7 @@ export function CatalogBrowser({ products, initialCategory = "all", initialQuery
     const price = getPriceNumber(product.price);
     const range = priceRanges.find((item) => item.id === priceRange);
     const matchesPrice = !range || (price !== null && (!range.min || price >= range.min) && (!range.max || price < range.max));
-    const searchable = `${product.name} ${product.brand} ${product.collection} ${product.features.join(" ")} ${product.description}`.toLowerCase();
-    return (category === "all" || product.category === category) && (brand === "all" || product.brand === brand) && (collection === "all" || product.collection === collection) && (material === "all" || product.material === material) && (style === "all" || product.style === style) && (color === "all" || product.color === color) && matchesPrice && searchable.includes(query.toLowerCase());
+    return (category === "all" || product.category === category) && (brand === "all" || product.brand === brand) && (collection === "all" || product.collection === collection) && (material === "all" || product.material === material) && (style === "all" || product.style === style) && (color === "all" || product.color === color) && matchesPrice && product.searchText.includes(query.toLowerCase());
   }), [products, category, brand, collection, material, style, color, priceRange, query]);
 
   useEffect(() => setVisibleCount(PAGE_SIZE), [category, brand, collection, material, style, color, priceRange, query]);

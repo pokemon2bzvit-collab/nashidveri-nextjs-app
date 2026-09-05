@@ -6,11 +6,57 @@ export type ProductOption = { group: "color" | "finish" | "glass" | "edge" | "co
 export type ProductVariant = { selections: Record<string, string>; image: string; sortOrder: number };
 export type ProductSpec = { label: string; value: string; sortOrder: number };
 export type Product = { slug: string; category: Category; brand: string; collection: string; name: string; material: string; style: string; color: string; price: string; description: string; features: string[]; image: string; media?: ProductMedia[]; options?: ProductOption[]; variants?: ProductVariant[]; specs?: ProductSpec[] };
+export type CatalogDecorOption = Pick<ProductOption, "group" | "label" | "swatch" | "image">;
+export type CatalogCardProduct = Pick<Product, "slug" | "category" | "brand" | "collection" | "name" | "material" | "style" | "color" | "price" | "description" | "image"> & { highlights: string[]; decorOptions: CatalogDecorOption[]; keySpecs: ProductSpec[]; searchText: string };
 
 export const categories: Record<Category, { title: string; short: string; description: string; image: string }> = {
   interior: { title: "Міжкімнатні двері", short: "Міжкімнатні", description: "Колекції дверей від Papa Carlo, Rodos, Термінус, Grand та StilDoors.", image: "/catalog-assets/products/product-85.jpg" },
   entrance: { title: "Вхідні двері", short: "Вхідні", description: "Вхідні двері Abwehr, Rodos Steel, Страж, Q Doors та Magda.", image: "/catalog-assets/products/product-200.jpg" },
   windows: { title: "Вікна", short: "Вікна", description: "Віконні системи для квартири, будинку й тераси.", image: "" },
+};
+
+const catalogHighlights = (product: Product) => {
+  const source = `${product.description} ${product.features.join(" ")}`.toLowerCase();
+  const highlights: string[] = [];
+  if (/терморозрив/.test(source)) highlights.push("Терморозрив");
+  if (/дзеркал/.test(source)) highlights.push("Дзеркало");
+  if (/шпон/.test(source)) highlights.push("Шпон");
+  if (/екошпон/.test(source)) highlights.push("Екошпон");
+  if (/пвх/.test(source)) highlights.push("ПВХ");
+  if (/фарб/.test(source) && !highlights.includes("ПВХ")) highlights.push("Фарба");
+  if (!highlights.length && product.category === "entrance" && product.collection === "Квартира") highlights.push("Для квартири");
+  if (!highlights.length && product.category === "entrance" && product.collection === "Вулиця") highlights.push("Для будинку");
+  if (!highlights.length && product.category === "interior") highlights.push("Міжкімнатні");
+  return highlights.slice(0, 2);
+};
+
+const catalogSpecPriority = (label: string) => {
+  const normalized = label.toLowerCase();
+  if (/розмір|габарит/.test(normalized)) return 0;
+  if (/товщина.*(полот|сталі|метал)|товщина/.test(normalized)) return 1;
+  if (/покрит|оздоблен|матеріал/.test(normalized)) return 2;
+  if (/утеплен|терморозрив|ущільнен/.test(normalized)) return 3;
+  if (/скло|замок/.test(normalized)) return 4;
+  return 10;
+};
+
+// Список каталогу отримує тільки дані, потрібні для картки та фільтрів.
+// Повні варіанти, палітри й характеристики лишаються на сторінці товару.
+export const toCatalogCardProduct = (product: Product): CatalogCardProduct => {
+  const visibleVariantKeys = new Set((product.variants || []).flatMap((variant) => Object.entries(variant.selections)
+    .filter(([group, label]) => Boolean(variant.image) && (group === "color" || group === "finish") && Boolean(label))
+    .map(([group, label]) => `${group}:${label}`)));
+  const decorOptions = (product.options || [])
+    .filter((option) => (option.group === "color" || option.group === "finish") && visibleVariantKeys.has(`${option.group}:${option.label}`))
+    .map(({ group, label, swatch, image }) => ({ group, label, swatch, image }));
+  const description = product.description.replace(/\s+/g, " ").trim().slice(0, 280);
+  return {
+    slug: product.slug, category: product.category, brand: product.brand, collection: product.collection, name: product.name,
+    material: product.material, style: product.style, color: product.color, price: product.price, image: product.image, description,
+    highlights: catalogHighlights(product), decorOptions,
+    keySpecs: [...(product.specs || [])].sort((left, right) => catalogSpecPriority(left.label) - catalogSpecPriority(right.label) || left.sortOrder - right.sortOrder).slice(0, 3),
+    searchText: `${product.name} ${product.brand} ${product.collection} ${product.material} ${product.style} ${product.color} ${product.features.join(" ")} ${product.description.slice(0, 320)}`.toLowerCase(),
+  };
 };
 
 export const products: Product[] = importedProducts;

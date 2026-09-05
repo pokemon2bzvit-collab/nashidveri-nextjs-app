@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { ArrowUpRight, Palette, Sparkles } from "lucide-react";
-import { categories, type Product, type ProductOption, type ProductSpec } from "@/lib/catalog";
+import { categories, type CatalogCardProduct, type Product, type ProductOption, type ProductSpec } from "@/lib/catalog";
 import { BrandLogo } from "./brand-logo";
 import { ProductCartButton } from "./product-cart-button";
 
@@ -40,20 +40,20 @@ const keySpecs = (specs?: ProductSpec[]) => [...(specs || [])]
   .sort((left, right) => specPriority(left.label) - specPriority(right.label) || left.sortOrder - right.sortOrder)
   .slice(0, 3);
 
-function DecorPreview({ option }: { option: ProductOption }) {
+function DecorPreview({ option }: { option: Pick<ProductOption, "image" | "swatch"> }) {
   if (option.image) return <img src={option.image} alt="" className="h-full w-full object-cover" />;
   if (option.swatch) return <span aria-hidden="true" className="block h-full w-full" style={{ backgroundColor: option.swatch }} />;
   return <span className="block h-full w-full bg-stone-200" />;
 }
 
-const productImageAlt = (product: Product) => {
+const productImageAlt = (product: Pick<Product, "category" | "brand" | "name" | "collection">) => {
   const category = product.category === "windows" ? "Вікна" : `${categories[product.category].short} двері`;
   return `${category} ${product.brand} ${product.name}, колекція ${product.collection}`;
 };
 
-export function ProductGrid({ products }: { products: Product[] }) {
+export function ProductGrid({ products }: { products: (Product | CatalogCardProduct)[] }) {
   return <div className="grid grid-cols-2 gap-3 sm:gap-5 lg:grid-cols-3">
-    {products.map((product) => { const hasPrice = product.price !== "Ціна за запитом"; const decorOptions = visualDecorOptions(product); const highlights = productHighlights(product); const specs = keySpecs(product.specs); return <article key={product.slug} className="group flex min-w-0 flex-col overflow-hidden rounded-2xl border border-stone-200/80 bg-white shadow-sm transition duration-300 hover:-translate-y-1 hover:border-stone-300 hover:shadow-xl">
+    {products.map((product) => { const hasPrice = product.price !== "Ціна за запитом"; const isCatalogCard = "decorOptions" in product; const decorOptions = isCatalogCard ? product.decorOptions : visualDecorOptions(product); const highlights = isCatalogCard ? product.highlights : productHighlights(product); const specs = isCatalogCard ? product.keySpecs : keySpecs(product.specs); return <article key={product.slug} className="group flex min-w-0 flex-col overflow-hidden rounded-2xl border border-stone-200/80 bg-white shadow-sm transition duration-300 hover:-translate-y-1 hover:border-stone-300 hover:shadow-xl">
       <Link href={`/catalog/${product.slug}`} className="relative aspect-[4/5] overflow-hidden bg-[#f7f5f1] p-3 sm:p-5" aria-label={`Детальніше: ${product.name}`}>
           <img loading="lazy" decoding="async" src={product.image} alt={productImageAlt(product)} className="h-full w-full object-contain transition duration-500 group-hover:scale-[1.035]" />
           <span className="absolute left-2 top-2 rounded-full bg-white/95 px-2 py-1 text-[8px] font-bold uppercase tracking-wider text-ink shadow-sm sm:left-3 sm:top-3 sm:px-3 sm:py-1.5 sm:text-[10px]">{categories[product.category].short}</span>
