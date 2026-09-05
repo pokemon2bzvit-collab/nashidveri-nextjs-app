@@ -108,6 +108,15 @@ export const catalogImageUrl = (image: string) => {
   return encodedPath ? `${supabaseUrl}/storage/v1/object/public/catalog-images/${encodedPath}` : image;
 };
 
+// Компактні версії потрібні лише у сітці каталогу. Оригінал лишається для
+// повноекранного перегляду на сторінці товару.
+export const catalogThumbnailUrl = (image: string, width = 480) => {
+  const publicPrefix = `${supabaseUrl}/storage/v1/object/public/catalog-images/`;
+  if (!image.startsWith(publicPrefix)) return image;
+  const path = image.slice(publicPrefix.length).split("?")[0];
+  return `${supabaseUrl}/storage/v1/render/image/public/catalog-images/${path}?width=${width}&quality=70&resize=contain`;
+};
+
 const mapProduct = (product: ProductRow): Product => ({ ...product, features: product.features || [], image: catalogImageUrl(product.image_path) });
 const mapMedia = (media: ProductMediaRow): ProductMedia => ({ kind: media.kind, label: media.label, image: catalogImageUrl(media.image_path), sortOrder: media.sort_order });
 const mapOption = (option: ProductOptionRow): ProductOption => ({ group: option.option_group, groupLabel: option.group_label, label: option.label, swatch: option.swatch, image: option.image_path ? catalogImageUrl(option.image_path) : null, sortOrder: option.sort_order });
