@@ -1,10 +1,11 @@
 "use client";
 
-import { FormEvent, type ReactNode, useEffect, useMemo, useRef, useState } from "react";
+import { FormEvent, type ReactNode, useEffect, useMemo, useState } from "react";
 import { Check, ChevronLeft, ChevronRight, ExternalLink, FileImage, Link2, LoaderCircle, LogOut, PackageSearch, Paintbrush, Plus, Save, Search, ShieldCheck, SlidersHorizontal, Trash2, Upload } from "lucide-react";
 import { useSearchParams } from "next/navigation";
 import type { Session } from "@supabase/supabase-js";
 import { CatalogManagement } from "@/components/catalog-management";
+import { QdoorsReview, type ImportFields } from "@/components/qdoors-review";
 import { LeadsDashboard } from "@/components/leads-dashboard";
 import { catalogImageUrl } from "@/lib/catalog";
 import { adminEmail, getSupabaseBrowserClient } from "@/lib/supabase-browser";
@@ -71,10 +72,6 @@ function getQdoorsMatch(title: string, products: Product[]): QdoorsMatch | null 
   if (!best) return null;
   const commonSeries = best.common.some((token) => series.has(token));
   return { product: best.product, confidence: best.common.length >= 2 && commonSeries ? "exact" : "possible" };
-}
-function findQdoorsMatch(title: string, products: Product[]) {
-  const match = getQdoorsMatch(title, products);
-  return match?.confidence === "exact" ? match.product : null;
 }
 function categoryLabel(category: string) {
   if (category === "interior") return "Міжкімнатні";
@@ -320,54 +317,67 @@ export function AdminDashboard() {
     }
   }
   async function markQdoorsExisting(item: QdoorsCatalogItem, target: Product) {
+    const linked = sourceProductSlugs[item.url];
+    if (linked && linked !== target.slug) return "Ця сторінка вже прив’язана до іншого товару. Перевірте його джерела.";
     setSaving(true);
+    try {
     const { error } = await supabase.from("product_sources").upsert({ product_slug: target.slug, source_name: "Q Doors", source_url: item.url, source_product_name: item.title, verification_status: "verified", verified_at: new Date().toISOString(), notes: "Вручну підтверджено в сканері Qdoors як наявна модель." }, { onConflict: "product_slug,source_url" });
     setSaving(false);
     if (error) return error.message;
     setSourceProductSlugs((items) => ({ ...items, [item.url]: target.slug }));
     setSourcedSlugs((items) => new Set([...items, target.slug]));
     return null;
+    } finally { setSaving(false); }
   }
-  async function importQdoors(preview: QdoorsPreview, target: Product | null = selected) {
+  async function importQdoors(preview: QdoorsPreview, target: Product | null = selected, fields: ImportFields = { photo: false, description: true, specs: true, decor: true }) {
     if (!target) return "Спершу оберіть модель у каталозі.";
+    const linked = sourceProductSlugs[preview.sourceUrl];
+    if (linked && linked !== target.slug) return "Ця сторінка вже прив’язана до іншого товару. Перевірте його джерела.";
     const image = preview.images[0];
-    if (!image || !preview.finish) return "У картці Qdoors немає підтвердженого фото або декору.";
+    if ((fields.photo && !image) || (fields.decor && (!image || !preview.finish))) return "Для вибраних даних бракує фото або декору.";
     setSaving(true);
+    try {
     const specifications = [
       ...preview.facts.map((fact, index) => ({ product_slug: target.slug, label: fact.label, value: fact.value, sort_order: 100 + index * 10, is_active: true })),
       ...(preview.productCode ? [{ product_slug: target.slug, label: "Код виробника", value: preview.productCode, sort_order: 90, is_active: true }] : []),
     ];
     const [productResult, specificationsResult, optionResult, variantResult, sourceResult] = await Promise.all([
-      preview.description ? supabase.from("products").update({ description: preview.description }).eq("slug", target.slug) : Promise.resolve({ error: null }),
-      supabase.from("product_specs").upsert(specifications, { onConflict: "product_slug,label" }),
-      supabase.from("product_options").upsert({ product_slug: target.slug, option_group: "finish", group_label: "Підтверджені покриття", label: preview.finish, image_path: image, sort_order: 20, is_active: true }, { onConflict: "product_slug,option_group,label" }),
-      supabase.from("product_variants").upsert({ product_slug: target.slug, selections: { finish: preview.finish }, image_path: image, sort_order: 20, is_active: true }, { onConflict: "product_slug,selections" }),
+      fields.description || fields.photo ? supabase.from("products").update({ ...(fields.description ? { description: preview.description } : {}), ...(fields.photo ? { image_path: image } : {}) }).eq("slug", target.slug) : Promise.resolve({ error: null }),
+      fields.specs && specifications.length ? supabase.from("product_specs").upsert(specifications, { onConflict: "product_slug,label" }) : Promise.resolve({ error: null }),
+      fields.decor ? supabase.from("product_options").upsert({ product_slug: target.slug, option_group: "finish", group_label: "Підтверджені покриття", label: preview.finish, image_path: image, sort_order: 20, is_active: true }, { onConflict: "product_slug,option_group,label" }) : Promise.resolve({ error: null }),
+      fields.decor ? supabase.from("product_variants").upsert({ product_slug: target.slug, selections: { finish: preview.finish }, image_path: image, sort_order: 20, is_active: true }, { onConflict: "product_slug,selections" }) : Promise.resolve({ error: null }),
       supabase.from("product_sources").upsert({ product_slug: target.slug, source_name: "Q Doors", source_url: preview.sourceUrl, source_product_name: preview.title + (preview.productCode ? " · код " + preview.productCode : ""), verification_status: "verified", verified_at: new Date().toISOString(), notes: "Імпортовано з офіційної картки Qdoors: характеристики, декор і пряме оригінальне фото." }, { onConflict: "product_slug,source_url" }),
     ]);
     setSaving(false);
     const error = productResult.error || specificationsResult.error || optionResult.error || variantResult.error || sourceResult.error;
-    if (error) return error.message;
-    const updatedProduct = { ...target, description: preview.description || target.description };
+    if (error) return "Частина даних могла зберегтися. " + error.message;
+    const updatedProduct = { ...target, ...(fields.description ? { description: preview.description } : {}), ...(fields.photo ? { image_path: image } : {}) };
     setProducts((items) => items.some((item) => item.slug === updatedProduct.slug) ? items.map((item) => item.slug === updatedProduct.slug ? updatedProduct : item) : [...items, updatedProduct].sort((left, right) => left.name.localeCompare(right.name, "uk")));
-    await choose(updatedProduct);
-    setTab("configuration");
-    setNotice("Імпорт Qdoors завершено: опис, декор, оригінальне фото, характеристики й джерело збережено.");
+    setSourceProductSlugs((items) => ({ ...items, [preview.sourceUrl]: target.slug }));
+    setSourcedSlugs((items) => new Set([...items, target.slug]));
     return null;
+    } finally { setSaving(false); }
   }
   async function createQdoorsProduct(preview: QdoorsPreview) {
     const image = preview.images[0];
     if (!image || !preview.productCode) return "Для нової моделі потрібні код виробника й оригінальне фото.";
+    if (!preview.finish) return "У джерелі не визначено декор моделі.";
+    if (sourceProductSlugs[preview.sourceUrl]) return "Ця сторінка вже прив’язана до товару в каталозі.";
     const slug = "qdoors-" + preview.productCode;
     if (products.some((product) => product.slug === slug)) return "Модель із кодом " + preview.productCode + " уже є в каталозі.";
     const purpose = preview.facts.find((fact) => fact.label === "Призначення")?.value.toLocaleLowerCase("uk-UA") || "";
     const sourceTitle = preview.title.toLocaleLowerCase("uk-UA");
-    const collection = purpose.includes("вулиц") || sourceTitle.includes("стріт") || sourceTitle.includes("street") ? "Вулиця" : "Квартира";
+    const collection = purpose.includes("вулиц") || sourceTitle.includes("стріт") || sourceTitle.includes("street") ? "Вулиця" : purpose.includes("квартир") || /преміум|авангард|ультра/iu.test(sourceTitle) ? "Квартира" : null;
+    if (!collection) return "Не вдалося визначити призначення. Додайте модель вручну з потрібною колекцією.";
     const product: Product = { slug, name: preview.title.replace(/^qdoors\s*/iu, "Q Doors "), brand: "Q Doors", collection, category: "entrance", price: "Ціна за запитом", description: preview.description, is_available: true, image_path: image };
     setSaving(true);
+    try {
     const { error } = await supabase.from("products").insert({ slug, category: "entrance", brand: "Q Doors", collection, name: product.name, material: "Вхідні", style: "Колекція " + collection, color: "Варіанти декорів", price: product.price, description: product.description, features: ["Фабрика Q Doors", "Колекція " + collection], image_path: image, sort_order: 99999, is_available: true });
     setSaving(false);
     if (error) return error.message;
-    return importQdoors(preview, product);
+    setProducts((items) => [...items, product]);
+    return await importQdoors(preview, product);
+    } finally { setSaving(false); }
   }
 
   if (loading) return <main className="grid min-h-screen place-items-center bg-stone-50 text-stone-600"><LoaderCircle className="animate-spin" /> Завантаження…</main>;
@@ -403,118 +413,8 @@ function SourceLibrary() {
   </Card>;
 }
 
-function QdoorsImporter({ accessToken, onImport, onCreate, onMarkExisting, saving, products, sourceProductSlugs }: { accessToken: string; onImport: (preview: QdoorsPreview, target?: Product) => Promise<string | null>; onCreate: (preview: QdoorsPreview) => Promise<string | null>; onMarkExisting: (item: QdoorsCatalogItem, target: Product) => Promise<string | null>; saving: boolean; products: Product[]; sourceProductSlugs: Record<string, string> }) {
-  const [url, setUrl] = useState("");
-  const [catalogUrl, setCatalogUrl] = useState("https://qdoors.ua/shop");
-  const [loading, setLoading] = useState(false);
-  const [scanning, setScanning] = useState(false);
-  const [addingUrl, setAddingUrl] = useState("");
-  const [linkingItem, setLinkingItem] = useState<QdoorsCatalogItem | null>(null);
-  const [linkTargetSlug, setLinkTargetSlug] = useState("");
-  const [error, setError] = useState("");
-  const [scanError, setScanError] = useState("");
-  const [importNotice, setImportNotice] = useState("");
-  const [preview, setPreview] = useState<QdoorsPreview | null>(null);
-  const [catalogItems, setCatalogItems] = useState<QdoorsCatalogItem[]>([]);
-  const resultRef = useRef<HTMLDivElement>(null);
-  useEffect(() => {
-    if (preview || error) resultRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
-  }, [preview, error]);
-  async function requestPreview(source: string) {
-    const response = await fetch("/api/admin/import/qdoors?url=" + encodeURIComponent(source), { headers: { Authorization: "Bearer " + accessToken } });
-    const data = await response.json() as QdoorsPreview & { message?: string };
-    if (!response.ok) throw new Error(data.message || "Не вдалося перевірити модель.");
-    return data;
-  }
-  async function inspect(source = url) {
-    setLoading(true);
-    setError("");
-    setImportNotice("");
-    setPreview(null);
-    try {
-      setPreview(await requestPreview(source));
-    } catch (cause) {
-      setError(cause instanceof Error ? cause.message : "Не вдалося перевірити модель.");
-    } finally {
-      setLoading(false);
-    }
-  }
-  async function addNewFromCatalog(item: QdoorsCatalogItem) {
-    setAddingUrl(item.url);
-    setError("");
-    setImportNotice("");
-    try {
-      const nextPreview = await requestPreview(item.url);
-      setUrl(item.url);
-      setPreview(nextPreview);
-      const match = getQdoorsMatch(nextPreview.title, products);
-      if (match) {
-        setImportNotice(`Модель потребує ручної перевірки: знайдено ${match.confidence === "exact" ? "точний" : "схожий"} збіг «${match.product.name}».`);
-        return;
-      }
-      const message = await onCreate(nextPreview);
-      setImportNotice(message || "Нову модель додано до каталогу: фото, опис, характеристики, декор і джерело збережено.");
-    } catch (cause) {
-      setError(cause instanceof Error ? cause.message : "Не вдалося додати модель.");
-    } finally {
-      setAddingUrl("");
-    }
-  }
-  async function saveExistingLink() {
-    const target = products.find((product) => product.slug === linkTargetSlug);
-    if (!linkingItem || !target) return;
-    setImportNotice("");
-    const message = await onMarkExisting(linkingItem, target);
-    setImportNotice(message || `Позначено як наявну модель: ${target.name}.`);
-    if (!message) {
-      setLinkingItem(null);
-      setLinkTargetSlug("");
-    }
-  }
-  async function importIntoProduct() {
-    if (!preview) return;
-    setImportNotice("");
-    const matchedProduct = findQdoorsMatch(preview.title, products);
-    const message = matchedProduct ? await onImport(preview, matchedProduct) : "Не знайдено відповідної моделі у каталозі.";
-    setImportNotice(message || "Імпорт завершено: декор, оригінальне фото, характеристики й джерело збережено.");
-  }
-  async function createNewProduct() {
-    if (!preview) return;
-    setImportNotice("");
-    const message = await onCreate(preview);
-    setImportNotice(message || "Нову модель додано до каталогу разом із фото, описом, характеристиками та джерелом.");
-  }
-  async function scanCatalog() {
-    setScanning(true);
-    setScanError("");
-    setCatalogItems([]);
-    try {
-      const response = await fetch("/api/admin/import/qdoors/catalog?url=" + encodeURIComponent(catalogUrl), { headers: { Authorization: "Bearer " + accessToken } });
-      const data = await response.json() as { products?: QdoorsCatalogItem[]; message?: string };
-      if (!response.ok) throw new Error(data.message || "Не вдалося просканувати каталог.");
-      setCatalogItems(data.products || []);
-    } catch (cause) {
-      setScanError(cause instanceof Error ? cause.message : "Не вдалося просканувати каталог.");
-    } finally {
-      setScanning(false);
-    }
-  }
-  const previewMatch = preview ? getQdoorsMatch(preview.title, products) : null;
-  const linkingTarget = linkingItem ? products.find((product) => product.slug === linkTargetSlug) || null : null;
-  return <div className="space-y-4">
-    <Card icon={<PackageSearch size={19} />} title="Сканер каталогу Qdoors" help="Зберіть посилання з каталогу або однієї серії. Нічого не змінюється без вашого підтвердження.">
-      <p className="text-sm leading-6 text-stone-600">Сканер збере посилання на моделі, позначить уже наявні у нас і покаже нові. Він не створює та не змінює товари автоматично.</p>
-      <div className="mt-3 flex flex-col gap-3 sm:flex-row"><input className={inputClass + " mt-0 flex-1"} value={catalogUrl} onChange={(event) => setCatalogUrl(event.target.value)} placeholder="https://qdoors.ua/shop або /shop/cat/…" /><button type="button" onClick={scanCatalog} disabled={scanning || !catalogUrl.trim()} className="button-light shrink-0 disabled:opacity-50"><Search size={16} /> {scanning ? "Скануємо…" : "Сканувати"}</button></div>
-      {scanError && <p className="mt-3 rounded-xl bg-red-50 p-3 text-sm text-red-700">{scanError}</p>}
-      {catalogItems.length > 0 && <div className="mt-4"><p className="text-sm font-bold">Знайдено {catalogItems.length} карток</p><div className="mt-3 max-h-96 space-y-2 overflow-y-auto pr-1">{catalogItems.map((item) => { const linkedProduct = products.find((product) => product.slug === sourceProductSlugs[item.url]); const match = linkedProduct ? { product: linkedProduct, confidence: "exact" as const } : getQdoorsMatch(item.title, products); const statusClass = linkedProduct || match?.confidence === "exact" ? "bg-green-100 text-green-800" : match ? "bg-blue-100 text-blue-800" : "bg-amber-100 text-amber-800"; const status = linkedProduct ? "Позначено як наявна: " + linkedProduct.name : match?.confidence === "exact" ? "Точний збіг: " + match.product.name : match ? "Схожа модель: " + match.product.name + " — перевірте" : "Нова модель — потребує додавання"; return <div key={item.url} className="flex flex-wrap items-center justify-between gap-2 rounded-xl border bg-white p-3"><div className="min-w-0"><b className="block text-sm">{item.title}</b><span className={"mt-1 inline-block rounded-full px-2 py-1 text-xs font-bold " + statusClass}>{status}</span></div><div className="flex shrink-0 flex-wrap gap-2">{!match && <button type="button" onClick={() => addNewFromCatalog(item)} disabled={Boolean(addingUrl) || saving || loading} className="button-primary px-3 py-2 text-sm disabled:opacity-50"><Plus size={15} /> {addingUrl === item.url ? "Додаємо…" : "Додати"}</button>}{!linkedProduct && <button type="button" onClick={() => { setLinkingItem(item); setLinkTargetSlug(""); }} disabled={saving || loading} className="button-light px-3 py-2 text-sm disabled:opacity-50">Ця модель уже є</button>}<button type="button" onClick={() => { setUrl(item.url); inspect(item.url); }} disabled={loading || Boolean(addingUrl)} className="button-light px-3 py-2 text-sm disabled:opacity-50"><Search size={15} /> {loading ? "Перевіряємо…" : "Перевірити"}</button></div></div>; })}</div></div>}
-      {linkingItem && <div className="mt-4 rounded-xl border border-blue-200 bg-blue-50 p-4"><b className="block text-sm">Позначити як наявну: {linkingItem.title}</b><p className="mt-1 text-xs leading-5 text-blue-900">Оберіть точну модель з нашого каталогу. Це збереже посилання Qdoors і надалі сканер не вважатиме її новою.</p><div className="mt-3 flex flex-wrap gap-2"><a href={linkingItem.url} target="_blank" rel="noreferrer" className="button-light px-3 py-2 text-xs">Картка у виробника <ExternalLink size={14} /></a>{linkingTarget && <a href={"/catalog/" + linkingTarget.slug} target="_blank" rel="noreferrer" className="button-light px-3 py-2 text-xs">Наша картка: {linkingTarget.name} <ExternalLink size={14} /></a>}</div><div className="mt-3 flex flex-col gap-3 sm:flex-row"><select className={inputClass + " mt-0 flex-1"} value={linkTargetSlug} onChange={(event) => setLinkTargetSlug(event.target.value)}><option value="">Оберіть нашу модель</option>{products.filter((product) => product.brand === "Q Doors").map((product) => <option key={product.slug} value={product.slug}>{product.name} · {product.collection}</option>)}</select><button type="button" onClick={saveExistingLink} disabled={!linkTargetSlug || saving} className="button-primary shrink-0 disabled:opacity-50"><Check size={16} /> {saving ? "Зберігаємо…" : "Підтвердити"}</button><button type="button" onClick={() => { setLinkingItem(null); setLinkTargetSlug(""); }} className="button-light shrink-0">Скасувати</button></div></div>}
-    </Card>
-    <div ref={resultRef}><Card icon={<Link2 size={19} />} title="Імпорт однієї моделі Qdoors" help="Вставте URL конкретної моделі. Нічого не записується у каталог, доки ви не перевірите результат.">
-    <div className="flex flex-col gap-3 sm:flex-row"><input className={inputClass + " mt-0 flex-1"} value={url} onChange={(event) => setUrl(event.target.value)} placeholder="https://qdoors.ua/shop/…" /><button type="button" onClick={() => inspect()} disabled={loading || !url.trim()} className="button-primary shrink-0 disabled:opacity-50"><Search size={16} /> {loading ? "Перевіряємо…" : "Перевірити"}</button></div>
-    {error && <p className="mt-4 rounded-xl bg-red-50 p-3 text-sm text-red-700">{error}</p>}
-    {preview && <div className="mt-5 rounded-2xl border border-stone-200 bg-stone-50 p-4"><div className="flex flex-wrap items-start justify-between gap-2"><div><p className="text-xs font-bold uppercase tracking-[.14em] text-clay">Знайдено у Qdoors</p><h4 className="mt-1 font-display text-2xl">{preview.title}</h4>{preview.productCode && <p className="mt-1 text-sm text-stone-500">Код виробника: {preview.productCode}</p>}</div><a href={preview.sourceUrl} target="_blank" rel="noreferrer" className="button-light px-3 py-2 text-sm">Джерело <ExternalLink size={15} /></a></div>{preview.finish && <p className="mt-4 inline-flex rounded-full bg-white px-3 py-1.5 text-sm font-bold text-stone-700">{preview.finish}</p>}<div className="mt-4 grid gap-3 sm:grid-cols-3">{preview.images.slice(0, 3).map((image, index) => <a key={image} href={image} target="_blank" rel="noreferrer" className="overflow-hidden rounded-xl border bg-white"><img src={image} alt={preview.title + " — фото " + (index + 1)} className="aspect-[4/5] w-full object-contain p-2" /></a>)}</div><p className="mt-2 text-xs text-stone-500">Показано оригінали фото. Переконайтеся, що це саме потрібне виконання.</p>{previewMatch?.confidence === "exact" ? <button type="button" onClick={importIntoProduct} disabled={saving || !preview.finish || !preview.images[0]} className="button-primary mt-4 disabled:opacity-50"><Check size={16} /> {saving ? "Імпортуємо…" : "Імпортувати у: " + previewMatch.product.name}</button> : previewMatch ? <p className="mt-4 rounded-xl border border-blue-200 bg-blue-50 p-3 text-sm leading-6 text-blue-900">Схожа модель у нашому каталозі: <b>{previewMatch.product.name}</b>. Для безпеки імпорт вимкнено: оберіть точну модель у списку зліва, відкрийте «Джерела» та перевірте її окремо.</p> : <button type="button" onClick={createNewProduct} disabled={saving || !preview.finish || !preview.images[0] || !preview.productCode} className="button-primary mt-4 disabled:opacity-50"><Plus size={16} /> {saving ? "Додаємо…" : "Додати як нову модель"}</button>}{importNotice && <p className="mt-3 rounded-xl bg-white p-3 text-sm font-medium text-stone-700">{importNotice}</p>}{preview.description && <details className="mt-4 rounded-xl border bg-white p-3"><summary className="cursor-pointer text-sm font-bold">Опис із картки</summary><p className="mt-3 whitespace-pre-line text-sm leading-6 text-stone-600">{preview.description}</p></details>}<details className="mt-3 rounded-xl border bg-white p-3"><summary className="cursor-pointer text-sm font-bold">Характеристики ({preview.facts.length})</summary><dl className="mt-3 grid gap-x-5 gap-y-2 text-sm sm:grid-cols-2">{preview.facts.map((fact) => <div key={fact.label} className="flex justify-between gap-3 border-b border-stone-100 pb-2"><dt className="text-stone-500">{fact.label}</dt><dd className="text-right font-semibold">{fact.value}</dd></div>)}</dl></details></div>}
-    </Card></div>
-  </div>;
+function QdoorsImporter({ accessToken, onImport, onCreate, onMarkExisting, saving, products, sourceProductSlugs }: { accessToken: string; onImport: (preview: QdoorsPreview, target?: Product, fields?: ImportFields) => Promise<string | null>; onCreate: (preview: QdoorsPreview) => Promise<string | null>; onMarkExisting: (item: QdoorsCatalogItem, target: Product) => Promise<string | null>; saving: boolean; products: Product[]; sourceProductSlugs: Record<string, string> }) {
+  return <QdoorsReview accessToken={accessToken} onImport={onImport} onCreate={onCreate} onMarkExisting={onMarkExisting} saving={saving} products={products} sourceProductSlugs={sourceProductSlugs} matchModel={getQdoorsMatch} />;
 }
 
 function ManagementDisclosure() {
