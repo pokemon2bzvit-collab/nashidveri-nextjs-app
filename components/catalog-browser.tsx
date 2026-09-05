@@ -2,15 +2,16 @@
 
 import { Phone, Ruler, Search, SlidersHorizontal, X } from "lucide-react";
 import Link from "next/link";
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useState } from "react";
 import { ProductGrid } from "./product-grid";
-import { categories, type CatalogCardProduct } from "@/lib/catalog";
+import { categories, type CatalogBrowseData } from "@/lib/catalog";
 
 const PAGE_SIZE = 24;
 const priceRanges = [{ id: "under-10000", label: "до 10 000 грн", max: 10000 }, { id: "10000-25000", label: "10 000–25 000 грн", min: 10000, max: 25000 }, { id: "over-25000", label: "від 25 000 грн", min: 25000 }];
 const getPriceNumber = (price: string) => Number(price.replace(/[^\d]/g, "")) || null;
 
-export function CatalogBrowser({ products, initialCategory = "all", initialQuery = "", initialBrand = "all", initialCollection = "all" }: { products: CatalogCardProduct[]; initialCategory?: string; initialQuery?: string; initialBrand?: string; initialCollection?: string }) {
+export function CatalogBrowser({ initialData, initialCategory = "all", initialQuery = "", initialBrand = "all", initialCollection = "all" }: { initialData: CatalogBrowseData; initialCategory?: string; initialQuery?: string; initialBrand?: string; initialCollection?: string }) {
+  const [data, setData] = useState(initialData);
   const [category, setCategory] = useState(initialCategory);
   const [brand, setBrand] = useState(initialBrand);
   const [collection, setCollection] = useState(initialCollection);
@@ -20,29 +21,21 @@ export function CatalogBrowser({ products, initialCategory = "all", initialQuery
   const [priceRange, setPriceRange] = useState("all");
   const [query, setQuery] = useState(initialQuery);
   const [filtersOpen, setFiltersOpen] = useState(false);
-  const [visibleCount, setVisibleCount] = useState(PAGE_SIZE);
+  const [loading, setLoading] = useState(false);
 
-  const categoryFilters = useMemo(() => [{ id: "all", label: "Усі моделі" }, ...Object.entries(categories).filter(([id]) => products.some((product) => product.category === id)).map(([id, item]) => ({ id, label: item.title }))], [products]);
-  const categoryProducts = useMemo(() => products.filter((product) => category === "all" || product.category === category), [products, category]);
-  const availableBrands = useMemo(() => [...new Set(categoryProducts.map((product) => product.brand))], [categoryProducts]);
-  const facetProducts = useMemo(() => categoryProducts.filter((product) => brand === "all" || product.brand === brand), [categoryProducts, brand]);
-  const availableCollections = useMemo(() => [...new Set(facetProducts.map((product) => product.collection))], [facetProducts]);
-  const materials = useMemo(() => [...new Set(facetProducts.map((product) => product.material))], [facetProducts]);
-  const styles = useMemo(() => [...new Set(facetProducts.map((product) => product.style))], [facetProducts]);
-  const colors = useMemo(() => [...new Set(facetProducts.map((product) => product.color))], [facetProducts]);
-  const materialDuplicatesCategory = useMemo(() => materials.length > 0 && materials.every((material) => ["Вхідні", "Міжкімнатні"].includes(material)), [materials]);
-  const styleDuplicatesCollections = useMemo(() => styles.length > 0 && styles.every((style) => availableCollections.includes(style.replace(/^Колекція\s+/i, ""))), [availableCollections, styles]);
-  const hasPrices = useMemo(() => products.some((product) => getPriceNumber(product.price) !== null), [products]);
+  const categoryFilters = [{ id: "all", label: "Усі моделі" }, ...Object.entries(categories).filter(([id]) => data.facets.categories.includes(id)).map(([id, item]) => ({ id, label: item.title }))];
+  const availableBrands = data.facets.brands;
+  const availableCollections = data.facets.collections;
+  const materials = data.facets.materials;
+  const styles = data.facets.styles;
+  const colors = data.facets.colors;
+  const materialDuplicatesCategory = materials.length > 0 && materials.every((item) => ["Вхідні", "Міжкімнатні"].includes(item));
+  const styleDuplicatesCollections = styles.length > 0 && styles.every((item) => availableCollections.includes(item.replace(/^Колекція\s+/i, "")));
+  const hasPrices = data.facets.hasPrices;
+  const result = data.products;
 
-  const result = useMemo(() => products.filter((product) => {
-    const price = getPriceNumber(product.price);
-    const range = priceRanges.find((item) => item.id === priceRange);
-    const matchesPrice = !range || (price !== null && (!range.min || price >= range.min) && (!range.max || price < range.max));
-    return (category === "all" || product.category === category) && (brand === "all" || product.brand === brand) && (collection === "all" || product.collection === collection) && (material === "all" || product.material === material) && (style === "all" || product.style === style) && (color === "all" || product.color === color) && matchesPrice && product.searchText.includes(query.toLowerCase());
-  }), [products, category, brand, collection, material, style, color, priceRange, query]);
-
-  useEffect(() => setVisibleCount(PAGE_SIZE), [category, brand, collection, material, style, color, priceRange, query]);
-  const visibleProducts = result.slice(0, visibleCount);
+  useEffect(() => { const controller = new AbortController(); const params = new URLSearchParams({ category, brand, collection, material, style, color, priceRange, search: query, limit: String(PAGE_SIZE) }); setLoading(true); fetch(`/api/catalog?${params}`, { signal: controller.signal }).then((response) => response.json()).then((next) => setData(next)).catch(() => undefined).finally(() => setLoading(false)); return () => controller.abort(); }, [category, brand, collection, material, style, color, priceRange, query]);
+  const visibleProducts = result;
   const reset = () => { setCategory("all"); setBrand("all"); setCollection("all"); setMaterial("all"); setStyle("all"); setColor("all"); setPriceRange("all"); setQuery(""); };
   const active = category !== "all" || brand !== "all" || collection !== "all" || material !== "all" || style !== "all" || color !== "all" || priceRange !== "all" || query.length > 0;
   const activeFilters = [
@@ -72,7 +65,7 @@ export function CatalogBrowser({ products, initialCategory = "all", initialQuery
     <div>
       <div className="flex flex-col justify-between gap-4 border-b pb-5 sm:flex-row sm:items-center"><label className="relative block max-w-md flex-1"><Search className="absolute left-4 top-1/2 -translate-y-1/2 text-stone-400" size={18} /><input value={query} onChange={(event) => setQuery(event.target.value)} placeholder="Пошук за моделлю, фабрикою чи колекцією" className="w-full rounded-xl border bg-white py-3 pl-11 pr-10 text-sm outline-none transition focus:border-clay" />{query && <button aria-label="Очистити пошук" onClick={() => setQuery("")} className="absolute right-3 top-1/2 -translate-y-1/2 text-stone-400"><X size={16} /></button>}</label><div className="flex items-center justify-between gap-4"><p className="text-sm text-stone-500">Знайдено: <span className="font-bold text-ink">{result.length}</span> моделей</p><button className="inline-flex items-center gap-2 rounded-full border px-3 py-2 text-xs font-bold lg:hidden" onClick={() => setFiltersOpen(true)}><SlidersHorizontal size={15} /> Фільтри</button></div></div>
       {activeFilters.length > 0 && <div className="mt-4 flex flex-wrap items-center gap-2"><span className="text-xs font-semibold text-stone-500">Обрано:</span>{activeFilters.map((filter) => <button key={filter.label} onClick={filter.clear} className="inline-flex items-center gap-1 rounded-full bg-sand px-3 py-1.5 text-xs font-bold text-ink hover:bg-stone-200">{filter.label}<X size={13} /></button>)}</div>}
-      {result.length ? <><div className="mt-7"><ProductGrid products={visibleProducts} /></div>{visibleCount < result.length && <div className="mt-9 text-center"><button className="button-light" onClick={() => setVisibleCount((count) => count + PAGE_SIZE)}>Показати ще {Math.min(PAGE_SIZE, result.length - visibleCount)} моделей</button><p className="mt-3 text-xs text-stone-500">Показано {visibleProducts.length} з {result.length}</p></div>}<section className="mt-12 rounded-2xl bg-sand p-6 sm:flex sm:items-center sm:justify-between sm:gap-6 sm:p-8"><div><p className="eyebrow">Потрібна порада?</p><h2 className="mt-2 font-display text-3xl font-semibold tracking-[-.03em]">Допоможемо підібрати двері</h2><p className="mt-2 max-w-xl text-sm leading-6 text-stone-600">Підкажемо комплектацію, доступні декори та зорієнтуємо за вартістю.</p></div><div className="mt-5 flex flex-col gap-2 sm:mt-0 sm:shrink-0"><a href="tel:+380950729341" className="button-primary"><Phone size={16} /> Подзвонити</a><Link href="/contacts" className="button-light"><Ruler size={16} /> Замовити замір</Link></div></section></> : <div className="mt-7 rounded-2xl border border-dashed bg-white p-10 text-center"><p className="font-display text-2xl">За вашими умовами нічого не знайдено</p><p className="mt-2 text-sm text-stone-500">Спробуйте скинути один або кілька фільтрів.</p><button onClick={reset} className="button-primary mt-5">Показати всі моделі</button></div>}
+      {result.length ? <><div className="mt-7"><ProductGrid products={visibleProducts} /></div>{visibleProducts.length < data.total && <div className="mt-9 text-center"><button className="button-light" onClick={async () => { setLoading(true); const params = new URLSearchParams({ category, brand, collection, material, style, color, priceRange, search: query, offset: String(visibleProducts.length), limit: String(PAGE_SIZE) }); const next = await fetch(`/api/catalog?${params}`).then((response) => response.json()); setData((current) => ({ ...next, products: [...current.products, ...next.products] })); setLoading(false); }}>Показати ще {Math.min(PAGE_SIZE, data.total - visibleProducts.length)} моделей</button><p className="mt-3 text-xs text-stone-500">Показано {visibleProducts.length} з {data.total}</p></div>}<section className="mt-12 rounded-2xl bg-sand p-6 sm:flex sm:items-center sm:justify-between sm:gap-6 sm:p-8"><div><p className="eyebrow">Потрібна порада?</p><h2 className="mt-2 font-display text-3xl font-semibold tracking-[-.03em]">Допоможемо підібрати двері</h2><p className="mt-2 max-w-xl text-sm leading-6 text-stone-600">Підкажемо комплектацію, доступні декори та зорієнтуємо за вартістю.</p></div><div className="mt-5 flex flex-col gap-2 sm:mt-0 sm:shrink-0"><a href="tel:+380950729341" className="button-primary"><Phone size={16} /> Подзвонити</a><Link href="/contacts" className="button-light"><Ruler size={16} /> Замовити замір</Link></div></section></> : <div className="mt-7 rounded-2xl border border-dashed bg-white p-10 text-center"><p className="font-display text-2xl">{loading ? "Оновлюємо каталог…" : "За вашими умовами нічого не знайдено"}</p><p className="mt-2 text-sm text-stone-500">Спробуйте скинути один або кілька фільтрів.</p><button onClick={reset} className="button-primary mt-5">Показати всі моделі</button></div>}
     </div>
   </div>;
 }

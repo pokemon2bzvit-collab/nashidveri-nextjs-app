@@ -59,6 +59,37 @@ export const toCatalogCardProduct = (product: Product): CatalogCardProduct => {
   };
 };
 
+export type CatalogBrowseQuery = { category?: string; brand?: string; collection?: string; material?: string; style?: string; color?: string; priceRange?: string; search?: string; offset?: number; limit?: number };
+export type CatalogBrowseData = { products: CatalogCardProduct[]; total: number; catalogTotal: number; facets: { categories: string[]; brands: string[]; collections: string[]; materials: string[]; styles: string[]; colors: string[]; hasPrices: boolean } };
+
+export async function getCatalogBrowseData(query: CatalogBrowseQuery = {}): Promise<CatalogBrowseData> {
+  const all = await getProducts();
+  const category = query.category || "all";
+  const brand = query.brand || "all";
+  const collection = query.collection || "all";
+  const material = query.material || "all";
+  const style = query.style || "all";
+  const color = query.color || "all";
+  const priceRange = query.priceRange || "all";
+  const search = (query.search || "").toLowerCase();
+  const categoryProducts = all.filter((product) => category === "all" || product.category === category);
+  const brandProducts = categoryProducts.filter((product) => brand === "all" || product.brand === brand);
+  const priceValue = (price: string) => Number(price.replace(/[^\d]/g, "")) || null;
+  const filtered = brandProducts.filter((product) => {
+    const price = priceValue(product.price);
+    const matchesPrice = priceRange === "all" || (price !== null && ((priceRange !== "under-10000" || price < 10000) && (priceRange !== "10000-25000" || (price >= 10000 && price < 25000)) && (priceRange !== "over-25000" || price >= 25000)));
+    const searchable = `${product.name} ${product.brand} ${product.collection} ${product.material} ${product.style} ${product.color} ${product.features.join(" ")} ${product.description}`.toLowerCase();
+    return (collection === "all" || product.collection === collection) && (material === "all" || product.material === material) && (style === "all" || product.style === style) && (color === "all" || product.color === color) && matchesPrice && searchable.includes(search);
+  });
+  const offset = Math.max(0, query.offset || 0);
+  const limit = Math.min(48, Math.max(1, query.limit || 24));
+  const unique = (items: string[]) => [...new Set(items)].filter(Boolean);
+  return {
+    products: filtered.slice(offset, offset + limit).map(toCatalogCardProduct), total: filtered.length, catalogTotal: all.length,
+    facets: { categories: unique(all.map((product) => product.category)), brands: unique(categoryProducts.map((product) => product.brand)), collections: unique(brandProducts.map((product) => product.collection)), materials: unique(brandProducts.map((product) => product.material)), styles: unique(brandProducts.map((product) => product.style)), colors: unique(brandProducts.map((product) => product.color)), hasPrices: all.some((product) => priceValue(product.price) !== null) },
+  };
+}
+
 export const products: Product[] = importedProducts;
 
 type ProductRow = Omit<Product, "image" | "features"> & { features: string[] | null; image_path: string };
