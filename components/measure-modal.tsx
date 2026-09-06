@@ -40,7 +40,7 @@ export function MeasureModal({ open, onClose }: { open: boolean; onClose: () => 
   }
 
   return <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/45 p-5" role="dialog" aria-modal="true" aria-labelledby="measure-title">
-    <form onSubmit={handleSubmit(submit)} className="relative w-full max-w-md rounded-2xl bg-white p-6 shadow-2xl sm:p-7">
+    <form toolname="request_free_measurement" tooldescription="Заповнює заявку на безкоштовний замір у салоні «Наші двері». Клієнт самостійно підтверджує надсилання форми." onSubmit={handleSubmit(submit)} className="relative w-full max-w-md rounded-2xl bg-white p-6 shadow-2xl sm:p-7">
       <button aria-label="Закрити" type="button" onClick={onClose} className="absolute right-5 top-5 text-stone-500"><X /></button>
       <p className="eyebrow">Безкоштовний замір</p>
       <h2 id="measure-title" className="mt-3 font-display text-3xl">Узгодимо зручний час</h2>

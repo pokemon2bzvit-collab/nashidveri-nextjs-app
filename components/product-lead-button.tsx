@@ -39,7 +39,7 @@ export function ProductLeadButton({ productSlug, productName }: { productSlug: s
   return <>
     <button className="button-primary" onClick={() => { setOpen(true); setSuccess(false); setServerError(""); }}>Дізнатися ціну</button>
     {open && <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/45 p-5" role="dialog" aria-modal="true" aria-labelledby="price-title">
-      <form onSubmit={handleSubmit(submit)} className="relative w-full max-w-md rounded-2xl bg-white p-6 shadow-2xl sm:p-7">
+      <form toolname="request_product_calculation" tooldescription="Заповнює заявку на прорахунок вибраної моделі дверей. Клієнт самостійно підтверджує надсилання форми." onSubmit={handleSubmit(submit)} className="relative w-full max-w-md rounded-2xl bg-white p-6 shadow-2xl sm:p-7">
         <button aria-label="Закрити" type="button" onClick={() => setOpen(false)} className="absolute right-5 top-5 text-stone-500"><X /></button>
         {success ? <div className="py-8 text-center"><p className="eyebrow">Заявку надіслано</p><h2 id="price-title" className="mt-3 font-display text-3xl">Дякуємо!</h2><p className="mt-3 text-sm leading-6 text-stone-600">Менеджер зв’яжеться з вами найближчим часом, щоб уточнити комплектацію та вартість.</p><button type="button" onClick={() => setOpen(false)} className="button-primary mt-6">Гаразд</button></div> : <>
           <p className="eyebrow">Прорахунок моделі</p>
