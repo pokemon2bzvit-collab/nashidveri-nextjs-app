@@ -1,5 +1,7 @@
 # Supabase для каталогу «Наші двері»
 
+> SEO-стан: основний домен сайту — `https://nashidveri-uzhhorod.com.ua`. Після його підключення у Vercel додайте у Vercel змінну `NEXT_PUBLIC_SITE_URL` з цим значенням, без завершального `/`.
+
 1. Увійдіть на [Supabase](https://supabase.com/dashboard) і натисніть **New project**.
 2. Назва: `nashi-dveri`; регіон — найближчий європейський; пароль бази збережіть у надійному місці.
 3. Після створення відкрийте **SQL Editor** → **New query**, скопіюйте вміст `schema.sql` і натисніть **Run**.
