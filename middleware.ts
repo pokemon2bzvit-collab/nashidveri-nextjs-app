@@ -19,7 +19,11 @@ export function middleware(request: NextRequest) {
 
   const { pathname } = request.nextUrl;
   // Адміністратор і внутрішні API залишаються доступними під час робіт.
-  if (pathname.startsWith("/admin") || pathname.startsWith("/api")) return NextResponse.next();
+  if (
+    pathname.startsWith("/admin") ||
+    pathname.startsWith("/api") ||
+    pathname.startsWith("/_next")
+  ) return NextResponse.next();
 
   return new NextResponse(maintenancePage, {
     status: 503,
