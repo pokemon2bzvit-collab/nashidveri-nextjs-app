@@ -1,4 +1,4 @@
--- Grand — 37 моделей у колекціях DELUX, LUX і Paint.
+-- RODOS Grand — 37 моделей у колекціях DELUX, LUX і Paint.
 -- Оновлює описи. Фото та детальні характеристики вже додані попередніми пакетами.
 
 update public.products
@@ -8,5 +8,5 @@ set description = case collection
   when 'Paint' then name || ' — пофарбовані міжкімнатні двері RODOS Grand Paint у стилі гранж. Дерев’яне полотно товщиною 44 мм доступне у стандартних розмірах 600–900 × 2000 мм; можливе індивідуальне виготовлення.'
   else description
 end
-where brand = 'Grand'
+where brand = 'Rodos'
   and collection in ('DELUX', 'LUX', 'Paint');

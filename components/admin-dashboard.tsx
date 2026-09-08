@@ -33,7 +33,6 @@ type QualityFilter = "all" | "photo" | "description" | "source" | "incomplete" |
 const catalogSources = [
   { name: "Market Dveri", info: "Описи, характеристики та фото багатьох моделей", url: "https://market-dveri.ua/uk/" },
   { name: "Abwehr", info: "Офіційний каталог вхідних дверей", url: "https://abwehr.com.ua/" },
-  { name: "Grand", info: "Офіційний каталог фабрики Grand", url: "https://www.granddoor.com.ua/#product" },
   { name: "Papa Carlo", info: "Офіційний каталог міжкімнатних дверей", url: "https://papa-carlo.com.ua/ua/" },
   { name: "Qdoors", info: "Офіційний каталог Qdoors", url: "https://qdoors-dveri.com.ua/dveri/" },
   { name: "Страж", info: "Офіційний каталог вхідних дверей", url: "https://straj.ua/" },

@@ -6188,12 +6188,22 @@ const collectionCorrections: Record<string, string> = {
 
 export const importedProducts: Product[] = rawImportedProducts.map((product) => {
   const collection = collectionCorrections[product.slug];
-  if (!collection) return product;
+  const normalizedProduct = product.brand === "Grand"
+    ? {
+        ...product,
+        brand: "Rodos",
+        name: product.name.replace(/^Grand\s+/iu, "Rodos Grand "),
+        description: product.description.replace(/^Grand(,|\s)/iu, "Rodos Grand$1"),
+        features: product.features.map((feature) => feature === "Фабрика Grand" ? "Фабрика Rodos" : feature),
+      }
+    : product;
+
+  if (!collection) return normalizedProduct;
   return {
-    ...product,
+    ...normalizedProduct,
     collection,
     style: `Колекція ${collection}`,
-    features: [`Фабрика ${product.brand}`, `Колекція ${collection}`],
-    description: product.description.replace(/колекція Склад/gi, `колекція ${collection}`),
+    features: [`Фабрика ${normalizedProduct.brand}`, `Колекція ${collection}`],
+    description: normalizedProduct.description.replace(/колекція Склад/gi, `колекція ${collection}`),
   };
 });

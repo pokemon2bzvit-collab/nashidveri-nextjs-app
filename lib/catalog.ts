@@ -10,7 +10,7 @@ export type CatalogDecorOption = Pick<ProductOption, "group" | "label" | "swatch
 export type CatalogCardProduct = Pick<Product, "slug" | "category" | "brand" | "collection" | "name" | "material" | "style" | "color" | "price" | "description" | "image"> & { highlights: string[]; decorOptions: CatalogDecorOption[]; keySpecs: ProductSpec[]; searchText: string };
 
 export const categories: Record<Category, { title: string; short: string; description: string; image: string }> = {
-  interior: { title: "Міжкімнатні двері", short: "Міжкімнатні", description: "Колекції дверей від Papa Carlo, Rodos, Термінус, Grand та StilDoors.", image: "/catalog-assets/products/product-85.jpg" },
+  interior: { title: "Міжкімнатні двері", short: "Міжкімнатні", description: "Колекції дверей від Papa Carlo, Rodos, Термінус та StilDoors.", image: "/catalog-assets/products/product-85.jpg" },
   entrance: { title: "Вхідні двері", short: "Вхідні", description: "Вхідні двері Abwehr, Rodos Steel, Страж, Q Doors та Magda.", image: "/catalog-assets/products/product-200.jpg" },
   windows: { title: "Вікна", short: "Вікна", description: "Віконні системи для квартири, будинку й тераси.", image: "" },
 };
@@ -90,7 +90,20 @@ export async function getCatalogBrowseData(query: CatalogBrowseQuery = {}): Prom
   };
 }
 
-export const products: Product[] = importedProducts;
+// Колишня позначка Grand у первинному імпорті була назвою лінійки RODOS Grand,
+// а не окремою фабрикою. Нормалізація зберігає коректний fallback-каталог.
+const normalizeRodosGrand = (product: Product): Product => {
+  if (product.brand !== "Grand") return product;
+  return {
+    ...product,
+    brand: "Rodos",
+    name: product.name.replace(/^Grand\s+/iu, "Rodos Grand "),
+    description: product.description.replace(/^Grand(,|\s)/iu, "Rodos Grand$1"),
+    features: product.features.map((feature) => feature === "Фабрика Grand" ? "Фабрика Rodos" : feature),
+  };
+};
+
+export const products: Product[] = importedProducts.map(normalizeRodosGrand);
 
 type ProductRow = Omit<Product, "image" | "features"> & { features: string[] | null; image_path: string };
 type ProductMediaRow = { product_slug: string; kind: ProductMedia["kind"]; label: string | null; image_path: string; sort_order: number };
@@ -117,7 +130,7 @@ export const catalogThumbnailUrl = (image: string, width = 480) => {
   return `${supabaseUrl}/storage/v1/render/image/public/catalog-images/${path}?width=${width}&quality=70&resize=contain`;
 };
 
-const mapProduct = (product: ProductRow): Product => ({ ...product, features: product.features || [], image: catalogImageUrl(product.image_path) });
+const mapProduct = (product: ProductRow): Product => normalizeRodosGrand({ ...product, features: product.features || [], image: catalogImageUrl(product.image_path) });
 const mapMedia = (media: ProductMediaRow): ProductMedia => ({ kind: media.kind, label: media.label, image: catalogImageUrl(media.image_path), sortOrder: media.sort_order });
 const mapOption = (option: ProductOptionRow): ProductOption => ({ group: option.option_group, groupLabel: option.group_label, label: option.label, swatch: option.swatch, image: option.image_path ? catalogImageUrl(option.image_path) : null, sortOrder: option.sort_order });
 const mapVariant = (variant: ProductVariantRow): ProductVariant => ({ selections: variant.selections, image: catalogImageUrl(variant.image_path), sortOrder: variant.sort_order });

@@ -12,7 +12,6 @@ type Stats = { total: number; published: number; withoutPhoto: number; withoutDe
 const leadLabels: Record<string, string> = { measurement: "Замір", price_request: "Прорахунок", contact_form: "Повідомлення", consultation: "Консультація" };
 const manufacturerHub = [
   { brand: "Abwehr", note: "Вхідні двері · офіційний каталог", catalogUrl: "https://abwehr.com.ua/" },
-  { brand: "Grand", note: "Міжкімнатні та вхідні двері", catalogUrl: "https://www.granddoor.com.ua/" },
   { brand: "Magda", note: "Вхідні двері для будинку й квартири", catalogUrl: "https://www.magda.com.ua/" },
   { brand: "Q Doors", note: "Імпорт із офіційного каталогу Qdoors", catalogUrl: "https://qdoors.ua/shop", importer: "qdoors" },
   { brand: "StilDoors", note: "Міжкімнатні двері", catalogUrl: "https://stildoors.com.ua/" },

@@ -17,7 +17,7 @@ cross join (values
   ('Сосна крем', '#d9c29d', 7),
   ('ПВХ білий мат', '#f3f1ea', 8)
 ) as color(label, swatch, sort_order)
-where product.brand = 'Grand' and product.collection = 'DELUX'
+where product.brand = 'Rodos' and product.collection = 'DELUX'
 on conflict (product_slug, option_group, label) do update
 set group_label = excluded.group_label, swatch = excluded.swatch, sort_order = excluded.sort_order, is_active = true;
 
@@ -32,7 +32,7 @@ cross join (values
   ('Нордік', '#c9c5b9', 5),
   ('Шервуд', '#765847', 6)
 ) as color(label, swatch, sort_order)
-where product.brand = 'Grand' and product.collection = 'LUX'
+where product.brand = 'Rodos' and product.collection = 'LUX'
 on conflict (product_slug, option_group, label) do update
 set group_label = excluded.group_label, swatch = excluded.swatch, sort_order = excluded.sort_order, is_active = true;
 
@@ -43,6 +43,6 @@ cross join (values
   ('Білий мат', '#f4f2eb', 1),
   ('RAL / NCS на замовлення', null, 2)
 ) as color(label, swatch, sort_order)
-where product.brand = 'Grand' and product.collection = 'Paint'
+where product.brand = 'Rodos' and product.collection = 'Paint'
 on conflict (product_slug, option_group, label) do update
 set group_label = excluded.group_label, swatch = excluded.swatch, sort_order = excluded.sort_order, is_active = true;
