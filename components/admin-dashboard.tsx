@@ -31,7 +31,6 @@ type EditorKind = "specs" | "options" | "variants";
 type QualityFilter = "all" | "photo" | "description" | "source" | "incomplete" | "hidden";
 
 const catalogSources = [
-  { name: "Market Dveri", info: "Описи, характеристики та фото багатьох моделей", url: "https://market-dveri.ua/uk/" },
   { name: "Abwehr", info: "Офіційний каталог вхідних дверей", url: "https://abwehr.com.ua/" },
   { name: "Papa Carlo", info: "Офіційний каталог міжкімнатних дверей", url: "https://papa-carlo.com.ua/ua/" },
   { name: "Qdoors", info: "Офіційний каталог Qdoors", url: "https://qdoors-dveri.com.ua/dveri/" },
