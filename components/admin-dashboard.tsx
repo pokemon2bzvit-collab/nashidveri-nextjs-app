@@ -2,7 +2,7 @@
 
 import { FormEvent, type ReactNode, useEffect, useMemo, useState } from "react";
 import { Check, ChevronLeft, ChevronRight, ExternalLink, FileImage, Link2, LoaderCircle, LogOut, PackageSearch, Paintbrush, Plus, Save, Search, ShieldCheck, SlidersHorizontal, Trash2, Upload } from "lucide-react";
-import { useSearchParams } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
 import type { Session } from "@supabase/supabase-js";
 import { CatalogManagement } from "@/components/catalog-management";
 import { QdoorsReview, type ImportFields } from "@/components/qdoors-review";
@@ -90,6 +90,7 @@ function ImagePreview({ path, label, compact = false }: { path: string | null | 
 export function AdminDashboard() {
   const supabase = useMemo(() => getSupabaseBrowserClient(), []);
   const searchParams = useSearchParams();
+  const router = useRouter();
   const [session, setSession] = useState<Session | null>(null);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -171,6 +172,9 @@ export function AdminDashboard() {
       setTab("sources");
     }
   }, [searchParams, products, selected]);
+  useEffect(() => {
+    if (searchParams.get("importer") === "rodos") router.replace("/admin/rodos-import");
+  }, [router, searchParams]);
   useEffect(() => {
     const requestedSlug = searchParams.get("product");
     const requestedProduct = requestedSlug ? products.find((product) => product.slug === requestedSlug) : null;

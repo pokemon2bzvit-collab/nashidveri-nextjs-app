@@ -17,7 +17,7 @@ const manufacturerHub = [
   { brand: "StilDoors", note: "Міжкімнатні двері", catalogUrl: "https://stildoors.com.ua/" },
   { brand: "Papa Carlo", note: "Міжкімнатні двері та колекції", catalogUrl: "https://papa-carlo.com.ua/ua/" },
   { brand: "Rodos Steel", note: "Вхідні двері", catalogUrl: "https://rodos.ua/" },
-  { brand: "Rodos", note: "Міжкімнатні двері та покриття", catalogUrl: "https://rodos.ua/" },
+  { brand: "Rodos", note: "Міжкімнатні двері та покриття", catalogUrl: "https://rodos.ua/", importer: "rodos" },
   { brand: "Страж", note: "Вхідні двері для квартири й будинку", catalogUrl: "https://straj.ua/" },
   { brand: "Термінус", note: "Міжкімнатні двері", catalogUrl: "https://terminus.ua/catalog/" },
 ];
