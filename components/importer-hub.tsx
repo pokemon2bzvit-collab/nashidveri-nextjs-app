@@ -1,0 +1,13 @@
+import Link from "next/link";
+import { ArrowRight, ExternalLink, ScanSearch, ShieldCheck } from "lucide-react";
+import { AdminRouteGuard } from "@/components/admin-route-guard";
+
+const importers = [
+  { title: "Rodos", text: "Офіційний sitemap Rodos: знайти нові моделі, переглянути фото, опис і характеристики, додати як приховану чернетку.", href: "/admin/rodos-import", source: "https://rodos.ua/sitemap.xml", action: "Відкрити імпортер" },
+  { title: "Q Doors", text: "Сканер офіційного каталогу Qdoors: зіставити модель з нашою карткою або додати нову після перевірки.", href: "/admin/catalog?brand=Q%20Doors&importer=qdoors", source: "https://qdoors.ua/shop", action: "Відкрити імпортер" },
+];
+
+function ImporterHubContent() {
+  return <section><div className="rounded-3xl bg-ink px-5 py-8 text-white sm:px-8"><p className="text-xs font-bold uppercase tracking-[.16em] text-sand">Поповнення каталогу</p><h1 className="mt-2 font-display text-4xl">Імпортери виробників</h1><p className="mt-3 max-w-2xl text-sm leading-6 text-white/70">Тут збираються інструменти, які читають дані безпосередньо з офіційних джерел. Нічого не публікується без вашої перевірки.</p></div><div className="mt-5 grid gap-4 lg:grid-cols-2">{importers.map((item) => <article key={item.title} className="rounded-2xl border bg-white p-5 shadow-sm"><span className="grid size-11 place-items-center rounded-xl bg-sand text-clay"><ScanSearch size={21} /></span><h2 className="mt-5 font-display text-3xl">{item.title}</h2><p className="mt-2 min-h-20 text-sm leading-6 text-stone-600">{item.text}</p><div className="mt-5 flex flex-wrap gap-2"><Link href={item.href} className="button-primary">{item.action} <ArrowRight size={16} /></Link><a href={item.source} target="_blank" rel="noreferrer" className="button-light">Джерело <ExternalLink size={15} /></a></div></article>)}</div><div className="mt-5 flex gap-3 rounded-2xl border border-clay/20 bg-sand/50 p-4 text-sm text-stone-700"><ShieldCheck className="mt-0.5 shrink-0 text-clay" size={19} /><p><b>Безпечно для сайту:</b> нова модель додається як прихована чернетка. Перед показом покупцям перевірте її в розділі «Товари».</p></div></section>;
+}
+export function ImporterHub() { return <AdminRouteGuard><ImporterHubContent /></AdminRouteGuard>; }
