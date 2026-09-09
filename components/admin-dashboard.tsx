@@ -100,7 +100,7 @@ function CatalogCardPreview({ selected, draft, specsText, optionsText, variantsT
     material: selected.category === "entrance" ? "Вхідні" : selected.category === "interior" ? "Міжкімнатні" : "Вікна", style: "", color: "",
     price: draft.price || "Ціна за запитом", description: draft.description || "", features: [], image: catalogImageUrl(image), specs, options, variants,
   };
-  return <div className="w-full max-w-sm"><p className="mb-2 text-sm font-bold">Картка в каталозі</p><ProductGrid products={[product]} singleColumn /><p className="mt-2 text-xs leading-5 text-stone-500">Живе прев’ю: зміни ціни, опису й головного фото видно одразу. Декори та характеристики оновляться після їх збереження.</p></div>;
+  return <div className="w-full max-w-sm"><p className="mb-2 text-sm font-bold">Картка в каталозі</p><ProductGrid products={[product]} singleColumn showCart={false} /><p className="mt-2 text-xs leading-5 text-stone-500">Живе прев’ю: зміни ціни, опису й головного фото видно одразу. Декори та характеристики оновляться після їх збереження.</p></div>;
 }
 
 export function AdminDashboard() {

@@ -51,7 +51,7 @@ const productImageAlt = (product: Pick<Product, "category" | "brand" | "name" | 
   return `${category} ${product.brand} ${product.name}, колекція ${product.collection}`;
 };
 
-export function ProductGrid({ products, singleColumn = false }: { products: (Product | CatalogCardProduct)[]; singleColumn?: boolean }) {
+export function ProductGrid({ products, singleColumn = false, showCart = true }: { products: (Product | CatalogCardProduct)[]; singleColumn?: boolean; showCart?: boolean }) {
   return <div className={singleColumn ? "grid grid-cols-1" : "grid grid-cols-2 gap-3 sm:gap-5 lg:grid-cols-3"}>
     {products.map((product) => { const hasPrice = product.price !== "Ціна за запитом"; const isCatalogCard = "decorOptions" in product; const decorOptions = isCatalogCard ? product.decorOptions : visualDecorOptions(product); const highlights = isCatalogCard ? product.highlights : productHighlights(product); const specs = isCatalogCard ? product.keySpecs : keySpecs(product.specs); return <article key={product.slug} className="group flex min-w-0 flex-col overflow-hidden rounded-2xl border border-stone-200/80 bg-white shadow-sm transition duration-300 hover:-translate-y-1 hover:border-stone-300 hover:shadow-xl">
       <Link href={`/catalog/${product.slug}`} className="relative aspect-[4/5] overflow-hidden bg-[#f7f5f1] p-3 sm:p-5" aria-label={`Детальніше: ${product.name}`}>
@@ -74,7 +74,7 @@ export function ProductGrid({ products, singleColumn = false }: { products: (Pro
           </div>
         </div>
       </Link>
-      <div className="border-t border-stone-100 px-3 py-2.5 sm:px-5 sm:py-3"><ProductCartButton compact item={{ slug: product.slug, name: product.name, brand: product.brand, collection: product.collection, image: product.image }} /></div>
+      {showCart && <div className="border-t border-stone-100 px-3 py-2.5 sm:px-5 sm:py-3"><ProductCartButton compact item={{ slug: product.slug, name: product.name, brand: product.brand, collection: product.collection, image: product.image }} /></div>}
     </article>})}
   </div>;
 }
