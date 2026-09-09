@@ -27,7 +27,15 @@ async function isAdmin(request: NextRequest) {
 export async function GET(request: NextRequest) {
   if (!(await isAdmin(request))) return NextResponse.json({ message: "Немає доступу до імпорту." }, { status: 401 });
   try {
-    const response = await fetch("https://rodos.ua/sitemap.xml", { headers: { "User-Agent": "NashiDveriCatalog/1.0 (+https://nashidveri-uzhhorod.com.ua)" }, cache: "no-store", signal: AbortSignal.timeout(20_000) });
+    const response = await fetch("https://rodos.ua/sitemap.xml", {
+      headers: {
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130 Safari/537.36",
+        Accept: "application/xml,text/xml,*/*",
+        "Accept-Language": "uk-UA,uk;q=0.9",
+      },
+      next: { revalidate: 3600 },
+      signal: AbortSignal.timeout(20_000),
+    });
     if (!response.ok) return NextResponse.json({ message: `Rodos повернув код ${response.status}.` }, { status: 502 });
     const seen = new Set<string>();
     const products = Array.from((await response.text()).matchAll(/<url>([\s\S]*?)<\/url>/gi)).flatMap((match) => {
