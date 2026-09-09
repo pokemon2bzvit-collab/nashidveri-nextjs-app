@@ -2,65 +2,81 @@
 
 import Link from "next/link";
 import { useEffect, useMemo, useState } from "react";
-import { AlertTriangle, ArrowRight, ClipboardList, FileImage, LoaderCircle, Package, PackageSearch, PencilLine, Settings2, ShieldCheck } from "lucide-react";
+import { ArrowRight, Search, Package, ClipboardList, Download, Eye } from "lucide-react";
 import { AdminRouteGuard } from "@/components/admin-route-guard";
 import { getSupabaseBrowserClient } from "@/lib/supabase-browser";
 
 type Product = { slug: string; name: string; brand: string; is_available: boolean; image_path: string | null; description: string | null };
-type Lead = { id: string; name: string; phone: string; status: string; created_at: string; request_type: string };
-type Stats = { total: number; published: number; withoutPhoto: number; withoutDescription: number; withoutSource: number };
-const leadLabels: Record<string, string> = { measurement: "Замір", price_request: "Прорахунок", contact_form: "Повідомлення", consultation: "Консультація" };
-const manufacturerHub = [
-  { brand: "Abwehr", note: "Вхідні двері · офіційний каталог", catalogUrl: "https://abwehr.com.ua/" },
-  { brand: "Magda", note: "Вхідні двері для будинку й квартири", catalogUrl: "https://www.magda.com.ua/" },
-  { brand: "Q Doors", note: "Імпорт із офіційного каталогу Qdoors", catalogUrl: "https://qdoors.ua/shop", importer: "qdoors" },
-  { brand: "StilDoors", note: "Міжкімнатні двері", catalogUrl: "https://stildoors.com.ua/" },
-  { brand: "Papa Carlo", note: "Міжкімнатні двері та колекції", catalogUrl: "https://papa-carlo.com.ua/ua/" },
-  { brand: "Rodos Steel", note: "Вхідні двері", catalogUrl: "https://rodos.ua/" },
-  { brand: "Rodos", note: "Міжкімнатні двері та покриття", catalogUrl: "https://rodos.ua/", importer: "rodos" },
-  { brand: "Страж", note: "Вхідні двері для квартири й будинку", catalogUrl: "https://straj.ua/" },
-  { brand: "Термінус", note: "Міжкімнатні двері", catalogUrl: "https://terminus.ua/catalog/" },
+const actions = [
+  { href: "/admin/catalog", title: "Редагувати товари", text: "Фото, ціна, опис і характеристики.", icon: Package },
+  { href: "/admin/leads", title: "Опрацювати заявки", text: "Контакти клієнтів і статуси звернень.", icon: ClipboardList },
+  { href: "/admin/importers", title: "Імпортувати товари", text: "Каталоги виробників і збережені XML-файли.", icon: Download },
+  { href: "/admin/preview", title: "Переглянути сайт", text: "Вигляд на телефоні, планшеті та ПК.", icon: Eye },
 ];
 
-function ActionCard({ href, icon, title, text, action }: { href: string; icon: React.ReactNode; title: string; text: string; action: string }) {
-  return <Link href={href} className="group rounded-2xl border bg-white p-5 shadow-sm transition hover:-translate-y-0.5 hover:border-clay hover:shadow-md"><span className="grid size-11 place-items-center rounded-xl bg-sand text-clay">{icon}</span><h2 className="mt-5 font-display text-2xl">{title}</h2><p className="mt-2 min-h-12 text-sm leading-6 text-stone-600">{text}</p><span className="mt-5 inline-flex items-center gap-2 text-sm font-bold text-clay">{action}<ArrowRight className="transition group-hover:translate-x-1" size={16} /></span></Link>;
-}
-
 function AdminOverviewContent() {
-  const supabase = useMemo(() => getSupabaseBrowserClient(), []);
-  const [stats, setStats] = useState<Stats | null>(null);
+  const db = useMemo(() => getSupabaseBrowserClient(), []);
   const [products, setProducts] = useState<Product[]>([]);
-  const [sourcedSlugs, setSourcedSlugs] = useState<Set<string>>(new Set());
-  const [specifiedSlugs, setSpecifiedSlugs] = useState<Set<string>>(new Set());
-  const [leads, setLeads] = useState<Lead[]>([]);
-  const [leadsAvailable, setLeadsAvailable] = useState(true);
+  const [query, setQuery] = useState("");
   const [loading, setLoading] = useState(true);
-
+  const [error, setError] = useState("");
   useEffect(() => {
+    let cancelled = false;
     async function load() {
-      const [productsResult, sourcesResult, specsResult, leadsResult] = await Promise.all([
-        supabase.from("products").select("slug,name,brand,is_available,image_path,description"),
-        supabase.from("product_sources").select("product_slug"),
-        supabase.from("product_specs").select("product_slug"),
-        supabase.from("leads").select("id,name,phone,status,created_at,request_type").order("created_at", { ascending: false }).limit(5),
-      ]);
-      const products = (productsResult.data || []) as Product[];
-      setProducts(products);
-      const sourced = new Set((sourcesResult.data || []).map((item) => item.product_slug));
-      setSourcedSlugs(sourced);
-      setSpecifiedSlugs(new Set((specsResult.data || []).map((item) => item.product_slug)));
-      setStats({ total: products.length, published: products.filter((item) => item.is_available).length, withoutPhoto: products.filter((item) => !item.image_path).length, withoutDescription: products.filter((item) => !item.description?.trim()).length, withoutSource: products.filter((item) => !sourced.has(item.slug)).length });
-      if (leadsResult.error) setLeadsAvailable(false); else setLeads(leadsResult.data as Lead[] || []);
-      setLoading(false);
+      try {
+        const result = await db.from("products").select("slug,name,brand,is_available,image_path,description").order("name");
+        if (result.error) throw result.error;
+        if (!cancelled) setProducts((result.data || []) as Product[]);
+      } catch { if (!cancelled) setError("Не вдалося завантажити товари. Оновіть сторінку."); }
+      finally { if (!cancelled) setLoading(false); }
     }
-    load();
-  }, [supabase]);
-
-  return <><section className="rounded-3xl bg-ink px-5 py-8 text-white sm:px-8"><p className="text-xs font-bold uppercase tracking-[.16em] text-sand">Робоча панель</p><h1 className="mt-2 font-display text-4xl sm:text-5xl">Керування каталогом</h1><p className="mt-3 max-w-2xl text-sm leading-6 text-white/70 sm:text-base">Тут видно, що потребує уваги, і можна одразу перейти до товарів, заявок або структури каталогу.</p></section>
-  {loading ? <div className="grid min-h-52 place-items-center"><span className="inline-flex items-center gap-2 text-sm text-stone-500"><LoaderCircle className="animate-spin" size={18} /> Оновлюємо дані…</span></div> : <><section className="mt-5 grid gap-3 sm:grid-cols-2 lg:grid-cols-4"><div className="rounded-2xl border bg-white p-4"><Package className="text-clay" size={20} /><b className="mt-4 block font-display text-3xl">{stats?.total || 0}</b><span className="text-sm text-stone-600">усього моделей</span></div><div className="rounded-2xl border bg-white p-4"><ShieldCheck className="text-clay" size={20} /><b className="mt-4 block font-display text-3xl">{stats?.published || 0}</b><span className="text-sm text-stone-600">показується в каталозі</span></div><Link href="/admin/leads" className="rounded-2xl border bg-white p-4 transition hover:border-clay"><ClipboardList className="text-clay" size={20} /><b className="mt-4 block font-display text-3xl">{leadsAvailable ? leads.length : "—"}</b><span className="text-sm text-stone-600">останні заявки</span></Link><Link href="/admin/catalog?quality=photo" className="rounded-2xl border bg-white p-4 transition hover:border-clay"><AlertTriangle className="text-clay" size={20} /><b className="mt-4 block font-display text-3xl">{(stats?.withoutPhoto || 0) + (stats?.withoutDescription || 0)}</b><span className="text-sm text-stone-600">товарів без даних</span></Link></section>
-  <section className="mt-5 grid gap-4 md:grid-cols-2 xl:grid-cols-4"><ActionCard href="/admin/catalog" icon={<PencilLine size={21} />} title="Товари" text="Редагуйте опис, ціну, фото, декори, характеристики та джерела." action="Відкрити товари" /><ActionCard href="/admin/leads" icon={<ClipboardList size={21} />} title="Заявки" text="Передзвонюйте клієнтам і відмічайте етап роботи із заявкою." action="Відкрити заявки" /><ActionCard href="/admin/structure" icon={<Settings2 size={21} />} title="Структура" text="Керуйте фабриками, колекціями та складом каталогу." action="Відкрити структуру" /><ActionCard href="/admin/password" icon={<ShieldCheck size={21} />} title="Доступ" text="Змініть пароль адміністратора, якщо це потрібно." action="Налаштувати доступ" /></section>
-  <section className="mt-5 rounded-2xl border bg-white p-5 shadow-sm"><div className="flex flex-wrap items-end justify-between gap-3"><div><p className="text-xs font-bold uppercase tracking-[.14em] text-clay">Поповнення каталогу</p><h2 className="mt-1 font-display text-3xl">Наші виробники</h2><p className="mt-2 max-w-2xl text-sm leading-6 text-stone-600">Оберіть фабрику → перегляньте її каталог → додайте або оновіть модель. Дані не потраплять на сайт без вашого підтвердження.</p></div><Link href="/admin/catalog" className="button-light px-3 py-2 text-sm">Усі товари <ArrowRight size={16} /></Link></div><div className="mt-5 grid gap-3 sm:grid-cols-2 xl:grid-cols-3">{manufacturerHub.map((manufacturer) => { const factoryProducts = products.filter((product) => product.brand === manufacturer.brand); const incompleteProducts = factoryProducts.filter((product) => !product.image_path?.trim() || !product.description?.trim() || !sourcedSlugs.has(product.slug) || !specifiedSlugs.has(product.slug)); const count = factoryProducts.length; const needsCheck = incompleteProducts.length; const ready = count - needsCheck; const href = "/admin/catalog?brand=" + encodeURIComponent(manufacturer.brand) + (manufacturer.importer ? "&importer=" + manufacturer.importer : ""); const incompleteHref = "/admin/catalog?brand=" + encodeURIComponent(manufacturer.brand) + "&quality=incomplete"; const addHref = "/admin/structure?tab=products&brand=" + encodeURIComponent(manufacturer.brand); return <article key={manufacturer.brand} className="rounded-xl border border-stone-200 bg-stone-50 p-4 transition hover:border-clay hover:bg-sand"><Link href={href} className="group block"><span className="grid size-10 place-items-center rounded-xl bg-white text-clay shadow-sm"><PackageSearch size={18} /></span><div className="mt-4 flex items-start justify-between gap-3"><div><h3 className="font-display text-xl">{manufacturer.brand}</h3><p className="mt-1 text-sm leading-5 text-stone-600">{manufacturer.note}</p></div><b className="shrink-0 rounded-full bg-white px-2.5 py-1 text-xs text-stone-600">{count}</b></div><div className="mt-4 flex flex-wrap gap-1.5 text-xs font-bold"><span className="rounded-full bg-green-100 px-2 py-1 text-green-800">Готово: {ready}</span>{needsCheck > 0 ? <span className="rounded-full bg-amber-100 px-2 py-1 text-amber-800">Перевірити: {needsCheck}</span> : <span className="rounded-full bg-stone-200 px-2 py-1 text-stone-600">Все заповнено</span>}</div><span className="mt-4 inline-flex items-center gap-2 text-sm font-bold text-clay">{manufacturer.importer ? "Сканувати та імпортувати" : "Керувати моделями"}<ArrowRight className="transition group-hover:translate-x-1" size={16} /></span></Link><div className="mt-4 flex flex-wrap gap-2 border-t border-stone-200 pt-3"><a href={manufacturer.catalogUrl} target="_blank" rel="noreferrer" className="button-light px-3 py-2 text-xs">Каталог виробника</a><Link href={addHref} className="button-light px-3 py-2 text-xs">Додати модель</Link></div>{incompleteProducts.length > 0 && <div className="mt-4 border-t border-stone-200 pt-3"><p className="text-xs font-bold uppercase tracking-[.12em] text-stone-400">Почати з моделі</p><div className="mt-2 space-y-1">{incompleteProducts.slice(0, 3).map((product) => <Link key={product.slug} href={incompleteHref + "&product=" + encodeURIComponent(product.slug)} className="block truncate rounded-lg bg-white px-2.5 py-2 text-sm font-semibold text-stone-700 transition hover:text-clay" title={product.name}>{product.name}</Link>)}</div>{incompleteProducts.length > 3 && <Link href={incompleteHref} className="mt-2 inline-flex text-sm font-bold text-clay hover:text-ink">Усі проблемні моделі: {incompleteProducts.length}</Link>}</div>}</article>; })}</div></section>
-  <section className="mt-5 grid gap-5 xl:grid-cols-[1.15fr_.85fr]"><div className="rounded-2xl border bg-white p-5 shadow-sm"><div className="flex items-center justify-between gap-3"><div><p className="text-xs font-bold uppercase tracking-[.14em] text-clay">Контроль якості</p><h2 className="mt-1 font-display text-3xl">Що варто доповнити</h2></div><Link className="text-sm font-bold text-clay" href="/admin/catalog">До товарів</Link></div><div className="mt-5 space-y-3"><Link href="/admin/catalog?quality=photo" className="flex items-center justify-between rounded-xl bg-stone-50 px-4 py-3 text-sm transition hover:bg-sand"><span className="inline-flex items-center gap-2"><FileImage size={17} className="text-clay" /> Без головного фото</span><b>{stats?.withoutPhoto || 0}</b></Link><Link href="/admin/catalog?quality=description" className="flex items-center justify-between rounded-xl bg-stone-50 px-4 py-3 text-sm transition hover:bg-sand"><span className="inline-flex items-center gap-2"><PencilLine size={17} className="text-clay" /> Без опису</span><b>{stats?.withoutDescription || 0}</b></Link><Link href="/admin/catalog?quality=source" className="flex items-center justify-between rounded-xl bg-stone-50 px-4 py-3 text-sm transition hover:bg-sand"><span className="inline-flex items-center gap-2"><AlertTriangle size={17} className="text-clay" /> Без посилання на джерело</span><b>{stats?.withoutSource || 0}</b></Link></div></div><div className="rounded-2xl border bg-white p-5 shadow-sm"><div className="flex items-center justify-between gap-3"><div><p className="text-xs font-bold uppercase tracking-[.14em] text-clay">Нові звернення</p><h2 className="mt-1 font-display text-3xl">Останні заявки</h2></div><Link className="text-sm font-bold text-clay" href="/admin/leads">Усі</Link></div>{!leadsAvailable ? <p className="mt-5 rounded-xl bg-sand p-4 text-sm leading-6 text-stone-700">Щоб увімкнути заявки, виконайте SQL-файл <b>supabase/leads-management.sql</b> у Supabase.</p> : <div className="mt-5 space-y-3">{leads.map((lead) => <Link key={lead.id} href="/admin/leads" className="block rounded-xl bg-stone-50 p-3 transition hover:bg-sand"><div className="flex justify-between gap-3"><b className="text-sm">{lead.name}</b><span className="text-xs text-stone-500">{leadLabels[lead.request_type] || lead.request_type}</span></div><p className="mt-1 text-sm text-stone-600">{lead.phone}</p></Link>)}{!leads.length && <p className="rounded-xl bg-stone-50 p-4 text-sm text-stone-600">Поки що заявок немає.</p>}</div>}</div></section></>}</>;
+    void load();
+    return () => { cancelled = true; };
+  }, [db]);
+  const search = query.trim().toLocaleLowerCase("uk");
+  const matches = search ? products.filter(p => (p.name + " " + p.brand).toLocaleLowerCase("uk").includes(search)) : [];
+  const brands = [...new Set(products.map(p => p.brand))].sort((a, b) => a.localeCompare(b, "uk"));
+  const checks = [
+    { title: "Усі товари", count: products.length, href: "/admin/catalog" },
+    { title: "Приховані", count: products.filter(p => !p.is_available).length, href: "/admin/catalog?quality=hidden" },
+    { title: "Без фото", count: products.filter(p => !p.image_path?.trim()).length, href: "/admin/catalog?quality=photo" },
+    { title: "Без опису", count: products.filter(p => !p.description?.trim()).length, href: "/admin/catalog?quality=description" },
+  ];
+  return <div className="space-y-6">
+    <header className="flex flex-wrap items-start justify-between gap-3">
+      <div><h1 className="font-display text-3xl sm:text-4xl">Керування сайтом</h1><p className="mt-2 text-sm text-stone-600">Оберіть дію або знайдіть потрібний товар.</p></div>
+      <Link href="/admin/structure?tab=products" className="button-primary">+ Додати товар</Link>
+    </header>
+    <section aria-label="Основні дії" className="grid gap-3 sm:grid-cols-2">
+      {actions.map(({ href, title, text, icon: Icon }) => <Link key={href} href={href} className="group flex items-center gap-4 rounded-2xl border bg-white p-4 transition hover:border-clay sm:p-5">
+        <span className="grid size-11 shrink-0 place-items-center rounded-xl bg-sand text-clay"><Icon size={22} /></span>
+        <span className="min-w-0 flex-1"><b className="block text-base sm:text-lg">{title}</b><span className="mt-1 block text-sm text-stone-600">{text}</span></span>
+        <ArrowRight size={18} className="shrink-0 text-stone-400 group-hover:text-clay" />
+      </Link>)}
+    </section>
+    <section className="rounded-2xl border bg-white p-4 sm:p-5">
+      <label htmlFor="admin-quick-search" className="font-semibold">Швидко знайти товар</label>
+      <div className="relative mt-3"><Search size={18} className="absolute left-3 top-3.5 text-stone-400" /><input id="admin-quick-search" value={query} onChange={e => setQuery(e.target.value)} placeholder="Наприклад: Rodos або назва моделі" className="w-full rounded-xl border border-stone-300 py-3 pl-10 pr-4 text-sm focus:border-clay focus:outline-none" /></div>
+      {error && <p role="alert" className="mt-3 text-sm text-red-700">{error}</p>}
+      {search && <div aria-live="polite" className="mt-3 space-y-1">
+        {loading ? <p className="p-2 text-sm">Завантаження…</p> : matches.length ? <>
+          {matches.slice(0, 8).map(p => <Link key={p.slug} href={"/admin/catalog?product=" + encodeURIComponent(p.slug)} className="flex items-center justify-between gap-3 rounded-lg p-3 text-sm hover:bg-sand"><span><b>{p.name}</b><span className="ml-2 text-stone-500">{p.brand}</span></span><span className="text-clay">Редагувати →</span></Link>)}
+          {matches.length > 8 && <p className="p-2 text-xs text-stone-500">Знайдено {matches.length}. Уточніть назву, щоб звузити список.</p>}
+        </> : !error && <p className="p-2 text-sm text-stone-500">Нічого не знайдено. Спробуйте іншу назву.</p>}
+      </div>}
+    </section>
+    <section aria-label="Стан каталогу" className="grid grid-cols-2 gap-3 sm:grid-cols-4">
+      {checks.map(check => <Link key={check.title} href={check.href} className="rounded-xl border bg-white p-4 hover:border-clay"><b className="block text-2xl">{loading || error ? "—" : check.count}</b><span className="mt-1 block text-sm text-stone-600">{check.title}</span></Link>)}
+    </section>
+    <details className="rounded-2xl border bg-white p-4 sm:p-5">
+      <summary className="cursor-pointer font-semibold">Товари за фабриками</summary>
+      <div className="mt-4 grid gap-2 sm:grid-cols-2 lg:grid-cols-3">{brands.map(brand => <Link key={brand} href={"/admin/catalog?brand=" + encodeURIComponent(brand)} className="flex justify-between gap-3 rounded-lg bg-stone-50 p-3 text-sm hover:bg-sand"><span>{brand}</span><span className="text-stone-500">{products.filter(p => p.brand === brand).length} →</span></Link>)}</div>
+    </details>
+    <div className="flex flex-wrap gap-x-6 gap-y-3 text-sm font-semibold text-stone-600">
+      <Link className="underline hover:text-clay" href="/admin/sitemaps">Збережені XML-файли</Link>
+      <Link className="underline hover:text-clay" href="/admin/structure">Фабрики й колекції</Link>
+      <Link className="underline hover:text-clay" href="/admin/password">Змінити пароль</Link>
+    </div>
+  </div>;
 }
-
 export function AdminOverview() { return <AdminRouteGuard><AdminOverviewContent /></AdminRouteGuard>; }
