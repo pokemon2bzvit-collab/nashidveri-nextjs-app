@@ -51,8 +51,8 @@ const productImageAlt = (product: Pick<Product, "category" | "brand" | "name" | 
   return `${category} ${product.brand} ${product.name}, колекція ${product.collection}`;
 };
 
-export function ProductGrid({ products }: { products: (Product | CatalogCardProduct)[] }) {
-  return <div className="grid grid-cols-2 gap-3 sm:gap-5 lg:grid-cols-3">
+export function ProductGrid({ products, singleColumn = false }: { products: (Product | CatalogCardProduct)[]; singleColumn?: boolean }) {
+  return <div className={singleColumn ? "grid grid-cols-1" : "grid grid-cols-2 gap-3 sm:gap-5 lg:grid-cols-3"}>
     {products.map((product) => { const hasPrice = product.price !== "Ціна за запитом"; const isCatalogCard = "decorOptions" in product; const decorOptions = isCatalogCard ? product.decorOptions : visualDecorOptions(product); const highlights = isCatalogCard ? product.highlights : productHighlights(product); const specs = isCatalogCard ? product.keySpecs : keySpecs(product.specs); return <article key={product.slug} className="group flex min-w-0 flex-col overflow-hidden rounded-2xl border border-stone-200/80 bg-white shadow-sm transition duration-300 hover:-translate-y-1 hover:border-stone-300 hover:shadow-xl">
       <Link href={`/catalog/${product.slug}`} className="relative aspect-[4/5] overflow-hidden bg-[#f7f5f1] p-3 sm:p-5" aria-label={`Детальніше: ${product.name}`}>
           <img loading="lazy" decoding="async" src={catalogThumbnailUrl(product.image)} alt={productImageAlt(product)} className="h-full w-full object-contain transition duration-500 group-hover:scale-[1.035]" />
