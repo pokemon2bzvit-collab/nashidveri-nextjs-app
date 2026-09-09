@@ -27,7 +27,7 @@ async function isAdmin(request: NextRequest) {
 export async function GET(request: NextRequest) {
   if (!(await isAdmin(request))) return NextResponse.json({ message: "Немає доступу до імпорту." }, { status: 401 });
   try {
-    const response = await fetch("https://rodos.ua/sitemap.xml", {
+    const response = await fetch("https://rodos.ua/index.php?route=extension/feed/google_sitemap", {
       headers: {
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130 Safari/537.36",
         Accept: "application/xml,text/xml,*/*",
