@@ -16,12 +16,18 @@ type SyncRow = { item: Item; match: Product | null; status: SyncStatus };
 const button = "inline-flex items-center justify-center gap-2 rounded-xl border border-stone-300 bg-white px-3 py-2.5 text-sm font-bold transition hover:border-clay disabled:cursor-not-allowed disabled:opacity-50";
 function normalize(value: string) { return value.toLocaleLowerCase("uk-UA").replace(/(?:rodos|міжкімнатн[а-яіїє]*|межкомнатн[а-яіїє]*|двер[іь]|door)/giu, " ").replace(/[^\p{L}\p{N}]+/gu, " ").trim(); }
 function looksSame(left: string, right: string) { const a = normalize(left); const b = normalize(right); return a.length > 4 && b.length > 4 && (a === b || a.includes(b) || b.includes(a)); }
-function syncRow(item: Item, products: Product[]): SyncRow {
-  const candidates = products.filter((product) => product.brand === item.brand && product.category === item.category);
-  const exact = candidates.find((product) => normalize(product.name) === normalize(item.title));
-  if (exact) return { item, match: exact, status: "same" };
-  const similar = candidates.find((product) => looksSame(product.name, item.title));
-  return similar ? { item, match: similar, status: "similar" } : { item, match: null, status: "new" };
+function buildSyncRows(items: Item[], products: Product[]): SyncRow[] {
+  // Одна наявна модель може відповідати лише одній сторінці виробника.
+  // Інакше різні виконання на sitemap виглядали б як сотні фальшивих збігів.
+  const usedSlugs = new Set<string>();
+  return items.map((item) => {
+    const candidates = products.filter((product) => product.brand === item.brand && product.category === item.category && product.collection === item.collection && !usedSlugs.has(product.slug));
+    const exact = candidates.find((product) => normalize(product.name) === normalize(item.title));
+    if (exact) { usedSlugs.add(exact.slug); return { item, match: exact, status: "same" }; }
+    const similar = candidates.find((product) => looksSame(product.name, item.title));
+    if (similar) { usedSlugs.add(similar.slug); return { item, match: similar, status: "similar" }; }
+    return { item, match: null, status: "new" };
+  });
 }
 function hash(value: string) { let result = 5381; for (const char of value) result = (result * 33) ^ char.charCodeAt(0); return (result >>> 0).toString(36); }
 function decodeXml(value: string) { return value.replace(/&amp;/gi, "&").replace(/&quot;/gi, '"').replace(/<[^>]+>/g, "").trim(); }
@@ -114,7 +120,7 @@ function RodosImporterContent() {
     if (!active) return; const slug = "rodos-" + hash(active.url); if (products.some((product) => product.slug === slug)) { setNotice("Ця модель уже є в каталозі."); return; }
     setBusy(true); try { const result = await supabase.from("products").insert({ slug, category: active.category, brand: active.brand, collection: active.collection, name: active.title, material: active.category === "entrance" ? "Вхідні" : "Міжкімнатні", style: "Колекція " + active.collection, color: "Уточнюється", price: "Ціна за запитом", description: `${active.title} — модель фабрики ${active.brand}. Повний опис і характеристики буде додано після перевірки офіційної картки.`, features: [`Фабрика ${active.brand}`, `Колекція ${active.collection}`], image_path: active.image, sort_order: 99999, is_available: false }); if (result.error) throw new Error(result.error.message); const source = await supabase.from("product_sources").insert({ product_slug: slug, source_name: "Rodos", source_url: active.url, source_product_name: active.title, verification_status: "verified", verified_at: new Date().toISOString(), notes: "Створено з офіційного sitemap Rodos. Потрібно доповнити дані картки." }); if (source.error) throw new Error(source.error.message); setProducts((current) => [...current, { slug, name: active.title, brand: active.brand, collection: active.collection, category: active.category }]); setNotice("Базову чернетку з фото sitemap додано. Вона прихована від покупців."); } catch (error) { setNotice(error instanceof Error ? error.message : "Не вдалося додати чернетку."); } finally { setBusy(false); }
   }
-  const rows = useMemo(() => items.map((item) => syncRow(item, products)), [items, products]);
+  const rows = useMemo(() => buildSyncRows(items, products), [items, products]);
   const counts = useMemo(() => ({ new: rows.filter((row) => row.status === "new").length, same: rows.filter((row) => row.status === "same").length, similar: rows.filter((row) => row.status === "similar").length, collections: new Set(rows.map((row) => `${row.item.brand}:${row.item.collection}`)).size }), [rows]);
   const filteredRows = syncFilter === "all" ? rows : rows.filter((row) => row.status === syncFilter);
   const statusCopy: Record<SyncStatus, { title: string; tone: string; detail: string }> = { same: { title: "Вже є", tone: "bg-green-100 text-green-800", detail: "Оновлюватимемо існуючу картку, без дубля." }, similar: { title: "Потрібно звірити", tone: "bg-amber-100 text-amber-800", detail: "Може бути ця сама модель під іншою назвою." }, new: { title: "Нова", tone: "bg-sky-100 text-sky-800", detail: "Створимо приховану чернетку у відповідній колекції." } };
