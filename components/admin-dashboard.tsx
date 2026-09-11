@@ -335,6 +335,34 @@ export function AdminDashboard() {
       setNotice("Джерело збережено.");
     }
   }
+  async function applyImportedSource(data: { description: string; facts: Array<{ label: string; value: string }>; sourceUrl: string; sourceName: string; title: string }, fields: { description: boolean; specs: boolean; source: boolean }) {
+    if (!selected) return "Спершу оберіть модель у каталозі.";
+    const target = selected;
+    setSaving(true);
+    try {
+      const specifications = data.facts.map((fact, index) => ({ product_slug: target.slug, label: fact.label, value: fact.value, sort_order: 100 + index * 10, is_active: true }));
+      const [productResult, specsResult, sourceResult] = await Promise.all([
+        fields.description ? supabase.from("products").update({ description: data.description }).eq("slug", target.slug) : Promise.resolve({ error: null }),
+        fields.specs && specifications.length ? supabase.from("product_specs").upsert(specifications, { onConflict: "product_slug,label" }) : Promise.resolve({ error: null }),
+        fields.source ? supabase.from("product_sources").upsert({ product_slug: target.slug, source_name: data.sourceName, source_url: data.sourceUrl, source_product_name: data.title, verification_status: "verified", verified_at: new Date().toISOString(), notes: "Дані перевірені та застосовані через адмінку." }, { onConflict: "product_slug,source_url" }) : Promise.resolve({ error: null }),
+      ]);
+      const error = productResult.error || specsResult.error || sourceResult.error;
+      if (error) return "Частина даних могла зберегтися. " + error.message;
+      if (fields.description) {
+        const updated = { ...target, description: data.description };
+        setSelected(updated);
+        setDraft((current) => current.slug === target.slug ? { ...current, description: data.description } : current);
+        setProducts((items) => items.map((item) => item.slug === target.slug ? updated : item));
+      }
+      if (fields.source) {
+        setSourcedSlugs((items) => new Set([...items, target.slug]));
+        setSourceProductSlugs((items) => ({ ...items, [data.sourceUrl]: target.slug }));
+        const result = await supabase.from("product_sources").select("id,source_name,source_url,verification_status").eq("product_slug", target.slug).order("created_at", { ascending: false });
+        if (!result.error) setSources((result.data || []) as Source[]);
+      }
+      return null;
+    } finally { setSaving(false); }
+  }
   async function markQdoorsExisting(item: QdoorsCatalogItem, target: Product) {
     const linked = sourceProductSlugs[item.url];
     if (linked && linked !== target.slug) return "Ця сторінка вже прив’язана до іншого товару. Перевірте його джерела.";
@@ -416,7 +444,7 @@ export function AdminDashboard() {
             {tab === "basic" && <Card icon={<SlidersHorizontal size={19} />} title="Основні дані" help="Ці дані показуються клієнтам у каталозі та на сторінці товару."><div className="grid gap-5 lg:grid-cols-[minmax(0,1fr)_320px]"><div><div className="grid gap-4 md:grid-cols-2"><label className="text-sm font-bold">Ціна або текст ціни<input className={inputClass} value={draft.price || ""} onChange={(event) => setDraft({ ...draft, price: event.target.value })} placeholder="Наприклад: від 12 500 грн" /></label><label className="text-sm font-bold">Головне фото<input className={inputClass} value={draft.image_path || ""} onChange={(event) => setDraft({ ...draft, image_path: event.target.value })} placeholder="Шлях у Storage або URL" /></label></div><label className="mt-4 block text-sm font-bold">Опис для клієнта<textarea className={areaClass} value={draft.description || ""} onChange={(event) => setDraft({ ...draft, description: event.target.value })} placeholder="Коротко й зрозуміло опишіть модель." /></label><label className="mt-4 inline-flex items-center gap-2 text-sm font-bold"><input type="checkbox" checked={Boolean(draft.is_available)} onChange={(event) => setDraft({ ...draft, is_available: event.target.checked })} /> Показувати товар у каталозі</label></div><CatalogCardPreview selected={selected} draft={draft} specsText={specsText} optionsText={optionsText} variantsText={variantsText} /></div><button onClick={saveBasic} disabled={saving} className="button-primary mt-5"><Save size={16} /> {saving ? "Зберігаємо…" : "Зберегти основні дані"}</button></Card>}
             {tab === "media" && <Card icon={<FileImage size={19} />} title="Фото та палітри" help="Завантажте фото з пристрою або вставте URL / шлях до Supabase Storage."><div className="grid gap-3 md:grid-cols-[170px_1fr_1fr_auto]"><label className="text-sm font-bold">Тип фото<select className={inputClass} value={mediaKind} onChange={(event) => setMediaKind(event.target.value as Media["kind"])}><option value="gallery">Галерея</option><option value="main">Головне фото</option><option value="palette">Палітра</option></select></label><label className="text-sm font-bold">Підпис<input className={inputClass} value={mediaLabel} onChange={(event) => setMediaLabel(event.target.value)} placeholder="Наприклад: дуб золотий" /></label><label className="text-sm font-bold">Посилання або шлях<input className={inputClass} value={mediaUrl} onChange={(event) => setMediaUrl(event.target.value)} placeholder="https://… або папка/файл.jpg" /></label><button onClick={() => addMedia(mediaUrl)} className="button-light self-end"><Plus size={16} /> Додати</button></div><label className="mt-4 inline-flex cursor-pointer items-center gap-2 rounded-full border border-stone-300 bg-white px-4 py-2.5 text-sm font-bold hover:border-clay"><Upload size={16} /> Завантажити фото з пристрою<input className="hidden" type="file" accept="image/*" onChange={(event) => { const file = event.target.files?.[0]; if (file) uploadMedia(file); }} /></label><div className="mt-5 grid gap-3 sm:grid-cols-2 xl:grid-cols-3">{media.map((item) => <div key={item.id} className="flex items-start justify-between gap-3 rounded-xl border border-stone-200 bg-stone-50 p-3 text-sm"><span className="min-w-0"><b className="block">{item.kind}{item.label ? " · " + item.label : ""}</b><span className="mt-1 block break-all text-xs leading-5 text-stone-500">{item.image_path}</span></span><button onClick={() => removeMedia(item.id)} className="shrink-0 text-stone-400 hover:text-red-600" aria-label="Видалити фото"><Trash2 size={17} /></button></div>)}{!media.length && <p className="rounded-xl bg-stone-50 p-4 text-sm text-stone-500">Додаткових фото ще немає.</p>}</div></Card>}
             {tab === "configuration" && <Configuration specsText={specsText} optionsText={optionsText} variantsText={variantsText} setSpecsText={setSpecsText} setOptionsText={setOptionsText} setVariantsText={setVariantsText} onSave={saveRows} onUploadVariant={uploadVariantPhoto} />}
-            {tab === "sources" && <><QdoorsImporter accessToken={session.access_token} onImport={importQdoors} onCreate={createQdoorsProduct} onMarkExisting={markQdoorsExisting} saving={saving} products={products} sourceProductSlugs={sourceProductSlugs} />{(selected.brand === "Rodos" || selected.brand === "Rodos Steel") && <MarketDveriPreview accessToken={session.access_token} product={selected} />}<Sources sources={sources} sourceName={sourceName} sourceUrl={sourceUrl} setSourceName={setSourceName} setSourceUrl={setSourceUrl} onAdd={addSource} /></>}
+            {tab === "sources" && <><QdoorsImporter accessToken={session.access_token} onImport={importQdoors} onCreate={createQdoorsProduct} onMarkExisting={markQdoorsExisting} saving={saving} products={products} sourceProductSlugs={sourceProductSlugs} />{(selected.brand === "Rodos" || selected.brand === "Rodos Steel") && <MarketDveriPreview accessToken={session.access_token} product={selected} onApply={applyImportedSource} />}<Sources sources={sources} sourceName={sourceName} sourceUrl={sourceUrl} setSourceName={setSourceName} setSourceUrl={setSourceUrl} onAdd={addSource} /></>}
           </div>}
         </section>}
       </div>

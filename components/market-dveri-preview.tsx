@@ -7,14 +7,17 @@ type Preview = { sourceUrl: string; title: string; facts: Fact[]; description: s
 type Product = { name: string; brand: string; collection: string };
 type Candidate = { url: string; title: string; score: number; confidence: "high" | "possible" };
 type SourceKind = "market" | "rodos";
+type ApplyFields = { description: boolean; specs: boolean; source: boolean };
 
-export function MarketDveriPreview({ accessToken, product }: { accessToken: string; product: Product }) {
+export function MarketDveriPreview({ accessToken, product, onApply }: { accessToken: string; product: Product; onApply: (data: { description: string; facts: Fact[]; sourceUrl: string; sourceName: string; title: string }, fields: ApplyFields) => Promise<string | null> }) {
   const [url, setUrl] = useState("");
   const [sourceKind, setSourceKind] = useState<SourceKind>("market");
   const [search, setSearch] = useState(() => `${product.brand} ${product.name}`.replace(/\s+/g, " ").trim());
   const [preview, setPreview] = useState<Preview | null>(null);
   const [candidates, setCandidates] = useState<Candidate[]>([]);
   const [searched, setSearched] = useState(false);
+  const [fields, setFields] = useState<ApplyFields>({ description: true, specs: true, source: true });
+  const [applying, setApplying] = useState(false);
   const [message, setMessage] = useState("");
   const [loading, setLoading] = useState(false);
   const [finding, setFinding] = useState(false);
@@ -50,6 +53,14 @@ export function MarketDveriPreview({ accessToken, product }: { accessToken: stri
     } finally { setFinding(false); }
   }
 
+  async function apply() {
+    if (!preview) return;
+    setApplying(true); setMessage("");
+    const error = await onApply({ description: preview.description, facts: preview.facts, sourceUrl: preview.sourceUrl, sourceName: sourceKind === "rodos" ? "Rodos" : "Market Dveri", title: preview.title }, fields);
+    setApplying(false);
+    setMessage(error || "Вибрані дані збережено у товарі.");
+  }
+
   const googleSearch = (site?: string) => "https://www.google.com/search?q=" + encodeURIComponent(`${site ? `site:${site} ` : ""}${search}`);
 
   return <section className="rounded-2xl border border-sky-200 bg-sky-50/50 p-5">
@@ -67,6 +78,6 @@ export function MarketDveriPreview({ accessToken, product }: { accessToken: stri
     </div>
     <div className="mt-4 flex flex-col gap-2 sm:flex-row"><select value={sourceKind} onChange={(event) => setSourceKind(event.target.value as SourceKind)} className="rounded-xl border border-stone-300 bg-white px-3 py-2.5 text-sm font-semibold outline-none focus:border-clay"><option value="rodos">Rodos</option><option value="market">Market Dveri</option></select><input value={url} onChange={(event) => setUrl(event.target.value)} placeholder={sourceKind === "rodos" ? "https://rodos.ua/…" : "https://market-dveri.ua/uk/…"} className="min-w-0 flex-1 rounded-xl border border-stone-300 bg-white px-3 py-2.5 text-sm outline-none focus:border-clay" /><button type="button" onClick={inspect} disabled={loading || !url.trim()} className="button-primary shrink-0">{loading ? "Перевіряємо…" : "Показати дані"}</button></div>
     {message && <p role="alert" className="mt-3 text-sm text-red-700">{message}</p>}
-    {preview && <div className="mt-5 rounded-xl border border-sky-200 bg-white p-4"><div className="flex flex-wrap items-start justify-between gap-2"><div><p className="font-bold">{preview.title}</p><a href={preview.sourceUrl} target="_blank" rel="noreferrer" className="mt-1 inline-block break-all text-xs font-bold text-clay underline">Відкрити джерело ↗</a></div><span className="rounded-full bg-amber-100 px-2.5 py-1 text-xs font-bold text-amber-800">Лише перегляд</span></div><p className="mt-4 text-sm leading-6 text-stone-700"><b>Наш майбутній опис:</b> {preview.description}</p><dl className="mt-4 grid gap-x-6 sm:grid-cols-2">{preview.facts.map((fact) => <div key={fact.label} className="flex justify-between gap-3 border-b border-stone-100 py-2 text-sm"><dt className="text-stone-500">{fact.label}</dt><dd className="text-right font-semibold text-stone-800">{fact.value}</dd></div>)}</dl><p className="mt-4 text-xs leading-5 text-stone-500">Після звірки додамо окрему дію «Застосувати характеристики». Фото, ціни, відгуки та текст продавця не імпортуються.</p></div>}
+    {preview && <div className="mt-5 rounded-xl border border-sky-200 bg-white p-4"><div className="flex flex-wrap items-start justify-between gap-2"><div><p className="font-bold">{preview.title}</p><a href={preview.sourceUrl} target="_blank" rel="noreferrer" className="mt-1 inline-block break-all text-xs font-bold text-clay underline">Відкрити джерело ↗</a></div><span className="rounded-full bg-amber-100 px-2.5 py-1 text-xs font-bold text-amber-800">Перевірити перед збереженням</span></div><p className="mt-4 text-sm leading-6 text-stone-700"><b>Наш майбутній опис:</b> {preview.description}</p><dl className="mt-4 grid gap-x-6 sm:grid-cols-2">{preview.facts.map((fact) => <div key={fact.label} className="flex justify-between gap-3 border-b border-stone-100 py-2 text-sm"><dt className="text-stone-500">{fact.label}</dt><dd className="text-right font-semibold text-stone-800">{fact.value}</dd></div>)}</dl><fieldset disabled={applying} className="mt-5 border-t border-sky-100 pt-4"><legend className="text-sm font-bold">Що застосувати до «{product.name}»</legend><div className="mt-3 flex flex-wrap gap-4 text-sm"><label className="inline-flex items-center gap-2"><input type="checkbox" checked={fields.description} onChange={(event) => setFields({ ...fields, description: event.target.checked })} /> Опис</label><label className="inline-flex items-center gap-2"><input type="checkbox" checked={fields.specs} onChange={(event) => setFields({ ...fields, specs: event.target.checked })} /> Характеристики ({preview.facts.length})</label><label className="inline-flex items-center gap-2"><input type="checkbox" checked={fields.source} onChange={(event) => setFields({ ...fields, source: event.target.checked })} /> Посилання на джерело</label></div><button type="button" onClick={apply} disabled={applying || (!fields.description && !fields.specs && !fields.source)} className="button-primary mt-4">{applying ? "Зберігаємо…" : "Застосувати вибрані дані"}</button></fieldset><p className="mt-4 text-xs leading-5 text-stone-500">Фото, ціни, відгуки та варіанти декорів не імпортуються цією дією.</p></div>}
   </section>;
 }
