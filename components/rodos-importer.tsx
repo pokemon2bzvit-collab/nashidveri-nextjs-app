@@ -180,7 +180,11 @@ function RodosImporterContent() {
       }
       setNotice("Готово: додано характеристики, фото та український опис для " + completed + " моделей. Наступний пакет можна запускати після короткої паузи.");
     } catch (error) {
-      setNotice((completed ? "Збережено " + completed + " моделей. " : "") + (error instanceof Error ? error.message : "Не вдалося завершити пакет. Спробуйте пізніше."));
+      const message = error instanceof Error ? error.message : "Не вдалося завершити пакет. Спробуйте пізніше.";
+      const rateLimitHint = /код 429/u.test(message)
+        ? "Rodos тимчасово не приймає запити з сервера. Жодні дані цього пакета не втрачено й не змінено. Не запускайте кнопку повторно зараз: спробуйте пізніше або запросіть у фабрики вивантаження каталогу (CSV/XML) — його можна буде імпортувати без звернень до сайту."
+        : message;
+      setNotice((completed ? "Збережено " + completed + " моделей. " : "") + rateLimitHint);
     } finally { setBusy(false); }
   }
   async function addDraft() {

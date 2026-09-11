@@ -19,7 +19,8 @@ export async function GET(request: NextRequest) {
   const raw = request.nextUrl.searchParams.get("url")?.trim() || ""; let source: URL; try { source = new URL(raw); } catch { return NextResponse.json({ message: "Вставте посилання на картку Rodos." }, { status: 400 }); }
   if (source.protocol !== "https:" || !/(^|\.)rodos\.ua$/i.test(source.hostname)) return NextResponse.json({ message: "Дозволені лише картки з rodos.ua." }, { status: 400 });
   try {
-    const response = await fetch(source, { headers: { "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130 Safari/537.36", "Accept-Language": "uk-UA,uk;q=0.9" }, cache: "no-store", signal: AbortSignal.timeout(15_000) }); if (!response.ok) return NextResponse.json({ message: `Rodos повернув код ${response.status}.` }, { status: 502 });
+    const response = await fetch(source, { headers: { "User-Agent": "Mozilla/5.0 (compatible; NashiDveriCatalog/1.0; +https://nashidveri-uzhhorod.com.ua)", "Accept-Language": "uk-UA,uk;q=0.9" }, next: { revalidate: 86_400 }, signal: AbortSignal.timeout(15_000) });
+    if (!response.ok) return NextResponse.json({ message: `Rodos повернув код ${response.status}.`, retryAfter: response.headers.get("retry-after") }, { status: 502 });
     const html = await response.text(); const body = toText(html); const title = clean(toText(html.match(/<h1[^>]*>([\s\S]*?)<\/h1>/i)?.[1] || ""));
     if (!title || !/(?:двер|dver|door)/iu.test(title + " " + source.pathname)) return NextResponse.json({ message: "Це не схоже на картку дверей Rodos." }, { status: 422 });
     const rawImages = Array.from(html.matchAll(/(?:data-zoom-image|data-image|href|src)=["']([^"']*\/image\/[^"']+)["']/gi)).map((item) => new URL(decode(item[1]), source).toString()); const og = html.match(/property=["']og:image["'][^>]*content=["']([^"']+)["']/i)?.[1]; if (og) rawImages.unshift(new URL(decode(og), source).toString());
