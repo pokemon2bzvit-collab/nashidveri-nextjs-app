@@ -31,6 +31,28 @@ function buildSyncRows(items: Item[], products: Product[]): SyncRow[] {
 }
 function hash(value: string) { let result = 5381; for (const char of value) result = (result * 33) ^ char.charCodeAt(0); return (result >>> 0).toString(36); }
 function decodeXml(value: string) { return value.replace(/&amp;/gi, "&").replace(/&quot;/gi, '"').replace(/<[^>]+>/g, "").trim(); }
+function translateFact(value: string) {
+  return value
+    .replace(/толщина полотна/giu, "Товщина полотна")
+    .replace(/толщина металла/giu, "Товщина металу")
+    .replace(/толщина коробки/giu, "Товщина коробки")
+    .replace(/размер/giu, "Розмір")
+    .replace(/утеплитель/giu, "Утеплювач")
+    .replace(/уплотнитель/giu, "Ущільнювач")
+    .replace(/замки/giu, "Замки")
+    .replace(/петли/giu, "Петлі")
+    .replace(/ручка/giu, "Ручка")
+    .replace(/минеральная вата/giu, "мінеральна вата")
+    .replace(/стальн(?:ой|ая) лист/giu, "сталевий лист")
+    .trim();
+}
+function ukrainianDescription(product: Product, facts: Array<{ label: string; value: string }>) {
+  const location = product.category === "entrance"
+    ? product.collection === "Вулиця" ? "для приватного будинку" : product.collection === "Квартира" ? "для квартири" : "для квартири або будинку"
+    : "для інтер’єру";
+  const details = facts.slice(0, 3).map((fact) => translateFact(fact.label).toLocaleLowerCase("uk-UA") + ": " + translateFact(fact.value)).join("; ");
+  return product.brand + " " + product.name + " — " + (product.category === "entrance" ? "вхідні двері" : "міжкімнатні двері") + " " + location + ". Колекція «" + product.collection + "»." + (details ? " Основні параметри: " + details + "." : "") + " Актуальну комплектацію та ціну уточнюйте у менеджера.";
+}
 function collectionFrom(value: string) { const text = value.toLocaleLowerCase("uk-UA"); if (/grand[- ]?delux|гранд.*делюкс/.test(text)) return "DELUX"; if (/grand[- ]?lux|гранд.*люкс/.test(text)) return "LUX"; if (/grand[- ]?paint|гранд.*пейнт/.test(text)) return "Paint"; if (/atlantic/.test(text)) return "Atlantic ПВХ"; if (/cortes/.test(text)) return "Cortes фарба"; if (/siena/.test(text)) return "Siena фарба"; if (/royal/.test(text)) return "Royal шпон"; if (/loft/.test(text) && /шпон|shpon/.test(text)) return "Loft шпон"; if (/loft/.test(text)) return "Loft фарба"; if (/style/.test(text)) return "Style ПВХ"; if (/woodmix/.test(text)) return "Woodmix"; if (/modern/.test(text)) return "Modern"; if (/gamma/.test(text)) return "Gamma"; if (/fresca/.test(text)) return "Fresca"; if (/liberta/.test(text)) return "Liberta"; return "Новинки Rodos"; }
 function parseSitemap(xml: string): Item[] {
   const seen = new Set<string>();
@@ -48,14 +70,22 @@ function parseSitemap(xml: string): Item[] {
 }
 function RodosImporterContent() {
   const supabase = useMemo(() => getSupabaseBrowserClient(), []);
-  const [token, setToken] = useState(""); const [products, setProducts] = useState<Product[]>([]); const [brands, setBrands] = useState<CatalogBrand[]>([]); const [collections, setCollections] = useState<CatalogCollection[]>([]); const [items, setItems] = useState<Item[]>([]); const [active, setActive] = useState<Item | null>(null); const [preview, setPreview] = useState<Preview | null>(null); const [busy, setBusy] = useState(false); const [notice, setNotice] = useState(""); const [syncFilter, setSyncFilter] = useState<"all" | SyncStatus>("all"); const [backupAcknowledged, setBackupAcknowledged] = useState(false); const [replacementConfirm, setReplacementConfirm] = useState("");
+  const [token, setToken] = useState(""); const [products, setProducts] = useState<Product[]>([]); const [brands, setBrands] = useState<CatalogBrand[]>([]); const [collections, setCollections] = useState<CatalogCollection[]>([]); const [items, setItems] = useState<Item[]>([]); const [active, setActive] = useState<Item | null>(null); const [preview, setPreview] = useState<Preview | null>(null); const [busy, setBusy] = useState(false); const [notice, setNotice] = useState(""); const [syncFilter, setSyncFilter] = useState<"all" | SyncStatus>("all"); const [backupAcknowledged, setBackupAcknowledged] = useState(false); const [replacementConfirm, setReplacementConfirm] = useState(""); const [enrichedSlugs, setEnrichedSlugs] = useState<Set<string>>(new Set());
   async function loadCurrentCatalog() {
     const [productResult, brandResult, collectionResult] = await Promise.all([
       supabase.from("products").select("slug,name,brand,collection,category").in("brand", ["Rodos", "Rodos Steel"]),
       supabase.from("catalog_brands").select("id,name").in("name", ["Rodos", "Rodos Steel"]),
       supabase.from("catalog_collections").select("brand_id,name,category"),
     ]);
-    if (!productResult.error) setProducts((productResult.data || []) as Product[]);
+    if (!productResult.error) {
+      const currentProducts = (productResult.data || []) as Product[];
+      setProducts(currentProducts);
+      if (currentProducts.length) {
+        const specsResult = await supabase.from("product_specs").select("product_slug");
+        const currentSlugs = new Set(currentProducts.map((product) => product.slug));
+        if (!specsResult.error) setEnrichedSlugs(new Set((specsResult.data || []).map((spec) => spec.product_slug).filter((slug) => currentSlugs.has(slug))));
+      }
+    }
     if (!brandResult.error) setBrands((brandResult.data || []) as CatalogBrand[]);
     if (!collectionResult.error) setCollections((collectionResult.data || []) as CatalogCollection[]);
   }
@@ -114,6 +144,45 @@ function RodosImporterContent() {
     } catch (error) { setNotice(error instanceof Error ? error.message : "Не вдалося завершити заміну каталогу."); } finally { setBusy(false); }
   }
   async function inspect(item: Item) { if (!token) return; setBusy(true); setActive(item); setPreview(null); setNotice(""); try { const response = await fetch("/api/admin/import/rodos?url=" + encodeURIComponent(item.url), { headers: { Authorization: "Bearer " + token } }); const data = await response.json(); if (!response.ok) throw new Error(data.message); setPreview(data); } catch (error) { setNotice(error instanceof Error ? error.message : "Не вдалося відкрити картку."); } finally { setBusy(false); } }
+  async function enrichNextBatch() {
+    const batch = items
+      .map((item) => ({ item, product: products.find((product) => product.slug === "rodos-official-" + hash(item.url)) }))
+      .filter((entry): entry is { item: Item; product: Product } => Boolean(entry.product) && !enrichedSlugs.has(entry.product!.slug))
+      .slice(0, 3);
+    if (!batch.length) return setNotice("Усі моделі з поточної карти сайту вже мають характеристики або потребують ручної перевірки.");
+    setBusy(true); setNotice("");
+    let completed = 0;
+    try {
+      for (const { item, product } of batch) {
+        const response = await fetch("/api/admin/import/rodos?url=" + encodeURIComponent(item.url), { headers: { Authorization: "Bearer " + token } });
+        const data = await response.json();
+        if (!response.ok) throw new Error(data.message || "Rodos тимчасово не віддав картку.");
+        const importedFacts = (data.facts || []).map((fact: { label: string; value: string }, index: number) => ({ product_slug: product.slug, label: translateFact(fact.label), value: translateFact(fact.value), sort_order: 100 + index * 10, is_active: true }));
+        const sourceImages = Array.from(new Set<string>(((data.images || []) as unknown[]).filter((image): image is string => typeof image === "string" && image.length > 0)));
+        const importedImages = sourceImages.slice(0, 10).map((image, index) => ({ product_slug: product.slug, kind: index ? "gallery" : "main", label: index ? "Фото " + (index + 1) : "Головне фото", image_path: image, sort_order: index, is_active: true }));
+        const mainImage = importedImages[0]?.image_path || item.image || "";
+        const productUpdate = {
+          description: ukrainianDescription(product, importedFacts),
+          ...(mainImage ? { image_path: mainImage } : {}),
+        };
+        const productResult = await supabase.from("products").update(productUpdate).eq("slug", product.slug);
+        if (productResult.error) throw new Error(productResult.error.message);
+        if (importedFacts.length) {
+          const specsResult = await supabase.from("product_specs").upsert(importedFacts, { onConflict: "product_slug,label" });
+          if (specsResult.error) throw new Error(specsResult.error.message);
+        }
+        if (importedImages.length) {
+          const mediaResult = await supabase.from("product_media").upsert(importedImages, { onConflict: "product_slug,kind,image_path" });
+          if (mediaResult.error) throw new Error(mediaResult.error.message);
+        }
+        setEnrichedSlugs((current) => new Set([...current, product.slug]));
+        completed += 1;
+      }
+      setNotice("Готово: додано характеристики, фото та український опис для " + completed + " моделей. Наступний пакет можна запускати після короткої паузи.");
+    } catch (error) {
+      setNotice((completed ? "Збережено " + completed + " моделей. " : "") + (error instanceof Error ? error.message : "Не вдалося завершити пакет. Спробуйте пізніше."));
+    } finally { setBusy(false); }
+  }
   async function addDraft() {
     if (!preview) return; const slug = "rodos-" + (preview.productCode || hash(preview.sourceUrl));
     if (products.some((product) => product.slug === slug)) { setNotice("Ця модель уже є в каталозі."); return; }
@@ -139,6 +208,7 @@ function RodosImporterContent() {
   const filteredRows = syncFilter === "all" ? rows : rows.filter((row) => row.status === syncFilter);
   const statusCopy: Record<SyncStatus, { title: string; tone: string; detail: string }> = { same: { title: "Вже є", tone: "bg-green-100 text-green-800", detail: "Оновлюватимемо існуючу картку, без дубля." }, similar: { title: "Потрібно звірити", tone: "bg-amber-100 text-amber-800", detail: "Може бути ця сама модель під іншою назвою." }, new: { title: "Нова", tone: "bg-sky-100 text-sky-800", detail: "Створимо приховану чернетку у відповідній колекції." } };
   return <section className="space-y-5"><div className="rounded-3xl bg-ink px-5 py-8 text-white sm:px-8"><p className="text-xs font-bold uppercase tracking-[.16em] text-sand">Офіційний імпорт</p><h1 className="mt-2 font-display text-4xl">Каталог Rodos</h1><p className="mt-3 max-w-2xl text-sm leading-6 text-white/70">Сканер читає sitemap rodos.ua. Модель потрапляє у каталог лише як прихована чернетка, тому покупці не побачать її до вашої перевірки.</p><div className="mt-5 flex flex-wrap gap-2"><button className={button + " border-white/20 bg-white text-ink"} onClick={scan} disabled={busy || !token}>{busy ? <><LoaderCircle className="animate-spin" size={16} /> Скануємо…</> : <><RefreshCw size={16} /> Сканувати sitemap</>}</button><a className={button + " border-white/30 bg-transparent text-white hover:bg-white/10"} href="https://rodos.ua/sitemap.xml" target="_blank" rel="noreferrer">Відкрити sitemap <ExternalLink size={15} /></a><label className={button + " cursor-pointer border-white/30 bg-transparent text-white hover:bg-white/10"}><FileUp size={15} /> Завантажити sitemap-файл<input className="hidden" type="file" accept=".xml,text/xml,application/xml" onChange={(event) => { const file = event.target.files?.[0]; if (file) void loadSitemapFile(file); event.currentTarget.value = ""; }} /></label></div><p className="mt-3 text-xs leading-5 text-white/60">Якщо Rodos обмежив серверне сканування, відкрий sitemap, збережи XML-файл і завантаж його сюди.</p></div>
+    {items.length > 0 && <section className="rounded-2xl border bg-white p-5"><p className="text-xs font-bold uppercase tracking-[.14em] text-clay">Збагачення карток</p><div className="mt-2 flex flex-wrap items-end justify-between gap-4"><div><h2 className="font-display text-3xl">Опис і характеристики з Rodos</h2><p className="mt-2 max-w-2xl text-sm leading-6 text-stone-600">Імпортер бере три наступні моделі, додає фото й технічні параметри з офіційної картки та формує стислий український опис. Пакетний режим зменшує ризик блокування з боку Rodos.</p><p className="mt-2 text-sm font-bold text-stone-700">Ще без характеристик: {items.filter((item) => { const product = products.find((entry) => entry.slug === "rodos-official-" + hash(item.url)); return product && !enrichedSlugs.has(product.slug); }).length}</p></div><button className="button-primary" onClick={enrichNextBatch} disabled={busy || !items.some((item) => { const product = products.find((entry) => entry.slug === "rodos-official-" + hash(item.url)); return product && !enrichedSlugs.has(product.slug); })}>{busy ? <><LoaderCircle className="animate-spin" size={16} /> Завантажуємо…</> : "Завантажити наступні 3"}</button></div></section>}
     {notice && <p role="status" className="rounded-xl border bg-white p-4 text-sm text-stone-700">{notice}</p>}
     {items.length > 0 && <section className="rounded-2xl border border-red-200 bg-red-50 p-5"><div className="flex flex-wrap items-start justify-between gap-4"><div><p className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[.14em] text-red-800"><ShieldAlert size={16} /> Повна заміна каталогу</p><h2 className="mt-2 font-display text-3xl text-ink">Очистити й заново імпортувати Rodos</h2><p className="mt-2 max-w-3xl text-sm leading-6 text-stone-700">Створимо <b>{items.length} прихованих моделей</b> з офіційного sitemap, автоматично додамо відсутні колекції Rodos та Rodos Steel, а потім приберемо старі товари цих двох фабрик. На сайт нічого не потрапить до ручного увімкнення моделей.</p></div><button type="button" onClick={downloadBackup} disabled={busy || !products.length} className={button + " border-red-200 bg-white text-red-800 hover:border-red-400"}><Download size={16} /> {backupAcknowledged ? "Резервну копію збережено" : `Завантажити backup (${products.length})`}</button></div><div className="mt-5 grid gap-3 lg:grid-cols-[minmax(0,1fr)_260px]"><label className="text-sm font-bold text-stone-800">Введіть <span className="rounded bg-white px-1.5 py-0.5 font-mono text-xs">ЗАМІНИТИ RODOS</span>, щоб активувати кнопку<input className="mt-2 w-full rounded-xl border border-red-200 bg-white px-3 py-2.5 text-sm outline-none focus:border-red-500 focus:ring-2 focus:ring-red-200" value={replacementConfirm} onChange={(event) => setReplacementConfirm(event.target.value)} placeholder="ЗАМІНИТИ RODOS" /></label><button type="button" disabled={busy || !backupAcknowledged || replacementConfirm.trim() !== "ЗАМІНИТИ RODOS"} onClick={replaceCatalog} className="inline-flex items-center justify-center gap-2 self-end rounded-xl bg-red-700 px-4 py-3 text-sm font-bold text-white transition hover:bg-red-800 disabled:cursor-not-allowed disabled:opacity-50"><ShieldAlert size={16} /> {busy ? "Виконуємо…" : "Замінити каталог Rodos"}</button></div><p className="mt-3 text-xs leading-5 text-red-800">Backup містить перелік поточних товарів для звірки. Самі фото у Storage не видаляються, а записи товарів, декорів, характеристик і джерел старих моделей буде видалено каскадно.</p></section>}
     {items.length > 0 && <section className="rounded-2xl border bg-white p-5"><div className="flex flex-wrap items-end justify-between gap-3"><div><p className="text-xs font-bold uppercase tracking-[.14em] text-clay">План синхронізації — без змін у каталозі</p><h2 className="mt-1 font-display text-3xl">Знайдено {items.length} карток</h2><p className="mt-2 max-w-2xl text-sm leading-6 text-stone-600">Спершу звіряємо новий каталог виробника з вашим. Лише після підтвердження моделі будуть оновлені або додані як приховані чернетки.</p></div><Link href="/admin/catalog?brand=Rodos&quality=hidden" className="button-light">Чернетки Rodos</Link></div><p className="mt-4 rounded-xl bg-stone-50 px-3 py-2 text-xs leading-5 text-stone-600">У поточній базі завантажено: <b>Rodos — {currentCounts.rodos}</b>, <b>Rodos Steel — {currentCounts.steel}</b>. Це число потрібне лише для контролю перед заміною.</p><div className="mt-5 grid gap-2 sm:grid-cols-2 xl:grid-cols-4">{([['new', 'Нові моделі', counts.new, 'bg-sky-50 text-sky-900'], ['same', 'Уже є в каталозі', counts.same, 'bg-green-50 text-green-900'], ['similar', 'Треба звірити', counts.similar, 'bg-amber-50 text-amber-900'], ['all', 'Колекцій знайдено', counts.collections, 'bg-stone-100 text-ink']] as const).map(([id, label, count, color]) => <button key={id} type="button" onClick={() => setSyncFilter(id)} className={"rounded-xl p-3 text-left transition " + color + (syncFilter === id ? " ring-2 ring-ink" : " hover:ring-2 hover:ring-stone-300")}><span className="block text-2xl font-display">{count}</span><span className="mt-1 block text-xs font-bold">{label}</span></button>)}</div><div className="mt-5 flex flex-wrap items-center justify-between gap-3"><p className="inline-flex items-center gap-2 text-sm text-stone-600"><ClipboardCheck size={17} className="text-clay" /> Показано {filteredRows.length} моделей. Натисни модель, щоб перевірити її офіційну картку.</p><div className="flex flex-wrap gap-2 text-xs">{(["same", "similar", "new"] as SyncStatus[]).map((status) => <span key={status} className={"rounded-full px-2.5 py-1 font-bold " + statusCopy[status].tone}>{statusCopy[status].title}</span>)}</div></div><div className="mt-5 grid gap-2 lg:grid-cols-2">{filteredRows.map(({ item, match, status }) => <div key={item.url} className="rounded-xl border border-stone-200 p-3 transition hover:border-clay hover:bg-sand"><div className="flex items-start justify-between gap-3"><button onClick={() => inspect(item)} className="min-w-0 text-left"><b className="block text-sm">{item.title}</b><span className="mt-1 block text-xs text-stone-500">{item.brand} · {item.collection}</span></button><span className={"shrink-0 rounded-full px-2 py-1 text-xs font-bold " + statusCopy[status].tone}>{statusCopy[status].title}</span></div><p className="mt-2 text-xs leading-5 text-stone-500">{statusCopy[status].detail}</p>{match && <div className="mt-2 flex flex-wrap items-center gap-2"><span className="text-xs text-stone-600">У нас: <b>{match.name}</b> · {match.collection}</span><Link href={`/admin/catalog?product=${encodeURIComponent(match.slug)}`} className="text-xs font-bold text-clay underline">Відкрити нашу картку →</Link></div>}<button type="button" onClick={() => inspect(item)} className="mt-3 text-xs font-bold text-clay underline">Перевірити у виробника →</button></div>)}</div></section>}
