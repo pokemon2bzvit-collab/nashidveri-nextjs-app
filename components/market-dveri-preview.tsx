@@ -23,7 +23,10 @@ export function MarketDveriPreview({ accessToken, product }: { accessToken: stri
     if (!url.trim()) return;
     setLoading(true); setPreview(null); setMessage("");
     try {
-      const endpoint = sourceKind === "rodos" ? "/api/admin/import/rodos" : "/api/admin/import/market-dveri";
+      const host = new URL(url.trim()).hostname.toLocaleLowerCase();
+      const detectedSource: SourceKind = /(^|\.)rodos\.ua$/u.test(host) ? "rodos" : "market";
+      setSourceKind(detectedSource);
+      const endpoint = detectedSource === "rodos" ? "/api/admin/import/rodos" : "/api/admin/import/market-dveri";
       const response = await fetch(endpoint + "?url=" + encodeURIComponent(url.trim()), { headers: { Authorization: "Bearer " + accessToken } });
       const data = await response.json();
       if (!response.ok) throw new Error(data.message || "Не вдалося перевірити картку.");
