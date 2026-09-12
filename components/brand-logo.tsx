@@ -9,6 +9,7 @@ const logoByBrand: Record<string, string> = {
   "Rodos Steel": "/brand-logos/rodos.png",
   Magda: "/brand-logos/magda.svg",
   KFD: "https://korfad.com.ua/content/images/2/200x42l90nn0/18466388044958.webp",
+  Darumi: "https://darumi.in.ua/img/logo_white.svg",
 };
 
 export function BrandLogo({ brand, className = "", imageClassName = "" }: { brand: string; className?: string; imageClassName?: string }) {
@@ -22,6 +23,9 @@ export function BrandLogo({ brand, className = "", imageClassName = "" }: { bran
   }
   const logo = logoByBrand[brand];
   if (!logo) return <span className={`font-display font-semibold tracking-[-.03em] text-ink ${className}`}>{brand}</span>;
+  if (brand === "Darumi") {
+    return <span className={`inline-flex min-w-0 items-center rounded-md bg-ink px-2 py-1 ${className}`}><img src={logo} alt="Darumi — міжкімнатні двері в каталозі магазину «Наші двері», Ужгород" className={`h-full max-w-full object-contain object-left ${imageClassName}`} /></span>;
+  }
   const visualSize = brand === "StilDoors" ? "scale-[1.28] origin-left" : "";
   return <span className={`inline-flex min-w-0 items-center ${className}`}><img src={logo} alt={`${brand} — двері в каталозі магазину «Наші двері», Ужгород`} className={`h-full max-w-full object-contain object-left ${visualSize} ${imageClassName}`} /></span>;
 }
