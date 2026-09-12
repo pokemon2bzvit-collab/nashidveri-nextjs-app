@@ -6,6 +6,7 @@ const importers = [
   { title: "Rodos", text: "Офіційний sitemap Rodos: знайти нові моделі, переглянути фото, опис і характеристики, додати як приховану чернетку.", href: "/admin/rodos-import", source: "https://rodos.ua/sitemap.xml", action: "Відкрити імпортер" },
   { title: "Q Doors", text: "Сканер офіційного каталогу Qdoors: зіставити модель з нашою карткою або додати нову після перевірки.", href: "/admin/catalog?brand=Q%20Doors&importer=qdoors", source: "https://qdoors.ua/shop", action: "Відкрити імпортер" },
   { title: "KFD", text: "Український каталог Market Dveri: перевірити модель і додати її як приховану чернетку з описом, характеристиками, фото та джерелом.", href: "/admin/kfd-import", source: "https://market-dveri.ua/uk/kfd/", action: "Відкрити імпортер" },
+  { title: "Darumi", text: "Офіційний каталог Darumi: перевірити фото, опис, характеристики, колір і скло та додати модель прихованою чернеткою.", href: "/admin/darumi-import", source: "https://darumi.in.ua/dveri/", action: "Відкрити імпортер" },
 ];
 
 function ImporterHubContent() {
