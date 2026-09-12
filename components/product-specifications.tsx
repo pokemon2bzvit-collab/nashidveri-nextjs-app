@@ -34,7 +34,7 @@ export function ProductSpecifications({ specs }: { specs?: ProductSpec[] }) {
       </div>
       <dl className="mt-5 grid gap-2.5 sm:grid-cols-2">
         {orderedSpecs.map((spec, index) => (
-          <div key={`${spec.label}-${spec.value}`} className={`rounded-xl bg-sand/70 p-3.5 ${index >= 3 && !isOpen ? "hidden sm:block" : ""}`}>
+          <div key={`${spec.label}-${spec.value}`} className={`rounded-xl bg-sand/70 p-3.5 ${index >= 3 && !isOpen ? "hidden" : ""}`}>
             <dt className="text-[10px] font-bold uppercase tracking-[.12em] text-stone-400">{spec.label}</dt>
             <dd className="mt-1 text-sm font-semibold leading-6 text-stone-800">{spec.value}</dd>
           </div>
@@ -44,7 +44,7 @@ export function ProductSpecifications({ specs }: { specs?: ProductSpec[] }) {
         type="button"
         onClick={() => setIsOpen((open) => !open)}
         aria-expanded={isOpen}
-        className="mt-5 flex w-full items-center justify-center gap-2 rounded-xl border border-stone-200 bg-white px-4 py-3 text-sm font-bold text-ink transition hover:border-clay hover:text-clay sm:hidden"
+        className="mt-5 flex w-full items-center justify-center gap-2 rounded-xl border border-stone-200 bg-white px-4 py-3 text-sm font-bold text-ink transition hover:border-clay hover:text-clay"
       >
         {isOpen ? "Згорнути характеристики" : `Показати ще ${hiddenCount} параметрів`}
         <ChevronDown className={`transition-transform duration-300 ${isOpen ? "rotate-180" : ""}`} size={18} />
