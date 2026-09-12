@@ -8,6 +8,7 @@ const logoByBrand: Record<string, string> = {
   "Q Doors": "/brand-logos/qdoors.png",
   "Rodos Steel": "/brand-logos/rodos.png",
   Magda: "/brand-logos/magda.svg",
+  KFD: "https://korfad.com.ua/content/images/2/200x42l90nn0/18466388044958.webp",
 };
 
 export function BrandLogo({ brand, className = "", imageClassName = "" }: { brand: string; className?: string; imageClassName?: string }) {
