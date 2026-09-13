@@ -136,9 +136,9 @@ export function ProductConfiguration({ options, variants, onImageChange, preview
                 {group.map((option, index) => {
                   const isSelected = selectedIndex === index;
                   const isAvailable = visualVariants.some((variant) => Object.entries(variant.selections).every(([key, label]) => key === groupKey ? label === option.label : label === draftSelectionValues[key]));
-                  return <button type="button" disabled={!isAvailable} key={`${option.group}-${option.label}`} onClick={() => selectOption(groupKey, index)} className={`relative flex min-h-14 items-center gap-2 rounded-xl border p-2.5 text-left text-xs font-bold transition disabled:cursor-not-allowed disabled:opacity-35 ${isSelected ? "border-ink bg-ink text-white shadow-sm" : "border-stone-200 bg-white text-stone-700 hover:border-clay"}`}>
+                  return <button type="button" disabled={!isAvailable} key={`${option.group}-${option.label}`} onClick={() => selectOption(groupKey, index)} className={`relative flex min-h-[4.25rem] items-center gap-2 rounded-xl border p-2.5 text-left text-xs font-bold transition disabled:cursor-not-allowed disabled:opacity-55 ${isSelected ? "border-ink bg-ink text-white shadow-sm" : "border-stone-200 bg-white text-stone-700 hover:border-clay"}`}>
                     {option.image ? <img src={option.image} alt="" className="h-9 w-9 shrink-0 rounded-lg object-cover" /> : option.swatch ? <span aria-hidden="true" className={`h-7 w-7 shrink-0 rounded-full border border-black/10 ${isSelected ? "ring-1 ring-white" : ""}`} style={{ backgroundColor: option.swatch }} /> : <ImageIcon size={18} className={isSelected ? "text-white" : "text-clay"} />}
-                    <span className="line-clamp-2">{option.label}</span>{isSelected && <Check size={14} className="absolute right-2 top-2" />}
+                    <span className="line-clamp-2 pr-5">{option.label}</span>{isSelected && <Check size={14} className="absolute right-2 top-2" />}{!isAvailable && <span className="absolute bottom-1.5 right-2 text-[9px] font-semibold normal-case tracking-normal text-stone-500">Немає фото</span>}
                   </button>;
                 })}
               </div>
