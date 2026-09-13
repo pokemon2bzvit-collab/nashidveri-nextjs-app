@@ -17,10 +17,11 @@ const previewPriority = (label: string) => {
 
 export function ProductSpecifications({ specs }: { specs?: ProductSpec[] }) {
   const [isOpen, setIsOpen] = useState(false);
-  if (!specs?.length) return null;
+  const visibleSpecs = (specs || []).filter((spec) => !["фабрика", "виробник"].includes(spec.label.trim().toLowerCase()));
+  if (!visibleSpecs.length) return null;
   // Найперше покупцеві потрібні габарити та сумісність із прорізом.
   // Повний список нижче зберігає порядок, який задав менеджер в адмінці.
-  const orderedSpecs = [...specs].sort((left, right) => previewPriority(left.label) - previewPriority(right.label) || left.sortOrder - right.sortOrder);
+  const orderedSpecs = [...visibleSpecs].sort((left, right) => previewPriority(left.label) - previewPriority(right.label) || left.sortOrder - right.sortOrder);
   const hiddenCount = Math.max(orderedSpecs.length - 3, 0);
 
   return (
@@ -28,7 +29,7 @@ export function ProductSpecifications({ specs }: { specs?: ProductSpec[] }) {
       <div className="flex items-start justify-between gap-4">
         <div>
           <h2 className="font-display text-2xl text-stone-900">Технічні характеристики</h2>
-          <p className="mt-1 text-sm text-stone-500">{specs.length} параметрів моделі</p>
+          <p className="mt-1 text-sm text-stone-500">{visibleSpecs.length} параметрів моделі</p>
         </div>
         <span className="rounded-full bg-sand px-3 py-1.5 text-xs font-bold text-stone-600">Перевірено</span>
       </div>
@@ -40,7 +41,7 @@ export function ProductSpecifications({ specs }: { specs?: ProductSpec[] }) {
           </div>
         ))}
       </dl>
-      {specs.length > 3 && <button
+      {visibleSpecs.length > 3 && <button
         type="button"
         onClick={() => setIsOpen((open) => !open)}
         aria-expanded={isOpen}
