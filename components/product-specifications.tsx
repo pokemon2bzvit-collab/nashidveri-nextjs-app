@@ -20,7 +20,11 @@ export function ProductSpecifications({ specs, options }: { specs?: ProductSpec[
   const hiddenIdentitySpecs = new Set(["фабрика", "виробник", "країна виробник", "місто виробник", "країна виробництва", "місто виробництва", "категорія", "купити в", "де купити", "тип полотна", "термін виготовлення"]);
   const decorLabels = Array.from(new Set((options || []).filter((option) => option.group === "color").map((option) => option.label.trim()).filter(Boolean)));
   const visibleSpecs = (specs || [])
-    .filter((spec) => !hiddenIdentitySpecs.has(spec.label.trim().toLowerCase()))
+    .filter((spec) => {
+      const label = spec.label.trim().toLowerCase();
+      const value = spec.value.trim().toLowerCase();
+      return !hiddenIdentitySpecs.has(label) && !(label === "скло" && ["глухі", "глухе"].includes(value));
+    })
     .map((spec) => spec.label.trim().toLowerCase() === "доступні декори" && decorLabels.length ? { ...spec, value: decorLabels.join(", ") } : spec);
   if (!visibleSpecs.length) return null;
   // Найперше покупцеві потрібні габарити та сумісність із прорізом.
