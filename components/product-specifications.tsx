@@ -17,7 +17,7 @@ const previewPriority = (label: string) => {
 
 export function ProductSpecifications({ specs }: { specs?: ProductSpec[] }) {
   const [isOpen, setIsOpen] = useState(false);
-  const hiddenIdentitySpecs = new Set(["фабрика", "виробник", "країна виробник", "місто виробник", "країна виробництва", "місто виробництва", "купити в", "де купити"]);
+  const hiddenIdentitySpecs = new Set(["фабрика", "виробник", "країна виробник", "місто виробник", "країна виробництва", "місто виробництва", "категорія", "купити в", "де купити"]);
   const visibleSpecs = (specs || []).filter((spec) => !hiddenIdentitySpecs.has(spec.label.trim().toLowerCase()));
   if (!visibleSpecs.length) return null;
   // Найперше покупцеві потрібні габарити та сумісність із прорізом.
