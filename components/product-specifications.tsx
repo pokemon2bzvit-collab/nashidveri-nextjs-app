@@ -2,7 +2,7 @@
 
 import { ChevronDown } from "lucide-react";
 import { useState } from "react";
-import type { ProductSpec } from "@/lib/catalog";
+import type { ProductOption, ProductSpec } from "@/lib/catalog";
 
 const previewPriority = (label: string) => {
   const normalized = label.toLowerCase();
@@ -15,10 +15,13 @@ const previewPriority = (label: string) => {
   return 10;
 };
 
-export function ProductSpecifications({ specs }: { specs?: ProductSpec[] }) {
+export function ProductSpecifications({ specs, options }: { specs?: ProductSpec[]; options?: ProductOption[] }) {
   const [isOpen, setIsOpen] = useState(false);
   const hiddenIdentitySpecs = new Set(["фабрика", "виробник", "країна виробник", "місто виробник", "країна виробництва", "місто виробництва", "категорія", "купити в", "де купити"]);
-  const visibleSpecs = (specs || []).filter((spec) => !hiddenIdentitySpecs.has(spec.label.trim().toLowerCase()));
+  const decorLabels = Array.from(new Set((options || []).filter((option) => option.group === "color").map((option) => option.label.trim()).filter(Boolean)));
+  const visibleSpecs = (specs || [])
+    .filter((spec) => !hiddenIdentitySpecs.has(spec.label.trim().toLowerCase()))
+    .map((spec) => spec.label.trim().toLowerCase() === "доступні декори" && decorLabels.length ? { ...spec, value: decorLabels.join(", ") } : spec);
   if (!visibleSpecs.length) return null;
   // Найперше покупцеві потрібні габарити та сумісність із прорізом.
   // Повний список нижче зберігає порядок, який задав менеджер в адмінці.
