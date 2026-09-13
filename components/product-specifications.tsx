@@ -17,7 +17,7 @@ const previewPriority = (label: string) => {
 
 export function ProductSpecifications({ specs, options }: { specs?: ProductSpec[]; options?: ProductOption[] }) {
   const [isOpen, setIsOpen] = useState(false);
-  const hiddenIdentitySpecs = new Set(["фабрика", "виробник", "країна виробник", "місто виробник", "країна виробництва", "місто виробництва", "категорія", "купити в", "де купити", "тип полотна"]);
+  const hiddenIdentitySpecs = new Set(["фабрика", "виробник", "країна виробник", "місто виробник", "країна виробництва", "місто виробництва", "категорія", "купити в", "де купити", "тип полотна", "термін виготовлення"]);
   const decorLabels = Array.from(new Set((options || []).filter((option) => option.group === "color").map((option) => option.label.trim()).filter(Boolean)));
   const visibleSpecs = (specs || [])
     .filter((spec) => !hiddenIdentitySpecs.has(spec.label.trim().toLowerCase()))
