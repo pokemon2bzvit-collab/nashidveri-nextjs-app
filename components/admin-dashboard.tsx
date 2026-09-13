@@ -216,7 +216,8 @@ export function AdminDashboard() {
     setLoadingProduct(true);
     setSelected(product);
     setDraft(product);
-    setTab("basic");
+    const requestedTab = searchParams.get("tab");
+    setTab(requestedTab === "configuration" || requestedTab === "sources" || requestedTab === "media" ? requestedTab : "basic");
     setNotice("");
     const [specs, options, variants, mediaResult, sourceResult] = await Promise.all([
       supabase.from("product_specs").select("label,value,sort_order").eq("product_slug", product.slug).order("sort_order"),
