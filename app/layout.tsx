@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title: { default: "Наші двері — двері та вікна в Ужгороді", template: "%s | Наші двері" },
   description: "Вхідні та міжкімнатні двері, вікна, професійний замір і монтаж в Ужгороді. Салон «Наші двері» на вулиці Івана Чендея, 44.",
   alternates: { canonical: "/" },
-  openGraph: { type: "website", locale: "uk_UA", url: siteUrl, siteName, title: "Наші двері — двері та вікна в Ужгороді", description: "Вхідні та міжкімнатні двері, вікна, замір і монтаж в Ужгороді.", images: [{ url: "/nashi-dveri-logo-v3.png", alt: "Наші двері" }] },
+  openGraph: { type: "website", locale: "uk_UA", url: siteUrl, siteName, title: "Наші двері — двері та вікна в Ужгороді", description: "Вхідні та міжкімнатні двері, вікна, замір і монтаж в Ужгороді.", images: [{ url: "/nashi-dveri-logo-v4.png", alt: "Наші двері" }] },
   robots: { index: true, follow: true },
 };
 
@@ -18,8 +18,8 @@ const storeSchema = {
   name: siteName,
   description: "Салон вхідних і міжкімнатних дверей та вікон в Ужгороді: підбір, замір, доставка і монтаж.",
   url: siteUrl,
-  logo: absoluteUrl("/nashi-dveri-logo-v3.png"),
-  image: absoluteUrl("/nashi-dveri-logo-v3.png"),
+  logo: absoluteUrl("/nashi-dveri-logo-v4.png"),
+  image: absoluteUrl("/nashi-dveri-logo-v4.png"),
   telephone: ["+380950729341", "+380688155408"],
   email: "nashidveri.uzh@gmail.com",
   priceRange: "₴₴",
