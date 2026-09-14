@@ -27,7 +27,7 @@ console.log("delete from public.product_specs");
 console.log("where label = 'Доступні декори' and product_slug in (");
 console.log("  select slug from public.products where brand = 'Papa Carlo' and collection = 'Plato'");
 console.log(");");
-console.log("insert into public.product_specs (product_slug, label, value, sort_order, is_visible) values");
+console.log("insert into public.product_specs (product_slug, label, value, sort_order, is_active) values");
 console.log(models.map((model) => `(${sql(model.slug)}, 'Доступні декори', ${sql(model.colors)}, 900, true)`).join(",\n"));
 console.log(";");
 console.log("commit;");

@@ -4,7 +4,7 @@ delete from public.product_specs
 where label = 'Доступні декори' and product_slug in (
   select slug from public.products where brand = 'Papa Carlo' and collection = 'Plato'
 );
-insert into public.product_specs (product_slug, label, value, sort_order, is_visible) values
+insert into public.product_specs (product_slug, label, value, sort_order, is_active) values
 ('papa-carlo-pl-01c-official', 'Доступні декори', 'Білий матовий, світло-сірий супермат, темно-сірий супермат', 900, true),
 ('papa-carlo-pl-04-official', 'Доступні декори', 'Білий матовий, світло-сірий супермат, темно-сірий супермат, дуб сірий, дуб кремовий, ясен білий, бетон сірий, сірий матовий', 900, true),
 ('papa-carlo-pl-30-official', 'Доступні декори', 'Білий матовий, світло-сірий супермат, темно-сірий супермат, дуб сірий, дуб кремовий, ясен білий, бетон сірий, сірий матовий', 900, true),
