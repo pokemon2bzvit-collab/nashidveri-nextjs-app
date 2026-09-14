@@ -144,6 +144,7 @@ const withGeneratedDescription = (product: Product): Product => {
   const currentSpecs = (product.specs || [])
     .map((spec) => ({ ...spec, label: withoutTtr(spec.label), value: withoutTtr(spec.value) }))
     .filter((spec) => spec.label && spec.value)
+    .filter((spec) => spec.label.toLocaleLowerCase("uk") !== "петлі")
     .filter((spec) => !(spec.label.toLocaleLowerCase("uk") === "покриття" && /декоративн.{0,30}пвх.{0,80}німецьк/i.test(spec.value)));
   const specs = currentSpecs.some((spec) => /renolit/i.test(spec.value))
     ? currentSpecs
