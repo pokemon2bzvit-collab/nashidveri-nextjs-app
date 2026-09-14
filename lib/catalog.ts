@@ -107,7 +107,24 @@ const normalizeRodosGrand = (product: Product): Product => {
 export const products: Product[] = importedProducts.map(normalizeRodosGrand);
 
 const productNameCollator = new Intl.Collator("uk", { numeric: true, sensitivity: "base" });
-const sortProductsByName = <T extends Pick<Product, "name">>(items: T[]) => [...items].sort((left, right) => productNameCollator.compare(left.name, right.name));
+const productNameSortKey = (name: string) => name.replace(/[Тт]/g, "T").replace(/\s+/g, " ").trim();
+const sortProductsByName = <T extends Pick<Product, "name">>(items: T[]) => [...items].sort((left, right) => productNameCollator.compare(productNameSortKey(left.name), productNameSortKey(right.name)));
+const productDetailScore = (product: Product) => (
+  (product.variants || []).filter((variant) => Boolean(variant.image)).length * 100
+  + (product.options || []).filter((option) => Boolean(option.image)).length * 20
+  + (product.specs || []).length * 5
+  + Math.min(product.description.length, 300) / 100
+);
+const sortCatalogProducts = (items: Product[]) => {
+  const unique = new Map<string, Product>();
+  for (const product of items) {
+    const isTetra = product.collection.trim().toLocaleLowerCase("uk") === "tetra";
+    const key = isTetra ? `${product.brand}|tetra|${productNameSortKey(product.name).toLocaleLowerCase("uk")}` : product.slug;
+    const current = unique.get(key);
+    if (!current || productDetailScore(product) > productDetailScore(current)) unique.set(key, product);
+  }
+  return sortProductsByName([...unique.values()]);
+};
 
 type ProductRow = Omit<Product, "image" | "features"> & { features: string[] | null; image_path: string };
 type ProductMediaRow = { product_slug: string; kind: ProductMedia["kind"]; label: string | null; image_path: string; sort_order: number };
@@ -193,7 +210,7 @@ async function getProductExtras(slug: string) {
 }
 
 export async function getProducts(): Promise<Product[]> {
-  if (!supabaseKey) return sortProductsByName(products.map((product) => withGeneratedDescription({ ...product, image: catalogImageUrl(product.image) })));
+  if (!supabaseKey) return sortCatalogProducts(products.map((product) => withGeneratedDescription({ ...product, image: catalogImageUrl(product.image) })));
   try {
     const headers = { apikey: supabaseKey, Authorization: `Bearer ${supabaseKey}` };
     // Дані для карток отримуємо пакетними запитами, а не окремим
@@ -216,10 +233,10 @@ export async function getProducts(): Promise<Product[]> {
     optionRows.forEach((option) => optionsByProduct.set(option.product_slug, [...(optionsByProduct.get(option.product_slug) || []), mapOption(option)]));
     variantRows.forEach((variant) => variantsByProduct.set(variant.product_slug, [...(variantsByProduct.get(variant.product_slug) || []), mapVariant(variant)]));
     specRows.forEach((spec) => specsByProduct.set(spec.product_slug, [...(specsByProduct.get(spec.product_slug) || []), mapSpec(spec)]));
-    return sortProductsByName(rows.map((row) => withGeneratedDescription({ ...mapProduct(row), options: optionsByProduct.get(row.slug) || [], variants: variantsByProduct.get(row.slug) || [], specs: specsByProduct.get(row.slug) || [] })));
+    return sortCatalogProducts(rows.map((row) => withGeneratedDescription({ ...mapProduct(row), options: optionsByProduct.get(row.slug) || [], variants: variantsByProduct.get(row.slug) || [], specs: specsByProduct.get(row.slug) || [] })));
   } catch (error) {
     console.error("Could not load catalog from Supabase", error);
-    return sortProductsByName(products.map((product) => withGeneratedDescription({ ...product, image: catalogImageUrl(product.image) })));
+    return sortCatalogProducts(products.map((product) => withGeneratedDescription({ ...product, image: catalogImageUrl(product.image) })));
   }
 }
 
@@ -263,7 +280,7 @@ export async function getRelatedProducts(product: Pick<Product, "slug" | "brand"
     optionRows.forEach((option) => optionsByProduct.set(option.product_slug, [...(optionsByProduct.get(option.product_slug) || []), mapOption(option)]));
     variantRows.forEach((variant) => variantsByProduct.set(variant.product_slug, [...(variantsByProduct.get(variant.product_slug) || []), mapVariant(variant)]));
     specRows.forEach((spec) => specsByProduct.set(spec.product_slug, [...(specsByProduct.get(spec.product_slug) || []), mapSpec(spec)]));
-    return sortProductsByName(rows.map((row) => withGeneratedDescription({ ...mapProduct(row), options: optionsByProduct.get(row.slug) || [], variants: variantsByProduct.get(row.slug) || [], specs: specsByProduct.get(row.slug) || [] })));
+    return sortCatalogProducts(rows.map((row) => withGeneratedDescription({ ...mapProduct(row), options: optionsByProduct.get(row.slug) || [], variants: variantsByProduct.get(row.slug) || [], specs: specsByProduct.get(row.slug) || [] })));
   } catch (error) {
     console.error(`Could not load related products for ${product.slug}`, error);
     return fallback();
