@@ -146,12 +146,15 @@ const withGeneratedDescription = (product: Product): Product => {
     .filter((spec) => spec.label && spec.value)
     .filter((spec) => !["петлі", "сумісні замки"].includes(spec.label.toLocaleLowerCase("uk")))
     .filter((spec) => !(spec.label.toLocaleLowerCase("uk") === "покриття" && /декоративн.{0,30}пвх.{0,80}німецьк/i.test(spec.value)));
-  const widthSpec = normalizedSpecs.find((spec) => /ширина\s+полотна/i.test(spec.label));
+  const widthSpec = normalizedSpecs.find((spec) => /ширина.{0,30}полотна/i.test(spec.label));
   const heightSpec = normalizedSpecs.find((spec) => /висота\s+полотна/i.test(spec.label));
-  const currentSpecs = widthSpec && heightSpec
+  const nonstandardSizeSpec = normalizedSpecs.find((spec) => /нестандартн.{0,25}розмір/i.test(spec.label));
+  const currentSpecs = widthSpec
     ? normalizedSpecs
-      .filter((spec) => spec !== heightSpec)
-      .map((spec) => spec === widthSpec ? { ...spec, label: "Розміри полотна", value: `${spec.value}; висота: ${heightSpec.value}` } : spec)
+      .filter((spec) => spec !== heightSpec && spec !== nonstandardSizeSpec)
+      .map((spec) => spec === widthSpec
+        ? { ...spec, label: "Розміри полотна", value: `${spec.value}; висота: ${heightSpec?.value || "2000 мм"}${nonstandardSizeSpec ? ", можливий нестандартний розмір під замовлення" : ""}` }
+        : spec)
     : normalizedSpecs;
   const specs = currentSpecs.some((spec) => /renolit/i.test(spec.value))
     ? currentSpecs
