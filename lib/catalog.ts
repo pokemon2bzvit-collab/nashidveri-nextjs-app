@@ -140,10 +140,15 @@ const withGeneratedDescription = (product: Product): Product => {
   // Tetra — колекція Papa Carlo, для якої погодили автоматичні тексти.
   // Описи решти каталогу залишаються такими, як їх зберіг менеджер.
   if (product.collection.trim().toLocaleLowerCase("uk") !== "tetra") return product;
-  const description = shouldUseGeneratedDescription(product.description, product.specs || [], product.options || [])
-    ? createProductDescription(product, product.specs || [], product.options || [])
-    : product.description;
-  return { ...product, description: addDurableCoveringDescription(removeTetraUnsupportedDetails(description)) };
+  const currentSpecs = product.specs || [];
+  const specs = currentSpecs.some((spec) => /renolit/i.test(spec.value))
+    ? currentSpecs
+    : [...currentSpecs, { label: "Матеріал покриття", value: "Поліпропіленова плівка Renolit (Німеччина)", sortOrder: Math.max(0, ...currentSpecs.map((spec) => spec.sortOrder)) + 1 }];
+  const tetraProduct = { ...product, specs };
+  const description = shouldUseGeneratedDescription(tetraProduct.description, specs, tetraProduct.options || [])
+    ? createProductDescription(tetraProduct, specs, tetraProduct.options || [])
+    : tetraProduct.description;
+  return { ...tetraProduct, description: addDurableCoveringDescription(removeTetraUnsupportedDetails(description)) };
 };
 
 async function getProductExtras(slug: string) {
