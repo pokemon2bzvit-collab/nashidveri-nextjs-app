@@ -156,9 +156,13 @@ const withGeneratedDescription = (product: Product): Product => {
         ? { ...spec, label: "Розміри полотна", value: `ширина: ${spec.value}; висота: ${heightSpec?.value || "2000 мм"}${nonstandardSizeSpec ? ", можливий нестандартний розмір під замовлення" : ""}` }
         : spec)
     : normalizedSpecs;
-  const specs = currentSpecs.some((spec) => /renolit/i.test(spec.value))
-    ? currentSpecs
-    : [...currentSpecs, { label: "Матеріал покриття", value: "Поліпропіленова плівка Renolit (Німеччина)", sortOrder: Math.max(0, ...currentSpecs.map((spec) => spec.sortOrder)) + 1 }];
+  const maxSortOrder = Math.max(0, ...currentSpecs.map((spec) => spec.sortOrder));
+  const orderedCurrentSpecs = currentSpecs.map((spec) => spec.label.toLocaleLowerCase("uk") === "гарантія виробника"
+    ? { ...spec, sortOrder: maxSortOrder + 100 }
+    : spec);
+  const specs = orderedCurrentSpecs.some((spec) => /renolit/i.test(spec.value))
+    ? orderedCurrentSpecs
+    : [...orderedCurrentSpecs, { label: "Матеріал покриття", value: "Поліпропіленова плівка Renolit (Німеччина)", sortOrder: maxSortOrder + 1 }];
   const tetraProduct = { ...product, specs };
   const description = shouldUseGeneratedDescription(tetraProduct.description, specs, tetraProduct.options || [])
     ? createProductDescription(tetraProduct, specs, tetraProduct.options || [])
