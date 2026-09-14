@@ -106,6 +106,9 @@ const normalizeRodosGrand = (product: Product): Product => {
 
 export const products: Product[] = importedProducts.map(normalizeRodosGrand);
 
+const productNameCollator = new Intl.Collator("uk", { numeric: true, sensitivity: "base" });
+const sortProductsByName = <T extends Pick<Product, "name">>(items: T[]) => [...items].sort((left, right) => productNameCollator.compare(left.name, right.name));
+
 type ProductRow = Omit<Product, "image" | "features"> & { features: string[] | null; image_path: string };
 type ProductMediaRow = { product_slug: string; kind: ProductMedia["kind"]; label: string | null; image_path: string; sort_order: number };
 type ProductOptionRow = { product_slug: string; option_group: ProductOption["group"]; group_label: string; label: string; swatch: string | null; image_path: string | null; sort_order: number };
@@ -190,14 +193,14 @@ async function getProductExtras(slug: string) {
 }
 
 export async function getProducts(): Promise<Product[]> {
-  if (!supabaseKey) return products.map((product) => ({ ...product, image: catalogImageUrl(product.image) }));
+  if (!supabaseKey) return sortProductsByName(products.map((product) => withGeneratedDescription({ ...product, image: catalogImageUrl(product.image) })));
   try {
     const headers = { apikey: supabaseKey, Authorization: `Bearer ${supabaseKey}` };
     // Дані для карток отримуємо пакетними запитами, а не окремим
     // запитом до кожної моделі. Так каталог лишається швидким, але картки
     // можуть чесно показати лише декори з підтвердженим фото.
     const [productsResponse, optionsResponse, variantsResponse, specsResponse] = await Promise.all([
-      fetch(`${supabaseUrl}/rest/v1/products?select=slug,category,brand,collection,name,material,style,color,price,description,features,image_path&is_available=eq.true&order=sort_order.asc`, { headers, next: { revalidate: 300 } }),
+      fetch(`${supabaseUrl}/rest/v1/products?select=slug,category,brand,collection,name,material,style,color,price,description,features,image_path&is_available=eq.true&order=name.asc`, { headers, next: { revalidate: 300 } }),
       fetch(`${supabaseUrl}/rest/v1/product_options?select=product_slug,option_group,group_label,label,swatch,image_path,sort_order&is_active=eq.true&order=sort_order.asc`, { headers, next: { revalidate: 300 } }),
       fetch(`${supabaseUrl}/rest/v1/product_variants?select=product_slug,selections,image_path,sort_order&is_active=eq.true&order=sort_order.asc`, { headers, next: { revalidate: 300 } }),
       fetch(`${supabaseUrl}/rest/v1/product_specs?select=product_slug,label,value,sort_order&is_active=eq.true&order=sort_order.asc`, { headers, next: { revalidate: 300 } }),
@@ -213,10 +216,10 @@ export async function getProducts(): Promise<Product[]> {
     optionRows.forEach((option) => optionsByProduct.set(option.product_slug, [...(optionsByProduct.get(option.product_slug) || []), mapOption(option)]));
     variantRows.forEach((variant) => variantsByProduct.set(variant.product_slug, [...(variantsByProduct.get(variant.product_slug) || []), mapVariant(variant)]));
     specRows.forEach((spec) => specsByProduct.set(spec.product_slug, [...(specsByProduct.get(spec.product_slug) || []), mapSpec(spec)]));
-    return rows.map((row) => withGeneratedDescription({ ...mapProduct(row), options: optionsByProduct.get(row.slug) || [], variants: variantsByProduct.get(row.slug) || [], specs: specsByProduct.get(row.slug) || [] }));
+    return sortProductsByName(rows.map((row) => withGeneratedDescription({ ...mapProduct(row), options: optionsByProduct.get(row.slug) || [], variants: variantsByProduct.get(row.slug) || [], specs: specsByProduct.get(row.slug) || [] })));
   } catch (error) {
     console.error("Could not load catalog from Supabase", error);
-    return products.map((product) => ({ ...product, image: catalogImageUrl(product.image) }));
+    return sortProductsByName(products.map((product) => withGeneratedDescription({ ...product, image: catalogImageUrl(product.image) })));
   }
 }
 
@@ -225,12 +228,12 @@ export async function getRelatedProducts(product: Pick<Product, "slug" | "brand"
     .filter((item) => item.brand === product.brand && item.collection === product.collection && item.slug !== product.slug)
     .concat(products.filter((item) => item.brand === product.brand && item.collection !== product.collection && item.slug !== product.slug))
     .slice(0, limit)
-    .map((item) => ({ ...item, image: catalogImageUrl(item.image) }));
+    .map((item) => withGeneratedDescription({ ...item, image: catalogImageUrl(item.image) }));
 
   if (!supabaseKey) return fallback();
   const headers = { apikey: supabaseKey, Authorization: `Bearer ${supabaseKey}` };
   const select = "slug,category,brand,collection,name,material,style,color,price,description,features,image_path";
-  const common = `select=${select}&is_available=eq.true&brand=eq.${encodeURIComponent(product.brand)}&slug=neq.${encodeURIComponent(product.slug)}&order=sort_order.asc&limit=${limit}`;
+  const common = `select=${select}&is_available=eq.true&brand=eq.${encodeURIComponent(product.brand)}&slug=neq.${encodeURIComponent(product.slug)}&order=name.asc&limit=${limit}`;
 
   try {
     const fromCollection = await fetch(`${supabaseUrl}/rest/v1/products?${common}&collection=eq.${encodeURIComponent(product.collection)}`, { headers, next: { revalidate: 300 } });
@@ -260,7 +263,7 @@ export async function getRelatedProducts(product: Pick<Product, "slug" | "brand"
     optionRows.forEach((option) => optionsByProduct.set(option.product_slug, [...(optionsByProduct.get(option.product_slug) || []), mapOption(option)]));
     variantRows.forEach((variant) => variantsByProduct.set(variant.product_slug, [...(variantsByProduct.get(variant.product_slug) || []), mapVariant(variant)]));
     specRows.forEach((spec) => specsByProduct.set(spec.product_slug, [...(specsByProduct.get(spec.product_slug) || []), mapSpec(spec)]));
-    return rows.map((row) => withGeneratedDescription({ ...mapProduct(row), options: optionsByProduct.get(row.slug) || [], variants: variantsByProduct.get(row.slug) || [], specs: specsByProduct.get(row.slug) || [] }));
+    return sortProductsByName(rows.map((row) => withGeneratedDescription({ ...mapProduct(row), options: optionsByProduct.get(row.slug) || [], variants: variantsByProduct.get(row.slug) || [], specs: specsByProduct.get(row.slug) || [] })));
   } catch (error) {
     console.error(`Could not load related products for ${product.slug}`, error);
     return fallback();
