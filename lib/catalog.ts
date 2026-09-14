@@ -153,7 +153,7 @@ const withGeneratedDescription = (product: Product): Product => {
     ? normalizedSpecs
       .filter((spec) => spec !== heightSpec && spec !== nonstandardSizeSpec)
       .map((spec) => spec === widthSpec
-        ? { ...spec, label: "Розміри полотна", value: `${spec.value}; висота: ${heightSpec?.value || "2000 мм"}${nonstandardSizeSpec ? ", можливий нестандартний розмір під замовлення" : ""}` }
+        ? { ...spec, label: "Розміри полотна", value: `ширина: ${spec.value}; висота: ${heightSpec?.value || "2000 мм"}${nonstandardSizeSpec ? ", можливий нестандартний розмір під замовлення" : ""}` }
         : spec)
     : normalizedSpecs;
   const specs = currentSpecs.some((spec) => /renolit/i.test(spec.value))
