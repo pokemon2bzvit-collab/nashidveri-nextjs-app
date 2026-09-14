@@ -3,6 +3,7 @@ type DescriptionSpec = { label?: string; value?: string };
 type DescriptionOption = { option_group?: string; group_label?: string; label?: string; is_active?: boolean };
 
 const clean = (value: string) => value.replace(/\s+/g, " ").trim();
+const lowerFirst = (value: string) => value ? value[0].toLocaleLowerCase("uk") + value.slice(1) : value;
 const valueFor = (specs: DescriptionSpec[], pattern: RegExp) => specs.find((spec) => pattern.test(spec.label || ""))?.value?.trim();
 
 export function createProductDescription(product: ProductDescriptionInput, specs: DescriptionSpec[], options: DescriptionOption[]) {
@@ -11,6 +12,7 @@ export function createProductDescription(product: ProductDescriptionInput, specs
   const thickness = valueFor(specs, /товщина.*полот/i);
   const dimensions = valueFor(specs, /^(розмір|розміри|розміри полотна|ширина полотна)$/i);
   const construction = valueFor(specs, /конструкц|наповнен/i);
+  const coveringProperties = valueFor(specs, /властивост.*покрит|стійк.*покрит|зносостійк|вологостійк/i);
   const insulation = valueFor(specs, /теплоізоляц|утеплен/i);
   const metal = valueFor(specs, /товщина.*метал|товщина.*стал/i);
   const interior = product.category === "interior";
@@ -29,6 +31,7 @@ export function createProductDescription(product: ProductDescriptionInput, specs
   activeOptions.forEach((option) => groups.set(option.group_label || option.option_group || "Варіанти", [...(groups.get(option.group_label || option.option_group || "Варіанти") || []), option.label!.trim()]));
   const optionText = [...groups.entries()].map(([group, values]) => `${group.toLocaleLowerCase("uk")}: ${values.slice(0, 4).join(", ")}${values.length > 4 ? ` та ще ${values.length - 4}` : ""}`).join("; ");
   const factSentence = facts.length ? `Модель має ${facts.join(", ")}.` : "Модель доступна у заводських виконаннях, а комплектацію допоможе підібрати менеджер.";
+  const durabilitySentence = coveringProperties ? ` Покриття ${lowerFirst(coveringProperties)} — це допомагає дверям зберігати охайний вигляд у щоденному користуванні.` : "";
   const ending = optionText ? ` Доступні варіанти: ${optionText}.` : " Доступні заводські варіанти комплектації; актуальну ціну уточнюйте у менеджера.";
-  return clean(`${intro} ${factSentence}${ending}`);
+  return clean(`${intro} ${factSentence}${durabilitySentence}${ending}`);
 }
