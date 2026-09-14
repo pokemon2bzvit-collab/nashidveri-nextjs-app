@@ -52,6 +52,6 @@ export function addDurableCoveringDescription(description: string) {
 }
 
 export function removeTetraUnsupportedDetails(description: string) {
-  return clean(description.replace(/,?\s*компланарний\s+короб\s+TTR\s*(?:і\s*)?/gi, ", "))
+  return clean(description.replace(/,?\s*компланарний\s+короб\s+TTR\s*(?:і\s*)?/gi, ", ").replace(/\bTTR\b/gi, ""))
     .replace(/,\s*\./g, ".");
 }
