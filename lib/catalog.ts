@@ -1,5 +1,5 @@
 import { importedProducts } from "./imported-catalog";
-import { addDurableCoveringDescription, createProductDescription, shouldUseGeneratedDescription } from "./product-description";
+import { addDurableCoveringDescription, createProductDescription, removeTetraUnsupportedDetails, shouldUseGeneratedDescription } from "./product-description";
 
 export type Category = "interior" | "entrance" | "windows";
 export type ProductMedia = { kind: "main" | "gallery" | "palette"; label: string | null; image: string; sortOrder: number };
@@ -143,7 +143,7 @@ const withGeneratedDescription = (product: Product): Product => {
   const description = shouldUseGeneratedDescription(product.description, product.specs || [], product.options || [])
     ? createProductDescription(product, product.specs || [], product.options || [])
     : product.description;
-  return { ...product, description: addDurableCoveringDescription(description) };
+  return { ...product, description: addDurableCoveringDescription(removeTetraUnsupportedDetails(description)) };
 };
 
 async function getProductExtras(slug: string) {

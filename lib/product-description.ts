@@ -50,3 +50,8 @@ export function addDurableCoveringDescription(description: string) {
   if (!text || /стійк(?:е|ий|а|ість).{0,45}покрит|покрит.{0,60}(?:стійк|зберігати охайн|приваблив.{0,25}вигляд)/i.test(text)) return text;
   return `${text} Двері мають стійке до пошкоджень покриття, що допомагає зберігати охайний вигляд і привабливість у щоденному користуванні.`;
 }
+
+export function removeTetraUnsupportedDetails(description: string) {
+  return clean(description.replace(/,?\s*компланарний\s+короб\s+TTR\s*(?:і\s*)?/gi, ", "))
+    .replace(/,\s*\./g, ".");
+}
