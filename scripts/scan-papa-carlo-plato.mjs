@@ -95,6 +95,7 @@ async function scanPlato({ offset = 0, limit = 8 } = {}) {
       thickness: facts["Товщина полотна"] || "",
       glass: facts["Наявність скла"] || "",
       colors: facts["Колір"] || "",
+      style: facts["Стиль"] || "",
       images: officialGallery(page.html, root),
     });
   }
