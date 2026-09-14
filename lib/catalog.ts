@@ -1,5 +1,5 @@
 import { importedProducts } from "./imported-catalog";
-import { createProductDescription, shouldUseGeneratedDescription } from "./product-description";
+import { addDurableCoveringDescription, createProductDescription, shouldUseGeneratedDescription } from "./product-description";
 
 export type Category = "interior" | "entrance" | "windows";
 export type ProductMedia = { kind: "main" | "gallery" | "palette"; label: string | null; image: string; sortOrder: number };
@@ -140,8 +140,10 @@ const withGeneratedDescription = (product: Product): Product => {
   // Tetra — колекція Papa Carlo, для якої погодили автоматичні тексти.
   // Описи решти каталогу залишаються такими, як їх зберіг менеджер.
   if (product.collection.trim().toLocaleLowerCase("uk") !== "tetra") return product;
-  if (!shouldUseGeneratedDescription(product.description, product.specs || [], product.options || [])) return product;
-  return { ...product, description: createProductDescription(product, product.specs || [], product.options || []) };
+  const description = shouldUseGeneratedDescription(product.description, product.specs || [], product.options || [])
+    ? createProductDescription(product, product.specs || [], product.options || [])
+    : product.description;
+  return { ...product, description: addDurableCoveringDescription(description) };
 };
 
 async function getProductExtras(slug: string) {

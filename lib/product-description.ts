@@ -44,3 +44,9 @@ export function shouldUseGeneratedDescription(description: string | null | undef
   if (!text) return Boolean(specs.length || options.length);
   return text.length < 115 || /характеристики та актуальну ціну уточнюйте|доступні заводські виконання; актуальну комплектацію/i.test(text);
 }
+
+export function addDurableCoveringDescription(description: string) {
+  const text = clean(description);
+  if (!text || /стійк(?:е|ий|а|ість).{0,45}покрит|покрит.{0,60}(?:стійк|зберігати охайн|приваблив.{0,25}вигляд)/i.test(text)) return text;
+  return `${text} Двері мають стійке до пошкоджень покриття, що допомагає зберігати охайний вигляд і привабливість у щоденному користуванні.`;
+}
