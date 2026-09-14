@@ -141,11 +141,18 @@ const withGeneratedDescription = (product: Product): Product => {
   // Описи решти каталогу залишаються такими, як їх зберіг менеджер.
   if (product.collection.trim().toLocaleLowerCase("uk") !== "tetra") return product;
   const withoutTtr = (value: string) => value.replace(/\bTTR\b/gi, "").replace(/\s{2,}/g, " ").trim();
-  const currentSpecs = (product.specs || [])
+  const normalizedSpecs = (product.specs || [])
     .map((spec) => ({ ...spec, label: withoutTtr(spec.label), value: withoutTtr(spec.value) }))
     .filter((spec) => spec.label && spec.value)
     .filter((spec) => !["петлі", "сумісні замки"].includes(spec.label.toLocaleLowerCase("uk")))
     .filter((spec) => !(spec.label.toLocaleLowerCase("uk") === "покриття" && /декоративн.{0,30}пвх.{0,80}німецьк/i.test(spec.value)));
+  const widthSpec = normalizedSpecs.find((spec) => /ширина\s+полотна/i.test(spec.label));
+  const heightSpec = normalizedSpecs.find((spec) => /висота\s+полотна/i.test(spec.label));
+  const currentSpecs = widthSpec && heightSpec
+    ? normalizedSpecs
+      .filter((spec) => spec !== heightSpec)
+      .map((spec) => spec === widthSpec ? { ...spec, label: "Розміри полотна", value: `${spec.value}; висота: ${heightSpec.value}` } : spec)
+    : normalizedSpecs;
   const specs = currentSpecs.some((spec) => /renolit/i.test(spec.value))
     ? currentSpecs
     : [...currentSpecs, { label: "Матеріал покриття", value: "Поліпропіленова плівка Renolit (Німеччина)", sortOrder: Math.max(0, ...currentSpecs.map((spec) => spec.sortOrder)) + 1 }];
