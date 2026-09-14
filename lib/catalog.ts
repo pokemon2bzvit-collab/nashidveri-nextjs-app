@@ -1,4 +1,5 @@
 import { importedProducts } from "./imported-catalog";
+import { createProductDescription, shouldUseGeneratedDescription } from "./product-description";
 
 export type Category = "interior" | "entrance" | "windows";
 export type ProductMedia = { kind: "main" | "gallery" | "palette"; label: string | null; image: string; sortOrder: number };
@@ -135,6 +136,13 @@ const mapMedia = (media: ProductMediaRow): ProductMedia => ({ kind: media.kind, 
 const mapOption = (option: ProductOptionRow): ProductOption => ({ group: option.option_group, groupLabel: option.group_label, label: option.label, swatch: option.swatch, image: option.image_path ? catalogImageUrl(option.image_path) : null, sortOrder: option.sort_order });
 const mapVariant = (variant: ProductVariantRow): ProductVariant => ({ selections: variant.selections, image: catalogImageUrl(variant.image_path), sortOrder: variant.sort_order });
 const mapSpec = (spec: ProductSpecRow): ProductSpec => ({ label: spec.label, value: spec.value, sortOrder: spec.sort_order });
+const withGeneratedDescription = (product: Product): Product => {
+  // Tetra — колекція Papa Carlo, для якої погодили автоматичні тексти.
+  // Описи решти каталогу залишаються такими, як їх зберіг менеджер.
+  if (product.collection.trim().toLocaleLowerCase("uk") !== "tetra") return product;
+  if (!shouldUseGeneratedDescription(product.description, product.specs || [], product.options || [])) return product;
+  return { ...product, description: createProductDescription(product, product.specs || [], product.options || []) };
+};
 
 async function getProductExtras(slug: string) {
   if (!supabaseKey) return { media: [] as ProductMedia[], options: [] as ProductOption[], variants: [] as ProductVariant[], specs: [] as ProductSpec[] };
@@ -179,7 +187,7 @@ export async function getProducts(): Promise<Product[]> {
     optionRows.forEach((option) => optionsByProduct.set(option.product_slug, [...(optionsByProduct.get(option.product_slug) || []), mapOption(option)]));
     variantRows.forEach((variant) => variantsByProduct.set(variant.product_slug, [...(variantsByProduct.get(variant.product_slug) || []), mapVariant(variant)]));
     specRows.forEach((spec) => specsByProduct.set(spec.product_slug, [...(specsByProduct.get(spec.product_slug) || []), mapSpec(spec)]));
-    return rows.map((row) => ({ ...mapProduct(row), options: optionsByProduct.get(row.slug) || [], variants: variantsByProduct.get(row.slug) || [], specs: specsByProduct.get(row.slug) || [] }));
+    return rows.map((row) => withGeneratedDescription({ ...mapProduct(row), options: optionsByProduct.get(row.slug) || [], variants: variantsByProduct.get(row.slug) || [], specs: specsByProduct.get(row.slug) || [] }));
   } catch (error) {
     console.error("Could not load catalog from Supabase", error);
     return products.map((product) => ({ ...product, image: catalogImageUrl(product.image) }));
@@ -226,7 +234,7 @@ export async function getRelatedProducts(product: Pick<Product, "slug" | "brand"
     optionRows.forEach((option) => optionsByProduct.set(option.product_slug, [...(optionsByProduct.get(option.product_slug) || []), mapOption(option)]));
     variantRows.forEach((variant) => variantsByProduct.set(variant.product_slug, [...(variantsByProduct.get(variant.product_slug) || []), mapVariant(variant)]));
     specRows.forEach((spec) => specsByProduct.set(spec.product_slug, [...(specsByProduct.get(spec.product_slug) || []), mapSpec(spec)]));
-    return rows.map((row) => ({ ...mapProduct(row), options: optionsByProduct.get(row.slug) || [], variants: variantsByProduct.get(row.slug) || [], specs: specsByProduct.get(row.slug) || [] }));
+    return rows.map((row) => withGeneratedDescription({ ...mapProduct(row), options: optionsByProduct.get(row.slug) || [], variants: variantsByProduct.get(row.slug) || [], specs: specsByProduct.get(row.slug) || [] }));
   } catch (error) {
     console.error(`Could not load related products for ${product.slug}`, error);
     return fallback();
@@ -258,7 +266,7 @@ export async function getProduct(slug: string) {
   try {
     const { media, options, variants, specs } = await getProductExtras(slug);
     const mainImage = media.find((item) => item.kind === "main");
-    return { ...product, image: mainImage?.image || product.image, media, options, variants, specs };
+    return withGeneratedDescription({ ...product, image: mainImage?.image || product.image, media, options, variants, specs });
   } catch (error) {
     console.error(`Could not load product configuration for ${slug}`, error);
     return product;
