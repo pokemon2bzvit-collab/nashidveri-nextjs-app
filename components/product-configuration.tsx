@@ -7,13 +7,14 @@ import type { ProductOption, ProductVariant } from "@/lib/catalog";
 type ProductConfigurationProps = {
   options: ProductOption[];
   variants: ProductVariant[];
-  onImageChange: (image: string | null) => void;
+  onImageChange: (image: string | null, variant: ProductVariant | null) => void;
+  activeVariant?: ProductVariant | null;
   previewImage: string;
   productName: string;
   productSlug: string;
 };
 
-export function ProductConfiguration({ options, variants, onImageChange, previewImage, productName, productSlug }: ProductConfigurationProps) {
+export function ProductConfiguration({ options, variants, onImageChange, activeVariant, previewImage, productName, productSlug }: ProductConfigurationProps) {
   const visualVariants = useMemo(() => variants.filter((variant) => Boolean(variant.image)), [variants]);
   const groups = useMemo(() => {
     const collection = new Map<string, ProductOption[]>();
@@ -60,9 +61,20 @@ export function ProductConfiguration({ options, variants, onImageChange, preview
   const hasVisualPreview = Boolean(matchingVariant?.image);
 
   useEffect(() => {
+    if (!activeVariant) return;
+    const selectionForVariant = Object.fromEntries(groups.map((group) => {
+      const index = group.findIndex((option) => option.label === activeVariant.selections[group[0].group]);
+      return [group[0].group, index >= 0 ? index : 0];
+    }));
+    setSelected(selectionForVariant);
+    setDraftSelected(selectionForVariant);
+    setHasAppliedSelection(true);
+  }, [activeVariant?.image, activeVariant?.selections, groups]);
+
+  useEffect(() => {
     // Головне фото картки є перевіреним виконанням моделі. Не замінюємо його
     // першим доступним варіантом, доки покупець сам не застосує свій вибір.
-    onImageChange(hasAppliedSelection ? matchingVariant?.image || null : null);
+    onImageChange(hasAppliedSelection ? matchingVariant?.image || null : null, hasAppliedSelection ? matchingVariant || null : null);
   }, [hasAppliedSelection, matchingVariant?.image, onImageChange]);
 
   useEffect(() => {
