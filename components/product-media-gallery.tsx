@@ -18,12 +18,16 @@ export function ProductMediaGallery({ product }: { product: Product }) {
       image: variant.image,
       sortOrder: variant.sortOrder,
     })), [visualVariants]);
+  const isGlassOnlyConfiguration = Boolean(product.options?.length) && product.options!.every((option) => option.group === "glass");
+  const usesGlassVariantGallery = isGlassOnlyConfiguration && variantGallery.length > 0;
   const palettes = media.filter((item) => item.kind === "palette");
   const [selectedIndex, setSelectedIndex] = useState(0);
   const [optionImage, setOptionImage] = useState<string | null>(null);
   const [activeVariant, setActiveVariant] = useState<ProductVariant | null>(null);
   const [isConfigurationActive, setIsConfigurationActive] = useState(false);
-  const displayedGallery = isConfigurationActive && variantGallery.length ? variantGallery : gallery;
+  // Для моделі з єдиним вибором скла не змішуємо ракурси з фото різних вставок.
+  // Покупець відразу бачить лише точні виконання «Сатин» / «Чорне скло».
+  const displayedGallery = usesGlassVariantGallery || (isConfigurationActive && variantGallery.length) ? variantGallery : gallery;
   const selected = displayedGallery[selectedIndex] || displayedGallery[0];
   const productImageAlt = `${product.category === "windows" ? "Вікна" : `${product.category === "entrance" ? "Вхідні" : "Міжкімнатні"} двері`} ${product.brand} ${product.name}, колекція ${product.collection}`;
   const selectedImageAlt = optionImage ? `Обраний декор: ${productImageAlt}` : selected.label ? `${productImageAlt} — ${selected.label}` : productImageAlt;
@@ -63,7 +67,7 @@ export function ProductMediaGallery({ product }: { product: Product }) {
       <ImageLightbox src={optionImage || selected.image} alt={selectedImageAlt} className="h-full w-full" imageClassName="h-full w-full object-contain" />
     </div>
     {displayedGallery.length > 1 && <div className="mt-3 flex gap-2 overflow-x-auto pb-1">
-      {displayedGallery.map((item, index) => isConfigurationActive
+      {displayedGallery.map((item, index) => (usesGlassVariantGallery || isConfigurationActive)
         ? <button type="button" key={`${item.image}-${index}`} aria-label={`Обрати фото варіанту: ${item.label || index + 1}`} onClick={() => selectConfigurationPhoto(index)} className={`h-16 w-12 shrink-0 overflow-hidden rounded-lg border-2 bg-[#f7f5f1] transition ${selectedIndex === index ? "border-clay" : "border-transparent hover:border-stone-300"}`}><img src={item.image} alt="" className="h-full w-full object-contain" /></button>
         : <button type="button" key={`${item.image}-${index}`} aria-label={`Обрати фото: ${item.label || index + 1}`} onClick={() => selectGalleryPhoto(item, index)} className={`h-16 w-12 shrink-0 overflow-hidden rounded-lg border-2 bg-[#f7f5f1] transition ${selectedIndex === index ? "border-clay" : "border-transparent hover:border-stone-300"}`}><img src={item.image} alt="" className="h-full w-full object-contain" /></button>)}
     </div>}
@@ -75,6 +79,6 @@ export function ProductMediaGallery({ product }: { product: Product }) {
       </div>
     </section>}
     <ProductConfiguration options={product.options || []} variants={product.variants || []} onImageChange={handleConfigurationImage} activeVariant={activeVariant} previewImage={optionImage || selected.image} productName={product.name} productSlug={product.slug} />
-    {displayedGallery.length > 1 && <p className="mt-3 flex items-center gap-2 text-xs font-medium text-stone-500"><Images size={15} /> {isConfigurationActive ? "Фото доступних виконань скла." : "Натисніть мініатюру, щоб переглянути варіант."}</p>}
+    {displayedGallery.length > 1 && <p className="mt-3 flex items-center gap-2 text-xs font-medium text-stone-500"><Images size={15} /> {usesGlassVariantGallery || isConfigurationActive ? "Фото доступних виконань скла." : "Натисніть мініатюру, щоб переглянути варіант."}</p>}
   </div>;
 }
