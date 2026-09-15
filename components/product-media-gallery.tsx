@@ -1,7 +1,7 @@
 "use client";
 
 import { Images, Palette } from "lucide-react";
-import { useState } from "react";
+import { useCallback, useMemo, useState } from "react";
 import { ImageLightbox } from "@/components/image-lightbox";
 import { ProductConfiguration } from "@/components/product-configuration";
 import type { Product, ProductMedia, ProductVariant } from "@/lib/catalog";
@@ -10,14 +10,14 @@ export function ProductMediaGallery({ product }: { product: Product }) {
   const media = product.media || [];
   const visualMedia = media.filter((item) => item.kind === "main" || item.kind === "gallery");
   const gallery: ProductMedia[] = visualMedia.length ? visualMedia : [{ kind: "main", label: product.name, image: product.image, sortOrder: 0 }];
-  const visualVariants = (product.variants || []).filter((variant) => Boolean(variant.image));
-  const variantGallery: ProductMedia[] = visualVariants
+  const visualVariants = useMemo(() => (product.variants || []).filter((variant) => Boolean(variant.image)), [product.variants]);
+  const variantGallery: ProductMedia[] = useMemo(() => visualVariants
     .map((variant) => ({
       kind: "gallery",
       label: Object.values(variant.selections).join(" · "),
       image: variant.image,
       sortOrder: variant.sortOrder,
-    }));
+    })), [visualVariants]);
   const palettes = media.filter((item) => item.kind === "palette");
   const [selectedIndex, setSelectedIndex] = useState(0);
   const [optionImage, setOptionImage] = useState<string | null>(null);
@@ -27,7 +27,7 @@ export function ProductMediaGallery({ product }: { product: Product }) {
   const selected = displayedGallery[selectedIndex] || displayedGallery[0];
   const productImageAlt = `${product.category === "windows" ? "Вікна" : `${product.category === "entrance" ? "Вхідні" : "Міжкімнатні"} двері`} ${product.brand} ${product.name}, колекція ${product.collection}`;
   const selectedImageAlt = optionImage ? `Обраний декор: ${productImageAlt}` : selected.label ? `${productImageAlt} — ${selected.label}` : productImageAlt;
-  const handleConfigurationImage = (image: string | null, variant: ProductVariant | null) => {
+  const handleConfigurationImage = useCallback((image: string | null, variant: ProductVariant | null) => {
     setOptionImage(image);
     setActiveVariant(variant);
     if (!image) {
@@ -38,7 +38,7 @@ export function ProductMediaGallery({ product }: { product: Product }) {
     const variantIndex = variantGallery.findIndex((item) => item.image === image);
     setIsConfigurationActive(variantIndex >= 0);
     setSelectedIndex(variantIndex >= 0 ? variantIndex : 0);
-  };
+  }, [variantGallery]);
   const selectConfigurationPhoto = (index: number) => {
     const variant = visualVariants[index];
     if (!variant) return;
