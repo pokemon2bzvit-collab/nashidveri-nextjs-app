@@ -11,10 +11,11 @@ type ProductConfigurationProps = {
   activeVariant?: ProductVariant | null;
   previewImage: string;
   productName: string;
+  productBrand: string;
   productSlug: string;
 };
 
-export function ProductConfiguration({ options, variants, onImageChange, activeVariant, previewImage, productName, productSlug }: ProductConfigurationProps) {
+export function ProductConfiguration({ options, variants, onImageChange, activeVariant, previewImage, productName, productBrand, productSlug }: ProductConfigurationProps) {
   const visualVariants = useMemo(() => variants.filter((variant) => Boolean(variant.image)), [variants]);
   const groups = useMemo(() => {
     const collection = new Map<string, ProductOption[]>();
@@ -22,6 +23,7 @@ export function ProductConfiguration({ options, variants, onImageChange, activeV
     return [...collection.values()];
   }, [options]);
   const isGlassOnly = groups.length === 1 && groups[0]?.[0]?.group === "glass";
+  const usesInstantConfiguration = productBrand === "Papa Carlo";
   const configurationNoun = isGlassOnly ? "скло" : "декор";
   const [selected, setSelected] = useState<Record<string, number>>({});
   const [draftSelected, setDraftSelected] = useState<Record<string, number>>({});
@@ -100,10 +102,10 @@ export function ProductConfiguration({ options, variants, onImageChange, activeV
   };
   const reset = () => setDraftSelected({});
   const selectOption = (groupKey: string, index: number) => setDraftSelected((current) => ({ ...current, [groupKey]: index }));
-  const applyGlassSelection = (index: number) => {
-    const group = groups[0];
+  const applyDirectSelection = (groupKey: string, index: number) => {
+    const group = groups.find((item) => item[0]?.group === groupKey);
     if (!group) return;
-    const nextSelection = { ...selected, [group[0].group]: index };
+    const nextSelection = { ...selected, [groupKey]: index };
     const nextValues = Object.fromEntries(groups.map((item) => [item[0].group, item[selectedIndexFor(item, nextSelection)]?.label || ""]));
     const nextVariant = variants.find((variant) => Object.entries(variant.selections).every(([key, label]) => nextValues[key] === label)) || null;
 
@@ -112,7 +114,7 @@ export function ProductConfiguration({ options, variants, onImageChange, activeV
     setHasAppliedSelection(true);
     onImageChange(nextVariant?.image || null, nextVariant);
     window.localStorage.setItem(`nashi-dveri-config-${productSlug}`, JSON.stringify({
-      configuration: nextVariant ? [`${group[0].groupLabel}: ${nextValues[group[0].group]}`] : [],
+      configuration: nextVariant ? groups.map((item) => `${item[0].groupLabel}: ${nextValues[item[0].group]}`).filter(Boolean) : [],
       image: nextVariant?.image || null,
     }));
   };
@@ -139,15 +141,25 @@ export function ProductConfiguration({ options, variants, onImageChange, activeV
       <span className="rounded-full bg-sand px-2.5 py-1 text-[11px] font-bold text-stone-600">{visualVariants.length} з фото</span>
     </div>
 
-    {isGlassOnly ? <>
-      <div className="mt-4 grid grid-cols-2 gap-2">
-        {groups[0].map((option, index) => {
-          const isSelected = selectedIndexFor(groups[0], selected) === index;
-          const variant = visualVariants.find((item) => item.selections.glass === option.label);
-          return <button type="button" key={`${option.group}-${option.label}`} onClick={() => applyGlassSelection(index)} className={`flex min-h-14 items-center gap-2 rounded-xl border p-2 text-left text-xs font-bold transition ${isSelected ? "border-ink bg-ink text-white shadow-sm" : "border-stone-200 bg-[#faf9f7] text-stone-700 hover:border-clay"}`}>
-            {variant?.image && <img src={variant.image} alt="" className="h-10 w-8 shrink-0 rounded-md bg-white object-contain" />}
-            <span className="line-clamp-2">{option.label}</span>
-          </button>;
+    {isGlassOnly || usesInstantConfiguration ? <>
+      <div className="mt-4 space-y-3">
+        {groups.map((group) => {
+          const groupKey = group[0].group;
+          const selectedIndex = selectedIndexFor(group, selected);
+          return <div key={groupKey}>
+            {!isGlassOnly && <p className="mb-2 text-xs font-bold text-stone-700">{group[0].groupLabel}</p>}
+            <div className="grid grid-cols-2 gap-2 sm:grid-cols-3">
+              {group.map((option, index) => {
+                const isSelected = selectedIndex === index;
+                const isAvailable = visualVariants.some((variant) => Object.entries(variant.selections).every(([key, label]) => key === groupKey ? label === option.label : label === selectionValues[key]));
+                const variant = visualVariants.find((item) => item.selections[groupKey] === option.label && Object.entries(item.selections).every(([key, label]) => key === groupKey || label === selectionValues[key]));
+                return <button type="button" disabled={!isAvailable} key={`${option.group}-${option.label}`} onClick={() => applyDirectSelection(groupKey, index)} className={`flex min-h-12 items-center gap-2 rounded-xl border p-2 text-left text-xs font-bold transition disabled:cursor-not-allowed disabled:opacity-45 ${isSelected ? "border-ink bg-ink text-white shadow-sm" : "border-stone-200 bg-[#faf9f7] text-stone-700 hover:border-clay"}`}>
+                  {variant?.image && <img src={variant.image} alt="" className="h-9 w-7 shrink-0 rounded-md bg-white object-contain" />}
+                  <span className="line-clamp-2">{option.label}</span>
+                </button>;
+              })}
+            </div>
+          </div>;
         })}
       </div>
       <p className="mt-2 text-xs text-stone-500">Натисніть варіант — головне фото й галерея оновляться одразу.</p>
