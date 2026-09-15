@@ -47,6 +47,16 @@ export function ProductMediaGallery({ product }: { product: Product }) {
     setIsConfigurationActive(true);
     setSelectedIndex(index);
   };
+  const imageStem = (image: string) => image.split("?")[0].split("/").pop()?.replace(/\.(avif|webp|png|jpe?g)$/i, "") || image;
+  const selectGalleryPhoto = (item: ProductMedia, index: number) => {
+    const variantIndex = visualVariants.findIndex((variant) => imageStem(variant.image) === imageStem(item.image));
+    if (variantIndex >= 0) {
+      selectConfigurationPhoto(variantIndex);
+      return;
+    }
+    setSelectedIndex(index);
+    setOptionImage(null);
+  };
 
   return <div>
     <div className="aspect-[4/5] overflow-hidden rounded-[2rem] bg-[#f7f5f1] p-5 sm:p-8">
@@ -55,7 +65,7 @@ export function ProductMediaGallery({ product }: { product: Product }) {
     {displayedGallery.length > 1 && <div className="mt-3 flex gap-2 overflow-x-auto pb-1">
       {displayedGallery.map((item, index) => isConfigurationActive
         ? <button type="button" key={`${item.image}-${index}`} aria-label={`Обрати фото варіанту: ${item.label || index + 1}`} onClick={() => selectConfigurationPhoto(index)} className={`h-16 w-12 shrink-0 overflow-hidden rounded-lg border-2 bg-[#f7f5f1] transition ${selectedIndex === index ? "border-clay" : "border-transparent hover:border-stone-300"}`}><img src={item.image} alt="" className="h-full w-full object-contain" /></button>
-        : <button type="button" key={`${item.image}-${index}`} aria-label={`Обрати фото: ${item.label || index + 1}`} onClick={() => { setSelectedIndex(index); setOptionImage(null); }} className={`h-16 w-12 shrink-0 overflow-hidden rounded-lg border-2 bg-[#f7f5f1] transition ${selectedIndex === index ? "border-clay" : "border-transparent hover:border-stone-300"}`}><img src={item.image} alt="" className="h-full w-full object-contain" /></button>)}
+        : <button type="button" key={`${item.image}-${index}`} aria-label={`Обрати фото: ${item.label || index + 1}`} onClick={() => selectGalleryPhoto(item, index)} className={`h-16 w-12 shrink-0 overflow-hidden rounded-lg border-2 bg-[#f7f5f1] transition ${selectedIndex === index ? "border-clay" : "border-transparent hover:border-stone-300"}`}><img src={item.image} alt="" className="h-full w-full object-contain" /></button>)}
     </div>}
     {palettes.length > 0 && <section className="mt-5 rounded-2xl border border-stone-200 bg-white p-4 shadow-sm">
       <div className="flex items-center gap-2 text-sm font-bold text-ink"><Palette size={17} className="text-clay" /> Кольори та декори</div>
