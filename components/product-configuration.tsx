@@ -21,6 +21,8 @@ export function ProductConfiguration({ options, variants, onImageChange, activeV
     options.forEach((option) => collection.set(option.group, [...(collection.get(option.group) || []), option]));
     return [...collection.values()];
   }, [options]);
+  const isGlassOnly = groups.length === 1 && groups[0]?.[0]?.group === "glass";
+  const configurationNoun = isGlassOnly ? "скло" : "декор";
   const [selected, setSelected] = useState<Record<string, number>>({});
   const [draftSelected, setDraftSelected] = useState<Record<string, number>>({});
   const [isOpen, setIsOpen] = useState(false);
@@ -115,8 +117,8 @@ export function ProductConfiguration({ options, variants, onImageChange, activeV
   return <section className="mt-5 rounded-2xl border border-stone-200 bg-white p-4 shadow-sm sm:p-5">
     <div className="flex items-start justify-between gap-3">
       <div>
-        <div className="flex items-center gap-2 text-sm font-bold text-ink"><Palette size={17} className="text-clay" /> Декор і комплектація</div>
-        <p className="mt-1 text-xs leading-5 text-stone-500">Оберіть колір, скло або кромку для цієї моделі.</p>
+        <div className="flex items-center gap-2 text-sm font-bold text-ink"><Palette size={17} className="text-clay" /> {isGlassOnly ? "Варіант скла" : "Декор і комплектація"}</div>
+        <p className="mt-1 text-xs leading-5 text-stone-500">{isGlassOnly ? "Оберіть виконання скла для цієї моделі." : "Оберіть колір, скло або кромку для цієї моделі."}</p>
       </div>
       <span className="rounded-full bg-sand px-2.5 py-1 text-[11px] font-bold text-stone-600">{visualVariants.length} з фото</span>
     </div>
@@ -128,19 +130,19 @@ export function ProductConfiguration({ options, variants, onImageChange, activeV
     </div>
 
     <button type="button" onClick={openConfigurator} className="mt-4 inline-flex min-h-11 w-full items-center justify-between rounded-xl bg-ink px-4 text-sm font-bold text-white transition hover:bg-ink/90">
-      <span className="flex items-center gap-2"><SlidersHorizontal size={17} /> Обрати декор</span><ChevronRight size={17} />
+      <span className="flex items-center gap-2"><SlidersHorizontal size={17} /> Обрати {configurationNoun}</span><ChevronRight size={17} />
     </button>
-    <p className="mt-2 text-xs text-stone-500">{hasVisualPreview ? "Для обраного варіанту показано фото." : "Доступні лише декори з підтвердженим фото моделі."}</p>
+    <p className="mt-2 text-xs text-stone-500">{hasVisualPreview ? "Для обраного варіанту показано фото." : `Доступні лише ${isGlassOnly ? "варіанти скла" : "декори"} з підтвердженим фото моделі.`}</p>
 
-    {isOpen && <div role="dialog" aria-modal="true" aria-label="Вибір декору та комплектації" className="fixed inset-0 z-[90]">
+    {isOpen && <div role="dialog" aria-modal="true" aria-label={`Вибір: ${configurationNoun}`} className="fixed inset-0 z-[90]">
       <button type="button" aria-label="Закрити панель" onClick={() => setIsOpen(false)} className="decor-backdrop absolute inset-0 bg-ink/35 backdrop-blur-[2px]" />
       <aside className="decor-panel absolute inset-x-0 bottom-0 max-h-[88svh] overflow-y-auto rounded-t-[2rem] bg-[#fcfbf9] p-5 shadow-2xl sm:p-7 lg:inset-y-0 lg:left-auto lg:right-0 lg:max-h-none lg:w-[30rem] lg:rounded-none">
         <div className="mx-auto mb-5 h-1.5 w-12 rounded-full bg-stone-300 lg:hidden" />
         <div className="flex items-start justify-between gap-4">
-          <div><p className="text-xs font-bold uppercase tracking-[.14em] text-clay">Ваша комплектація</p><h2 className="mt-1 font-display text-3xl text-ink">Оберіть декор</h2></div>
+          <div><p className="text-xs font-bold uppercase tracking-[.14em] text-clay">{isGlassOnly ? "Ваша модель" : "Ваша комплектація"}</p><h2 className="mt-1 font-display text-3xl text-ink">Оберіть {configurationNoun}</h2></div>
           <div className="flex items-start gap-2"><div className="w-12 shrink-0 rounded-xl border border-stone-200 bg-white p-1.5 sm:w-14"><img src={draftMatchingVariant?.image || previewImage} alt={`Обраний вигляд: ${productName}`} className="aspect-[3/4] w-full object-contain" /></div><button type="button" onClick={() => setIsOpen(false)} aria-label="Закрити панель" className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-stone-200 bg-white text-ink transition hover:border-clay hover:text-clay"><X size={19} /></button></div>
         </div>
-        <p className="mt-3 text-sm leading-6 text-stone-600">Доступні лише параметри для цієї моделі. Фото оновлюється, коли для варіанту є точне зображення.</p>
+        <p className="mt-3 text-sm leading-6 text-stone-600">{isGlassOnly ? "Доступні лише варіанти скла для цієї моделі. Фото оновлюється після вибору." : "Доступні лише параметри для цієї моделі. Фото оновлюється, коли для варіанту є точне зображення."}</p>
 
         <div className="mt-7 space-y-7">
           {groups.map((group) => {
