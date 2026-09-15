@@ -8,7 +8,8 @@ import type { Product, ProductMedia, ProductVariant } from "@/lib/catalog";
 
 export function ProductMediaGallery({ product }: { product: Product }) {
   const media = product.media || [];
-  const visualMedia = media.filter((item) => item.kind === "main" || item.kind === "gallery");
+  const isTaggedGlassPhoto = (item: ProductMedia) => item.label?.startsWith("glass:") || false;
+  const visualMedia = media.filter((item) => (item.kind === "main" || item.kind === "gallery") && !isTaggedGlassPhoto(item));
   const gallery: ProductMedia[] = visualMedia.length ? visualMedia : [{ kind: "main", label: product.name, image: product.image, sortOrder: 0 }];
   const visualVariants = useMemo(() => (product.variants || []).filter((variant) => Boolean(variant.image)), [product.variants]);
   const variantGallery: ProductMedia[] = useMemo(() => visualVariants
@@ -25,9 +26,22 @@ export function ProductMediaGallery({ product }: { product: Product }) {
   const [optionImage, setOptionImage] = useState<string | null>(null);
   const [activeVariant, setActiveVariant] = useState<ProductVariant | null>(null);
   const [isConfigurationActive, setIsConfigurationActive] = useState(false);
+  const activeGlassGallery = useMemo(() => {
+    const glass = activeVariant?.selections.glass;
+    if (!isGlassOnlyConfiguration || !glass) return [];
+    const prefix = `glass:${glass}:`;
+    return media
+      .filter((item) => item.kind === "gallery" && item.label?.startsWith(prefix))
+      .map((item) => ({ ...item, label: item.label?.slice(prefix.length) || "Фото" }));
+  }, [activeVariant?.selections.glass, isGlassOnlyConfiguration, media]);
+  const usesActiveGlassGallery = activeGlassGallery.length > 0;
   // Для моделі з єдиним вибором скла не змішуємо ракурси з фото різних вставок.
   // Покупець відразу бачить лише точні виконання «Сатин» / «Чорне скло».
-  const displayedGallery = usesGlassVariantGallery || (isConfigurationActive && variantGallery.length) ? variantGallery : gallery;
+  const displayedGallery = usesActiveGlassGallery
+    ? activeGlassGallery
+    : usesGlassVariantGallery || (isConfigurationActive && variantGallery.length)
+      ? variantGallery
+      : gallery;
   const selected = displayedGallery[selectedIndex] || displayedGallery[0];
   const productImageAlt = `${product.category === "windows" ? "Вікна" : `${product.category === "entrance" ? "Вхідні" : "Міжкімнатні"} двері`} ${product.brand} ${product.name}, колекція ${product.collection}`;
   const selectedImageAlt = optionImage ? `Обраний декор: ${productImageAlt}` : selected.label ? `${productImageAlt} — ${selected.label}` : productImageAlt;
@@ -41,7 +55,7 @@ export function ProductMediaGallery({ product }: { product: Product }) {
     }
     const variantIndex = variantGallery.findIndex((item) => item.image === image);
     setIsConfigurationActive(variantIndex >= 0);
-    setSelectedIndex(variantIndex >= 0 ? variantIndex : 0);
+    setSelectedIndex(0);
   }, [variantGallery]);
   const selectConfigurationPhoto = (index: number) => {
     const variant = visualVariants[index];
@@ -61,15 +75,23 @@ export function ProductMediaGallery({ product }: { product: Product }) {
     setSelectedIndex(index);
     setOptionImage(null);
   };
+  const selectActiveGlassPhoto = (index: number) => {
+    const photo = activeGlassGallery[index];
+    if (!photo) return;
+    setOptionImage(photo.image);
+    setSelectedIndex(index);
+  };
 
   return <div>
     <div className="aspect-[4/5] overflow-hidden rounded-[2rem] bg-[#f7f5f1] p-5 sm:p-8">
       <ImageLightbox src={optionImage || selected.image} alt={selectedImageAlt} className="h-full w-full" imageClassName="h-full w-full object-contain" />
     </div>
     {displayedGallery.length > 1 && <div className="mt-3 flex gap-2 overflow-x-auto pb-1">
-      {displayedGallery.map((item, index) => (usesGlassVariantGallery || isConfigurationActive)
-        ? <button type="button" key={`${item.image}-${index}`} aria-label={`Обрати фото варіанту: ${item.label || index + 1}`} onClick={() => selectConfigurationPhoto(index)} className={`h-16 w-12 shrink-0 overflow-hidden rounded-lg border-2 bg-[#f7f5f1] transition ${selectedIndex === index ? "border-clay" : "border-transparent hover:border-stone-300"}`}><img src={item.image} alt="" className="h-full w-full object-contain" /></button>
-        : <button type="button" key={`${item.image}-${index}`} aria-label={`Обрати фото: ${item.label || index + 1}`} onClick={() => selectGalleryPhoto(item, index)} className={`h-16 w-12 shrink-0 overflow-hidden rounded-lg border-2 bg-[#f7f5f1] transition ${selectedIndex === index ? "border-clay" : "border-transparent hover:border-stone-300"}`}><img src={item.image} alt="" className="h-full w-full object-contain" /></button>)}
+      {displayedGallery.map((item, index) => usesActiveGlassGallery
+        ? <button type="button" key={`${item.image}-${index}`} aria-label={`Обрати фото: ${item.label || index + 1}`} onClick={() => selectActiveGlassPhoto(index)} className={`h-16 w-12 shrink-0 overflow-hidden rounded-lg border-2 bg-[#f7f5f1] transition ${selectedIndex === index ? "border-clay" : "border-transparent hover:border-stone-300"}`}><img src={item.image} alt="" className="h-full w-full object-contain" /></button>
+        : (usesGlassVariantGallery || isConfigurationActive)
+          ? <button type="button" key={`${item.image}-${index}`} aria-label={`Обрати фото варіанту: ${item.label || index + 1}`} onClick={() => selectConfigurationPhoto(index)} className={`h-16 w-12 shrink-0 overflow-hidden rounded-lg border-2 bg-[#f7f5f1] transition ${selectedIndex === index ? "border-clay" : "border-transparent hover:border-stone-300"}`}><img src={item.image} alt="" className="h-full w-full object-contain" /></button>
+          : <button type="button" key={`${item.image}-${index}`} aria-label={`Обрати фото: ${item.label || index + 1}`} onClick={() => selectGalleryPhoto(item, index)} className={`h-16 w-12 shrink-0 overflow-hidden rounded-lg border-2 bg-[#f7f5f1] transition ${selectedIndex === index ? "border-clay" : "border-transparent hover:border-stone-300"}`}><img src={item.image} alt="" className="h-full w-full object-contain" /></button>)}
     </div>}
     {palettes.length > 0 && <section className="mt-5 rounded-2xl border border-stone-200 bg-white p-4 shadow-sm">
       <div className="flex items-center gap-2 text-sm font-bold text-ink"><Palette size={17} className="text-clay" /> Кольори та декори</div>
@@ -79,6 +101,6 @@ export function ProductMediaGallery({ product }: { product: Product }) {
       </div>
     </section>}
     <ProductConfiguration options={product.options || []} variants={product.variants || []} onImageChange={handleConfigurationImage} activeVariant={activeVariant} previewImage={optionImage || selected.image} productName={product.name} productSlug={product.slug} />
-    {displayedGallery.length > 1 && <p className="mt-3 flex items-center gap-2 text-xs font-medium text-stone-500"><Images size={15} /> {usesGlassVariantGallery || isConfigurationActive ? "Фото доступних виконань скла." : "Натисніть мініатюру, щоб переглянути варіант."}</p>}
+    {displayedGallery.length > 1 && <p className="mt-3 flex items-center gap-2 text-xs font-medium text-stone-500"><Images size={15} /> {usesActiveGlassGallery ? "Фото обраного виконання скла." : usesGlassVariantGallery || isConfigurationActive ? "Фото доступних виконань скла." : "Натисніть мініатюру, щоб переглянути варіант."}</p>}
   </div>;
 }
