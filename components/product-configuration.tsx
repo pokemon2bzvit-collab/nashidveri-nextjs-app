@@ -23,7 +23,10 @@ export function ProductConfiguration({ options, variants, onImageChange, activeV
     return [...collection.values()];
   }, [options]);
   const isGlassOnly = groups.length === 1 && groups[0]?.[0]?.group === "glass";
-  const usesInstantConfiguration = productBrand === "Papa Carlo";
+  // Для Papa Carlo та Rodos покупець одразу бачить результат вибору,
+  // як на офіційній картці виробника. Інші фабрики лишаємо з кнопкою
+  // «Обрати декор», доки для них немає достатньо точних фото варіантів.
+  const usesInstantConfiguration = productBrand === "Papa Carlo" || productBrand === "Rodos";
   const configurationNoun = isGlassOnly ? "скло" : "декор";
   const [selected, setSelected] = useState<Record<string, number>>({});
   const [draftSelected, setDraftSelected] = useState<Record<string, number>>({});

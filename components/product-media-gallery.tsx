@@ -8,8 +8,8 @@ import type { Product, ProductMedia, ProductVariant } from "@/lib/catalog";
 
 export function ProductMediaGallery({ product }: { product: Product }) {
   const media = product.media || [];
-  const isTaggedGlassPhoto = (item: ProductMedia) => item.label?.startsWith("glass:") || false;
-  const visualMedia = media.filter((item) => (item.kind === "main" || item.kind === "gallery") && !isTaggedGlassPhoto(item));
+  const isTaggedVariantPhoto = (item: ProductMedia) => item.label?.startsWith("glass:") || item.label?.startsWith("config:") || false;
+  const visualMedia = media.filter((item) => (item.kind === "main" || item.kind === "gallery") && !isTaggedVariantPhoto(item));
   const gallery: ProductMedia[] = visualMedia.length ? visualMedia : [{ kind: "main", label: product.name, image: product.image, sortOrder: 0 }];
   const visualVariants = useMemo(() => (product.variants || []).filter((variant) => Boolean(variant.image)), [product.variants]);
   const variantGallery: ProductMedia[] = useMemo(() => visualVariants
@@ -25,7 +25,6 @@ export function ProductMediaGallery({ product }: { product: Product }) {
   const [selectedIndex, setSelectedIndex] = useState(0);
   const [optionImage, setOptionImage] = useState<string | null>(null);
   const [activeVariant, setActiveVariant] = useState<ProductVariant | null>(null);
-  const [isConfigurationActive, setIsConfigurationActive] = useState(false);
   const activeGlassGallery = useMemo(() => {
     const glass = activeVariant?.selections.glass;
     if (!isGlassOnlyConfiguration || !glass) return [];
@@ -34,12 +33,24 @@ export function ProductMediaGallery({ product }: { product: Product }) {
       .filter((item) => item.kind === "gallery" && item.label?.startsWith(prefix))
       .map((item) => ({ ...item, label: item.label?.slice(prefix.length) || "Фото" }));
   }, [activeVariant?.selections.glass, isGlassOnlyConfiguration, media]);
-  const usesActiveGlassGallery = activeGlassGallery.length > 0;
-  // Для моделі з єдиним вибором скла не змішуємо ракурси з фото різних вставок.
-  // Покупець відразу бачить лише точні виконання «Сатин» / «Чорне скло».
-  const displayedGallery = usesActiveGlassGallery
-    ? activeGlassGallery
-    : usesGlassVariantGallery || (isConfigurationActive && variantGallery.length)
+  const activeConfigurationGallery = useMemo(() => {
+    if (!activeVariant || isGlassOnlyConfiguration) return [];
+    const configuration = Object.entries(activeVariant.selections)
+      .sort(([left], [right]) => left.localeCompare(right))
+      .map(([group, value]) => `${group}=${encodeURIComponent(value)}`)
+      .join("&");
+    const prefix = `config:${configuration}:`;
+    return media
+      .filter((item) => item.kind === "gallery" && item.label?.startsWith(prefix))
+      .map((item) => ({ ...item, label: item.label?.slice(prefix.length) || "Фото" }));
+  }, [activeVariant, isGlassOnlyConfiguration, media]);
+  const activeVariantGallery = activeConfigurationGallery.length ? activeConfigurationGallery : activeGlassGallery;
+  const usesActiveVariantGallery = activeVariantGallery.length > 0;
+  // Галерея показує ракурси тільки одного вибраного виконання. Не змішуємо
+  // фото різних кольорів чи видів полотна в один ряд мініатюр.
+  const displayedGallery = usesActiveVariantGallery
+    ? activeVariantGallery
+    : usesGlassVariantGallery
       ? variantGallery
       : gallery;
   const selected = displayedGallery[selectedIndex] || displayedGallery[0];
@@ -49,20 +60,16 @@ export function ProductMediaGallery({ product }: { product: Product }) {
     setOptionImage(image);
     setActiveVariant(variant);
     if (!image) {
-      setIsConfigurationActive(false);
       setSelectedIndex(0);
       return;
     }
-    const variantIndex = variantGallery.findIndex((item) => item.image === image);
-    setIsConfigurationActive(variantIndex >= 0);
     setSelectedIndex(0);
-  }, [variantGallery]);
+  }, []);
   const selectConfigurationPhoto = (index: number) => {
     const variant = visualVariants[index];
     if (!variant) return;
     setOptionImage(variant.image);
     setActiveVariant(variant);
-    setIsConfigurationActive(true);
     setSelectedIndex(index);
   };
   const imageStem = (image: string) => image.split("?")[0].split("/").pop()?.replace(/\.(avif|webp|png|jpe?g)$/i, "") || image;
@@ -75,8 +82,8 @@ export function ProductMediaGallery({ product }: { product: Product }) {
     setSelectedIndex(index);
     setOptionImage(null);
   };
-  const selectActiveGlassPhoto = (index: number) => {
-    const photo = activeGlassGallery[index];
+  const selectActiveVariantPhoto = (index: number) => {
+    const photo = activeVariantGallery[index];
     if (!photo) return;
     setOptionImage(photo.image);
     setSelectedIndex(index);
@@ -87,9 +94,9 @@ export function ProductMediaGallery({ product }: { product: Product }) {
       <ImageLightbox src={optionImage || selected.image} alt={selectedImageAlt} className="h-full w-full" imageClassName="h-full w-full object-contain" />
     </div>
     {displayedGallery.length > 1 && <div className="mt-3 flex gap-2 overflow-x-auto pb-1">
-      {displayedGallery.map((item, index) => usesActiveGlassGallery
-        ? <button type="button" key={`${item.image}-${index}`} aria-label={`Обрати фото: ${item.label || index + 1}`} onClick={() => selectActiveGlassPhoto(index)} className={`h-16 w-12 shrink-0 overflow-hidden rounded-lg border-2 bg-[#f7f5f1] transition ${selectedIndex === index ? "border-clay" : "border-transparent hover:border-stone-300"}`}><img src={item.image} alt="" className="h-full w-full object-contain" /></button>
-        : (usesGlassVariantGallery || isConfigurationActive)
+      {displayedGallery.map((item, index) => usesActiveVariantGallery
+        ? <button type="button" key={`${item.image}-${index}`} aria-label={`Обрати фото: ${item.label || index + 1}`} onClick={() => selectActiveVariantPhoto(index)} className={`h-16 w-12 shrink-0 overflow-hidden rounded-lg border-2 bg-[#f7f5f1] transition ${selectedIndex === index ? "border-clay" : "border-transparent hover:border-stone-300"}`}><img src={item.image} alt="" className="h-full w-full object-contain" /></button>
+        : usesGlassVariantGallery
           ? <button type="button" key={`${item.image}-${index}`} aria-label={`Обрати фото варіанту: ${item.label || index + 1}`} onClick={() => selectConfigurationPhoto(index)} className={`h-16 w-12 shrink-0 overflow-hidden rounded-lg border-2 bg-[#f7f5f1] transition ${selectedIndex === index ? "border-clay" : "border-transparent hover:border-stone-300"}`}><img src={item.image} alt="" className="h-full w-full object-contain" /></button>
           : <button type="button" key={`${item.image}-${index}`} aria-label={`Обрати фото: ${item.label || index + 1}`} onClick={() => selectGalleryPhoto(item, index)} className={`h-16 w-12 shrink-0 overflow-hidden rounded-lg border-2 bg-[#f7f5f1] transition ${selectedIndex === index ? "border-clay" : "border-transparent hover:border-stone-300"}`}><img src={item.image} alt="" className="h-full w-full object-contain" /></button>)}
     </div>}
@@ -101,6 +108,6 @@ export function ProductMediaGallery({ product }: { product: Product }) {
       </div>
     </section>}
     <ProductConfiguration options={product.options || []} variants={product.variants || []} onImageChange={handleConfigurationImage} activeVariant={activeVariant} previewImage={optionImage || selected.image} productName={product.name} productBrand={product.brand} productSlug={product.slug} />
-    {displayedGallery.length > 1 && <p className="mt-3 flex items-center gap-2 text-xs font-medium text-stone-500"><Images size={15} /> {usesActiveGlassGallery ? "Фото обраного виконання скла." : usesGlassVariantGallery || isConfigurationActive ? "Фото доступних виконань скла." : "Натисніть мініатюру, щоб переглянути варіант."}</p>}
+    {displayedGallery.length > 1 && <p className="mt-3 flex items-center gap-2 text-xs font-medium text-stone-500"><Images size={15} /> {usesActiveVariantGallery ? "Фото обраного виконання." : usesGlassVariantGallery ? "Фото доступних виконань скла." : "Натисніть мініатюру, щоб переглянути варіант."}</p>}
   </div>;
 }
