@@ -54,6 +54,8 @@ export function ProductConfiguration({ options, variants, onImageChange, activeV
     () => variants.find((variant) => Object.entries(variant.selections).every(([group, label]) => selectionValues[group] === label)),
     [selectionValues, variants],
   );
+  const activeVariantIsSynced = !activeVariant || Object.entries(activeVariant.selections)
+    .every(([group, label]) => selectionValues[group] === label);
   const draftMatchingVariant = useMemo(
     () => variants.find((variant) => Object.entries(variant.selections).every(([group, label]) => draftSelectionValues[group] === label)),
     [draftSelectionValues, variants],
@@ -74,8 +76,10 @@ export function ProductConfiguration({ options, variants, onImageChange, activeV
   useEffect(() => {
     // Головне фото картки є перевіреним виконанням моделі. Не замінюємо його
     // першим доступним варіантом, доки покупець сам не застосує свій вибір.
+    // Під час кліку по мініатюрі дочекаємося, доки стан конфігуратора наздожене її.
+    if (!activeVariantIsSynced) return;
     onImageChange(hasAppliedSelection ? matchingVariant?.image || null : null, hasAppliedSelection ? matchingVariant || null : null);
-  }, [hasAppliedSelection, matchingVariant?.image, onImageChange]);
+  }, [activeVariantIsSynced, hasAppliedSelection, matchingVariant, onImageChange]);
 
   useEffect(() => {
     if (!isOpen) return;
