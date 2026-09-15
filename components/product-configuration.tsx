@@ -100,6 +100,22 @@ export function ProductConfiguration({ options, variants, onImageChange, activeV
   };
   const reset = () => setDraftSelected({});
   const selectOption = (groupKey: string, index: number) => setDraftSelected((current) => ({ ...current, [groupKey]: index }));
+  const applyGlassSelection = (index: number) => {
+    const group = groups[0];
+    if (!group) return;
+    const nextSelection = { ...selected, [group[0].group]: index };
+    const nextValues = Object.fromEntries(groups.map((item) => [item[0].group, item[selectedIndexFor(item, nextSelection)]?.label || ""]));
+    const nextVariant = variants.find((variant) => Object.entries(variant.selections).every(([key, label]) => nextValues[key] === label)) || null;
+
+    setSelected(nextSelection);
+    setDraftSelected(nextSelection);
+    setHasAppliedSelection(true);
+    onImageChange(nextVariant?.image || null, nextVariant);
+    window.localStorage.setItem(`nashi-dveri-config-${productSlug}`, JSON.stringify({
+      configuration: nextVariant ? [`${group[0].groupLabel}: ${nextValues[group[0].group]}`] : [],
+      image: nextVariant?.image || null,
+    }));
+  };
   const applySelection = () => {
     setSelected(draftSelected);
     setHasAppliedSelection(true);
@@ -123,16 +139,29 @@ export function ProductConfiguration({ options, variants, onImageChange, activeV
       <span className="rounded-full bg-sand px-2.5 py-1 text-[11px] font-bold text-stone-600">{visualVariants.length} з фото</span>
     </div>
 
-    <div className="mt-4 flex gap-2 overflow-hidden">
-      {selectedOptions.slice(0, 4).map((option) => <span key={`${option.group}-${option.label}`} title={option.label} className="flex h-9 min-w-9 items-center justify-center rounded-xl border border-stone-200 bg-[#faf9f7] px-2">
-        {option.image ? <img src={option.image} alt="" className="h-6 w-6 rounded-md object-cover" /> : option.swatch ? <span aria-hidden="true" className="h-5 w-5 rounded-full border border-black/10" style={{ backgroundColor: option.swatch }} /> : <span className="max-w-20 truncate text-[11px] font-bold text-stone-600">{option.label}</span>}
-      </span>)}
-    </div>
-
-    <button type="button" onClick={openConfigurator} className="mt-4 inline-flex min-h-11 w-full items-center justify-between rounded-xl bg-ink px-4 text-sm font-bold text-white transition hover:bg-ink/90">
-      <span className="flex items-center gap-2"><SlidersHorizontal size={17} /> Обрати {configurationNoun}</span><ChevronRight size={17} />
-    </button>
-    <p className="mt-2 text-xs text-stone-500">{hasVisualPreview ? "Для обраного варіанту показано фото." : `Доступні лише ${isGlassOnly ? "варіанти скла" : "декори"} з підтвердженим фото моделі.`}</p>
+    {isGlassOnly ? <>
+      <div className="mt-4 grid grid-cols-2 gap-2">
+        {groups[0].map((option, index) => {
+          const isSelected = selectedIndexFor(groups[0], selected) === index;
+          const variant = visualVariants.find((item) => item.selections.glass === option.label);
+          return <button type="button" key={`${option.group}-${option.label}`} onClick={() => applyGlassSelection(index)} className={`flex min-h-14 items-center gap-2 rounded-xl border p-2 text-left text-xs font-bold transition ${isSelected ? "border-ink bg-ink text-white shadow-sm" : "border-stone-200 bg-[#faf9f7] text-stone-700 hover:border-clay"}`}>
+            {variant?.image && <img src={variant.image} alt="" className="h-10 w-8 shrink-0 rounded-md bg-white object-contain" />}
+            <span className="line-clamp-2">{option.label}</span>
+          </button>;
+        })}
+      </div>
+      <p className="mt-2 text-xs text-stone-500">Натисніть варіант — головне фото й галерея оновляться одразу.</p>
+    </> : <>
+      <div className="mt-4 flex gap-2 overflow-hidden">
+        {selectedOptions.slice(0, 4).map((option) => <span key={`${option.group}-${option.label}`} title={option.label} className="flex h-9 min-w-9 items-center justify-center rounded-xl border border-stone-200 bg-[#faf9f7] px-2">
+          {option.image ? <img src={option.image} alt="" className="h-6 w-6 rounded-md object-cover" /> : option.swatch ? <span aria-hidden="true" className="h-5 w-5 rounded-full border border-black/10" style={{ backgroundColor: option.swatch }} /> : <span className="max-w-20 truncate text-[11px] font-bold text-stone-600">{option.label}</span>}
+        </span>)}
+      </div>
+      <button type="button" onClick={openConfigurator} className="mt-4 inline-flex min-h-11 w-full items-center justify-between rounded-xl bg-ink px-4 text-sm font-bold text-white transition hover:bg-ink/90">
+        <span className="flex items-center gap-2"><SlidersHorizontal size={17} /> Обрати {configurationNoun}</span><ChevronRight size={17} />
+      </button>
+      <p className="mt-2 text-xs text-stone-500">{hasVisualPreview ? "Для обраного варіанту показано фото." : "Доступні лише декори з підтвердженим фото моделі."}</p>
+    </>}
 
     {isOpen && <div role="dialog" aria-modal="true" aria-label={`Вибір: ${configurationNoun}`} className="fixed inset-0 z-[90]">
       <button type="button" aria-label="Закрити панель" onClick={() => setIsOpen(false)} className="decor-backdrop absolute inset-0 bg-ink/35 backdrop-blur-[2px]" />
