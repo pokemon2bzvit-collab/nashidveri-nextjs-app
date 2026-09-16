@@ -149,16 +149,17 @@ export function ProductConfiguration({ options, variants, onImageChange, activeV
         {groups.map((group) => {
           const groupKey = group[0].group;
           const selectedIndex = selectedIndexFor(group, selected);
+          const isRodosColorRow = productBrand === "Rodos" && groupKey === "color";
           return <div key={groupKey}>
             {!isGlassOnly && <p className="mb-2 text-xs font-bold text-stone-700">{group[0].groupLabel}</p>}
-            <div className="grid grid-cols-2 gap-2 sm:grid-cols-3">
+            <div className={isRodosColorRow ? "flex gap-2 overflow-x-auto pb-1" : "grid grid-cols-2 gap-2 sm:grid-cols-3"}>
               {group.map((option, index) => {
                 const isSelected = selectedIndex === index;
                 const isAvailable = visualVariants.some((variant) => Object.entries(variant.selections).every(([key, label]) => key === groupKey ? label === option.label : label === selectionValues[key]));
                 const variant = visualVariants.find((item) => item.selections[groupKey] === option.label && Object.entries(item.selections).every(([key, label]) => key === groupKey || label === selectionValues[key]));
-                return <button type="button" disabled={!isAvailable} key={`${option.group}-${option.label}`} onClick={() => applyDirectSelection(groupKey, index)} className={`flex min-h-12 items-center gap-2 rounded-xl border p-2 text-left text-xs font-bold transition disabled:cursor-not-allowed disabled:opacity-45 ${isSelected ? "border-ink bg-ink text-white shadow-sm" : "border-stone-200 bg-[#faf9f7] text-stone-700 hover:border-clay"}`}>
-                  {variant?.image && <img src={variant.image} alt="" className="h-9 w-7 shrink-0 rounded-md bg-white object-contain" />}
-                  <span className="line-clamp-2">{option.label}</span>
+                return <button type="button" disabled={!isAvailable} key={`${option.group}-${option.label}`} onClick={() => applyDirectSelection(groupKey, index)} className={`flex min-h-12 items-center gap-2 rounded-xl border p-2 text-left text-xs font-bold transition disabled:cursor-not-allowed disabled:opacity-45 ${isRodosColorRow ? "w-20 shrink-0 flex-col justify-start" : ""} ${isSelected ? "border-ink bg-ink text-white shadow-sm" : "border-stone-200 bg-[#faf9f7] text-stone-700 hover:border-clay"}`}>
+                  {variant?.image && <img src={variant.image} alt="" className={`${isRodosColorRow ? "h-14 w-full" : "h-9 w-7"} shrink-0 rounded-md bg-white object-contain`} />}
+                  <span className={`${isRodosColorRow ? "w-full text-center" : ""} line-clamp-2`}>{option.label}</span>
                 </button>;
               })}
             </div>
