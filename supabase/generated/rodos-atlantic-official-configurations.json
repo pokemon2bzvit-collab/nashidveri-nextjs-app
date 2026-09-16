@@ -1,0 +1,1601 @@
+[
+  {
+    "code": "A002",
+    "slug": "rodos-official-1osu0nc",
+    "url": "https://rodos.ua/mezhkomnatnaya-dver-atlantic-a002",
+    "colors": [
+      {
+        "label": "Сосна крем",
+        "swatch": "https://rodos.ua/image/cache/catalog/colors/sosna-krem-100x100.png"
+      },
+      {
+        "label": "Білий мат",
+        "swatch": "https://rodos.ua/image/cache/catalog/colors/belyjmat-100x100.png"
+      },
+      {
+        "label": "Крем",
+        "swatch": "https://rodos.ua/image/cache/catalog/colors/soskrem-100x100.jpg"
+      },
+      {
+        "label": "Дуб сонома",
+        "swatch": "https://rodos.ua/image/cache/catalog/sonoma-1569525258-100x100.jpg"
+      },
+      {
+        "label": "Венге шоколадний",
+        "swatch": "https://rodos.ua/image/cache/catalog/colors/vengeshokoladnyj-100x100.png"
+      },
+      {
+        "label": "Акація темна",
+        "swatch": "https://rodos.ua/image/cache/catalog/%20%20-1568110641-100x100.jpg"
+      },
+      {
+        "label": "Дуб шале графіт",
+        "swatch": "https://rodos.ua/image/cache/catalog/Bianca-1568052349-100x100.jpg"
+      },
+      {
+        "label": "Мрамор сірий",
+        "swatch": "https://rodos.ua/image/cache/catalog/%20%20-1568198709-100x100.jpg"
+      },
+      {
+        "label": "Каштан білий",
+        "swatch": "https://rodos.ua/image/cache/catalog/%20%20%20NEW-1568299678-100x100.jpg"
+      },
+      {
+        "label": "Каштан сірий",
+        "swatch": "https://rodos.ua/image/cache/catalog/%20%20NEW-1568299737-100x100.jpg"
+      },
+      {
+        "label": "Каштан беж",
+        "swatch": "https://rodos.ua/image/cache/catalog/%20%20-1568299161-100x100.jpg"
+      },
+      {
+        "label": "Сосна браш браун",
+        "swatch": "https://rodos.ua/image/cache/catalog/.jpg-1589976466-100x100.jpg"
+      },
+      {
+        "label": "Сосна браш кобальт",
+        "swatch": "https://rodos.ua/image/cache/catalog/.jpg-1589976454-100x100.jpg"
+      },
+      {
+        "label": "Сосна браш мінт",
+        "swatch": "https://rodos.ua/image/cache/catalog/.jpg-1590395711-100x100.jpg"
+      },
+      {
+        "label": "Бежевий",
+        "swatch": "https://rodos.ua/image/cache/catalog/images-1706520621-100x100.jpg"
+      },
+      {
+        "label": "Світло-сірий",
+        "swatch": "https://rodos.ua/image/cache/catalog/images-1706520848-100x100.png"
+      },
+      {
+        "label": "Канадський дуб",
+        "swatch": "https://rodos.ua/image/cache/catalog/A001%20%20-gluhoe--1715603714-100x100.jpg"
+      },
+      {
+        "label": "Кедр софт графіт",
+        "swatch": "https://rodos.ua/image/cache/catalog/%20-1719479615-100x100.jpg"
+      },
+      {
+        "label": "Кедр софт білий",
+        "swatch": "https://rodos.ua/image/cache/catalog/---1719479692-100x100.jpg"
+      }
+    ],
+    "configurations": [
+      "Глухе",
+      "Напівскло",
+      "Зі склом"
+    ],
+    "variants": [
+      {
+        "color": "Сосна крем",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/A002-gluhoe--1590597890-1000x1000.jpg"
+      },
+      {
+        "color": "Сосна крем",
+        "configuration": "Напівскло",
+        "image": "https://rodos.ua/image/cache/catalog/A002-polusteklo-semiglass%20-1590599552-1000x1000.jpg"
+      },
+      {
+        "color": "Сосна крем",
+        "configuration": "Зі склом",
+        "image": "https://rodos.ua/image/cache/catalog/A002-sosteklom-glass%20-1590598788-1000x1000.jpg"
+      },
+      {
+        "color": "Білий мат",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/ATLANTIC%202%20%20%20-gluhoe--1719557133-1000x1000.jpg"
+      },
+      {
+        "color": "Білий мат",
+        "configuration": "Напівскло",
+        "image": "https://rodos.ua/image/cache/catalog/ATLANTIC%202%20%20%20-polusteklo-%20-1719557135-1000x1000.jpg"
+      },
+      {
+        "color": "Білий мат",
+        "configuration": "Зі склом",
+        "image": "https://rodos.ua/image/cache/catalog/ATLANTIC%202%20%20%20%20-sosteklom--1719557138-1000x1000.jpg"
+      },
+      {
+        "color": "Крем",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/A002-gluhoe--1590597393-1000x1000.jpg"
+      },
+      {
+        "color": "Крем",
+        "configuration": "Напівскло",
+        "image": "https://rodos.ua/image/cache/catalog/A002-polusteklo-semiglass%20-1590599465-1000x1000.jpg"
+      },
+      {
+        "color": "Крем",
+        "configuration": "Зі склом",
+        "image": "https://rodos.ua/image/cache/catalog/A002-sosteklom-glass%20-1590598290-1000x1000.jpg"
+      },
+      {
+        "color": "Дуб сонома",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/A002-gluhoe--1590596810-1000x1000.jpg"
+      },
+      {
+        "color": "Дуб сонома",
+        "configuration": "Напівскло",
+        "image": "https://rodos.ua/image/cache/catalog/A002-polusteklo-semiglass%20-1590599411-1000x1000.jpg"
+      },
+      {
+        "color": "Дуб сонома",
+        "configuration": "Зі склом",
+        "image": "https://rodos.ua/image/cache/catalog/A002-sosteklom-glass-1590598206-1000x1000.jpg"
+      },
+      {
+        "color": "Венге шоколадний",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/A002-gluhoe--1590596778-1000x1000.jpg"
+      },
+      {
+        "color": "Венге шоколадний",
+        "configuration": "Напівскло",
+        "image": "https://rodos.ua/image/cache/catalog/A002-polusteklo-semiglass-1590599387-1000x1000.jpg"
+      },
+      {
+        "color": "Венге шоколадний",
+        "configuration": "Зі склом",
+        "image": "https://rodos.ua/image/cache/catalog/A002-sosteklom-glass-1590598195-1000x1000.jpg"
+      },
+      {
+        "color": "Акація темна",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/A002-gluhoe--1590596651-1000x1000.jpg"
+      },
+      {
+        "color": "Акація темна",
+        "configuration": "Напівскло",
+        "image": "https://rodos.ua/image/cache/catalog/A002-polusteklo-semiglass-1590599374-1000x1000.jpg"
+      },
+      {
+        "color": "Акація темна",
+        "configuration": "Зі склом",
+        "image": "https://rodos.ua/image/cache/catalog/A002-sosteklom-glass-1590598174-1000x1000.jpg"
+      },
+      {
+        "color": "Дуб шале графіт",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/A002-gluhoe--1590597145-1000x1000.jpg"
+      },
+      {
+        "color": "Дуб шале графіт",
+        "configuration": "Напівскло",
+        "image": "https://rodos.ua/image/cache/catalog/A002-polusteklo-semiglass%20-1590599558-1000x1000.jpg"
+      },
+      {
+        "color": "Дуб шале графіт",
+        "configuration": "Зі склом",
+        "image": "https://rodos.ua/image/cache/catalog/A002-sosteklom-glass%20-1590598797-1000x1000.jpg"
+      },
+      {
+        "color": "Мрамор сірий",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/A002-gluhoe--1590597409-1000x1000.jpg"
+      },
+      {
+        "color": "Мрамор сірий",
+        "configuration": "Напівскло",
+        "image": "https://rodos.ua/image/cache/catalog/A002-polusteklo-semiglass%20-1590599476-1000x1000.jpg"
+      },
+      {
+        "color": "Мрамор сірий",
+        "configuration": "Зі склом",
+        "image": "https://rodos.ua/image/cache/catalog/A002-sosteklom-glass%20-1590598307-1000x1000.jpg"
+      },
+      {
+        "color": "Каштан білий",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/A002-gluhoe--1590597307-1000x1000.jpg"
+      },
+      {
+        "color": "Каштан білий",
+        "configuration": "Напівскло",
+        "image": "https://rodos.ua/image/cache/catalog/A002-polusteklo-semiglass%20-1590599440-1000x1000.jpg"
+      },
+      {
+        "color": "Каштан білий",
+        "configuration": "Зі склом",
+        "image": "https://rodos.ua/image/cache/catalog/A002-sosteklom-glass%20-1590598254-1000x1000.jpg"
+      },
+      {
+        "color": "Каштан сірий",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/A002-gluhoe--1590597338-1000x1000.jpg"
+      },
+      {
+        "color": "Каштан сірий",
+        "configuration": "Напівскло",
+        "image": "https://rodos.ua/image/cache/catalog/A002-polusteklo-semiglass%20-1590599454-1000x1000.jpg"
+      },
+      {
+        "color": "Каштан сірий",
+        "configuration": "Зі склом",
+        "image": "https://rodos.ua/image/cache/catalog/A002-sosteklom-glass%20-1590598269-1000x1000.jpg"
+      },
+      {
+        "color": "Каштан беж",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/atlantic%202%20-gluhoe-%20-1644306473-1000x1000.jpg"
+      },
+      {
+        "color": "Каштан беж",
+        "configuration": "Напівскло",
+        "image": "https://rodos.ua/image/cache/catalog/atlantic%202%20-polusteklo-%20-1644306754-1000x1000.jpg"
+      },
+      {
+        "color": "Каштан беж",
+        "configuration": "Зі склом",
+        "image": "https://rodos.ua/image/cache/catalog/atlantic%202%20-sosteklom-%20-1644306728-1000x1000.jpg"
+      },
+      {
+        "color": "Сосна браш браун",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/A002-gluhoe--1590597432-1000x1000.jpg"
+      },
+      {
+        "color": "Сосна браш браун",
+        "configuration": "Напівскло",
+        "image": "https://rodos.ua/image/cache/catalog/A002-polusteklo-semiglass%20-1590599482-1000x1000.jpg"
+      },
+      {
+        "color": "Сосна браш браун",
+        "configuration": "Зі склом",
+        "image": "https://rodos.ua/image/cache/catalog/A002-sosteklom-glass%20-1590598674-1000x1000.jpg"
+      },
+      {
+        "color": "Сосна браш кобальт",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/A002-gluhoe--1590597512-1000x1000.jpg"
+      },
+      {
+        "color": "Сосна браш кобальт",
+        "configuration": "Напівскло",
+        "image": "https://rodos.ua/image/cache/catalog/A002-polusteklo-semiglass%20-1590599506-1000x1000.jpg"
+      },
+      {
+        "color": "Сосна браш кобальт",
+        "configuration": "Зі склом",
+        "image": "https://rodos.ua/image/cache/catalog/A002-sosteklom-glass%20-1590598701-1000x1000.jpg"
+      },
+      {
+        "color": "Сосна браш мінт",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/A002-gluhoe--1590597544-1000x1000.jpg"
+      },
+      {
+        "color": "Сосна браш мінт",
+        "configuration": "Напівскло",
+        "image": "https://rodos.ua/image/cache/catalog/A002-polusteklo-semiglass%20-1590599526-1000x1000.jpg"
+      },
+      {
+        "color": "Сосна браш мінт",
+        "configuration": "Зі склом",
+        "image": "https://rodos.ua/image/cache/catalog/A002-sosteklom-glass%20-1590598769-1000x1000.jpg"
+      },
+      {
+        "color": "Бежевий",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/ATLANTIC%202%20-gluhoe--1719476483-1000x1000.jpg"
+      },
+      {
+        "color": "Бежевий",
+        "configuration": "Напівскло",
+        "image": "https://rodos.ua/image/cache/catalog/ATLANTIC%202%20-polusteklo-%20-1719476488-1000x1000.jpg"
+      },
+      {
+        "color": "Бежевий",
+        "configuration": "Зі склом",
+        "image": "https://rodos.ua/image/cache/catalog/ATLANTIC%202%20-sosteklom-%20-1719476493-1000x1000.jpg"
+      },
+      {
+        "color": "Світло-сірий",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/ATLANTIC%202%20-gluhoe-%20-1719559735-1000x1000.jpg"
+      },
+      {
+        "color": "Світло-сірий",
+        "configuration": "Напівскло",
+        "image": "https://rodos.ua/image/cache/catalog/ATLANTIC%202%20%20-polusteklo-%20-1719559737-1000x1000.jpg"
+      },
+      {
+        "color": "Світло-сірий",
+        "configuration": "Зі склом",
+        "image": "https://rodos.ua/image/cache/catalog/ATLANTIC%202%20%20-sosteklom-%20-1719559740-1000x1000.jpg"
+      },
+      {
+        "color": "Канадський дуб",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/A002%20%20-gluhoe--1715606559-1000x1000.jpg"
+      },
+      {
+        "color": "Канадський дуб",
+        "configuration": "Напівскло",
+        "image": "https://rodos.ua/image/cache/catalog/A002%20%20-polusteklo--1715606583-1000x1000.jpg"
+      },
+      {
+        "color": "Канадський дуб",
+        "configuration": "Зі склом",
+        "image": "https://rodos.ua/image/cache/catalog/A002%20%20-sosteklom--1715606589-1000x1000.jpg"
+      },
+      {
+        "color": "Кедр софт графіт",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/atlantic%202%20%20%20-gluhoe--1719488020-1000x1000.jpg"
+      },
+      {
+        "color": "Кедр софт графіт",
+        "configuration": "Напівскло",
+        "image": "https://rodos.ua/image/cache/catalog/atlantic%202%20%20%20-polusteklo--1719488025-1000x1000.jpg"
+      },
+      {
+        "color": "Кедр софт графіт",
+        "configuration": "Зі склом",
+        "image": "https://rodos.ua/image/cache/catalog/atlantic%202%20%20%20-sosteklom--1719488027-1000x1000.jpg"
+      },
+      {
+        "color": "Кедр софт білий",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/ATLANTIC%202%20%20%20-gluhoe--1719482169-1000x1000.jpg"
+      },
+      {
+        "color": "Кедр софт білий",
+        "configuration": "Напівскло",
+        "image": "https://rodos.ua/image/cache/catalog/ATLANTIC%202%20%20%20%20-polusteklo--1719482172-1000x1000.jpg"
+      },
+      {
+        "color": "Кедр софт білий",
+        "configuration": "Зі склом",
+        "image": "https://rodos.ua/image/cache/catalog/ATLANTIC%202%20%20%20-sosteklom-%20-1719482175-1000x1000.jpg"
+      }
+    ]
+  },
+  {
+    "code": "A003",
+    "slug": "rodos-official-16d044a",
+    "url": "https://rodos.ua/mzhkmnatn-dver-atlantic-a003",
+    "colors": [
+      {
+        "label": "Сосна крем",
+        "swatch": "https://rodos.ua/image/cache/catalog/colors/sosna-krem-100x100.png"
+      },
+      {
+        "label": "Білий мат",
+        "swatch": "https://rodos.ua/image/cache/catalog/colors/belyjmat-100x100.png"
+      },
+      {
+        "label": "Крем",
+        "swatch": "https://rodos.ua/image/cache/catalog/colors/soskrem-100x100.jpg"
+      },
+      {
+        "label": "Дуб сонома",
+        "swatch": "https://rodos.ua/image/cache/catalog/sonoma-1569525258-100x100.jpg"
+      },
+      {
+        "label": "Венге шоколадний",
+        "swatch": "https://rodos.ua/image/cache/catalog/colors/vengeshokoladnyj-100x100.png"
+      },
+      {
+        "label": "Акація темна",
+        "swatch": "https://rodos.ua/image/cache/catalog/%20%20-1568110641-100x100.jpg"
+      },
+      {
+        "label": "Дуб шале графіт",
+        "swatch": "https://rodos.ua/image/cache/catalog/Bianca-1568052349-100x100.jpg"
+      },
+      {
+        "label": "Мрамор сірий",
+        "swatch": "https://rodos.ua/image/cache/catalog/%20%20-1568198709-100x100.jpg"
+      },
+      {
+        "label": "Каштан білий",
+        "swatch": "https://rodos.ua/image/cache/catalog/%20%20%20NEW-1568299678-100x100.jpg"
+      },
+      {
+        "label": "Каштан сірий",
+        "swatch": "https://rodos.ua/image/cache/catalog/%20%20NEW-1568299737-100x100.jpg"
+      },
+      {
+        "label": "Каштан беж",
+        "swatch": "https://rodos.ua/image/cache/catalog/%20%20-1568299161-100x100.jpg"
+      },
+      {
+        "label": "Сосна браш браун",
+        "swatch": "https://rodos.ua/image/cache/catalog/.jpg-1589976466-100x100.jpg"
+      },
+      {
+        "label": "Сосна браш кобальт",
+        "swatch": "https://rodos.ua/image/cache/catalog/.jpg-1589976454-100x100.jpg"
+      },
+      {
+        "label": "Сосна браш мінт",
+        "swatch": "https://rodos.ua/image/cache/catalog/.jpg-1590395711-100x100.jpg"
+      },
+      {
+        "label": "Бежевий",
+        "swatch": "https://rodos.ua/image/cache/catalog/images-1706520621-100x100.jpg"
+      },
+      {
+        "label": "Світло-сірий",
+        "swatch": "https://rodos.ua/image/cache/catalog/images-1706520848-100x100.png"
+      },
+      {
+        "label": "Канадський дуб",
+        "swatch": "https://rodos.ua/image/cache/catalog/A001%20%20-gluhoe--1715603714-100x100.jpg"
+      },
+      {
+        "label": "Кедр софт графіт",
+        "swatch": "https://rodos.ua/image/cache/catalog/%20-1719479615-100x100.jpg"
+      },
+      {
+        "label": "Кедр софт білий",
+        "swatch": "https://rodos.ua/image/cache/catalog/---1719479692-100x100.jpg"
+      }
+    ],
+    "configurations": [
+      "Глухе",
+      "Напівскло"
+    ],
+    "variants": [
+      {
+        "color": "Сосна крем",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/A003%20-1590651478-1000x1000.jpg"
+      },
+      {
+        "color": "Сосна крем",
+        "configuration": "Напівскло",
+        "image": "https://rodos.ua/image/cache/catalog/A003-polusteklo-semiglass%20-1590651920-1000x1000.jpg"
+      },
+      {
+        "color": "Білий мат",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/ATLANTIC%203%20%20%20-gluhoe--1719557741-1000x1000.jpg"
+      },
+      {
+        "color": "Білий мат",
+        "configuration": "Напівскло",
+        "image": "https://rodos.ua/image/cache/catalog/ATLANTIC%203%20%20%20%20-polusteklo--1719557743-1000x1000.jpg"
+      },
+      {
+        "color": "Крем",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/A003%20-1590651376-1000x1000.jpg"
+      },
+      {
+        "color": "Крем",
+        "configuration": "Напівскло",
+        "image": "https://rodos.ua/image/cache/catalog/A003-polusteklo-semiglass%20-1590651855-1000x1000.jpg"
+      },
+      {
+        "color": "Дуб сонома",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/A003%20-1590651264-1000x1000.jpg"
+      },
+      {
+        "color": "Дуб сонома",
+        "configuration": "Напівскло",
+        "image": "https://rodos.ua/image/cache/catalog/A003-polusteklo-semiglass%20-1590651777-1000x1000.jpg"
+      },
+      {
+        "color": "Венге шоколадний",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/A003%20-1590651257-1000x1000.jpg"
+      },
+      {
+        "color": "Венге шоколадний",
+        "configuration": "Напівскло",
+        "image": "https://rodos.ua/image/cache/catalog/A003-polusteklo-semiglassvenge%20-1590651751-1000x1000.jpg"
+      },
+      {
+        "color": "Акація темна",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/A003%20-1590651227-1000x1000.jpg"
+      },
+      {
+        "color": "Акація темна",
+        "configuration": "Напівскло",
+        "image": "https://rodos.ua/image/cache/catalog/A003-polusteklo-semiglass%20-1590651761-1000x1000.jpg"
+      },
+      {
+        "color": "Дуб шале графіт",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/A003%20-1590651486-1000x1000.jpg"
+      },
+      {
+        "color": "Дуб шале графіт",
+        "configuration": "Напівскло",
+        "image": "https://rodos.ua/image/cache/catalog/A003-polusteklo-semiglass%20-1590651936-1000x1000.jpg"
+      },
+      {
+        "color": "Мрамор сірий",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/A003%20-1590651407-1000x1000.jpg"
+      },
+      {
+        "color": "Мрамор сірий",
+        "configuration": "Напівскло",
+        "image": "https://rodos.ua/image/cache/catalog/A003-polusteklo-semiglass%20-1590651865-1000x1000.jpg"
+      },
+      {
+        "color": "Каштан білий",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/A003%20-1590651303-1000x1000.jpg"
+      },
+      {
+        "color": "Каштан білий",
+        "configuration": "Напівскло",
+        "image": "https://rodos.ua/image/cache/catalog/A003-polusteklo-semiglass%20-1590651819-1000x1000.jpg"
+      },
+      {
+        "color": "Каштан сірий",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/A003%20-1590651327-1000x1000.jpg"
+      },
+      {
+        "color": "Каштан сірий",
+        "configuration": "Напівскло",
+        "image": "https://rodos.ua/image/cache/catalog/A003-polusteklo-semiglass%20-1590651843-1000x1000.jpg"
+      },
+      {
+        "color": "Каштан беж",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/A003%20-1590651290-1000x1000.jpg"
+      },
+      {
+        "color": "Каштан беж",
+        "configuration": "Напівскло",
+        "image": "https://rodos.ua/image/cache/catalog/A003-polusteklo-semiglass%20-1590651799-1000x1000.jpg"
+      },
+      {
+        "color": "Сосна браш браун",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/A003%20-1590651420-1000x1000.jpg"
+      },
+      {
+        "color": "Сосна браш браун",
+        "configuration": "Напівскло",
+        "image": "https://rodos.ua/image/cache/catalog/A003-polusteklo-semiglass%20-1590651893-1000x1000.jpg"
+      },
+      {
+        "color": "Сосна браш кобальт",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/A003%20-1590651432-1000x1000.jpg"
+      },
+      {
+        "color": "Сосна браш кобальт",
+        "configuration": "Напівскло",
+        "image": "https://rodos.ua/image/cache/catalog/A003-polusteklo-semiglass%20-1590651906-1000x1000.jpg"
+      },
+      {
+        "color": "Сосна браш мінт",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/A003%20-1590651469-1000x1000.jpg"
+      },
+      {
+        "color": "Сосна браш мінт",
+        "configuration": "Напівскло",
+        "image": "https://rodos.ua/image/cache/catalog/A003-polusteklo-semiglass%20-1590651914-1000x1000.jpg"
+      },
+      {
+        "color": "Бежевий",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/ATLANTIC%203%20-gluhoe--1719477152-1000x1000.jpg"
+      },
+      {
+        "color": "Бежевий",
+        "configuration": "Напівскло",
+        "image": "https://rodos.ua/image/cache/catalog/ATLANTIC%203%20-polusteklo-%20-1719477157-1000x1000.jpg"
+      },
+      {
+        "color": "Світло-сірий",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/ATLANTIC%203%20-gluhoe-%20-1719559686-1000x1000.jpg"
+      },
+      {
+        "color": "Світло-сірий",
+        "configuration": "Напівскло",
+        "image": "https://rodos.ua/image/cache/catalog/ATLANTIC%203%20%20-polusteklo-%20-1719559690-1000x1000.jpg"
+      },
+      {
+        "color": "Канадський дуб",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/A003%20%20-gluhoe--1715666915-1000x1000.jpg"
+      },
+      {
+        "color": "Канадський дуб",
+        "configuration": "Напівскло",
+        "image": "https://rodos.ua/image/cache/catalog/A003%20%20-polusteklo--1715666918-1000x1000.jpg"
+      },
+      {
+        "color": "Кедр софт графіт",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/atlantic%203%20%20%20-gluhoe--1719488941-1000x1000.jpg"
+      },
+      {
+        "color": "Кедр софт графіт",
+        "configuration": "Напівскло",
+        "image": "https://rodos.ua/image/cache/catalog/atlantic%203%20%20%20-polusteklo--1719488943-1000x1000.jpg"
+      },
+      {
+        "color": "Кедр софт білий",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/ATLANTIC%203%20%20%20-gluhoe--1719482995-1000x1000.jpg"
+      },
+      {
+        "color": "Кедр софт білий",
+        "configuration": "Напівскло",
+        "image": "https://rodos.ua/image/cache/catalog/ATLANTIC%203%20%20%20%20-polusteklo--1719482998-1000x1000.jpg"
+      }
+    ]
+  },
+  {
+    "code": "A004",
+    "slug": "rodos-official-bf2ks0",
+    "url": "https://rodos.ua/mezhkomnatnaya-dver-atlantic-a006-1",
+    "colors": [
+      {
+        "label": "Сосна крем",
+        "swatch": "https://rodos.ua/image/cache/catalog/colors/sosna-krem-100x100.png"
+      },
+      {
+        "label": "Білий мат",
+        "swatch": "https://rodos.ua/image/cache/catalog/colors/belyjmat-100x100.png"
+      },
+      {
+        "label": "Крем",
+        "swatch": "https://rodos.ua/image/cache/catalog/colors/soskrem-100x100.jpg"
+      },
+      {
+        "label": "Дуб сонома",
+        "swatch": "https://rodos.ua/image/cache/catalog/sonoma-1569525258-100x100.jpg"
+      },
+      {
+        "label": "Венге шоколадний",
+        "swatch": "https://rodos.ua/image/cache/catalog/colors/vengeshokoladnyj-100x100.png"
+      },
+      {
+        "label": "Акація темна",
+        "swatch": "https://rodos.ua/image/cache/catalog/%20%20-1568110641-100x100.jpg"
+      },
+      {
+        "label": "Дуб шале графіт",
+        "swatch": "https://rodos.ua/image/cache/catalog/Bianca-1568052349-100x100.jpg"
+      },
+      {
+        "label": "Мрамор сірий",
+        "swatch": "https://rodos.ua/image/cache/catalog/%20%20-1568198709-100x100.jpg"
+      },
+      {
+        "label": "Каштан білий",
+        "swatch": "https://rodos.ua/image/cache/catalog/%20%20%20NEW-1568299678-100x100.jpg"
+      },
+      {
+        "label": "Каштан сірий",
+        "swatch": "https://rodos.ua/image/cache/catalog/%20%20NEW-1568299737-100x100.jpg"
+      },
+      {
+        "label": "Каштан беж",
+        "swatch": "https://rodos.ua/image/cache/catalog/%20%20-1568299161-100x100.jpg"
+      },
+      {
+        "label": "Сосна браш браун",
+        "swatch": "https://rodos.ua/image/cache/catalog/.jpg-1589976466-100x100.jpg"
+      },
+      {
+        "label": "Сосна браш кобальт",
+        "swatch": "https://rodos.ua/image/cache/catalog/.jpg-1589976454-100x100.jpg"
+      },
+      {
+        "label": "Сосна браш мінт",
+        "swatch": "https://rodos.ua/image/cache/catalog/.jpg-1590395711-100x100.jpg"
+      },
+      {
+        "label": "Бежевий",
+        "swatch": "https://rodos.ua/image/cache/catalog/images-1706520621-100x100.jpg"
+      },
+      {
+        "label": "Світло-сірий",
+        "swatch": "https://rodos.ua/image/cache/catalog/images-1706520848-100x100.png"
+      },
+      {
+        "label": "Канадський дуб",
+        "swatch": "https://rodos.ua/image/cache/catalog/A001%20%20-gluhoe--1715603714-100x100.jpg"
+      },
+      {
+        "label": "Кедр софт графіт",
+        "swatch": "https://rodos.ua/image/cache/catalog/%20-1719479615-100x100.jpg"
+      },
+      {
+        "label": "Кедр софт серий",
+        "swatch": "https://rodos.ua/image/cache/catalog/%20-1719479620-100x100.jpeg"
+      },
+      {
+        "label": "Кедр софт білий",
+        "swatch": "https://rodos.ua/image/cache/catalog/---1719479692-100x100.jpg"
+      }
+    ],
+    "configurations": [
+      "Глухе",
+      "Напівскло",
+      "Зі склом"
+    ],
+    "variants": [
+      {
+        "color": "Сосна крем",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/A004-gluhoe-100-1590666257-1000x1000.jpg"
+      },
+      {
+        "color": "Сосна крем",
+        "configuration": "Напівскло",
+        "image": "https://rodos.ua/image/cache/catalog/A004-polusteklo-1000-1590666262-1000x1000.jpg"
+      },
+      {
+        "color": "Сосна крем",
+        "configuration": "Зі склом",
+        "image": "https://rodos.ua/image/cache/catalog/A004-sosteklom-156835-1590666267-1000x1000.jpg"
+      },
+      {
+        "color": "Білий мат",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/ATLANTIC%204%20%20%20-gluhoe--1719557950-1000x1000.jpg"
+      },
+      {
+        "color": "Білий мат",
+        "configuration": "Напівскло",
+        "image": "https://rodos.ua/image/cache/catalog/ATLANTIC%204%20%20%20-polusteklo-%20-1719557952-1000x1000.jpg"
+      },
+      {
+        "color": "Білий мат",
+        "configuration": "Зі склом",
+        "image": "https://rodos.ua/image/cache/catalog/ATLANTIC%204%20%20%20-sosteklom-%20-1719557954-1000x1000.jpg"
+      },
+      {
+        "color": "Крем",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/A004-gluhoe-100-1590666363-1000x1000.jpg"
+      },
+      {
+        "color": "Крем",
+        "configuration": "Напівскло",
+        "image": "https://rodos.ua/image/cache/catalog/A004-polusteklo-1000-1590666368-1000x1000.jpg"
+      },
+      {
+        "color": "Крем",
+        "configuration": "Зі склом",
+        "image": "https://rodos.ua/image/cache/catalog/A004-sosteklom-156835-1590666371-1000x1000.jpg"
+      },
+      {
+        "color": "Дуб сонома",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/A004%20-gluhoe-100-1590666420-1000x1000.jpg"
+      },
+      {
+        "color": "Дуб сонома",
+        "configuration": "Напівскло",
+        "image": "https://rodos.ua/image/cache/catalog/A004-polusteklo-1000-1590666423-1000x1000.jpg"
+      },
+      {
+        "color": "Дуб сонома",
+        "configuration": "Зі склом",
+        "image": "https://rodos.ua/image/cache/catalog/A004-sosteklom-156835-1590666427-1000x1000.jpg"
+      },
+      {
+        "color": "Венге шоколадний",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/A004-gluhoe-100-1590666312-1000x1000.jpg"
+      },
+      {
+        "color": "Венге шоколадний",
+        "configuration": "Напівскло",
+        "image": "https://rodos.ua/image/cache/catalog/A004-polusteklo-1000-1590666316-1000x1000.jpg"
+      },
+      {
+        "color": "Венге шоколадний",
+        "configuration": "Зі склом",
+        "image": "https://rodos.ua/image/cache/catalog/A004-sosteklom-156835-1590666320-1000x1000.jpg"
+      },
+      {
+        "color": "Акація темна",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/A004NEW-gluhoe-100-1590665760-1000x1000.jpg"
+      },
+      {
+        "color": "Акація темна",
+        "configuration": "Напівскло",
+        "image": "https://rodos.ua/image/cache/catalog/A004NEW-polusteklo-1000-1590665794-1000x1000.jpg"
+      },
+      {
+        "color": "Акація темна",
+        "configuration": "Зі склом",
+        "image": "https://rodos.ua/image/cache/catalog/A004NEW-sosteklom-156835-1590665798-1000x1000.jpg"
+      },
+      {
+        "color": "Дуб шале графіт",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/A004NEW-gluhoe-100-1590665847-1000x1000.jpg"
+      },
+      {
+        "color": "Дуб шале графіт",
+        "configuration": "Напівскло",
+        "image": "https://rodos.ua/image/cache/catalog/A004NEW-polusteklo-1000-1590665851-1000x1000.jpg"
+      },
+      {
+        "color": "Дуб шале графіт",
+        "configuration": "Зі склом",
+        "image": "https://rodos.ua/image/cache/catalog/A004NEW-sosteklom-156835-1590665856-1000x1000.jpg"
+      },
+      {
+        "color": "Мрамор сірий",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/A004NEW-gluhoe-100-1590665918-1000x1000.jpg"
+      },
+      {
+        "color": "Мрамор сірий",
+        "configuration": "Напівскло",
+        "image": "https://rodos.ua/image/cache/catalog/A004NEW-polusteklo-1000-1590665923-1000x1000.jpg"
+      },
+      {
+        "color": "Мрамор сірий",
+        "configuration": "Зі склом",
+        "image": "https://rodos.ua/image/cache/catalog/A004NEW-sosteklom-156835-1590665928-1000x1000.jpg"
+      },
+      {
+        "color": "Каштан білий",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/A004NEW-gluhoe-100-1590666030-1000x1000.jpg"
+      },
+      {
+        "color": "Каштан білий",
+        "configuration": "Напівскло",
+        "image": "https://rodos.ua/image/cache/catalog/A004NEW-polusteklo-1000-1590666035-1000x1000.jpg"
+      },
+      {
+        "color": "Каштан білий",
+        "configuration": "Зі склом",
+        "image": "https://rodos.ua/image/cache/catalog/A004NEW-sosteklom-156835-1590666040-1000x1000.jpg"
+      },
+      {
+        "color": "Каштан сірий",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/A004cNEW-gluhoe-100-1590666112-1000x1000.jpg"
+      },
+      {
+        "color": "Каштан сірий",
+        "configuration": "Напівскло",
+        "image": "https://rodos.ua/image/cache/catalog/A004NEW-polusteklo-1000-1590666116-1000x1000.jpg"
+      },
+      {
+        "color": "Каштан сірий",
+        "configuration": "Зі склом",
+        "image": "https://rodos.ua/image/cache/catalog/A004NEW-sosteklom-156835-1590666121-1000x1000.jpg"
+      },
+      {
+        "color": "Каштан беж",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/A004NEW-gluhoe-100-1590666187-1000x1000.jpg"
+      },
+      {
+        "color": "Каштан беж",
+        "configuration": "Напівскло",
+        "image": "https://rodos.ua/image/cache/catalog/A004NEW-polusteklo-1000-1590666192-1000x1000.jpg"
+      },
+      {
+        "color": "Каштан беж",
+        "configuration": "Зі склом",
+        "image": "https://rodos.ua/image/cache/catalog/A004NEW-sosteklom-156835-1590666196-1000x1000.jpg"
+      },
+      {
+        "color": "Сосна браш браун",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/A004-gluhoe-100x100-1589983428-1000x1000.jpg"
+      },
+      {
+        "color": "Сосна браш браун",
+        "configuration": "Напівскло",
+        "image": "https://rodos.ua/image/cache/catalog/A004-polusteklo-1589984018-1000x1000.jpg"
+      },
+      {
+        "color": "Сосна браш браун",
+        "configuration": "Зі склом",
+        "image": "https://rodos.ua/image/cache/catalog/A004-sosteklom-1568359868-100x100-1589983498-1000x1000.jpg"
+      },
+      {
+        "color": "Сосна браш кобальт",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/A004-gluhoe-100x100-1589983478-1000x1000.jpg"
+      },
+      {
+        "color": "Сосна браш кобальт",
+        "configuration": "Напівскло",
+        "image": "https://rodos.ua/image/cache/catalog/A004-polusteklo-1000x1000-1589984066-1000x1000.jpg"
+      },
+      {
+        "color": "Сосна браш кобальт",
+        "configuration": "Зі склом",
+        "image": "https://rodos.ua/image/cache/catalog/A004-sosteklom-1568359868-100x100-1589983511-1000x1000.jpg"
+      },
+      {
+        "color": "Сосна браш мінт",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/A004-gluhoe-100x100-1589983487-1000x1000.jpg"
+      },
+      {
+        "color": "Сосна браш мінт",
+        "configuration": "Напівскло",
+        "image": "https://rodos.ua/image/cache/catalog/A004-polusteklo-1000x1000-1589984039-1000x1000.jpg"
+      },
+      {
+        "color": "Сосна браш мінт",
+        "configuration": "Зі склом",
+        "image": "https://rodos.ua/image/cache/catalog/A004-sosteklom-1568359868-100x100-1589983504-1000x1000.jpg"
+      },
+      {
+        "color": "Бежевий",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/ATLANTIC%204%20-gluhoe--1719477390-1000x1000.jpg"
+      },
+      {
+        "color": "Бежевий",
+        "configuration": "Напівскло",
+        "image": "https://rodos.ua/image/cache/catalog/ATLANTIC%204%20%20-polusteklo--1719477388-1000x1000.jpg"
+      },
+      {
+        "color": "Бежевий",
+        "configuration": "Зі склом",
+        "image": "https://rodos.ua/image/cache/catalog/ATLANTIC%204%20-sosteklom-%20-1719477392-1000x1000.jpg"
+      },
+      {
+        "color": "Світло-сірий",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/ATLANTIC%204%20-gluhoe-%20-1719559884-1000x1000.jpg"
+      },
+      {
+        "color": "Світло-сірий",
+        "configuration": "Напівскло",
+        "image": "https://rodos.ua/image/cache/catalog/ATLANTIC%204%20%20%20-polusteklo--1719559892-1000x1000.jpg"
+      },
+      {
+        "color": "Світло-сірий",
+        "configuration": "Зі склом",
+        "image": "https://rodos.ua/image/cache/catalog/ATLANTIC%204%20%20-sosteklom-%20-1719559889-1000x1000.jpg"
+      },
+      {
+        "color": "Канадський дуб",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/A004%20%20-gluhoe--1715667347-1000x1000.jpg"
+      },
+      {
+        "color": "Канадський дуб",
+        "configuration": "Напівскло",
+        "image": "https://rodos.ua/image/cache/catalog/A004%20%20-polusteklo--1715667350-1000x1000.jpg"
+      },
+      {
+        "color": "Канадський дуб",
+        "configuration": "Зі склом",
+        "image": "https://rodos.ua/image/cache/catalog/A004%20%20-sosteklom--1715667353-1000x1000.jpg"
+      },
+      {
+        "color": "Кедр софт графіт",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/atlantic%204%20%20%20-gluhoe--1719489405-1000x1000.jpg"
+      },
+      {
+        "color": "Кедр софт графіт",
+        "configuration": "Напівскло",
+        "image": "https://rodos.ua/image/cache/catalog/atlantic%204%20%20%20-polusteklo--1719489408-1000x1000.jpg"
+      },
+      {
+        "color": "Кедр софт графіт",
+        "configuration": "Зі склом",
+        "image": "https://rodos.ua/image/cache/catalog/atlantic%204%20%20%20-sosteklom--1719489410-1000x1000.jpg"
+      },
+      {
+        "color": "Кедр софт серий",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/atlantic%204%20%20%20-gluhoe--1719555347-1000x1000.jpg"
+      },
+      {
+        "color": "Кедр софт білий",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/ATLANTIC%204%20%20%20-gluhoe--1719489461-1000x1000.jpg"
+      },
+      {
+        "color": "Кедр софт білий",
+        "configuration": "Напівскло",
+        "image": "https://rodos.ua/image/cache/catalog/ATLANTIC%204%20%20%20%20-polusteklo--1719489463-1000x1000.jpg"
+      },
+      {
+        "color": "Кедр софт білий",
+        "configuration": "Зі склом",
+        "image": "https://rodos.ua/image/cache/catalog/ATLANTIC%204%20%20%20-sosteklom-%20-1719489466-1000x1000.jpg"
+      }
+    ]
+  },
+  {
+    "code": "A005",
+    "slug": "rodos-official-1osu0nj",
+    "url": "https://rodos.ua/mezhkomnatnaya-dver-atlantic-a005",
+    "colors": [
+      {
+        "label": "Сосна крем",
+        "swatch": "https://rodos.ua/image/cache/catalog/colors/sosna-krem-100x100.png"
+      },
+      {
+        "label": "Білий мат",
+        "swatch": "https://rodos.ua/image/cache/catalog/colors/belyjmat-100x100.png"
+      },
+      {
+        "label": "Крем",
+        "swatch": "https://rodos.ua/image/cache/catalog/colors/soskrem-100x100.jpg"
+      },
+      {
+        "label": "Дуб сонома",
+        "swatch": "https://rodos.ua/image/cache/catalog/sonoma-1569525258-100x100.jpg"
+      },
+      {
+        "label": "Венге шоколадний",
+        "swatch": "https://rodos.ua/image/cache/catalog/colors/vengeshokoladnyj-100x100.png"
+      },
+      {
+        "label": "Акація темна",
+        "swatch": "https://rodos.ua/image/cache/catalog/%20%20-1568110641-100x100.jpg"
+      },
+      {
+        "label": "Дуб шале графіт",
+        "swatch": "https://rodos.ua/image/cache/catalog/Bianca-1568052349-100x100.jpg"
+      },
+      {
+        "label": "Мрамор сірий",
+        "swatch": "https://rodos.ua/image/cache/catalog/%20%20-1568198709-100x100.jpg"
+      },
+      {
+        "label": "Каштан білий",
+        "swatch": "https://rodos.ua/image/cache/catalog/%20%20%20NEW-1568299678-100x100.jpg"
+      },
+      {
+        "label": "Каштан сірий",
+        "swatch": "https://rodos.ua/image/cache/catalog/%20%20NEW-1568299737-100x100.jpg"
+      },
+      {
+        "label": "Каштан беж",
+        "swatch": "https://rodos.ua/image/cache/catalog/%20%20-1568299161-100x100.jpg"
+      },
+      {
+        "label": "Сосна браш браун",
+        "swatch": "https://rodos.ua/image/cache/catalog/.jpg-1589976466-100x100.jpg"
+      },
+      {
+        "label": "Сосна браш кобальт",
+        "swatch": "https://rodos.ua/image/cache/catalog/.jpg-1589976454-100x100.jpg"
+      },
+      {
+        "label": "Сосна браш мінт",
+        "swatch": "https://rodos.ua/image/cache/catalog/.jpg-1590395711-100x100.jpg"
+      },
+      {
+        "label": "Бежевий",
+        "swatch": "https://rodos.ua/image/cache/catalog/images-1706520621-100x100.jpg"
+      },
+      {
+        "label": "Світло-сірий",
+        "swatch": "https://rodos.ua/image/cache/catalog/images-1706520848-100x100.png"
+      },
+      {
+        "label": "Канадський дуб",
+        "swatch": "https://rodos.ua/image/cache/catalog/A001%20%20-gluhoe--1715603714-100x100.jpg"
+      },
+      {
+        "label": "Кедр софт графіт",
+        "swatch": "https://rodos.ua/image/cache/catalog/%20-1719479615-100x100.jpg"
+      },
+      {
+        "label": "Кедр софт серий",
+        "swatch": "https://rodos.ua/image/cache/catalog/%20-1719479620-100x100.jpeg"
+      },
+      {
+        "label": "Кедр софт білий",
+        "swatch": "https://rodos.ua/image/cache/catalog/---1719479692-100x100.jpg"
+      }
+    ],
+    "configurations": [
+      "Глухе",
+      "Зі склом"
+    ],
+    "variants": [
+      {
+        "color": "Сосна крем",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/A005-gluhoe-%20-1590762888-1000x1000.jpg"
+      },
+      {
+        "color": "Сосна крем",
+        "configuration": "Зі склом",
+        "image": "https://rodos.ua/image/cache/catalog/A005-sosteklom-%20-1590763883-1000x1000.jpg"
+      },
+      {
+        "color": "Білий мат",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/ATLANTIC%205%20%20%20-gluhoe--1719558126-1000x1000.jpg"
+      },
+      {
+        "color": "Крем",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/A005-gluhoe-%20-1590762807-1000x1000.jpg"
+      },
+      {
+        "color": "Крем",
+        "configuration": "Зі склом",
+        "image": "https://rodos.ua/image/cache/catalog/A005-sosteklom-%20-1590763850-1000x1000.jpg"
+      },
+      {
+        "color": "Дуб сонома",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/A005-gluhoe--1590762758-1000x1000.jpg"
+      },
+      {
+        "color": "Дуб сонома",
+        "configuration": "Зі склом",
+        "image": "https://rodos.ua/image/cache/catalog/A005-sosteklom-%20-1590763814-1000x1000.jpg"
+      },
+      {
+        "color": "Венге шоколадний",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/A005-gluhoe--1590762751-1000x1000.jpg"
+      },
+      {
+        "color": "Венге шоколадний",
+        "configuration": "Зі склом",
+        "image": "https://rodos.ua/image/cache/catalog/A005-sosteklom-%20-1590763809-1000x1000.jpg"
+      },
+      {
+        "color": "Акація темна",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/A005-gluhoe-%20-1590762741-1000x1000.jpg"
+      },
+      {
+        "color": "Акація темна",
+        "configuration": "Зі склом",
+        "image": "https://rodos.ua/image/cache/catalog/A005-sosteklom-%20-1590763798-1000x1000.jpg"
+      },
+      {
+        "color": "Дуб шале графіт",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/A005-gluhoe-%20-1590762905-1000x1000.jpg"
+      },
+      {
+        "color": "Дуб шале графіт",
+        "configuration": "Зі склом",
+        "image": "https://rodos.ua/image/cache/catalog/A005-sosteklom-%20-1590763889-1000x1000.jpg"
+      },
+      {
+        "color": "Мрамор сірий",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/A005-gluhoe-%20-1590762813-1000x1000.jpg"
+      },
+      {
+        "color": "Мрамор сірий",
+        "configuration": "Зі склом",
+        "image": "https://rodos.ua/image/cache/catalog/A005-sosteklom-%20-1590763856-1000x1000.jpg"
+      },
+      {
+        "color": "Каштан білий",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/A005-gluhoe-%20-1590762784-1000x1000.jpg"
+      },
+      {
+        "color": "Каштан білий",
+        "configuration": "Зі склом",
+        "image": "https://rodos.ua/image/cache/catalog/A005-sosteklom-%20-1590763827-1000x1000.jpg"
+      },
+      {
+        "color": "Каштан сірий",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/A005-gluhoe-%20-1590762791-1000x1000.jpg"
+      },
+      {
+        "color": "Каштан сірий",
+        "configuration": "Зі склом",
+        "image": "https://rodos.ua/image/cache/catalog/A005-sosteklom-%20-1590763837-1000x1000.jpg"
+      },
+      {
+        "color": "Каштан беж",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/A005-gluhoe-%20-1590762767-1000x1000.jpg"
+      },
+      {
+        "color": "Каштан беж",
+        "configuration": "Зі склом",
+        "image": "https://rodos.ua/image/cache/catalog/A005-sosteklom-%20-1590763820-1000x1000.jpg"
+      },
+      {
+        "color": "Сосна браш браун",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/A005-gluhoe-%20-1590762844-1000x1000.jpg"
+      },
+      {
+        "color": "Сосна браш браун",
+        "configuration": "Зі склом",
+        "image": "https://rodos.ua/image/cache/catalog/A005-sosteklom-%20-1590763863-1000x1000.jpg"
+      },
+      {
+        "color": "Сосна браш кобальт",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/A005-gluhoe-%20-1590762872-1000x1000.jpg"
+      },
+      {
+        "color": "Сосна браш кобальт",
+        "configuration": "Зі склом",
+        "image": "https://rodos.ua/image/cache/catalog/A005-sosteklom-%20-1590763871-1000x1000.jpg"
+      },
+      {
+        "color": "Сосна браш мінт",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/A005-gluhoe-%20-1590762881-1000x1000.jpg"
+      },
+      {
+        "color": "Сосна браш мінт",
+        "configuration": "Зі склом",
+        "image": "https://rodos.ua/image/cache/catalog/A005-sosteklom-%20-1590763878-1000x1000.jpg"
+      },
+      {
+        "color": "Бежевий",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/ATLANTIC%205%20-gluhoe--1719478594-1000x1000.jpg"
+      },
+      {
+        "color": "Світло-сірий",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/ATLANTIC%205%20-gluhoe-%20-1719560115-1000x1000.jpg"
+      },
+      {
+        "color": "Канадський дуб",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/A005%20%20-gluhoe--1715667782-1000x1000.jpg"
+      },
+      {
+        "color": "Канадський дуб",
+        "configuration": "Зі склом",
+        "image": "https://rodos.ua/image/cache/catalog/A005%20%20-sosteklom--1715667786-1000x1000.jpg"
+      },
+      {
+        "color": "Кедр софт графіт",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/atlantic%205%20%20%20-gluhoe--1719489673-1000x1000.jpg"
+      },
+      {
+        "color": "Кедр софт графіт",
+        "configuration": "Зі склом",
+        "image": "https://rodos.ua/image/cache/catalog/atlantic%205%20%20%20-sosteklom--1719489675-1000x1000.jpg"
+      },
+      {
+        "color": "Кедр софт серий",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/atlantic%205%20%20%20-gluhoe--1719555408-1000x1000.jpg"
+      },
+      {
+        "color": "Кедр софт білий",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/ATLANTIC%205%20%20%20-gluhoe--1719486073-1000x1000.jpg"
+      },
+      {
+        "color": "Кедр софт білий",
+        "configuration": "Зі склом",
+        "image": "https://rodos.ua/image/cache/catalog/ATLANTIC%205%20%20%20%20-sosteklom--1719489820-1000x1000.jpg"
+      }
+    ]
+  },
+  {
+    "code": "A006",
+    "slug": "rodos-official-lnsyln",
+    "url": "https://rodos.ua/mezhkomnatnaya-dver-atlantic-a006%2520",
+    "colors": [
+      {
+        "label": "Сосна крем",
+        "swatch": "https://rodos.ua/image/cache/catalog/colors/sosna-krem-100x100.png"
+      },
+      {
+        "label": "Білий мат",
+        "swatch": "https://rodos.ua/image/cache/catalog/colors/belyjmat-100x100.png"
+      },
+      {
+        "label": "Крем",
+        "swatch": "https://rodos.ua/image/cache/catalog/colors/soskrem-100x100.jpg"
+      },
+      {
+        "label": "Дуб сонома",
+        "swatch": "https://rodos.ua/image/cache/catalog/sonoma-1569525258-100x100.jpg"
+      },
+      {
+        "label": "Венге шоколадний",
+        "swatch": "https://rodos.ua/image/cache/catalog/colors/vengeshokoladnyj-100x100.png"
+      },
+      {
+        "label": "Акація темна",
+        "swatch": "https://rodos.ua/image/cache/catalog/%20%20-1568110641-100x100.jpg"
+      },
+      {
+        "label": "Дуб шале графіт",
+        "swatch": "https://rodos.ua/image/cache/catalog/Bianca-1568052349-100x100.jpg"
+      },
+      {
+        "label": "Мрамор сірий",
+        "swatch": "https://rodos.ua/image/cache/catalog/%20%20-1568198709-100x100.jpg"
+      },
+      {
+        "label": "Каштан білий",
+        "swatch": "https://rodos.ua/image/cache/catalog/%20%20%20NEW-1568299678-100x100.jpg"
+      },
+      {
+        "label": "Каштан сірий",
+        "swatch": "https://rodos.ua/image/cache/catalog/%20%20NEW-1568299737-100x100.jpg"
+      },
+      {
+        "label": "Каштан беж",
+        "swatch": "https://rodos.ua/image/cache/catalog/%20%20-1568299161-100x100.jpg"
+      },
+      {
+        "label": "Сосна браш браун",
+        "swatch": "https://rodos.ua/image/cache/catalog/.jpg-1589976466-100x100.jpg"
+      },
+      {
+        "label": "Сосна браш кобальт",
+        "swatch": "https://rodos.ua/image/cache/catalog/.jpg-1589976454-100x100.jpg"
+      },
+      {
+        "label": "Сосна браш мінт",
+        "swatch": "https://rodos.ua/image/cache/catalog/.jpg-1590395711-100x100.jpg"
+      },
+      {
+        "label": "Бежевий",
+        "swatch": "https://rodos.ua/image/cache/catalog/images-1706520621-100x100.jpg"
+      },
+      {
+        "label": "Світло-сірий",
+        "swatch": "https://rodos.ua/image/cache/catalog/images-1706520848-100x100.png"
+      },
+      {
+        "label": "Канадський дуб",
+        "swatch": "https://rodos.ua/image/cache/catalog/A001%20%20-gluhoe--1715603714-100x100.jpg"
+      },
+      {
+        "label": "Кедр софт графіт",
+        "swatch": "https://rodos.ua/image/cache/catalog/%20-1719479615-100x100.jpg"
+      },
+      {
+        "label": "Кедр софт серий",
+        "swatch": "https://rodos.ua/image/cache/catalog/%20-1719479620-100x100.jpeg"
+      },
+      {
+        "label": "Кедр софт білий",
+        "swatch": "https://rodos.ua/image/cache/catalog/---1719479692-100x100.jpg"
+      }
+    ],
+    "configurations": [
+      "Глухе",
+      "Зі склом"
+    ],
+    "variants": [
+      {
+        "color": "Сосна крем",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/A006-gluhoe-100x100-1589982481-1000x1000.jpg"
+      },
+      {
+        "color": "Сосна крем",
+        "configuration": "Зі склом",
+        "image": "https://rodos.ua/image/cache/catalog/A006-sosteklom-1568359868-100x100-1589982467-1000x1000.jpg"
+      },
+      {
+        "color": "Білий мат",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/A006-gluhoe-100x100-1589982481-1000x1000.jpg"
+      },
+      {
+        "color": "Білий мат",
+        "configuration": "Зі склом",
+        "image": "https://rodos.ua/image/cache/catalog/A006-sosteklom-1568359868-100x100-1589982467-1000x1000.jpg"
+      },
+      {
+        "color": "Крем",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/A006-gluhoe-100x100-1589982481-1000x1000.jpg"
+      },
+      {
+        "color": "Крем",
+        "configuration": "Зі склом",
+        "image": "https://rodos.ua/image/cache/catalog/A006-sosteklom-1568359868-100x100-1589982467-1000x1000.jpg"
+      },
+      {
+        "color": "Дуб сонома",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/A006-gluhoe-100x100-1589982481-1000x1000.jpg"
+      },
+      {
+        "color": "Дуб сонома",
+        "configuration": "Зі склом",
+        "image": "https://rodos.ua/image/cache/catalog/A006-sosteklom-1568359868-100x100-1589982467-1000x1000.jpg"
+      },
+      {
+        "color": "Венге шоколадний",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/A006-gluhoe-100x100-1589982481-1000x1000.jpg"
+      },
+      {
+        "color": "Венге шоколадний",
+        "configuration": "Зі склом",
+        "image": "https://rodos.ua/image/cache/catalog/A006-sosteklom-1568359868-100x100-1589982467-1000x1000.jpg"
+      },
+      {
+        "color": "Акація темна",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/A006-gluhoe-100x100-1589982481-1000x1000.jpg"
+      },
+      {
+        "color": "Акація темна",
+        "configuration": "Зі склом",
+        "image": "https://rodos.ua/image/cache/catalog/A006-sosteklom-1568359868-100x100-1589982467-1000x1000.jpg"
+      },
+      {
+        "color": "Дуб шале графіт",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/A006-gluhoe-100x100-1589982481-1000x1000.jpg"
+      },
+      {
+        "color": "Дуб шале графіт",
+        "configuration": "Зі склом",
+        "image": "https://rodos.ua/image/cache/catalog/A006-sosteklom-1568359868-100x100-1589982467-1000x1000.jpg"
+      },
+      {
+        "color": "Мрамор сірий",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/A006-gluhoe-100x100-1589982481-1000x1000.jpg"
+      },
+      {
+        "color": "Мрамор сірий",
+        "configuration": "Зі склом",
+        "image": "https://rodos.ua/image/cache/catalog/A006-sosteklom-1568359868-100x100-1589982467-1000x1000.jpg"
+      },
+      {
+        "color": "Каштан білий",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/A006-gluhoe-100x100-1589982481-1000x1000.jpg"
+      },
+      {
+        "color": "Каштан білий",
+        "configuration": "Зі склом",
+        "image": "https://rodos.ua/image/cache/catalog/A006-sosteklom-1568359868-100x100-1589982467-1000x1000.jpg"
+      },
+      {
+        "color": "Каштан сірий",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/A006-gluhoe-100x100-1589982481-1000x1000.jpg"
+      },
+      {
+        "color": "Каштан сірий",
+        "configuration": "Зі склом",
+        "image": "https://rodos.ua/image/cache/catalog/A006-sosteklom-1568359868-100x100-1589982467-1000x1000.jpg"
+      },
+      {
+        "color": "Каштан беж",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/A006-gluhoe-100x100-1589982481-1000x1000.jpg"
+      },
+      {
+        "color": "Каштан беж",
+        "configuration": "Зі склом",
+        "image": "https://rodos.ua/image/cache/catalog/A006-sosteklom-1568359868-100x100-1589982467-1000x1000.jpg"
+      },
+      {
+        "color": "Сосна браш браун",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/A006-gluhoe-100x100-1589982481-1000x1000.jpg"
+      },
+      {
+        "color": "Сосна браш браун",
+        "configuration": "Зі склом",
+        "image": "https://rodos.ua/image/cache/catalog/A006-sosteklom-1568359868-100x100-1589982467-1000x1000.jpg"
+      },
+      {
+        "color": "Сосна браш кобальт",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/A006-gluhoe-100x100-1589982481-1000x1000.jpg"
+      },
+      {
+        "color": "Сосна браш кобальт",
+        "configuration": "Зі склом",
+        "image": "https://rodos.ua/image/cache/catalog/A006-sosteklom-1568359868-100x100-1589982467-1000x1000.jpg"
+      },
+      {
+        "color": "Сосна браш мінт",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/A006-gluhoe-100x100-1589982481-1000x1000.jpg"
+      },
+      {
+        "color": "Сосна браш мінт",
+        "configuration": "Зі склом",
+        "image": "https://rodos.ua/image/cache/catalog/A006-sosteklom-1568359868-100x100-1589982467-1000x1000.jpg"
+      },
+      {
+        "color": "Бежевий",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/ATLANTIC%206%20-gluhoe--1719479276-1000x1000.jpg"
+      },
+      {
+        "color": "Бежевий",
+        "configuration": "Зі склом",
+        "image": "https://rodos.ua/image/cache/catalog/ATLANTIC%206%20-sosteklom-%20-1719479279-1000x1000.jpg"
+      },
+      {
+        "color": "Світло-сірий",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/ATLANTIC%206%20%20-gluhoe--1719560306-1000x1000.jpg"
+      },
+      {
+        "color": "Світло-сірий",
+        "configuration": "Зі склом",
+        "image": "https://rodos.ua/image/cache/catalog/ATLANTIC%206%20%20-sosteklom-%20-1719560308-1000x1000.jpg"
+      },
+      {
+        "color": "Канадський дуб",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/A006%20%20-gluhoe--1715668191-1000x1000.jpg"
+      },
+      {
+        "color": "Канадський дуб",
+        "configuration": "Зі склом",
+        "image": "https://rodos.ua/image/cache/catalog/A006%20%20-sosteklom--1715668252-1000x1000.jpg"
+      },
+      {
+        "color": "Кедр софт графіт",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/atlantic%206%20%20%20-gluhoe--1719490385-1000x1000.jpg"
+      },
+      {
+        "color": "Кедр софт графіт",
+        "configuration": "Зі склом",
+        "image": "https://rodos.ua/image/cache/catalog/atlantic%206%20%20%20-sosteklom--1719490388-1000x1000.jpg"
+      },
+      {
+        "color": "Кедр софт серий",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/atlantic%206%20%20%20-gluhoe--1719555549-1000x1000.jpg"
+      },
+      {
+        "color": "Кедр софт білий",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/ATLANTIC%206%20%20%20-gluhoe--1719486270-1000x1000.jpg"
+      },
+      {
+        "color": "Кедр софт білий",
+        "configuration": "Зі склом",
+        "image": "https://rodos.ua/image/cache/catalog/ATLANTIC%206%20%20%20-sosteklom-%20-1719486272-1000x1000.jpg"
+      }
+    ]
+  }
+]

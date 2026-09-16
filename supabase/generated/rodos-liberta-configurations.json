@@ -1,0 +1,419 @@
+[
+  {
+    "code": "L1",
+    "slug": "rodos-official-1k9tn50",
+    "url": "https://rodos.ua/mezhkomnatnaya-dver-liberta-domino-1",
+    "colors": [
+      {
+        "label": "Орех",
+        "swatch": "https://rodos.ua/image/cache/catalog/%20-1569923815-100x100.jpg"
+      },
+      {
+        "label": "Дуб Белый",
+        "swatch": "https://rodos.ua/image/cache/catalog/%20%20-1569923692-100x100.jpg"
+      },
+      {
+        "label": "Шпон Дуба LTL 6018",
+        "swatch": "https://rodos.ua/image/cache/catalog/%20%20%20LTL%206018-1569924531-100x100.jpg"
+      },
+      {
+        "label": "Шпон Дуба LTL 6515",
+        "swatch": "https://rodos.ua/image/cache/catalog/%20%20%20LTL6515-1569925017-100x100.jpg"
+      },
+      {
+        "label": "Шпон Дуба LTL 6908",
+        "swatch": "https://rodos.ua/image/cache/catalog/.jpg-1607071367-100x100.jpg"
+      }
+    ],
+    "configurations": [
+      "Глухе"
+    ],
+    "variants": [
+      {
+        "color": "Орех",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/Domino1Nut-gluhoe-oreh--1569925683-1000x1000.jpg"
+      },
+      {
+        "color": "Дуб Белый",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/Domino1whiteoak-gluhoe-dubbeliy--1569925851-1000x1000.jpg"
+      },
+      {
+        "color": "Шпон Дуба LTL 6018",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/Domino1LTL%206018-shponduba-LTL6018--1569926467-1000x1000.jpg"
+      },
+      {
+        "color": "Шпон Дуба LTL 6515",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/Domino1LTL6515-shponduba-LTL6515-1569926551-1000x1000.jpg"
+      },
+      {
+        "color": "Шпон Дуба LTL 6908",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/domino16908-1607075795-1000x1000.jpg"
+      }
+    ]
+  },
+  {
+    "code": "L2",
+    "slug": "rodos-official-1k9tn53",
+    "url": "https://rodos.ua/mezhkomnatnaya-dver-liberta-domino-2",
+    "colors": [
+      {
+        "label": "Орех",
+        "swatch": "https://rodos.ua/image/cache/catalog/%20-1569923815-100x100.jpg"
+      },
+      {
+        "label": "Дуб Белый",
+        "swatch": "https://rodos.ua/image/cache/catalog/%20%20-1569923692-100x100.jpg"
+      },
+      {
+        "label": "Шпон Дуба LTL 6018",
+        "swatch": "https://rodos.ua/image/cache/catalog/%20%20%20LTL%206018-1569924531-100x100.jpg"
+      },
+      {
+        "label": "Шпон Дуба LTL 6515",
+        "swatch": "https://rodos.ua/image/cache/catalog/%20%20%20LTL6515-1569925017-100x100.jpg"
+      },
+      {
+        "label": "Шпон Дуба LTL 6908",
+        "swatch": "https://rodos.ua/image/cache/catalog/.jpg-1607071367-100x100.jpg"
+      }
+    ],
+    "configurations": [
+      "Глухе"
+    ],
+    "variants": [
+      {
+        "color": "Орех",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/Domino2Nut-gluhoe-oreh--1569927939-1000x1000.jpg"
+      },
+      {
+        "color": "Дуб Белый",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/Domino2Nut-gluhoe-oreh--1569927939-1000x1000.jpg"
+      },
+      {
+        "color": "Шпон Дуба LTL 6018",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/Domino2Nut-gluhoe-oreh--1569927939-1000x1000.jpg"
+      },
+      {
+        "color": "Шпон Дуба LTL 6515",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/Domino2Nut-gluhoe-oreh--1569927939-1000x1000.jpg"
+      },
+      {
+        "color": "Шпон Дуба LTL 6908",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/domino26908-1607075842-1000x1000.jpg"
+      }
+    ]
+  },
+  {
+    "code": "L3",
+    "slug": "rodos-official-1k9tn52",
+    "url": "https://rodos.ua/mezhkomnatnaya-dver-liberta-domino-3",
+    "colors": [
+      {
+        "label": "Орех",
+        "swatch": "https://rodos.ua/image/cache/catalog/%20-1569923815-100x100.jpg"
+      },
+      {
+        "label": "Дуб Белый",
+        "swatch": "https://rodos.ua/image/cache/catalog/%20%20-1569923692-100x100.jpg"
+      },
+      {
+        "label": "Шпон Дуба LTL 6018",
+        "swatch": "https://rodos.ua/image/cache/catalog/%20%20%20LTL%206018-1569924531-100x100.jpg"
+      },
+      {
+        "label": "Шпон Дуба LTL 6515",
+        "swatch": "https://rodos.ua/image/cache/catalog/%20%20%20LTL6515-1569925017-100x100.jpg"
+      },
+      {
+        "label": "Шпон Дуба LTL 6908",
+        "swatch": "https://rodos.ua/image/cache/catalog/.jpg-1607071367-100x100.jpg"
+      }
+    ],
+    "configurations": [
+      "Глухе"
+    ],
+    "variants": [
+      {
+        "color": "Орех",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/Domino3Nut-gluhoe-oreh-1569929311-1000x1000.jpg"
+      },
+      {
+        "color": "Дуб Белый",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/Domino3whiteoak-gluhoe-dubbeliy-1569929359-1000x1000.jpg"
+      },
+      {
+        "color": "Шпон Дуба LTL 6018",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/Domino3LTL%206018-shponduba-LTL6018-1569929385-1000x1000.jpg"
+      },
+      {
+        "color": "Шпон Дуба LTL 6515",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/Domino3LTL6515-shponduba-LTL6515-1569929409-1000x1000.jpg"
+      },
+      {
+        "color": "Шпон Дуба LTL 6908",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/domino36908-1607075865-1000x1000.jpg"
+      }
+    ]
+  },
+  {
+    "code": "L4",
+    "slug": "rodos-official-1k9tn4x",
+    "url": "https://rodos.ua/mezhkomnatnaya-dver-liberta-domino-4",
+    "colors": [
+      {
+        "label": "Орех",
+        "swatch": "https://rodos.ua/image/cache/catalog/%20-1569923815-100x100.jpg"
+      },
+      {
+        "label": "Дуб Белый",
+        "swatch": "https://rodos.ua/image/cache/catalog/%20%20-1569923692-100x100.jpg"
+      },
+      {
+        "label": "Шпон Дуба LTL 6018",
+        "swatch": "https://rodos.ua/image/cache/catalog/%20%20%20LTL%206018-1569924531-100x100.jpg"
+      },
+      {
+        "label": "Шпон Дуба LTL 6515",
+        "swatch": "https://rodos.ua/image/cache/catalog/%20%20%20LTL6515-1569925017-100x100.jpg"
+      },
+      {
+        "label": "Шпон Дуба LTL 6908",
+        "swatch": "https://rodos.ua/image/cache/catalog/.jpg-1607071367-100x100.jpg"
+      }
+    ],
+    "configurations": [
+      "Глухе"
+    ],
+    "variants": [
+      {
+        "color": "Орех",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/Domino4Nut-gluhoe-oreh-1569929960-1000x1000.jpg"
+      },
+      {
+        "color": "Дуб Белый",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/Domino4whiteoak-gluhoe-dubbeliy-1569929986-1000x1000.jpg"
+      },
+      {
+        "color": "Шпон Дуба LTL 6018",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/Domino4LTL%206018-shponduba-LTL6018-1569930031-1000x1000.jpg"
+      },
+      {
+        "color": "Шпон Дуба LTL 6515",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/Domino4LTL6515-shponduba-LTL6515-1569930059-1000x1000.jpg"
+      },
+      {
+        "color": "Шпон Дуба LTL 6908",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/domino46908-1607075887-1000x1000.jpg"
+      }
+    ]
+  },
+  {
+    "code": "L5",
+    "slug": "rodos-official-1k9tn4w",
+    "url": "https://rodos.ua/mezhkomnatnaya-dver-liberta-domino-5",
+    "colors": [
+      {
+        "label": "Орех",
+        "swatch": "https://rodos.ua/image/cache/catalog/%20-1569923815-100x100.jpg"
+      },
+      {
+        "label": "Дуб Белый",
+        "swatch": "https://rodos.ua/image/cache/catalog/%20%20-1569923692-100x100.jpg"
+      },
+      {
+        "label": "Шпон Дуба LTL 6018",
+        "swatch": "https://rodos.ua/image/cache/catalog/%20%20%20LTL%206018-1569924531-100x100.jpg"
+      },
+      {
+        "label": "Шпон Дуба LTL 6515",
+        "swatch": "https://rodos.ua/image/cache/catalog/%20%20%20LTL6515-1569925017-100x100.jpg"
+      },
+      {
+        "label": "Шпон Дуба LTL 6908",
+        "swatch": "https://rodos.ua/image/cache/catalog/.jpg-1607071367-100x100.jpg"
+      }
+    ],
+    "configurations": [
+      "Глухе"
+    ],
+    "variants": [
+      {
+        "color": "Орех",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/Domino5Nut-gluhoe-oreh-1569930584-1000x1000.jpg"
+      },
+      {
+        "color": "Дуб Белый",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/Domino5whiteoak-gluhoe-dubbeliy--1569930622-1000x1000.jpg"
+      },
+      {
+        "color": "Шпон Дуба LTL 6018",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/Domino5LTL%206018-shponduba-LTL6018--1569930645-1000x1000.jpg"
+      },
+      {
+        "color": "Шпон Дуба LTL 6515",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/Domino5LTL6515-shponduba-LTL6515-1569930672-1000x1000.jpg"
+      },
+      {
+        "color": "Шпон Дуба LTL 6908",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/domino56908-1607075906-1000x1000.jpg"
+      }
+    ]
+  },
+  {
+    "code": "L6",
+    "slug": "rodos-official-1kwd7ts",
+    "url": "https://rodos.ua/mezhkomnatnaya-dver-liberta-kross",
+    "colors": [
+      {
+        "label": "Орех",
+        "swatch": "https://rodos.ua/image/cache/catalog/%20-1569923815-100x100.jpg"
+      },
+      {
+        "label": "Дуб Белый",
+        "swatch": "https://rodos.ua/image/cache/catalog/%20%20-1569923692-100x100.jpg"
+      },
+      {
+        "label": "Шпон Дуба LTL 6515",
+        "swatch": "https://rodos.ua/image/cache/catalog/%20%20%20LTL6515-1569925017-100x100.jpg"
+      },
+      {
+        "label": "Цвет в RAL / NCS",
+        "swatch": "https://rodos.ua/image/cache/catalog/foto/1-100x100.jpg"
+      },
+      {
+        "label": "Шпон дуба LTL 6403",
+        "swatch": "https://rodos.ua/image/cache/catalog/1-1581665959-100x100.jpg"
+      },
+      {
+        "label": "Шпон Дуба LTL 6908",
+        "swatch": "https://rodos.ua/image/cache/catalog/.jpg-1607071367-100x100.jpg"
+      },
+      {
+        "label": "Шпон Дуба LTL 6112",
+        "swatch": "https://rodos.ua/image/cache/catalog/6112-1624357043-100x100.jpg"
+      },
+      {
+        "label": "Шпон Дуба LTL 6907",
+        "swatch": "https://rodos.ua/image/cache/catalog/images-1679336364-100x100.jpg"
+      }
+    ],
+    "configurations": [
+      "Глухе"
+    ],
+    "variants": [
+      {
+        "color": "Орех",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/cross%20oreh-1728638788-1000x1000.jpg"
+      },
+      {
+        "color": "Дуб Белый",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/Kross-gluhoe-%20-1605093062-1000x1000.jpg"
+      },
+      {
+        "color": "Шпон Дуба LTL 6515",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/cross%206515-1728638764-1000x1000.jpg"
+      },
+      {
+        "color": "Цвет в RAL / NCS",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/cortesral-gluhoe-1000x1000-1569564660-1000x1000.jpg"
+      },
+      {
+        "color": "Шпон дуба LTL 6403",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/cross%206403-1728638754-1000x1000.jpg"
+      },
+      {
+        "color": "Шпон Дуба LTL 6908",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/kross6908-1607075942-1000x1000.jpg"
+      },
+      {
+        "color": "Шпон Дуба LTL 6112",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/cross%206112-1728638740-1000x1000.jpg"
+      },
+      {
+        "color": "Шпон Дуба LTL 6907",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/cross%206721-1728638780-1000x1000.jpg"
+      }
+    ]
+  },
+  {
+    "code": "L7",
+    "slug": "rodos-official-o5lwt8",
+    "url": "https://rodos.ua/mezhkomnatnaya-dver-liberta-kross-1",
+    "colors": [
+      {
+        "label": "Палисандр",
+        "swatch": "https://rodos.ua/image/cache/catalog/%20111-1557316749-100x100.png"
+      },
+      {
+        "label": "Дуб Белый",
+        "swatch": "https://rodos.ua/image/cache/catalog/%20%20-1569923692-100x100.jpg"
+      },
+      {
+        "label": "Цвет в RAL / NCS",
+        "swatch": "https://rodos.ua/image/cache/catalog/foto/1-100x100.jpg"
+      },
+      {
+        "label": "Шпон Дуба LTL 6908",
+        "swatch": "https://rodos.ua/image/cache/catalog/.jpg-1607071367-100x100.jpg"
+      }
+    ],
+    "configurations": [
+      "Глухе"
+    ],
+    "variants": [
+      {
+        "color": "Палисандр",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/libertasenatorpalisandr-gluhoe-1566747976-1000x1000.png"
+      },
+      {
+        "color": "Дуб Белый",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/senator-gluhoe-%20-1605093177-1000x1000.jpg"
+      },
+      {
+        "color": "Цвет в RAL / NCS",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/cortesral-gluhoe-1000x1000-1569577444-1000x1000.jpg"
+      },
+      {
+        "color": "Шпон Дуба LTL 6908",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/senator6908-1607076273-1000x1000.jpg"
+      }
+    ]
+  }
+]

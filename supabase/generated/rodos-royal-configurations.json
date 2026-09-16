@@ -1,0 +1,131 @@
+[
+  {
+    "code": "Avalon",
+    "slug": "rodos-official-1mt8i9p",
+    "url": "https://rodos.ua/mezhkomnatnaya-dver-royal-avalon-1",
+    "colors": [
+      {
+        "label": "Палисандр",
+        "swatch": "https://rodos.ua/image/cache/catalog/%20111-1557316749-100x100.png"
+      },
+      {
+        "label": "Орех",
+        "swatch": "https://rodos.ua/image/cache/catalog/%20-1569923815-100x100.jpg"
+      },
+      {
+        "label": "Дуб Белый",
+        "swatch": "https://rodos.ua/image/cache/catalog/%20%20-1569923692-100x100.jpg"
+      },
+      {
+        "label": "Цвет в RAL / NCS",
+        "swatch": "https://rodos.ua/image/cache/catalog/foto/1-100x100.jpg"
+      },
+      {
+        "label": "Шпон дуба LTL 6403",
+        "swatch": "https://rodos.ua/image/cache/catalog/1-1581665959-100x100.jpg"
+      },
+      {
+        "label": "Шпон дуба LTL 6515",
+        "swatch": "https://rodos.ua/image/cache/catalog/22-1581665769-100x100.jpg"
+      },
+      {
+        "label": "Шпон Дуба LTL 6908",
+        "swatch": "https://rodos.ua/image/cache/catalog/.jpg-1607071367-100x100.jpg"
+      },
+      {
+        "label": "Шпон Дуба LTL 6112",
+        "swatch": "https://rodos.ua/image/cache/catalog/6112-1624357043-100x100.jpg"
+      },
+      {
+        "label": "Шпон Дуба LTL 6907",
+        "swatch": "https://rodos.ua/image/cache/catalog/images-1679336364-100x100.jpg"
+      }
+    ],
+    "configurations": [
+      "Глухе",
+      "Напівскло"
+    ],
+    "variants": [
+      {
+        "color": "Палисандр",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/royal-avalon-palisandr-gluhoe-1679335956-1000x1000.jpg"
+      },
+      {
+        "color": "Палисандр",
+        "configuration": "Напівскло",
+        "image": "https://rodos.ua/image/cache/catalog/royal%20avalon%20palisandr-polusteklo-1679335958-1000x1000.jpg"
+      },
+      {
+        "color": "Орех",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/royal-avalon-oreh-gluhoe-1679335927-1000x1000.jpg"
+      },
+      {
+        "color": "Орех",
+        "configuration": "Напівскло",
+        "image": "https://rodos.ua/image/cache/catalog/royal%20avalon%20oreh-polusteklo-1679335929-1000x1000.jpg"
+      },
+      {
+        "color": "Дуб Белый",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/royal-avalon-beluy-dub-1679335991-1000x1000.jpg"
+      },
+      {
+        "color": "Цвет в RAL / NCS",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/cortesral-gluhoe-1000x1000-1569572084-1000x1000.jpg"
+      },
+      {
+        "color": "Шпон дуба LTL 6403",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/royal-avalon-6403-gluhoe-1679335733-1000x1000.jpg"
+      },
+      {
+        "color": "Шпон дуба LTL 6403",
+        "configuration": "Напівскло",
+        "image": "https://rodos.ua/image/cache/catalog/royal%20avalon%20-6430-polusteklo-1679335736-1000x1000.jpg"
+      },
+      {
+        "color": "Шпон дуба LTL 6515",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/royal-avalon-6515-gluhoe-1679335755-1000x1000.jpg"
+      },
+      {
+        "color": "Шпон дуба LTL 6515",
+        "configuration": "Напівскло",
+        "image": "https://rodos.ua/image/cache/catalog/royal%20avalon%206515-polusteklo-1679335759-1000x1000.jpg"
+      },
+      {
+        "color": "Шпон Дуба LTL 6908",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/royal-avalon-6908-gluhoe-1679336203-1000x1000.jpg"
+      },
+      {
+        "color": "Шпон Дуба LTL 6908",
+        "configuration": "Напівскло",
+        "image": "https://rodos.ua/image/cache/catalog/royal%20avalon%206908-polusteklo-1679336207-1000x1000.jpg"
+      },
+      {
+        "color": "Шпон Дуба LTL 6112",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/royal-avalon-6112-gluhoe-1679335725-1000x1000.jpg"
+      },
+      {
+        "color": "Шпон Дуба LTL 6112",
+        "configuration": "Напівскло",
+        "image": "https://rodos.ua/image/cache/catalog/royal%20avalon%206112-polusteklo-1679335727-1000x1000.jpg"
+      },
+      {
+        "color": "Шпон Дуба LTL 6907",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/royal-avalon-6907-gluhoe-1679335804-1000x1000.jpg"
+      },
+      {
+        "color": "Шпон Дуба LTL 6907",
+        "configuration": "Напівскло",
+        "image": "https://rodos.ua/image/cache/catalog/royal%20avalon%206907-polusteklo-1679335806-1000x1000.jpg"
+      }
+    ]
+  }
+]
