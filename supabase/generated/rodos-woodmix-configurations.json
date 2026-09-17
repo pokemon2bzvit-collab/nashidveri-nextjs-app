@@ -1,0 +1,56 @@
+[
+  {
+    "code": "Master",
+    "slug": "rodos-official-xhloa4",
+    "url": "https://rodos.ua/mezhkomnatnye-dveri-woodmix-master",
+    "colors": [
+      {
+        "label": "Без покрытия",
+        "swatch": "https://rodos.ua/image/cache/catalog/meranty-100x100-1566465288-100x100.png"
+      }
+    ],
+    "configurations": [
+      "Глухе",
+      "Напівскло"
+    ],
+    "variants": [
+      {
+        "color": "Без покрытия",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/woodmix-1715942675-1000x1000.jpg"
+      },
+      {
+        "color": "Без покрытия",
+        "configuration": "Напівскло",
+        "image": "https://rodos.ua/image/cache/catalog/Master-polusteklo--1715942679-1000x1000.jpg"
+      }
+    ]
+  },
+  {
+    "code": "Praktic",
+    "slug": "rodos-official-zps1ju",
+    "url": "https://rodos.ua/mezhkomnatnye-dveri-woodmix-praktic-1",
+    "colors": [
+      {
+        "label": "Без покрытия",
+        "swatch": "https://rodos.ua/image/cache/catalog/meranty-100x100-1566465288-100x100.png"
+      }
+    ],
+    "configurations": [
+      "Глухе",
+      "Напівскло"
+    ],
+    "variants": [
+      {
+        "color": "Без покрытия",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/WOODMIX%20PRAKTIK%20-1715942300-1000x1000.jpg"
+      },
+      {
+        "color": "Без покрытия",
+        "configuration": "Напівскло",
+        "image": "https://rodos.ua/image/cache/catalog/WOODMIX%20PRAKTIK-polusteklo--1715942267-1000x1000.jpg"
+      }
+    ]
+  }
+]
