@@ -1,0 +1,824 @@
+[
+  {
+    "code": "MI1",
+    "slug": "rodos-official-rexzia",
+    "url": "https://rodos.ua/mezhkomnatnaya-dver-modern-flat-01-inside-kontur-alum",
+    "colors": [
+      {
+        "label": "Графит",
+        "swatch": "https://rodos.ua/image/cache/catalog/.jpg-1582802284-100x100.jpg"
+      },
+      {
+        "label": "Cерый дуб",
+        "swatch": "https://rodos.ua/image/cache/catalog/colors/seryy-dub-100x100.png"
+      },
+      {
+        "label": "Сосна крем",
+        "swatch": "https://rodos.ua/image/cache/catalog/colors/sosna-krem-100x100.png"
+      },
+      {
+        "label": "Білий мат",
+        "swatch": "https://rodos.ua/image/cache/catalog/colors/belyjmat-100x100.png"
+      },
+      {
+        "label": "Крем",
+        "swatch": "https://rodos.ua/image/cache/catalog/colors/soskrem-100x100.jpg"
+      },
+      {
+        "label": "Дуб сонома",
+        "swatch": "https://rodos.ua/image/cache/catalog/sonoma-1569525258-100x100.jpg"
+      },
+      {
+        "label": "Капучино",
+        "swatch": "https://rodos.ua/image/cache/catalog/colors/kapuchino-100x100.png"
+      },
+      {
+        "label": "Венге шоколадний",
+        "swatch": "https://rodos.ua/image/cache/catalog/colors/vengeshokoladnyj-100x100.png"
+      },
+      {
+        "label": "Акація темна",
+        "swatch": "https://rodos.ua/image/cache/catalog/%20%20-1568110641-100x100.jpg"
+      },
+      {
+        "label": "Дуб шале графіт",
+        "swatch": "https://rodos.ua/image/cache/catalog/Bianca-1568052349-100x100.jpg"
+      },
+      {
+        "label": "Мрамор сірий",
+        "swatch": "https://rodos.ua/image/cache/catalog/%20%20-1568198709-100x100.jpg"
+      },
+      {
+        "label": "Каштан білий",
+        "swatch": "https://rodos.ua/image/cache/catalog/%20%20%20NEW-1568299678-100x100.jpg"
+      },
+      {
+        "label": "Каштан сірий",
+        "swatch": "https://rodos.ua/image/cache/catalog/%20%20NEW-1568299737-100x100.jpg"
+      },
+      {
+        "label": "Каштан беж",
+        "swatch": "https://rodos.ua/image/cache/catalog/%20%20-1568299161-100x100.jpg"
+      },
+      {
+        "label": "Сосна браш браун",
+        "swatch": "https://rodos.ua/image/cache/catalog/.jpg-1589976466-100x100.jpg"
+      },
+      {
+        "label": "Сосна браш кобальт",
+        "swatch": "https://rodos.ua/image/cache/catalog/.jpg-1589976454-100x100.jpg"
+      },
+      {
+        "label": "Сосна браш мінт",
+        "swatch": "https://rodos.ua/image/cache/catalog/.jpg-1590395711-100x100.jpg"
+      },
+      {
+        "label": "Бежевий",
+        "swatch": "https://rodos.ua/image/cache/catalog/images-1706520621-100x100.jpg"
+      },
+      {
+        "label": "Світло-сірий",
+        "swatch": "https://rodos.ua/image/cache/catalog/images-1706520848-100x100.png"
+      },
+      {
+        "label": "Канадський дуб",
+        "swatch": "https://rodos.ua/image/cache/catalog/A001%20%20-gluhoe--1715603714-100x100.jpg"
+      },
+      {
+        "label": "Кедр софт графіт",
+        "swatch": "https://rodos.ua/image/cache/catalog/%20-1719479615-100x100.jpg"
+      },
+      {
+        "label": "Кедр софт білий",
+        "swatch": "https://rodos.ua/image/cache/catalog/---1719479692-100x100.jpg"
+      }
+    ],
+    "configurations": [
+      "Глухе"
+    ],
+    "variants": [
+      {
+        "color": "Графит",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/--1624002390-1000x1000.jpg"
+      },
+      {
+        "color": "Cерый дуб",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/%20-1624002809-1000x1000.jpg"
+      },
+      {
+        "color": "Сосна крем",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/%20-1716800731-1000x1000.jpg"
+      },
+      {
+        "color": "Білий мат",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/%20-1624002724-1000x1000.jpg"
+      },
+      {
+        "color": "Крем",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/%20-1624002712-1000x1000.jpg"
+      },
+      {
+        "color": "Дуб сонома",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/%20-1624002398-1000x1000.jpg"
+      },
+      {
+        "color": "Капучино",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/%202-1624002703-1000x1000.jpg"
+      },
+      {
+        "color": "Венге шоколадний",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/%20-1624002385-1000x1000.jpg"
+      },
+      {
+        "color": "Акація темна",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/.jpg-1624002948-1000x1000.jpg"
+      },
+      {
+        "color": "Дуб шале графіт",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/%20%20-1716800777-1000x1000.jpg"
+      },
+      {
+        "color": "Мрамор сірий",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/%20-1624002774-1000x1000.jpg"
+      },
+      {
+        "color": "Каштан білий",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/flat-1-1707203761-1000x1000.png"
+      },
+      {
+        "color": "Каштан сірий",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/%20-1624002762-1000x1000.jpg"
+      },
+      {
+        "color": "Каштан беж",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/.jpg-1624002753-1000x1000.jpg"
+      },
+      {
+        "color": "Сосна браш браун",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/%20%20-1716800790-1000x1000.jpg"
+      },
+      {
+        "color": "Сосна браш кобальт",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/%20%20-1624002796-1000x1000.jpg"
+      },
+      {
+        "color": "Сосна браш мінт",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/%20%20-1624002979-1000x1000.jpg"
+      },
+      {
+        "color": "Бежевий",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/FLAT%201%20%20%20-1719561318-1000x1000.jpg"
+      },
+      {
+        "color": "Світло-сірий",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/FLAT%201%20%20%20-1719561350-1000x1000.jpg"
+      },
+      {
+        "color": "Канадський дуб",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/FLAT%201%20%20-1716798565-1000x1000.jpg"
+      },
+      {
+        "color": "Кедр софт графіт",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/FLAT%201%20%20%20%20%20-1719561336-1000x1000.jpg"
+      },
+      {
+        "color": "Кедр софт білий",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/FLAT%201%20%20%20%20%20-1719561329-1000x1000.jpg"
+      }
+    ]
+  },
+  {
+    "code": "MI2",
+    "slug": "rodos-official-1yz0ngg",
+    "url": "https://rodos.ua/mezhkomnatnaya-dver-modern-flat-03-inside-kontur-alum",
+    "colors": [
+      {
+        "label": "Графит",
+        "swatch": "https://rodos.ua/image/cache/catalog/.jpg-1582802284-100x100.jpg"
+      },
+      {
+        "label": "Сосна крем",
+        "swatch": "https://rodos.ua/image/cache/catalog/colors/sosna-krem-100x100.png"
+      },
+      {
+        "label": "Білий мат",
+        "swatch": "https://rodos.ua/image/cache/catalog/colors/belyjmat-100x100.png"
+      },
+      {
+        "label": "Крем",
+        "swatch": "https://rodos.ua/image/cache/catalog/colors/soskrem-100x100.jpg"
+      },
+      {
+        "label": "Дуб сонома",
+        "swatch": "https://rodos.ua/image/cache/catalog/sonoma-1569525258-100x100.jpg"
+      },
+      {
+        "label": "Капучино",
+        "swatch": "https://rodos.ua/image/cache/catalog/colors/kapuchino-100x100.png"
+      },
+      {
+        "label": "Венге шоколадний",
+        "swatch": "https://rodos.ua/image/cache/catalog/colors/vengeshokoladnyj-100x100.png"
+      },
+      {
+        "label": "Серый дуб",
+        "swatch": "https://rodos.ua/image/cache/catalog/wdtttttttttttttttttn-1559300111-100x100.png"
+      },
+      {
+        "label": "Акація темна",
+        "swatch": "https://rodos.ua/image/cache/catalog/%20%20-1568110641-100x100.jpg"
+      },
+      {
+        "label": "Мрамор сірий",
+        "swatch": "https://rodos.ua/image/cache/catalog/%20%20-1568198709-100x100.jpg"
+      },
+      {
+        "label": "Каштан білий",
+        "swatch": "https://rodos.ua/image/cache/catalog/%20%20%20NEW-1568299678-100x100.jpg"
+      },
+      {
+        "label": "Каштан сірий",
+        "swatch": "https://rodos.ua/image/cache/catalog/%20%20NEW-1568299737-100x100.jpg"
+      },
+      {
+        "label": "Каштан беж",
+        "swatch": "https://rodos.ua/image/cache/catalog/%20%20-1568299161-100x100.jpg"
+      },
+      {
+        "label": "Дуб шале графіт",
+        "swatch": "https://rodos.ua/image/cache/catalog/.jpg-1582624336-100x100.jpg"
+      },
+      {
+        "label": "Сосна браш браун",
+        "swatch": "https://rodos.ua/image/cache/catalog/.jpg-1589976466-100x100.jpg"
+      },
+      {
+        "label": "Сосна браш кобальт",
+        "swatch": "https://rodos.ua/image/cache/catalog/.jpg-1589976454-100x100.jpg"
+      },
+      {
+        "label": "Сосна браш мінт",
+        "swatch": "https://rodos.ua/image/cache/catalog/.jpg-1590395711-100x100.jpg"
+      },
+      {
+        "label": "Бежевий",
+        "swatch": "https://rodos.ua/image/cache/catalog/images-1706520621-100x100.jpg"
+      },
+      {
+        "label": "Світло-сірий",
+        "swatch": "https://rodos.ua/image/cache/catalog/images-1706520848-100x100.png"
+      },
+      {
+        "label": "Канадський дуб",
+        "swatch": "https://rodos.ua/image/cache/catalog/A001%20%20-gluhoe--1715603714-100x100.jpg"
+      },
+      {
+        "label": "Кедр софт графіт",
+        "swatch": "https://rodos.ua/image/cache/catalog/%20-1719479615-100x100.jpg"
+      },
+      {
+        "label": "Кедр софт білий",
+        "swatch": "https://rodos.ua/image/cache/catalog/---1719479692-100x100.jpg"
+      }
+    ],
+    "configurations": [
+      "Глухе"
+    ],
+    "variants": [
+      {
+        "color": "Графит",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/.jpg-1716802134-1000x1000.jpg"
+      },
+      {
+        "color": "Сосна крем",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/%20-1716804212-1000x1000.jpg"
+      },
+      {
+        "color": "Білий мат",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/%20%20-1624013157-1000x1000.jpg"
+      },
+      {
+        "color": "Крем",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/.jpg-1716802258-1000x1000.jpg"
+      },
+      {
+        "color": "Дуб сонома",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/%20-1716802197-1000x1000.jpg"
+      },
+      {
+        "color": "Капучино",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/.jpg-1716802266-1000x1000.jpg"
+      },
+      {
+        "color": "Венге шоколадний",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/%20-1716802121-1000x1000.jpg"
+      },
+      {
+        "color": "Серый дуб",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/%20%20-1624013157-1000x1000.jpg"
+      },
+      {
+        "color": "Акація темна",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/%20-1716801016-1000x1000.jpg"
+      },
+      {
+        "color": "Мрамор сірий",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/%20-1716802547-1000x1000.jpg"
+      },
+      {
+        "color": "Каштан білий",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/%20-1716802237-1000x1000.jpg"
+      },
+      {
+        "color": "Каштан сірий",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/%20-1716802248-1000x1000.jpg"
+      },
+      {
+        "color": "Каштан беж",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/%20-1716802221-1000x1000.jpg"
+      },
+      {
+        "color": "Дуб шале графіт",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/%20%20-1716802205-1000x1000.jpg"
+      },
+      {
+        "color": "Сосна браш браун",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/%20%20-1716804220-1000x1000.jpg"
+      },
+      {
+        "color": "Сосна браш кобальт",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/%20%20-1716804230-1000x1000.jpg"
+      },
+      {
+        "color": "Сосна браш мінт",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/%20%20-1716804200-1000x1000.jpg"
+      },
+      {
+        "color": "Бежевий",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/FLAT%203%20%20%20-1719564412-1000x1000.jpg"
+      },
+      {
+        "color": "Світло-сірий",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/FLAT%203%20%20%20-1719564390-1000x1000.jpg"
+      },
+      {
+        "color": "Канадський дуб",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/FLAT%203%20%20-1716800924-1000x1000.jpg"
+      },
+      {
+        "color": "Кедр софт графіт",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/FLAT%203%20%20%20%20%20-1719564401-1000x1000.jpg"
+      },
+      {
+        "color": "Кедр софт білий",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/FLAT%203%20%20%20%20%20-1719564407-1000x1000.jpg"
+      }
+    ]
+  },
+  {
+    "code": "MI3",
+    "slug": "rodos-official-1utgp0n",
+    "url": "https://rodos.ua/mezhkomnatnaya-dver-modern-flat-04-inside-kontur-alum",
+    "colors": [
+      {
+        "label": "Графит",
+        "swatch": "https://rodos.ua/image/cache/catalog/.jpg-1582802284-100x100.jpg"
+      },
+      {
+        "label": "Сосна крем",
+        "swatch": "https://rodos.ua/image/cache/catalog/colors/sosna-krem-100x100.png"
+      },
+      {
+        "label": "Білий мат",
+        "swatch": "https://rodos.ua/image/cache/catalog/colors/belyjmat-100x100.png"
+      },
+      {
+        "label": "Крем",
+        "swatch": "https://rodos.ua/image/cache/catalog/colors/soskrem-100x100.jpg"
+      },
+      {
+        "label": "Дуб сонома",
+        "swatch": "https://rodos.ua/image/cache/catalog/sonoma-1569525258-100x100.jpg"
+      },
+      {
+        "label": "Капучино",
+        "swatch": "https://rodos.ua/image/cache/catalog/colors/kapuchino-100x100.png"
+      },
+      {
+        "label": "Венге шоколадний",
+        "swatch": "https://rodos.ua/image/cache/catalog/colors/vengeshokoladnyj-100x100.png"
+      },
+      {
+        "label": "Серый дуб",
+        "swatch": "https://rodos.ua/image/cache/catalog/wdtttttttttttttttttn-1559300111-100x100.png"
+      },
+      {
+        "label": "Акація темна",
+        "swatch": "https://rodos.ua/image/cache/catalog/%20%20-1568110641-100x100.jpg"
+      },
+      {
+        "label": "Мрамор сірий",
+        "swatch": "https://rodos.ua/image/cache/catalog/%20%20-1568198709-100x100.jpg"
+      },
+      {
+        "label": "Каштан сірий",
+        "swatch": "https://rodos.ua/image/cache/catalog/%20%20NEW-1568299737-100x100.jpg"
+      },
+      {
+        "label": "Каштан беж",
+        "swatch": "https://rodos.ua/image/cache/catalog/%20%20-1568299161-100x100.jpg"
+      },
+      {
+        "label": "Дуб шале графіт",
+        "swatch": "https://rodos.ua/image/cache/catalog/.jpg-1582624336-100x100.jpg"
+      },
+      {
+        "label": "Сосна браш браун",
+        "swatch": "https://rodos.ua/image/cache/catalog/.jpg-1589976466-100x100.jpg"
+      },
+      {
+        "label": "Сосна браш кобальт",
+        "swatch": "https://rodos.ua/image/cache/catalog/.jpg-1589976454-100x100.jpg"
+      },
+      {
+        "label": "Сосна браш мінт",
+        "swatch": "https://rodos.ua/image/cache/catalog/.jpg-1590395711-100x100.jpg"
+      },
+      {
+        "label": "Бежевий",
+        "swatch": "https://rodos.ua/image/cache/catalog/images-1706520621-100x100.jpg"
+      },
+      {
+        "label": "Світло-сірий",
+        "swatch": "https://rodos.ua/image/cache/catalog/images-1706520848-100x100.png"
+      },
+      {
+        "label": "Канадський дуб",
+        "swatch": "https://rodos.ua/image/cache/catalog/A001%20%20-gluhoe--1715603714-100x100.jpg"
+      },
+      {
+        "label": "Кедр софт графіт",
+        "swatch": "https://rodos.ua/image/cache/catalog/%20-1719479615-100x100.jpg"
+      },
+      {
+        "label": "Кедр софт білий",
+        "swatch": "https://rodos.ua/image/cache/catalog/---1719479692-100x100.jpg"
+      }
+    ],
+    "configurations": [
+      "Глухе"
+    ],
+    "variants": [
+      {
+        "color": "Графит",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/.jpg-1716805707-1000x1000.jpg"
+      },
+      {
+        "color": "Сосна крем",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/%20-1716807251-1000x1000.jpg"
+      },
+      {
+        "color": "Білий мат",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/%20%20%204-1614245387-1000x1000.jpg"
+      },
+      {
+        "color": "Крем",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/.jpg-1716807183-1000x1000.jpg"
+      },
+      {
+        "color": "Дуб сонома",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/%20-1716805713-1000x1000.jpg"
+      },
+      {
+        "color": "Капучино",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/.jpg-1716805743-1000x1000.jpg"
+      },
+      {
+        "color": "Венге шоколадний",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/%20-1716805698-1000x1000.jpg"
+      },
+      {
+        "color": "Серый дуб",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/%20%20%204-1614245387-1000x1000.jpg"
+      },
+      {
+        "color": "Акація темна",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/%20-1716805666-1000x1000.jpg"
+      },
+      {
+        "color": "Мрамор сірий",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/%20-1716807196-1000x1000.jpg"
+      },
+      {
+        "color": "Каштан сірий",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/%20-1716807171-1000x1000.jpg"
+      },
+      {
+        "color": "Каштан беж",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/%20-1716807149-1000x1000.jpg"
+      },
+      {
+        "color": "Дуб шале графіт",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/%20%20-1716809750-1000x1000.jpg"
+      },
+      {
+        "color": "Сосна браш браун",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/%20%20-1716807216-1000x1000.jpg"
+      },
+      {
+        "color": "Сосна браш кобальт",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/%20%20-1716807257-1000x1000.jpg"
+      },
+      {
+        "color": "Сосна браш мінт",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/%20%20-1716807235-1000x1000.jpg"
+      },
+      {
+        "color": "Бежевий",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/FLAT%204%20%20%20-1719564527-1000x1000.jpg"
+      },
+      {
+        "color": "Світло-сірий",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/FLAT%204%20%20%20-1719564552-1000x1000.jpg"
+      },
+      {
+        "color": "Канадський дуб",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/FLAT%204%20%20-1716805643-1000x1000.jpg"
+      },
+      {
+        "color": "Кедр софт графіт",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/FLAT%204%20%20%20%20%20-1719564543-1000x1000.jpg"
+      },
+      {
+        "color": "Кедр софт білий",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/FLAT%204%20%20%20%20%20-1719564535-1000x1000.jpg"
+      }
+    ]
+  },
+  {
+    "code": "MI4",
+    "slug": "rodos-official-14efvk6",
+    "url": "https://rodos.ua/mezhkomnatnaya-dver-modern-flat-05-inside-kontur-alum",
+    "colors": [
+      {
+        "label": "Графит",
+        "swatch": "https://rodos.ua/image/cache/catalog/.jpg-1582802284-100x100.jpg"
+      },
+      {
+        "label": "Cерый дуб",
+        "swatch": "https://rodos.ua/image/cache/catalog/colors/seryy-dub-100x100.png"
+      },
+      {
+        "label": "Сосна крем",
+        "swatch": "https://rodos.ua/image/cache/catalog/colors/sosna-krem-100x100.png"
+      },
+      {
+        "label": "Білий мат",
+        "swatch": "https://rodos.ua/image/cache/catalog/colors/belyjmat-100x100.png"
+      },
+      {
+        "label": "Крем",
+        "swatch": "https://rodos.ua/image/cache/catalog/colors/soskrem-100x100.jpg"
+      },
+      {
+        "label": "Дуб сонома",
+        "swatch": "https://rodos.ua/image/cache/catalog/sonoma-1569525258-100x100.jpg"
+      },
+      {
+        "label": "Капучино",
+        "swatch": "https://rodos.ua/image/cache/catalog/colors/kapuchino-100x100.png"
+      },
+      {
+        "label": "Венге шоколадний",
+        "swatch": "https://rodos.ua/image/cache/catalog/colors/vengeshokoladnyj-100x100.png"
+      },
+      {
+        "label": "Акація темна",
+        "swatch": "https://rodos.ua/image/cache/catalog/%20%20-1568110641-100x100.jpg"
+      },
+      {
+        "label": "Мрамор сірий",
+        "swatch": "https://rodos.ua/image/cache/catalog/%20%20-1568198709-100x100.jpg"
+      },
+      {
+        "label": "Каштан білий",
+        "swatch": "https://rodos.ua/image/cache/catalog/%20%20%20NEW-1568299678-100x100.jpg"
+      },
+      {
+        "label": "Каштан сірий",
+        "swatch": "https://rodos.ua/image/cache/catalog/%20%20NEW-1568299737-100x100.jpg"
+      },
+      {
+        "label": "Каштан беж",
+        "swatch": "https://rodos.ua/image/cache/catalog/%20%20-1568299161-100x100.jpg"
+      },
+      {
+        "label": "Сосна браш браун",
+        "swatch": "https://rodos.ua/image/cache/catalog/.jpg-1589976466-100x100.jpg"
+      },
+      {
+        "label": "Сосна браш кобальт",
+        "swatch": "https://rodos.ua/image/cache/catalog/.jpg-1589976454-100x100.jpg"
+      },
+      {
+        "label": "Сосна браш мінт",
+        "swatch": "https://rodos.ua/image/cache/catalog/.jpg-1590395711-100x100.jpg"
+      },
+      {
+        "label": "Бежевий",
+        "swatch": "https://rodos.ua/image/cache/catalog/images-1706520621-100x100.jpg"
+      },
+      {
+        "label": "Світло-сірий",
+        "swatch": "https://rodos.ua/image/cache/catalog/images-1706520848-100x100.png"
+      },
+      {
+        "label": "Канадський дуб",
+        "swatch": "https://rodos.ua/image/cache/catalog/A001%20%20-gluhoe--1715603714-100x100.jpg"
+      },
+      {
+        "label": "Кедр софт графіт",
+        "swatch": "https://rodos.ua/image/cache/catalog/%20-1719479615-100x100.jpg"
+      },
+      {
+        "label": "Кедр софт білий",
+        "swatch": "https://rodos.ua/image/cache/catalog/---1719479692-100x100.jpg"
+      }
+    ],
+    "configurations": [
+      "Глухе"
+    ],
+    "variants": [
+      {
+        "color": "Графит",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/.jpg-1716815802-1000x1000.jpg"
+      },
+      {
+        "color": "Cерый дуб",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/%20%205-1614248894-1000x1000.jpg"
+      },
+      {
+        "color": "Сосна крем",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/%20-1716815758-1000x1000.jpg"
+      },
+      {
+        "color": "Білий мат",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/%20%205-1614248894-1000x1000.jpg"
+      },
+      {
+        "color": "Крем",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/.jpg-1716815773-1000x1000.jpg"
+      },
+      {
+        "color": "Дуб сонома",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/%20-1716815799-1000x1000.jpg"
+      },
+      {
+        "color": "Капучино",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/.jpg-1716815792-1000x1000.jpg"
+      },
+      {
+        "color": "Венге шоколадний",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/%20-1716815805-1000x1000.jpg"
+      },
+      {
+        "color": "Акація темна",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/%20-1716815807-1000x1000.jpg"
+      },
+      {
+        "color": "Мрамор сірий",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/%20-1716815771-1000x1000.jpg"
+      },
+      {
+        "color": "Каштан білий",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/%20-1716815781-1000x1000.jpg"
+      },
+      {
+        "color": "Каштан сірий",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/%20-1716815776-1000x1000.jpg"
+      },
+      {
+        "color": "Каштан беж",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/%20-1716815789-1000x1000.jpg"
+      },
+      {
+        "color": "Сосна браш браун",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/%20%20-1716815766-1000x1000.jpg"
+      },
+      {
+        "color": "Сосна браш кобальт",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/%20%20-1716815753-1000x1000.jpg"
+      },
+      {
+        "color": "Сосна браш мінт",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/%20%20-1716815762-1000x1000.jpg"
+      },
+      {
+        "color": "Бежевий",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/FLAT%205%20%20%20-1719564940-1000x1000.jpg"
+      },
+      {
+        "color": "Світло-сірий",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/FLAT%205%20%20%20-1719565010-1000x1000.jpg"
+      },
+      {
+        "color": "Канадський дуб",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/FLAT%205%20%20-1716815810-1000x1000.jpg"
+      },
+      {
+        "color": "Кедр софт графіт",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/FLAT%205%20%20%20%20%20-1719565004-1000x1000.jpg"
+      },
+      {
+        "color": "Кедр софт білий",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/FLAT%205%20%20%20%20%20-1719564947-1000x1000.jpg"
+      }
+    ]
+  }
+]
