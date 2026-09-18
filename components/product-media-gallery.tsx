@@ -93,6 +93,7 @@ export function ProductMediaGallery({ product }: { product: Product }) {
     <div className="aspect-[4/5] overflow-hidden rounded-[2rem] bg-[#f7f5f1] p-5 sm:p-8">
       <ImageLightbox src={optionImage || selected.image} alt={selectedImageAlt} className="h-full w-full" imageClassName="h-full w-full object-contain" />
     </div>
+    {activeVariant?.selections.color && <p className="mt-3 flex items-center gap-2 text-sm text-stone-600"><Palette size={16} className="shrink-0 text-clay" /><span>Обраний колір:</span><b className="text-ink">{activeVariant.selections.color}</b></p>}
     {displayedGallery.length > 1 && <div className="mt-3 flex gap-2 overflow-x-auto pb-1">
       {displayedGallery.map((item, index) => usesActiveVariantGallery
         ? <button type="button" key={`${item.image}-${index}`} aria-label={`Обрати фото: ${item.label || index + 1}`} onClick={() => selectActiveVariantPhoto(index)} className={`h-16 w-12 shrink-0 overflow-hidden rounded-lg border-2 bg-[#f7f5f1] transition ${selectedIndex === index ? "border-clay" : "border-transparent hover:border-stone-300"}`}><img src={item.image} alt="" className="h-full w-full object-contain" /></button>
