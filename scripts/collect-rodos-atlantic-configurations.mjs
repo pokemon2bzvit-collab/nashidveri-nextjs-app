@@ -68,6 +68,10 @@ const deluxModels = [...(sitemapReport.matched || []), ...(sitemapReport.unmatch
   .filter((item) => !["rodos-official-vhyp9y", "rodos-official-vhypa0"].includes(item.slug))
   .sort((left, right) => left.title.localeCompare(right.title, "uk", { numeric: true }))
   .map((item, index) => ({ code: `D${index + 1}`, slug: item.slug, url: item.url }));
+const luxModels = [...(sitemapReport.matched || []), ...(sitemapReport.unmatched || [])]
+  .filter((item) => /^Межкомнатная дверь Гранд Lux(?:\s|$)/u.test(item.title))
+  .sort((left, right) => left.title.localeCompare(right.title, "uk", { numeric: true }))
+  .map((item, index) => ({ code: `LX${index + 1}`, slug: item.slug, url: item.url }));
 const libertaModels = [...(sitemapReport.matched || []), ...(sitemapReport.unmatched || [])]
   .filter((item) => /\bLIBERTA\b|\bLiberta\b/u.test(item.title))
   .map((item, index) => ({ code: `L${index + 1}`, slug: item.slug, url: item.url }));
@@ -81,10 +85,10 @@ const woodmixModels = [
   ["Master", "rodos-official-xhloa4", "https://rodos.ua/mezhkomnatnye-dveri-woodmix-master"],
   ["Praktic", "rodos-official-zps1ju", "https://rodos.ua/mezhkomnatnye-dveri-woodmix-praktic-1"],
 ].map(([code, slug, url]) => ({ code, slug, url }));
-if (!["atlantic", "cortes", "cortes-milling", "cortes-alum", "cortes-inside", "loft", "loft-inside", "siena", "style", "royal", "delux", "liberta", "modern", "modern-inside", "woodmix"].includes(catalog)) throw new Error("Невідомий каталог Rodos");
-const outputStem = catalog === "cortes" ? "rodos-cortes-official-configurations" : catalog === "cortes-milling" ? "rodos-cortes-milling-configurations" : catalog === "cortes-alum" ? "rodos-cortes-alum-configurations" : catalog === "cortes-inside" ? "rodos-cortes-inside-configurations" : catalog === "loft" ? "rodos-loft-configurations" : catalog === "loft-inside" ? "rodos-loft-inside-configurations" : catalog === "siena" ? "rodos-siena-configurations" : catalog === "style" ? "rodos-style-configurations" : catalog === "royal" ? "rodos-royal-configurations" : catalog === "delux" ? "rodos-delux-configurations" : catalog === "liberta" ? "rodos-liberta-configurations" : catalog === "modern" ? "rodos-modern-configurations" : catalog === "modern-inside" ? "rodos-modern-inside-configurations" : catalog === "woodmix" ? "rodos-woodmix-configurations" : "rodos-atlantic-official-configurations";
-const collectionLabel = catalog === "cortes" ? "Rodos Cortes" : catalog === "cortes-milling" ? "Rodos Cortes Prima фрезерування" : catalog === "cortes-alum" ? "Rodos Cortes Prima Alum" : catalog === "cortes-inside" ? "Rodos Cortes INSIDE" : catalog === "loft" ? "Rodos Loft" : catalog === "loft-inside" ? "Rodos Loft INSIDE" : catalog === "siena" ? "Rodos Siena" : catalog === "style" ? "Rodos Style" : catalog === "royal" ? "Rodos Royal шпон" : catalog === "delux" ? "Rodos DELUX" : catalog === "liberta" ? "Rodos Liberta" : catalog === "modern" ? "Rodos Modern" : catalog === "modern-inside" ? "Rodos Modern INSIDE" : catalog === "woodmix" ? "Rodos Woodmix" : "Rodos Atlantic";
-const sourceModels = catalog === "cortes" ? cortesModels : catalog === "cortes-milling" ? cortesMillingModels : catalog === "cortes-alum" ? cortesAlumModels : catalog === "cortes-inside" ? cortesInsideModels : catalog === "loft" ? loftModels : catalog === "loft-inside" ? loftInsideModels : catalog === "siena" ? sienaModels : catalog === "style" ? styleModels : catalog === "royal" ? royalModels : catalog === "delux" ? deluxModels : catalog === "liberta" ? libertaModels : catalog === "modern" ? modernModels : catalog === "modern-inside" ? modernInsideModels : catalog === "woodmix" ? woodmixModels : atlanticModels;
+if (!["atlantic", "cortes", "cortes-milling", "cortes-alum", "cortes-inside", "loft", "loft-inside", "siena", "style", "royal", "delux", "lux", "liberta", "modern", "modern-inside", "woodmix"].includes(catalog)) throw new Error("Невідомий каталог Rodos");
+const outputStem = catalog === "cortes" ? "rodos-cortes-official-configurations" : catalog === "cortes-milling" ? "rodos-cortes-milling-configurations" : catalog === "cortes-alum" ? "rodos-cortes-alum-configurations" : catalog === "cortes-inside" ? "rodos-cortes-inside-configurations" : catalog === "loft" ? "rodos-loft-configurations" : catalog === "loft-inside" ? "rodos-loft-inside-configurations" : catalog === "siena" ? "rodos-siena-configurations" : catalog === "style" ? "rodos-style-configurations" : catalog === "royal" ? "rodos-royal-configurations" : catalog === "delux" ? "rodos-delux-configurations" : catalog === "lux" ? "rodos-lux-configurations" : catalog === "liberta" ? "rodos-liberta-configurations" : catalog === "modern" ? "rodos-modern-configurations" : catalog === "modern-inside" ? "rodos-modern-inside-configurations" : catalog === "woodmix" ? "rodos-woodmix-configurations" : "rodos-atlantic-official-configurations";
+const collectionLabel = catalog === "cortes" ? "Rodos Cortes" : catalog === "cortes-milling" ? "Rodos Cortes Prima фрезерування" : catalog === "cortes-alum" ? "Rodos Cortes Prima Alum" : catalog === "cortes-inside" ? "Rodos Cortes INSIDE" : catalog === "loft" ? "Rodos Loft" : catalog === "loft-inside" ? "Rodos Loft INSIDE" : catalog === "siena" ? "Rodos Siena" : catalog === "style" ? "Rodos Style" : catalog === "royal" ? "Rodos Royal шпон" : catalog === "delux" ? "Rodos DELUX" : catalog === "lux" ? "Rodos LUX" : catalog === "liberta" ? "Rodos Liberta" : catalog === "modern" ? "Rodos Modern" : catalog === "modern-inside" ? "Rodos Modern INSIDE" : catalog === "woodmix" ? "Rodos Woodmix" : "Rodos Atlantic";
+const sourceModels = catalog === "cortes" ? cortesModels : catalog === "cortes-milling" ? cortesMillingModels : catalog === "cortes-alum" ? cortesAlumModels : catalog === "cortes-inside" ? cortesInsideModels : catalog === "loft" ? loftModels : catalog === "loft-inside" ? loftInsideModels : catalog === "siena" ? sienaModels : catalog === "style" ? styleModels : catalog === "royal" ? royalModels : catalog === "delux" ? deluxModels : catalog === "lux" ? luxModels : catalog === "liberta" ? libertaModels : catalog === "modern" ? modernModels : catalog === "modern-inside" ? modernInsideModels : catalog === "woodmix" ? woodmixModels : atlanticModels;
 const models = sourceModels.filter((model) => !only.size || only.has(model.code));
 const headers = { "user-agent": "Mozilla/5.0 (compatible; NashiDveriCatalog/1.0)", "accept-language": "uk-UA,uk;q=0.9" };
 const htmlDecode = (value = "") => value.replace(/&quot;/g, '"').replace(/&amp;/g, "&").replace(/&#039;|&#39;/g, "'").replace(/&nbsp;/g, " ").trim();
@@ -93,6 +97,12 @@ const sql = (value) => `'${String(value ?? "").replace(/'/g, "''")}'`;
 const pause = () => new Promise((resolve) => setTimeout(resolve, delayMs));
 const uniqueByLabel = (items) => [...new Map(items.map((item) => [item.label, item])).values()];
 const translateColor = (value) => clean(value)
+  .replace(/^Белый$/iu, "Білий")
+  .replace(/^Ламецио$/iu, "Ламеціо")
+  .replace(/^Мадагаскар$/iu, "Мадагаскар")
+  .replace(/^Небраска$/iu, "Небраска")
+  .replace(/^Нордик$/iu, "Нордік")
+  .replace(/^Шервуд$/iu, "Шервуд")
   .replace(/^Тёмно серый BLK$/iu, "Темно-сірий BLK")
   .replace(/^Тёмно серый$/iu, "Темно-сірий")
   .replace(/^Белый мат \(ПВХ\) BLK$/iu, "Білий мат (ПВХ) BLK")
