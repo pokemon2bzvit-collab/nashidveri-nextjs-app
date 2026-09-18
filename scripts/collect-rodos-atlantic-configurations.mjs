@@ -87,6 +87,11 @@ const sql = (value) => `'${String(value ?? "").replace(/'/g, "''")}'`;
 const pause = () => new Promise((resolve) => setTimeout(resolve, delayMs));
 const uniqueByLabel = (items) => [...new Map(items.map((item) => [item.label, item])).values()];
 const translateColor = (value) => clean(value)
+  .replace(/^Палисандр$/iu, "Палісандр")
+  .replace(/^Орех$/iu, "Горіх")
+  .replace(/^Дуб Белый$/iu, "Білий дуб")
+  .replace(/^Цвет в RAL \/ NCS$/iu, "Колір в RAL / NCS")
+  .replace(/^Шпон Дуба LTL (\d+)$/iu, "Шпон дуба LTL $1")
   .replace(/^Белый мат$/iu, "Білий мат")
   .replace(/^Светло серый$/iu, "Світло-сірий")
   .replace(/^Бежевый$/iu, "Бежевий")
@@ -140,8 +145,8 @@ function parsePage(html, model) {
   return { productId, colors, configurations };
 }
 
-async function imagesForColor(model, productId, color, initialConfiguration) {
-  const params = new URLSearchParams({ [`option[${color.optionId}]`]: color.value, [`option[${initialConfiguration.optionId}]`]: initialConfiguration.value, product_id: productId });
+async function imagesForSelection(model, productId, color, configuration) {
+  const params = new URLSearchParams({ [`option[${color.optionId}]`]: color.value, [`option[${configuration.optionId}]`]: configuration.value, product_id: productId });
   const response = await fetchWithRetry(`https://rodos.ua/index.php?route=product/product/getPImages&product_id=${productId}`, {
     method: "POST",
     headers: { "content-type": "application/x-www-form-urlencoded", "x-requested-with": "XMLHttpRequest", referer: model.url },
@@ -170,12 +175,17 @@ for (const model of models) {
   const page = parsePage(html, model);
   const variants = [];
   for (const color of page.colors) {
-    const images = await imagesForColor(model, page.productId, color, page.configurations[0]);
     for (const configuration of page.configurations) {
+      // Запитуємо Rodos окремо для кожної пари «колір + вид полотна».
+      // Сайт виробника не завжди повертає фото напівскла, якщо першим
+      // було обрано глухе полотно.
+      const images = await imagesForSelection(model, page.productId, color, configuration);
+      // Не підміняємо напівскло фотографією глухого полотна: якщо Rodos
+      // не повернув точного знімка, варіант лишається без фото.
       const image = imageFor(images, configuration, page.configurations.length === 1);
       if (image) variants.push({ color: color.label, configuration: configuration.label, image });
+      await pause();
     }
-    await pause();
   }
   const confirmedConfigurations = page.configurations.map(({ label }) => label).filter((label) => variants.some((variant) => variant.configuration === label));
   if (!confirmedConfigurations.length) console.warn(`${model.code}: Rodos не віддав точних фото для видів: ${page.configurations.map(({ label }) => label).join(", ")}`);
