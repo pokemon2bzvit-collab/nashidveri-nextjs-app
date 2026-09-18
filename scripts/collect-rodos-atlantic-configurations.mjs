@@ -62,6 +62,12 @@ const styleModels = [...(sitemapReport.matched || []), ...(sitemapReport.unmatch
   .filter((item) => /^Межкомнатная дверь Style \d+(?: BLK)?$/u.test(item.title))
   .map((item, index) => ({ code: `S${index + 1}`, slug: item.slug, url: item.url }));
 const royalModels = [{ code: "Avalon", slug: "rodos-official-1mt8i9p", url: "https://rodos.ua/mezhkomnatnaya-dver-royal-avalon-1" }];
+const deluxModels = [...(sitemapReport.matched || []), ...(sitemapReport.unmatched || [])]
+  .filter((item) => /^Межкомнатная дверь Гранд Delux(?:\s|$)/u.test(item.title))
+  // Сторінки старої акції дублюють Delux 6 та Delux 8 без додаткових виконань.
+  .filter((item) => !["rodos-official-vhyp9y", "rodos-official-vhypa0"].includes(item.slug))
+  .sort((left, right) => left.title.localeCompare(right.title, "uk", { numeric: true }))
+  .map((item, index) => ({ code: `D${index + 1}`, slug: item.slug, url: item.url }));
 const libertaModels = [...(sitemapReport.matched || []), ...(sitemapReport.unmatched || [])]
   .filter((item) => /\bLIBERTA\b|\bLiberta\b/u.test(item.title))
   .map((item, index) => ({ code: `L${index + 1}`, slug: item.slug, url: item.url }));
@@ -75,10 +81,10 @@ const woodmixModels = [
   ["Master", "rodos-official-xhloa4", "https://rodos.ua/mezhkomnatnye-dveri-woodmix-master"],
   ["Praktic", "rodos-official-zps1ju", "https://rodos.ua/mezhkomnatnye-dveri-woodmix-praktic-1"],
 ].map(([code, slug, url]) => ({ code, slug, url }));
-if (!["atlantic", "cortes", "cortes-milling", "cortes-alum", "cortes-inside", "loft", "loft-inside", "siena", "style", "royal", "liberta", "modern", "modern-inside", "woodmix"].includes(catalog)) throw new Error("Невідомий каталог Rodos");
-const outputStem = catalog === "cortes" ? "rodos-cortes-official-configurations" : catalog === "cortes-milling" ? "rodos-cortes-milling-configurations" : catalog === "cortes-alum" ? "rodos-cortes-alum-configurations" : catalog === "cortes-inside" ? "rodos-cortes-inside-configurations" : catalog === "loft" ? "rodos-loft-configurations" : catalog === "loft-inside" ? "rodos-loft-inside-configurations" : catalog === "siena" ? "rodos-siena-configurations" : catalog === "style" ? "rodos-style-configurations" : catalog === "royal" ? "rodos-royal-configurations" : catalog === "liberta" ? "rodos-liberta-configurations" : catalog === "modern" ? "rodos-modern-configurations" : catalog === "modern-inside" ? "rodos-modern-inside-configurations" : catalog === "woodmix" ? "rodos-woodmix-configurations" : "rodos-atlantic-official-configurations";
-const collectionLabel = catalog === "cortes" ? "Rodos Cortes" : catalog === "cortes-milling" ? "Rodos Cortes Prima фрезерування" : catalog === "cortes-alum" ? "Rodos Cortes Prima Alum" : catalog === "cortes-inside" ? "Rodos Cortes INSIDE" : catalog === "loft" ? "Rodos Loft" : catalog === "loft-inside" ? "Rodos Loft INSIDE" : catalog === "siena" ? "Rodos Siena" : catalog === "style" ? "Rodos Style" : catalog === "royal" ? "Rodos Royal шпон" : catalog === "liberta" ? "Rodos Liberta" : catalog === "modern" ? "Rodos Modern" : catalog === "modern-inside" ? "Rodos Modern INSIDE" : catalog === "woodmix" ? "Rodos Woodmix" : "Rodos Atlantic";
-const sourceModels = catalog === "cortes" ? cortesModels : catalog === "cortes-milling" ? cortesMillingModels : catalog === "cortes-alum" ? cortesAlumModels : catalog === "cortes-inside" ? cortesInsideModels : catalog === "loft" ? loftModels : catalog === "loft-inside" ? loftInsideModels : catalog === "siena" ? sienaModels : catalog === "style" ? styleModels : catalog === "royal" ? royalModels : catalog === "liberta" ? libertaModels : catalog === "modern" ? modernModels : catalog === "modern-inside" ? modernInsideModels : catalog === "woodmix" ? woodmixModels : atlanticModels;
+if (!["atlantic", "cortes", "cortes-milling", "cortes-alum", "cortes-inside", "loft", "loft-inside", "siena", "style", "royal", "delux", "liberta", "modern", "modern-inside", "woodmix"].includes(catalog)) throw new Error("Невідомий каталог Rodos");
+const outputStem = catalog === "cortes" ? "rodos-cortes-official-configurations" : catalog === "cortes-milling" ? "rodos-cortes-milling-configurations" : catalog === "cortes-alum" ? "rodos-cortes-alum-configurations" : catalog === "cortes-inside" ? "rodos-cortes-inside-configurations" : catalog === "loft" ? "rodos-loft-configurations" : catalog === "loft-inside" ? "rodos-loft-inside-configurations" : catalog === "siena" ? "rodos-siena-configurations" : catalog === "style" ? "rodos-style-configurations" : catalog === "royal" ? "rodos-royal-configurations" : catalog === "delux" ? "rodos-delux-configurations" : catalog === "liberta" ? "rodos-liberta-configurations" : catalog === "modern" ? "rodos-modern-configurations" : catalog === "modern-inside" ? "rodos-modern-inside-configurations" : catalog === "woodmix" ? "rodos-woodmix-configurations" : "rodos-atlantic-official-configurations";
+const collectionLabel = catalog === "cortes" ? "Rodos Cortes" : catalog === "cortes-milling" ? "Rodos Cortes Prima фрезерування" : catalog === "cortes-alum" ? "Rodos Cortes Prima Alum" : catalog === "cortes-inside" ? "Rodos Cortes INSIDE" : catalog === "loft" ? "Rodos Loft" : catalog === "loft-inside" ? "Rodos Loft INSIDE" : catalog === "siena" ? "Rodos Siena" : catalog === "style" ? "Rodos Style" : catalog === "royal" ? "Rodos Royal шпон" : catalog === "delux" ? "Rodos DELUX" : catalog === "liberta" ? "Rodos Liberta" : catalog === "modern" ? "Rodos Modern" : catalog === "modern-inside" ? "Rodos Modern INSIDE" : catalog === "woodmix" ? "Rodos Woodmix" : "Rodos Atlantic";
+const sourceModels = catalog === "cortes" ? cortesModels : catalog === "cortes-milling" ? cortesMillingModels : catalog === "cortes-alum" ? cortesAlumModels : catalog === "cortes-inside" ? cortesInsideModels : catalog === "loft" ? loftModels : catalog === "loft-inside" ? loftInsideModels : catalog === "siena" ? sienaModels : catalog === "style" ? styleModels : catalog === "royal" ? royalModels : catalog === "delux" ? deluxModels : catalog === "liberta" ? libertaModels : catalog === "modern" ? modernModels : catalog === "modern-inside" ? modernInsideModels : catalog === "woodmix" ? woodmixModels : atlanticModels;
 const models = sourceModels.filter((model) => !only.size || only.has(model.code));
 const headers = { "user-agent": "Mozilla/5.0 (compatible; NashiDveriCatalog/1.0)", "accept-language": "uk-UA,uk;q=0.9" };
 const htmlDecode = (value = "") => value.replace(/&quot;/g, '"').replace(/&amp;/g, "&").replace(/&#039;|&#39;/g, "'").replace(/&nbsp;/g, " ").trim();
@@ -87,6 +93,18 @@ const sql = (value) => `'${String(value ?? "").replace(/'/g, "''")}'`;
 const pause = () => new Promise((resolve) => setTimeout(resolve, delayMs));
 const uniqueByLabel = (items) => [...new Map(items.map((item) => [item.label, item])).values()];
 const translateColor = (value) => clean(value)
+  .replace(/^Тёмно серый BLK$/iu, "Темно-сірий BLK")
+  .replace(/^Тёмно серый$/iu, "Темно-сірий")
+  .replace(/^Белый мат \(ПВХ\) BLK$/iu, "Білий мат (ПВХ) BLK")
+  .replace(/^Белый мат \(ПВХ\)$/iu, "Білий мат (ПВХ)")
+  .replace(/^Дримвуд серый BLK$/iu, "Дрімвуд сірий BLK")
+  .replace(/^Дримвуд серый$/iu, "Дрімвуд сірий")
+  .replace(/^Дримвуд тёмный BLK$/iu, "Дрімвуд темний BLK")
+  .replace(/^Дримвуд тёмный$/iu, "Дрімвуд темний")
+  .replace(/^Клён белый BLK$/iu, "Клен білий BLK")
+  .replace(/^Клен белый$/iu, "Клен білий")
+  .replace(/^Светло серый BLK$/iu, "Світло-сірий BLK")
+  .replace(/^Сосна Крем BLK$/iu, "Сосна крем BLK")
   .replace(/^Палисандр$/iu, "Палісандр")
   .replace(/^Орех$/iu, "Горіх")
   .replace(/^Дуб Белый$/iu, "Білий дуб")
@@ -133,7 +151,7 @@ async function fetchWithRetry(url, options = {}) {
 function parsePage(html, model) {
   const productId = html.match(/getPImages&product_id=(\d+)/)?.[1];
   if (!productId) throw new Error(`${model.code}: не знайдено product_id`);
-  const colorStart = html.search(/<div class="option-name">Цвет\s*<\/div>/iu);
+  const colorStart = html.search(/<div class="option-name">(?:Цвет|Колір)\s*<\/div>/iu);
   const colorEnd = html.indexOf("</script>", colorStart);
   const colorHtml = html.slice(colorStart, colorEnd);
   const colors = uniqueByLabel(Array.from(colorHtml.matchAll(/<label[^>]*title="([^"]+)"[^>]*>[\s\S]*?<input[^>]*name="option\[(\d+)\]"[^>]*value="([^"]+)"[\s\S]*?<img[^>]*src="([^"]+)"/giu), (match) => ({ label: translateColor(match[1]), optionId: match[2], value: match[3], swatch: htmlDecode(match[4]) })));
@@ -141,12 +159,13 @@ function parsePage(html, model) {
   const typeEnd = html.indexOf("</script>", typeStart);
   const typeHtml = html.slice(typeStart, typeEnd);
   const configurations = uniqueByLabel(Array.from(typeHtml.matchAll(/<input[^>]*name="option\[(\d+)\]"[^>]*value="([^"]+)"[^>]*[\s\S]*?<span class="radio-name2">([^<]+)<\/span>/giu), (match) => ({ label: translateConfiguration(match[3]), optionId: match[1], value: match[2] })));
-  if (!colors.length || !configurations.length) throw new Error(`${model.code}: не знайдено кольори або види полотна`);
+  if (!colors.length) throw new Error(`${model.code}: не знайдено кольори`);
   return { productId, colors, configurations };
 }
 
 async function imagesForSelection(model, productId, color, configuration) {
-  const params = new URLSearchParams({ [`option[${color.optionId}]`]: color.value, [`option[${configuration.optionId}]`]: configuration.value, product_id: productId });
+  const params = new URLSearchParams({ [`option[${color.optionId}]`]: color.value, product_id: productId });
+  if (configuration) params.set(`option[${configuration.optionId}]`, configuration.value);
   const response = await fetchWithRetry(`https://rodos.ua/index.php?route=product/product/getPImages&product_id=${productId}`, {
     method: "POST",
     headers: { "content-type": "application/x-www-form-urlencoded", "x-requested-with": "XMLHttpRequest", referer: model.url },
@@ -157,6 +176,7 @@ async function imagesForSelection(model, productId, color, configuration) {
 }
 
 function imageFor(images, configuration, allowFirstImageFallback = false) {
+  if (!configuration) return images[0] || null;
   const patterns = configuration.label === "Глухе"
     ? [/-gluhoe-|gluhoe/iu]
     : configuration.label === "Напівскло"
@@ -175,20 +195,21 @@ for (const model of models) {
   const page = parsePage(html, model);
   const variants = [];
   for (const color of page.colors) {
-    for (const configuration of page.configurations) {
+    const modelConfigurations = page.configurations.length ? page.configurations : [null];
+    for (const configuration of modelConfigurations) {
       // Запитуємо Rodos окремо для кожної пари «колір + вид полотна».
       // Сайт виробника не завжди повертає фото напівскла, якщо першим
       // було обрано глухе полотно.
       const images = await imagesForSelection(model, page.productId, color, configuration);
       // Не підміняємо напівскло фотографією глухого полотна: якщо Rodos
       // не повернув точного знімка, варіант лишається без фото.
-      const image = imageFor(images, configuration, page.configurations.length === 1);
-      if (image) variants.push({ color: color.label, configuration: configuration.label, image });
+      const image = imageFor(images, configuration, !configuration || page.configurations.length === 1);
+      if (image) variants.push({ color: color.label, configuration: configuration?.label || null, image });
       await pause();
     }
   }
   const confirmedConfigurations = page.configurations.map(({ label }) => label).filter((label) => variants.some((variant) => variant.configuration === label));
-  if (!confirmedConfigurations.length) console.warn(`${model.code}: Rodos не віддав точних фото для видів: ${page.configurations.map(({ label }) => label).join(", ")}`);
+  if (page.configurations.length && !confirmedConfigurations.length) console.warn(`${model.code}: Rodos не віддав точних фото для видів: ${page.configurations.map(({ label }) => label).join(", ")}`);
   collected.push({ ...model, colors: page.colors.map(({ label, swatch }) => ({ label, swatch })), configurations: confirmedConfigurations, variants });
   console.log(`${model.code}: ${page.colors.length} кольорів × ${confirmedConfigurations.length} підтверджені види = ${variants.length} варіантів.`);
 }
@@ -211,9 +232,9 @@ for (const model of collected) {
   }
   for (let index = 0; index < model.variants.length; index += 1) {
     const variant = model.variants[index];
-    const selection = { color: variant.color, configuration: variant.configuration };
+    const selection = variant.configuration ? { color: variant.color, configuration: variant.configuration } : { color: variant.color };
     lines.push(`insert into public.product_variants (product_slug,selections,image_path,sort_order,is_active) values (${sql(model.slug)},${sql(JSON.stringify(selection))}::jsonb,${sql(variant.image)},${index + 1},true);`);
-    const key = `config:color=${encodeURIComponent(variant.color)}&configuration=${encodeURIComponent(variant.configuration)}:Фото`;
+    const key = `config:color=${encodeURIComponent(variant.color)}${variant.configuration ? `&configuration=${encodeURIComponent(variant.configuration)}` : ""}:Фото`;
     lines.push(`insert into public.product_media (product_slug,kind,label,image_path,sort_order) values (${sql(model.slug)},'gallery',${sql(key)},${sql(variant.image)},${1000 + index}) on conflict (product_slug,kind,image_path) do update set label = excluded.label, sort_order = excluded.sort_order;`);
   }
 }
@@ -240,9 +261,9 @@ for (const model of allCollected) {
   for (let index = 0; index < model.configurations.length; index += 1) allLines.push(`insert into public.product_options (product_slug,option_group,group_label,label,sort_order,is_active) values (${sql(model.slug)},'configuration','Вид полотна',${sql(model.configurations[index])},${index + 1},true);`);
   for (let index = 0; index < model.variants.length; index += 1) {
     const variant = model.variants[index];
-    const selection = { color: variant.color, configuration: variant.configuration };
+    const selection = variant.configuration ? { color: variant.color, configuration: variant.configuration } : { color: variant.color };
     allLines.push(`insert into public.product_variants (product_slug,selections,image_path,sort_order,is_active) values (${sql(model.slug)},${sql(JSON.stringify(selection))}::jsonb,${sql(variant.image)},${index + 1},true);`);
-    const key = `config:color=${encodeURIComponent(variant.color)}&configuration=${encodeURIComponent(variant.configuration)}:Фото`;
+    const key = `config:color=${encodeURIComponent(variant.color)}${variant.configuration ? `&configuration=${encodeURIComponent(variant.configuration)}` : ""}:Фото`;
     allLines.push(`insert into public.product_media (product_slug,kind,label,image_path,sort_order) values (${sql(model.slug)},'gallery',${sql(key)},${sql(variant.image)},${1000 + index}) on conflict (product_slug,kind,image_path) do update set label = excluded.label, sort_order = excluded.sort_order;`);
   }
 }
