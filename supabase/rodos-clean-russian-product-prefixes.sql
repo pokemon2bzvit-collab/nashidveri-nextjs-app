@@ -3,9 +3,9 @@
 begin;
 
 update public.products
-set name = btrim(regexp_replace(name, '^(Межкомнатная дверь|Межкомнатные двери)\\s+', '', 'i'))
+set name = btrim(regexp_replace(name, '^(Межкомнатная дверь|Межкомнатные двери)[[:space:]]+', '', 'i'))
 where brand = 'Rodos'
-  and name ~* '^(Межкомнатная дверь|Межкомнатные двери)\\s+';
+  and name ~* '^(Межкомнатная дверь|Межкомнатные двери)[[:space:]]+';
 
 commit;
 
