@@ -30,6 +30,13 @@ const categoryMarkers = [...html.matchAll(/.{0,100}(?:type_door|purpose|category
   .map((match) => clean(match[0]))
   .filter((value, index, list) => list.indexOf(value) === index)
   .slice(0, 25);
+const coverContexts = [...html.matchAll(/.{0,240}assets\/cover\/245x245\/.{0,240}/giu)]
+  .map((match) => clean(match[0]))
+  .slice(0, 8);
+const configurationHtml = (() => {
+  const index = html.indexOf("PF Securemme");
+  return index >= 0 ? html.slice(Math.max(0, index - 1400), index + 2400) : null;
+})();
 
 console.log(JSON.stringify({
   url,
@@ -42,4 +49,6 @@ console.log(JSON.stringify({
   hasSpecsWords: /характерист|товщина|замок|полотно|короб/iu.test(html),
   snippets,
   categoryMarkers,
+  coverContexts,
+  configurationHtml,
 }, null, 2));
