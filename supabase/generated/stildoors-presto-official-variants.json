@@ -1,0 +1,575 @@
+{
+  "variants": [
+    {
+      "productSlug": "stildoors-presto-aura-official",
+      "modelSlug": "aura",
+      "sourceUrl": "https://stildoors.com.ua/dveri/presto/aura/bila-emal-ral-9003",
+      "imagePath": "https://stildoors.com.ua/images/dveri/presto/aura/bila-emal-ral-9003/dveri-presto-aura-bila-emal-ral-9003.jpg",
+      "color": "біла емаль RAL 9003",
+      "glass": "без скла",
+      "selections": {
+        "color": "біла емаль RAL 9003"
+      }
+    },
+    {
+      "productSlug": "stildoors-presto-aura-official",
+      "modelSlug": "aura",
+      "sourceUrl": "https://stildoors.com.ua/dveri/presto/aura/ral-7047-svitlo-siriy",
+      "imagePath": "https://stildoors.com.ua/images/dveri/presto/aura/ral-7047-svitlo-siriy/dveri-presto-aura-ral-7047-svitlo-siriy.jpg",
+      "color": "RAL 7047 світло-сірий",
+      "glass": "без скла",
+      "selections": {
+        "color": "RAL 7047 світло-сірий"
+      }
+    },
+    {
+      "productSlug": "stildoors-presto-aura-official",
+      "modelSlug": "aura",
+      "sourceUrl": "https://stildoors.com.ua/dveri/presto/aura/siriy-ral-7036",
+      "imagePath": "https://stildoors.com.ua/images/dveri/presto/aura/siriy-ral-7036/dveri-presto-aura-siriy-ral-7036.jpg",
+      "color": "сірий RAL 7036",
+      "glass": "без скла",
+      "selections": {
+        "color": "сірий RAL 7036"
+      }
+    },
+    {
+      "productSlug": "stildoors-presto-aura-official",
+      "modelSlug": "aura",
+      "sourceUrl": "https://stildoors.com.ua/dveri/presto/aura/taup",
+      "imagePath": "https://stildoors.com.ua/images/dveri/presto/aura/taup/dveri-presto-aura-taup.jpg",
+      "color": "тауп",
+      "glass": "без скла",
+      "selections": {
+        "color": "тауп"
+      }
+    },
+    {
+      "productSlug": "stildoors-presto-aura-official",
+      "modelSlug": "aura",
+      "sourceUrl": "https://stildoors.com.ua/dveri/presto/aura/shampan-ral-1013",
+      "imagePath": "https://stildoors.com.ua/images/dveri/presto/aura/shampan-ral-1013/dveri-presto-aura-shampan-ral-1013.jpg",
+      "color": "шампань RAL 1013",
+      "glass": "без скла",
+      "selections": {
+        "color": "шампань RAL 1013"
+      }
+    },
+    {
+      "productSlug": "stildoors-presto-avanti-official",
+      "modelSlug": "avanti",
+      "sourceUrl": "https://stildoors.com.ua/dveri/presto/avanti/bila-emal-ral-9003",
+      "imagePath": "https://stildoors.com.ua/images/dveri/presto/avanti/bila-emal-ral-9003/dveri-presto-avanti-bila-emal-ral-9003.jpg",
+      "color": "біла емаль RAL 9003",
+      "glass": "без скла",
+      "selections": {
+        "color": "біла емаль RAL 9003"
+      }
+    },
+    {
+      "productSlug": "stildoors-presto-avanti-official",
+      "modelSlug": "avanti",
+      "sourceUrl": "https://stildoors.com.ua/dveri/presto/avanti/ral-7047-svitlo-siriy",
+      "imagePath": "https://stildoors.com.ua/images/dveri/presto/avanti/ral-7047-svitlo-siriy/dveri-presto-avanti-ral-7047-svitlo-siriy.jpg",
+      "color": "RAL 7047 світло-сірий",
+      "glass": "без скла",
+      "selections": {
+        "color": "RAL 7047 світло-сірий"
+      }
+    },
+    {
+      "productSlug": "stildoors-presto-avanti-official",
+      "modelSlug": "avanti",
+      "sourceUrl": "https://stildoors.com.ua/dveri/presto/avanti/siriy-ral-7036",
+      "imagePath": "https://stildoors.com.ua/images/dveri/presto/avanti/siriy-ral-7036/dveri-presto-avanti-siriy-ral-7036.jpg",
+      "color": "сірий RAL 7036",
+      "glass": "без скла",
+      "selections": {
+        "color": "сірий RAL 7036"
+      }
+    },
+    {
+      "productSlug": "stildoors-presto-avanti-official",
+      "modelSlug": "avanti",
+      "sourceUrl": "https://stildoors.com.ua/dveri/presto/avanti/taup",
+      "imagePath": "https://stildoors.com.ua/images/dveri/presto/avanti/taup/dveri-presto-avanti-taup.jpg",
+      "color": "тауп",
+      "glass": "без скла",
+      "selections": {
+        "color": "тауп"
+      }
+    },
+    {
+      "productSlug": "stildoors-presto-avanti-official",
+      "modelSlug": "avanti",
+      "sourceUrl": "https://stildoors.com.ua/dveri/presto/avanti/shampan-ral-1013",
+      "imagePath": "https://stildoors.com.ua/images/dveri/presto/avanti/shampan-ral-1013/dveri-presto-avanti-shampan-ral-1013.jpg",
+      "color": "шампань RAL 1013",
+      "glass": "без скла",
+      "selections": {
+        "color": "шампань RAL 1013"
+      }
+    },
+    {
+      "productSlug": "stildoors-presto-avanti-official",
+      "modelSlug": "avanti",
+      "sourceUrl": "https://stildoors.com.ua/dveri/presto/avanti/antratsit-ral-7016",
+      "imagePath": "https://stildoors.com.ua/images/dveri/presto/avanti/antratsit-ral-7016/dveri-presto-avanti-antratsit-ral-7016.jpg",
+      "color": "антрацит RAL 7016",
+      "glass": "без скла",
+      "selections": {
+        "color": "антрацит RAL 7016"
+      }
+    },
+    {
+      "productSlug": "stildoors-presto-diamond-official",
+      "modelSlug": "diamond",
+      "sourceUrl": "https://stildoors.com.ua/dveri/presto/diamond/bila-emal-ral-9003",
+      "imagePath": "https://stildoors.com.ua/images/dveri/presto/diamond/bila-emal-ral-9003/dveri-presto-diamond-bila-emal-ral-9003.jpg",
+      "color": "біла емаль RAL 9003",
+      "glass": "без скла",
+      "selections": {
+        "color": "біла емаль RAL 9003"
+      }
+    },
+    {
+      "productSlug": "stildoors-presto-diamond-official",
+      "modelSlug": "diamond",
+      "sourceUrl": "https://stildoors.com.ua/dveri/presto/diamond/ral-7047-svitlo-siriy",
+      "imagePath": "https://stildoors.com.ua/images/dveri/presto/diamond/ral-7047-svitlo-siriy/dveri-presto-diamond-ral-7047-svitlo-siriy.jpg",
+      "color": "RAL 7047 світло-сірий",
+      "glass": "без скла",
+      "selections": {
+        "color": "RAL 7047 світло-сірий"
+      }
+    },
+    {
+      "productSlug": "stildoors-presto-diamond-official",
+      "modelSlug": "diamond",
+      "sourceUrl": "https://stildoors.com.ua/dveri/presto/diamond/siriy-ral-7036",
+      "imagePath": "https://stildoors.com.ua/images/dveri/presto/diamond/siriy-ral-7036/dveri-presto-diamond-siriy-ral-7036.jpg",
+      "color": "сірий RAL 7036",
+      "glass": "без скла",
+      "selections": {
+        "color": "сірий RAL 7036"
+      }
+    },
+    {
+      "productSlug": "stildoors-presto-diamond-official",
+      "modelSlug": "diamond",
+      "sourceUrl": "https://stildoors.com.ua/dveri/presto/diamond/taup",
+      "imagePath": "https://stildoors.com.ua/images/dveri/presto/diamond/taup/dveri-presto-diamond-taup.jpg",
+      "color": "тауп",
+      "glass": "без скла",
+      "selections": {
+        "color": "тауп"
+      }
+    },
+    {
+      "productSlug": "stildoors-presto-diamond-official",
+      "modelSlug": "diamond",
+      "sourceUrl": "https://stildoors.com.ua/dveri/presto/diamond/shampan-ral-1013",
+      "imagePath": "https://stildoors.com.ua/images/dveri/presto/diamond/shampan-ral-1013/dveri-presto-diamond-shampan-ral-1013.jpg",
+      "color": "шампань RAL 1013",
+      "glass": "без скла",
+      "selections": {
+        "color": "шампань RAL 1013"
+      }
+    },
+    {
+      "productSlug": "stildoors-presto-elegante-official",
+      "modelSlug": "elegante",
+      "sourceUrl": "https://stildoors.com.ua/dveri/presto/elegante/bila-emal-ral-9003",
+      "imagePath": "https://stildoors.com.ua/images/dveri/presto/elegante/bila-emal-ral-9003/dveri-presto-elegante-bila-emal-ral-9003.jpg",
+      "color": "біла емаль RAL 9003",
+      "glass": "без скла",
+      "selections": {
+        "color": "біла емаль RAL 9003"
+      }
+    },
+    {
+      "productSlug": "stildoors-presto-elegante-official",
+      "modelSlug": "elegante",
+      "sourceUrl": "https://stildoors.com.ua/dveri/presto/elegante/ral-7047-svitlo-siriy",
+      "imagePath": "https://stildoors.com.ua/images/dveri/presto/elegante/ral-7047-svitlo-siriy/dveri-presto-elegante-ral-7047-svitlo-siriy.jpg",
+      "color": "RAL 7047 світло-сірий",
+      "glass": "без скла",
+      "selections": {
+        "color": "RAL 7047 світло-сірий"
+      }
+    },
+    {
+      "productSlug": "stildoors-presto-elegante-official",
+      "modelSlug": "elegante",
+      "sourceUrl": "https://stildoors.com.ua/dveri/presto/elegante/siriy-ral-7036",
+      "imagePath": "https://stildoors.com.ua/images/dveri/presto/elegante/siriy-ral-7036/dveri-presto-elegante-siriy-ral-7036.jpg",
+      "color": "сірий RAL 7036",
+      "glass": "без скла",
+      "selections": {
+        "color": "сірий RAL 7036"
+      }
+    },
+    {
+      "productSlug": "stildoors-presto-elegante-official",
+      "modelSlug": "elegante",
+      "sourceUrl": "https://stildoors.com.ua/dveri/presto/elegante/taup",
+      "imagePath": "https://stildoors.com.ua/images/dveri/presto/elegante/taup/dveri-presto-elegante-taup.jpg",
+      "color": "тауп",
+      "glass": "без скла",
+      "selections": {
+        "color": "тауп"
+      }
+    },
+    {
+      "productSlug": "stildoors-presto-elegante-official",
+      "modelSlug": "elegante",
+      "sourceUrl": "https://stildoors.com.ua/dveri/presto/elegante/shampan-ral-1013",
+      "imagePath": "https://stildoors.com.ua/images/dveri/presto/elegante/shampan-ral-1013/dveri-presto-elegante-shampan-ral-1013.jpg",
+      "color": "шампань RAL 1013",
+      "glass": "без скла",
+      "selections": {
+        "color": "шампань RAL 1013"
+      }
+    },
+    {
+      "productSlug": "stildoors-presto-fargo-official",
+      "modelSlug": "fargo",
+      "sourceUrl": "https://stildoors.com.ua/dveri/presto/fargo/bila-emal-ral-9003",
+      "imagePath": "https://stildoors.com.ua/images/dveri/presto/fargo/bila-emal-ral-9003/dveri-presto-fargo-bila-emal-ral-9003.jpg",
+      "color": "біла емаль RAL 9003",
+      "glass": "без скла",
+      "selections": {
+        "color": "біла емаль RAL 9003"
+      }
+    },
+    {
+      "productSlug": "stildoors-presto-fargo-official",
+      "modelSlug": "fargo",
+      "sourceUrl": "https://stildoors.com.ua/dveri/presto/fargo/ral-7047-svitlo-siriy",
+      "imagePath": "https://stildoors.com.ua/images/dveri/presto/fargo/ral-7047-svitlo-siriy/dveri-presto-fargo-ral-7047-svitlo-siriy.jpg",
+      "color": "RAL 7047 світло-сірий",
+      "glass": "без скла",
+      "selections": {
+        "color": "RAL 7047 світло-сірий"
+      }
+    },
+    {
+      "productSlug": "stildoors-presto-fargo-official",
+      "modelSlug": "fargo",
+      "sourceUrl": "https://stildoors.com.ua/dveri/presto/fargo/siriy-ral-7036",
+      "imagePath": "https://stildoors.com.ua/images/dveri/presto/fargo/siriy-ral-7036/dveri-presto-fargo-siriy-ral-7036.jpg",
+      "color": "сірий RAL 7036",
+      "glass": "без скла",
+      "selections": {
+        "color": "сірий RAL 7036"
+      }
+    },
+    {
+      "productSlug": "stildoors-presto-fargo-official",
+      "modelSlug": "fargo",
+      "sourceUrl": "https://stildoors.com.ua/dveri/presto/fargo/taup",
+      "imagePath": "https://stildoors.com.ua/images/dveri/presto/fargo/taup/dveri-presto-fargo-taup.jpg",
+      "color": "тауп",
+      "glass": "без скла",
+      "selections": {
+        "color": "тауп"
+      }
+    },
+    {
+      "productSlug": "stildoors-presto-fargo-official",
+      "modelSlug": "fargo",
+      "sourceUrl": "https://stildoors.com.ua/dveri/presto/fargo/shampan-ral-1013",
+      "imagePath": "https://stildoors.com.ua/images/dveri/presto/fargo/shampan-ral-1013/dveri-presto-fargo-shampan-ral-1013.jpg",
+      "color": "шампань RAL 1013",
+      "glass": "без скла",
+      "selections": {
+        "color": "шампань RAL 1013"
+      }
+    },
+    {
+      "productSlug": "stildoors-presto-grazia-official",
+      "modelSlug": "grazia",
+      "sourceUrl": "https://stildoors.com.ua/dveri/presto/grazia/bila-emal-ral-9003/bez-skla",
+      "imagePath": "https://stildoors.com.ua/images/dveri/presto/grazia/bila-emal-ral-9003/bez-skla/dveri-presto-grazia-bila-emal-ral-9003-bez-skla.jpg",
+      "color": "біла емаль RAL 9003",
+      "glass": "без скла",
+      "selections": {
+        "color": "біла емаль RAL 9003"
+      }
+    },
+    {
+      "productSlug": "stildoors-presto-grazia-official",
+      "modelSlug": "grazia",
+      "sourceUrl": "https://stildoors.com.ua/dveri/presto/grazia/taup/bez-skla",
+      "imagePath": "https://stildoors.com.ua/images/dveri/presto/grazia/taup/bez-skla/dveri-presto-grazia-taup-bez-skla.jpg",
+      "color": "тауп",
+      "glass": "без скла",
+      "selections": {
+        "color": "тауп"
+      }
+    },
+    {
+      "productSlug": "stildoors-presto-grazia-official",
+      "modelSlug": "grazia",
+      "sourceUrl": "https://stildoors.com.ua/dveri/presto/grazia/shampan-ral-1013/bez-skla",
+      "imagePath": "https://stildoors.com.ua/images/dveri/presto/grazia/shampan-ral-1013/bez-skla/dveri-presto-grazia-shampan-ral-1013-bez-skla.jpg",
+      "color": "шампань RAL 1013",
+      "glass": "без скла",
+      "selections": {
+        "color": "шампань RAL 1013"
+      }
+    },
+    {
+      "productSlug": "stildoors-presto-grazia-glass-official",
+      "modelSlug": "grazia-glass",
+      "sourceUrl": "https://stildoors.com.ua/dveri/presto/grazia-glass/bila-emal-ral-9003/sklo-satin",
+      "imagePath": "https://stildoors.com.ua/images/dveri/presto/grazia-glass/bila-emal-ral-9003/sklo-satin/dveri-presto-grazia-glass-bila-emal-ral-9003-sklo-satin.jpg",
+      "color": "біла емаль RAL 9003",
+      "glass": "біле",
+      "selections": {
+        "color": "біла емаль RAL 9003",
+        "glass": "біле"
+      }
+    },
+    {
+      "productSlug": "stildoors-presto-grazia-glass-official",
+      "modelSlug": "grazia-glass",
+      "sourceUrl": "https://stildoors.com.ua/dveri/presto/grazia-glass/taup/sklo-satin",
+      "imagePath": "https://stildoors.com.ua/images/dveri/presto/grazia-glass/taup/sklo-satin/dveri-presto-grazia-glass-taup-sklo-satin.jpg",
+      "color": "тауп",
+      "glass": "біле",
+      "selections": {
+        "color": "тауп",
+        "glass": "біле"
+      }
+    },
+    {
+      "productSlug": "stildoors-presto-grazia-glass-official",
+      "modelSlug": "grazia-glass",
+      "sourceUrl": "https://stildoors.com.ua/dveri/presto/grazia-glass/shampan-ral-1013/sklo-satin",
+      "imagePath": "https://stildoors.com.ua/images/dveri/presto/grazia-glass/shampan-ral-1013/sklo-satin/dveri-presto-grazia-glass-shampan-ral-1013-sklo-satin.jpg",
+      "color": "шампань RAL 1013",
+      "glass": "біле",
+      "selections": {
+        "color": "шампань RAL 1013",
+        "glass": "біле"
+      }
+    },
+    {
+      "productSlug": "stildoors-presto-grazia-glass-official",
+      "modelSlug": "grazia-glass",
+      "sourceUrl": "https://stildoors.com.ua/dveri/presto/grazia-glass/bila-emal-ral-9003/sklo-romb-prozoriy",
+      "imagePath": "https://stildoors.com.ua/images/dveri/presto/grazia-glass/bila-emal-ral-9003/sklo-romb-prozoriy/dveri-presto-grazia-glass-bila-emal-ral-9003-sklo-romb-prozoriy.jpg",
+      "color": "біла емаль RAL 9003",
+      "glass": "з малюнком",
+      "selections": {
+        "color": "біла емаль RAL 9003",
+        "glass": "з малюнком"
+      }
+    },
+    {
+      "productSlug": "stildoors-presto-karyon-official",
+      "modelSlug": "karyon",
+      "sourceUrl": "https://stildoors.com.ua/dveri/presto/karyon/ral-7047-svitlo-siriy",
+      "imagePath": "https://stildoors.com.ua/images/dveri/presto/karyon/ral-7047-svitlo-siriy/dveri-presto-karyon-ral-7047-svitlo-siriy.jpg",
+      "color": "RAL 7047 світло-сірий",
+      "glass": "без скла",
+      "selections": {
+        "color": "RAL 7047 світло-сірий"
+      }
+    },
+    {
+      "productSlug": "stildoors-presto-karyon-official",
+      "modelSlug": "karyon",
+      "sourceUrl": "https://stildoors.com.ua/dveri/presto/karyon/bila-emal-ral-9003",
+      "imagePath": "https://stildoors.com.ua/images/dveri/presto/karyon/bila-emal-ral-9003/dveri-presto-karyon-bila-emal-ral-9003.jpg",
+      "color": "біла емаль RAL 9003",
+      "glass": "без скла",
+      "selections": {
+        "color": "біла емаль RAL 9003"
+      }
+    },
+    {
+      "productSlug": "stildoors-presto-karyon-official",
+      "modelSlug": "karyon",
+      "sourceUrl": "https://stildoors.com.ua/dveri/presto/karyon/siriy-ral-7036",
+      "imagePath": "https://stildoors.com.ua/images/dveri/presto/karyon/siriy-ral-7036/dveri-presto-karyon-siriy-ral-7036.jpg",
+      "color": "сірий RAL 7036",
+      "glass": "без скла",
+      "selections": {
+        "color": "сірий RAL 7036"
+      }
+    },
+    {
+      "productSlug": "stildoors-presto-karyon-official",
+      "modelSlug": "karyon",
+      "sourceUrl": "https://stildoors.com.ua/dveri/presto/karyon/taup",
+      "imagePath": "https://stildoors.com.ua/images/dveri/presto/karyon/taup/dveri-presto-karyon-taup.jpg",
+      "color": "тауп",
+      "glass": "без скла",
+      "selections": {
+        "color": "тауп"
+      }
+    },
+    {
+      "productSlug": "stildoors-presto-karyon-official",
+      "modelSlug": "karyon",
+      "sourceUrl": "https://stildoors.com.ua/dveri/presto/karyon/shampan-ral-1013",
+      "imagePath": "https://stildoors.com.ua/images/dveri/presto/karyon/shampan-ral-1013/dveri-presto-karyon-shampan-ral-1013.jpg",
+      "color": "шампань RAL 1013",
+      "glass": "без скла",
+      "selections": {
+        "color": "шампань RAL 1013"
+      }
+    },
+    {
+      "productSlug": "stildoors-presto-palladio-official",
+      "modelSlug": "palladio",
+      "sourceUrl": "https://stildoors.com.ua/dveri/presto/palladio/bila-emal-ral-9003",
+      "imagePath": "https://stildoors.com.ua/images/dveri/presto/palladio/bila-emal-ral-9003/dveri-presto-palladio-bila-emal-ral-9003.jpg",
+      "color": "біла емаль RAL 9003",
+      "glass": "без скла",
+      "selections": {
+        "color": "біла емаль RAL 9003"
+      }
+    },
+    {
+      "productSlug": "stildoors-presto-palladio-official",
+      "modelSlug": "palladio",
+      "sourceUrl": "https://stildoors.com.ua/dveri/presto/palladio/taup",
+      "imagePath": "https://stildoors.com.ua/images/dveri/presto/palladio/taup/dveri-presto-palladio-taup.jpg",
+      "color": "тауп",
+      "glass": "без скла",
+      "selections": {
+        "color": "тауп"
+      }
+    },
+    {
+      "productSlug": "stildoors-presto-palladio-official",
+      "modelSlug": "palladio",
+      "sourceUrl": "https://stildoors.com.ua/dveri/presto/palladio/shampan-ral-1013",
+      "imagePath": "https://stildoors.com.ua/images/dveri/presto/palladio/shampan-ral-1013/dveri-presto-palladio-shampan-ral-1013.jpg",
+      "color": "шампань RAL 1013",
+      "glass": "без скла",
+      "selections": {
+        "color": "шампань RAL 1013"
+      }
+    },
+    {
+      "productSlug": "stildoors-presto-toledo-official",
+      "modelSlug": "toledo",
+      "sourceUrl": "https://stildoors.com.ua/dveri/presto/toledo/bila-emal-ral-9003",
+      "imagePath": "https://stildoors.com.ua/images/dveri/presto/toledo/bila-emal-ral-9003/dveri-presto-toledo-bila-emal-ral-9003.jpg",
+      "color": "біла емаль RAL 9003",
+      "glass": "без скла",
+      "selections": {
+        "color": "біла емаль RAL 9003"
+      }
+    },
+    {
+      "productSlug": "stildoors-presto-toledo-official",
+      "modelSlug": "toledo",
+      "sourceUrl": "https://stildoors.com.ua/dveri/presto/toledo/ral-7047-svitlo-siriy",
+      "imagePath": "https://stildoors.com.ua/images/dveri/presto/toledo/ral-7047-svitlo-siriy/dveri-presto-toledo-ral-7047-svitlo-siriy.jpg",
+      "color": "RAL 7047 світло-сірий",
+      "glass": "без скла",
+      "selections": {
+        "color": "RAL 7047 світло-сірий"
+      }
+    },
+    {
+      "productSlug": "stildoors-presto-toledo-official",
+      "modelSlug": "toledo",
+      "sourceUrl": "https://stildoors.com.ua/dveri/presto/toledo/siriy-ral-7036",
+      "imagePath": "https://stildoors.com.ua/images/dveri/presto/toledo/siriy-ral-7036/dveri-presto-toledo-siriy-ral-7036.jpg",
+      "color": "сірий RAL 7036",
+      "glass": "без скла",
+      "selections": {
+        "color": "сірий RAL 7036"
+      }
+    },
+    {
+      "productSlug": "stildoors-presto-toledo-official",
+      "modelSlug": "toledo",
+      "sourceUrl": "https://stildoors.com.ua/dveri/presto/toledo/taup",
+      "imagePath": "https://stildoors.com.ua/images/dveri/presto/toledo/taup/dveri-presto-toledo-taup.jpg",
+      "color": "тауп",
+      "glass": "без скла",
+      "selections": {
+        "color": "тауп"
+      }
+    },
+    {
+      "productSlug": "stildoors-presto-toledo-official",
+      "modelSlug": "toledo",
+      "sourceUrl": "https://stildoors.com.ua/dveri/presto/toledo/shampan-ral-1013",
+      "imagePath": "https://stildoors.com.ua/images/dveri/presto/toledo/shampan-ral-1013/dveri-presto-toledo-shampan-ral-1013.jpg",
+      "color": "шампань RAL 1013",
+      "glass": "без скла",
+      "selections": {
+        "color": "шампань RAL 1013"
+      }
+    },
+    {
+      "productSlug": "stildoors-presto-wilton-official",
+      "modelSlug": "wilton",
+      "sourceUrl": "https://stildoors.com.ua/dveri/presto/wilton/ral-7047-svitlo-siriy/sklo-chorne",
+      "imagePath": "https://stildoors.com.ua/images/dveri/presto/wilton/ral-7047-svitlo-siriy/sklo-chorne/dveri-presto-wilton-ral-7047-svitlo-siriy-sklo-chorne.jpg",
+      "color": "RAL 7047 світло-сірий",
+      "glass": "чорне",
+      "selections": {
+        "color": "RAL 7047 світло-сірий",
+        "glass": "чорне"
+      }
+    },
+    {
+      "productSlug": "stildoors-presto-wilton-official",
+      "modelSlug": "wilton",
+      "sourceUrl": "https://stildoors.com.ua/dveri/presto/wilton/bila-emal-ral-9003/sklo-chorne",
+      "imagePath": "https://stildoors.com.ua/images/dveri/presto/wilton/bila-emal-ral-9003/sklo-chorne/dveri-presto-wilton-bila-emal-ral-9003-sklo-chorne.jpg",
+      "color": "біла емаль RAL 9003",
+      "glass": "чорне",
+      "selections": {
+        "color": "біла емаль RAL 9003",
+        "glass": "чорне"
+      }
+    },
+    {
+      "productSlug": "stildoors-presto-wilton-official",
+      "modelSlug": "wilton",
+      "sourceUrl": "https://stildoors.com.ua/dveri/presto/wilton/siriy-ral-7036/sklo-chorne",
+      "imagePath": "https://stildoors.com.ua/images/dveri/presto/wilton/siriy-ral-7036/sklo-chorne/dveri-presto-wilton-siriy-ral-7036-sklo-chorne.jpg",
+      "color": "сірий RAL 7036",
+      "glass": "чорне",
+      "selections": {
+        "color": "сірий RAL 7036",
+        "glass": "чорне"
+      }
+    },
+    {
+      "productSlug": "stildoors-presto-wilton-official",
+      "modelSlug": "wilton",
+      "sourceUrl": "https://stildoors.com.ua/dveri/presto/wilton/taup/sklo-chorne",
+      "imagePath": "https://stildoors.com.ua/images/dveri/presto/wilton/taup/sklo-chorne/dveri-presto-wilton-taup-sklo-chorne.jpg",
+      "color": "тауп",
+      "glass": "чорне",
+      "selections": {
+        "color": "тауп",
+        "glass": "чорне"
+      }
+    },
+    {
+      "productSlug": "stildoors-presto-wilton-official",
+      "modelSlug": "wilton",
+      "sourceUrl": "https://stildoors.com.ua/dveri/presto/wilton/shampan-ral-1013/sklo-chorne",
+      "imagePath": "https://stildoors.com.ua/images/dveri/presto/wilton/shampan-ral-1013/sklo-chorne/dveri-presto-wilton-shampan-ral-1013-sklo-chorne.jpg",
+      "color": "шампань RAL 1013",
+      "glass": "чорне",
+      "selections": {
+        "color": "шампань RAL 1013",
+        "glass": "чорне"
+      }
+    }
+  ],
+  "count": 51
+}
