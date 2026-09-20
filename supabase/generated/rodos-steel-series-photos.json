@@ -1,0 +1,674 @@
+[
+  {
+    "slug": "rodos-official-4tei69",
+    "model": "BAS003",
+    "purpose": "Вулиця",
+    "selections": []
+  },
+  {
+    "slug": "rodos-official-1967uo6",
+    "model": "F104",
+    "purpose": "Вулиця",
+    "selections": [
+      {
+        "series": "Line Street",
+        "image": "https://rodos.ua/image/cache/catalog/Ral%205009-1742205234-1000x1000.jpg"
+      }
+    ]
+  },
+  {
+    "slug": "rodos-official-1dehbo9",
+    "model": "F120",
+    "purpose": "Вулиця",
+    "selections": [
+      {
+        "series": "Premium",
+        "image": "https://rodos.ua/image/cache/catalog/f-120-%20-1671700221-1000x1000.jpg"
+      }
+    ]
+  },
+  {
+    "slug": "rodos-official-12se1to",
+    "model": "F134",
+    "purpose": "Вулиця",
+    "selections": [
+      {
+        "series": "Premium",
+        "image": "https://rodos.ua/image/cache/catalog/F%20134%206005-1671618072-1000x1000.jpg"
+      }
+    ]
+  },
+  {
+    "slug": "rodos-official-wf8un8",
+    "model": "F135",
+    "purpose": "Вулиця",
+    "selections": [
+      {
+        "series": "Standard",
+        "image": "https://rodos.ua/image/cache/catalog/F-135%20STANDART%20St%20%206403%20%2B%20-1671781003-1000x1000.jpg"
+      }
+    ]
+  },
+  {
+    "slug": "rodos-official-1e09xs4",
+    "model": "F142",
+    "purpose": "Вулиця",
+    "selections": []
+  },
+  {
+    "slug": "rodos-official-1xt8tyb",
+    "model": "F145",
+    "purpose": "Вулиця",
+    "selections": [
+      {
+        "series": "Standard",
+        "image": "https://rodos.ua/image/cache/catalog/F-145%20oreh-1673247424-1000x1000.jpg"
+      }
+    ]
+  },
+  {
+    "slug": "rodos-official-14vuo2p",
+    "model": "F147",
+    "purpose": "Вулиця",
+    "selections": [
+      {
+        "series": "Standard",
+        "image": "https://rodos.ua/image/cache/catalog/f%20147%20-1673250846-1000x1000.jpg"
+      }
+    ]
+  },
+  {
+    "slug": "rodos-official-k28dv3",
+    "model": "F149",
+    "purpose": "Вулиця",
+    "selections": [
+      {
+        "series": "Standard",
+        "image": "https://rodos.ua/image/cache/catalog/F%20149%206005-1673260234-1000x1000.jpg"
+      }
+    ]
+  },
+  {
+    "slug": "rodos-official-1fjhft3",
+    "model": "F150",
+    "purpose": "Вулиця",
+    "selections": [
+      {
+        "series": "Standard",
+        "image": "https://rodos.ua/image/cache/catalog/f%20150%209004-1673262678-1000x1000.jpg"
+      }
+    ]
+  },
+  {
+    "slug": "rodos-official-o7nhtx",
+    "model": "F152",
+    "purpose": "Вулиця",
+    "selections": [
+      {
+        "series": "Standard",
+        "image": "https://rodos.ua/image/cache/catalog/f%20152%20%20-1673267294-1000x1000.jpg"
+      }
+    ]
+  },
+  {
+    "slug": "rodos-official-17fwgys",
+    "model": "F153",
+    "purpose": "Вулиця",
+    "selections": [
+      {
+        "series": "Standard",
+        "image": "https://rodos.ua/image/cache/catalog/f%20153%203013-1673270614-1000x1000.jpg"
+      }
+    ]
+  },
+  {
+    "slug": "rodos-official-d9i0ld",
+    "model": "F156",
+    "purpose": "Вулиця",
+    "selections": [
+      {
+        "series": "Standard",
+        "image": "https://rodos.ua/image/cache/catalog/f%20156%20%20-1684304937-1000x1000.jpg"
+      }
+    ]
+  },
+  {
+    "slug": "rodos-official-whqzq8",
+    "model": "F157",
+    "purpose": "Вулиця",
+    "selections": [
+      {
+        "series": "Standard",
+        "image": "https://rodos.ua/image/cache/catalog/f%20157%206005-1673353039-1000x1000.jpg"
+      }
+    ]
+  },
+  {
+    "slug": "rodos-official-1pvfkgf",
+    "model": "F158",
+    "purpose": "Вулиця",
+    "selections": [
+      {
+        "series": "Standard",
+        "image": "https://rodos.ua/image/cache/catalog/F-158%20%20-1673358239-1000x1000.jpg"
+      }
+    ]
+  },
+  {
+    "slug": "rodos-official-175bajy",
+    "model": "F159",
+    "purpose": "Вулиця",
+    "selections": [
+      {
+        "series": "Standard",
+        "image": "https://rodos.ua/image/cache/catalog/f%20159%207031-1673360490-1000x1000.jpg"
+      }
+    ]
+  },
+  {
+    "slug": "rodos-official-159w5xg",
+    "model": "F160",
+    "purpose": "Вулиця",
+    "selections": [
+      {
+        "series": "Standard",
+        "image": "https://rodos.ua/image/cache/catalog/F%20160%206112-1673361257-1000x1000.jpg"
+      }
+    ]
+  },
+  {
+    "slug": "rodos-official-t1smyu",
+    "model": "F162",
+    "purpose": "Вулиця",
+    "selections": [
+      {
+        "series": "Standard",
+        "image": "https://rodos.ua/image/cache/catalog/f%20162%203013-1673420008-1000x1000.jpg"
+      }
+    ]
+  },
+  {
+    "slug": "rodos-official-1g84gkn",
+    "model": "F163",
+    "purpose": "Вулиця",
+    "selections": [
+      {
+        "series": "Standard",
+        "image": "https://rodos.ua/image/cache/catalog/f%20163%207033-1673422001-1000x1000.jpg"
+      }
+    ]
+  },
+  {
+    "slug": "rodos-official-i3n5qa",
+    "model": "F166",
+    "purpose": "Вулиця",
+    "selections": [
+      {
+        "series": "Standard",
+        "image": "https://rodos.ua/image/cache/catalog/37610509-3628-42ad-9f7d-79389779b910-1749726966-1000x1000.jpg"
+      }
+    ]
+  },
+  {
+    "slug": "rodos-official-pstrrw",
+    "model": "F100",
+    "purpose": "Квартира",
+    "selections": [
+      {
+        "series": "Line Street",
+        "image": "https://rodos.ua/image/cache/catalog/.jpg-1624445393-1000x1000.jpg"
+      },
+      {
+        "series": "Standard",
+        "image": "https://rodos.ua/image/cache/catalog/.jpg-1624445393-1000x1000.jpg"
+      },
+      {
+        "series": "Premium",
+        "image": "https://rodos.ua/image/cache/catalog/.jpg-1624445393-1000x1000.jpg"
+      }
+    ]
+  },
+  {
+    "slug": "rodos-official-1n92eah",
+    "model": "F101",
+    "purpose": "Квартира",
+    "selections": [
+      {
+        "series": "Line Street",
+        "image": "https://rodos.ua/image/cache/catalog/f%20101%20premium%20sapfir%20soft-1625736052-1000x1000.jpg"
+      },
+      {
+        "series": "Standard",
+        "image": "https://rodos.ua/image/cache/catalog/f%20101%20premium%20sapfir%20soft-1625736052-1000x1000.jpg"
+      },
+      {
+        "series": "Premium",
+        "image": "https://rodos.ua/image/cache/catalog/f%20101%20premium%20sapfir%20soft-1625736052-1000x1000.jpg"
+      }
+    ]
+  },
+  {
+    "slug": "rodos-official-1n92eaj",
+    "model": "F103",
+    "purpose": "Квартира",
+    "selections": [
+      {
+        "series": "Line Street",
+        "image": "https://rodos.ua/image/cache/catalog/F-103%20basic%20%20-1626935912-1000x1000.jpg"
+      },
+      {
+        "series": "Premium",
+        "image": "https://rodos.ua/image/cache/catalog/F-103%20basic%20%20-1626935912-1000x1000.jpg"
+      }
+    ]
+  },
+  {
+    "slug": "rodos-official-t78k9s",
+    "model": "F104",
+    "purpose": "Квартира",
+    "selections": [
+      {
+        "series": "Standard",
+        "image": "https://rodos.ua/image/cache/catalog/f%20104%20premium%20oreh-1644234065-1000x1000.jpg"
+      },
+      {
+        "series": "Premium",
+        "image": "https://rodos.ua/image/cache/catalog/f%20104%20premium%20oreh-1644234065-1000x1000.jpg"
+      }
+    ]
+  },
+  {
+    "slug": "rodos-official-1n92eal",
+    "model": "F105",
+    "purpose": "Квартира",
+    "selections": [
+      {
+        "series": "Line Street",
+        "image": "https://rodos.ua/image/cache/catalog/f%20105%20basic%20dub%20temnuy-1631269633-1000x1000.jpg"
+      },
+      {
+        "series": "Standard",
+        "image": "https://rodos.ua/image/cache/catalog/f%20105%20basic%20dub%20temnuy-1631269633-1000x1000.jpg"
+      },
+      {
+        "series": "Premium",
+        "image": "https://rodos.ua/image/cache/catalog/f%20105%20basic%20dub%20temnuy-1631269633-1000x1000.jpg"
+      }
+    ]
+  },
+  {
+    "slug": "rodos-official-1n92eam",
+    "model": "F106",
+    "purpose": "Квартира",
+    "selections": [
+      {
+        "series": "Line Street",
+        "image": "https://rodos.ua/image/cache/catalog/f%20106%20basic%20%20%20-1631522117-1000x1000.jpg"
+      },
+      {
+        "series": "Standard",
+        "image": "https://rodos.ua/image/cache/catalog/f%20106%20basic%20%20%20-1631522117-1000x1000.jpg"
+      },
+      {
+        "series": "Premium",
+        "image": "https://rodos.ua/image/cache/catalog/f%20106%20basic%20%20%20-1631522117-1000x1000.jpg"
+      }
+    ]
+  },
+  {
+    "slug": "rodos-official-1n92ean",
+    "model": "F107",
+    "purpose": "Квартира",
+    "selections": [
+      {
+        "series": "Line Street",
+        "image": "https://rodos.ua/image/cache/catalog/f%20107%20basic%20akaciyab%20temnaya-1631600074-1000x1000.jpg"
+      },
+      {
+        "series": "Standard",
+        "image": "https://rodos.ua/image/cache/catalog/f%20107%20basic%20akaciyab%20temnaya-1631600074-1000x1000.jpg"
+      },
+      {
+        "series": "Premium",
+        "image": "https://rodos.ua/image/cache/catalog/f%20107%20basic%20akaciyab%20temnaya-1631600074-1000x1000.jpg"
+      }
+    ]
+  },
+  {
+    "slug": "rodos-official-1n92ea8",
+    "model": "F108",
+    "purpose": "Квартира",
+    "selections": [
+      {
+        "series": "Standard",
+        "image": "https://rodos.ua/image/cache/catalog/f%20108%20%20basic%20%20-1631614289-1000x1000.jpg"
+      },
+      {
+        "series": "Premium",
+        "image": "https://rodos.ua/image/cache/catalog/f%20108%20%20basic%20%20-1631614289-1000x1000.jpg"
+      }
+    ]
+  },
+  {
+    "slug": "rodos-official-1n92ea9",
+    "model": "F109",
+    "purpose": "Квартира",
+    "selections": [
+      {
+        "series": "Line Street",
+        "image": "https://rodos.ua/image/cache/catalog/f%20109%20line%20%20-1634021751-1000x1000.jpg"
+      },
+      {
+        "series": "Standard",
+        "image": "https://rodos.ua/image/cache/catalog/f%20109%20line%20%20-1634021751-1000x1000.jpg"
+      },
+      {
+        "series": "Premium",
+        "image": "https://rodos.ua/image/cache/catalog/f%20109%20line%20%20-1634021751-1000x1000.jpg"
+      }
+    ]
+  },
+  {
+    "slug": "rodos-official-1n92ed4",
+    "model": "F111",
+    "purpose": "Квартира",
+    "selections": [
+      {
+        "series": "Standard",
+        "image": "https://rodos.ua/image/cache/catalog/f%20111premium%20%20-1636440490-1000x1000.jpg"
+      },
+      {
+        "series": "Premium",
+        "image": "https://rodos.ua/image/cache/catalog/f%20111premium%20%20-1636440490-1000x1000.jpg"
+      }
+    ]
+  },
+  {
+    "slug": "rodos-official-1n92ed7",
+    "model": "F112",
+    "purpose": "Квартира",
+    "selections": [
+      {
+        "series": "Standard",
+        "image": "https://rodos.ua/image/cache/catalog/f%20112%20%20%20-1639394665-1000x1000.jpg"
+      },
+      {
+        "series": "Premium",
+        "image": "https://rodos.ua/image/cache/catalog/f%20112%20%20%20-1639394665-1000x1000.jpg"
+      }
+    ]
+  },
+  {
+    "slug": "rodos-official-1n92ed6",
+    "model": "F113",
+    "purpose": "Квартира",
+    "selections": [
+      {
+        "series": "Premium",
+        "image": "https://rodos.ua/image/cache/catalog/f113%20premium%20%20%20-1636454053-1000x1000.jpg"
+      }
+    ]
+  },
+  {
+    "slug": "rodos-official-1n92ed8",
+    "model": "F115",
+    "purpose": "Квартира",
+    "selections": [
+      {
+        "series": "Standard",
+        "image": "https://rodos.ua/image/cache/catalog/f%20115%20premium%20%20-1636443437-1000x1000.jpg"
+      },
+      {
+        "series": "Premium",
+        "image": "https://rodos.ua/image/cache/catalog/f%20115%20premium%20%20-1636443437-1000x1000.jpg"
+      }
+    ]
+  },
+  {
+    "slug": "rodos-official-t7avcz",
+    "model": "F116",
+    "purpose": "Квартира",
+    "selections": [
+      {
+        "series": "Standard",
+        "image": "https://rodos.ua/image/cache/catalog/f%20116%20dub%20beluy-1639477038-1000x1000.jpg"
+      },
+      {
+        "series": "Premium",
+        "image": "https://rodos.ua/image/cache/catalog/f%20116%20dub%20beluy-1639477038-1000x1000.jpg"
+      }
+    ]
+  },
+  {
+    "slug": "rodos-official-1n92eda",
+    "model": "F117",
+    "purpose": "Квартира",
+    "selections": [
+      {
+        "series": "Line Street",
+        "image": "https://rodos.ua/image/cache/catalog/F%20117%20basic%20%20-1683015829-1000x1000.jpg"
+      },
+      {
+        "series": "Standard",
+        "image": "https://rodos.ua/image/cache/catalog/F%20117%20basic%20%20-1683015829-1000x1000.jpg"
+      },
+      {
+        "series": "Premium",
+        "image": "https://rodos.ua/image/cache/catalog/F%20117%20basic%20%20-1683015829-1000x1000.jpg"
+      }
+    ]
+  },
+  {
+    "slug": "rodos-official-t7ak7h",
+    "model": "F118",
+    "purpose": "Квартира",
+    "selections": [
+      {
+        "series": "Standard",
+        "image": "https://rodos.ua/image/cache/catalog/f%20118%20premium%20-1644312866-1000x1000.jpg"
+      },
+      {
+        "series": "Premium",
+        "image": "https://rodos.ua/image/cache/catalog/f%20118%20premium%20-1644312866-1000x1000.jpg"
+      }
+    ]
+  },
+  {
+    "slug": "rodos-official-1n92ecw",
+    "model": "F119",
+    "purpose": "Квартира",
+    "selections": [
+      {
+        "series": "Standard",
+        "image": "https://rodos.ua/image/cache/catalog/F%20119%20basic%20%20-1634027254-2000x2000-1662104931-1000x1000.jpg"
+      },
+      {
+        "series": "Line Street",
+        "image": "https://rodos.ua/image/cache/catalog/F%20119%20basic%20%20-1634027254-2000x2000-1662104931-1000x1000.jpg"
+      },
+      {
+        "series": "Premium",
+        "image": "https://rodos.ua/image/cache/catalog/F%20119%20basic%20%20-1634027254-2000x2000-1662104931-1000x1000.jpg"
+      }
+    ]
+  },
+  {
+    "slug": "rodos-official-1n92ecb",
+    "model": "F121",
+    "purpose": "Квартира",
+    "selections": []
+  },
+  {
+    "slug": "rodos-official-1n92ec8",
+    "model": "F122",
+    "purpose": "Квартира",
+    "selections": []
+  },
+  {
+    "slug": "rodos-official-tb1ky9",
+    "model": "F123",
+    "purpose": "Квартира",
+    "selections": [
+      {
+        "series": "Standard",
+        "image": "https://rodos.ua/image/cache/catalog/%20%20premium-1659433097-1000x1000.jpg"
+      },
+      {
+        "series": "Premium",
+        "image": "https://rodos.ua/image/cache/catalog/%20%20premium-1659433097-1000x1000.jpg"
+      }
+    ]
+  },
+  {
+    "slug": "rodos-official-1n92ece",
+    "model": "F124",
+    "purpose": "Квартира",
+    "selections": []
+  },
+  {
+    "slug": "rodos-official-zm1srb",
+    "model": "F125",
+    "purpose": "Квартира",
+    "selections": []
+  },
+  {
+    "slug": "rodos-official-1n92ecd",
+    "model": "F127",
+    "purpose": "Квартира",
+    "selections": []
+  },
+  {
+    "slug": "rodos-official-t79u9a",
+    "model": "F128",
+    "purpose": "Квартира",
+    "selections": [
+      {
+        "series": "Standard",
+        "image": "https://rodos.ua/image/cache/catalog/f%20128%20premium%206908-1644309320-1000x1000.jpg"
+      },
+      {
+        "series": "Premium",
+        "image": "https://rodos.ua/image/cache/catalog/f%20128%20premium%206908-1644309320-1000x1000.jpg"
+      }
+    ]
+  },
+  {
+    "slug": "rodos-official-40hnht",
+    "model": "F132",
+    "purpose": "Квартира",
+    "selections": [
+      {
+        "series": "Line Street",
+        "image": "https://rodos.ua/image/cache/catalog/f-132---1749640438-1000x1000.jpg"
+      },
+      {
+        "series": "Standard",
+        "image": "https://rodos.ua/image/cache/catalog/f-132---1749640438-1000x1000.jpg"
+      },
+      {
+        "series": "Premium",
+        "image": "https://rodos.ua/image/cache/catalog/f-132---1749640438-1000x1000.jpg"
+      }
+    ]
+  },
+  {
+    "slug": "rodos-official-1n92eew",
+    "model": "F133",
+    "purpose": "Квартира",
+    "selections": [
+      {
+        "series": "Premium",
+        "image": "https://rodos.ua/image/cache/catalog/f%20133%20premium%206112-1644246679-1000x1000.jpg"
+      }
+    ]
+  },
+  {
+    "slug": "rodos-official-1n92ef1",
+    "model": "F136",
+    "purpose": "Квартира",
+    "selections": [
+      {
+        "series": "Standard",
+        "image": "https://rodos.ua/image/cache/catalog/F%20136%20PREMIUM%20-1645625367-1000x1000.jpg"
+      },
+      {
+        "series": "Premium",
+        "image": "https://rodos.ua/image/cache/catalog/F%20136%20PREMIUM%20-1645625367-1000x1000.jpg"
+      }
+    ]
+  },
+  {
+    "slug": "rodos-official-t7c91c",
+    "model": "F137",
+    "purpose": "Квартира",
+    "selections": [
+      {
+        "series": "Premium",
+        "image": "https://rodos.ua/image/cache/catalog/f%20137%20standart%20%20%206112-1706010786-1000x1000.jpg"
+      }
+    ]
+  },
+  {
+    "slug": "rodos-official-1n92eeq",
+    "model": "F139",
+    "purpose": "Квартира",
+    "selections": []
+  },
+  {
+    "slug": "rodos-official-1d7iwlx",
+    "model": "F141",
+    "purpose": "Квартира",
+    "selections": []
+  },
+  {
+    "slug": "rodos-official-xnjrte",
+    "model": "F146",
+    "purpose": "Квартира",
+    "selections": [
+      {
+        "series": "Standard",
+        "image": "https://rodos.ua/image/cache/catalog/f%20146%20%20-1673248511-1000x1000.jpg"
+      }
+    ]
+  },
+  {
+    "slug": "rodos-official-p31li4",
+    "model": "F148",
+    "purpose": "Квартира",
+    "selections": []
+  },
+  {
+    "slug": "rodos-official-tzo0vl",
+    "model": "F154",
+    "purpose": "Квартира",
+    "selections": []
+  },
+  {
+    "slug": "rodos-official-1qva99s",
+    "model": "F155",
+    "purpose": "Квартира",
+    "selections": []
+  },
+  {
+    "slug": "rodos-official-a08fvb",
+    "model": "F161",
+    "purpose": "Квартира",
+    "selections": [
+      {
+        "series": "Standard",
+        "image": "https://rodos.ua/image/cache/catalog/f%20161%20%20%20-1673418948-1000x1000.jpg"
+      }
+    ]
+  },
+  {
+    "slug": "rodos-official-1683sr4",
+    "model": "F166",
+    "purpose": "Квартира",
+    "selections": [
+      {
+        "series": "Standard",
+        "image": "https://rodos.ua/image/cache/catalog/8429db15-37f8-40db-8ab9-8d5d4aac09ad-1749725894-1000x1000.jpg"
+      }
+    ]
+  }
+]

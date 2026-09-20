@@ -1,0 +1,78 @@
+# Rodos Steel — фото за серіями
+
+- Точних прив’язок: **73**.
+- Моделей із хоча б одним фото серії: **44**.
+
+- F104 · Вулиця: Line Street
+- F120 · Вулиця: Premium
+- F134 · Вулиця: Premium
+- F135 · Вулиця: Standard
+- F145 · Вулиця: Standard
+- F147 · Вулиця: Standard
+- F149 · Вулиця: Standard
+- F150 · Вулиця: Standard
+- F152 · Вулиця: Standard
+- F153 · Вулиця: Standard
+- F156 · Вулиця: Standard
+- F157 · Вулиця: Standard
+- F158 · Вулиця: Standard
+- F159 · Вулиця: Standard
+- F160 · Вулиця: Standard
+- F162 · Вулиця: Standard
+- F163 · Вулиця: Standard
+- F166 · Вулиця: Standard
+- F100 · Квартира: Line Street
+- F100 · Квартира: Standard
+- F100 · Квартира: Premium
+- F101 · Квартира: Line Street
+- F101 · Квартира: Standard
+- F101 · Квартира: Premium
+- F103 · Квартира: Line Street
+- F103 · Квартира: Premium
+- F104 · Квартира: Standard
+- F104 · Квартира: Premium
+- F105 · Квартира: Line Street
+- F105 · Квартира: Standard
+- F105 · Квартира: Premium
+- F106 · Квартира: Line Street
+- F106 · Квартира: Standard
+- F106 · Квартира: Premium
+- F107 · Квартира: Line Street
+- F107 · Квартира: Standard
+- F107 · Квартира: Premium
+- F108 · Квартира: Standard
+- F108 · Квартира: Premium
+- F109 · Квартира: Line Street
+- F109 · Квартира: Standard
+- F109 · Квартира: Premium
+- F111 · Квартира: Standard
+- F111 · Квартира: Premium
+- F112 · Квартира: Standard
+- F112 · Квартира: Premium
+- F113 · Квартира: Premium
+- F115 · Квартира: Standard
+- F115 · Квартира: Premium
+- F116 · Квартира: Standard
+- F116 · Квартира: Premium
+- F117 · Квартира: Line Street
+- F117 · Квартира: Standard
+- F117 · Квартира: Premium
+- F118 · Квартира: Standard
+- F118 · Квартира: Premium
+- F119 · Квартира: Standard
+- F119 · Квартира: Line Street
+- F119 · Квартира: Premium
+- F123 · Квартира: Standard
+- F123 · Квартира: Premium
+- F128 · Квартира: Standard
+- F128 · Квартира: Premium
+- F132 · Квартира: Line Street
+- F132 · Квартира: Standard
+- F132 · Квартира: Premium
+- F133 · Квартира: Premium
+- F136 · Квартира: Standard
+- F136 · Квартира: Premium
+- F137 · Квартира: Premium
+- F146 · Квартира: Standard
+- F161 · Квартира: Standard
+- F166 · Квартира: Standard
