@@ -27,9 +27,10 @@ function primaryImage(html, url) {
 }
 function details(html) {
   const text = clean(html.replace(/<script[\s\S]*?<\/script>/giu, " ").replace(/<style[\s\S]*?<\/style>/giu, " "));
-  const dimensions = text.match(/Стандартний розмір дверного блоку\s*:\s*([^.!]{4,140})/iu)?.[1]
+  const rawDimensions = text.match(/Стандартний розмір дверного блоку\s*:\s*([^.!]{4,140})/iu)?.[1]
     ?.split(/Рекомендовано|Максимально|Наличие|В наличии|Вартість|Колекці|Товщина полотна/iu)[0]
     ?.trim();
+  const dimensions = rawDimensions && /^[\dхx×\s/–-]+$/iu.test(rawDimensions) ? rawDimensions : null;
   const thickness = text.match(/Товщина полотна\s*-?\s*(\d+(?:[,.]\d+)?\s*мм)/iu)?.[1]?.replace(/\s+/gu, " ");
   // The site-wide navigation repeats both "квартира" and "вулиця" on every
   // card, so it cannot safely determine a model's purpose. Keep new records
