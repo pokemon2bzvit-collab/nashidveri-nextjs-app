@@ -27,8 +27,10 @@ export function ProductConfiguration({ options, variants, onImageChange, activeV
   // як на офіційній картці виробника. Інші фабрики лишаємо з кнопкою
   // «Обрати декор», доки для них немає достатньо точних фото варіантів.
   const isRodosSteel = productBrand === "Rodos Steel";
-  const usesInstantConfiguration = productBrand === "Papa Carlo" || productBrand === "Rodos" || isRodosSteel;
-  const configurationNoun = isGlassOnly ? "скло" : isRodosSteel ? "комплектацію" : "декор";
+  const isStrazh = productBrand === "Страж";
+  const isConfigurationProduct = isRodosSteel || isStrazh;
+  const usesInstantConfiguration = productBrand === "Papa Carlo" || productBrand === "Rodos" || isConfigurationProduct;
+  const configurationNoun = isGlassOnly ? "скло" : isConfigurationProduct ? "комплектацію" : "декор";
   const [selected, setSelected] = useState<Record<string, number>>({});
   const [draftSelected, setDraftSelected] = useState<Record<string, number>>({});
   const [isOpen, setIsOpen] = useState(false);
@@ -98,7 +100,7 @@ export function ProductConfiguration({ options, variants, onImageChange, activeV
 
   if (!groups.length) return null;
 
-  if (!visualVariants.length && !isRodosSteel) return <section className="mt-5 rounded-2xl border border-stone-200 bg-white p-4 shadow-sm sm:p-5"><div className="flex items-start gap-3"><span className="grid size-9 shrink-0 place-items-center rounded-xl bg-sand text-clay"><Palette size={17} /></span><div><h2 className="text-sm font-bold text-ink">Варіанти покриття</h2><p className="mt-1 text-sm leading-6 text-stone-600">{options.map((option) => option.label).join(" · ")}</p><p className="mt-2 text-xs leading-5 text-stone-500">Фото для інших декорів цієї моделі ще не підтверджені. У салоні покажемо точні зразки.</p></div></div></section>;
+  if (!visualVariants.length && !isConfigurationProduct) return <section className="mt-5 rounded-2xl border border-stone-200 bg-white p-4 shadow-sm sm:p-5"><div className="flex items-start gap-3"><span className="grid size-9 shrink-0 place-items-center rounded-xl bg-sand text-clay"><Palette size={17} /></span><div><h2 className="text-sm font-bold text-ink">Варіанти покриття</h2><p className="mt-1 text-sm leading-6 text-stone-600">{options.map((option) => option.label).join(" · ")}</p><p className="mt-2 text-xs leading-5 text-stone-500">Фото для інших декорів цієї моделі ще не підтверджені. У салоні покажемо точні зразки.</p></div></div></section>;
 
   const openConfigurator = () => {
     setDraftSelected(selected);
@@ -139,10 +141,10 @@ export function ProductConfiguration({ options, variants, onImageChange, activeV
   return <section className="mt-5 rounded-2xl border border-stone-200 bg-white p-4 shadow-sm sm:p-5">
     <div className="flex items-start justify-between gap-3">
       <div>
-        <div className="flex items-center gap-2 text-sm font-bold text-ink"><Palette size={17} className="text-clay" /> {isGlassOnly ? "Варіант скла" : isRodosSteel ? "Комплектація дверей" : "Декор і комплектація"}</div>
-        <p className="mt-1 text-xs leading-5 text-stone-500">{isGlassOnly ? "Оберіть виконання скла для цієї моделі." : isRodosSteel ? "Оберіть серію та розмір — вибір буде передано менеджеру разом із заявкою." : "Оберіть колір, скло або кромку для цієї моделі."}</p>
+        <div className="flex items-center gap-2 text-sm font-bold text-ink"><Palette size={17} className="text-clay" /> {isGlassOnly ? "Варіант скла" : isConfigurationProduct ? "Комплектація дверей" : "Декор і комплектація"}</div>
+        <p className="mt-1 text-xs leading-5 text-stone-500">{isGlassOnly ? "Оберіть виконання скла для цієї моделі." : isRodosSteel ? "Оберіть серію та розмір — вибір буде передано менеджеру разом із заявкою." : isStrazh ? "Оберіть заводську комплектацію — вибір буде передано менеджеру разом із заявкою." : "Оберіть колір, скло або кромку для цієї моделі."}</p>
       </div>
-      <span className="rounded-full bg-sand px-2.5 py-1 text-[11px] font-bold text-stone-600">{isRodosSteel ? "Підбір" : `${visualVariants.length} з фото`}</span>
+      <span className="rounded-full bg-sand px-2.5 py-1 text-[11px] font-bold text-stone-600">{isConfigurationProduct ? "Підбір" : `${visualVariants.length} з фото`}</span>
     </div>
 
     {isGlassOnly || usesInstantConfiguration ? <>
@@ -156,7 +158,7 @@ export function ProductConfiguration({ options, variants, onImageChange, activeV
             <div className={isRodosColorRow ? "flex gap-2 overflow-x-auto pb-1" : "grid grid-cols-2 gap-2 sm:grid-cols-3"}>
               {group.map((option, index) => {
                 const isSelected = selectedIndex === index;
-                const isAvailable = isRodosSteel || visualVariants.some((variant) => Object.entries(variant.selections).every(([key, label]) => key === groupKey ? label === option.label : label === selectionValues[key]));
+                const isAvailable = isConfigurationProduct || visualVariants.some((variant) => Object.entries(variant.selections).every(([key, label]) => key === groupKey ? label === option.label : label === selectionValues[key]));
                 const variant = visualVariants.find((item) => item.selections[groupKey] === option.label && Object.entries(item.selections).every(([key, label]) => key === groupKey || label === selectionValues[key]));
                 return <button type="button" disabled={!isAvailable} key={`${option.group}-${option.label}`} onClick={() => applyDirectSelection(groupKey, index)} className={`flex min-h-12 items-center gap-2 rounded-xl border p-2 text-left text-xs font-bold transition disabled:cursor-not-allowed disabled:opacity-45 ${isRodosColorRow ? "w-20 shrink-0 flex-col justify-start" : ""} ${isSelected ? "border-ink bg-ink text-white shadow-sm" : "border-stone-200 bg-[#faf9f7] text-stone-700 hover:border-clay"}`}>
                   {variant?.image && <img src={variant.image} alt="" className={`${isRodosColorRow ? "h-14 w-full" : "h-9 w-7"} shrink-0 rounded-md bg-white object-contain`} />}
@@ -167,7 +169,7 @@ export function ProductConfiguration({ options, variants, onImageChange, activeV
           </div>;
         })}
       </div>
-      <p className="mt-2 text-xs text-stone-500">{isRodosSteel ? "Вибір збережеться та потрапить у кошик і заявку. Точний вигляд узгодимо в салоні." : "Натисніть варіант — головне фото й галерея оновляться одразу."}</p>
+      <p className="mt-2 text-xs text-stone-500">{isConfigurationProduct ? "Вибір збережеться та потрапить у кошик і заявку. Точний вигляд узгодимо в салоні." : "Натисніть варіант — головне фото й галерея оновляться одразу."}</p>
     </> : <>
       <div className="mt-4 flex gap-2 overflow-hidden">
         {selectedOptions.slice(0, 4).map((option) => <span key={`${option.group}-${option.label}`} title={option.label} className="flex h-9 min-w-9 items-center justify-center rounded-xl border border-stone-200 bg-[#faf9f7] px-2">
