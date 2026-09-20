@@ -1,0 +1,1380 @@
+{
+  "generatedAt": "2026-09-20T06:20:37.931Z",
+  "totals": {
+    "rawLinks": 119,
+    "primaryModels": 92,
+    "duplicateLinks": 10,
+    "needsReview": 17
+  },
+  "primaryModels": [
+    {
+      "title": "Входные двери Bas 003 для улицы",
+      "slug": "rodos-official-4tei69",
+      "url": "https://rodos.ua/vhodnye-dveri-bas-003",
+      "model": "BAS003",
+      "purpose": "Вулиця",
+      "sourceCodeMismatch": false,
+      "isStockListing": false,
+      "group": "BAS003::Вулиця",
+      "duplicates": []
+    },
+    {
+      "title": "Входные двери F101 для улицы",
+      "slug": "rodos-official-101skyr",
+      "url": "https://rodos.ua/vhodnye-dveri-f101-dlya-ulicy",
+      "model": "F101",
+      "purpose": "Вулиця",
+      "sourceCodeMismatch": false,
+      "isStockListing": false,
+      "group": "F101::Вулиця",
+      "duplicates": []
+    },
+    {
+      "title": "Входные двери F102 для улицы",
+      "slug": "rodos-official-5ao7k0",
+      "url": "https://rodos.ua/vhodnye-dveri-f102-dlya-ulicy",
+      "model": "F102",
+      "purpose": "Вулиця",
+      "sourceCodeMismatch": false,
+      "isStockListing": false,
+      "group": "F102::Вулиця",
+      "duplicates": []
+    },
+    {
+      "title": "Входные двери F103 для улицы",
+      "slug": "rodos-official-74ef35",
+      "url": "https://rodos.ua/vhodnye-dveri-f103-dlya-ulicy",
+      "model": "F103",
+      "purpose": "Вулиця",
+      "sourceCodeMismatch": false,
+      "isStockListing": false,
+      "group": "F103::Вулиця",
+      "duplicates": []
+    },
+    {
+      "title": "Входные двери F104 для улицы",
+      "slug": "rodos-official-1967uo6",
+      "url": "https://rodos.ua/vhodnye-dveri-f104-dlya-ulicy",
+      "model": "F104",
+      "purpose": "Вулиця",
+      "sourceCodeMismatch": false,
+      "isStockListing": false,
+      "group": "F104::Вулиця",
+      "duplicates": []
+    },
+    {
+      "title": "Входные двери F105 для улицы",
+      "slug": "rodos-official-1azy27b",
+      "url": "https://rodos.ua/vhodnye-dveri-f105-dlya-ulicy",
+      "model": "F105",
+      "purpose": "Вулиця",
+      "sourceCodeMismatch": false,
+      "isStockListing": false,
+      "group": "F105::Вулиця",
+      "duplicates": []
+    },
+    {
+      "title": "Входные двери F106 для улицы",
+      "slug": "rodos-official-g8tosk",
+      "url": "https://rodos.ua/vhodnye-dveri-f106-dlya-ulicy",
+      "model": "F106",
+      "purpose": "Вулиця",
+      "sourceCodeMismatch": false,
+      "isStockListing": false,
+      "group": "F106::Вулиця",
+      "duplicates": []
+    },
+    {
+      "title": "Входные двери F107 для улицы",
+      "slug": "rodos-official-5eum94",
+      "url": "https://rodos.ua/vhodnye-dveri-f-107-dlya-ulicy",
+      "model": "F107",
+      "purpose": "Вулиця",
+      "sourceCodeMismatch": false,
+      "isStockListing": false,
+      "group": "F107::Вулиця",
+      "duplicates": []
+    },
+    {
+      "title": "Входные двери F108 для улицы",
+      "slug": "rodos-official-18k0i2y",
+      "url": "https://rodos.ua/vhodnye-dveri-f108-dlya-ulicy",
+      "model": "F108",
+      "purpose": "Вулиця",
+      "sourceCodeMismatch": false,
+      "isStockListing": false,
+      "group": "F108::Вулиця",
+      "duplicates": []
+    },
+    {
+      "title": "Входные двери F109 для улицы",
+      "slug": "rodos-official-1adqpm3",
+      "url": "https://rodos.ua/vhodnye-dveri-f109-dlya-ulicy",
+      "model": "F109",
+      "purpose": "Вулиця",
+      "sourceCodeMismatch": false,
+      "isStockListing": false,
+      "group": "F109::Вулиця",
+      "duplicates": []
+    },
+    {
+      "title": "Входные двери F110 для улицы",
+      "slug": "rodos-official-6tvpkz",
+      "url": "https://rodos.ua/vhodnye-dveri-f110-dlya-ulicy",
+      "model": "F110",
+      "purpose": "Вулиця",
+      "sourceCodeMismatch": false,
+      "isStockListing": false,
+      "group": "F110::Вулиця",
+      "duplicates": []
+    },
+    {
+      "title": "Входные двери F112 для улицы",
+      "slug": "rodos-official-1ej5tkx",
+      "url": "https://rodos.ua/vhodnye-dveri-f112-dlya-ulicy",
+      "model": "F112",
+      "purpose": "Вулиця",
+      "sourceCodeMismatch": false,
+      "isStockListing": false,
+      "group": "F112::Вулиця",
+      "duplicates": []
+    },
+    {
+      "title": "Входные двери F113 для улицы",
+      "slug": "rodos-official-1xresps",
+      "url": "https://rodos.ua/vhodnye-dveri-f113-dlya-ulicy",
+      "model": "F113",
+      "purpose": "Вулиця",
+      "sourceCodeMismatch": false,
+      "isStockListing": false,
+      "group": "F113::Вулиця",
+      "duplicates": []
+    },
+    {
+      "title": "Входные двери F115 для улицы",
+      "slug": "rodos-official-1y30yw6",
+      "url": "https://rodos.ua/vhodnye-dveri-f115-dlya-ulicy",
+      "model": "F115",
+      "purpose": "Вулиця",
+      "sourceCodeMismatch": false,
+      "isStockListing": false,
+      "group": "F115::Вулиця",
+      "duplicates": []
+    },
+    {
+      "title": "Входные двери F116 для улицы",
+      "slug": "rodos-official-1phbath",
+      "url": "https://rodos.ua/vhodnye-dveri-f116-dlya-ulicy",
+      "model": "F116",
+      "purpose": "Вулиця",
+      "sourceCodeMismatch": false,
+      "isStockListing": false,
+      "group": "F116::Вулиця",
+      "duplicates": []
+    },
+    {
+      "title": "Входные двери F117 для улицы",
+      "slug": "rodos-official-9og7z8",
+      "url": "https://rodos.ua/vhodnye-dveri-f117-dlya-ulicy",
+      "model": "F117",
+      "purpose": "Вулиця",
+      "sourceCodeMismatch": false,
+      "isStockListing": false,
+      "group": "F117::Вулиця",
+      "duplicates": []
+    },
+    {
+      "title": "Входные двери F118 для улицы",
+      "slug": "rodos-official-h5tu8b",
+      "url": "https://rodos.ua/vhodnye-dveri-f118-dlya-ulicy",
+      "model": "F118",
+      "purpose": "Вулиця",
+      "sourceCodeMismatch": false,
+      "isStockListing": false,
+      "group": "F118::Вулиця",
+      "duplicates": []
+    },
+    {
+      "title": "Входные двери F119 для улицы",
+      "slug": "rodos-official-1xgtmay",
+      "url": "https://rodos.ua/vhodnye-dveri-f119-dlya-ulicy",
+      "model": "F119",
+      "purpose": "Вулиця",
+      "sourceCodeMismatch": false,
+      "isStockListing": false,
+      "group": "F119::Вулиця",
+      "duplicates": []
+    },
+    {
+      "title": "Входные двери F120 для квартиры",
+      "slug": "rodos-official-1dehbo9",
+      "url": "https://rodos.ua/vhodnye-dveri-f120-dlya-ulic",
+      "model": "F120",
+      "purpose": "Вулиця",
+      "sourceCodeMismatch": false,
+      "isStockListing": false,
+      "group": "F120::Вулиця",
+      "duplicates": [
+        {
+          "title": "Входные двери F120 для улицы",
+          "slug": "rodos-official-1vlehog",
+          "url": "https://rodos.ua/vhodnye-dveri-f120-dlya-ulicy",
+          "isStockListing": false
+        }
+      ]
+    },
+    {
+      "title": "Входные двери F121 для улицы",
+      "slug": "rodos-official-jqm9b5",
+      "url": "https://rodos.ua/vhodnye-dveri-f121-dlya-ulicy",
+      "model": "F121",
+      "purpose": "Вулиця",
+      "sourceCodeMismatch": false,
+      "isStockListing": false,
+      "group": "F121::Вулиця",
+      "duplicates": []
+    },
+    {
+      "title": "Входные двери F122 для улицы",
+      "slug": "rodos-official-1jdaypu",
+      "url": "https://rodos.ua/vhodnye-dveri-f122-dlya-ulicy",
+      "model": "F122",
+      "purpose": "Вулиця",
+      "sourceCodeMismatch": false,
+      "isStockListing": false,
+      "group": "F122::Вулиця",
+      "duplicates": []
+    },
+    {
+      "title": "Входные двери F123 для улицы",
+      "slug": "rodos-official-7iiqcj",
+      "url": "https://rodos.ua/vhodnye-dveri-f123-dlya-ulicy",
+      "model": "F123",
+      "purpose": "Вулиця",
+      "sourceCodeMismatch": false,
+      "isStockListing": false,
+      "group": "F123::Вулиця",
+      "duplicates": []
+    },
+    {
+      "title": "Входные двери F124 для улицы",
+      "slug": "rodos-official-7ifwxw",
+      "url": "https://rodos.ua/vhodnye-dveri-f124-dlya-ulicy",
+      "model": "F124",
+      "purpose": "Вулиця",
+      "sourceCodeMismatch": false,
+      "isStockListing": false,
+      "group": "F124::Вулиця",
+      "duplicates": []
+    },
+    {
+      "title": "Входные двери F125 для улицы",
+      "slug": "rodos-official-uorqjp",
+      "url": "https://rodos.ua/vhodnye-dveri-f125-dlya-ulicy",
+      "model": "F125",
+      "purpose": "Вулиця",
+      "sourceCodeMismatch": false,
+      "isStockListing": false,
+      "group": "F125::Вулиця",
+      "duplicates": []
+    },
+    {
+      "title": "Входные двери F127 для улицы",
+      "slug": "rodos-official-igo7l3",
+      "url": "https://rodos.ua/vhodnye-dveri-f127-dlya-ulicy",
+      "model": "F127",
+      "purpose": "Вулиця",
+      "sourceCodeMismatch": false,
+      "isStockListing": false,
+      "group": "F127::Вулиця",
+      "duplicates": []
+    },
+    {
+      "title": "Входные двери F128 для улицы",
+      "slug": "rodos-official-6w8kco",
+      "url": "https://rodos.ua/vhodnye-dveri-f128-dlya-ulicy",
+      "model": "F128",
+      "purpose": "Вулиця",
+      "sourceCodeMismatch": false,
+      "isStockListing": false,
+      "group": "F128::Вулиця",
+      "duplicates": []
+    },
+    {
+      "title": "Входные двери F132 для улицы",
+      "slug": "rodos-official-1ex9ybn",
+      "url": "https://rodos.ua/vhodnye-dveri-f132-dlya-ulicy",
+      "model": "F132",
+      "purpose": "Вулиця",
+      "sourceCodeMismatch": false,
+      "isStockListing": false,
+      "group": "F132::Вулиця",
+      "duplicates": []
+    },
+    {
+      "title": "Входные двери F133 для улицы",
+      "slug": "rodos-official-1csxbdu",
+      "url": "https://rodos.ua/vhodnye-dveri-f133-dlya-ulicy",
+      "model": "F133",
+      "purpose": "Вулиця",
+      "sourceCodeMismatch": false,
+      "isStockListing": false,
+      "group": "F133::Вулиця",
+      "duplicates": []
+    },
+    {
+      "title": "Входные двери F134 для квартиры",
+      "slug": "rodos-official-12se1to",
+      "url": "https://rodos.ua/vhodnye-dveri-f134-dlya-ulic",
+      "model": "F134",
+      "purpose": "Вулиця",
+      "sourceCodeMismatch": false,
+      "isStockListing": false,
+      "group": "F134::Вулиця",
+      "duplicates": [
+        {
+          "title": "Входные двери F134 для улицы",
+          "slug": "rodos-official-1guon9",
+          "url": "https://rodos.ua/vhodnye-dveri-f134-dlya-ulicy",
+          "isStockListing": false
+        }
+      ]
+    },
+    {
+      "title": "Входные двери F135",
+      "slug": "rodos-official-wf8un8",
+      "url": "https://rodos.ua/vhodnye-dveri-f135-dlya-ulicy",
+      "model": "F135",
+      "purpose": "Вулиця",
+      "sourceCodeMismatch": false,
+      "isStockListing": false,
+      "group": "F135::Вулиця",
+      "duplicates": []
+    },
+    {
+      "title": "Входные двери F137 для улицы",
+      "slug": "rodos-official-t7c91f",
+      "url": "https://rodos.ua/vhodnye-dveri-f137-2",
+      "model": "F137",
+      "purpose": "Вулиця",
+      "sourceCodeMismatch": false,
+      "isStockListing": false,
+      "group": "F137::Вулиця",
+      "duplicates": []
+    },
+    {
+      "title": "Входные двери F139 для улицы",
+      "slug": "rodos-official-vt1i20",
+      "url": "https://rodos.ua/vhodnye-dveri-f139-dlya-ulicy",
+      "model": "F139",
+      "purpose": "Вулиця",
+      "sourceCodeMismatch": false,
+      "isStockListing": false,
+      "group": "F139::Вулиця",
+      "duplicates": []
+    },
+    {
+      "title": "Входные двери F142 для квартиры",
+      "slug": "rodos-official-1e09xs4",
+      "url": "https://rodos.ua/vhodnye-dveri-f142-dlya-ulicy",
+      "model": "F142",
+      "purpose": "Вулиця",
+      "sourceCodeMismatch": false,
+      "isStockListing": false,
+      "group": "F142::Вулиця",
+      "duplicates": [
+        {
+          "title": "Входные двери F142 для улицы",
+          "slug": "rodos-official-1cocv94",
+          "url": "https://rodos.ua/vhodnye-dveri-f142-dlya-ulicy-1",
+          "isStockListing": false
+        }
+      ]
+    },
+    {
+      "title": "Входные двери F144",
+      "slug": "rodos-official-1vzimf6",
+      "url": "https://rodos.ua/vhodnye-dveri-f144-dlya-ulicy",
+      "model": "F144",
+      "purpose": "Вулиця",
+      "sourceCodeMismatch": false,
+      "isStockListing": false,
+      "group": "F144::Вулиця",
+      "duplicates": []
+    },
+    {
+      "title": "Входные двери F145",
+      "slug": "rodos-official-1xt8tyb",
+      "url": "https://rodos.ua/vhodnye-dveri-f145-dlya-ulicy",
+      "model": "F145",
+      "purpose": "Вулиця",
+      "sourceCodeMismatch": false,
+      "isStockListing": false,
+      "group": "F145::Вулиця",
+      "duplicates": []
+    },
+    {
+      "title": "Входные двери F147",
+      "slug": "rodos-official-14vuo2p",
+      "url": "https://rodos.ua/vhodnye-dveri-f147-dlya-ulicy",
+      "model": "F147",
+      "purpose": "Вулиця",
+      "sourceCodeMismatch": false,
+      "isStockListing": false,
+      "group": "F147::Вулиця",
+      "duplicates": []
+    },
+    {
+      "title": "Входные двери F149 для квартиры",
+      "slug": "rodos-official-k28dv3",
+      "url": "https://rodos.ua/vhodnye-dveri-f149-dlya-ulicy",
+      "model": "F149",
+      "purpose": "Вулиця",
+      "sourceCodeMismatch": false,
+      "isStockListing": false,
+      "group": "F149::Вулиця",
+      "duplicates": []
+    },
+    {
+      "title": "Входные двери F150",
+      "slug": "rodos-official-1fjhft3",
+      "url": "https://rodos.ua/vhodnye-dveri-f150-dlya-ulicy",
+      "model": "F150",
+      "purpose": "Вулиця",
+      "sourceCodeMismatch": false,
+      "isStockListing": false,
+      "group": "F150::Вулиця",
+      "duplicates": []
+    },
+    {
+      "title": "Входные двери F152 для квартиры",
+      "slug": "rodos-official-o7nhtx",
+      "url": "https://rodos.ua/vhodnye-dveri-f152-dlya-ulicy",
+      "model": "F152",
+      "purpose": "Вулиця",
+      "sourceCodeMismatch": false,
+      "isStockListing": false,
+      "group": "F152::Вулиця",
+      "duplicates": [
+        {
+          "title": "Входные двери F152 для улицы",
+          "slug": "rodos-official-f0y0ft",
+          "url": "https://rodos.ua/vhodnye-dveri-f152-dlya-ulicy-1",
+          "isStockListing": false
+        }
+      ]
+    },
+    {
+      "title": "Входные двери F153 для квартиры",
+      "slug": "rodos-official-17fwgys",
+      "url": "https://rodos.ua/vhodnye-dveri-f153-dlya-ulicy",
+      "model": "F153",
+      "purpose": "Вулиця",
+      "sourceCodeMismatch": false,
+      "isStockListing": false,
+      "group": "F153::Вулиця",
+      "duplicates": [
+        {
+          "title": "Входные двери F153 для улицы",
+          "slug": "rodos-official-1g8nrs",
+          "url": "https://rodos.ua/vhodnye-dveri-f153-dlya-ulicy-1",
+          "isStockListing": false
+        }
+      ]
+    },
+    {
+      "title": "Входные двери F156 для квартиры",
+      "slug": "rodos-official-d9i0ld",
+      "url": "https://rodos.ua/vhodnye-dveri-f156-dlya-ulicy",
+      "model": "F156",
+      "purpose": "Вулиця",
+      "sourceCodeMismatch": false,
+      "isStockListing": false,
+      "group": "F156::Вулиця",
+      "duplicates": [
+        {
+          "title": "Входные двери F156 для улицы",
+          "slug": "rodos-official-p44sot",
+          "url": "https://rodos.ua/vhodnye-dveri-f156-dlya-ulicy-1",
+          "isStockListing": false
+        }
+      ]
+    },
+    {
+      "title": "Входные двери F157 для квартиры",
+      "slug": "rodos-official-whqzq8",
+      "url": "https://rodos.ua/vhodnye-dveri-f157-dlya-ulicy",
+      "model": "F157",
+      "purpose": "Вулиця",
+      "sourceCodeMismatch": false,
+      "isStockListing": false,
+      "group": "F157::Вулиця",
+      "duplicates": []
+    },
+    {
+      "title": "Входные двери F158 для квартиры",
+      "slug": "rodos-official-1pvfkgf",
+      "url": "https://rodos.ua/vhodnye-dveri-f158-dlya-ulicy",
+      "model": "F158",
+      "purpose": "Вулиця",
+      "sourceCodeMismatch": false,
+      "isStockListing": false,
+      "group": "F158::Вулиця",
+      "duplicates": [
+        {
+          "title": "Входные двери F158 для улицы",
+          "slug": "rodos-official-16j5qwj",
+          "url": "https://rodos.ua/vhodnye-dveri-f158-dlya-ulicy-1",
+          "isStockListing": false
+        }
+      ]
+    },
+    {
+      "title": "Входные двери F159 для квартиры",
+      "slug": "rodos-official-175bajy",
+      "url": "https://rodos.ua/vhodnye-dveri-f159-dlya-ulicy",
+      "model": "F159",
+      "purpose": "Вулиця",
+      "sourceCodeMismatch": false,
+      "isStockListing": false,
+      "group": "F159::Вулиця",
+      "duplicates": [
+        {
+          "title": "Входные двери F159 для улицы",
+          "slug": "rodos-official-10b5yj6",
+          "url": "https://rodos.ua/vhodnye-dveri-f159-dlya-ulicy-1",
+          "isStockListing": false
+        }
+      ]
+    },
+    {
+      "title": "Входные двери F160",
+      "slug": "rodos-official-159w5xg",
+      "url": "https://rodos.ua/vhodnye-dveri-f160-dlya-ulicy",
+      "model": "F160",
+      "purpose": "Вулиця",
+      "sourceCodeMismatch": false,
+      "isStockListing": false,
+      "group": "F160::Вулиця",
+      "duplicates": []
+    },
+    {
+      "title": "Входные двери F161 для улицы",
+      "slug": "rodos-official-1sg7zj9",
+      "url": "https://rodos.ua/vhodnye-dveri-f161-dlya-ulicy",
+      "model": "F161",
+      "purpose": "Вулиця",
+      "sourceCodeMismatch": false,
+      "isStockListing": false,
+      "group": "F161::Вулиця",
+      "duplicates": []
+    },
+    {
+      "title": "Входные двери F162",
+      "slug": "rodos-official-t1smyu",
+      "url": "https://rodos.ua/vhodnye-dveri-f162-dlya-ulicy",
+      "model": "F162",
+      "purpose": "Вулиця",
+      "sourceCodeMismatch": false,
+      "isStockListing": false,
+      "group": "F162::Вулиця",
+      "duplicates": []
+    },
+    {
+      "title": "Входные двери F163",
+      "slug": "rodos-official-1g84gkn",
+      "url": "https://rodos.ua/vhodnye-dveri-f163-dlya-ulicy",
+      "model": "F163",
+      "purpose": "Вулиця",
+      "sourceCodeMismatch": false,
+      "isStockListing": false,
+      "group": "F163::Вулиця",
+      "duplicates": []
+    },
+    {
+      "title": "Входные двери F166 для улицы",
+      "slug": "rodos-official-i3n5qa",
+      "url": "https://rodos.ua/vhodnye-dveri-f166-dlya-ulicy",
+      "model": "F166",
+      "purpose": "Вулиця",
+      "sourceCodeMismatch": false,
+      "isStockListing": false,
+      "group": "F166::Вулиця",
+      "duplicates": []
+    },
+    {
+      "title": "Входные двери F167 для улицы",
+      "slug": "rodos-official-159yzc3",
+      "url": "https://rodos.ua/vhodnye-dveri-f167-dlya-ulicy",
+      "model": "F167",
+      "purpose": "Вулиця",
+      "sourceCodeMismatch": false,
+      "isStockListing": false,
+      "group": "F167::Вулиця",
+      "duplicates": []
+    },
+    {
+      "title": "Входные двери A100",
+      "slug": "rodos-official-1n97sfz",
+      "url": "https://rodos.ua/vhodnye-dveri-a100",
+      "model": "A100",
+      "purpose": "Квартира",
+      "sourceCodeMismatch": false,
+      "isStockListing": false,
+      "group": "A100::Квартира",
+      "duplicates": []
+    },
+    {
+      "title": "Входные двери A101",
+      "slug": "rodos-official-1n97sfy",
+      "url": "https://rodos.ua/vhodnye-dveri-a101",
+      "model": "A101",
+      "purpose": "Квартира",
+      "sourceCodeMismatch": false,
+      "isStockListing": false,
+      "group": "A101::Квартира",
+      "duplicates": []
+    },
+    {
+      "title": "Входные двери A102",
+      "slug": "rodos-official-1n97sfx",
+      "url": "https://rodos.ua/vhodnye-dveri-a102",
+      "model": "A102",
+      "purpose": "Квартира",
+      "sourceCodeMismatch": false,
+      "isStockListing": false,
+      "group": "A102::Квартира",
+      "duplicates": []
+    },
+    {
+      "title": "Входные двери A103",
+      "slug": "rodos-official-1n97sfw",
+      "url": "https://rodos.ua/vhodnye-dveri-a103",
+      "model": "A103",
+      "purpose": "Квартира",
+      "sourceCodeMismatch": false,
+      "isStockListing": false,
+      "group": "A103::Квартира",
+      "duplicates": []
+    },
+    {
+      "title": "Входные двери A104",
+      "slug": "rodos-official-1n97sfv",
+      "url": "https://rodos.ua/vhodnye-dveri-a104",
+      "model": "A104",
+      "purpose": "Квартира",
+      "sourceCodeMismatch": false,
+      "isStockListing": false,
+      "group": "A104::Квартира",
+      "duplicates": []
+    },
+    {
+      "title": "Входные двери F100 для квартиры",
+      "slug": "rodos-official-pstrrw",
+      "url": "https://rodos.ua/vhodnye-dveri-sts-001-test",
+      "model": "F100",
+      "purpose": "Квартира",
+      "sourceCodeMismatch": false,
+      "isStockListing": false,
+      "group": "F100::Квартира",
+      "duplicates": []
+    },
+    {
+      "title": "Входные двери F101 для квартиры",
+      "slug": "rodos-official-1n92eah",
+      "url": "https://rodos.ua/vhodnye-dveri-f101",
+      "model": "F101",
+      "purpose": "Квартира",
+      "sourceCodeMismatch": false,
+      "isStockListing": false,
+      "group": "F101::Квартира",
+      "duplicates": []
+    },
+    {
+      "title": "Входные двери F103 для квартиры",
+      "slug": "rodos-official-1n92eaj",
+      "url": "https://rodos.ua/vhodnye-dveri-f103",
+      "model": "F103",
+      "purpose": "Квартира",
+      "sourceCodeMismatch": false,
+      "isStockListing": false,
+      "group": "F103::Квартира",
+      "duplicates": []
+    },
+    {
+      "title": "Входные двери F104 для квартиры",
+      "slug": "rodos-official-t78k9s",
+      "url": "https://rodos.ua/vhodnye-dveri-f104-1",
+      "model": "F104",
+      "purpose": "Квартира",
+      "sourceCodeMismatch": false,
+      "isStockListing": false,
+      "group": "F104::Квартира",
+      "duplicates": []
+    },
+    {
+      "title": "Входные двери F105 для квартиры",
+      "slug": "rodos-official-1n92eal",
+      "url": "https://rodos.ua/vhodnye-dveri-f105",
+      "model": "F105",
+      "purpose": "Квартира",
+      "sourceCodeMismatch": false,
+      "isStockListing": false,
+      "group": "F105::Квартира",
+      "duplicates": []
+    },
+    {
+      "title": "Входные двери F106 для квартиры",
+      "slug": "rodos-official-1n92eam",
+      "url": "https://rodos.ua/vhodnye-dveri-f106",
+      "model": "F106",
+      "purpose": "Квартира",
+      "sourceCodeMismatch": false,
+      "isStockListing": false,
+      "group": "F106::Квартира",
+      "duplicates": []
+    },
+    {
+      "title": "Входные двери F107 для квартиры",
+      "slug": "rodos-official-1n92ean",
+      "url": "https://rodos.ua/vhodnye-dveri-f107",
+      "model": "F107",
+      "purpose": "Квартира",
+      "sourceCodeMismatch": false,
+      "isStockListing": false,
+      "group": "F107::Квартира",
+      "duplicates": []
+    },
+    {
+      "title": "Входные двери F108 для квартиры",
+      "slug": "rodos-official-1n92ea8",
+      "url": "https://rodos.ua/vhodnye-dveri-f108",
+      "model": "F108",
+      "purpose": "Квартира",
+      "sourceCodeMismatch": false,
+      "isStockListing": false,
+      "group": "F108::Квартира",
+      "duplicates": []
+    },
+    {
+      "title": "Входные двери F109 для квартиры",
+      "slug": "rodos-official-1n92ea9",
+      "url": "https://rodos.ua/vhodnye-dveri-f109",
+      "model": "F109",
+      "purpose": "Квартира",
+      "sourceCodeMismatch": false,
+      "isStockListing": false,
+      "group": "F109::Квартира",
+      "duplicates": []
+    },
+    {
+      "title": "Входные двери F111 для квартиры",
+      "slug": "rodos-official-1n92ed4",
+      "url": "https://rodos.ua/vhodnye-dveri-f111",
+      "model": "F111",
+      "purpose": "Квартира",
+      "sourceCodeMismatch": false,
+      "isStockListing": false,
+      "group": "F111::Квартира",
+      "duplicates": []
+    },
+    {
+      "title": "Входные двери F112 для квартиры",
+      "slug": "rodos-official-1n92ed7",
+      "url": "https://rodos.ua/vhodnye-dveri-f112",
+      "model": "F112",
+      "purpose": "Квартира",
+      "sourceCodeMismatch": false,
+      "isStockListing": false,
+      "group": "F112::Квартира",
+      "duplicates": []
+    },
+    {
+      "title": "Входные двери F113 для квартиры",
+      "slug": "rodos-official-1n92ed6",
+      "url": "https://rodos.ua/vhodnye-dveri-f113",
+      "model": "F113",
+      "purpose": "Квартира",
+      "sourceCodeMismatch": false,
+      "isStockListing": false,
+      "group": "F113::Квартира",
+      "duplicates": []
+    },
+    {
+      "title": "Входные двери F115 для квартиры",
+      "slug": "rodos-official-1n92ed8",
+      "url": "https://rodos.ua/vhodnye-dveri-f115",
+      "model": "F115",
+      "purpose": "Квартира",
+      "sourceCodeMismatch": false,
+      "isStockListing": false,
+      "group": "F115::Квартира",
+      "duplicates": []
+    },
+    {
+      "title": "Входные двери F116 для квартиры",
+      "slug": "rodos-official-t7avcz",
+      "url": "https://rodos.ua/vhodnye-dveri-f116-1",
+      "model": "F116",
+      "purpose": "Квартира",
+      "sourceCodeMismatch": false,
+      "isStockListing": false,
+      "group": "F116::Квартира",
+      "duplicates": []
+    },
+    {
+      "title": "Входные двери F117 для квартиры",
+      "slug": "rodos-official-1n92eda",
+      "url": "https://rodos.ua/vhodnye-dveri-f117",
+      "model": "F117",
+      "purpose": "Квартира",
+      "sourceCodeMismatch": false,
+      "isStockListing": false,
+      "group": "F117::Квартира",
+      "duplicates": []
+    },
+    {
+      "title": "Входные двери F118 для квартиры",
+      "slug": "rodos-official-t7ak7h",
+      "url": "https://rodos.ua/vhodnye-dveri-f118-1",
+      "model": "F118",
+      "purpose": "Квартира",
+      "sourceCodeMismatch": false,
+      "isStockListing": false,
+      "group": "F118::Квартира",
+      "duplicates": []
+    },
+    {
+      "title": "Входные двери F119 для квартиры",
+      "slug": "rodos-official-1n92ecw",
+      "url": "https://rodos.ua/vhodnye-dveri-f119",
+      "model": "F119",
+      "purpose": "Квартира",
+      "sourceCodeMismatch": false,
+      "isStockListing": false,
+      "group": "F119::Квартира",
+      "duplicates": []
+    },
+    {
+      "title": "Входные двери F121 для квартиры",
+      "slug": "rodos-official-1n92ecb",
+      "url": "https://rodos.ua/vhodnye-dveri-f121",
+      "model": "F121",
+      "purpose": "Квартира",
+      "sourceCodeMismatch": false,
+      "isStockListing": false,
+      "group": "F121::Квартира",
+      "duplicates": []
+    },
+    {
+      "title": "Входные двери F122 для квартиры",
+      "slug": "rodos-official-1n92ec8",
+      "url": "https://rodos.ua/vhodnye-dveri-f122",
+      "model": "F122",
+      "purpose": "Квартира",
+      "sourceCodeMismatch": false,
+      "isStockListing": false,
+      "group": "F122::Квартира",
+      "duplicates": []
+    },
+    {
+      "title": "Входные двери F123 для квартиры (Краска)",
+      "slug": "rodos-official-tb1ky9",
+      "url": "https://rodos.ua/vhodnye-dveri-f123-dlya-kvartiry",
+      "model": "F123",
+      "purpose": "Квартира",
+      "sourceCodeMismatch": false,
+      "isStockListing": false,
+      "group": "F123::Квартира",
+      "duplicates": []
+    },
+    {
+      "title": "Входные двери F124 для квартиры",
+      "slug": "rodos-official-1n92ece",
+      "url": "https://rodos.ua/vhodnye-dveri-f124",
+      "model": "F124",
+      "purpose": "Квартира",
+      "sourceCodeMismatch": false,
+      "isStockListing": false,
+      "group": "F124::Квартира",
+      "duplicates": []
+    },
+    {
+      "title": "Входные двери F125 для квартиры",
+      "slug": "rodos-official-zm1srb",
+      "url": "https://rodos.ua/vhodnye-dveri-f125-dlya-kvartiry",
+      "model": "F125",
+      "purpose": "Квартира",
+      "sourceCodeMismatch": false,
+      "isStockListing": false,
+      "group": "F125::Квартира",
+      "duplicates": []
+    },
+    {
+      "title": "Входные двери F127 для квартиры",
+      "slug": "rodos-official-1n92ecd",
+      "url": "https://rodos.ua/vhodnye-dveri-f127",
+      "model": "F127",
+      "purpose": "Квартира",
+      "sourceCodeMismatch": false,
+      "isStockListing": false,
+      "group": "F127::Квартира",
+      "duplicates": []
+    },
+    {
+      "title": "Входные двери F128 для квартиры",
+      "slug": "rodos-official-t79u9a",
+      "url": "https://rodos.ua/vhodnye-dveri-f128-1",
+      "model": "F128",
+      "purpose": "Квартира",
+      "sourceCodeMismatch": false,
+      "isStockListing": false,
+      "group": "F128::Квартира",
+      "duplicates": []
+    },
+    {
+      "title": "Входные двери F132 для квартиры",
+      "slug": "rodos-official-40hnht",
+      "url": "https://rodos.ua/vhodnye-dveri-f132-dlya-kvartiry",
+      "model": "F132",
+      "purpose": "Квартира",
+      "sourceCodeMismatch": false,
+      "isStockListing": false,
+      "group": "F132::Квартира",
+      "duplicates": []
+    },
+    {
+      "title": "Входные двери F133 для квартиры",
+      "slug": "rodos-official-1n92eew",
+      "url": "https://rodos.ua/vhodnye-dveri-f133",
+      "model": "F133",
+      "purpose": "Квартира",
+      "sourceCodeMismatch": false,
+      "isStockListing": false,
+      "group": "F133::Квартира",
+      "duplicates": []
+    },
+    {
+      "title": "Входные двери F136 для квартиры",
+      "slug": "rodos-official-1n92ef1",
+      "url": "https://rodos.ua/vhodnye-dveri-f136",
+      "model": "F136",
+      "purpose": "Квартира",
+      "sourceCodeMismatch": false,
+      "isStockListing": false,
+      "group": "F136::Квартира",
+      "duplicates": []
+    },
+    {
+      "title": "Входные двери F137 для квартиры",
+      "slug": "rodos-official-t7c91c",
+      "url": "https://rodos.ua/vhodnye-dveri-f137-1",
+      "model": "F137",
+      "purpose": "Квартира",
+      "sourceCodeMismatch": false,
+      "isStockListing": false,
+      "group": "F137::Квартира",
+      "duplicates": []
+    },
+    {
+      "title": "Входные двери F139 для квартири",
+      "slug": "rodos-official-1n92eeq",
+      "url": "https://rodos.ua/vhodnye-dveri-f139",
+      "model": "F139",
+      "purpose": "Квартира",
+      "sourceCodeMismatch": false,
+      "isStockListing": false,
+      "group": "F139::Квартира",
+      "duplicates": []
+    },
+    {
+      "title": "Входные двери F141 для квартиры",
+      "slug": "rodos-official-1d7iwlx",
+      "url": "https://rodos.ua/vhodnye-dveri-f141-dlya-kvartiry",
+      "model": "F141",
+      "purpose": "Квартира",
+      "sourceCodeMismatch": false,
+      "isStockListing": false,
+      "group": "F141::Квартира",
+      "duplicates": []
+    },
+    {
+      "title": "Входные двери F143 для квартиры",
+      "slug": "rodos-official-4athqv",
+      "url": "https://rodos.ua/vhodnye-dveri-f143-dlya-kvartiry",
+      "model": "F143",
+      "purpose": "Квартира",
+      "sourceCodeMismatch": false,
+      "isStockListing": false,
+      "group": "F143::Квартира",
+      "duplicates": []
+    },
+    {
+      "title": "Входные двери F146 для квартиры",
+      "slug": "rodos-official-xnjrte",
+      "url": "https://rodos.ua/vhodnye-dveri-f146-dlya-kvartiry",
+      "model": "F146",
+      "purpose": "Квартира",
+      "sourceCodeMismatch": false,
+      "isStockListing": false,
+      "group": "F146::Квартира",
+      "duplicates": []
+    },
+    {
+      "title": "Входные двери F148 для квартиры",
+      "slug": "rodos-official-p31li4",
+      "url": "https://rodos.ua/vhodnye-dveri-f148-dlya-kvartiry",
+      "model": "F148",
+      "purpose": "Квартира",
+      "sourceCodeMismatch": false,
+      "isStockListing": false,
+      "group": "F148::Квартира",
+      "duplicates": []
+    },
+    {
+      "title": "Входные двери F154 для квартиры",
+      "slug": "rodos-official-tzo0vl",
+      "url": "https://rodos.ua/vhodnye-dveri-f154-dlya-kvartiry",
+      "model": "F154",
+      "purpose": "Квартира",
+      "sourceCodeMismatch": false,
+      "isStockListing": false,
+      "group": "F154::Квартира",
+      "duplicates": []
+    },
+    {
+      "title": "Входные двери F155 для квартиры",
+      "slug": "rodos-official-1qva99s",
+      "url": "https://rodos.ua/vhodnye-dveri-f155-dlya-kvartiry",
+      "model": "F155",
+      "purpose": "Квартира",
+      "sourceCodeMismatch": false,
+      "isStockListing": false,
+      "group": "F155::Квартира",
+      "duplicates": []
+    },
+    {
+      "title": "Входные двери F161 для квартиры",
+      "slug": "rodos-official-a08fvb",
+      "url": "https://rodos.ua/vhodnye-dveri-f161-dlya-kvartiry",
+      "model": "F161",
+      "purpose": "Квартира",
+      "sourceCodeMismatch": false,
+      "isStockListing": false,
+      "group": "F161::Квартира",
+      "duplicates": []
+    },
+    {
+      "title": "Входные двери F166 для квартиры",
+      "slug": "rodos-official-1683sr4",
+      "url": "https://rodos.ua/vhodnye-dveri-f166-dlya-kvartiry",
+      "model": "F166",
+      "purpose": "Квартира",
+      "sourceCodeMismatch": false,
+      "isStockListing": false,
+      "group": "F166::Квартира",
+      "duplicates": []
+    }
+  ],
+  "duplicates": [
+    {
+      "canonicalSlug": "rodos-official-12se1to",
+      "title": "Входные двери F134 для улицы",
+      "slug": "rodos-official-1guon9",
+      "url": "https://rodos.ua/vhodnye-dveri-f134-dlya-ulicy",
+      "model": "F134",
+      "purpose": "Вулиця",
+      "sourceCodeMismatch": false,
+      "isStockListing": false,
+      "group": "F134::Вулиця"
+    },
+    {
+      "canonicalSlug": "rodos-official-o7nhtx",
+      "title": "Входные двери F152 для улицы",
+      "slug": "rodos-official-f0y0ft",
+      "url": "https://rodos.ua/vhodnye-dveri-f152-dlya-ulicy-1",
+      "model": "F152",
+      "purpose": "Вулиця",
+      "sourceCodeMismatch": false,
+      "isStockListing": false,
+      "group": "F152::Вулиця"
+    },
+    {
+      "canonicalSlug": "rodos-official-17fwgys",
+      "title": "Входные двери F153 для улицы",
+      "slug": "rodos-official-1g8nrs",
+      "url": "https://rodos.ua/vhodnye-dveri-f153-dlya-ulicy-1",
+      "model": "F153",
+      "purpose": "Вулиця",
+      "sourceCodeMismatch": false,
+      "isStockListing": false,
+      "group": "F153::Вулиця"
+    },
+    {
+      "canonicalSlug": "rodos-official-d9i0ld",
+      "title": "Входные двери F156 для улицы",
+      "slug": "rodos-official-p44sot",
+      "url": "https://rodos.ua/vhodnye-dveri-f156-dlya-ulicy-1",
+      "model": "F156",
+      "purpose": "Вулиця",
+      "sourceCodeMismatch": false,
+      "isStockListing": false,
+      "group": "F156::Вулиця"
+    },
+    {
+      "canonicalSlug": "rodos-official-1dehbo9",
+      "title": "Входные двери F120 для улицы",
+      "slug": "rodos-official-1vlehog",
+      "url": "https://rodos.ua/vhodnye-dveri-f120-dlya-ulicy",
+      "model": "F120",
+      "purpose": "Вулиця",
+      "sourceCodeMismatch": false,
+      "isStockListing": false,
+      "group": "F120::Вулиця"
+    },
+    {
+      "canonicalSlug": "rodos-official-1e09xs4",
+      "title": "Входные двери F142 для улицы",
+      "slug": "rodos-official-1cocv94",
+      "url": "https://rodos.ua/vhodnye-dveri-f142-dlya-ulicy-1",
+      "model": "F142",
+      "purpose": "Вулиця",
+      "sourceCodeMismatch": false,
+      "isStockListing": false,
+      "group": "F142::Вулиця"
+    },
+    {
+      "canonicalSlug": "rodos-official-1pvfkgf",
+      "title": "Входные двери F158 для улицы",
+      "slug": "rodos-official-16j5qwj",
+      "url": "https://rodos.ua/vhodnye-dveri-f158-dlya-ulicy-1",
+      "model": "F158",
+      "purpose": "Вулиця",
+      "sourceCodeMismatch": false,
+      "isStockListing": false,
+      "group": "F158::Вулиця"
+    },
+    {
+      "canonicalSlug": "rodos-official-175bajy",
+      "title": "Входные двери F159 для улицы",
+      "slug": "rodos-official-10b5yj6",
+      "url": "https://rodos.ua/vhodnye-dveri-f159-dlya-ulicy-1",
+      "model": "F159",
+      "purpose": "Вулиця",
+      "sourceCodeMismatch": false,
+      "isStockListing": false,
+      "group": "F159::Вулиця"
+    },
+    {
+      "canonicalSlug": "rodos-official-t1smyu",
+      "title": "Входная дверь F 162 (RAL 7016) (В наличии)",
+      "slug": "rodos-official-1jb31c9",
+      "url": "https://rodos.ua/vhodnaya-dver-f-162-ral-7016-v-nalichii-1",
+      "model": "F162",
+      "purpose": "Перевірити",
+      "sourceCodeMismatch": false,
+      "isStockListing": true,
+      "group": "F162::Перевірити"
+    },
+    {
+      "canonicalSlug": "rodos-official-t1smyu",
+      "title": "Входная дверь F 162 (RAL 8017) (В наличии)",
+      "slug": "rodos-official-ug219x",
+      "url": "https://rodos.ua/vhodnaya-dver-f-162-ral-7016-v-nalichii",
+      "model": "F162",
+      "purpose": "Перевірити",
+      "sourceCodeMismatch": false,
+      "isStockListing": true,
+      "group": "F162::Перевірити"
+    }
+  ],
+  "needsReview": [
+    {
+      "title": "Входные двери F102 для квартиры",
+      "slug": "rodos-official-1n92eag",
+      "url": "https://rodos.ua/vhodnye-dveri-f100",
+      "model": "F102",
+      "purpose": "Квартира",
+      "sourceCodeMismatch": true,
+      "isStockListing": false,
+      "group": "F102::Квартира",
+      "duplicates": []
+    },
+    {
+      "title": "Входные двери F110 для квартиры",
+      "slug": "rodos-official-t789ym",
+      "url": "https://rodos.ua/vhodnye-dveri-f109-2",
+      "model": "F110",
+      "purpose": "Квартира",
+      "sourceCodeMismatch": true,
+      "isStockListing": false,
+      "group": "F110::Квартира",
+      "duplicates": []
+    },
+    {
+      "title": "Входные двери Bas 001 для улицы (В наличии)",
+      "slug": "rodos-official-4tei6b",
+      "url": "https://rodos.ua/vhodnye-dveri-bas-001",
+      "model": "BAS001",
+      "purpose": "Перевірити",
+      "sourceCodeMismatch": false,
+      "isStockListing": true,
+      "group": "BAS001::Вулиця",
+      "duplicates": []
+    },
+    {
+      "title": "Входные двери Bas 002 для улицы (В наличии)",
+      "slug": "rodos-official-jadsto",
+      "url": "https://rodos.ua/vhodnye-dveri-lnz-006",
+      "model": "BAS002",
+      "purpose": "Перевірити",
+      "sourceCodeMismatch": false,
+      "isStockListing": true,
+      "group": "BAS002::Вулиця",
+      "duplicates": []
+    },
+    {
+      "title": "Входные двери F114 (В наличии)",
+      "slug": "rodos-official-1n92ed9",
+      "url": "https://rodos.ua/vhodnye-dveri-f114",
+      "model": "F114",
+      "purpose": "Перевірити",
+      "sourceCodeMismatch": false,
+      "isStockListing": true,
+      "group": "F114::Перевірити",
+      "duplicates": []
+    },
+    {
+      "title": "Входные двери F124 (LTL 6515) (В наличии)",
+      "slug": "rodos-official-t7a3qa",
+      "url": "https://rodos.ua/vhodnye-dveri-f124-1",
+      "model": "F124",
+      "purpose": "Перевірити",
+      "sourceCodeMismatch": false,
+      "isStockListing": true,
+      "group": "F124::Перевірити",
+      "duplicates": []
+    },
+    {
+      "title": "Входные двери F124 (LTL 6908) (В наличии)",
+      "slug": "rodos-official-1rhs1v",
+      "url": "https://rodos.ua/vhodnye-dveri-f124-ltl-6908-sp",
+      "model": "F124",
+      "purpose": "Перевірити",
+      "sourceCodeMismatch": false,
+      "isStockListing": true,
+      "group": "F124::Перевірити",
+      "duplicates": []
+    },
+    {
+      "title": "Входные двери F129",
+      "slug": "rodos-official-1n92ec3",
+      "url": "https://rodos.ua/vhodnye-dveri-f129",
+      "model": "F129",
+      "purpose": "Перевірити",
+      "sourceCodeMismatch": false,
+      "isStockListing": false,
+      "group": "F129::Перевірити",
+      "duplicates": []
+    },
+    {
+      "title": "Входные двери F130",
+      "slug": "rodos-official-jkwc00",
+      "url": "https://rodos.ua/vhodnye-dveri-f130-test",
+      "model": "F130",
+      "purpose": "Перевірити",
+      "sourceCodeMismatch": false,
+      "isStockListing": false,
+      "group": "F130::Перевірити",
+      "duplicates": []
+    },
+    {
+      "title": "Входные двери F131",
+      "slug": "rodos-official-1n92eey",
+      "url": "https://rodos.ua/vhodnye-dveri-f131",
+      "model": "F131",
+      "purpose": "Перевірити",
+      "sourceCodeMismatch": false,
+      "isStockListing": false,
+      "group": "F131::Перевірити",
+      "duplicates": []
+    },
+    {
+      "title": "Входные двери F137",
+      "slug": "rodos-official-1n92ef0",
+      "url": "https://rodos.ua/vhodnye-dveri-f137",
+      "model": "F137",
+      "purpose": "Перевірити",
+      "sourceCodeMismatch": false,
+      "isStockListing": false,
+      "group": "F137::Перевірити",
+      "duplicates": []
+    },
+    {
+      "title": "Входные двери F138",
+      "slug": "rodos-official-1n92eer",
+      "url": "https://rodos.ua/vhodnye-dveri-f138",
+      "model": "F138",
+      "purpose": "Перевірити",
+      "sourceCodeMismatch": false,
+      "isStockListing": false,
+      "group": "F138::Перевірити",
+      "duplicates": []
+    },
+    {
+      "title": "Входная дверь F 166 (Ardesia Nero) (В наличии)",
+      "slug": "rodos-official-vr68i9",
+      "url": "https://rodos.ua/vhodnaya-dver-f-166-ardesia-nero-v-nalichii",
+      "model": "F166",
+      "purpose": "Перевірити",
+      "sourceCodeMismatch": false,
+      "isStockListing": true,
+      "group": "F166::Перевірити",
+      "duplicates": []
+    },
+    {
+      "title": "Входная дверь F 203 (Графит) (В наличии)",
+      "slug": "rodos-official-1va3l7w",
+      "url": "https://rodos.ua/vhodnaya-dver-f-203-grafit-v-nalichii",
+      "model": "F203",
+      "purpose": "Перевірити",
+      "sourceCodeMismatch": false,
+      "isStockListing": true,
+      "group": "F203::Перевірити",
+      "duplicates": []
+    },
+    {
+      "title": "Входная дверь F 203 (Дерево) (В наличии)",
+      "slug": "rodos-official-1xykyfg",
+      "url": "https://rodos.ua/vhodnaya-dver-f-203-derevo-v-nalichii",
+      "model": "F203",
+      "purpose": "Перевірити",
+      "sourceCodeMismatch": false,
+      "isStockListing": true,
+      "group": "F203::Перевірити",
+      "duplicates": []
+    },
+    {
+      "title": "Входная дверь F 204 (Графит) (В наличии)",
+      "slug": "rodos-official-1lx612j",
+      "url": "https://rodos.ua/vhodnaya-dver-f-204-grafit-v-nalichii",
+      "model": "F204",
+      "purpose": "Перевірити",
+      "sourceCodeMismatch": false,
+      "isStockListing": true,
+      "group": "F204::Перевірити",
+      "duplicates": []
+    },
+    {
+      "title": "Входная дверь F 204 (Дерево) (В наличии)",
+      "slug": "rodos-official-1mfx6ff",
+      "url": "https://rodos.ua/vhodnaya-dver-f-204-derevo-v-nalichii",
+      "model": "F204",
+      "purpose": "Перевірити",
+      "sourceCodeMismatch": false,
+      "isStockListing": true,
+      "group": "F204::Перевірити",
+      "duplicates": []
+    }
+  ]
+}
