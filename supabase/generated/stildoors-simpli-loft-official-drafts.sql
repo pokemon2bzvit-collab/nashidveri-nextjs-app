@@ -1,0 +1,64 @@
+-- StilDoors Simpli Loft: 7 офіційних моделей як приховані чернетки.
+begin;
+insert into public.catalog_collections (brand_id,name,category,description,is_active,sort_order) select id,'Simpli Loft','interior','Міжкімнатні двері StilDoors колекції Simpli Loft.',true,75 from public.catalog_brands where name='StilDoors' on conflict (brand_id,name,category) do update set description=excluded.description,is_active=true,updated_at=now();
+insert into public.products (slug,category,brand,collection,name,material,style,color,price,description,features,image_path,sort_order,is_available) values
+('stildoors-simpli-loft-03-official', 'interior', 'StilDoors', 'Simpli Loft', 'StilDoors Simpli Loft 03', 'Міжкімнатні', 'Ламіновані двері', 'Варіанти заводських декорів', 'Ціна за запитом', 'StilDoors Simpli Loft 03 — міжкімнатні двері колекції Simpli Loft. Доступні стандартні розміри: 40 х 200, 60 х 200, 70 х 200, 80 х 200, 90 х 200 см. Товщина полотна 38 мм. Для моделі передбачені заводські декори; актуальну комплектацію й ціну уточнюйте у менеджера.', '["Фабрика StilDoors","Колекція Simpli Loft","Офіційна картка виробника"]', 'https://stildoors.com.ua/images/dveri/simpli-loft/simpli-loft-03/biliy-supermat/dveri-simpli-loft-simpli-loft-03-biliy-supermat.jpg', '10800', 'false'),
+('stildoors-simpli-loft-05-official', 'interior', 'StilDoors', 'Simpli Loft', 'StilDoors Simpli Loft 05', 'Міжкімнатні', 'Ламіновані двері', 'Варіанти заводських декорів', 'Ціна за запитом', 'StilDoors Simpli Loft 05 — міжкімнатні двері колекції Simpli Loft. Доступні стандартні розміри: 40 х 200, 60 х 200, 70 х 200, 80 х 200, 90 х 200 см. Товщина полотна 38 мм. Для моделі передбачені заводські декори; актуальну комплектацію й ціну уточнюйте у менеджера.', '["Фабрика StilDoors","Колекція Simpli Loft","Офіційна картка виробника"]', 'https://stildoors.com.ua/images/dveri/simpli-loft/simpli-loft-05/biliy-supermat/dveri-simpli-loft-simpli-loft-05-biliy-supermat.jpg', '10801', 'false'),
+('stildoors-simpli-loft-06-official', 'interior', 'StilDoors', 'Simpli Loft', 'StilDoors Simpli Loft 06', 'Міжкімнатні', 'Ламіновані двері', 'Варіанти заводських декорів', 'Ціна за запитом', 'StilDoors Simpli Loft 06 — міжкімнатні двері колекції Simpli Loft. Доступні стандартні розміри: 40 х 200, 60 х 200, 70 х 200, 80 х 200, 90 х 200 см. Товщина полотна 38 мм. Для моделі передбачені заводські декори; актуальну комплектацію й ціну уточнюйте у менеджера.', '["Фабрика StilDoors","Колекція Simpli Loft","Офіційна картка виробника"]', 'https://stildoors.com.ua/images/dveri/simpli-loft/simpli-loft-06/biliy-supermat/dveri-simpli-loft-simpli-loft-06-biliy-supermat.jpg', '10802', 'false'),
+('stildoors-simpli-loft-07-official', 'interior', 'StilDoors', 'Simpli Loft', 'StilDoors Simpli Loft 07', 'Міжкімнатні', 'Ламіновані двері', 'Варіанти заводських декорів', 'Ціна за запитом', 'StilDoors Simpli Loft 07 — міжкімнатні двері колекції Simpli Loft. Доступні стандартні розміри: 40 х 200, 60 х 200, 70 х 200, 80 х 200, 90 х 200 см. Товщина полотна 38 мм. Для моделі передбачені заводські декори; актуальну комплектацію й ціну уточнюйте у менеджера.', '["Фабрика StilDoors","Колекція Simpli Loft","Офіційна картка виробника"]', 'https://stildoors.com.ua/images/dveri/simpli-loft/simpli-loft-07/biliy-supermat/dveri-simpli-loft-simpli-loft-07-biliy-supermat.jpg', '10803', 'false'),
+('stildoors-simpli-loft-08-official', 'interior', 'StilDoors', 'Simpli Loft', 'StilDoors Simpli Loft 08', 'Міжкімнатні', 'Ламіновані двері', 'Варіанти заводських декорів', 'Ціна за запитом', 'StilDoors Simpli Loft 08 — міжкімнатні двері колекції Simpli Loft. Доступні стандартні розміри: 40 х 200, 60 х 200, 70 х 200, 80 х 200, 90 х 200 см. Товщина полотна 38 мм. Для моделі передбачені заводські декори; актуальну комплектацію й ціну уточнюйте у менеджера.', '["Фабрика StilDoors","Колекція Simpli Loft","Офіційна картка виробника"]', 'https://stildoors.com.ua/images/dveri/simpli-loft/simpli-loft-08/biliy-supermat/dveri-simpli-loft-simpli-loft-08-biliy-supermat.jpg', '10804', 'false'),
+('stildoors-simpli-loft-09-official', 'interior', 'StilDoors', 'Simpli Loft', 'StilDoors Simpli Loft 09', 'Міжкімнатні', 'Ламіновані двері', 'Варіанти заводських декорів', 'Ціна за запитом', 'StilDoors Simpli Loft 09 — міжкімнатні двері колекції Simpli Loft. Доступні стандартні розміри: 40 х 200, 60 х 200, 70 х 200, 80 х 200, 90 х 200 см. Товщина полотна 38 мм. Для моделі передбачені заводські декори; актуальну комплектацію й ціну уточнюйте у менеджера.', '["Фабрика StilDoors","Колекція Simpli Loft","Офіційна картка виробника"]', 'https://stildoors.com.ua/images/dveri/simpli-loft/simpli-loft-09/biliy-supermat/dveri-simpli-loft-simpli-loft-09-biliy-supermat.jpg', '10805', 'false'),
+('stildoors-simpli-loft-10-official', 'interior', 'StilDoors', 'Simpli Loft', 'StilDoors Simpli Loft 10', 'Міжкімнатні', 'Ламіновані двері', 'Варіанти заводських декорів', 'Ціна за запитом', 'StilDoors Simpli Loft 10 — міжкімнатні двері колекції Simpli Loft. Доступні стандартні розміри: 40 х 200, 60 х 200, 70 х 200, 80 х 200, 90 х 200 см. Товщина полотна 38 мм. Для моделі передбачені заводські декори; актуальну комплектацію й ціну уточнюйте у менеджера.', '["Фабрика StilDoors","Колекція Simpli Loft","Офіційна картка виробника"]', 'https://stildoors.com.ua/images/dveri/simpli-loft/simpli-loft-10/biliy-supermat/dveri-simpli-loft-simpli-loft-10-biliy-supermat.jpg', '10806', 'false')
+on conflict (slug) do update set name=excluded.name,description=excluded.description,image_path=excluded.image_path,is_available=false,updated_at=now();
+insert into public.product_specs (product_slug,label,value,sort_order,is_active) values
+('stildoors-simpli-loft-03-official', 'Розміри полотна', '40 х 200, 60 х 200, 70 х 200, 80 х 200, 90 х 200 см', '100', 'true'),
+('stildoors-simpli-loft-03-official', 'Товщина полотна', '38 мм', '110', 'true'),
+('stildoors-simpli-loft-03-official', 'Декори', 'білий супермат', '120', 'true'),
+('stildoors-simpli-loft-05-official', 'Розміри полотна', '40 х 200, 60 х 200, 70 х 200, 80 х 200, 90 х 200 см', '100', 'true'),
+('stildoors-simpli-loft-05-official', 'Товщина полотна', '38 мм', '110', 'true'),
+('stildoors-simpli-loft-05-official', 'Декори', 'білий супермат', '120', 'true'),
+('stildoors-simpli-loft-06-official', 'Розміри полотна', '40 х 200, 60 х 200, 70 х 200, 80 х 200, 90 х 200 см', '100', 'true'),
+('stildoors-simpli-loft-06-official', 'Товщина полотна', '38 мм', '110', 'true'),
+('stildoors-simpli-loft-06-official', 'Декори', 'білий супермат', '120', 'true'),
+('stildoors-simpli-loft-07-official', 'Розміри полотна', '40 х 200, 60 х 200, 70 х 200, 80 х 200, 90 х 200 см', '100', 'true'),
+('stildoors-simpli-loft-07-official', 'Товщина полотна', '38 мм', '110', 'true'),
+('stildoors-simpli-loft-07-official', 'Декори', 'білий супермат', '120', 'true'),
+('stildoors-simpli-loft-08-official', 'Розміри полотна', '40 х 200, 60 х 200, 70 х 200, 80 х 200, 90 х 200 см', '100', 'true'),
+('stildoors-simpli-loft-08-official', 'Товщина полотна', '38 мм', '110', 'true'),
+('stildoors-simpli-loft-08-official', 'Декори', 'білий супермат', '120', 'true'),
+('stildoors-simpli-loft-09-official', 'Розміри полотна', '40 х 200, 60 х 200, 70 х 200, 80 х 200, 90 х 200 см', '100', 'true'),
+('stildoors-simpli-loft-09-official', 'Товщина полотна', '38 мм', '110', 'true'),
+('stildoors-simpli-loft-09-official', 'Декори', 'білий супермат', '120', 'true'),
+('stildoors-simpli-loft-10-official', 'Розміри полотна', '40 х 200, 60 х 200, 70 х 200, 80 х 200, 90 х 200 см', '100', 'true'),
+('stildoors-simpli-loft-10-official', 'Товщина полотна', '38 мм', '110', 'true'),
+('stildoors-simpli-loft-10-official', 'Декори', 'білий супермат', '120', 'true')
+on conflict (product_slug,label) do update set value=excluded.value,sort_order=excluded.sort_order,is_active=true;
+insert into public.product_media (product_slug,kind,label,image_path,sort_order,is_active) values
+('stildoors-simpli-loft-03-official', 'main', 'Головне фото', 'https://stildoors.com.ua/images/dveri/simpli-loft/simpli-loft-03/biliy-supermat/dveri-simpli-loft-simpli-loft-03-biliy-supermat.jpg', '0', 'true'),
+('stildoors-simpli-loft-05-official', 'main', 'Головне фото', 'https://stildoors.com.ua/images/dveri/simpli-loft/simpli-loft-05/biliy-supermat/dveri-simpli-loft-simpli-loft-05-biliy-supermat.jpg', '0', 'true'),
+('stildoors-simpli-loft-06-official', 'main', 'Головне фото', 'https://stildoors.com.ua/images/dveri/simpli-loft/simpli-loft-06/biliy-supermat/dveri-simpli-loft-simpli-loft-06-biliy-supermat.jpg', '0', 'true'),
+('stildoors-simpli-loft-07-official', 'main', 'Головне фото', 'https://stildoors.com.ua/images/dveri/simpli-loft/simpli-loft-07/biliy-supermat/dveri-simpli-loft-simpli-loft-07-biliy-supermat.jpg', '0', 'true'),
+('stildoors-simpli-loft-08-official', 'main', 'Головне фото', 'https://stildoors.com.ua/images/dveri/simpli-loft/simpli-loft-08/biliy-supermat/dveri-simpli-loft-simpli-loft-08-biliy-supermat.jpg', '0', 'true'),
+('stildoors-simpli-loft-09-official', 'main', 'Головне фото', 'https://stildoors.com.ua/images/dveri/simpli-loft/simpli-loft-09/biliy-supermat/dveri-simpli-loft-simpli-loft-09-biliy-supermat.jpg', '0', 'true'),
+('stildoors-simpli-loft-10-official', 'main', 'Головне фото', 'https://stildoors.com.ua/images/dveri/simpli-loft/simpli-loft-10/biliy-supermat/dveri-simpli-loft-simpli-loft-10-biliy-supermat.jpg', '0', 'true')
+on conflict (product_slug,kind,image_path) do update set label=excluded.label,sort_order=excluded.sort_order,is_active=true;
+insert into public.product_options (product_slug,option_group,group_label,label,swatch,image_path,sort_order,is_active) values
+('stildoors-simpli-loft-03-official', 'color', 'Колір полотна', 'білий супермат', null, null, '1', 'true'),
+('stildoors-simpli-loft-05-official', 'color', 'Колір полотна', 'білий супермат', null, null, '1', 'true'),
+('stildoors-simpli-loft-06-official', 'color', 'Колір полотна', 'білий супермат', null, null, '1', 'true'),
+('stildoors-simpli-loft-07-official', 'color', 'Колір полотна', 'білий супермат', null, null, '1', 'true'),
+('stildoors-simpli-loft-08-official', 'color', 'Колір полотна', 'білий супермат', null, null, '1', 'true'),
+('stildoors-simpli-loft-09-official', 'color', 'Колір полотна', 'білий супермат', null, null, '1', 'true'),
+('stildoors-simpli-loft-10-official', 'color', 'Колір полотна', 'білий супермат', null, null, '1', 'true')
+on conflict (product_slug,option_group,label) do update set group_label=excluded.group_label,sort_order=excluded.sort_order,is_active=true;
+insert into public.product_sources (product_slug,source_name,source_url,source_product_name,verification_status,verified_at,notes) values
+('stildoors-simpli-loft-03-official', 'StilDoors', 'https://stildoors.com.ua/dveri/simpli-loft/simpli-loft-03/biliy-supermat/', 'StilDoors Simpli Loft 03', 'verified', now(), 'Офіційна картка StilDoors: назва, головне фото, характеристики та доступні декори.'),
+('stildoors-simpli-loft-05-official', 'StilDoors', 'https://stildoors.com.ua/dveri/simpli-loft/simpli-loft-05/biliy-supermat/', 'StilDoors Simpli Loft 05', 'verified', now(), 'Офіційна картка StilDoors: назва, головне фото, характеристики та доступні декори.'),
+('stildoors-simpli-loft-06-official', 'StilDoors', 'https://stildoors.com.ua/dveri/simpli-loft/simpli-loft-06/biliy-supermat/', 'StilDoors Simpli Loft 06', 'verified', now(), 'Офіційна картка StilDoors: назва, головне фото, характеристики та доступні декори.'),
+('stildoors-simpli-loft-07-official', 'StilDoors', 'https://stildoors.com.ua/dveri/simpli-loft/simpli-loft-07/biliy-supermat/', 'StilDoors Simpli Loft 07', 'verified', now(), 'Офіційна картка StilDoors: назва, головне фото, характеристики та доступні декори.'),
+('stildoors-simpli-loft-08-official', 'StilDoors', 'https://stildoors.com.ua/dveri/simpli-loft/simpli-loft-08/biliy-supermat/', 'StilDoors Simpli Loft 08', 'verified', now(), 'Офіційна картка StilDoors: назва, головне фото, характеристики та доступні декори.'),
+('stildoors-simpli-loft-09-official', 'StilDoors', 'https://stildoors.com.ua/dveri/simpli-loft/simpli-loft-09/biliy-supermat/', 'StilDoors Simpli Loft 09', 'verified', now(), 'Офіційна картка StilDoors: назва, головне фото, характеристики та доступні декори.'),
+('stildoors-simpli-loft-10-official', 'StilDoors', 'https://stildoors.com.ua/dveri/simpli-loft/simpli-loft-10/biliy-supermat/', 'StilDoors Simpli Loft 10', 'verified', now(), 'Офіційна картка StilDoors: назва, головне фото, характеристики та доступні декори.')
+on conflict (product_slug,source_url) do update set verification_status='verified',verified_at=now(),notes=excluded.notes;
+commit;
+select count(*) as офіційних_чернеток from public.products where brand='StilDoors' and collection='Simpli Loft' and slug like 'stildoors-simpli-loft-%-official' and not is_available;

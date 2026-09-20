@@ -1,0 +1,25 @@
+import { mkdirSync, writeFileSync } from 'node:fs';
+
+const baseUrl = 'https://stildoors.com.ua';
+const sourceUrl = `${baseUrl}/dveri/classic/carolina/biliy-mat/sklo-satin/`;
+const headers = { 'user-agent': 'Mozilla/5.0 (compatible; NashiDveriCatalogAudit/1.0)' };
+const quote = (value) => `'${String(value ?? '').replaceAll("'", "''")}'`;
+const clean = (value) => value.replace(/<[^>]*>/g, ' ').replace(/&nbsp;/g, ' ').replace(/&amp;/g, '&').replace(/\s+/g, ' ').trim();
+const response = await fetch(sourceUrl, { headers });
+const html = await response.text();
+if (!response.ok) throw new Error(`Classic Carolina: ${response.status}`);
+const image = html.match(/<meta\s+property=['"]og:image['"]\s+content=['"]([^'"]+)['"]/i)?.[1];
+if (!image) throw new Error('Classic Carolina: не знайдено головне фото');
+const data = {};
+for (const match of html.matchAll(/<tr>\s*<td class=['"]specification-title['"]>([\s\S]*?)<\/td>\s*<td class=['"]specification-description['"]>([\s\S]*?)<\/td>\s*<\/tr>/gi)) data[clean(match[1])] = clean(match[2]);
+const slug = 'stildoors-classic-carolina-official';
+const name = 'StilDoors Carolina';
+const dimensions = data['Розміри'];
+const thickness = data['Товщина полотна'];
+const colors = [...new Set((data['Доступні кольори'] ?? '').split(',').map(clean).filter(Boolean))];
+const description = `${name} — міжкімнатні двері колекції Classic. ${dimensions ? `Доступні стандартні розміри: ${dimensions}. ` : ''}${thickness ? `Товщина полотна ${thickness}. ` : ''}Для моделі передбачені заводські декори та варіанти скла; актуальну комплектацію й ціну уточнюйте у менеджера.`;
+const specs = [['Розміри полотна', dimensions], ['Товщина полотна', thickness], ['Декори', colors.join(', ')]].filter(([, value]) => value);
+const sql = ['-- StilDoors Classic: офіційна модель як прихована чернетка.', 'begin;', "insert into public.catalog_collections (brand_id,name,category,description,is_active,sort_order) select id,'Classic','interior','Міжкімнатні двері StilDoors колекції Classic.',true,76 from public.catalog_brands where name='StilDoors' on conflict (brand_id,name,category) do update set description=excluded.description,is_active=true,updated_at=now();", 'insert into public.products (slug,category,brand,collection,name,material,style,color,price,description,features,image_path,sort_order,is_available) values', `(${[slug,'interior','StilDoors','Classic',name,'Міжкімнатні','Класичні двері','Варіанти заводських декорів','Ціна за запитом',description,JSON.stringify(['Фабрика StilDoors','Колекція Classic','Офіційна картка виробника']),new URL(image,baseUrl).href,10900,false].map(quote).join(', ')}) on conflict (slug) do update set name=excluded.name,description=excluded.description,image_path=excluded.image_path,is_available=false,updated_at=now();`, 'insert into public.product_specs (product_slug,label,value,sort_order,is_active) values', specs.map(([label,value],index)=>`(${[slug,label,value,100+index*10,true].map(quote).join(', ')})`).join(',\n') + '\non conflict (product_slug,label) do update set value=excluded.value,sort_order=excluded.sort_order,is_active=true;', 'insert into public.product_media (product_slug,kind,label,image_path,sort_order,is_active) values', `(${[slug,'main','Головне фото',new URL(image,baseUrl).href,0,true].map(quote).join(', ')}) on conflict (product_slug,kind,image_path) do update set label=excluded.label,sort_order=excluded.sort_order,is_active=true;`, 'insert into public.product_sources (product_slug,source_name,source_url,source_product_name,verification_status,verified_at,notes) values', `(${[slug,'StilDoors',sourceUrl,name,'verified','now()','Офіційна картка StilDoors: назва, головне фото та характеристики.'].map((value,index)=>index===5?value:quote(value)).join(', ')}) on conflict (product_slug,source_url) do update set verification_status='verified',verified_at=now(),notes=excluded.notes;`, 'commit;', "select count(*) as офіційних_чернеток from public.products where slug='stildoors-classic-carolina-official' and not is_available;"].join('\n');
+mkdirSync('supabase/generated',{recursive:true});
+writeFileSync('supabase/generated/stildoors-classic-official-drafts.sql', `${sql}\n`);
+console.log('Створено supabase/generated/stildoors-classic-official-drafts.sql: 1 прихована модель Classic.');
