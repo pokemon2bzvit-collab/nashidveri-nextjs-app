@@ -1,0 +1,335 @@
+{
+  "generatedAt": "2026-09-20T08:00:53.993Z",
+  "totals": {
+    "records": 39,
+    "street": 21,
+    "apartment": 18,
+    "clearDuplicateGroups": 9,
+    "duplicateRecordsBeyondCanonical": 11,
+    "variantsOrReview": 12
+  },
+  "canonical": [
+    {
+      "slug": "catalog-256",
+      "collection": "Вулиця",
+      "name": "Страж Proof 1.5 Slim P Double"
+    },
+    {
+      "slug": "catalog-257",
+      "collection": "Вулиця",
+      "name": "Страж Proof 2.3 Alfa Rio Double"
+    },
+    {
+      "slug": "catalog-258",
+      "collection": "Вулиця",
+      "name": "Страж Proof 2.3 Estra Slim Double"
+    },
+    {
+      "slug": "catalog-259",
+      "collection": "Вулиця",
+      "name": "Страж Proof Forza"
+    },
+    {
+      "slug": "catalog-260",
+      "collection": "Вулиця",
+      "name": "Страж Proof Malta"
+    },
+    {
+      "slug": "catalog-261",
+      "collection": "Вулиця",
+      "name": "Страж PROOF Nominal"
+    },
+    {
+      "slug": "catalog-262",
+      "collection": "Вулиця",
+      "name": "Страж Proof Regola"
+    },
+    {
+      "slug": "catalog-263",
+      "collection": "Вулиця",
+      "name": "Страж PROOF Rio-S Loft"
+    },
+    {
+      "slug": "catalog-264",
+      "collection": "Вулиця",
+      "name": "Страж PROOF Slim S"
+    },
+    {
+      "slug": "catalog-265",
+      "collection": "Вулиця",
+      "name": "Страж Proof Valetta"
+    },
+    {
+      "slug": "catalog-266",
+      "collection": "Вулиця",
+      "name": "Страж PROOF Vega Maxi"
+    },
+    {
+      "slug": "catalog-267",
+      "collection": "Вулиця",
+      "name": "Страж Straj Proof 2.0 Alfa Doble"
+    },
+    {
+      "slug": "catalog-268",
+      "collection": "Квартира",
+      "name": "Страж Avenue"
+    },
+    {
+      "slug": "catalog-269",
+      "collection": "Квартира",
+      "name": "Страж Delica AL Mono"
+    },
+    {
+      "slug": "catalog-270",
+      "collection": "Квартира",
+      "name": "Страж Fusion Vertical"
+    },
+    {
+      "slug": "catalog-271",
+      "collection": "Квартира",
+      "name": "Страж Orlanda"
+    },
+    {
+      "slug": "catalog-272",
+      "collection": "Квартира",
+      "name": "Страж Slim S Glass-A"
+    },
+    {
+      "slug": "catalog-273",
+      "collection": "Квартира",
+      "name": "Страж Terra S New"
+    },
+    {
+      "slug": "catalog-274",
+      "collection": "Квартира",
+      "name": "Страж Tira"
+    },
+    {
+      "slug": "catalog-275",
+      "collection": "Квартира",
+      "name": "Страж Vodaria"
+    },
+    {
+      "slug": "catalog-276",
+      "collection": "Квартира",
+      "name": "Страж Піраміс"
+    },
+    {
+      "slug": "catalog-277",
+      "collection": "Квартира",
+      "name": "Страж Berez Lux Mela B"
+    },
+    {
+      "slug": "catalog-278",
+      "collection": "Квартира",
+      "name": "Страж Berez Lux Porte"
+    },
+    {
+      "slug": "catalog-279",
+      "collection": "Квартира",
+      "name": "Страж Florence"
+    },
+    {
+      "slug": "catalog-282",
+      "collection": "Квартира",
+      "name": "Страж Prestige Matrix"
+    },
+    {
+      "slug": "catalog-285",
+      "collection": "Вулиця",
+      "name": "Страж PROOF Party D 1200"
+    },
+    {
+      "slug": "catalog-292",
+      "collection": "Квартира",
+      "name": "Страж Standart Mirage"
+    },
+    {
+      "slug": "catalog-294",
+      "collection": "Вулиця",
+      "name": "Страж Street PF Rio-S"
+    }
+  ],
+  "duplicateGroups": [
+    [
+      {
+        "slug": "catalog-261",
+        "collection": "Вулиця",
+        "name": "Страж PROOF Nominal"
+      },
+      {
+        "slug": "catalog-284",
+        "collection": "Вулиця",
+        "name": "Страж PROOF Nominal"
+      }
+    ],
+    [
+      {
+        "slug": "catalog-263",
+        "collection": "Вулиця",
+        "name": "Страж PROOF Rio-S Loft"
+      },
+      {
+        "slug": "catalog-287",
+        "collection": "Вулиця",
+        "name": "Страж PROOF Rio-S Loft 1200"
+      },
+      {
+        "slug": "catalog-288",
+        "collection": "Вулиця",
+        "name": "Страж PROOF Rio-S Loft"
+      }
+    ],
+    [
+      {
+        "slug": "catalog-264",
+        "collection": "Вулиця",
+        "name": "Страж PROOF Slim S"
+      },
+      {
+        "slug": "catalog-289",
+        "collection": "Вулиця",
+        "name": "Страж PROOF Slim S 1200"
+      },
+      {
+        "slug": "catalog-290",
+        "collection": "Вулиця",
+        "name": "Страж PROOF Slim S"
+      }
+    ],
+    [
+      {
+        "slug": "catalog-266",
+        "collection": "Вулиця",
+        "name": "Страж PROOF Vega Maxi"
+      },
+      {
+        "slug": "catalog-291",
+        "collection": "Вулиця",
+        "name": "Страж ROOF Vega Maxi"
+      }
+    ],
+    [
+      {
+        "slug": "catalog-269",
+        "collection": "Квартира",
+        "name": "Страж Delica AL Mono"
+      },
+      {
+        "slug": "catalog-281",
+        "collection": "Квартира",
+        "name": "Страж Prestige Delica AL Mono"
+      }
+    ],
+    [
+      {
+        "slug": "catalog-270",
+        "collection": "Квартира",
+        "name": "Страж Fusion Vertical"
+      },
+      {
+        "slug": "catalog-280",
+        "collection": "Квартира",
+        "name": "Страж Fusion Vertical"
+      }
+    ],
+    [
+      {
+        "slug": "catalog-273",
+        "collection": "Квартира",
+        "name": "Страж Terra S New"
+      },
+      {
+        "slug": "catalog-283",
+        "collection": "Квартира",
+        "name": "Страж Prestige Terra S New"
+      }
+    ],
+    [
+      {
+        "slug": "catalog-276",
+        "collection": "Квартира",
+        "name": "Страж Піраміс"
+      },
+      {
+        "slug": "catalog-293",
+        "collection": "Квартира",
+        "name": "Страж Standart Піраміс"
+      }
+    ],
+    [
+      {
+        "slug": "catalog-285",
+        "collection": "Вулиця",
+        "name": "Страж PROOF Party D 1200"
+      },
+      {
+        "slug": "catalog-286",
+        "collection": "Вулиця",
+        "name": "Страж PROOF Party D"
+      }
+    ]
+  ],
+  "variantsOrReview": [
+    {
+      "slug": "catalog-277",
+      "collection": "Квартира",
+      "name": "Страж Berez Lux Mela B"
+    },
+    {
+      "slug": "catalog-278",
+      "collection": "Квартира",
+      "name": "Страж Berez Lux Porte"
+    },
+    {
+      "slug": "catalog-279",
+      "collection": "Квартира",
+      "name": "Страж Florence"
+    },
+    {
+      "slug": "catalog-281",
+      "collection": "Квартира",
+      "name": "Страж Prestige Delica AL Mono"
+    },
+    {
+      "slug": "catalog-282",
+      "collection": "Квартира",
+      "name": "Страж Prestige Matrix"
+    },
+    {
+      "slug": "catalog-283",
+      "collection": "Квартира",
+      "name": "Страж Prestige Terra S New"
+    },
+    {
+      "slug": "catalog-285",
+      "collection": "Вулиця",
+      "name": "Страж PROOF Party D 1200"
+    },
+    {
+      "slug": "catalog-286",
+      "collection": "Вулиця",
+      "name": "Страж PROOF Party D"
+    },
+    {
+      "slug": "catalog-287",
+      "collection": "Вулиця",
+      "name": "Страж PROOF Rio-S Loft 1200"
+    },
+    {
+      "slug": "catalog-289",
+      "collection": "Вулиця",
+      "name": "Страж PROOF Slim S 1200"
+    },
+    {
+      "slug": "catalog-292",
+      "collection": "Квартира",
+      "name": "Страж Standart Mirage"
+    },
+    {
+      "slug": "catalog-293",
+      "collection": "Квартира",
+      "name": "Страж Standart Піраміс"
+    }
+  ]
+}
