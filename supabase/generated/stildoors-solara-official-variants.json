@@ -1,0 +1,955 @@
+{
+  "variants": [
+    {
+      "productSlug": "stildoors-solara-armano-official",
+      "modelSlug": "armano",
+      "sourceUrl": "https://stildoors.com.ua/dveri/solara/armano/biliy-kristal/sklo-chorne",
+      "imagePath": "https://stildoors.com.ua/images/dveri/solara/armano/biliy-kristal/sklo-chorne/dveri-solara-armano-biliy-kristal-sklo-chorne.jpg",
+      "color": "білий кристал",
+      "glass": "чорне",
+      "selections": {
+        "color": "білий кристал",
+        "glass": "чорне"
+      }
+    },
+    {
+      "productSlug": "stildoors-solara-armano-official",
+      "modelSlug": "armano",
+      "sourceUrl": "https://stildoors.com.ua/dveri/solara/armano/biliy-kristal/sklo-satin",
+      "imagePath": "https://stildoors.com.ua/images/dveri/solara/armano/biliy-kristal/sklo-satin/dveri-solara-armano-biliy-kristal-sklo-satin.jpg",
+      "color": "білий кристал",
+      "glass": "біле",
+      "selections": {
+        "color": "білий кристал",
+        "glass": "біле"
+      }
+    },
+    {
+      "productSlug": "stildoors-solara-armano-official",
+      "modelSlug": "armano",
+      "sourceUrl": "https://stildoors.com.ua/dveri/solara/armano/biliy-mat/sklo-chorne",
+      "imagePath": "https://stildoors.com.ua/images/dveri/solara/armano/biliy-mat/sklo-chorne/dveri-solara-armano-biliy-mat-sklo-chorne.jpg",
+      "color": "білий мат",
+      "glass": "чорне",
+      "selections": {
+        "color": "білий мат",
+        "glass": "чорне"
+      }
+    },
+    {
+      "productSlug": "stildoors-solara-armano-official",
+      "modelSlug": "armano",
+      "sourceUrl": "https://stildoors.com.ua/dveri/solara/armano/biliy-mat/sklo-satin",
+      "imagePath": "https://stildoors.com.ua/images/dveri/solara/armano/biliy-mat/sklo-satin/dveri-solara-armano-biliy-mat-sklo-satin.jpg",
+      "color": "білий мат",
+      "glass": "біле",
+      "selections": {
+        "color": "білий мат",
+        "glass": "біле"
+      }
+    },
+    {
+      "productSlug": "stildoors-solara-armano-official",
+      "modelSlug": "armano",
+      "sourceUrl": "https://stildoors.com.ua/dveri/solara/armano/beton-antratsit/sklo-chorne",
+      "imagePath": "https://stildoors.com.ua/images/dveri/solara/armano/beton-antratsit/sklo-chorne/dveri-solara-armano-beton-antratsit-sklo-chorne.jpg",
+      "color": "бетон антрацит",
+      "glass": "чорне",
+      "selections": {
+        "color": "бетон антрацит",
+        "glass": "чорне"
+      }
+    },
+    {
+      "productSlug": "stildoors-solara-armano-official",
+      "modelSlug": "armano",
+      "sourceUrl": "https://stildoors.com.ua/dveri/solara/armano/beton-antratsit/sklo-satin",
+      "imagePath": "https://stildoors.com.ua/images/dveri/solara/armano/beton-antratsit/sklo-satin/dveri-solara-armano-beton-antratsit-sklo-satin.jpg",
+      "color": "бетон антрацит",
+      "glass": "біле",
+      "selections": {
+        "color": "бетон антрацит",
+        "glass": "біле"
+      }
+    },
+    {
+      "productSlug": "stildoors-solara-armano-official",
+      "modelSlug": "armano",
+      "sourceUrl": "https://stildoors.com.ua/dveri/solara/armano/beton-tefra/sklo-chorne",
+      "imagePath": "https://stildoors.com.ua/images/dveri/solara/armano/beton-tefra/sklo-chorne/dveri-solara-armano-beton-tefra-sklo-chorne.jpg",
+      "color": "бетон тефра",
+      "glass": "чорне",
+      "selections": {
+        "color": "бетон тефра",
+        "glass": "чорне"
+      }
+    },
+    {
+      "productSlug": "stildoors-solara-armano-official",
+      "modelSlug": "armano",
+      "sourceUrl": "https://stildoors.com.ua/dveri/solara/armano/beton-tefra/sklo-satin",
+      "imagePath": "https://stildoors.com.ua/images/dveri/solara/armano/beton-tefra/sklo-satin/dveri-solara-armano-beton-tefra-sklo-satin.jpg",
+      "color": "бетон тефра",
+      "glass": "біле",
+      "selections": {
+        "color": "бетон тефра",
+        "glass": "біле"
+      }
+    },
+    {
+      "productSlug": "stildoors-solara-armano-official",
+      "modelSlug": "armano",
+      "sourceUrl": "https://stildoors.com.ua/dveri/solara/armano/vud-stayl/sklo-chorne",
+      "imagePath": "https://stildoors.com.ua/images/dveri/solara/armano/vud-stayl/sklo-chorne/dveri-solara-armano-vud-stayl-sklo-chorne.jpg",
+      "color": "вуд стайл",
+      "glass": "чорне",
+      "selections": {
+        "color": "вуд стайл",
+        "glass": "чорне"
+      }
+    },
+    {
+      "productSlug": "stildoors-solara-armano-official",
+      "modelSlug": "armano",
+      "sourceUrl": "https://stildoors.com.ua/dveri/solara/armano/dub-alpiyskiy/sklo-chorne",
+      "imagePath": "https://stildoors.com.ua/images/dveri/solara/armano/dub-alpiyskiy/sklo-chorne/dveri-solara-armano-dub-alpiyskiy-sklo-chorne.jpg",
+      "color": "дуб альпійський",
+      "glass": "чорне",
+      "selections": {
+        "color": "дуб альпійський",
+        "glass": "чорне"
+      }
+    },
+    {
+      "productSlug": "stildoors-solara-bellano-official",
+      "modelSlug": "bellano",
+      "sourceUrl": "https://stildoors.com.ua/dveri/solara/bellano/biliy-kristal/sklo-chorne",
+      "imagePath": "https://stildoors.com.ua/images/dveri/solara/bellano/biliy-kristal/sklo-chorne/dveri-solara-bellano-biliy-kristal-sklo-chorne.jpg",
+      "color": "білий кристал",
+      "glass": "чорне",
+      "selections": {
+        "color": "білий кристал",
+        "glass": "чорне"
+      }
+    },
+    {
+      "productSlug": "stildoors-solara-bellano-official",
+      "modelSlug": "bellano",
+      "sourceUrl": "https://stildoors.com.ua/dveri/solara/bellano/biliy-kristal/sklo-satin",
+      "imagePath": "https://stildoors.com.ua/images/dveri/solara/bellano/biliy-kristal/sklo-satin/dveri-solara-bellano-biliy-kristal-sklo-satin.jpg",
+      "color": "білий кристал",
+      "glass": "біле",
+      "selections": {
+        "color": "білий кристал",
+        "glass": "біле"
+      }
+    },
+    {
+      "productSlug": "stildoors-solara-bellano-official",
+      "modelSlug": "bellano",
+      "sourceUrl": "https://stildoors.com.ua/dveri/solara/bellano/biliy-mat/sklo-chorne",
+      "imagePath": "https://stildoors.com.ua/images/dveri/solara/bellano/biliy-mat/sklo-chorne/dveri-solara-bellano-biliy-mat-sklo-chorne.jpg",
+      "color": "білий мат",
+      "glass": "чорне",
+      "selections": {
+        "color": "білий мат",
+        "glass": "чорне"
+      }
+    },
+    {
+      "productSlug": "stildoors-solara-bellano-official",
+      "modelSlug": "bellano",
+      "sourceUrl": "https://stildoors.com.ua/dveri/solara/bellano/biliy-mat/sklo-satin",
+      "imagePath": "https://stildoors.com.ua/images/dveri/solara/bellano/biliy-mat/sklo-satin/dveri-solara-bellano-biliy-mat-sklo-satin.jpg",
+      "color": "білий мат",
+      "glass": "біле",
+      "selections": {
+        "color": "білий мат",
+        "glass": "біле"
+      }
+    },
+    {
+      "productSlug": "stildoors-solara-bellano-official",
+      "modelSlug": "bellano",
+      "sourceUrl": "https://stildoors.com.ua/dveri/solara/bellano/beton-antratsit/sklo-chorne",
+      "imagePath": "https://stildoors.com.ua/images/dveri/solara/bellano/beton-antratsit/sklo-chorne/dveri-solara-bellano-beton-antratsit-sklo-chorne.jpg",
+      "color": "бетон антрацит",
+      "glass": "чорне",
+      "selections": {
+        "color": "бетон антрацит",
+        "glass": "чорне"
+      }
+    },
+    {
+      "productSlug": "stildoors-solara-bellano-official",
+      "modelSlug": "bellano",
+      "sourceUrl": "https://stildoors.com.ua/dveri/solara/bellano/beton-antratsit/sklo-satin",
+      "imagePath": "https://stildoors.com.ua/images/dveri/solara/bellano/beton-antratsit/sklo-satin/dveri-solara-bellano-beton-antratsit-sklo-satin.jpg",
+      "color": "бетон антрацит",
+      "glass": "біле",
+      "selections": {
+        "color": "бетон антрацит",
+        "glass": "біле"
+      }
+    },
+    {
+      "productSlug": "stildoors-solara-bellano-official",
+      "modelSlug": "bellano",
+      "sourceUrl": "https://stildoors.com.ua/dveri/solara/bellano/beton-tefra/sklo-chorne",
+      "imagePath": "https://stildoors.com.ua/images/dveri/solara/bellano/beton-tefra/sklo-chorne/dveri-solara-bellano-beton-tefra-sklo-chorne.jpg",
+      "color": "бетон тефра",
+      "glass": "чорне",
+      "selections": {
+        "color": "бетон тефра",
+        "glass": "чорне"
+      }
+    },
+    {
+      "productSlug": "stildoors-solara-bellano-official",
+      "modelSlug": "bellano",
+      "sourceUrl": "https://stildoors.com.ua/dveri/solara/bellano/beton-tefra/sklo-satin",
+      "imagePath": "https://stildoors.com.ua/images/dveri/solara/bellano/beton-tefra/sklo-satin/dveri-solara-bellano-beton-tefra-sklo-satin.jpg",
+      "color": "бетон тефра",
+      "glass": "біле",
+      "selections": {
+        "color": "бетон тефра",
+        "glass": "біле"
+      }
+    },
+    {
+      "productSlug": "stildoors-solara-bellano-official",
+      "modelSlug": "bellano",
+      "sourceUrl": "https://stildoors.com.ua/dveri/solara/bellano/vud-stayl/sklo-chorne",
+      "imagePath": "https://stildoors.com.ua/images/dveri/solara/bellano/vud-stayl/sklo-chorne/dveri-solara-bellano-vud-stayl-sklo-chorne.jpg",
+      "color": "вуд стайл",
+      "glass": "чорне",
+      "selections": {
+        "color": "вуд стайл",
+        "glass": "чорне"
+      }
+    },
+    {
+      "productSlug": "stildoors-solara-bellano-official",
+      "modelSlug": "bellano",
+      "sourceUrl": "https://stildoors.com.ua/dveri/solara/bellano/vud-stayl/sklo-satin",
+      "imagePath": "https://stildoors.com.ua/images/dveri/solara/bellano/vud-stayl/sklo-satin/dveri-solara-bellano-vud-stayl-sklo-satin.jpg",
+      "color": "вуд стайл",
+      "glass": "біле",
+      "selections": {
+        "color": "вуд стайл",
+        "glass": "біле"
+      }
+    },
+    {
+      "productSlug": "stildoors-solara-fiorano-official",
+      "modelSlug": "fiorano",
+      "sourceUrl": "https://stildoors.com.ua/dveri/solara/fiorano/biliy-kristal/sklo-chorne",
+      "imagePath": "https://stildoors.com.ua/images/dveri/solara/fiorano/biliy-kristal/sklo-chorne/dveri-solara-fiorano-biliy-kristal-sklo-chorne.jpg",
+      "color": "білий кристал",
+      "glass": "чорне",
+      "selections": {
+        "color": "білий кристал",
+        "glass": "чорне"
+      }
+    },
+    {
+      "productSlug": "stildoors-solara-fiorano-official",
+      "modelSlug": "fiorano",
+      "sourceUrl": "https://stildoors.com.ua/dveri/solara/fiorano/biliy-kristal/sklo-satin",
+      "imagePath": "https://stildoors.com.ua/images/dveri/solara/fiorano/biliy-kristal/sklo-satin/dveri-solara-fiorano-biliy-kristal-sklo-satin.jpg",
+      "color": "білий кристал",
+      "glass": "біле",
+      "selections": {
+        "color": "білий кристал",
+        "glass": "біле"
+      }
+    },
+    {
+      "productSlug": "stildoors-solara-fiorano-official",
+      "modelSlug": "fiorano",
+      "sourceUrl": "https://stildoors.com.ua/dveri/solara/fiorano/biliy-mat/sklo-chorne",
+      "imagePath": "https://stildoors.com.ua/images/dveri/solara/fiorano/biliy-mat/sklo-chorne/dveri-solara-fiorano-biliy-mat-sklo-chorne.jpg",
+      "color": "білий мат",
+      "glass": "чорне",
+      "selections": {
+        "color": "білий мат",
+        "glass": "чорне"
+      }
+    },
+    {
+      "productSlug": "stildoors-solara-fiorano-official",
+      "modelSlug": "fiorano",
+      "sourceUrl": "https://stildoors.com.ua/dveri/solara/fiorano/biliy-mat/sklo-satin",
+      "imagePath": "https://stildoors.com.ua/images/dveri/solara/fiorano/biliy-mat/sklo-satin/dveri-solara-fiorano-biliy-mat-sklo-satin.jpg",
+      "color": "білий мат",
+      "glass": "біле",
+      "selections": {
+        "color": "білий мат",
+        "glass": "біле"
+      }
+    },
+    {
+      "productSlug": "stildoors-solara-fiorano-official",
+      "modelSlug": "fiorano",
+      "sourceUrl": "https://stildoors.com.ua/dveri/solara/fiorano/beton-antratsit/sklo-chorne",
+      "imagePath": "https://stildoors.com.ua/images/dveri/solara/fiorano/beton-antratsit/sklo-chorne/dveri-solara-fiorano-beton-antratsit-sklo-chorne.jpg",
+      "color": "бетон антрацит",
+      "glass": "чорне",
+      "selections": {
+        "color": "бетон антрацит",
+        "glass": "чорне"
+      }
+    },
+    {
+      "productSlug": "stildoors-solara-fiorano-official",
+      "modelSlug": "fiorano",
+      "sourceUrl": "https://stildoors.com.ua/dveri/solara/fiorano/beton-antratsit/sklo-satin",
+      "imagePath": "https://stildoors.com.ua/images/dveri/solara/fiorano/beton-antratsit/sklo-satin/dveri-solara-fiorano-beton-antratsit-sklo-satin.jpg",
+      "color": "бетон антрацит",
+      "glass": "біле",
+      "selections": {
+        "color": "бетон антрацит",
+        "glass": "біле"
+      }
+    },
+    {
+      "productSlug": "stildoors-solara-fiorano-official",
+      "modelSlug": "fiorano",
+      "sourceUrl": "https://stildoors.com.ua/dveri/solara/fiorano/beton-tefra/sklo-chorne",
+      "imagePath": "https://stildoors.com.ua/images/dveri/solara/fiorano/beton-tefra/sklo-chorne/dveri-solara-fiorano-beton-tefra-sklo-chorne.jpg",
+      "color": "бетон тефра",
+      "glass": "чорне",
+      "selections": {
+        "color": "бетон тефра",
+        "glass": "чорне"
+      }
+    },
+    {
+      "productSlug": "stildoors-solara-fiorano-official",
+      "modelSlug": "fiorano",
+      "sourceUrl": "https://stildoors.com.ua/dveri/solara/fiorano/beton-tefra/sklo-satin",
+      "imagePath": "https://stildoors.com.ua/images/dveri/solara/fiorano/beton-tefra/sklo-satin/dveri-solara-fiorano-beton-tefra-sklo-satin.jpg",
+      "color": "бетон тефра",
+      "glass": "біле",
+      "selections": {
+        "color": "бетон тефра",
+        "glass": "біле"
+      }
+    },
+    {
+      "productSlug": "stildoors-solara-fiorano-official",
+      "modelSlug": "fiorano",
+      "sourceUrl": "https://stildoors.com.ua/dveri/solara/fiorano/vud-stayl/sklo-chorne",
+      "imagePath": "https://stildoors.com.ua/images/dveri/solara/fiorano/vud-stayl/sklo-chorne/dveri-solara-fiorano-vud-stayl-sklo-chorne.jpg",
+      "color": "вуд стайл",
+      "glass": "чорне",
+      "selections": {
+        "color": "вуд стайл",
+        "glass": "чорне"
+      }
+    },
+    {
+      "productSlug": "stildoors-solara-fiorano-official",
+      "modelSlug": "fiorano",
+      "sourceUrl": "https://stildoors.com.ua/dveri/solara/fiorano/vud-stayl/sklo-satin",
+      "imagePath": "https://stildoors.com.ua/images/dveri/solara/fiorano/vud-stayl/sklo-satin/dveri-solara-fiorano-vud-stayl-sklo-satin.jpg",
+      "color": "вуд стайл",
+      "glass": "біле",
+      "selections": {
+        "color": "вуд стайл",
+        "glass": "біле"
+      }
+    },
+    {
+      "productSlug": "stildoors-solara-fiorenta-official",
+      "modelSlug": "fiorenta",
+      "sourceUrl": "https://stildoors.com.ua/dveri/solara/fiorenta/biliy-kristal/sklo-chorne",
+      "imagePath": "https://stildoors.com.ua/images/dveri/solara/fiorenta/biliy-kristal/sklo-chorne/dveri-solara-fiorenta-biliy-kristal-sklo-chorne.jpg",
+      "color": "білий кристал",
+      "glass": "чорне",
+      "selections": {
+        "color": "білий кристал",
+        "glass": "чорне"
+      }
+    },
+    {
+      "productSlug": "stildoors-solara-fiorenta-official",
+      "modelSlug": "fiorenta",
+      "sourceUrl": "https://stildoors.com.ua/dveri/solara/fiorenta/biliy-kristal/sklo-satin",
+      "imagePath": "https://stildoors.com.ua/images/dveri/solara/fiorenta/biliy-kristal/sklo-satin/dveri-solara-fiorenta-biliy-kristal-sklo-satin.jpg",
+      "color": "білий кристал",
+      "glass": "біле",
+      "selections": {
+        "color": "білий кристал",
+        "glass": "біле"
+      }
+    },
+    {
+      "productSlug": "stildoors-solara-fiorenta-official",
+      "modelSlug": "fiorenta",
+      "sourceUrl": "https://stildoors.com.ua/dveri/solara/fiorenta/biliy-mat/sklo-chorne",
+      "imagePath": "https://stildoors.com.ua/images/dveri/solara/fiorenta/biliy-mat/sklo-chorne/dveri-solara-fiorenta-biliy-mat-sklo-chorne.jpg",
+      "color": "білий мат",
+      "glass": "чорне",
+      "selections": {
+        "color": "білий мат",
+        "glass": "чорне"
+      }
+    },
+    {
+      "productSlug": "stildoors-solara-fiorenta-official",
+      "modelSlug": "fiorenta",
+      "sourceUrl": "https://stildoors.com.ua/dveri/solara/fiorenta/biliy-mat/sklo-satin",
+      "imagePath": "https://stildoors.com.ua/images/dveri/solara/fiorenta/biliy-mat/sklo-satin/dveri-solara-fiorenta-biliy-mat-sklo-satin.jpg",
+      "color": "білий мат",
+      "glass": "біле",
+      "selections": {
+        "color": "білий мат",
+        "glass": "біле"
+      }
+    },
+    {
+      "productSlug": "stildoors-solara-fiorenta-official",
+      "modelSlug": "fiorenta",
+      "sourceUrl": "https://stildoors.com.ua/dveri/solara/fiorenta/beton-antratsit/sklo-chorne",
+      "imagePath": "https://stildoors.com.ua/images/dveri/solara/fiorenta/beton-antratsit/sklo-chorne/dveri-solara-fiorenta-beton-antratsit-sklo-chorne.jpg",
+      "color": "бетон антрацит",
+      "glass": "чорне",
+      "selections": {
+        "color": "бетон антрацит",
+        "glass": "чорне"
+      }
+    },
+    {
+      "productSlug": "stildoors-solara-fiorenta-official",
+      "modelSlug": "fiorenta",
+      "sourceUrl": "https://stildoors.com.ua/dveri/solara/fiorenta/beton-antratsit/sklo-satin",
+      "imagePath": "https://stildoors.com.ua/images/dveri/solara/fiorenta/beton-antratsit/sklo-satin/dveri-solara-fiorenta-beton-antratsit-sklo-satin.jpg",
+      "color": "бетон антрацит",
+      "glass": "біле",
+      "selections": {
+        "color": "бетон антрацит",
+        "glass": "біле"
+      }
+    },
+    {
+      "productSlug": "stildoors-solara-fiorenta-official",
+      "modelSlug": "fiorenta",
+      "sourceUrl": "https://stildoors.com.ua/dveri/solara/fiorenta/beton-tefra/sklo-chorne",
+      "imagePath": "https://stildoors.com.ua/images/dveri/solara/fiorenta/beton-tefra/sklo-chorne/dveri-solara-fiorenta-beton-tefra-sklo-chorne.jpg",
+      "color": "бетон тефра",
+      "glass": "чорне",
+      "selections": {
+        "color": "бетон тефра",
+        "glass": "чорне"
+      }
+    },
+    {
+      "productSlug": "stildoors-solara-fiorenta-official",
+      "modelSlug": "fiorenta",
+      "sourceUrl": "https://stildoors.com.ua/dveri/solara/fiorenta/beton-tefra/sklo-satin",
+      "imagePath": "https://stildoors.com.ua/images/dveri/solara/fiorenta/beton-tefra/sklo-satin/dveri-solara-fiorenta-beton-tefra-sklo-satin.jpg",
+      "color": "бетон тефра",
+      "glass": "біле",
+      "selections": {
+        "color": "бетон тефра",
+        "glass": "біле"
+      }
+    },
+    {
+      "productSlug": "stildoors-solara-fiorenta-official",
+      "modelSlug": "fiorenta",
+      "sourceUrl": "https://stildoors.com.ua/dveri/solara/fiorenta/vud-stayl/sklo-chorne",
+      "imagePath": "https://stildoors.com.ua/images/dveri/solara/fiorenta/vud-stayl/sklo-chorne/dveri-solara-fiorenta-vud-stayl-sklo-chorne.jpg",
+      "color": "вуд стайл",
+      "glass": "чорне",
+      "selections": {
+        "color": "вуд стайл",
+        "glass": "чорне"
+      }
+    },
+    {
+      "productSlug": "stildoors-solara-fiorenta-official",
+      "modelSlug": "fiorenta",
+      "sourceUrl": "https://stildoors.com.ua/dveri/solara/fiorenta/vud-stayl/sklo-satin",
+      "imagePath": "https://stildoors.com.ua/images/dveri/solara/fiorenta/vud-stayl/sklo-satin/dveri-solara-fiorenta-vud-stayl-sklo-satin.jpg",
+      "color": "вуд стайл",
+      "glass": "біле",
+      "selections": {
+        "color": "вуд стайл",
+        "glass": "біле"
+      }
+    },
+    {
+      "productSlug": "stildoors-solara-livorna-official",
+      "modelSlug": "livorna",
+      "sourceUrl": "https://stildoors.com.ua/dveri/solara/livorna/biliy-kristal/sklo-satin",
+      "imagePath": "https://stildoors.com.ua/images/dveri/solara/livorna/biliy-kristal/sklo-satin/dveri-solara-livorna-biliy-kristal-sklo-satin.jpg",
+      "color": "білий кристал",
+      "glass": "біле",
+      "selections": {
+        "color": "білий кристал",
+        "glass": "біле"
+      }
+    },
+    {
+      "productSlug": "stildoors-solara-livorna-official",
+      "modelSlug": "livorna",
+      "sourceUrl": "https://stildoors.com.ua/dveri/solara/livorna/biliy-mat/sklo-satin",
+      "imagePath": "https://stildoors.com.ua/images/dveri/solara/livorna/biliy-mat/sklo-satin/dveri-solara-livorna-biliy-mat-sklo-satin.jpg",
+      "color": "білий мат",
+      "glass": "біле",
+      "selections": {
+        "color": "білий мат",
+        "glass": "біле"
+      }
+    },
+    {
+      "productSlug": "stildoors-solara-livorna-official",
+      "modelSlug": "livorna",
+      "sourceUrl": "https://stildoors.com.ua/dveri/solara/livorna/beton-antratsit/sklo-satin",
+      "imagePath": "https://stildoors.com.ua/images/dveri/solara/livorna/beton-antratsit/sklo-satin/dveri-solara-livorna-beton-antratsit-sklo-satin.jpg",
+      "color": "бетон антрацит",
+      "glass": "біле",
+      "selections": {
+        "color": "бетон антрацит",
+        "glass": "біле"
+      }
+    },
+    {
+      "productSlug": "stildoors-solara-livorna-official",
+      "modelSlug": "livorna",
+      "sourceUrl": "https://stildoors.com.ua/dveri/solara/livorna/beton-tefra/sklo-satin",
+      "imagePath": "https://stildoors.com.ua/images/dveri/solara/livorna/beton-tefra/sklo-satin/dveri-solara-livorna-beton-tefra-sklo-satin.jpg",
+      "color": "бетон тефра",
+      "glass": "біле",
+      "selections": {
+        "color": "бетон тефра",
+        "glass": "біле"
+      }
+    },
+    {
+      "productSlug": "stildoors-solara-livorna-official",
+      "modelSlug": "livorna",
+      "sourceUrl": "https://stildoors.com.ua/dveri/solara/livorna/vud-stayl/sklo-satin",
+      "imagePath": "https://stildoors.com.ua/images/dveri/solara/livorna/vud-stayl/sklo-satin/dveri-solara-livorna-vud-stayl-sklo-satin.jpg",
+      "color": "вуд стайл",
+      "glass": "біле",
+      "selections": {
+        "color": "вуд стайл",
+        "glass": "біле"
+      }
+    },
+    {
+      "productSlug": "stildoors-solara-livorna-official",
+      "modelSlug": "livorna",
+      "sourceUrl": "https://stildoors.com.ua/dveri/solara/livorna/dub-alpiyskiy/sklo-satin",
+      "imagePath": "https://stildoors.com.ua/images/dveri/solara/livorna/dub-alpiyskiy/sklo-satin/dveri-solara-livorna-dub-alpiyskiy-sklo-satin.jpg",
+      "color": "дуб альпійський",
+      "glass": "біле",
+      "selections": {
+        "color": "дуб альпійський",
+        "glass": "біле"
+      }
+    },
+    {
+      "productSlug": "stildoors-solara-livorna-official",
+      "modelSlug": "livorna",
+      "sourceUrl": "https://stildoors.com.ua/dveri/solara/livorna/dub-kraft/sklo-satin",
+      "imagePath": "https://stildoors.com.ua/images/dveri/solara/livorna/dub-kraft/sklo-satin/dveri-solara-livorna-dub-kraft-sklo-satin.jpg",
+      "color": "дуб крафт",
+      "glass": "біле",
+      "selections": {
+        "color": "дуб крафт",
+        "glass": "біле"
+      }
+    },
+    {
+      "productSlug": "stildoors-solara-livorna-official",
+      "modelSlug": "livorna",
+      "sourceUrl": "https://stildoors.com.ua/dveri/solara/livorna/dub-platina/sklo-satin",
+      "imagePath": "https://stildoors.com.ua/images/dveri/solara/livorna/dub-platina/sklo-satin/dveri-solara-livorna-dub-platina-sklo-satin.jpg",
+      "color": "дуб платіна",
+      "glass": "біле",
+      "selections": {
+        "color": "дуб платіна",
+        "glass": "біле"
+      }
+    },
+    {
+      "productSlug": "stildoors-solara-livorna-official",
+      "modelSlug": "livorna",
+      "sourceUrl": "https://stildoors.com.ua/dveri/solara/livorna/dub-smoki/sklo-satin",
+      "imagePath": "https://stildoors.com.ua/images/dveri/solara/livorna/dub-smoki/sklo-satin/dveri-solara-livorna-dub-smoki-sklo-satin.jpg",
+      "color": "дуб смокі",
+      "glass": "біле",
+      "selections": {
+        "color": "дуб смокі",
+        "glass": "біле"
+      }
+    },
+    {
+      "productSlug": "stildoors-solara-livorna-official",
+      "modelSlug": "livorna",
+      "sourceUrl": "https://stildoors.com.ua/dveri/solara/livorna/yasen-nordik/sklo-satin",
+      "imagePath": "https://stildoors.com.ua/images/dveri/solara/livorna/yasen-nordik/sklo-satin/dveri-solara-livorna-yasen-nordik-sklo-satin.jpg",
+      "color": "ясен нордік",
+      "glass": "біле",
+      "selections": {
+        "color": "ясен нордік",
+        "glass": "біле"
+      }
+    },
+    {
+      "productSlug": "stildoors-solara-ravello-official",
+      "modelSlug": "ravello",
+      "sourceUrl": "https://stildoors.com.ua/dveri/solara/ravello/biliy-kristal/sklo-chorne",
+      "imagePath": "https://stildoors.com.ua/images/dveri/solara/ravello/biliy-kristal/sklo-chorne/dveri-solara-ravello-biliy-kristal-sklo-chorne.jpg",
+      "color": "білий кристал",
+      "glass": "чорне",
+      "selections": {
+        "color": "білий кристал",
+        "glass": "чорне"
+      }
+    },
+    {
+      "productSlug": "stildoors-solara-ravello-official",
+      "modelSlug": "ravello",
+      "sourceUrl": "https://stildoors.com.ua/dveri/solara/ravello/biliy-kristal/sklo-satin",
+      "imagePath": "https://stildoors.com.ua/images/dveri/solara/ravello/biliy-kristal/sklo-satin/dveri-solara-ravello-biliy-kristal-sklo-satin.jpg",
+      "color": "білий кристал",
+      "glass": "біле",
+      "selections": {
+        "color": "білий кристал",
+        "glass": "біле"
+      }
+    },
+    {
+      "productSlug": "stildoors-solara-ravello-official",
+      "modelSlug": "ravello",
+      "sourceUrl": "https://stildoors.com.ua/dveri/solara/ravello/biliy-mat/sklo-chorne",
+      "imagePath": "https://stildoors.com.ua/images/dveri/solara/ravello/biliy-mat/sklo-chorne/dveri-solara-ravello-biliy-mat-sklo-chorne.jpg",
+      "color": "білий мат",
+      "glass": "чорне",
+      "selections": {
+        "color": "білий мат",
+        "glass": "чорне"
+      }
+    },
+    {
+      "productSlug": "stildoors-solara-ravello-official",
+      "modelSlug": "ravello",
+      "sourceUrl": "https://stildoors.com.ua/dveri/solara/ravello/biliy-mat/sklo-satin",
+      "imagePath": "https://stildoors.com.ua/images/dveri/solara/ravello/biliy-mat/sklo-satin/dveri-solara-ravello-biliy-mat-sklo-satin.jpg",
+      "color": "білий мат",
+      "glass": "біле",
+      "selections": {
+        "color": "білий мат",
+        "glass": "біле"
+      }
+    },
+    {
+      "productSlug": "stildoors-solara-ravello-official",
+      "modelSlug": "ravello",
+      "sourceUrl": "https://stildoors.com.ua/dveri/solara/ravello/beton-antratsit/sklo-chorne",
+      "imagePath": "https://stildoors.com.ua/images/dveri/solara/ravello/beton-antratsit/sklo-chorne/dveri-solara-ravello-beton-antratsit-sklo-chorne.jpg",
+      "color": "бетон антрацит",
+      "glass": "чорне",
+      "selections": {
+        "color": "бетон антрацит",
+        "glass": "чорне"
+      }
+    },
+    {
+      "productSlug": "stildoors-solara-ravello-official",
+      "modelSlug": "ravello",
+      "sourceUrl": "https://stildoors.com.ua/dveri/solara/ravello/beton-antratsit/sklo-satin",
+      "imagePath": "https://stildoors.com.ua/images/dveri/solara/ravello/beton-antratsit/sklo-satin/dveri-solara-ravello-beton-antratsit-sklo-satin.jpg",
+      "color": "бетон антрацит",
+      "glass": "біле",
+      "selections": {
+        "color": "бетон антрацит",
+        "glass": "біле"
+      }
+    },
+    {
+      "productSlug": "stildoors-solara-ravello-official",
+      "modelSlug": "ravello",
+      "sourceUrl": "https://stildoors.com.ua/dveri/solara/ravello/beton-tefra/sklo-chorne",
+      "imagePath": "https://stildoors.com.ua/images/dveri/solara/ravello/beton-tefra/sklo-chorne/dveri-solara-ravello-beton-tefra-sklo-chorne.jpg",
+      "color": "бетон тефра",
+      "glass": "чорне",
+      "selections": {
+        "color": "бетон тефра",
+        "glass": "чорне"
+      }
+    },
+    {
+      "productSlug": "stildoors-solara-ravello-official",
+      "modelSlug": "ravello",
+      "sourceUrl": "https://stildoors.com.ua/dveri/solara/ravello/beton-tefra/sklo-satin",
+      "imagePath": "https://stildoors.com.ua/images/dveri/solara/ravello/beton-tefra/sklo-satin/dveri-solara-ravello-beton-tefra-sklo-satin.jpg",
+      "color": "бетон тефра",
+      "glass": "біле",
+      "selections": {
+        "color": "бетон тефра",
+        "glass": "біле"
+      }
+    },
+    {
+      "productSlug": "stildoors-solara-ravello-official",
+      "modelSlug": "ravello",
+      "sourceUrl": "https://stildoors.com.ua/dveri/solara/ravello/vud-stayl/sklo-chorne",
+      "imagePath": "https://stildoors.com.ua/images/dveri/solara/ravello/vud-stayl/sklo-chorne/dveri-solara-ravello-vud-stayl-sklo-chorne.jpg",
+      "color": "вуд стайл",
+      "glass": "чорне",
+      "selections": {
+        "color": "вуд стайл",
+        "glass": "чорне"
+      }
+    },
+    {
+      "productSlug": "stildoors-solara-ravello-official",
+      "modelSlug": "ravello",
+      "sourceUrl": "https://stildoors.com.ua/dveri/solara/ravello/vud-stayl/sklo-satin",
+      "imagePath": "https://stildoors.com.ua/images/dveri/solara/ravello/vud-stayl/sklo-satin/dveri-solara-ravello-vud-stayl-sklo-satin.jpg",
+      "color": "вуд стайл",
+      "glass": "біле",
+      "selections": {
+        "color": "вуд стайл",
+        "glass": "біле"
+      }
+    },
+    {
+      "productSlug": "stildoors-solara-romanda-official",
+      "modelSlug": "romanda",
+      "sourceUrl": "https://stildoors.com.ua/dveri/solara/romanda/biliy-kristal/gluhe",
+      "imagePath": "https://stildoors.com.ua/images/dveri/solara/romanda/biliy-kristal/gluhe/dveri-solara-romanda-biliy-kristal-gluhe.jpg",
+      "color": "білий кристал",
+      "glass": "без скла",
+      "selections": {
+        "color": "білий кристал"
+      }
+    },
+    {
+      "productSlug": "stildoors-solara-romanda-official",
+      "modelSlug": "romanda",
+      "sourceUrl": "https://stildoors.com.ua/dveri/solara/romanda/biliy-mat/gluhe",
+      "imagePath": "https://stildoors.com.ua/images/dveri/solara/romanda/biliy-mat/gluhe/dveri-solara-romanda-biliy-mat-gluhe.jpg",
+      "color": "білий мат",
+      "glass": "без скла",
+      "selections": {
+        "color": "білий мат"
+      }
+    },
+    {
+      "productSlug": "stildoors-solara-romanda-official",
+      "modelSlug": "romanda",
+      "sourceUrl": "https://stildoors.com.ua/dveri/solara/romanda/beton-antratsit/gluhe",
+      "imagePath": "https://stildoors.com.ua/images/dveri/solara/romanda/beton-antratsit/gluhe/dveri-solara-romanda-beton-antratsit-gluhe.jpg",
+      "color": "бетон антрацит",
+      "glass": "без скла",
+      "selections": {
+        "color": "бетон антрацит"
+      }
+    },
+    {
+      "productSlug": "stildoors-solara-romanda-official",
+      "modelSlug": "romanda",
+      "sourceUrl": "https://stildoors.com.ua/dveri/solara/romanda/beton-tefra/gluhe",
+      "imagePath": "https://stildoors.com.ua/images/dveri/solara/romanda/beton-tefra/gluhe/dveri-solara-romanda-beton-tefra-gluhe.jpg",
+      "color": "бетон тефра",
+      "glass": "без скла",
+      "selections": {
+        "color": "бетон тефра"
+      }
+    },
+    {
+      "productSlug": "stildoors-solara-romanda-official",
+      "modelSlug": "romanda",
+      "sourceUrl": "https://stildoors.com.ua/dveri/solara/romanda/vud-stayl/gluhe",
+      "imagePath": "https://stildoors.com.ua/images/dveri/solara/romanda/vud-stayl/gluhe/dveri-solara-romanda-vud-stayl-gluhe.jpg",
+      "color": "вуд стайл",
+      "glass": "без скла",
+      "selections": {
+        "color": "вуд стайл"
+      }
+    },
+    {
+      "productSlug": "stildoors-solara-romanda-official",
+      "modelSlug": "romanda",
+      "sourceUrl": "https://stildoors.com.ua/dveri/solara/romanda/dub-alpiyskiy/gluhe",
+      "imagePath": "https://stildoors.com.ua/images/dveri/solara/romanda/dub-alpiyskiy/gluhe/dveri-solara-romanda-dub-alpiyskiy-gluhe.jpg",
+      "color": "дуб альпійський",
+      "glass": "без скла",
+      "selections": {
+        "color": "дуб альпійський"
+      }
+    },
+    {
+      "productSlug": "stildoors-solara-romanda-official",
+      "modelSlug": "romanda",
+      "sourceUrl": "https://stildoors.com.ua/dveri/solara/romanda/dub-kraft/gluhe",
+      "imagePath": "https://stildoors.com.ua/images/dveri/solara/romanda/dub-kraft/gluhe/dveri-solara-romanda-dub-kraft-gluhe.jpg",
+      "color": "дуб крафт",
+      "glass": "без скла",
+      "selections": {
+        "color": "дуб крафт"
+      }
+    },
+    {
+      "productSlug": "stildoors-solara-romanda-official",
+      "modelSlug": "romanda",
+      "sourceUrl": "https://stildoors.com.ua/dveri/solara/romanda/dub-platina/gluhe",
+      "imagePath": "https://stildoors.com.ua/images/dveri/solara/romanda/dub-platina/gluhe/dveri-solara-romanda-dub-platina-gluhe.jpg",
+      "color": "дуб платіна",
+      "glass": "без скла",
+      "selections": {
+        "color": "дуб платіна"
+      }
+    },
+    {
+      "productSlug": "stildoors-solara-romanda-official",
+      "modelSlug": "romanda",
+      "sourceUrl": "https://stildoors.com.ua/dveri/solara/romanda/dub-smoki/gluhe",
+      "imagePath": "https://stildoors.com.ua/images/dveri/solara/romanda/dub-smoki/gluhe/dveri-solara-romanda-dub-smoki-gluhe.jpg",
+      "color": "дуб смокі",
+      "glass": "без скла",
+      "selections": {
+        "color": "дуб смокі"
+      }
+    },
+    {
+      "productSlug": "stildoors-solara-romanda-official",
+      "modelSlug": "romanda",
+      "sourceUrl": "https://stildoors.com.ua/dveri/solara/romanda/yasen-nordik/gluhe",
+      "imagePath": "https://stildoors.com.ua/images/dveri/solara/romanda/yasen-nordik/gluhe/dveri-solara-romanda-yasen-nordik-gluhe.jpg",
+      "color": "ясен нордік",
+      "glass": "без скла",
+      "selections": {
+        "color": "ясен нордік"
+      }
+    },
+    {
+      "productSlug": "stildoors-solara-salvero-official",
+      "modelSlug": "salvero",
+      "sourceUrl": "https://stildoors.com.ua/dveri/solara/salvero/biliy-kristal/sklo-chorne",
+      "imagePath": "https://stildoors.com.ua/images/dveri/solara/salvero/biliy-kristal/sklo-chorne/dveri-solara-salvero-biliy-kristal-sklo-chorne.jpg",
+      "color": "білий кристал",
+      "glass": "чорне",
+      "selections": {
+        "color": "білий кристал",
+        "glass": "чорне"
+      }
+    },
+    {
+      "productSlug": "stildoors-solara-salvero-official",
+      "modelSlug": "salvero",
+      "sourceUrl": "https://stildoors.com.ua/dveri/solara/salvero/biliy-kristal/sklo-satin",
+      "imagePath": "https://stildoors.com.ua/images/dveri/solara/salvero/biliy-kristal/sklo-satin/dveri-solara-salvero-biliy-kristal-sklo-satin.jpg",
+      "color": "білий кристал",
+      "glass": "біле",
+      "selections": {
+        "color": "білий кристал",
+        "glass": "біле"
+      }
+    },
+    {
+      "productSlug": "stildoors-solara-salvero-official",
+      "modelSlug": "salvero",
+      "sourceUrl": "https://stildoors.com.ua/dveri/solara/salvero/biliy-mat/sklo-chorne",
+      "imagePath": "https://stildoors.com.ua/images/dveri/solara/salvero/biliy-mat/sklo-chorne/dveri-solara-salvero-biliy-mat-sklo-chorne.jpg",
+      "color": "білий мат",
+      "glass": "чорне",
+      "selections": {
+        "color": "білий мат",
+        "glass": "чорне"
+      }
+    },
+    {
+      "productSlug": "stildoors-solara-salvero-official",
+      "modelSlug": "salvero",
+      "sourceUrl": "https://stildoors.com.ua/dveri/solara/salvero/biliy-mat/sklo-satin",
+      "imagePath": "https://stildoors.com.ua/images/dveri/solara/salvero/biliy-mat/sklo-satin/dveri-solara-salvero-biliy-mat-sklo-satin.jpg",
+      "color": "білий мат",
+      "glass": "біле",
+      "selections": {
+        "color": "білий мат",
+        "glass": "біле"
+      }
+    },
+    {
+      "productSlug": "stildoors-solara-salvero-official",
+      "modelSlug": "salvero",
+      "sourceUrl": "https://stildoors.com.ua/dveri/solara/salvero/beton-antratsit/sklo-chorne",
+      "imagePath": "https://stildoors.com.ua/images/dveri/solara/salvero/beton-antratsit/sklo-chorne/dveri-solara-salvero-beton-antratsit-sklo-chorne.jpg",
+      "color": "бетон антрацит",
+      "glass": "чорне",
+      "selections": {
+        "color": "бетон антрацит",
+        "glass": "чорне"
+      }
+    },
+    {
+      "productSlug": "stildoors-solara-salvero-official",
+      "modelSlug": "salvero",
+      "sourceUrl": "https://stildoors.com.ua/dveri/solara/salvero/beton-antratsit/sklo-satin",
+      "imagePath": "https://stildoors.com.ua/images/dveri/solara/salvero/beton-antratsit/sklo-satin/dveri-solara-salvero-beton-antratsit-sklo-satin.jpg",
+      "color": "бетон антрацит",
+      "glass": "біле",
+      "selections": {
+        "color": "бетон антрацит",
+        "glass": "біле"
+      }
+    },
+    {
+      "productSlug": "stildoors-solara-salvero-official",
+      "modelSlug": "salvero",
+      "sourceUrl": "https://stildoors.com.ua/dveri/solara/salvero/beton-tefra/sklo-chorne",
+      "imagePath": "https://stildoors.com.ua/images/dveri/solara/salvero/beton-tefra/sklo-chorne/dveri-solara-salvero-beton-tefra-sklo-chorne.jpg",
+      "color": "бетон тефра",
+      "glass": "чорне",
+      "selections": {
+        "color": "бетон тефра",
+        "glass": "чорне"
+      }
+    },
+    {
+      "productSlug": "stildoors-solara-salvero-official",
+      "modelSlug": "salvero",
+      "sourceUrl": "https://stildoors.com.ua/dveri/solara/salvero/beton-tefra/sklo-satin",
+      "imagePath": "https://stildoors.com.ua/images/dveri/solara/salvero/beton-tefra/sklo-satin/dveri-solara-salvero-beton-tefra-sklo-satin.jpg",
+      "color": "бетон тефра",
+      "glass": "біле",
+      "selections": {
+        "color": "бетон тефра",
+        "glass": "біле"
+      }
+    },
+    {
+      "productSlug": "stildoors-solara-salvero-official",
+      "modelSlug": "salvero",
+      "sourceUrl": "https://stildoors.com.ua/dveri/solara/salvero/vud-stayl/sklo-chorne",
+      "imagePath": "https://stildoors.com.ua/images/dveri/solara/salvero/vud-stayl/sklo-chorne/dveri-solara-salvero-vud-stayl-sklo-chorne.jpg",
+      "color": "вуд стайл",
+      "glass": "чорне",
+      "selections": {
+        "color": "вуд стайл",
+        "glass": "чорне"
+      }
+    },
+    {
+      "productSlug": "stildoors-solara-salvero-official",
+      "modelSlug": "salvero",
+      "sourceUrl": "https://stildoors.com.ua/dveri/solara/salvero/vud-stayl/sklo-satin",
+      "imagePath": "https://stildoors.com.ua/images/dveri/solara/salvero/vud-stayl/sklo-satin/dveri-solara-salvero-vud-stayl-sklo-satin.jpg",
+      "color": "вуд стайл",
+      "glass": "біле",
+      "selections": {
+        "color": "вуд стайл",
+        "glass": "біле"
+      }
+    }
+  ],
+  "count": 80
+}

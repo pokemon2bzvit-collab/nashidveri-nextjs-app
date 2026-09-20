@@ -1,0 +1,485 @@
+{
+  "variants": [
+    {
+      "productSlug": "stildoors-deluxe-antalya-official",
+      "modelSlug": "antalya",
+      "sourceUrl": "https://stildoors.com.ua/dveri/deluxe/antalya/dub-popelyastiy/sklo-chorne",
+      "imagePath": "https://stildoors.com.ua/images/dveri/deluxe/antalya/dub-popelyastiy/sklo-chorne/dveri-deluxe-antalya-dub-popelyastiy-sklo-chorne.jpg",
+      "color": "дуб попелястий",
+      "glass": "чорне",
+      "selections": {
+        "color": "дуб попелястий",
+        "glass": "чорне"
+      }
+    },
+    {
+      "productSlug": "stildoors-deluxe-antalya-official",
+      "modelSlug": "antalya",
+      "sourceUrl": "https://stildoors.com.ua/dveri/deluxe/antalya/dub-sriblyastiy/sklo-satin",
+      "imagePath": "https://stildoors.com.ua/images/dveri/deluxe/antalya/dub-sriblyastiy/sklo-satin/dveri-deluxe-antalya-dub-sriblyastiy-sklo-satin.jpg",
+      "color": "дуб сріблястий",
+      "glass": "біле",
+      "selections": {
+        "color": "дуб сріблястий",
+        "glass": "біле"
+      }
+    },
+    {
+      "productSlug": "stildoors-deluxe-antalya-official",
+      "modelSlug": "antalya",
+      "sourceUrl": "https://stildoors.com.ua/dveri/deluxe/antalya/biliy-kristal/sklo-satin",
+      "imagePath": "https://stildoors.com.ua/images/dveri/deluxe/antalya/biliy-kristal/sklo-satin/dveri-deluxe-antalya-biliy-kristal-sklo-satin.jpg",
+      "color": "білий кристал",
+      "glass": "біле",
+      "selections": {
+        "color": "білий кристал",
+        "glass": "біле"
+      }
+    },
+    {
+      "productSlug": "stildoors-deluxe-antalya-official",
+      "modelSlug": "antalya",
+      "sourceUrl": "https://stildoors.com.ua/dveri/deluxe/antalya/biliy-kristal/sklo-chorne",
+      "imagePath": "https://stildoors.com.ua/images/dveri/deluxe/antalya/biliy-kristal/sklo-chorne/dveri-deluxe-antalya-biliy-kristal-sklo-chorne.jpg",
+      "color": "білий кристал",
+      "glass": "чорне",
+      "selections": {
+        "color": "білий кристал",
+        "glass": "чорне"
+      }
+    },
+    {
+      "productSlug": "stildoors-deluxe-antalya-official",
+      "modelSlug": "antalya",
+      "sourceUrl": "https://stildoors.com.ua/dveri/deluxe/antalya/biliy-mat/sklo-satin",
+      "imagePath": "https://stildoors.com.ua/images/dveri/deluxe/antalya/biliy-mat/sklo-satin/dveri-deluxe-antalya-biliy-mat-sklo-satin.jpg",
+      "color": "білий мат",
+      "glass": "біле",
+      "selections": {
+        "color": "білий мат",
+        "glass": "біле"
+      }
+    },
+    {
+      "productSlug": "stildoors-deluxe-antalya-official",
+      "modelSlug": "antalya",
+      "sourceUrl": "https://stildoors.com.ua/dveri/deluxe/antalya/biliy-mat/sklo-chorne",
+      "imagePath": "https://stildoors.com.ua/images/dveri/deluxe/antalya/biliy-mat/sklo-chorne/dveri-deluxe-antalya-biliy-mat-sklo-chorne.jpg",
+      "color": "білий мат",
+      "glass": "чорне",
+      "selections": {
+        "color": "білий мат",
+        "glass": "чорне"
+      }
+    },
+    {
+      "productSlug": "stildoors-deluxe-antalya-official",
+      "modelSlug": "antalya",
+      "sourceUrl": "https://stildoors.com.ua/dveri/deluxe/antalya/dub-alba/sklo-satin",
+      "imagePath": "https://stildoors.com.ua/images/dveri/deluxe/antalya/dub-alba/sklo-satin/dveri-deluxe-antalya-dub-alba-sklo-satin.jpg",
+      "color": "дуб альба",
+      "glass": "біле",
+      "selections": {
+        "color": "дуб альба",
+        "glass": "біле"
+      }
+    },
+    {
+      "productSlug": "stildoors-deluxe-antalya-official",
+      "modelSlug": "antalya",
+      "sourceUrl": "https://stildoors.com.ua/dveri/deluxe/antalya/dub-alba/sklo-chorne",
+      "imagePath": "https://stildoors.com.ua/images/dveri/deluxe/antalya/dub-alba/sklo-chorne/dveri-deluxe-antalya-dub-alba-sklo-chorne.jpg",
+      "color": "дуб альба",
+      "glass": "чорне",
+      "selections": {
+        "color": "дуб альба",
+        "glass": "чорне"
+      }
+    },
+    {
+      "productSlug": "stildoors-deluxe-antalya-official",
+      "modelSlug": "antalya",
+      "sourceUrl": "https://stildoors.com.ua/dveri/deluxe/antalya/dub-popelyastiy/sklo-satin",
+      "imagePath": "https://stildoors.com.ua/images/dveri/deluxe/antalya/dub-popelyastiy/sklo-satin/dveri-deluxe-antalya-dub-popelyastiy-sklo-satin.jpg",
+      "color": "дуб попелястий",
+      "glass": "біле",
+      "selections": {
+        "color": "дуб попелястий",
+        "glass": "біле"
+      }
+    },
+    {
+      "productSlug": "stildoors-deluxe-antalya-official",
+      "modelSlug": "antalya",
+      "sourceUrl": "https://stildoors.com.ua/dveri/deluxe/antalya/dub-sriblyastiy/sklo-chorne",
+      "imagePath": "https://stildoors.com.ua/images/dveri/deluxe/antalya/dub-sriblyastiy/sklo-chorne/dveri-deluxe-antalya-dub-sriblyastiy-sklo-chorne.jpg",
+      "color": "дуб сріблястий",
+      "glass": "чорне",
+      "selections": {
+        "color": "дуб сріблястий",
+        "glass": "чорне"
+      }
+    },
+    {
+      "productSlug": "stildoors-deluxe-barcelona-official",
+      "modelSlug": "barcelona",
+      "sourceUrl": "https://stildoors.com.ua/dveri/deluxe/barcelona/biliy-mat/sklo-chorne",
+      "imagePath": "https://stildoors.com.ua/images/dveri/deluxe/barcelona/biliy-mat/sklo-chorne/dveri-deluxe-barcelona-biliy-mat-sklo-chorne.jpg",
+      "color": "білий мат",
+      "glass": "чорне",
+      "selections": {
+        "color": "білий мат",
+        "glass": "чорне"
+      }
+    },
+    {
+      "productSlug": "stildoors-deluxe-barcelona-official",
+      "modelSlug": "barcelona",
+      "sourceUrl": "https://stildoors.com.ua/dveri/deluxe/barcelona/biliy-kristal/sklo-satin",
+      "imagePath": "https://stildoors.com.ua/images/dveri/deluxe/barcelona/biliy-kristal/sklo-satin/dveri-deluxe-barcelona-biliy-kristal-sklo-satin.jpg",
+      "color": "білий кристал",
+      "glass": "біле",
+      "selections": {
+        "color": "білий кристал",
+        "glass": "біле"
+      }
+    },
+    {
+      "productSlug": "stildoors-deluxe-barcelona-official",
+      "modelSlug": "barcelona",
+      "sourceUrl": "https://stildoors.com.ua/dveri/deluxe/barcelona/biliy-kristal/sklo-chorne",
+      "imagePath": "https://stildoors.com.ua/images/dveri/deluxe/barcelona/biliy-kristal/sklo-chorne/dveri-deluxe-barcelona-biliy-kristal-sklo-chorne.jpg",
+      "color": "білий кристал",
+      "glass": "чорне",
+      "selections": {
+        "color": "білий кристал",
+        "glass": "чорне"
+      }
+    },
+    {
+      "productSlug": "stildoors-deluxe-barcelona-official",
+      "modelSlug": "barcelona",
+      "sourceUrl": "https://stildoors.com.ua/dveri/deluxe/barcelona/biliy-mat/sklo-satin",
+      "imagePath": "https://stildoors.com.ua/images/dveri/deluxe/barcelona/biliy-mat/sklo-satin/dveri-deluxe-barcelona-biliy-mat-sklo-satin.jpg",
+      "color": "білий мат",
+      "glass": "біле",
+      "selections": {
+        "color": "білий мат",
+        "glass": "біле"
+      }
+    },
+    {
+      "productSlug": "stildoors-deluxe-barcelona-official",
+      "modelSlug": "barcelona",
+      "sourceUrl": "https://stildoors.com.ua/dveri/deluxe/barcelona/dub-alba/sklo-satin",
+      "imagePath": "https://stildoors.com.ua/images/dveri/deluxe/barcelona/dub-alba/sklo-satin/dveri-deluxe-barcelona-dub-alba-sklo-satin.jpg",
+      "color": "дуб альба",
+      "glass": "біле",
+      "selections": {
+        "color": "дуб альба",
+        "glass": "біле"
+      }
+    },
+    {
+      "productSlug": "stildoors-deluxe-barcelona-official",
+      "modelSlug": "barcelona",
+      "sourceUrl": "https://stildoors.com.ua/dveri/deluxe/barcelona/dub-alba/sklo-chorne",
+      "imagePath": "https://stildoors.com.ua/images/dveri/deluxe/barcelona/dub-alba/sklo-chorne/dveri-deluxe-barcelona-dub-alba-sklo-chorne.jpg",
+      "color": "дуб альба",
+      "glass": "чорне",
+      "selections": {
+        "color": "дуб альба",
+        "glass": "чорне"
+      }
+    },
+    {
+      "productSlug": "stildoors-deluxe-barcelona-official",
+      "modelSlug": "barcelona",
+      "sourceUrl": "https://stildoors.com.ua/dveri/deluxe/barcelona/dub-popelyastiy/sklo-satin",
+      "imagePath": "https://stildoors.com.ua/images/dveri/deluxe/barcelona/dub-popelyastiy/sklo-satin/dveri-deluxe-barcelona-dub-popelyastiy-sklo-satin.jpg",
+      "color": "дуб попелястий",
+      "glass": "біле",
+      "selections": {
+        "color": "дуб попелястий",
+        "glass": "біле"
+      }
+    },
+    {
+      "productSlug": "stildoors-deluxe-barcelona-official",
+      "modelSlug": "barcelona",
+      "sourceUrl": "https://stildoors.com.ua/dveri/deluxe/barcelona/dub-popelyastiy/sklo-chorne",
+      "imagePath": "https://stildoors.com.ua/images/dveri/deluxe/barcelona/dub-popelyastiy/sklo-chorne/dveri-deluxe-barcelona-dub-popelyastiy-sklo-chorne.jpg",
+      "color": "дуб попелястий",
+      "glass": "чорне",
+      "selections": {
+        "color": "дуб попелястий",
+        "glass": "чорне"
+      }
+    },
+    {
+      "productSlug": "stildoors-deluxe-barcelona-official",
+      "modelSlug": "barcelona",
+      "sourceUrl": "https://stildoors.com.ua/dveri/deluxe/barcelona/dub-sriblyastiy/sklo-satin",
+      "imagePath": "https://stildoors.com.ua/images/dveri/deluxe/barcelona/dub-sriblyastiy/sklo-satin/dveri-deluxe-barcelona-dub-sriblyastiy-sklo-satin.jpg",
+      "color": "дуб сріблястий",
+      "glass": "біле",
+      "selections": {
+        "color": "дуб сріблястий",
+        "glass": "біле"
+      }
+    },
+    {
+      "productSlug": "stildoors-deluxe-barcelona-official",
+      "modelSlug": "barcelona",
+      "sourceUrl": "https://stildoors.com.ua/dveri/deluxe/barcelona/dub-sriblyastiy/sklo-chorne",
+      "imagePath": "https://stildoors.com.ua/images/dveri/deluxe/barcelona/dub-sriblyastiy/sklo-chorne/dveri-deluxe-barcelona-dub-sriblyastiy-sklo-chorne.jpg",
+      "color": "дуб сріблястий",
+      "glass": "чорне",
+      "selections": {
+        "color": "дуб сріблястий",
+        "glass": "чорне"
+      }
+    },
+    {
+      "productSlug": "stildoors-deluxe-sofia-official",
+      "modelSlug": "sofia",
+      "sourceUrl": "https://stildoors.com.ua/dveri/deluxe/sofia/dub-sriblyastiy/sklo-satin",
+      "imagePath": "https://stildoors.com.ua/images/dveri/deluxe/sofia/dub-sriblyastiy/sklo-satin/dveri-deluxe-sofia-dub-sriblyastiy-sklo-satin.jpg",
+      "color": "дуб сріблястий",
+      "glass": "біле",
+      "selections": {
+        "color": "дуб сріблястий",
+        "glass": "біле"
+      }
+    },
+    {
+      "productSlug": "stildoors-deluxe-sofia-official",
+      "modelSlug": "sofia",
+      "sourceUrl": "https://stildoors.com.ua/dveri/deluxe/sofia/dub-sriblyastiy/sklo-chorne",
+      "imagePath": "https://stildoors.com.ua/images/dveri/deluxe/sofia/dub-sriblyastiy/sklo-chorne/dveri-deluxe-sofia-dub-sriblyastiy-sklo-chorne.jpg",
+      "color": "дуб сріблястий",
+      "glass": "чорне",
+      "selections": {
+        "color": "дуб сріблястий",
+        "glass": "чорне"
+      }
+    },
+    {
+      "productSlug": "stildoors-deluxe-sofia-official",
+      "modelSlug": "sofia",
+      "sourceUrl": "https://stildoors.com.ua/dveri/deluxe/sofia/biliy-kristal/sklo-satin",
+      "imagePath": "https://stildoors.com.ua/images/dveri/deluxe/sofia/biliy-kristal/sklo-satin/dveri-deluxe-sofia-biliy-kristal-sklo-satin.jpg",
+      "color": "білий кристал",
+      "glass": "біле",
+      "selections": {
+        "color": "білий кристал",
+        "glass": "біле"
+      }
+    },
+    {
+      "productSlug": "stildoors-deluxe-sofia-official",
+      "modelSlug": "sofia",
+      "sourceUrl": "https://stildoors.com.ua/dveri/deluxe/sofia/biliy-kristal/sklo-chorne",
+      "imagePath": "https://stildoors.com.ua/images/dveri/deluxe/sofia/biliy-kristal/sklo-chorne/dveri-deluxe-sofia-biliy-kristal-sklo-chorne.jpg",
+      "color": "білий кристал",
+      "glass": "чорне",
+      "selections": {
+        "color": "білий кристал",
+        "glass": "чорне"
+      }
+    },
+    {
+      "productSlug": "stildoors-deluxe-sofia-official",
+      "modelSlug": "sofia",
+      "sourceUrl": "https://stildoors.com.ua/dveri/deluxe/sofia/biliy-mat/sklo-satin",
+      "imagePath": "https://stildoors.com.ua/images/dveri/deluxe/sofia/biliy-mat/sklo-satin/dveri-deluxe-sofia-biliy-mat-sklo-satin.jpg",
+      "color": "білий мат",
+      "glass": "біле",
+      "selections": {
+        "color": "білий мат",
+        "glass": "біле"
+      }
+    },
+    {
+      "productSlug": "stildoors-deluxe-sofia-official",
+      "modelSlug": "sofia",
+      "sourceUrl": "https://stildoors.com.ua/dveri/deluxe/sofia/biliy-mat/sklo-chorne",
+      "imagePath": "https://stildoors.com.ua/images/dveri/deluxe/sofia/biliy-mat/sklo-chorne/dveri-deluxe-sofia-biliy-mat-sklo-chorne.jpg",
+      "color": "білий мат",
+      "glass": "чорне",
+      "selections": {
+        "color": "білий мат",
+        "glass": "чорне"
+      }
+    },
+    {
+      "productSlug": "stildoors-deluxe-sofia-official",
+      "modelSlug": "sofia",
+      "sourceUrl": "https://stildoors.com.ua/dveri/deluxe/sofia/dub-alba/sklo-satin",
+      "imagePath": "https://stildoors.com.ua/images/dveri/deluxe/sofia/dub-alba/sklo-satin/dveri-deluxe-sofia-dub-alba-sklo-satin.jpg",
+      "color": "дуб альба",
+      "glass": "біле",
+      "selections": {
+        "color": "дуб альба",
+        "glass": "біле"
+      }
+    },
+    {
+      "productSlug": "stildoors-deluxe-sofia-official",
+      "modelSlug": "sofia",
+      "sourceUrl": "https://stildoors.com.ua/dveri/deluxe/sofia/dub-alba/sklo-chorne",
+      "imagePath": "https://stildoors.com.ua/images/dveri/deluxe/sofia/dub-alba/sklo-chorne/dveri-deluxe-sofia-dub-alba-sklo-chorne.jpg",
+      "color": "дуб альба",
+      "glass": "чорне",
+      "selections": {
+        "color": "дуб альба",
+        "glass": "чорне"
+      }
+    },
+    {
+      "productSlug": "stildoors-deluxe-sofia-official",
+      "modelSlug": "sofia",
+      "sourceUrl": "https://stildoors.com.ua/dveri/deluxe/sofia/dub-popelyastiy/sklo-satin",
+      "imagePath": "https://stildoors.com.ua/images/dveri/deluxe/sofia/dub-popelyastiy/sklo-satin/dveri-deluxe-sofia-dub-popelyastiy-sklo-satin.jpg",
+      "color": "дуб попелястий",
+      "glass": "біле",
+      "selections": {
+        "color": "дуб попелястий",
+        "glass": "біле"
+      }
+    },
+    {
+      "productSlug": "stildoors-deluxe-sofia-official",
+      "modelSlug": "sofia",
+      "sourceUrl": "https://stildoors.com.ua/dveri/deluxe/sofia/dub-popelyastiy/sklo-chorne",
+      "imagePath": "https://stildoors.com.ua/images/dveri/deluxe/sofia/dub-popelyastiy/sklo-chorne/dveri-deluxe-sofia-dub-popelyastiy-sklo-chorne.jpg",
+      "color": "дуб попелястий",
+      "glass": "чорне",
+      "selections": {
+        "color": "дуб попелястий",
+        "glass": "чорне"
+      }
+    },
+    {
+      "productSlug": "stildoors-deluxe-tokyo-official",
+      "modelSlug": "tokyo",
+      "sourceUrl": "https://stildoors.com.ua/dveri/deluxe/tokyo/dub-popelyastiy/sklo-chorne",
+      "imagePath": "https://stildoors.com.ua/images/dveri/deluxe/tokyo/dub-popelyastiy/sklo-chorne/dveri-deluxe-tokyo-dub-popelyastiy-sklo-chorne.jpg",
+      "color": "дуб попелястий",
+      "glass": "чорне",
+      "selections": {
+        "color": "дуб попелястий",
+        "glass": "чорне"
+      }
+    },
+    {
+      "productSlug": "stildoors-deluxe-tokyo-official",
+      "modelSlug": "tokyo",
+      "sourceUrl": "https://stildoors.com.ua/dveri/deluxe/tokyo/biliy-kristal/sklo-satin",
+      "imagePath": "https://stildoors.com.ua/images/dveri/deluxe/tokyo/biliy-kristal/sklo-satin/dveri-deluxe-tokyo-biliy-kristal-sklo-satin.jpg",
+      "color": "білий кристал",
+      "glass": "біле",
+      "selections": {
+        "color": "білий кристал",
+        "glass": "біле"
+      }
+    },
+    {
+      "productSlug": "stildoors-deluxe-tokyo-official",
+      "modelSlug": "tokyo",
+      "sourceUrl": "https://stildoors.com.ua/dveri/deluxe/tokyo/biliy-kristal/sklo-chorne",
+      "imagePath": "https://stildoors.com.ua/images/dveri/deluxe/tokyo/biliy-kristal/sklo-chorne/dveri-deluxe-tokyo-biliy-kristal-sklo-chorne.jpg",
+      "color": "білий кристал",
+      "glass": "чорне",
+      "selections": {
+        "color": "білий кристал",
+        "glass": "чорне"
+      }
+    },
+    {
+      "productSlug": "stildoors-deluxe-tokyo-official",
+      "modelSlug": "tokyo",
+      "sourceUrl": "https://stildoors.com.ua/dveri/deluxe/tokyo/biliy-mat/sklo-satin",
+      "imagePath": "https://stildoors.com.ua/images/dveri/deluxe/tokyo/biliy-mat/sklo-satin/dveri-deluxe-tokyo-biliy-mat-sklo-satin.jpg",
+      "color": "білий мат",
+      "glass": "біле",
+      "selections": {
+        "color": "білий мат",
+        "glass": "біле"
+      }
+    },
+    {
+      "productSlug": "stildoors-deluxe-tokyo-official",
+      "modelSlug": "tokyo",
+      "sourceUrl": "https://stildoors.com.ua/dveri/deluxe/tokyo/biliy-mat/sklo-chorne",
+      "imagePath": "https://stildoors.com.ua/images/dveri/deluxe/tokyo/biliy-mat/sklo-chorne/dveri-deluxe-tokyo-biliy-mat-sklo-chorne.jpg",
+      "color": "білий мат",
+      "glass": "чорне",
+      "selections": {
+        "color": "білий мат",
+        "glass": "чорне"
+      }
+    },
+    {
+      "productSlug": "stildoors-deluxe-tokyo-official",
+      "modelSlug": "tokyo",
+      "sourceUrl": "https://stildoors.com.ua/dveri/deluxe/tokyo/dub-alba/sklo-satin",
+      "imagePath": "https://stildoors.com.ua/images/dveri/deluxe/tokyo/dub-alba/sklo-satin/dveri-deluxe-tokyo-dub-alba-sklo-satin.jpg",
+      "color": "дуб альба",
+      "glass": "біле",
+      "selections": {
+        "color": "дуб альба",
+        "glass": "біле"
+      }
+    },
+    {
+      "productSlug": "stildoors-deluxe-tokyo-official",
+      "modelSlug": "tokyo",
+      "sourceUrl": "https://stildoors.com.ua/dveri/deluxe/tokyo/dub-alba/sklo-chorne",
+      "imagePath": "https://stildoors.com.ua/images/dveri/deluxe/tokyo/dub-alba/sklo-chorne/dveri-deluxe-tokyo-dub-alba-sklo-chorne.jpg",
+      "color": "дуб альба",
+      "glass": "чорне",
+      "selections": {
+        "color": "дуб альба",
+        "glass": "чорне"
+      }
+    },
+    {
+      "productSlug": "stildoors-deluxe-tokyo-official",
+      "modelSlug": "tokyo",
+      "sourceUrl": "https://stildoors.com.ua/dveri/deluxe/tokyo/dub-popelyastiy/sklo-satin",
+      "imagePath": "https://stildoors.com.ua/images/dveri/deluxe/tokyo/dub-popelyastiy/sklo-satin/dveri-deluxe-tokyo-dub-popelyastiy-sklo-satin.jpg",
+      "color": "дуб попелястий",
+      "glass": "біле",
+      "selections": {
+        "color": "дуб попелястий",
+        "glass": "біле"
+      }
+    },
+    {
+      "productSlug": "stildoors-deluxe-tokyo-official",
+      "modelSlug": "tokyo",
+      "sourceUrl": "https://stildoors.com.ua/dveri/deluxe/tokyo/dub-sriblyastiy/sklo-satin",
+      "imagePath": "https://stildoors.com.ua/images/dveri/deluxe/tokyo/dub-sriblyastiy/sklo-satin/dveri-deluxe-tokyo-dub-sriblyastiy-sklo-satin.jpg",
+      "color": "дуб сріблястий",
+      "glass": "біле",
+      "selections": {
+        "color": "дуб сріблястий",
+        "glass": "біле"
+      }
+    },
+    {
+      "productSlug": "stildoors-deluxe-tokyo-official",
+      "modelSlug": "tokyo",
+      "sourceUrl": "https://stildoors.com.ua/dveri/deluxe/tokyo/dub-sriblyastiy/sklo-chorne",
+      "imagePath": "https://stildoors.com.ua/images/dveri/deluxe/tokyo/dub-sriblyastiy/sklo-chorne/dveri-deluxe-tokyo-dub-sriblyastiy-sklo-chorne.jpg",
+      "color": "дуб сріблястий",
+      "glass": "чорне",
+      "selections": {
+        "color": "дуб сріблястий",
+        "glass": "чорне"
+      }
+    }
+  ],
+  "count": 40
+}

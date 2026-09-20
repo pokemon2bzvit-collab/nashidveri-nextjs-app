@@ -1,0 +1,821 @@
+{
+  "variants": [
+    {
+      "productSlug": "stildoors-stil-arizona-official",
+      "modelSlug": "arizona",
+      "sourceUrl": "https://stildoors.com.ua/dveri/stil/arizona/drim-vud/sklo-chorne",
+      "imagePath": "https://stildoors.com.ua/images/dveri/stil/arizona/drim-vud/sklo-chorne/dveri-stil-arizona-drim-vud-sklo-chorne.jpg",
+      "color": "дрім вуд",
+      "glass": "чорне",
+      "selections": {
+        "color": "дрім вуд",
+        "glass": "чорне"
+      }
+    },
+    {
+      "productSlug": "stildoors-stil-arizona-official",
+      "modelSlug": "arizona",
+      "sourceUrl": "https://stildoors.com.ua/dveri/stil/arizona/kremove-derevo/sklo-satin",
+      "imagePath": "https://stildoors.com.ua/images/dveri/stil/arizona/kremove-derevo/sklo-satin/dveri-stil-arizona-kremove-derevo-sklo-satin.jpg",
+      "color": "кремове дерево",
+      "glass": "біле",
+      "selections": {
+        "color": "кремове дерево",
+        "glass": "біле"
+      }
+    },
+    {
+      "productSlug": "stildoors-stil-arizona-official",
+      "modelSlug": "arizona",
+      "sourceUrl": "https://stildoors.com.ua/dveri/stil/arizona/sandal/sklo-chorne",
+      "imagePath": "https://stildoors.com.ua/images/dveri/stil/arizona/sandal/sklo-chorne/dveri-stil-arizona-sandal-sklo-chorne.jpg",
+      "color": "сандал",
+      "glass": "чорне",
+      "selections": {
+        "color": "сандал",
+        "glass": "чорне"
+      }
+    },
+    {
+      "productSlug": "stildoors-stil-arizona-official",
+      "modelSlug": "arizona",
+      "sourceUrl": "https://stildoors.com.ua/dveri/stil/arizona/sandal/sklo-satin",
+      "imagePath": "https://stildoors.com.ua/images/dveri/stil/arizona/sandal/sklo-satin/dveri-stil-arizona-sandal-sklo-satin.jpg",
+      "color": "сандал",
+      "glass": "біле",
+      "selections": {
+        "color": "сандал",
+        "glass": "біле"
+      }
+    },
+    {
+      "productSlug": "stildoors-stil-arizona-official",
+      "modelSlug": "arizona",
+      "sourceUrl": "https://stildoors.com.ua/dveri/stil/arizona/bile-derevo/sklo-satin",
+      "imagePath": "https://stildoors.com.ua/images/dveri/stil/arizona/bile-derevo/sklo-satin/dveri-stil-arizona-bile-derevo-sklo-satin.jpg",
+      "color": "біле дерево",
+      "glass": "біле",
+      "selections": {
+        "color": "біле дерево",
+        "glass": "біле"
+      }
+    },
+    {
+      "productSlug": "stildoors-stil-arizona-official",
+      "modelSlug": "arizona",
+      "sourceUrl": "https://stildoors.com.ua/dveri/stil/arizona/bile-derevo/sklo-chorne",
+      "imagePath": "https://stildoors.com.ua/images/dveri/stil/arizona/bile-derevo/sklo-chorne/dveri-stil-arizona-bile-derevo-sklo-chorne.jpg",
+      "color": "біле дерево",
+      "glass": "чорне",
+      "selections": {
+        "color": "біле дерево",
+        "glass": "чорне"
+      }
+    },
+    {
+      "productSlug": "stildoors-stil-arizona-official",
+      "modelSlug": "arizona",
+      "sourceUrl": "https://stildoors.com.ua/dveri/stil/arizona/venge-premium/sklo-chorne",
+      "imagePath": "https://stildoors.com.ua/images/dveri/stil/arizona/venge-premium/sklo-chorne/dveri-stil-arizona-venge-premium-sklo-chorne.jpg",
+      "color": "венге преміум",
+      "glass": "чорне",
+      "selections": {
+        "color": "венге преміум",
+        "glass": "чорне"
+      }
+    },
+    {
+      "productSlug": "stildoors-stil-arizona-official",
+      "modelSlug": "arizona",
+      "sourceUrl": "https://stildoors.com.ua/dveri/stil/arizona/venge-premium/sklo-satin",
+      "imagePath": "https://stildoors.com.ua/images/dveri/stil/arizona/venge-premium/sklo-satin/dveri-stil-arizona-venge-premium-sklo-satin.jpg",
+      "color": "венге преміум",
+      "glass": "біле",
+      "selections": {
+        "color": "венге преміум",
+        "glass": "біле"
+      }
+    },
+    {
+      "productSlug": "stildoors-stil-arizona-official",
+      "modelSlug": "arizona",
+      "sourceUrl": "https://stildoors.com.ua/dveri/stil/arizona/drim-vud/sklo-satin",
+      "imagePath": "https://stildoors.com.ua/images/dveri/stil/arizona/drim-vud/sklo-satin/dveri-stil-arizona-drim-vud-sklo-satin.jpg",
+      "color": "дрім вуд",
+      "glass": "біле",
+      "selections": {
+        "color": "дрім вуд",
+        "glass": "біле"
+      }
+    },
+    {
+      "productSlug": "stildoors-stil-arizona-official",
+      "modelSlug": "arizona",
+      "sourceUrl": "https://stildoors.com.ua/dveri/stil/arizona/italiyskiy-gorih/sklo-chorne",
+      "imagePath": "https://stildoors.com.ua/images/dveri/stil/arizona/italiyskiy-gorih/sklo-chorne/dveri-stil-arizona-italiyskiy-gorih-sklo-chorne.jpg",
+      "color": "італійський горіх",
+      "glass": "чорне",
+      "selections": {
+        "color": "італійський горіх",
+        "glass": "чорне"
+      }
+    },
+    {
+      "productSlug": "stildoors-stil-cuba-official",
+      "modelSlug": "cuba",
+      "sourceUrl": "https://stildoors.com.ua/dveri/stil/cuba/biliy-kristal/sklo-satin",
+      "imagePath": "https://stildoors.com.ua/images/dveri/stil/cuba/biliy-kristal/sklo-satin/dveri-stil-cuba-biliy-kristal-sklo-satin.jpg",
+      "color": "білий кристал",
+      "glass": "біле",
+      "selections": {
+        "color": "білий кристал",
+        "glass": "біле"
+      }
+    },
+    {
+      "productSlug": "stildoors-stil-cuba-official",
+      "modelSlug": "cuba",
+      "sourceUrl": "https://stildoors.com.ua/dveri/stil/cuba/biliy-kristal/sklo-chorne",
+      "imagePath": "https://stildoors.com.ua/images/dveri/stil/cuba/biliy-kristal/sklo-chorne/dveri-stil-cuba-biliy-kristal-sklo-chorne.jpg",
+      "color": "білий кристал",
+      "glass": "чорне",
+      "selections": {
+        "color": "білий кристал",
+        "glass": "чорне"
+      }
+    },
+    {
+      "productSlug": "stildoors-stil-cuba-official",
+      "modelSlug": "cuba",
+      "sourceUrl": "https://stildoors.com.ua/dveri/stil/cuba/biliy-mat/sklo-chorne",
+      "imagePath": "https://stildoors.com.ua/images/dveri/stil/cuba/biliy-mat/sklo-chorne/dveri-stil-cuba-biliy-mat-sklo-chorne.jpg",
+      "color": "білий мат",
+      "glass": "чорне",
+      "selections": {
+        "color": "білий мат",
+        "glass": "чорне"
+      }
+    },
+    {
+      "productSlug": "stildoors-stil-cuba-official",
+      "modelSlug": "cuba",
+      "sourceUrl": "https://stildoors.com.ua/dveri/stil/cuba/biliy-mat/sklo-satin",
+      "imagePath": "https://stildoors.com.ua/images/dveri/stil/cuba/biliy-mat/sklo-satin/dveri-stil-cuba-biliy-mat-sklo-satin.jpg",
+      "color": "білий мат",
+      "glass": "біле",
+      "selections": {
+        "color": "білий мат",
+        "glass": "біле"
+      }
+    },
+    {
+      "productSlug": "stildoors-stil-cuba-official",
+      "modelSlug": "cuba",
+      "sourceUrl": "https://stildoors.com.ua/dveri/stil/cuba/siriy-mat/sklo-chorne",
+      "imagePath": "https://stildoors.com.ua/images/dveri/stil/cuba/siriy-mat/sklo-chorne/dveri-stil-cuba-siriy-mat-sklo-chorne.jpg",
+      "color": "сірий мат",
+      "glass": "чорне",
+      "selections": {
+        "color": "сірий мат",
+        "glass": "чорне"
+      }
+    },
+    {
+      "productSlug": "stildoors-stil-cuba-official",
+      "modelSlug": "cuba",
+      "sourceUrl": "https://stildoors.com.ua/dveri/stil/cuba/siriy-mat/sklo-satin",
+      "imagePath": "https://stildoors.com.ua/images/dveri/stil/cuba/siriy-mat/sklo-satin/dveri-stil-cuba-siriy-mat-sklo-satin.jpg",
+      "color": "сірий мат",
+      "glass": "біле",
+      "selections": {
+        "color": "сірий мат",
+        "glass": "біле"
+      }
+    },
+    {
+      "productSlug": "stildoors-stil-florida-official",
+      "modelSlug": "florida",
+      "sourceUrl": "https://stildoors.com.ua/dveri/stil/florida/kremove-derevo/sklo-satin",
+      "imagePath": "https://stildoors.com.ua/images/dveri/stil/florida/kremove-derevo/sklo-satin/dveri-stil-florida-kremove-derevo-sklo-satin.jpg",
+      "color": "кремове дерево",
+      "glass": "біле",
+      "selections": {
+        "color": "кремове дерево",
+        "glass": "біле"
+      }
+    },
+    {
+      "productSlug": "stildoors-stil-florida-official",
+      "modelSlug": "florida",
+      "sourceUrl": "https://stildoors.com.ua/dveri/stil/florida/sandal/sklo-satin",
+      "imagePath": "https://stildoors.com.ua/images/dveri/stil/florida/sandal/sklo-satin/dveri-stil-florida-sandal-sklo-satin.jpg",
+      "color": "сандал",
+      "glass": "біле",
+      "selections": {
+        "color": "сандал",
+        "glass": "біле"
+      }
+    },
+    {
+      "productSlug": "stildoors-stil-florida-official",
+      "modelSlug": "florida",
+      "sourceUrl": "https://stildoors.com.ua/dveri/stil/florida/bile-derevo/sklo-satin",
+      "imagePath": "https://stildoors.com.ua/images/dveri/stil/florida/bile-derevo/sklo-satin/dveri-stil-florida-bile-derevo-sklo-satin.jpg",
+      "color": "біле дерево",
+      "glass": "біле",
+      "selections": {
+        "color": "біле дерево",
+        "glass": "біле"
+      }
+    },
+    {
+      "productSlug": "stildoors-stil-florida-official",
+      "modelSlug": "florida",
+      "sourceUrl": "https://stildoors.com.ua/dveri/stil/florida/bile-derevo/sklo-chorne",
+      "imagePath": "https://stildoors.com.ua/images/dveri/stil/florida/bile-derevo/sklo-chorne/dveri-stil-florida-bile-derevo-sklo-chorne.jpg",
+      "color": "біле дерево",
+      "glass": "чорне",
+      "selections": {
+        "color": "біле дерево",
+        "glass": "чорне"
+      }
+    },
+    {
+      "productSlug": "stildoors-stil-florida-official",
+      "modelSlug": "florida",
+      "sourceUrl": "https://stildoors.com.ua/dveri/stil/florida/biliy-kristal/sklo-satin",
+      "imagePath": "https://stildoors.com.ua/images/dveri/stil/florida/biliy-kristal/sklo-satin/dveri-stil-florida-biliy-kristal-sklo-satin.jpg",
+      "color": "білий кристал",
+      "glass": "біле",
+      "selections": {
+        "color": "білий кристал",
+        "glass": "біле"
+      }
+    },
+    {
+      "productSlug": "stildoors-stil-florida-official",
+      "modelSlug": "florida",
+      "sourceUrl": "https://stildoors.com.ua/dveri/stil/florida/biliy-kristal/sklo-chorne",
+      "imagePath": "https://stildoors.com.ua/images/dveri/stil/florida/biliy-kristal/sklo-chorne/dveri-stil-florida-biliy-kristal-sklo-chorne.jpg",
+      "color": "білий кристал",
+      "glass": "чорне",
+      "selections": {
+        "color": "білий кристал",
+        "glass": "чорне"
+      }
+    },
+    {
+      "productSlug": "stildoors-stil-florida-official",
+      "modelSlug": "florida",
+      "sourceUrl": "https://stildoors.com.ua/dveri/stil/florida/venge-premium/sklo-satin",
+      "imagePath": "https://stildoors.com.ua/images/dveri/stil/florida/venge-premium/sklo-satin/dveri-stil-florida-venge-premium-sklo-satin.jpg",
+      "color": "венге преміум",
+      "glass": "біле",
+      "selections": {
+        "color": "венге преміум",
+        "glass": "біле"
+      }
+    },
+    {
+      "productSlug": "stildoors-stil-florida-official",
+      "modelSlug": "florida",
+      "sourceUrl": "https://stildoors.com.ua/dveri/stil/florida/venge-premium/sklo-chorne",
+      "imagePath": "https://stildoors.com.ua/images/dveri/stil/florida/venge-premium/sklo-chorne/dveri-stil-florida-venge-premium-sklo-chorne.jpg",
+      "color": "венге преміум",
+      "glass": "чорне",
+      "selections": {
+        "color": "венге преміум",
+        "glass": "чорне"
+      }
+    },
+    {
+      "productSlug": "stildoors-stil-florida-official",
+      "modelSlug": "florida",
+      "sourceUrl": "https://stildoors.com.ua/dveri/stil/florida/drim-vud/sklo-satin",
+      "imagePath": "https://stildoors.com.ua/images/dveri/stil/florida/drim-vud/sklo-satin/dveri-stil-florida-drim-vud-sklo-satin.jpg",
+      "color": "дрім вуд",
+      "glass": "біле",
+      "selections": {
+        "color": "дрім вуд",
+        "glass": "біле"
+      }
+    },
+    {
+      "productSlug": "stildoors-stil-florida-official",
+      "modelSlug": "florida",
+      "sourceUrl": "https://stildoors.com.ua/dveri/stil/florida/drim-vud/sklo-chorne",
+      "imagePath": "https://stildoors.com.ua/images/dveri/stil/florida/drim-vud/sklo-chorne/dveri-stil-florida-drim-vud-sklo-chorne.jpg",
+      "color": "дрім вуд",
+      "glass": "чорне",
+      "selections": {
+        "color": "дрім вуд",
+        "glass": "чорне"
+      }
+    },
+    {
+      "productSlug": "stildoors-stil-hamlet-official",
+      "modelSlug": "hamlet",
+      "sourceUrl": "https://stildoors.com.ua/dveri/stil/hamlet/biliy-kristal/sklo-satin",
+      "imagePath": "https://stildoors.com.ua/images/dveri/stil/hamlet/biliy-kristal/sklo-satin/dveri-stil-hamlet-biliy-kristal-sklo-satin.jpg",
+      "color": "білий кристал",
+      "glass": "біле",
+      "selections": {
+        "color": "білий кристал",
+        "glass": "біле"
+      }
+    },
+    {
+      "productSlug": "stildoors-stil-hamlet-official",
+      "modelSlug": "hamlet",
+      "sourceUrl": "https://stildoors.com.ua/dveri/stil/hamlet/biliy-mat/sklo-satin",
+      "imagePath": "https://stildoors.com.ua/images/dveri/stil/hamlet/biliy-mat/sklo-satin/dveri-stil-hamlet-biliy-mat-sklo-satin.jpg",
+      "color": "білий мат",
+      "glass": "біле",
+      "selections": {
+        "color": "білий мат",
+        "glass": "біле"
+      }
+    },
+    {
+      "productSlug": "stildoors-stil-london-official",
+      "modelSlug": "london",
+      "sourceUrl": "https://stildoors.com.ua/dveri/stil/london/bile-derevo/sklo-satin",
+      "imagePath": "https://stildoors.com.ua/images/dveri/stil/london/bile-derevo/sklo-satin/dveri-stil-london-bile-derevo-sklo-satin.jpg",
+      "color": "біле дерево",
+      "glass": "біле",
+      "selections": {
+        "color": "біле дерево",
+        "glass": "біле"
+      }
+    },
+    {
+      "productSlug": "stildoors-stil-london-official",
+      "modelSlug": "london",
+      "sourceUrl": "https://stildoors.com.ua/dveri/stil/london/bile-derevo/sklo-chorne",
+      "imagePath": "https://stildoors.com.ua/images/dveri/stil/london/bile-derevo/sklo-chorne/dveri-stil-london-bile-derevo-sklo-chorne.jpg",
+      "color": "біле дерево",
+      "glass": "чорне",
+      "selections": {
+        "color": "біле дерево",
+        "glass": "чорне"
+      }
+    },
+    {
+      "productSlug": "stildoors-stil-london-official",
+      "modelSlug": "london",
+      "sourceUrl": "https://stildoors.com.ua/dveri/stil/london/biliy-kristal/sklo-satin",
+      "imagePath": "https://stildoors.com.ua/images/dveri/stil/london/biliy-kristal/sklo-satin/dveri-stil-london-biliy-kristal-sklo-satin.jpg",
+      "color": "білий кристал",
+      "glass": "біле",
+      "selections": {
+        "color": "білий кристал",
+        "glass": "біле"
+      }
+    },
+    {
+      "productSlug": "stildoors-stil-london-official",
+      "modelSlug": "london",
+      "sourceUrl": "https://stildoors.com.ua/dveri/stil/london/biliy-kristal/sklo-chorne",
+      "imagePath": "https://stildoors.com.ua/images/dveri/stil/london/biliy-kristal/sklo-chorne/dveri-stil-london-biliy-kristal-sklo-chorne.jpg",
+      "color": "білий кристал",
+      "glass": "чорне",
+      "selections": {
+        "color": "білий кристал",
+        "glass": "чорне"
+      }
+    },
+    {
+      "productSlug": "stildoors-stil-london-official",
+      "modelSlug": "london",
+      "sourceUrl": "https://stildoors.com.ua/dveri/stil/london/venge-premium/sklo-chorne",
+      "imagePath": "https://stildoors.com.ua/images/dveri/stil/london/venge-premium/sklo-chorne/dveri-stil-london-venge-premium-sklo-chorne.jpg",
+      "color": "венге преміум",
+      "glass": "чорне",
+      "selections": {
+        "color": "венге преміум",
+        "glass": "чорне"
+      }
+    },
+    {
+      "productSlug": "stildoors-stil-london-official",
+      "modelSlug": "london",
+      "sourceUrl": "https://stildoors.com.ua/dveri/stil/london/venge-premium/sklo-satin",
+      "imagePath": "https://stildoors.com.ua/images/dveri/stil/london/venge-premium/sklo-satin/dveri-stil-london-venge-premium-sklo-satin.jpg",
+      "color": "венге преміум",
+      "glass": "біле",
+      "selections": {
+        "color": "венге преміум",
+        "glass": "біле"
+      }
+    },
+    {
+      "productSlug": "stildoors-stil-london-official",
+      "modelSlug": "london",
+      "sourceUrl": "https://stildoors.com.ua/dveri/stil/london/drim-vud/sklo-satin",
+      "imagePath": "https://stildoors.com.ua/images/dveri/stil/london/drim-vud/sklo-satin/dveri-stil-london-drim-vud-sklo-satin.jpg",
+      "color": "дрім вуд",
+      "glass": "біле",
+      "selections": {
+        "color": "дрім вуд",
+        "glass": "біле"
+      }
+    },
+    {
+      "productSlug": "stildoors-stil-london-official",
+      "modelSlug": "london",
+      "sourceUrl": "https://stildoors.com.ua/dveri/stil/london/drim-vud/sklo-chorne",
+      "imagePath": "https://stildoors.com.ua/images/dveri/stil/london/drim-vud/sklo-chorne/dveri-stil-london-drim-vud-sklo-chorne.jpg",
+      "color": "дрім вуд",
+      "glass": "чорне",
+      "selections": {
+        "color": "дрім вуд",
+        "glass": "чорне"
+      }
+    },
+    {
+      "productSlug": "stildoors-stil-london-official",
+      "modelSlug": "london",
+      "sourceUrl": "https://stildoors.com.ua/dveri/stil/london/dub-sriblyastiy/sklo-chorne",
+      "imagePath": "https://stildoors.com.ua/images/dveri/stil/london/dub-sriblyastiy/sklo-chorne/dveri-stil-london-dub-sriblyastiy-sklo-chorne.jpg",
+      "color": "дуб сріблястий",
+      "glass": "чорне",
+      "selections": {
+        "color": "дуб сріблястий",
+        "glass": "чорне"
+      }
+    },
+    {
+      "productSlug": "stildoors-stil-london-official",
+      "modelSlug": "london",
+      "sourceUrl": "https://stildoors.com.ua/dveri/stil/london/dub-sriblyastiy/sklo-satin",
+      "imagePath": "https://stildoors.com.ua/images/dveri/stil/london/dub-sriblyastiy/sklo-satin/dveri-stil-london-dub-sriblyastiy-sklo-satin.jpg",
+      "color": "дуб сріблястий",
+      "glass": "біле",
+      "selections": {
+        "color": "дуб сріблястий",
+        "glass": "біле"
+      }
+    },
+    {
+      "productSlug": "stildoors-stil-mexico-official",
+      "modelSlug": "mexico",
+      "sourceUrl": "https://stildoors.com.ua/dveri/stil/mexico/bile-derevo/sklo-chorne",
+      "imagePath": "https://stildoors.com.ua/images/dveri/stil/mexico/bile-derevo/sklo-chorne/dveri-stil-mexico-bile-derevo-sklo-chorne.jpg",
+      "color": "біле дерево",
+      "glass": "чорне",
+      "selections": {
+        "color": "біле дерево",
+        "glass": "чорне"
+      }
+    },
+    {
+      "productSlug": "stildoors-stil-mexico-official",
+      "modelSlug": "mexico",
+      "sourceUrl": "https://stildoors.com.ua/dveri/stil/mexico/bile-derevo/sklo-satin",
+      "imagePath": "https://stildoors.com.ua/images/dveri/stil/mexico/bile-derevo/sklo-satin/dveri-stil-mexico-bile-derevo-sklo-satin.jpg",
+      "color": "біле дерево",
+      "glass": "біле",
+      "selections": {
+        "color": "біле дерево",
+        "glass": "біле"
+      }
+    },
+    {
+      "productSlug": "stildoors-stil-mexico-official",
+      "modelSlug": "mexico",
+      "sourceUrl": "https://stildoors.com.ua/dveri/stil/mexico/biliy-kristal/sklo-chorne",
+      "imagePath": "https://stildoors.com.ua/images/dveri/stil/mexico/biliy-kristal/sklo-chorne/dveri-stil-mexico-biliy-kristal-sklo-chorne.jpg",
+      "color": "білий кристал",
+      "glass": "чорне",
+      "selections": {
+        "color": "білий кристал",
+        "glass": "чорне"
+      }
+    },
+    {
+      "productSlug": "stildoors-stil-mexico-official",
+      "modelSlug": "mexico",
+      "sourceUrl": "https://stildoors.com.ua/dveri/stil/mexico/biliy-kristal/sklo-satin",
+      "imagePath": "https://stildoors.com.ua/images/dveri/stil/mexico/biliy-kristal/sklo-satin/dveri-stil-mexico-biliy-kristal-sklo-satin.jpg",
+      "color": "білий кристал",
+      "glass": "біле",
+      "selections": {
+        "color": "білий кристал",
+        "glass": "біле"
+      }
+    },
+    {
+      "productSlug": "stildoors-stil-mexico-official",
+      "modelSlug": "mexico",
+      "sourceUrl": "https://stildoors.com.ua/dveri/stil/mexico/venge-premium/sklo-chorne",
+      "imagePath": "https://stildoors.com.ua/images/dveri/stil/mexico/venge-premium/sklo-chorne/dveri-stil-mexico-venge-premium-sklo-chorne.jpg",
+      "color": "венге преміум",
+      "glass": "чорне",
+      "selections": {
+        "color": "венге преміум",
+        "glass": "чорне"
+      }
+    },
+    {
+      "productSlug": "stildoors-stil-mexico-official",
+      "modelSlug": "mexico",
+      "sourceUrl": "https://stildoors.com.ua/dveri/stil/mexico/venge-premium/sklo-satin",
+      "imagePath": "https://stildoors.com.ua/images/dveri/stil/mexico/venge-premium/sklo-satin/dveri-stil-mexico-venge-premium-sklo-satin.jpg",
+      "color": "венге преміум",
+      "glass": "біле",
+      "selections": {
+        "color": "венге преміум",
+        "glass": "біле"
+      }
+    },
+    {
+      "productSlug": "stildoors-stil-mexico-official",
+      "modelSlug": "mexico",
+      "sourceUrl": "https://stildoors.com.ua/dveri/stil/mexico/drim-vud/sklo-satin",
+      "imagePath": "https://stildoors.com.ua/images/dveri/stil/mexico/drim-vud/sklo-satin/dveri-stil-mexico-drim-vud-sklo-satin.jpg",
+      "color": "дрім вуд",
+      "glass": "біле",
+      "selections": {
+        "color": "дрім вуд",
+        "glass": "біле"
+      }
+    },
+    {
+      "productSlug": "stildoors-stil-mexico-official",
+      "modelSlug": "mexico",
+      "sourceUrl": "https://stildoors.com.ua/dveri/stil/mexico/drim-vud/sklo-chorne",
+      "imagePath": "https://stildoors.com.ua/images/dveri/stil/mexico/drim-vud/sklo-chorne/dveri-stil-mexico-drim-vud-sklo-chorne.jpg",
+      "color": "дрім вуд",
+      "glass": "чорне",
+      "selections": {
+        "color": "дрім вуд",
+        "glass": "чорне"
+      }
+    },
+    {
+      "productSlug": "stildoors-stil-mexico-official",
+      "modelSlug": "mexico",
+      "sourceUrl": "https://stildoors.com.ua/dveri/stil/mexico/italiyskiy-gorih/sklo-chorne",
+      "imagePath": "https://stildoors.com.ua/images/dveri/stil/mexico/italiyskiy-gorih/sklo-chorne/dveri-stil-mexico-italiyskiy-gorih-sklo-chorne.jpg",
+      "color": "італійський горіх",
+      "glass": "чорне",
+      "selections": {
+        "color": "італійський горіх",
+        "glass": "чорне"
+      }
+    },
+    {
+      "productSlug": "stildoors-stil-mexico-official",
+      "modelSlug": "mexico",
+      "sourceUrl": "https://stildoors.com.ua/dveri/stil/mexico/italiyskiy-gorih/sklo-satin",
+      "imagePath": "https://stildoors.com.ua/images/dveri/stil/mexico/italiyskiy-gorih/sklo-satin/dveri-stil-mexico-italiyskiy-gorih-sklo-satin.jpg",
+      "color": "італійський горіх",
+      "glass": "біле",
+      "selections": {
+        "color": "італійський горіх",
+        "glass": "біле"
+      }
+    },
+    {
+      "productSlug": "stildoors-stil-slovenia-official",
+      "modelSlug": "slovenia",
+      "sourceUrl": "https://stildoors.com.ua/dveri/stil/slovenia/biliy-kristal/sklo-chorne",
+      "imagePath": "https://stildoors.com.ua/images/dveri/stil/slovenia/biliy-kristal/sklo-chorne/dveri-stil-slovenia-biliy-kristal-sklo-chorne.jpg",
+      "color": "білий кристал",
+      "glass": "чорне",
+      "selections": {
+        "color": "білий кристал",
+        "glass": "чорне"
+      }
+    },
+    {
+      "productSlug": "stildoors-stil-slovenia-official",
+      "modelSlug": "slovenia",
+      "sourceUrl": "https://stildoors.com.ua/dveri/stil/slovenia/kremove-derevo/sklo-satin",
+      "imagePath": "https://stildoors.com.ua/images/dveri/stil/slovenia/kremove-derevo/sklo-satin/dveri-stil-slovenia-kremove-derevo-sklo-satin.jpg",
+      "color": "кремове дерево",
+      "glass": "біле",
+      "selections": {
+        "color": "кремове дерево",
+        "glass": "біле"
+      }
+    },
+    {
+      "productSlug": "stildoors-stil-slovenia-official",
+      "modelSlug": "slovenia",
+      "sourceUrl": "https://stildoors.com.ua/dveri/stil/slovenia/kremove-derevo/sklo-chorne",
+      "imagePath": "https://stildoors.com.ua/images/dveri/stil/slovenia/kremove-derevo/sklo-chorne/dveri-stil-slovenia-kremove-derevo-sklo-chorne.jpg",
+      "color": "кремове дерево",
+      "glass": "чорне",
+      "selections": {
+        "color": "кремове дерево",
+        "glass": "чорне"
+      }
+    },
+    {
+      "productSlug": "stildoors-stil-slovenia-official",
+      "modelSlug": "slovenia",
+      "sourceUrl": "https://stildoors.com.ua/dveri/stil/slovenia/sandal/sklo-satin",
+      "imagePath": "https://stildoors.com.ua/images/dveri/stil/slovenia/sandal/sklo-satin/dveri-stil-slovenia-sandal-sklo-satin.jpg",
+      "color": "сандал",
+      "glass": "біле",
+      "selections": {
+        "color": "сандал",
+        "glass": "біле"
+      }
+    },
+    {
+      "productSlug": "stildoors-stil-slovenia-official",
+      "modelSlug": "slovenia",
+      "sourceUrl": "https://stildoors.com.ua/dveri/stil/slovenia/sandal/sklo-chorne",
+      "imagePath": "https://stildoors.com.ua/images/dveri/stil/slovenia/sandal/sklo-chorne/dveri-stil-slovenia-sandal-sklo-chorne.jpg",
+      "color": "сандал",
+      "glass": "чорне",
+      "selections": {
+        "color": "сандал",
+        "glass": "чорне"
+      }
+    },
+    {
+      "productSlug": "stildoors-stil-slovenia-official",
+      "modelSlug": "slovenia",
+      "sourceUrl": "https://stildoors.com.ua/dveri/stil/slovenia/svitliy-beton/sklo-chorne",
+      "imagePath": "https://stildoors.com.ua/images/dveri/stil/slovenia/svitliy-beton/sklo-chorne/dveri-stil-slovenia-svitliy-beton-sklo-chorne.jpg",
+      "color": "світлий бетон",
+      "glass": "чорне",
+      "selections": {
+        "color": "світлий бетон",
+        "glass": "чорне"
+      }
+    },
+    {
+      "productSlug": "stildoors-stil-slovenia-official",
+      "modelSlug": "slovenia",
+      "sourceUrl": "https://stildoors.com.ua/dveri/stil/slovenia/bile-derevo/sklo-satin",
+      "imagePath": "https://stildoors.com.ua/images/dveri/stil/slovenia/bile-derevo/sklo-satin/dveri-stil-slovenia-bile-derevo-sklo-satin.jpg",
+      "color": "біле дерево",
+      "glass": "біле",
+      "selections": {
+        "color": "біле дерево",
+        "glass": "біле"
+      }
+    },
+    {
+      "productSlug": "stildoors-stil-slovenia-official",
+      "modelSlug": "slovenia",
+      "sourceUrl": "https://stildoors.com.ua/dveri/stil/slovenia/bile-derevo/sklo-chorne",
+      "imagePath": "https://stildoors.com.ua/images/dveri/stil/slovenia/bile-derevo/sklo-chorne/dveri-stil-slovenia-bile-derevo-sklo-chorne.jpg",
+      "color": "біле дерево",
+      "glass": "чорне",
+      "selections": {
+        "color": "біле дерево",
+        "glass": "чорне"
+      }
+    },
+    {
+      "productSlug": "stildoors-stil-slovenia-official",
+      "modelSlug": "slovenia",
+      "sourceUrl": "https://stildoors.com.ua/dveri/stil/slovenia/biliy-kristal/sklo-satin",
+      "imagePath": "https://stildoors.com.ua/images/dveri/stil/slovenia/biliy-kristal/sklo-satin/dveri-stil-slovenia-biliy-kristal-sklo-satin.jpg",
+      "color": "білий кристал",
+      "glass": "біле",
+      "selections": {
+        "color": "білий кристал",
+        "glass": "біле"
+      }
+    },
+    {
+      "productSlug": "stildoors-stil-slovenia-official",
+      "modelSlug": "slovenia",
+      "sourceUrl": "https://stildoors.com.ua/dveri/stil/slovenia/venge-premium/sklo-chorne",
+      "imagePath": "https://stildoors.com.ua/images/dveri/stil/slovenia/venge-premium/sklo-chorne/dveri-stil-slovenia-venge-premium-sklo-chorne.jpg",
+      "color": "венге преміум",
+      "glass": "чорне",
+      "selections": {
+        "color": "венге преміум",
+        "glass": "чорне"
+      }
+    },
+    {
+      "productSlug": "stildoors-stil-tanzania-official",
+      "modelSlug": "tanzania",
+      "sourceUrl": "https://stildoors.com.ua/dveri/stil/tanzania/kremove-derevo/sklo-satin",
+      "imagePath": "https://stildoors.com.ua/images/dveri/stil/tanzania/kremove-derevo/sklo-satin/dveri-stil-tanzania-kremove-derevo-sklo-satin.jpg",
+      "color": "кремове дерево",
+      "glass": "біле",
+      "selections": {
+        "color": "кремове дерево",
+        "glass": "біле"
+      }
+    },
+    {
+      "productSlug": "stildoors-stil-tanzania-official",
+      "modelSlug": "tanzania",
+      "sourceUrl": "https://stildoors.com.ua/dveri/stil/tanzania/sandal/sklo-satin",
+      "imagePath": "https://stildoors.com.ua/images/dveri/stil/tanzania/sandal/sklo-satin/dveri-stil-tanzania-sandal-sklo-satin.jpg",
+      "color": "сандал",
+      "glass": "біле",
+      "selections": {
+        "color": "сандал",
+        "glass": "біле"
+      }
+    },
+    {
+      "productSlug": "stildoors-stil-tanzania-official",
+      "modelSlug": "tanzania",
+      "sourceUrl": "https://stildoors.com.ua/dveri/stil/tanzania/svitliy-beton/sklo-satin",
+      "imagePath": "https://stildoors.com.ua/images/dveri/stil/tanzania/svitliy-beton/sklo-satin/dveri-stil-tanzania-svitliy-beton-sklo-satin.jpg",
+      "color": "світлий бетон",
+      "glass": "біле",
+      "selections": {
+        "color": "світлий бетон",
+        "glass": "біле"
+      }
+    },
+    {
+      "productSlug": "stildoors-stil-tanzania-official",
+      "modelSlug": "tanzania",
+      "sourceUrl": "https://stildoors.com.ua/dveri/stil/tanzania/bile-derevo/sklo-satin",
+      "imagePath": "https://stildoors.com.ua/images/dveri/stil/tanzania/bile-derevo/sklo-satin/dveri-stil-tanzania-bile-derevo-sklo-satin.jpg",
+      "color": "біле дерево",
+      "glass": "біле",
+      "selections": {
+        "color": "біле дерево",
+        "glass": "біле"
+      }
+    },
+    {
+      "productSlug": "stildoors-stil-tanzania-official",
+      "modelSlug": "tanzania",
+      "sourceUrl": "https://stildoors.com.ua/dveri/stil/tanzania/bile-derevo/sklo-chorne",
+      "imagePath": "https://stildoors.com.ua/images/dveri/stil/tanzania/bile-derevo/sklo-chorne/dveri-stil-tanzania-bile-derevo-sklo-chorne.jpg",
+      "color": "біле дерево",
+      "glass": "чорне",
+      "selections": {
+        "color": "біле дерево",
+        "glass": "чорне"
+      }
+    },
+    {
+      "productSlug": "stildoors-stil-tanzania-official",
+      "modelSlug": "tanzania",
+      "sourceUrl": "https://stildoors.com.ua/dveri/stil/tanzania/biliy-kristal/sklo-satin",
+      "imagePath": "https://stildoors.com.ua/images/dveri/stil/tanzania/biliy-kristal/sklo-satin/dveri-stil-tanzania-biliy-kristal-sklo-satin.jpg",
+      "color": "білий кристал",
+      "glass": "біле",
+      "selections": {
+        "color": "білий кристал",
+        "glass": "біле"
+      }
+    },
+    {
+      "productSlug": "stildoors-stil-tanzania-official",
+      "modelSlug": "tanzania",
+      "sourceUrl": "https://stildoors.com.ua/dveri/stil/tanzania/biliy-kristal/sklo-chorne",
+      "imagePath": "https://stildoors.com.ua/images/dveri/stil/tanzania/biliy-kristal/sklo-chorne/dveri-stil-tanzania-biliy-kristal-sklo-chorne.jpg",
+      "color": "білий кристал",
+      "glass": "чорне",
+      "selections": {
+        "color": "білий кристал",
+        "glass": "чорне"
+      }
+    },
+    {
+      "productSlug": "stildoors-stil-tanzania-official",
+      "modelSlug": "tanzania",
+      "sourceUrl": "https://stildoors.com.ua/dveri/stil/tanzania/biliy-mat/sklo-chorne",
+      "imagePath": "https://stildoors.com.ua/images/dveri/stil/tanzania/biliy-mat/sklo-chorne/dveri-stil-tanzania-biliy-mat-sklo-chorne.jpg",
+      "color": "білий мат",
+      "glass": "чорне",
+      "selections": {
+        "color": "білий мат",
+        "glass": "чорне"
+      }
+    },
+    {
+      "productSlug": "stildoors-stil-tanzania-official",
+      "modelSlug": "tanzania",
+      "sourceUrl": "https://stildoors.com.ua/dveri/stil/tanzania/biliy-mat/sklo-satin",
+      "imagePath": "https://stildoors.com.ua/images/dveri/stil/tanzania/biliy-mat/sklo-satin/dveri-stil-tanzania-biliy-mat-sklo-satin.jpg",
+      "color": "білий мат",
+      "glass": "біле",
+      "selections": {
+        "color": "білий мат",
+        "glass": "біле"
+      }
+    },
+    {
+      "productSlug": "stildoors-stil-tanzania-official",
+      "modelSlug": "tanzania",
+      "sourceUrl": "https://stildoors.com.ua/dveri/stil/tanzania/venge-premium/sklo-satin",
+      "imagePath": "https://stildoors.com.ua/images/dveri/stil/tanzania/venge-premium/sklo-satin/dveri-stil-tanzania-venge-premium-sklo-satin.jpg",
+      "color": "венге преміум",
+      "glass": "біле",
+      "selections": {
+        "color": "венге преміум",
+        "glass": "біле"
+      }
+    }
+  ],
+  "count": 68
+}

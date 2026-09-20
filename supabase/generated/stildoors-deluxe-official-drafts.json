@@ -1,0 +1,126 @@
+[
+  {
+    "slug": "stildoors-deluxe-antalya-official",
+    "name": "StilDoors Antalya",
+    "sourceUrl": "https://stildoors.com.ua/dveri/deluxe/antalya/dub-popelyastiy/sklo-chorne/",
+    "imagePath": "https://stildoors.com.ua/images/dveri/deluxe/antalya/dub-popelyastiy/sklo-chorne/dveri-deluxe-antalya-dub-popelyastiy-sklo-chorne.jpg",
+    "colors": [
+      "дуб попелястий",
+      "дуб сріблястий",
+      "білий кристал",
+      "білий мат",
+      "дуб альба"
+    ],
+    "specs": [
+      {
+        "label": "Розміри полотна",
+        "value": "40 х 200, 60 х 200, 70 х 200, 80 х 200, 90 х 200 см",
+        "sortOrder": 100
+      },
+      {
+        "label": "Товщина полотна",
+        "value": "40 мм",
+        "sortOrder": 110
+      },
+      {
+        "label": "Декори",
+        "value": "дуб попелястий, дуб сріблястий, білий кристал, білий мат, дуб альба",
+        "sortOrder": 120
+      }
+    ],
+    "description": "StilDoors Antalya — міжкімнатні двері колекції DELUXE. Доступні стандартні розміри: 40 х 200, 60 х 200, 70 х 200, 80 х 200, 90 х 200 см. Товщина полотна 40 мм. Для моделі передбачені заводські декори та варіанти скла; актуальну комплектацію й ціну уточнюйте у менеджера."
+  },
+  {
+    "slug": "stildoors-deluxe-barcelona-official",
+    "name": "StilDoors Barcelona",
+    "sourceUrl": "https://stildoors.com.ua/dveri/deluxe/barcelona/biliy-mat/sklo-chorne/",
+    "imagePath": "https://stildoors.com.ua/images/dveri/deluxe/barcelona/biliy-mat/sklo-chorne/dveri-deluxe-barcelona-biliy-mat-sklo-chorne.jpg",
+    "colors": [
+      "білий мат",
+      "білий кристал",
+      "дуб альба",
+      "дуб попелястий",
+      "дуб сріблястий"
+    ],
+    "specs": [
+      {
+        "label": "Розміри полотна",
+        "value": "40 х 200, 60 х 200, 70 х 200, 80 х 200, 90 х 200 см",
+        "sortOrder": 100
+      },
+      {
+        "label": "Товщина полотна",
+        "value": "40 мм",
+        "sortOrder": 110
+      },
+      {
+        "label": "Декори",
+        "value": "білий мат, білий кристал, дуб альба, дуб попелястий, дуб сріблястий",
+        "sortOrder": 120
+      }
+    ],
+    "description": "StilDoors Barcelona — міжкімнатні двері колекції DELUXE. Доступні стандартні розміри: 40 х 200, 60 х 200, 70 х 200, 80 х 200, 90 х 200 см. Товщина полотна 40 мм. Для моделі передбачені заводські декори та варіанти скла; актуальну комплектацію й ціну уточнюйте у менеджера."
+  },
+  {
+    "slug": "stildoors-deluxe-sofia-official",
+    "name": "StilDoors Sofia",
+    "sourceUrl": "https://stildoors.com.ua/dveri/deluxe/sofia/dub-sriblyastiy/sklo-satin/",
+    "imagePath": "https://stildoors.com.ua/images/dveri/deluxe/sofia/dub-sriblyastiy/sklo-satin/dveri-deluxe-sofia-dub-sriblyastiy-sklo-satin.jpg",
+    "colors": [
+      "дуб сріблястий",
+      "білий кристал",
+      "білий мат",
+      "дуб альба",
+      "дуб попелястий"
+    ],
+    "specs": [
+      {
+        "label": "Розміри полотна",
+        "value": "40 х 200, 60 х 200, 70 х 200, 80 х 200, 90 х 200 см",
+        "sortOrder": 100
+      },
+      {
+        "label": "Товщина полотна",
+        "value": "40 мм",
+        "sortOrder": 110
+      },
+      {
+        "label": "Декори",
+        "value": "дуб сріблястий, білий кристал, білий мат, дуб альба, дуб попелястий",
+        "sortOrder": 120
+      }
+    ],
+    "description": "StilDoors Sofia — міжкімнатні двері колекції DELUXE. Доступні стандартні розміри: 40 х 200, 60 х 200, 70 х 200, 80 х 200, 90 х 200 см. Товщина полотна 40 мм. Для моделі передбачені заводські декори та варіанти скла; актуальну комплектацію й ціну уточнюйте у менеджера."
+  },
+  {
+    "slug": "stildoors-deluxe-tokyo-official",
+    "name": "StilDoors Tokyo",
+    "sourceUrl": "https://stildoors.com.ua/dveri/deluxe/tokyo/dub-popelyastiy/sklo-chorne/",
+    "imagePath": "https://stildoors.com.ua/images/dveri/deluxe/tokyo/dub-popelyastiy/sklo-chorne/dveri-deluxe-tokyo-dub-popelyastiy-sklo-chorne.jpg",
+    "colors": [
+      "дуб попелястий",
+      "білий кристал",
+      "білий мат",
+      "дуб альба",
+      "дуб сріблястий"
+    ],
+    "specs": [
+      {
+        "label": "Розміри полотна",
+        "value": "40 х 200, 60 х 200, 70 х 200, 80 х 200, 90 х 200 см",
+        "sortOrder": 100
+      },
+      {
+        "label": "Товщина полотна",
+        "value": "40 мм",
+        "sortOrder": 110
+      },
+      {
+        "label": "Декори",
+        "value": "дуб попелястий, білий кристал, білий мат, дуб альба, дуб сріблястий",
+        "sortOrder": 120
+      }
+    ],
+    "description": "StilDoors Tokyo — міжкімнатні двері колекції DELUXE. Доступні стандартні розміри: 40 х 200, 60 х 200, 70 х 200, 80 х 200, 90 х 200 см. Товщина полотна 40 мм. Для моделі передбачені заводські декори та варіанти скла; актуальну комплектацію й ціну уточнюйте у менеджера."
+  }
+]

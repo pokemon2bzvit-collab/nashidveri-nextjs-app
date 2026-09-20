@@ -1,0 +1,278 @@
+[
+  {
+    "slug": "stildoors-stil-arizona-official",
+    "name": "StilDoors Arizona",
+    "sourceUrl": "https://stildoors.com.ua/dveri/stil/arizona/drim-vud/sklo-chorne/",
+    "imagePath": "https://stildoors.com.ua/images/dveri/stil/arizona/drim-vud/sklo-chorne/dveri-stil-arizona-drim-vud-sklo-chorne.jpg",
+    "colors": [
+      "дрім вуд",
+      "кремове дерево",
+      "сандал",
+      "біле дерево",
+      "венге преміум",
+      "італійський горіх",
+      "вільха класична",
+      "горіх золотий",
+      "трюфель"
+    ],
+    "specs": [
+      {
+        "label": "Розміри полотна",
+        "value": "40 х 200, 60 х 200, 70 х 200, 80 х 200, 90 х 200 см",
+        "sortOrder": 100
+      },
+      {
+        "label": "Товщина полотна",
+        "value": "40 мм",
+        "sortOrder": 110
+      },
+      {
+        "label": "Декори",
+        "value": "дрім вуд, кремове дерево, сандал, біле дерево, венге преміум, італійський горіх, вільха класична, горіх золотий, трюфель",
+        "sortOrder": 120
+      }
+    ],
+    "description": "StilDoors Arizona — міжкімнатні двері колекції Stil. Доступні стандартні розміри: 40 х 200, 60 х 200, 70 х 200, 80 х 200, 90 х 200 см. Товщина полотна 40 мм. Для моделі передбачені заводські декори та варіанти скла; актуальну комплектацію й ціну уточнюйте у менеджера."
+  },
+  {
+    "slug": "stildoors-stil-cuba-official",
+    "name": "StilDoors Cuba",
+    "sourceUrl": "https://stildoors.com.ua/dveri/stil/cuba/biliy-kristal/sklo-satin/",
+    "imagePath": "https://stildoors.com.ua/images/dveri/stil/cuba/biliy-kristal/sklo-satin/dveri-stil-cuba-biliy-kristal-sklo-satin.jpg",
+    "colors": [
+      "білий кристал",
+      "білий мат",
+      "сірий мат"
+    ],
+    "specs": [
+      {
+        "label": "Розміри полотна",
+        "value": "40 х 200, 60 х 200, 70 х 200, 80 х 200, 90 х 200 см",
+        "sortOrder": 100
+      },
+      {
+        "label": "Товщина полотна",
+        "value": "40 мм",
+        "sortOrder": 110
+      },
+      {
+        "label": "Декори",
+        "value": "білий кристал, білий мат, сірий мат",
+        "sortOrder": 120
+      }
+    ],
+    "description": "StilDoors Cuba — міжкімнатні двері колекції Stil. Доступні стандартні розміри: 40 х 200, 60 х 200, 70 х 200, 80 х 200, 90 х 200 см. Товщина полотна 40 мм. Для моделі передбачені заводські декори та варіанти скла; актуальну комплектацію й ціну уточнюйте у менеджера."
+  },
+  {
+    "slug": "stildoors-stil-florida-official",
+    "name": "StilDoors Florida",
+    "sourceUrl": "https://stildoors.com.ua/dveri/stil/florida/kremove-derevo/sklo-satin/",
+    "imagePath": "https://stildoors.com.ua/images/dveri/stil/florida/kremove-derevo/sklo-satin/dveri-stil-florida-kremove-derevo-sklo-satin.jpg",
+    "colors": [
+      "кремове дерево",
+      "сандал",
+      "біле дерево",
+      "білий кристал",
+      "венге преміум",
+      "дрім вуд",
+      "італійський горіх",
+      "вільха класична",
+      "горіх золотий",
+      "світлий бетон",
+      "трюфель"
+    ],
+    "specs": [
+      {
+        "label": "Розміри полотна",
+        "value": "40 х 200, 60 х 200, 70 х 200, 80 х 200, 90 х 200 см",
+        "sortOrder": 100
+      },
+      {
+        "label": "Товщина полотна",
+        "value": "40 мм",
+        "sortOrder": 110
+      },
+      {
+        "label": "Декори",
+        "value": "кремове дерево, сандал, біле дерево, білий кристал, венге преміум, дрім вуд, італійський горіх, вільха класична, горіх золотий, світлий бетон, трюфель",
+        "sortOrder": 120
+      }
+    ],
+    "description": "StilDoors Florida — міжкімнатні двері колекції Stil. Доступні стандартні розміри: 40 х 200, 60 х 200, 70 х 200, 80 х 200, 90 х 200 см. Товщина полотна 40 мм. Для моделі передбачені заводські декори та варіанти скла; актуальну комплектацію й ціну уточнюйте у менеджера."
+  },
+  {
+    "slug": "stildoors-stil-hamlet-official",
+    "name": "StilDoors Hamlet",
+    "sourceUrl": "https://stildoors.com.ua/dveri/stil/hamlet/biliy-kristal/sklo-satin/",
+    "imagePath": "https://stildoors.com.ua/images/dveri/stil/hamlet/biliy-kristal/sklo-satin/dveri-stil-hamlet-biliy-kristal-sklo-satin.jpg",
+    "colors": [
+      "білий кристал",
+      "білий мат"
+    ],
+    "specs": [
+      {
+        "label": "Розміри полотна",
+        "value": "40 х 200, 60 х 200, 70 х 200, 80 х 200, 90 х 200 см",
+        "sortOrder": 100
+      },
+      {
+        "label": "Товщина полотна",
+        "value": "40 мм",
+        "sortOrder": 110
+      },
+      {
+        "label": "Декори",
+        "value": "білий кристал, білий мат",
+        "sortOrder": 120
+      }
+    ],
+    "description": "StilDoors Hamlet — міжкімнатні двері колекції Stil. Доступні стандартні розміри: 40 х 200, 60 х 200, 70 х 200, 80 х 200, 90 х 200 см. Товщина полотна 40 мм. Для моделі передбачені заводські декори та варіанти скла; актуальну комплектацію й ціну уточнюйте у менеджера."
+  },
+  {
+    "slug": "stildoors-stil-london-official",
+    "name": "StilDoors London",
+    "sourceUrl": "https://stildoors.com.ua/dveri/stil/london/bile-derevo/sklo-satin/",
+    "imagePath": "https://stildoors.com.ua/images/dveri/stil/london/bile-derevo/sklo-satin/dveri-stil-london-bile-derevo-sklo-satin.jpg",
+    "colors": [
+      "біле дерево",
+      "білий кристал",
+      "венге преміум",
+      "дрім вуд",
+      "дуб сріблястий",
+      "кремове дерево",
+      "вільха класична",
+      "горіх золотий",
+      "сандал",
+      "світлий бетон",
+      "трюфель"
+    ],
+    "specs": [
+      {
+        "label": "Розміри полотна",
+        "value": "40 х 200, 60 х 200, 70 х 200, 80 х 200, 90 х 200 см",
+        "sortOrder": 100
+      },
+      {
+        "label": "Товщина полотна",
+        "value": "40 мм",
+        "sortOrder": 110
+      },
+      {
+        "label": "Декори",
+        "value": "біле дерево, білий кристал, венге преміум, дрім вуд, дуб сріблястий, кремове дерево, вільха класична, горіх золотий, сандал, світлий бетон, трюфель",
+        "sortOrder": 120
+      }
+    ],
+    "description": "StilDoors London — міжкімнатні двері колекції Stil. Доступні стандартні розміри: 40 х 200, 60 х 200, 70 х 200, 80 х 200, 90 х 200 см. Товщина полотна 40 мм. Для моделі передбачені заводські декори та варіанти скла; актуальну комплектацію й ціну уточнюйте у менеджера."
+  },
+  {
+    "slug": "stildoors-stil-mexico-official",
+    "name": "StilDoors Mexico",
+    "sourceUrl": "https://stildoors.com.ua/dveri/stil/mexico/bile-derevo/sklo-chorne/",
+    "imagePath": "https://stildoors.com.ua/images/dveri/stil/mexico/bile-derevo/sklo-chorne/dveri-stil-mexico-bile-derevo-sklo-chorne.jpg",
+    "colors": [
+      "біле дерево",
+      "білий кристал",
+      "венге преміум",
+      "дрім вуд",
+      "італійський горіх",
+      "каштан New",
+      "кремове дерево",
+      "вільха класична",
+      "трюфель"
+    ],
+    "specs": [
+      {
+        "label": "Розміри полотна",
+        "value": "40 х 200, 60 х 200, 70 х 200, 80 х 200, 90 х 200 см",
+        "sortOrder": 100
+      },
+      {
+        "label": "Товщина полотна",
+        "value": "40 мм",
+        "sortOrder": 110
+      },
+      {
+        "label": "Декори",
+        "value": "біле дерево, білий кристал, венге преміум, дрім вуд, італійський горіх, каштан New, кремове дерево, вільха класична, трюфель",
+        "sortOrder": 120
+      }
+    ],
+    "description": "StilDoors Mexico — міжкімнатні двері колекції Stil. Доступні стандартні розміри: 40 х 200, 60 х 200, 70 х 200, 80 х 200, 90 х 200 см. Товщина полотна 40 мм. Для моделі передбачені заводські декори та варіанти скла; актуальну комплектацію й ціну уточнюйте у менеджера."
+  },
+  {
+    "slug": "stildoors-stil-slovenia-official",
+    "name": "StilDoors Slovenia",
+    "sourceUrl": "https://stildoors.com.ua/dveri/stil/slovenia/biliy-kristal/sklo-chorne/",
+    "imagePath": "https://stildoors.com.ua/images/dveri/stil/slovenia/biliy-kristal/sklo-chorne/dveri-stil-slovenia-biliy-kristal-sklo-chorne.jpg",
+    "colors": [
+      "білий кристал",
+      "кремове дерево",
+      "сандал",
+      "світлий бетон",
+      "біле дерево",
+      "венге преміум",
+      "італійський горіх",
+      "каштан New",
+      "горіх золотий"
+    ],
+    "specs": [
+      {
+        "label": "Розміри полотна",
+        "value": "40 х 200, 60 х 200, 70 х 200, 80 х 200, 90 х 200 см",
+        "sortOrder": 100
+      },
+      {
+        "label": "Товщина полотна",
+        "value": "40 мм",
+        "sortOrder": 110
+      },
+      {
+        "label": "Декори",
+        "value": "білий кристал, кремове дерево, сандал, світлий бетон, біле дерево, венге преміум, італійський горіх, каштан New, горіх золотий",
+        "sortOrder": 120
+      }
+    ],
+    "description": "StilDoors Slovenia — міжкімнатні двері колекції Stil. Доступні стандартні розміри: 40 х 200, 60 х 200, 70 х 200, 80 х 200, 90 х 200 см. Товщина полотна 40 мм. Для моделі передбачені заводські декори та варіанти скла; актуальну комплектацію й ціну уточнюйте у менеджера."
+  },
+  {
+    "slug": "stildoors-stil-tanzania-official",
+    "name": "StilDoors Tanzania",
+    "sourceUrl": "https://stildoors.com.ua/dveri/stil/tanzania/kremove-derevo/sklo-satin/",
+    "imagePath": "https://stildoors.com.ua/images/dveri/stil/tanzania/kremove-derevo/sklo-satin/dveri-stil-tanzania-kremove-derevo-sklo-satin.jpg",
+    "colors": [
+      "кремове дерево",
+      "сандал",
+      "світлий бетон",
+      "біле дерево",
+      "білий кристал",
+      "білий мат",
+      "венге преміум",
+      "дрім вуд",
+      "дуб сріблястий",
+      "італійський горіх",
+      "каштан New",
+      "вільха класична",
+      "горіх золотий",
+      "трюфель"
+    ],
+    "specs": [
+      {
+        "label": "Розміри полотна",
+        "value": "40 х 200, 60 х 200, 70 х 200, 80 х 200, 90 х 200 см",
+        "sortOrder": 100
+      },
+      {
+        "label": "Товщина полотна",
+        "value": "40 мм",
+        "sortOrder": 110
+      },
+      {
+        "label": "Декори",
+        "value": "кремове дерево, сандал, світлий бетон, біле дерево, білий кристал, білий мат, венге преміум, дрім вуд, дуб сріблястий, італійський горіх, каштан New, вільха класична, горіх золотий, трюфель",
+        "sortOrder": 120
+      }
+    ],
+    "description": "StilDoors Tanzania — міжкімнатні двері колекції Stil. Доступні стандартні розміри: 40 х 200, 60 х 200, 70 х 200, 80 х 200, 90 х 200 см. Товщина полотна 40 мм. Для моделі передбачені заводські декори та варіанти скла; актуальну комплектацію й ціну уточнюйте у менеджера."
+  }
+]

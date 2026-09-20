@@ -1,0 +1,213 @@
+{
+  "variants": [
+    {
+      "productSlug": "stildoors-loft-loft-official",
+      "modelSlug": "loft",
+      "sourceUrl": "https://stildoors.com.ua/dveri/loft/loft/biliy-mat/gluhe",
+      "imagePath": "https://stildoors.com.ua/images/dveri/loft/loft/biliy-mat/gluhe/dveri-loft-loft-biliy-mat-gluhe.jpg",
+      "selections": {
+        "color": "білий мат"
+      }
+    },
+    {
+      "productSlug": "stildoors-loft-loft-official",
+      "modelSlug": "loft",
+      "sourceUrl": "https://stildoors.com.ua/dveri/loft/loft/svitliy-beton/gluhe",
+      "imagePath": "https://stildoors.com.ua/images/dveri/loft/loft/svitliy-beton/gluhe/dveri-loft-loft-svitliy-beton-gluhe.jpg",
+      "selections": {
+        "color": "світлий бетон"
+      }
+    },
+    {
+      "productSlug": "stildoors-loft-loft-official",
+      "modelSlug": "loft",
+      "sourceUrl": "https://stildoors.com.ua/dveri/loft/loft/dub-alpiyskiy/kromka-chorniy-mat",
+      "imagePath": "https://stildoors.com.ua/images/dveri/loft/loft/dub-alpiyskiy/kromka-chorniy-mat/dveri-loft-loft-dub-alpiyskiy-kromka-chorniy-mat.jpg",
+      "selections": {
+        "color": "дуб альпійський"
+      }
+    },
+    {
+      "productSlug": "stildoors-loft-loft-official",
+      "modelSlug": "loft",
+      "sourceUrl": "https://stildoors.com.ua/dveri/loft/loft/dub-kraft/kromka-chorniy-mat",
+      "imagePath": "https://stildoors.com.ua/images/dveri/loft/loft/dub-kraft/kromka-chorniy-mat/dveri-loft-loft-dub-kraft-kromka-chorniy-mat.jpg",
+      "selections": {
+        "color": "дуб крафт"
+      }
+    },
+    {
+      "productSlug": "stildoors-loft-loft-official",
+      "modelSlug": "loft",
+      "sourceUrl": "https://stildoors.com.ua/dveri/loft/loft/dub-platina/kromka-chorniy-mat",
+      "imagePath": "https://stildoors.com.ua/images/dveri/loft/loft/dub-platina/kromka-chorniy-mat/dveri-loft-loft-dub-platina-kromka-chorniy-mat.jpg",
+      "selections": {
+        "color": "дуб платіна"
+      }
+    },
+    {
+      "productSlug": "stildoors-loft-loft-official",
+      "modelSlug": "loft",
+      "sourceUrl": "https://stildoors.com.ua/dveri/loft/loft/dub-smoki/kromka-chorniy-mat",
+      "imagePath": "https://stildoors.com.ua/images/dveri/loft/loft/dub-smoki/kromka-chorniy-mat/dveri-loft-loft-dub-smoki-kromka-chorniy-mat.jpg",
+      "selections": {
+        "color": "дуб смокі"
+      }
+    },
+    {
+      "productSlug": "stildoors-loft-loft-aluminium-official",
+      "modelSlug": "loft-aluminium",
+      "sourceUrl": "https://stildoors.com.ua/dveri/loft/loft-aluminium/biliy-mat/molding-chorniy",
+      "imagePath": "https://stildoors.com.ua/images/dveri/loft/loft-aluminium/biliy-mat/molding-chorniy/dveri-loft-loft-aluminium-biliy-mat-molding-chorniy.jpg",
+      "selections": {
+        "color": "білий мат",
+        "glass": "з молдингом"
+      }
+    },
+    {
+      "productSlug": "stildoors-loft-loft-aluminium-official",
+      "modelSlug": "loft-aluminium",
+      "sourceUrl": "https://stildoors.com.ua/dveri/loft/loft-aluminium/svitliy-beton/molding-chorniy",
+      "imagePath": "https://stildoors.com.ua/images/dveri/loft/loft-aluminium/svitliy-beton/molding-chorniy/dveri-loft-loft-aluminium-svitliy-beton-molding-chorniy.jpg",
+      "selections": {
+        "color": "світлий бетон",
+        "glass": "з молдингом"
+      }
+    },
+    {
+      "productSlug": "stildoors-loft-loft-glass-official",
+      "modelSlug": "loft-glass",
+      "sourceUrl": "https://stildoors.com.ua/dveri/loft/loft-glass/biliy-mat/sklo-chorne",
+      "imagePath": "https://stildoors.com.ua/images/dveri/loft/loft-glass/biliy-mat/sklo-chorne/dveri-loft-loft-glass-biliy-mat-sklo-chorne.jpg",
+      "selections": {
+        "color": "білий мат",
+        "glass": "чорне"
+      }
+    },
+    {
+      "productSlug": "stildoors-loft-loft-glass-official",
+      "modelSlug": "loft-glass",
+      "sourceUrl": "https://stildoors.com.ua/dveri/loft/loft-glass/dub-alpiyskiy/sklo-chorne-kromka-chorniy-mat",
+      "imagePath": "https://stildoors.com.ua/images/dveri/loft/loft-glass/dub-alpiyskiy/sklo-chorne-kromka-chorniy-mat/dveri-loft-loft-glass-dub-alpiyskiy-sklo-chorne-kromka-chorniy-mat.jpg",
+      "selections": {
+        "color": "дуб альпійський",
+        "glass": "чорне"
+      }
+    },
+    {
+      "productSlug": "stildoors-loft-loft-glass-official",
+      "modelSlug": "loft-glass",
+      "sourceUrl": "https://stildoors.com.ua/dveri/loft/loft-glass/dub-kraft/sklo-chorne-kromka-chorniy-mat",
+      "imagePath": "https://stildoors.com.ua/images/dveri/loft/loft-glass/dub-kraft/sklo-chorne-kromka-chorniy-mat/dveri-loft-loft-glass-dub-kraft-sklo-chorne-kromka-chorniy-mat.jpg",
+      "selections": {
+        "color": "дуб крафт",
+        "glass": "чорне"
+      }
+    },
+    {
+      "productSlug": "stildoors-loft-loft-glass-official",
+      "modelSlug": "loft-glass",
+      "sourceUrl": "https://stildoors.com.ua/dveri/loft/loft-glass/dub-platina/sklo-chorne-kromka-chorniy-mat",
+      "imagePath": "https://stildoors.com.ua/images/dveri/loft/loft-glass/dub-platina/sklo-chorne-kromka-chorniy-mat/dveri-loft-loft-glass-dub-platina-sklo-chorne-kromka-chorniy-mat.jpg",
+      "selections": {
+        "color": "дуб платіна",
+        "glass": "чорне"
+      }
+    },
+    {
+      "productSlug": "stildoors-loft-loft-glass-official",
+      "modelSlug": "loft-glass",
+      "sourceUrl": "https://stildoors.com.ua/dveri/loft/loft-glass/dub-smoki/sklo-chorne-kromka-chorniy-mat",
+      "imagePath": "https://stildoors.com.ua/images/dveri/loft/loft-glass/dub-smoki/sklo-chorne-kromka-chorniy-mat/dveri-loft-loft-glass-dub-smoki-sklo-chorne-kromka-chorniy-mat.jpg",
+      "selections": {
+        "color": "дуб смокі",
+        "glass": "чорне"
+      }
+    },
+    {
+      "productSlug": "stildoors-loft-loft-glass-official",
+      "modelSlug": "loft-glass",
+      "sourceUrl": "https://stildoors.com.ua/dveri/loft/loft-glass/svitliy-beton/sklo-chorne",
+      "imagePath": "https://stildoors.com.ua/images/dveri/loft/loft-glass/svitliy-beton/sklo-chorne/dveri-loft-loft-glass-svitliy-beton-sklo-chorne.jpg",
+      "selections": {
+        "color": "світлий бетон",
+        "glass": "чорне"
+      }
+    },
+    {
+      "productSlug": "stildoors-loft-loft-intro-official",
+      "modelSlug": "loft-intro",
+      "sourceUrl": "https://stildoors.com.ua/dveri/loft/loft-intro/biliy-mat/molding-chorniy",
+      "imagePath": "https://stildoors.com.ua/images/dveri/loft/loft-intro/biliy-mat/molding-chorniy/dveri-loft-loft-intro-biliy-mat-molding-chorniy.jpg",
+      "selections": {
+        "color": "білий мат",
+        "glass": "з молдингом"
+      }
+    },
+    {
+      "productSlug": "stildoors-loft-loft-line-official",
+      "modelSlug": "loft-line",
+      "sourceUrl": "https://stildoors.com.ua/dveri/loft/loft-line/biliy-mat/kromka-chorniy-mat",
+      "imagePath": "https://stildoors.com.ua/images/dveri/loft/loft-line/biliy-mat/kromka-chorniy-mat/dveri-loft-loft-line-biliy-mat-kromka-chorniy-mat.jpg",
+      "selections": {
+        "color": "білий мат"
+      }
+    },
+    {
+      "productSlug": "stildoors-loft-loft-line-official",
+      "modelSlug": "loft-line",
+      "sourceUrl": "https://stildoors.com.ua/dveri/loft/loft-line/dub-alpiyskiy/kromka-chorniy-mat",
+      "imagePath": "https://stildoors.com.ua/images/dveri/loft/loft-line/dub-alpiyskiy/kromka-chorniy-mat/dveri-loft-loft-line-dub-alpiyskiy-kromka-chorniy-mat.jpg",
+      "selections": {
+        "color": "дуб альпійський"
+      }
+    },
+    {
+      "productSlug": "stildoors-loft-loft-line-official",
+      "modelSlug": "loft-line",
+      "sourceUrl": "https://stildoors.com.ua/dveri/loft/loft-line/dub-kraft/kromka-chorniy-mat",
+      "imagePath": "https://stildoors.com.ua/images/dveri/loft/loft-line/dub-kraft/kromka-chorniy-mat/dveri-loft-loft-line-dub-kraft-kromka-chorniy-mat.jpg",
+      "selections": {
+        "color": "дуб крафт"
+      }
+    },
+    {
+      "productSlug": "stildoors-loft-loft-line-official",
+      "modelSlug": "loft-line",
+      "sourceUrl": "https://stildoors.com.ua/dveri/loft/loft-line/dub-platina/kromka-chorniy-mat",
+      "imagePath": "https://stildoors.com.ua/images/dveri/loft/loft-line/dub-platina/kromka-chorniy-mat/dveri-loft-loft-line-dub-platina-kromka-chorniy-mat.jpg",
+      "selections": {
+        "color": "дуб платіна"
+      }
+    },
+    {
+      "productSlug": "stildoors-loft-loft-line-official",
+      "modelSlug": "loft-line",
+      "sourceUrl": "https://stildoors.com.ua/dveri/loft/loft-line/dub-smoki/kromka-chorniy-mat",
+      "imagePath": "https://stildoors.com.ua/images/dveri/loft/loft-line/dub-smoki/kromka-chorniy-mat/dveri-loft-loft-line-dub-smoki-kromka-chorniy-mat.jpg",
+      "selections": {
+        "color": "дуб смокі"
+      }
+    },
+    {
+      "productSlug": "stildoors-loft-loft-line-official",
+      "modelSlug": "loft-line",
+      "sourceUrl": "https://stildoors.com.ua/dveri/loft/loft-line/svitliy-beton/kromka-chorniy-mat",
+      "imagePath": "https://stildoors.com.ua/images/dveri/loft/loft-line/svitliy-beton/kromka-chorniy-mat/dveri-loft-loft-line-svitliy-beton-kromka-chorniy-mat.jpg",
+      "selections": {
+        "color": "світлий бетон"
+      }
+    },
+    {
+      "productSlug": "stildoors-loft-loft-rain-official",
+      "modelSlug": "loft-rain",
+      "sourceUrl": "https://stildoors.com.ua/dveri/loft/loft-rain/biliy-mat/molding-chorniy",
+      "imagePath": "https://stildoors.com.ua/images/dveri/loft/loft-rain/biliy-mat/molding-chorniy/dveri-loft-loft-rain-biliy-mat-molding-chorniy.jpg",
+      "selections": {
+        "color": "білий мат",
+        "glass": "з молдингом"
+      }
+    }
+  ],
+  "count": 22
+}
