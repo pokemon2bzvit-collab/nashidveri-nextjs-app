@@ -3,7 +3,7 @@ import { addDurableCoveringDescription, createProductDescription, removeTetraUns
 
 export type Category = "interior" | "entrance" | "windows";
 export type ProductMedia = { kind: "main" | "gallery" | "palette"; label: string | null; image: string; sortOrder: number };
-export type ProductOption = { group: "color" | "finish" | "glass" | "edge" | "configuration"; groupLabel: string; label: string; swatch: string | null; image: string | null; sortOrder: number };
+export type ProductOption = { group: "color" | "finish" | "glass" | "edge" | "configuration" | "series" | "size"; groupLabel: string; label: string; swatch: string | null; image: string | null; sortOrder: number };
 export type ProductVariant = { selections: Record<string, string>; image: string; sortOrder: number };
 export type ProductSpec = { label: string; value: string; sortOrder: number };
 export type Product = { slug: string; category: Category; brand: string; collection: string; name: string; material: string; style: string; color: string; price: string; description: string; features: string[]; image: string; media?: ProductMedia[]; options?: ProductOption[]; variants?: ProductVariant[]; specs?: ProductSpec[] };

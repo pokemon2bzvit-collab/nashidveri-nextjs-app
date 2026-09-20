@@ -1,0 +1,1157 @@
+{
+  "records": [
+    {
+      "slug": "rodos-official-4tei69",
+      "model": "BAS003",
+      "purpose": "Вулиця",
+      "dimensions": [],
+      "series": []
+    },
+    {
+      "slug": "rodos-official-101skyr",
+      "model": "F101",
+      "purpose": "Вулиця",
+      "dimensions": [
+        "88 × 205 см",
+        "96 × 205 см"
+      ],
+      "series": [
+        "Standard"
+      ]
+    },
+    {
+      "slug": "rodos-official-5ao7k0",
+      "model": "F102",
+      "purpose": "Вулиця",
+      "dimensions": [
+        "88 × 205 см",
+        "96 × 205 см"
+      ],
+      "series": [
+        "Standard"
+      ]
+    },
+    {
+      "slug": "rodos-official-74ef35",
+      "model": "F103",
+      "purpose": "Вулиця",
+      "dimensions": [
+        "88 × 205 см",
+        "96 × 205 см"
+      ],
+      "series": [
+        "Standard"
+      ]
+    },
+    {
+      "slug": "rodos-official-1967uo6",
+      "model": "F104",
+      "purpose": "Вулиця",
+      "dimensions": [
+        "88 × 205 см",
+        "96 × 205 см"
+      ],
+      "series": [
+        "Line Street",
+        "Standard"
+      ]
+    },
+    {
+      "slug": "rodos-official-1azy27b",
+      "model": "F105",
+      "purpose": "Вулиця",
+      "dimensions": [
+        "88 × 205 см",
+        "96 × 205 см"
+      ],
+      "series": [
+        "Standard"
+      ]
+    },
+    {
+      "slug": "rodos-official-g8tosk",
+      "model": "F106",
+      "purpose": "Вулиця",
+      "dimensions": [
+        "88 × 205 см",
+        "96 × 205 см"
+      ],
+      "series": [
+        "Standard"
+      ]
+    },
+    {
+      "slug": "rodos-official-5eum94",
+      "model": "F107",
+      "purpose": "Вулиця",
+      "dimensions": [
+        "88 × 205 см",
+        "96 × 205 см"
+      ],
+      "series": [
+        "Standard"
+      ]
+    },
+    {
+      "slug": "rodos-official-18k0i2y",
+      "model": "F108",
+      "purpose": "Вулиця",
+      "dimensions": [
+        "88 × 205 см",
+        "96 × 205 см"
+      ],
+      "series": [
+        "Standard"
+      ]
+    },
+    {
+      "slug": "rodos-official-1adqpm3",
+      "model": "F109",
+      "purpose": "Вулиця",
+      "dimensions": [
+        "88 × 205 см",
+        "96 × 205 см"
+      ],
+      "series": [
+        "Standard"
+      ]
+    },
+    {
+      "slug": "rodos-official-6tvpkz",
+      "model": "F110",
+      "purpose": "Вулиця",
+      "dimensions": [
+        "88 × 205 см",
+        "96 × 205 см"
+      ],
+      "series": [
+        "Standard"
+      ]
+    },
+    {
+      "slug": "rodos-official-1ej5tkx",
+      "model": "F112",
+      "purpose": "Вулиця",
+      "dimensions": [
+        "88 × 205 см",
+        "96 × 205 см"
+      ],
+      "series": [
+        "Standard"
+      ]
+    },
+    {
+      "slug": "rodos-official-1xresps",
+      "model": "F113",
+      "purpose": "Вулиця",
+      "dimensions": [
+        "88 × 205 см",
+        "96 × 205 см"
+      ],
+      "series": [
+        "Standard"
+      ]
+    },
+    {
+      "slug": "rodos-official-1y30yw6",
+      "model": "F115",
+      "purpose": "Вулиця",
+      "dimensions": [
+        "88 × 205 см",
+        "96 × 205 см"
+      ],
+      "series": [
+        "Standard"
+      ]
+    },
+    {
+      "slug": "rodos-official-1phbath",
+      "model": "F116",
+      "purpose": "Вулиця",
+      "dimensions": [
+        "88 × 205 см",
+        "96 × 205 см"
+      ],
+      "series": [
+        "Standard"
+      ]
+    },
+    {
+      "slug": "rodos-official-9og7z8",
+      "model": "F117",
+      "purpose": "Вулиця",
+      "dimensions": [
+        "88 × 205 см",
+        "96 × 205 см"
+      ],
+      "series": [
+        "Standard"
+      ]
+    },
+    {
+      "slug": "rodos-official-h5tu8b",
+      "model": "F118",
+      "purpose": "Вулиця",
+      "dimensions": [
+        "88 × 205 см",
+        "96 × 205 см"
+      ],
+      "series": [
+        "Standard"
+      ]
+    },
+    {
+      "slug": "rodos-official-1xgtmay",
+      "model": "F119",
+      "purpose": "Вулиця",
+      "dimensions": [
+        "88 × 205 см",
+        "96 × 205 см"
+      ],
+      "series": [
+        "Standard"
+      ]
+    },
+    {
+      "slug": "rodos-official-1dehbo9",
+      "model": "F120",
+      "purpose": "Вулиця",
+      "dimensions": [
+        "88 × 205 см",
+        "96 × 205 см"
+      ],
+      "series": [
+        "Line Street",
+        "Premium"
+      ]
+    },
+    {
+      "slug": "rodos-official-jqm9b5",
+      "model": "F121",
+      "purpose": "Вулиця",
+      "dimensions": [
+        "88 × 205 см",
+        "96 × 205 см"
+      ],
+      "series": [
+        "Standard"
+      ]
+    },
+    {
+      "slug": "rodos-official-1jdaypu",
+      "model": "F122",
+      "purpose": "Вулиця",
+      "dimensions": [
+        "88 × 205 см",
+        "96 × 205 см"
+      ],
+      "series": [
+        "Standard"
+      ]
+    },
+    {
+      "slug": "rodos-official-7iiqcj",
+      "model": "F123",
+      "purpose": "Вулиця",
+      "dimensions": [
+        "88 × 205 см",
+        "96 × 205 см"
+      ],
+      "series": [
+        "Standard"
+      ]
+    },
+    {
+      "slug": "rodos-official-7ifwxw",
+      "model": "F124",
+      "purpose": "Вулиця",
+      "dimensions": [
+        "88 × 205 см",
+        "96 × 205 см"
+      ],
+      "series": [
+        "Standard"
+      ]
+    },
+    {
+      "slug": "rodos-official-uorqjp",
+      "model": "F125",
+      "purpose": "Вулиця",
+      "dimensions": [
+        "88 × 205 см",
+        "96 × 205 см"
+      ],
+      "series": [
+        "Standard"
+      ]
+    },
+    {
+      "slug": "rodos-official-igo7l3",
+      "model": "F127",
+      "purpose": "Вулиця",
+      "dimensions": [
+        "88 × 205 см",
+        "96 × 205 см"
+      ],
+      "series": [
+        "Standard"
+      ]
+    },
+    {
+      "slug": "rodos-official-6w8kco",
+      "model": "F128",
+      "purpose": "Вулиця",
+      "dimensions": [
+        "88 × 205 см",
+        "96 × 205 см"
+      ],
+      "series": [
+        "Standard"
+      ]
+    },
+    {
+      "slug": "rodos-official-1ex9ybn",
+      "model": "F132",
+      "purpose": "Вулиця",
+      "dimensions": [
+        "88 × 205 см",
+        "96 × 205 см"
+      ],
+      "series": [
+        "Standard"
+      ]
+    },
+    {
+      "slug": "rodos-official-1csxbdu",
+      "model": "F133",
+      "purpose": "Вулиця",
+      "dimensions": [
+        "88 × 205 см",
+        "96 × 205 см"
+      ],
+      "series": [
+        "Standard"
+      ]
+    },
+    {
+      "slug": "rodos-official-12se1to",
+      "model": "F134",
+      "purpose": "Вулиця",
+      "dimensions": [
+        "88 × 205 см",
+        "96 × 205 см"
+      ],
+      "series": [
+        "Line Street",
+        "Premium"
+      ]
+    },
+    {
+      "slug": "rodos-official-wf8un8",
+      "model": "F135",
+      "purpose": "Вулиця",
+      "dimensions": [
+        "88 × 205 см",
+        "96 × 205 см"
+      ],
+      "series": [
+        "Line Street",
+        "Standard"
+      ]
+    },
+    {
+      "slug": "rodos-official-t7c91f",
+      "model": "F137",
+      "purpose": "Вулиця",
+      "dimensions": [
+        "88 × 205 см",
+        "96 × 205 см"
+      ],
+      "series": [
+        "Standard"
+      ]
+    },
+    {
+      "slug": "rodos-official-vt1i20",
+      "model": "F139",
+      "purpose": "Вулиця",
+      "dimensions": [
+        "88 × 205 см",
+        "96 × 205 см"
+      ],
+      "series": [
+        "Standard"
+      ]
+    },
+    {
+      "slug": "rodos-official-1e09xs4",
+      "model": "F142",
+      "purpose": "Вулиця",
+      "dimensions": [
+        "88 × 205 см",
+        "96 × 205 см"
+      ],
+      "series": [
+        "Standard"
+      ]
+    },
+    {
+      "slug": "rodos-official-1vzimf6",
+      "model": "F144",
+      "purpose": "Вулиця",
+      "dimensions": [],
+      "series": []
+    },
+    {
+      "slug": "rodos-official-1xt8tyb",
+      "model": "F145",
+      "purpose": "Вулиця",
+      "dimensions": [
+        "88 × 205 см",
+        "96 × 205 см"
+      ],
+      "series": [
+        "Line Street",
+        "Standard"
+      ]
+    },
+    {
+      "slug": "rodos-official-14vuo2p",
+      "model": "F147",
+      "purpose": "Вулиця",
+      "dimensions": [
+        "88 × 205 см",
+        "96 × 205 см"
+      ],
+      "series": [
+        "Line Street",
+        "Standard"
+      ]
+    },
+    {
+      "slug": "rodos-official-k28dv3",
+      "model": "F149",
+      "purpose": "Вулиця",
+      "dimensions": [
+        "88 × 205 см",
+        "96 × 205 см"
+      ],
+      "series": [
+        "Line Street",
+        "Standard"
+      ]
+    },
+    {
+      "slug": "rodos-official-1fjhft3",
+      "model": "F150",
+      "purpose": "Вулиця",
+      "dimensions": [
+        "88 × 205 см",
+        "96 × 205 см"
+      ],
+      "series": [
+        "Line Street",
+        "Standard"
+      ]
+    },
+    {
+      "slug": "rodos-official-o7nhtx",
+      "model": "F152",
+      "purpose": "Вулиця",
+      "dimensions": [
+        "88 × 205 см",
+        "96 × 205 см"
+      ],
+      "series": [
+        "Line Street",
+        "Standard"
+      ]
+    },
+    {
+      "slug": "rodos-official-17fwgys",
+      "model": "F153",
+      "purpose": "Вулиця",
+      "dimensions": [
+        "88 × 205 см",
+        "96 × 205 см"
+      ],
+      "series": [
+        "Line Street",
+        "Standard"
+      ]
+    },
+    {
+      "slug": "rodos-official-d9i0ld",
+      "model": "F156",
+      "purpose": "Вулиця",
+      "dimensions": [
+        "88 × 205 см",
+        "96 × 205 см"
+      ],
+      "series": [
+        "Line Street",
+        "Standard"
+      ]
+    },
+    {
+      "slug": "rodos-official-whqzq8",
+      "model": "F157",
+      "purpose": "Вулиця",
+      "dimensions": [
+        "88 × 205 см",
+        "96 × 205 см"
+      ],
+      "series": [
+        "Standard",
+        "Line Street"
+      ]
+    },
+    {
+      "slug": "rodos-official-1pvfkgf",
+      "model": "F158",
+      "purpose": "Вулиця",
+      "dimensions": [
+        "88 × 205 см",
+        "96 × 205 см"
+      ],
+      "series": [
+        "Line Street",
+        "Standard"
+      ]
+    },
+    {
+      "slug": "rodos-official-175bajy",
+      "model": "F159",
+      "purpose": "Вулиця",
+      "dimensions": [
+        "88 × 205 см",
+        "96 × 205 см"
+      ],
+      "series": [
+        "Line Street",
+        "Standard"
+      ]
+    },
+    {
+      "slug": "rodos-official-159w5xg",
+      "model": "F160",
+      "purpose": "Вулиця",
+      "dimensions": [
+        "88 × 205 см",
+        "96 × 205 см"
+      ],
+      "series": [
+        "Line Street",
+        "Standard"
+      ]
+    },
+    {
+      "slug": "rodos-official-1sg7zj9",
+      "model": "F161",
+      "purpose": "Вулиця",
+      "dimensions": [
+        "88 × 205 см",
+        "96 × 205 см"
+      ],
+      "series": [
+        "Standard"
+      ]
+    },
+    {
+      "slug": "rodos-official-t1smyu",
+      "model": "F162",
+      "purpose": "Вулиця",
+      "dimensions": [
+        "88 × 205 см",
+        "96 × 205 см"
+      ],
+      "series": [
+        "Line Street",
+        "Standard"
+      ]
+    },
+    {
+      "slug": "rodos-official-1g84gkn",
+      "model": "F163",
+      "purpose": "Вулиця",
+      "dimensions": [
+        "88 × 205 см",
+        "96 × 205 см"
+      ],
+      "series": [
+        "Line Street",
+        "Standard"
+      ]
+    },
+    {
+      "slug": "rodos-official-i3n5qa",
+      "model": "F166",
+      "purpose": "Вулиця",
+      "dimensions": [
+        "88 × 205 см",
+        "96 × 205 см"
+      ],
+      "series": [
+        "Line Street",
+        "Standard"
+      ]
+    },
+    {
+      "slug": "rodos-official-159yzc3",
+      "model": "F167",
+      "purpose": "Вулиця",
+      "dimensions": [
+        "88 × 205 см",
+        "96 × 205 см"
+      ],
+      "series": [
+        "Line Street",
+        "Standard"
+      ]
+    },
+    {
+      "slug": "rodos-official-1n97sfz",
+      "model": "A100",
+      "purpose": "Квартира",
+      "dimensions": [],
+      "series": [
+        "Avenue"
+      ]
+    },
+    {
+      "slug": "rodos-official-1n97sfy",
+      "model": "A101",
+      "purpose": "Квартира",
+      "dimensions": [],
+      "series": [
+        "Avenue"
+      ]
+    },
+    {
+      "slug": "rodos-official-1n97sfx",
+      "model": "A102",
+      "purpose": "Квартира",
+      "dimensions": [],
+      "series": [
+        "Avenue"
+      ]
+    },
+    {
+      "slug": "rodos-official-1n97sfw",
+      "model": "A103",
+      "purpose": "Квартира",
+      "dimensions": [],
+      "series": [
+        "Avenue"
+      ]
+    },
+    {
+      "slug": "rodos-official-1n97sfv",
+      "model": "A104",
+      "purpose": "Квартира",
+      "dimensions": [],
+      "series": [
+        "Avenue"
+      ]
+    },
+    {
+      "slug": "rodos-official-pstrrw",
+      "model": "F100",
+      "purpose": "Квартира",
+      "dimensions": [
+        "88 × 205 см",
+        "96 × 205 см"
+      ],
+      "series": [
+        "Basic",
+        "Line Street",
+        "Standard",
+        "Premium"
+      ]
+    },
+    {
+      "slug": "rodos-official-1n92eah",
+      "model": "F101",
+      "purpose": "Квартира",
+      "dimensions": [
+        "88 × 205 см",
+        "96 × 205 см"
+      ],
+      "series": [
+        "Basic",
+        "Line Street",
+        "Standard",
+        "Premium"
+      ]
+    },
+    {
+      "slug": "rodos-official-1n92eaj",
+      "model": "F103",
+      "purpose": "Квартира",
+      "dimensions": [
+        "88 × 205 см",
+        "96 × 205 см"
+      ],
+      "series": [
+        "Basic",
+        "Line Street",
+        "Premium"
+      ]
+    },
+    {
+      "slug": "rodos-official-t78k9s",
+      "model": "F104",
+      "purpose": "Квартира",
+      "dimensions": [
+        "88 × 205 см",
+        "96 × 205 см"
+      ],
+      "series": [
+        "Line Street",
+        "Standard",
+        "Premium"
+      ]
+    },
+    {
+      "slug": "rodos-official-1n92eal",
+      "model": "F105",
+      "purpose": "Квартира",
+      "dimensions": [
+        "88 × 205 см",
+        "96 × 205 см"
+      ],
+      "series": [
+        "Basic",
+        "Line Street",
+        "Standard",
+        "Premium"
+      ]
+    },
+    {
+      "slug": "rodos-official-1n92eam",
+      "model": "F106",
+      "purpose": "Квартира",
+      "dimensions": [
+        "88 × 205 см",
+        "96 × 205 см"
+      ],
+      "series": [
+        "Basic",
+        "Line Street",
+        "Standard",
+        "Premium"
+      ]
+    },
+    {
+      "slug": "rodos-official-1n92ean",
+      "model": "F107",
+      "purpose": "Квартира",
+      "dimensions": [
+        "88 × 205 см",
+        "96 × 205 см"
+      ],
+      "series": [
+        "Basic",
+        "Line Street",
+        "Standard",
+        "Premium"
+      ]
+    },
+    {
+      "slug": "rodos-official-1n92ea8",
+      "model": "F108",
+      "purpose": "Квартира",
+      "dimensions": [
+        "88 × 205 см",
+        "96 × 205 см"
+      ],
+      "series": [
+        "Line Street",
+        "Standard",
+        "Premium"
+      ]
+    },
+    {
+      "slug": "rodos-official-1n92ea9",
+      "model": "F109",
+      "purpose": "Квартира",
+      "dimensions": [
+        "88 × 205 см",
+        "96 × 205 см"
+      ],
+      "series": [
+        "Basic",
+        "Line Street",
+        "Standard",
+        "Premium"
+      ]
+    },
+    {
+      "slug": "rodos-official-1n92ed4",
+      "model": "F111",
+      "purpose": "Квартира",
+      "dimensions": [
+        "88 × 205 см",
+        "96 × 205 см"
+      ],
+      "series": [
+        "Standard",
+        "Line Street",
+        "Premium"
+      ]
+    },
+    {
+      "slug": "rodos-official-1n92ed7",
+      "model": "F112",
+      "purpose": "Квартира",
+      "dimensions": [
+        "88 × 205 см",
+        "96 × 205 см"
+      ],
+      "series": [
+        "Standard",
+        "Line Street",
+        "Premium"
+      ]
+    },
+    {
+      "slug": "rodos-official-1n92ed6",
+      "model": "F113",
+      "purpose": "Квартира",
+      "dimensions": [
+        "88 × 205 см",
+        "96 × 205 см"
+      ],
+      "series": [
+        "Standard",
+        "Premium"
+      ]
+    },
+    {
+      "slug": "rodos-official-1n92ed8",
+      "model": "F115",
+      "purpose": "Квартира",
+      "dimensions": [
+        "88 × 205 см",
+        "96 × 205 см"
+      ],
+      "series": [
+        "Standard",
+        "Line Street",
+        "Premium"
+      ]
+    },
+    {
+      "slug": "rodos-official-t7avcz",
+      "model": "F116",
+      "purpose": "Квартира",
+      "dimensions": [
+        "88 × 205 см",
+        "96 × 205 см"
+      ],
+      "series": [
+        "Standard",
+        "Line Street",
+        "Premium"
+      ]
+    },
+    {
+      "slug": "rodos-official-1n92eda",
+      "model": "F117",
+      "purpose": "Квартира",
+      "dimensions": [
+        "88 × 205 см",
+        "96 × 205 см"
+      ],
+      "series": [
+        "Basic",
+        "Line Street",
+        "Standard",
+        "Premium"
+      ]
+    },
+    {
+      "slug": "rodos-official-t7ak7h",
+      "model": "F118",
+      "purpose": "Квартира",
+      "dimensions": [
+        "88 × 205 см",
+        "96 × 205 см"
+      ],
+      "series": [
+        "Line Street",
+        "Standard",
+        "Premium"
+      ]
+    },
+    {
+      "slug": "rodos-official-1n92ecw",
+      "model": "F119",
+      "purpose": "Квартира",
+      "dimensions": [
+        "88 × 205 см",
+        "96 × 205 см"
+      ],
+      "series": [
+        "Basic",
+        "Standard",
+        "Line Street",
+        "Premium"
+      ]
+    },
+    {
+      "slug": "rodos-official-1n92ecb",
+      "model": "F121",
+      "purpose": "Квартира",
+      "dimensions": [
+        "88 × 205 см",
+        "96 × 205 см"
+      ],
+      "series": [
+        "Premium"
+      ]
+    },
+    {
+      "slug": "rodos-official-1n92ec8",
+      "model": "F122",
+      "purpose": "Квартира",
+      "dimensions": [
+        "88 × 205 см",
+        "96 × 205 см"
+      ],
+      "series": [
+        "Premium"
+      ]
+    },
+    {
+      "slug": "rodos-official-tb1ky9",
+      "model": "F123",
+      "purpose": "Квартира",
+      "dimensions": [
+        "88 × 205 см",
+        "96 × 205 см"
+      ],
+      "series": [
+        "Standard",
+        "Line Street",
+        "Premium"
+      ]
+    },
+    {
+      "slug": "rodos-official-1n92ece",
+      "model": "F124",
+      "purpose": "Квартира",
+      "dimensions": [
+        "88 × 205 см",
+        "96 × 205 см"
+      ],
+      "series": [
+        "Line Street"
+      ]
+    },
+    {
+      "slug": "rodos-official-zm1srb",
+      "model": "F125",
+      "purpose": "Квартира",
+      "dimensions": [
+        "88 × 205 см",
+        "96 × 205 см"
+      ],
+      "series": [
+        "Premium"
+      ]
+    },
+    {
+      "slug": "rodos-official-1n92ecd",
+      "model": "F127",
+      "purpose": "Квартира",
+      "dimensions": [
+        "88 × 205 см",
+        "96 × 205 см"
+      ],
+      "series": [
+        "Premium"
+      ]
+    },
+    {
+      "slug": "rodos-official-t79u9a",
+      "model": "F128",
+      "purpose": "Квартира",
+      "dimensions": [
+        "88 × 205 см",
+        "96 × 205 см"
+      ],
+      "series": [
+        "Standard",
+        "Line Street",
+        "Premium"
+      ]
+    },
+    {
+      "slug": "rodos-official-40hnht",
+      "model": "F132",
+      "purpose": "Квартира",
+      "dimensions": [
+        "88 × 205 см",
+        "96 × 205 см"
+      ],
+      "series": [
+        "Basic",
+        "Line Street",
+        "Standard",
+        "Premium"
+      ]
+    },
+    {
+      "slug": "rodos-official-1n92eew",
+      "model": "F133",
+      "purpose": "Квартира",
+      "dimensions": [
+        "88 × 205 см",
+        "96 × 205 см"
+      ],
+      "series": [
+        "Premium"
+      ]
+    },
+    {
+      "slug": "rodos-official-1n92ef1",
+      "model": "F136",
+      "purpose": "Квартира",
+      "dimensions": [
+        "88 × 205 см",
+        "96 × 205 см"
+      ],
+      "series": [
+        "Standard",
+        "Line Street",
+        "Premium"
+      ]
+    },
+    {
+      "slug": "rodos-official-t7c91c",
+      "model": "F137",
+      "purpose": "Квартира",
+      "dimensions": [
+        "88 × 205 см",
+        "96 × 205 см"
+      ],
+      "series": [
+        "Standard",
+        "Premium"
+      ]
+    },
+    {
+      "slug": "rodos-official-1n92eeq",
+      "model": "F139",
+      "purpose": "Квартира",
+      "dimensions": [
+        "88 × 205 см",
+        "96 × 205 см"
+      ],
+      "series": [
+        "Standard"
+      ]
+    },
+    {
+      "slug": "rodos-official-1d7iwlx",
+      "model": "F141",
+      "purpose": "Квартира",
+      "dimensions": [
+        "88 × 205 см",
+        "96 × 205 см"
+      ],
+      "series": [
+        "Premium"
+      ]
+    },
+    {
+      "slug": "rodos-official-4athqv",
+      "model": "F143",
+      "purpose": "Квартира",
+      "dimensions": [
+        "88 × 205 см",
+        "96 × 205 см"
+      ],
+      "series": [
+        "Premium"
+      ]
+    },
+    {
+      "slug": "rodos-official-xnjrte",
+      "model": "F146",
+      "purpose": "Квартира",
+      "dimensions": [
+        "88 × 205 см",
+        "96 × 205 см"
+      ],
+      "series": [
+        "Standard",
+        "Line Street"
+      ]
+    },
+    {
+      "slug": "rodos-official-p31li4",
+      "model": "F148",
+      "purpose": "Квартира",
+      "dimensions": [
+        "88 × 205 см",
+        "96 × 205 см"
+      ],
+      "series": [
+        "Premium"
+      ]
+    },
+    {
+      "slug": "rodos-official-tzo0vl",
+      "model": "F154",
+      "purpose": "Квартира",
+      "dimensions": [
+        "88 × 205 см",
+        "96 × 205 см"
+      ],
+      "series": [
+        "Premium"
+      ]
+    },
+    {
+      "slug": "rodos-official-1qva99s",
+      "model": "F155",
+      "purpose": "Квартира",
+      "dimensions": [
+        "88 × 205 см",
+        "96 × 205 см"
+      ],
+      "series": [
+        "Premium"
+      ]
+    },
+    {
+      "slug": "rodos-official-a08fvb",
+      "model": "F161",
+      "purpose": "Квартира",
+      "dimensions": [
+        "88 × 205 см",
+        "96 × 205 см"
+      ],
+      "series": [
+        "Standard",
+        "Line Street"
+      ]
+    },
+    {
+      "slug": "rodos-official-1683sr4",
+      "model": "F166",
+      "purpose": "Квартира",
+      "dimensions": [
+        "88 × 205 см",
+        "96 × 205 см"
+      ],
+      "series": [
+        "Standard",
+        "Line Street"
+      ]
+    }
+  ],
+  "failed": []
+}

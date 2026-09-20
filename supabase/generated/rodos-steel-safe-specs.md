@@ -1,0 +1,98 @@
+# Rodos Steel — безпечні характеристики
+
+- У пакеті: **92** моделей із **92**.
+- Не прочитано: **0**.
+- Додаються лише призначення, розміри блока та доступні серії комплектації.
+
+- BAS003: Вулиця; розміри не знайдені; серію не знайдено
+- F101: Вулиця; 88 × 205 см, 96 × 205 см; Standard
+- F102: Вулиця; 88 × 205 см, 96 × 205 см; Standard
+- F103: Вулиця; 88 × 205 см, 96 × 205 см; Standard
+- F104: Вулиця; 88 × 205 см, 96 × 205 см; Line Street, Standard
+- F105: Вулиця; 88 × 205 см, 96 × 205 см; Standard
+- F106: Вулиця; 88 × 205 см, 96 × 205 см; Standard
+- F107: Вулиця; 88 × 205 см, 96 × 205 см; Standard
+- F108: Вулиця; 88 × 205 см, 96 × 205 см; Standard
+- F109: Вулиця; 88 × 205 см, 96 × 205 см; Standard
+- F110: Вулиця; 88 × 205 см, 96 × 205 см; Standard
+- F112: Вулиця; 88 × 205 см, 96 × 205 см; Standard
+- F113: Вулиця; 88 × 205 см, 96 × 205 см; Standard
+- F115: Вулиця; 88 × 205 см, 96 × 205 см; Standard
+- F116: Вулиця; 88 × 205 см, 96 × 205 см; Standard
+- F117: Вулиця; 88 × 205 см, 96 × 205 см; Standard
+- F118: Вулиця; 88 × 205 см, 96 × 205 см; Standard
+- F119: Вулиця; 88 × 205 см, 96 × 205 см; Standard
+- F120: Вулиця; 88 × 205 см, 96 × 205 см; Line Street, Premium
+- F121: Вулиця; 88 × 205 см, 96 × 205 см; Standard
+- F122: Вулиця; 88 × 205 см, 96 × 205 см; Standard
+- F123: Вулиця; 88 × 205 см, 96 × 205 см; Standard
+- F124: Вулиця; 88 × 205 см, 96 × 205 см; Standard
+- F125: Вулиця; 88 × 205 см, 96 × 205 см; Standard
+- F127: Вулиця; 88 × 205 см, 96 × 205 см; Standard
+- F128: Вулиця; 88 × 205 см, 96 × 205 см; Standard
+- F132: Вулиця; 88 × 205 см, 96 × 205 см; Standard
+- F133: Вулиця; 88 × 205 см, 96 × 205 см; Standard
+- F134: Вулиця; 88 × 205 см, 96 × 205 см; Line Street, Premium
+- F135: Вулиця; 88 × 205 см, 96 × 205 см; Line Street, Standard
+- F137: Вулиця; 88 × 205 см, 96 × 205 см; Standard
+- F139: Вулиця; 88 × 205 см, 96 × 205 см; Standard
+- F142: Вулиця; 88 × 205 см, 96 × 205 см; Standard
+- F144: Вулиця; розміри не знайдені; серію не знайдено
+- F145: Вулиця; 88 × 205 см, 96 × 205 см; Line Street, Standard
+- F147: Вулиця; 88 × 205 см, 96 × 205 см; Line Street, Standard
+- F149: Вулиця; 88 × 205 см, 96 × 205 см; Line Street, Standard
+- F150: Вулиця; 88 × 205 см, 96 × 205 см; Line Street, Standard
+- F152: Вулиця; 88 × 205 см, 96 × 205 см; Line Street, Standard
+- F153: Вулиця; 88 × 205 см, 96 × 205 см; Line Street, Standard
+- F156: Вулиця; 88 × 205 см, 96 × 205 см; Line Street, Standard
+- F157: Вулиця; 88 × 205 см, 96 × 205 см; Standard, Line Street
+- F158: Вулиця; 88 × 205 см, 96 × 205 см; Line Street, Standard
+- F159: Вулиця; 88 × 205 см, 96 × 205 см; Line Street, Standard
+- F160: Вулиця; 88 × 205 см, 96 × 205 см; Line Street, Standard
+- F161: Вулиця; 88 × 205 см, 96 × 205 см; Standard
+- F162: Вулиця; 88 × 205 см, 96 × 205 см; Line Street, Standard
+- F163: Вулиця; 88 × 205 см, 96 × 205 см; Line Street, Standard
+- F166: Вулиця; 88 × 205 см, 96 × 205 см; Line Street, Standard
+- F167: Вулиця; 88 × 205 см, 96 × 205 см; Line Street, Standard
+- A100: Квартира; розміри не знайдені; Avenue
+- A101: Квартира; розміри не знайдені; Avenue
+- A102: Квартира; розміри не знайдені; Avenue
+- A103: Квартира; розміри не знайдені; Avenue
+- A104: Квартира; розміри не знайдені; Avenue
+- F100: Квартира; 88 × 205 см, 96 × 205 см; Basic, Line Street, Standard, Premium
+- F101: Квартира; 88 × 205 см, 96 × 205 см; Basic, Line Street, Standard, Premium
+- F103: Квартира; 88 × 205 см, 96 × 205 см; Basic, Line Street, Premium
+- F104: Квартира; 88 × 205 см, 96 × 205 см; Line Street, Standard, Premium
+- F105: Квартира; 88 × 205 см, 96 × 205 см; Basic, Line Street, Standard, Premium
+- F106: Квартира; 88 × 205 см, 96 × 205 см; Basic, Line Street, Standard, Premium
+- F107: Квартира; 88 × 205 см, 96 × 205 см; Basic, Line Street, Standard, Premium
+- F108: Квартира; 88 × 205 см, 96 × 205 см; Line Street, Standard, Premium
+- F109: Квартира; 88 × 205 см, 96 × 205 см; Basic, Line Street, Standard, Premium
+- F111: Квартира; 88 × 205 см, 96 × 205 см; Standard, Line Street, Premium
+- F112: Квартира; 88 × 205 см, 96 × 205 см; Standard, Line Street, Premium
+- F113: Квартира; 88 × 205 см, 96 × 205 см; Standard, Premium
+- F115: Квартира; 88 × 205 см, 96 × 205 см; Standard, Line Street, Premium
+- F116: Квартира; 88 × 205 см, 96 × 205 см; Standard, Line Street, Premium
+- F117: Квартира; 88 × 205 см, 96 × 205 см; Basic, Line Street, Standard, Premium
+- F118: Квартира; 88 × 205 см, 96 × 205 см; Line Street, Standard, Premium
+- F119: Квартира; 88 × 205 см, 96 × 205 см; Basic, Standard, Line Street, Premium
+- F121: Квартира; 88 × 205 см, 96 × 205 см; Premium
+- F122: Квартира; 88 × 205 см, 96 × 205 см; Premium
+- F123: Квартира; 88 × 205 см, 96 × 205 см; Standard, Line Street, Premium
+- F124: Квартира; 88 × 205 см, 96 × 205 см; Line Street
+- F125: Квартира; 88 × 205 см, 96 × 205 см; Premium
+- F127: Квартира; 88 × 205 см, 96 × 205 см; Premium
+- F128: Квартира; 88 × 205 см, 96 × 205 см; Standard, Line Street, Premium
+- F132: Квартира; 88 × 205 см, 96 × 205 см; Basic, Line Street, Standard, Premium
+- F133: Квартира; 88 × 205 см, 96 × 205 см; Premium
+- F136: Квартира; 88 × 205 см, 96 × 205 см; Standard, Line Street, Premium
+- F137: Квартира; 88 × 205 см, 96 × 205 см; Standard, Premium
+- F139: Квартира; 88 × 205 см, 96 × 205 см; Standard
+- F141: Квартира; 88 × 205 см, 96 × 205 см; Premium
+- F143: Квартира; 88 × 205 см, 96 × 205 см; Premium
+- F146: Квартира; 88 × 205 см, 96 × 205 см; Standard, Line Street
+- F148: Квартира; 88 × 205 см, 96 × 205 см; Premium
+- F154: Квартира; 88 × 205 см, 96 × 205 см; Premium
+- F155: Квартира; 88 × 205 см, 96 × 205 см; Premium
+- F161: Квартира; 88 × 205 см, 96 × 205 см; Standard, Line Street
+- F166: Квартира; 88 × 205 см, 96 × 205 см; Standard, Line Street
