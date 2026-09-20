@@ -54,7 +54,10 @@ export function ProductMediaGallery({ product }: { product: Product }) {
       ? variantGallery
       : gallery;
   const selected = displayedGallery[selectedIndex] || displayedGallery[0];
-  const productImageAlt = `${product.category === "windows" ? "Вікна" : `${product.category === "entrance" ? "Вхідні" : "Міжкімнатні"} двері`} ${product.brand} ${product.name}, колекція ${product.collection}`;
+  const displayName = product.name.toLocaleLowerCase("uk").startsWith(product.brand.toLocaleLowerCase("uk"))
+    ? product.name
+    : `${product.brand} ${product.name}`;
+  const productImageAlt = `${product.category === "windows" ? "Вікна" : `${product.category === "entrance" ? "Вхідні" : "Міжкімнатні"} двері`} ${displayName}, колекція ${product.collection}`;
   const selectedImageAlt = optionImage ? `Обраний декор: ${productImageAlt}` : selected.label ? `${productImageAlt} — ${selected.label}` : productImageAlt;
   const handleConfigurationImage = useCallback((image: string | null, variant: ProductVariant | null) => {
     setOptionImage(image);

@@ -48,7 +48,10 @@ function DecorPreview({ option }: { option: Pick<ProductOption, "image" | "swatc
 
 const productImageAlt = (product: Pick<Product, "category" | "brand" | "name" | "collection">) => {
   const category = product.category === "windows" ? "Вікна" : `${categories[product.category].short} двері`;
-  return `${category} ${product.brand} ${product.name}, колекція ${product.collection}`;
+  const name = product.name.toLocaleLowerCase("uk").startsWith(product.brand.toLocaleLowerCase("uk"))
+    ? product.name
+    : `${product.brand} ${product.name}`;
+  return `${category} ${name}, колекція ${product.collection}`;
 };
 
 export function ProductGrid({ products, singleColumn = false, showCart = true }: { products: (Product | CatalogCardProduct)[]; singleColumn?: boolean; showCart?: boolean }) {
