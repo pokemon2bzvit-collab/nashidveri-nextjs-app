@@ -1,4 +1,5 @@
 const url = process.argv[2] || "https://straj.ua/product/alfa_rio_double";
+const clean = (value = "") => value.replace(/<[^>]+>/gu, " ").replace(/&nbsp;/giu, " ").replace(/\s+/gu, " ").trim();
 const response = await fetch(url, {
   headers: { "user-agent": "Mozilla/5.0 (compatible; NashidveriCatalogAudit/1.0)" },
 });
@@ -25,6 +26,10 @@ const snippets = ["Характерист", "Товщина", "Замок", "К�
     return index >= 0 ? text.slice(Math.max(0, index - 80), index + 420) : null;
   })
   .filter(Boolean);
+const categoryMarkers = [...html.matchAll(/.{0,100}(?:type_door|purpose|category|collection|квартир|вулич|приватного будинку).{0,180}/giu)]
+  .map((match) => clean(match[0]))
+  .filter((value, index, list) => list.indexOf(value) === index)
+  .slice(0, 25);
 
 console.log(JSON.stringify({
   url,
@@ -36,4 +41,5 @@ console.log(JSON.stringify({
   imageCount: images.length,
   hasSpecsWords: /характерист|товщина|замок|полотно|короб/iu.test(html),
   snippets,
+  categoryMarkers,
 }, null, 2));

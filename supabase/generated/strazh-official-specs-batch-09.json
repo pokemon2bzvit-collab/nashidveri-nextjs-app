@@ -1,0 +1,440 @@
+{
+  "batch": 9,
+  "records": [
+    {
+      "url": "https://straj.ua/product/salta",
+      "name": "Salta",
+      "image": "https://straj.ua/assets/product/0x500/342_3933137190.png",
+      "dimensions": null,
+      "collection": "Офіційний каталог — перевірити",
+      "specs": [
+        [
+          "Контури ущільнення",
+          "3 контури ущільнювача"
+        ]
+      ]
+    },
+    {
+      "url": "https://straj.ua/product/sapphire",
+      "name": "Sapphire",
+      "image": "https://straj.ua/assets/product/0x500/329_1544466305.png",
+      "dimensions": null,
+      "collection": "Офіційний каталог — перевірити",
+      "specs": [
+        [
+          "Контури ущільнення",
+          "3 контури ущільнювача"
+        ]
+      ]
+    },
+    {
+      "url": "https://straj.ua/product/senta_5",
+      "name": "Senta",
+      "image": "https://straj.ua/assets/product/0x500/505_1981378064.jpg",
+      "dimensions": null,
+      "collection": "Офіційний каталог — перевірити",
+      "specs": []
+    },
+    {
+      "url": "https://straj.ua/product/side_light_250",
+      "name": "Side Light 250",
+      "image": "https://straj.ua/assets/product/0x500/846_2490363355.jpg",
+      "dimensions": null,
+      "collection": "Офіційний каталог — перевірити",
+      "specs": []
+    },
+    {
+      "url": "https://straj.ua/product/side_light_250_stopsold",
+      "name": "Side Light 250 StopSold",
+      "image": "https://straj.ua/assets/product/0x500/847_3643366670.jpg",
+      "dimensions": null,
+      "collection": "Офіційний каталог — перевірити",
+      "specs": []
+    },
+    {
+      "url": "https://straj.ua/product/side_light_250_stopsold_hardy",
+      "name": "Side Light 250 StopSold Hardy",
+      "image": "https://straj.ua/assets/product/0x500/848_169217405.jpg",
+      "dimensions": null,
+      "collection": "Офіційний каталог — перевірити",
+      "specs": []
+    },
+    {
+      "url": "https://straj.ua/product/sierra_zap",
+      "name": "Sierra",
+      "image": "https://straj.ua/assets/product/0x500/627_912627323.jpg",
+      "dimensions": null,
+      "collection": "Офіційний каталог — перевірити",
+      "specs": []
+    },
+    {
+      "url": "https://straj.ua/product/siesta",
+      "name": "Siesta",
+      "image": "https://straj.ua/assets/product/0x500/113_92884643.png",
+      "dimensions": null,
+      "collection": "Офіційний каталог — перевірити",
+      "specs": [
+        [
+          "Контури ущільнення",
+          "3 контури ущільнювача"
+        ]
+      ]
+    },
+    {
+      "url": "https://straj.ua/product/sigma",
+      "name": "Sigma",
+      "image": "https://straj.ua/assets/product/0x500/398_3176754980.jpg",
+      "dimensions": null,
+      "collection": "Офіційний каталог — перевірити",
+      "specs": [
+        [
+          "Контури ущільнення",
+          "3 контури ущільнювача"
+        ]
+      ]
+    },
+    {
+      "url": "https://straj.ua/product/slim_a",
+      "name": "Slim A",
+      "image": "https://straj.ua/assets/product/0x500/538_366326058.jpg",
+      "dimensions": "870х2050 / 970х2050",
+      "thickness": "85мм",
+      "collection": "Офіційний каталог — перевірити",
+      "specs": [
+        [
+          "Розміри дверного блоку",
+          "870х2050 / 970х2050"
+        ],
+        [
+          "Товщина полотна",
+          "85мм"
+        ],
+        [
+          "Товщина металу",
+          "1,2мм"
+        ],
+        [
+          "Глибина коробки",
+          "130мм"
+        ],
+        [
+          "Контури ущільнення",
+          "3 контури ущільнювача"
+        ],
+        [
+          "Утеплення",
+          "Мінеральна вата"
+        ]
+      ]
+    },
+    {
+      "url": "https://straj.ua/product/slim_d_glass_proof",
+      "name": "Slim D Glass",
+      "image": "https://straj.ua/assets/product/0x500/527_1224880911.jpg",
+      "dimensions": "870х2050 / 970х2050",
+      "thickness": "85мм",
+      "collection": "Офіційний каталог — перевірити",
+      "specs": [
+        [
+          "Розміри дверного блоку",
+          "870х2050 / 970х2050"
+        ],
+        [
+          "Товщина полотна",
+          "85мм"
+        ],
+        [
+          "Товщина металу",
+          "1,2мм"
+        ],
+        [
+          "Глибина коробки",
+          "130мм"
+        ],
+        [
+          "Контури ущільнення",
+          "3 контури ущільнювача"
+        ],
+        [
+          "Утеплення",
+          "Мінеральна вата"
+        ]
+      ]
+    },
+    {
+      "url": "https://straj.ua/product/slimdv_proof",
+      "name": "Slim Dv",
+      "image": "https://straj.ua/assets/product/0x500/284_1729535763.jpg",
+      "dimensions": "870х2050 / 970х2050",
+      "thickness": "85мм",
+      "collection": "Офіційний каталог — перевірити",
+      "specs": [
+        [
+          "Розміри дверного блоку",
+          "870х2050 / 970х2050"
+        ],
+        [
+          "Товщина полотна",
+          "85мм"
+        ],
+        [
+          "Товщина металу",
+          "1,2мм"
+        ],
+        [
+          "Глибина коробки",
+          "130мм"
+        ],
+        [
+          "Контури ущільнення",
+          "3 контури ущільнювача"
+        ],
+        [
+          "Утеплення",
+          "Мінеральна вата"
+        ]
+      ]
+    },
+    {
+      "url": "https://straj.ua/product/slim_p_",
+      "name": "Slim P",
+      "image": "https://straj.ua/assets/product/0x500/860_2424385804.jpg",
+      "dimensions": null,
+      "collection": "Офіційний каталог — перевірити",
+      "specs": []
+    },
+    {
+      "url": "https://straj.ua/product/slim_p_double",
+      "name": "Slim P Double",
+      "image": "https://straj.ua/assets/product/0x500/373_3014742234.jpg",
+      "dimensions": "1220х2050 / 1320х2050",
+      "thickness": "85мм",
+      "collection": "Офіційний каталог — перевірити",
+      "specs": [
+        [
+          "Розміри дверного блоку",
+          "1220х2050 / 1320х2050"
+        ],
+        [
+          "Товщина полотна",
+          "85мм"
+        ],
+        [
+          "Товщина металу",
+          "1,2мм"
+        ],
+        [
+          "Глибина коробки",
+          "130мм"
+        ],
+        [
+          "Контури ущільнення",
+          "3 контури ущільнювача"
+        ],
+        [
+          "Утеплення",
+          "Мінеральна вата"
+        ]
+      ]
+    },
+    {
+      "url": "https://straj.ua/product/slim_p_duble",
+      "name": "Slim P Duble",
+      "image": "https://straj.ua/assets/product/0x500/862_2227177762.jpg",
+      "dimensions": null,
+      "collection": "Офіційний каталог — перевірити",
+      "specs": []
+    },
+    {
+      "url": "https://straj.ua/product/slim_s_3",
+      "name": "Slim S",
+      "image": "https://straj.ua/assets/product/0x500/576_1234796991.jpg",
+      "dimensions": "1220х2050 / 1320х2050",
+      "thickness": "80мм",
+      "collection": "Офіційний каталог — перевірити",
+      "specs": [
+        [
+          "Розміри дверного блоку",
+          "1220х2050 / 1320х2050"
+        ],
+        [
+          "Товщина полотна",
+          "80мм"
+        ],
+        [
+          "Товщина металу",
+          "1,2мм"
+        ],
+        [
+          "Глибина коробки",
+          "120мм"
+        ],
+        [
+          "Контури ущільнення",
+          "3 контури ущільнювача"
+        ],
+        [
+          "Утеплення",
+          "Мінеральна вата"
+        ]
+      ]
+    },
+    {
+      "url": "https://straj.ua/product/slim_s_double",
+      "name": "Slim S Double",
+      "image": "https://straj.ua/assets/product/0x500/583_1277208156.jpg",
+      "dimensions": null,
+      "thickness": "85мм",
+      "collection": "Офіційний каталог — перевірити",
+      "specs": [
+        [
+          "Товщина полотна",
+          "85мм"
+        ],
+        [
+          "Товщина металу",
+          "1,2мм"
+        ],
+        [
+          "Глибина коробки",
+          "130мм"
+        ],
+        [
+          "Контури ущільнення",
+          "3 контури ущільнювача"
+        ],
+        [
+          "Утеплення",
+          "Мінеральна вата"
+        ]
+      ]
+    },
+    {
+      "url": "https://straj.ua/product/slim_s_glass_a",
+      "name": "Slim S Glass-A",
+      "image": "https://straj.ua/assets/product/0x500/641_3938456092.jpg",
+      "dimensions": null,
+      "collection": "Офіційний каталог — перевірити",
+      "specs": []
+    },
+    {
+      "url": "https://straj.ua/product/sms_giada_d_dn",
+      "name": "SMS Giada D",
+      "image": "https://straj.ua/assets/product/0x500/655_3045850516.png",
+      "dimensions": null,
+      "collection": "Офіційний каталог — перевірити",
+      "specs": [
+        [
+          "Контури ущільнення",
+          "3 контури ущільнювача"
+        ],
+        [
+          "Утеплення",
+          "Мінеральна вата"
+        ]
+      ]
+    },
+    {
+      "url": "https://straj.ua/product/sms_rio_s_zap2",
+      "name": "SMS Rio S",
+      "image": "https://straj.ua/assets/product/0x500/677_1684967562.jpg",
+      "dimensions": null,
+      "collection": "Офіційний каталог — перевірити",
+      "specs": [
+        [
+          "Контури ущільнення",
+          "3 контури ущільнювача"
+        ],
+        [
+          "Утеплення",
+          "Мінеральна вата"
+        ]
+      ]
+    },
+    {
+      "url": "https://straj.ua/product/sms_rio_s_double_khm",
+      "name": "SMS Rio S Double",
+      "image": "https://straj.ua/assets/product/0x500/663_1509801805.jpg",
+      "dimensions": null,
+      "collection": "Офіційний каталог — перевірити",
+      "specs": [
+        [
+          "Контури ущільнення",
+          "3 контури ущільнювача"
+        ],
+        [
+          "Утеплення",
+          "Мінеральна вата"
+        ]
+      ]
+    },
+    {
+      "url": "https://straj.ua/product/sofi",
+      "name": "Sofi",
+      "image": "https://straj.ua/assets/product/0x500/125_251592447.png",
+      "dimensions": null,
+      "collection": "Офіційний каталог — перевірити",
+      "specs": [
+        [
+          "Контури ущільнення",
+          "3 контури ущільнювача"
+        ]
+      ]
+    },
+    {
+      "url": "https://straj.ua/product/solo_vin",
+      "name": "Solo",
+      "image": "https://straj.ua/assets/product/0x500/710_3642649151.png",
+      "dimensions": null,
+      "collection": "Офіційний каталог — перевірити",
+      "specs": []
+    },
+    {
+      "url": "https://straj.ua/product/sota",
+      "name": "Sota",
+      "image": "https://straj.ua/assets/product/0x500/346_951583732.png",
+      "dimensions": null,
+      "collection": "Офіційний каталог — перевірити",
+      "specs": [
+        [
+          "Контури ущільнення",
+          "3 контури ущільнювача"
+        ]
+      ]
+    },
+    {
+      "url": "https://straj.ua/product/space",
+      "name": "Space",
+      "image": "https://straj.ua/assets/product/0x500/268_1588714522.jpg",
+      "dimensions": "870х2050 / 970х2050",
+      "thickness": "85мм",
+      "collection": "Офіційний каталог — перевірити",
+      "specs": [
+        [
+          "Розміри дверного блоку",
+          "870х2050 / 970х2050"
+        ],
+        [
+          "Товщина полотна",
+          "85мм"
+        ],
+        [
+          "Товщина металу",
+          "1,2мм"
+        ],
+        [
+          "Глибина коробки",
+          "130мм"
+        ],
+        [
+          "Контури ущільнення",
+          "3 контури ущільнювача"
+        ],
+        [
+          "Утеплення",
+          "Мінеральна вата"
+        ]
+      ]
+    }
+  ]
+}
