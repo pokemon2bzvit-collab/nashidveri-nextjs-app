@@ -1,0 +1,10 @@
+-- Rodos Steel: приховує лише 17 складських або неоднозначних сторінок.
+-- Дані не видаляються: моделі можна повернути в каталог, встановивши is_available = true.
+begin;
+do $$ declare expected_count integer := 17; actual_count integer; begin
+  select count(*) into actual_count from public.products where slug in ('rodos-official-1n92eag', 'rodos-official-t789ym', 'rodos-official-4tei6b', 'rodos-official-jadsto', 'rodos-official-1n92ed9', 'rodos-official-t7a3qa', 'rodos-official-1rhs1v', 'rodos-official-1n92ec3', 'rodos-official-jkwc00', 'rodos-official-1n92eey', 'rodos-official-1n92ef0', 'rodos-official-1n92eer', 'rodos-official-vr68i9', 'rodos-official-1va3l7w', 'rodos-official-1xykyfg', 'rodos-official-1lx612j', 'rodos-official-1mfx6ff') and brand = 'Rodos Steel';
+  if actual_count <> expected_count then raise exception 'Очікувалось % неоднозначних моделей Rodos Steel, знайдено % — каталог не змінено', expected_count, actual_count; end if;
+end $$;
+update public.products set is_available = false, updated_at = now() where slug in ('rodos-official-1n92eag', 'rodos-official-t789ym', 'rodos-official-4tei6b', 'rodos-official-jadsto', 'rodos-official-1n92ed9', 'rodos-official-t7a3qa', 'rodos-official-1rhs1v', 'rodos-official-1n92ec3', 'rodos-official-jkwc00', 'rodos-official-1n92eey', 'rodos-official-1n92ef0', 'rodos-official-1n92eer', 'rodos-official-vr68i9', 'rodos-official-1va3l7w', 'rodos-official-1xykyfg', 'rodos-official-1lx612j', 'rodos-official-1mfx6ff') and brand = 'Rodos Steel';
+select slug, name, is_available from public.products where slug in ('rodos-official-1n92eag', 'rodos-official-t789ym', 'rodos-official-4tei6b', 'rodos-official-jadsto', 'rodos-official-1n92ed9', 'rodos-official-t7a3qa', 'rodos-official-1rhs1v', 'rodos-official-1n92ec3', 'rodos-official-jkwc00', 'rodos-official-1n92eey', 'rodos-official-1n92ef0', 'rodos-official-1n92eer', 'rodos-official-vr68i9', 'rodos-official-1va3l7w', 'rodos-official-1xykyfg', 'rodos-official-1lx612j', 'rodos-official-1mfx6ff') order by name;
+commit;
