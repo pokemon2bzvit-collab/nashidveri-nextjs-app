@@ -28,7 +28,8 @@ export function ProductConfiguration({ options, variants, onImageChange, activeV
         collection.set(option.group, [...current, option]);
       }
     });
-    return [...collection.values()];
+    // Один варіант не потребує кнопки: це властивість моделі, а не вибір.
+    return [...collection.values()].filter((group) => group.length > 1);
   }, [options]);
   const isGlassOnly = groups.length === 1 && groups[0]?.[0]?.group === "glass";
   // Коли для моделі є точні фото виконань, працюємо однаково для всіх
