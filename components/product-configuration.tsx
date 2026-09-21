@@ -7,7 +7,7 @@ import type { ProductOption, ProductVariant } from "@/lib/catalog";
 type ProductConfigurationProps = {
   options: ProductOption[];
   variants: ProductVariant[];
-  onImageChange: (image: string | null, variant: ProductVariant | null) => void;
+  onImageChange: (image: string | null, variant: ProductVariant | null, changedGroup?: string) => void;
   activeVariant?: ProductVariant | null;
   previewImage: string;
   productName: string;
@@ -124,7 +124,7 @@ export function ProductConfiguration({ options, variants, onImageChange, activeV
     setSelected(nextSelection);
     setDraftSelected(nextSelection);
     setHasAppliedSelection(true);
-    onImageChange(nextVariant?.image || null, nextVariant);
+    onImageChange(nextVariant?.image || null, nextVariant, groupKey);
     window.localStorage.setItem(`nashi-dveri-config-${productSlug}`, JSON.stringify({
       configuration: groups.map((item) => `${item[0].groupLabel}: ${nextValues[item[0].group]}`).filter(Boolean),
       image: nextVariant?.image || null,

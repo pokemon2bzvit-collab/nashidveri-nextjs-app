@@ -34,6 +34,7 @@ export function ProductMediaGallery({ product }: { product: Product }) {
   const [selectedIndex, setSelectedIndex] = useState(0);
   const [optionImage, setOptionImage] = useState<string | null>(null);
   const [activeVariant, setActiveVariant] = useState<ProductVariant | null>(null);
+  const [activeOptionGroup, setActiveOptionGroup] = useState<string | null>(null);
   const activeGlassGallery = useMemo(() => {
     const glass = activeVariant?.selections.glass;
     if (!isGlassOnlyConfiguration || !glass) return [];
@@ -59,13 +60,14 @@ export function ProductMediaGallery({ product }: { product: Product }) {
   // щойно виробник надав фото цих виконань. Це дає однаковий сценарій,
   // як у Rodos: мініатюра = вибір декору й головного фото.
   const usesVariantThumbnailGallery = !usesActiveVariantGallery && hasCompleteVariantCoverage && variantGallery.length > 0;
-  // Кнопка декору має оновлювати весь ряд мініатюр. Відбираємо всі точні
-  // фото одного декору (а не тільки одну комбінацію «декор + скло»), щоб
-  // покупець міг побачити доступні виконання скла під головним фото.
+  // Ряд мініатюр відповідає останній натиснутій групі. Наприклад, після
+  // натискання «Сатин» показуємо всі офіційні фото із сатиновим склом, а
+  // після натискання кольору — усі фото цього декору.
   const selectedVariantThumbnailGallery = useMemo(() => {
     if (!usesVariantThumbnailGallery || !activeVariant) return variantGallery;
-    const decorKeys = ["color", "finish", "edge"].filter((key) => Boolean(activeVariant.selections[key]));
-    const filterKeys = decorKeys.length ? decorKeys : Object.keys(activeVariant.selections);
+    const filterKeys = activeOptionGroup && activeVariant.selections[activeOptionGroup]
+      ? [activeOptionGroup]
+      : Object.keys(activeVariant.selections);
     return visualVariants
       .filter((variant) => filterKeys.every((key) => variant.selections[key] === activeVariant.selections[key]))
       .map((variant) => ({
@@ -74,7 +76,7 @@ export function ProductMediaGallery({ product }: { product: Product }) {
         image: variant.image,
         sortOrder: variant.sortOrder,
       }));
-  }, [activeVariant, usesVariantThumbnailGallery, variantGallery, visualVariants]);
+  }, [activeOptionGroup, activeVariant, usesVariantThumbnailGallery, variantGallery, visualVariants]);
   // Галерея показує ракурси тільки одного вибраного виконання. Не змішуємо
   // фото різних кольорів чи видів полотна в один ряд мініатюр.
   const displayedGallery = usesActiveVariantGallery
@@ -90,9 +92,11 @@ export function ProductMediaGallery({ product }: { product: Product }) {
     : `${product.brand} ${product.name}`;
   const productImageAlt = `${product.category === "windows" ? "Вікна" : `${product.category === "entrance" ? "Вхідні" : "Міжкімнатні"} двері`} ${displayName}, колекція ${product.collection}`;
   const selectedImageAlt = selected.label ? `${productImageAlt} — ${selected.label}` : productImageAlt;
-  const handleConfigurationImage = useCallback((image: string | null, variant: ProductVariant | null) => {
+  const handleConfigurationImage = useCallback((image: string | null, variant: ProductVariant | null, changedGroup?: string) => {
     setOptionImage(image);
     setActiveVariant(variant);
+    if (changedGroup) setActiveOptionGroup(changedGroup);
+    if (!variant) setActiveOptionGroup(null);
     if (!image) {
       setSelectedIndex(0);
       return;
