@@ -114,7 +114,7 @@ export function ProductConfiguration({ options, variants, onImageChange, activeV
 
   if (!groups.length) return null;
 
-  if (!visualVariants.length && !isConfigurationProduct) return <section className="mt-5 rounded-2xl border border-stone-200 bg-white p-4 shadow-sm sm:p-5"><div className="flex items-start gap-3"><span className="grid size-9 shrink-0 place-items-center rounded-xl bg-sand text-clay"><Palette size={17} /></span><div><h2 className="text-sm font-bold text-ink">Варіанти покриття</h2><p className="mt-1 text-sm leading-6 text-stone-600">{options.map((option) => option.label).join(" · ")}</p><p className="mt-2 text-xs leading-5 text-stone-500">Фото для інших декорів цієї моделі ще не підтверджені. У салоні покажемо точні зразки.</p></div></div></section>;
+  if (!visualVariants.length && !isConfigurationProduct) return <details className="mt-4 group"><summary className="flex cursor-pointer list-none items-center justify-between rounded-xl border border-stone-200 bg-white px-4 py-3 text-sm font-bold text-ink transition hover:border-clay [&::-webkit-details-marker]:hidden"><span className="flex items-center gap-2"><Palette size={17} className="text-clay" /> Декори та скло</span><ChevronRight size={17} className="text-clay transition group-open:rotate-90" /></summary><section className="mt-3 rounded-2xl border border-stone-200 bg-white p-4 shadow-sm sm:p-5"><div className="flex items-start gap-3"><span className="grid size-9 shrink-0 place-items-center rounded-xl bg-sand text-clay"><Palette size={17} /></span><div><h2 className="text-sm font-bold text-ink">Варіанти покриття</h2><p className="mt-1 text-sm leading-6 text-stone-600">{options.map((option) => option.label).join(" · ")}</p><p className="mt-2 text-xs leading-5 text-stone-500">Фото для інших декорів цієї моделі ще не підтверджені. У салоні покажемо точні зразки.</p></div></div></section></details>;
 
   const openConfigurator = () => {
     setDraftSelected(selected);
@@ -152,7 +152,12 @@ export function ProductConfiguration({ options, variants, onImageChange, activeV
     setIsOpen(false);
   };
 
-  return <section className="mt-5 rounded-2xl border border-stone-200 bg-white p-4 shadow-sm sm:p-5">
+  return <details className="mt-4 group">
+    <summary className="flex cursor-pointer list-none items-center justify-between rounded-xl border border-stone-200 bg-white px-4 py-3 text-sm font-bold text-ink transition hover:border-clay [&::-webkit-details-marker]:hidden">
+      <span className="flex items-center gap-2"><Palette size={17} className="text-clay" /> Декори та скло</span>
+      <ChevronRight size={17} className="text-clay transition group-open:rotate-90" />
+    </summary>
+    <section className="mt-3 rounded-2xl border border-stone-200 bg-white p-4 shadow-sm sm:p-5">
     <div className="flex items-start justify-between gap-3">
       <div>
         <div className="flex items-center gap-2 text-sm font-bold text-ink"><Palette size={17} className="text-clay" /> {isGlassOnly ? "Варіант скла" : isConfigurationProduct ? "Комплектація дверей" : "Декор і комплектація"}</div>
@@ -235,5 +240,6 @@ export function ProductConfiguration({ options, variants, onImageChange, activeV
         </div>
       </aside>
     </div>}
-  </section>;
+    </section>
+  </details>;
 }
