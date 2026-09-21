@@ -59,14 +59,15 @@ export function ProductMediaGallery({ product }: { product: Product }) {
   // щойно виробник надав фото цих виконань. Це дає однаковий сценарій,
   // як у Rodos: мініатюра = вибір декору й головного фото.
   const usesVariantThumbnailGallery = !usesActiveVariantGallery && hasCompleteVariantCoverage && variantGallery.length > 0;
-  // Після вибору декору показуємо під головним фото лише підтверджені фото
-  // цього виконання. Для фабрик, що дають один кадр на комбінацію, це буде
-  // одна мініатюра; якщо є кілька ракурсів, activeConfigurationGallery вище
-  // автоматично покаже всі.
+  // Кнопка декору має оновлювати весь ряд мініатюр. Відбираємо всі точні
+  // фото одного декору (а не тільки одну комбінацію «декор + скло»), щоб
+  // покупець міг побачити доступні виконання скла під головним фото.
   const selectedVariantThumbnailGallery = useMemo(() => {
     if (!usesVariantThumbnailGallery || !activeVariant) return variantGallery;
+    const decorKeys = ["color", "finish", "edge"].filter((key) => Boolean(activeVariant.selections[key]));
+    const filterKeys = decorKeys.length ? decorKeys : Object.keys(activeVariant.selections);
     return visualVariants
-      .filter((variant) => Object.entries(activeVariant.selections).every(([group, value]) => variant.selections[group] === value))
+      .filter((variant) => filterKeys.every((key) => variant.selections[key] === activeVariant.selections[key]))
       .map((variant) => ({
         kind: "gallery" as const,
         label: Object.values(variant.selections).join(" · "),
@@ -100,10 +101,9 @@ export function ProductMediaGallery({ product }: { product: Product }) {
   }, []);
   useEffect(() => {
     if (!usesVariantThumbnailGallery || !activeVariant) return;
-    // Після вибору декору галерея звужується до фото цього виконання,
-    // тому активна мініатюра завжди перша в новому, короткому списку.
-    setSelectedIndex(0);
-  }, [activeVariant, usesVariantThumbnailGallery]);
+    const activeIndex = selectedVariantThumbnailGallery.findIndex((item) => item.image === activeVariant.image);
+    setSelectedIndex(activeIndex >= 0 ? activeIndex : 0);
+  }, [activeVariant, selectedVariantThumbnailGallery, usesVariantThumbnailGallery]);
   const selectConfigurationPhoto = (index: number) => {
     const variant = visualVariants[index];
     if (!variant) return;
@@ -147,6 +147,6 @@ export function ProductMediaGallery({ product }: { product: Product }) {
       </div>
     </section>}
     <ProductConfiguration options={product.options || []} variants={product.variants || []} onImageChange={handleConfigurationImage} activeVariant={activeVariant} previewImage={optionImage || selected.image} productName={product.name} productBrand={product.brand} productSlug={product.slug} />
-    {(displayedGallery.length > 1 || (Boolean(activeVariant) && (usesActiveVariantGallery || usesVariantThumbnailGallery))) && <p className="mt-3 flex items-center gap-2 text-xs font-medium text-stone-500"><Images size={15} /> {usesActiveVariantGallery ? "Фото обраного виконання." : usesGlassVariantGallery ? "Фото доступних виконань скла." : usesVariantThumbnailGallery ? "Фото обраного декору." : "Натисніть мініатюру, щоб переглянути варіант."}</p>}
+    {(displayedGallery.length > 1 || (Boolean(activeVariant) && (usesActiveVariantGallery || usesVariantThumbnailGallery))) && <p className="mt-3 flex items-center gap-2 text-xs font-medium text-stone-500"><Images size={15} /> {usesActiveVariantGallery ? "Фото обраного виконання." : usesGlassVariantGallery ? "Фото доступних виконань скла." : usesVariantThumbnailGallery ? "Фото доступних виконань обраного декору." : "Натисніть мініатюру, щоб переглянути варіант."}</p>}
   </div>;
 }
