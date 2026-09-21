@@ -59,6 +59,21 @@ export function ProductMediaGallery({ product }: { product: Product }) {
   // щойно виробник надав фото цих виконань. Це дає однаковий сценарій,
   // як у Rodos: мініатюра = вибір декору й головного фото.
   const usesVariantThumbnailGallery = !usesActiveVariantGallery && hasCompleteVariantCoverage && variantGallery.length > 0;
+  // Після вибору декору показуємо під головним фото лише підтверджені фото
+  // цього виконання. Для фабрик, що дають один кадр на комбінацію, це буде
+  // одна мініатюра; якщо є кілька ракурсів, activeConfigurationGallery вище
+  // автоматично покаже всі.
+  const selectedVariantThumbnailGallery = useMemo(() => {
+    if (!usesVariantThumbnailGallery || !activeVariant) return variantGallery;
+    return visualVariants
+      .filter((variant) => Object.entries(activeVariant.selections).every(([group, value]) => variant.selections[group] === value))
+      .map((variant) => ({
+        kind: "gallery" as const,
+        label: Object.values(variant.selections).join(" · "),
+        image: variant.image,
+        sortOrder: variant.sortOrder,
+      }));
+  }, [activeVariant, usesVariantThumbnailGallery, variantGallery, visualVariants]);
   // Галерея показує ракурси тільки одного вибраного виконання. Не змішуємо
   // фото різних кольорів чи видів полотна в один ряд мініатюр.
   const displayedGallery = usesActiveVariantGallery
@@ -66,7 +81,7 @@ export function ProductMediaGallery({ product }: { product: Product }) {
     : usesGlassVariantGallery
       ? variantGallery
       : usesVariantThumbnailGallery
-        ? variantGallery
+        ? selectedVariantThumbnailGallery
         : gallery;
   const selected = displayedGallery[selectedIndex] || displayedGallery[0];
   const displayName = product.name.toLocaleLowerCase("uk").startsWith(product.brand.toLocaleLowerCase("uk"))
@@ -120,7 +135,7 @@ export function ProductMediaGallery({ product }: { product: Product }) {
       {displayedGallery.map((item, index) => usesActiveVariantGallery
         ? <button type="button" key={`${item.image}-${index}`} aria-label={`Обрати фото: ${item.label || index + 1}`} onClick={() => selectActiveVariantPhoto(index)} className={`h-16 w-12 shrink-0 overflow-hidden rounded-lg border-2 bg-[#f7f5f1] transition ${selectedIndex === index ? "border-clay" : "border-transparent hover:border-stone-300"}`}><img src={item.image} alt="" className="h-full w-full object-contain" /></button>
         : usesGlassVariantGallery || usesVariantThumbnailGallery
-          ? <button type="button" key={`${item.image}-${index}`} aria-label={`Обрати фото варіанту: ${item.label || index + 1}`} onClick={() => selectConfigurationPhoto(index)} className={`h-16 w-12 shrink-0 overflow-hidden rounded-lg border-2 bg-[#f7f5f1] transition ${selectedIndex === index ? "border-clay" : "border-transparent hover:border-stone-300"}`}><img src={item.image} alt="" className="h-full w-full object-contain" /></button>
+          ? <button type="button" key={`${item.image}-${index}`} aria-label={`Обрати фото варіанту: ${item.label || index + 1}`} onClick={() => usesVariantThumbnailGallery ? selectGalleryPhoto(item, index) : selectConfigurationPhoto(index)} className={`h-16 w-12 shrink-0 overflow-hidden rounded-lg border-2 bg-[#f7f5f1] transition ${selectedIndex === index ? "border-clay" : "border-transparent hover:border-stone-300"}`}><img src={item.image} alt="" className="h-full w-full object-contain" /></button>
           : <button type="button" key={`${item.image}-${index}`} aria-label={`Обрати фото: ${item.label || index + 1}`} onClick={() => selectGalleryPhoto(item, index)} className={`h-16 w-12 shrink-0 overflow-hidden rounded-lg border-2 bg-[#f7f5f1] transition ${selectedIndex === index ? "border-clay" : "border-transparent hover:border-stone-300"}`}><img src={item.image} alt="" className="h-full w-full object-contain" /></button>)}
     </div>}
     {palettes.length > 0 && <section className="mt-5 rounded-2xl border border-stone-200 bg-white p-4 shadow-sm">
