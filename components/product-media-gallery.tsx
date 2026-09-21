@@ -1,7 +1,7 @@
 "use client";
 
 import { Images, Palette } from "lucide-react";
-import { useCallback, useMemo, useState } from "react";
+import { useCallback, useEffect, useMemo, useState } from "react";
 import { ImageLightbox } from "@/components/image-lightbox";
 import { ProductConfiguration } from "@/components/product-configuration";
 import type { Product, ProductMedia, ProductVariant } from "@/lib/catalog";
@@ -46,13 +46,19 @@ export function ProductMediaGallery({ product }: { product: Product }) {
   }, [activeVariant, isGlassOnlyConfiguration, media]);
   const activeVariantGallery = activeConfigurationGallery.length ? activeConfigurationGallery : activeGlassGallery;
   const usesActiveVariantGallery = activeVariantGallery.length > 0;
+  // Відображаємо точні виконання під головним фото для кожної фабрики,
+  // щойно виробник надав фото цих виконань. Це дає однаковий сценарій,
+  // як у Rodos: мініатюра = вибір декору й головного фото.
+  const usesVariantThumbnailGallery = !usesActiveVariantGallery && variantGallery.length > 0;
   // Галерея показує ракурси тільки одного вибраного виконання. Не змішуємо
   // фото різних кольорів чи видів полотна в один ряд мініатюр.
   const displayedGallery = usesActiveVariantGallery
     ? activeVariantGallery
     : usesGlassVariantGallery
       ? variantGallery
-      : gallery;
+      : usesVariantThumbnailGallery
+        ? variantGallery
+        : gallery;
   const selected = displayedGallery[selectedIndex] || displayedGallery[0];
   const displayName = product.name.toLocaleLowerCase("uk").startsWith(product.brand.toLocaleLowerCase("uk"))
     ? product.name
@@ -68,6 +74,11 @@ export function ProductMediaGallery({ product }: { product: Product }) {
     }
     setSelectedIndex(0);
   }, []);
+  useEffect(() => {
+    if (!usesVariantThumbnailGallery || !activeVariant) return;
+    const variantIndex = visualVariants.findIndex((variant) => variant.image === activeVariant.image && JSON.stringify(variant.selections) === JSON.stringify(activeVariant.selections));
+    if (variantIndex >= 0) setSelectedIndex(variantIndex);
+  }, [activeVariant, usesVariantThumbnailGallery, visualVariants]);
   const selectConfigurationPhoto = (index: number) => {
     const variant = visualVariants[index];
     if (!variant) return;
@@ -100,7 +111,7 @@ export function ProductMediaGallery({ product }: { product: Product }) {
     {displayedGallery.length > 1 && <div className="mt-3 flex gap-2 overflow-x-auto pb-1">
       {displayedGallery.map((item, index) => usesActiveVariantGallery
         ? <button type="button" key={`${item.image}-${index}`} aria-label={`Обрати фото: ${item.label || index + 1}`} onClick={() => selectActiveVariantPhoto(index)} className={`h-16 w-12 shrink-0 overflow-hidden rounded-lg border-2 bg-[#f7f5f1] transition ${selectedIndex === index ? "border-clay" : "border-transparent hover:border-stone-300"}`}><img src={item.image} alt="" className="h-full w-full object-contain" /></button>
-        : usesGlassVariantGallery
+        : usesGlassVariantGallery || usesVariantThumbnailGallery
           ? <button type="button" key={`${item.image}-${index}`} aria-label={`Обрати фото варіанту: ${item.label || index + 1}`} onClick={() => selectConfigurationPhoto(index)} className={`h-16 w-12 shrink-0 overflow-hidden rounded-lg border-2 bg-[#f7f5f1] transition ${selectedIndex === index ? "border-clay" : "border-transparent hover:border-stone-300"}`}><img src={item.image} alt="" className="h-full w-full object-contain" /></button>
           : <button type="button" key={`${item.image}-${index}`} aria-label={`Обрати фото: ${item.label || index + 1}`} onClick={() => selectGalleryPhoto(item, index)} className={`h-16 w-12 shrink-0 overflow-hidden rounded-lg border-2 bg-[#f7f5f1] transition ${selectedIndex === index ? "border-clay" : "border-transparent hover:border-stone-300"}`}><img src={item.image} alt="" className="h-full w-full object-contain" /></button>)}
     </div>}
@@ -112,6 +123,6 @@ export function ProductMediaGallery({ product }: { product: Product }) {
       </div>
     </section>}
     <ProductConfiguration options={product.options || []} variants={product.variants || []} onImageChange={handleConfigurationImage} activeVariant={activeVariant} previewImage={optionImage || selected.image} productName={product.name} productBrand={product.brand} productSlug={product.slug} />
-    {displayedGallery.length > 1 && <p className="mt-3 flex items-center gap-2 text-xs font-medium text-stone-500"><Images size={15} /> {usesActiveVariantGallery ? "Фото обраного виконання." : usesGlassVariantGallery ? "Фото доступних виконань скла." : "Натисніть мініатюру, щоб переглянути варіант."}</p>}
+    {displayedGallery.length > 1 && <p className="mt-3 flex items-center gap-2 text-xs font-medium text-stone-500"><Images size={15} /> {usesActiveVariantGallery ? "Фото обраного виконання." : usesGlassVariantGallery ? "Фото доступних виконань скла." : usesVariantThumbnailGallery ? "Натисніть мініатюру — вибір і головне фото оновляться одразу." : "Натисніть мініатюру, щоб переглянути варіант."}</p>}
   </div>;
 }

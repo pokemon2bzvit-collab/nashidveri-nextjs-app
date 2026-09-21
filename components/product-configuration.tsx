@@ -23,14 +23,12 @@ export function ProductConfiguration({ options, variants, onImageChange, activeV
     return [...collection.values()];
   }, [options]);
   const isGlassOnly = groups.length === 1 && groups[0]?.[0]?.group === "glass";
-  // Для Papa Carlo та Rodos покупець одразу бачить результат вибору,
-  // як на офіційній картці виробника. Інші фабрики лишаємо з кнопкою
-  // «Обрати декор», доки для них немає достатньо точних фото варіантів.
+  // Коли для моделі є точні фото виконань, працюємо однаково для всіх
+  // фабрик: вибір одразу змінює фото, без проміжного вікна.
   const isRodosSteel = productBrand === "Rodos Steel";
   const isStrazh = productBrand === "Страж";
-  const isStilDoors = productBrand === "StilDoors";
   const isConfigurationProduct = isRodosSteel || isStrazh;
-  const usesInstantConfiguration = productBrand === "Papa Carlo" || productBrand === "Rodos" || isStilDoors || isConfigurationProduct;
+  const usesInstantConfiguration = visualVariants.length > 0 || isConfigurationProduct;
   const configurationNoun = isGlassOnly ? "скло" : isConfigurationProduct ? "комплектацію" : "декор";
   const [selected, setSelected] = useState<Record<string, number>>({});
   const [draftSelected, setDraftSelected] = useState<Record<string, number>>({});
@@ -153,7 +151,7 @@ export function ProductConfiguration({ options, variants, onImageChange, activeV
         {groups.map((group) => {
           const groupKey = group[0].group;
           const selectedIndex = selectedIndexFor(group, selected);
-          const isVisualColorRow = (productBrand === "Rodos" || isStilDoors) && groupKey === "color";
+          const isVisualColorRow = groupKey === "color";
           return <div key={groupKey}>
             {!isGlassOnly && <p className="mb-2 text-xs font-bold text-stone-700">{group[0].groupLabel}</p>}
             <div className={isVisualColorRow ? "flex gap-2 overflow-x-auto pb-1" : "grid grid-cols-2 gap-2 sm:grid-cols-3"}>
