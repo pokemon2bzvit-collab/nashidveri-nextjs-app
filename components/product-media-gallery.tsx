@@ -64,10 +64,10 @@ export function ProductMediaGallery({ product }: { product: Product }) {
   // натискання «Сатин» показуємо всі офіційні фото із сатиновим склом, а
   // після натискання кольору — усі фото цього декору.
   const selectedVariantThumbnailGallery = useMemo(() => {
-    if (!usesVariantThumbnailGallery || !activeVariant) return variantGallery;
-    const filterKeys = activeOptionGroup && activeVariant.selections[activeOptionGroup]
-      ? [activeOptionGroup]
-      : Object.keys(activeVariant.selections);
+    // Звичайний клік по мініатюрі не є вибором декору: тоді зберігаємо
+    // весь початковий ряд і змінюємо тільки головне фото.
+    if (!usesVariantThumbnailGallery || !activeVariant || !activeOptionGroup) return variantGallery;
+    const filterKeys = [activeOptionGroup];
     return visualVariants
       .filter((variant) => filterKeys.every((key) => variant.selections[key] === activeVariant.selections[key]))
       .map((variant) => ({
