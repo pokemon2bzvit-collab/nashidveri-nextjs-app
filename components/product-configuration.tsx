@@ -173,10 +173,7 @@ export function ProductConfiguration({ options, variants, onImageChange, activeV
           const selectedIndex = selectedIndexFor(group, selected);
           const isVisualColorRow = groupKey === "color";
           return <div key={groupKey}>
-            <div className="mb-2 flex items-baseline justify-between gap-3">
-              <p className="text-xs font-bold text-stone-700">{isGlassOnly ? "Обраний варіант" : group[0].groupLabel}</p>
-              <p className="max-w-[58%] truncate text-right text-xs font-semibold text-clay">{group[selectedIndex]?.label}</p>
-            </div>
+            <p className="mb-2 text-xs font-bold text-stone-700">{isGlassOnly ? "Варіант скла" : group[0].groupLabel}</p>
             <div className={isVisualColorRow ? "flex gap-2 overflow-x-auto pb-1" : "grid grid-cols-2 gap-2 sm:grid-cols-3"}>
               {group.map((option, index) => {
                 const isSelected = selectedIndex === index;
