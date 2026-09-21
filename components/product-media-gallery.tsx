@@ -1,6 +1,6 @@
 "use client";
 
-import { Images, Palette } from "lucide-react";
+import { Images, Palette, RotateCcw } from "lucide-react";
 import { useCallback, useEffect, useMemo, useState } from "react";
 import { ImageLightbox } from "@/components/image-lightbox";
 import { ProductConfiguration } from "@/components/product-configuration";
@@ -131,6 +131,10 @@ export function ProductMediaGallery({ product }: { product: Product }) {
     setOptionImage(photo.image);
     setSelectedIndex(index);
   };
+  const showAllVariantThumbnails = () => {
+    setActiveOptionGroup(null);
+    setSelectedIndex(0);
+  };
 
   return <div>
     <div className="aspect-[4/5] overflow-hidden rounded-[2rem] bg-[#f7f5f1] p-5 sm:p-8">
@@ -143,6 +147,7 @@ export function ProductMediaGallery({ product }: { product: Product }) {
           ? <button type="button" key={`${item.image}-${index}`} aria-label={`Обрати фото варіанту: ${item.label || index + 1}`} onClick={() => usesVariantThumbnailGallery ? selectGalleryPhoto(item, index) : selectConfigurationPhoto(index)} className={`h-16 w-12 shrink-0 overflow-hidden rounded-lg border-2 bg-[#f7f5f1] transition ${selectedIndex === index ? "border-clay" : "border-transparent hover:border-stone-300"}`}><img src={item.image} alt="" className="h-full w-full object-contain" /></button>
           : <button type="button" key={`${item.image}-${index}`} aria-label={`Обрати фото: ${item.label || index + 1}`} onClick={() => selectGalleryPhoto(item, index)} className={`h-16 w-12 shrink-0 overflow-hidden rounded-lg border-2 bg-[#f7f5f1] transition ${selectedIndex === index ? "border-clay" : "border-transparent hover:border-stone-300"}`}><img src={item.image} alt="" className="h-full w-full object-contain" /></button>)}
     </div>}
+    {usesVariantThumbnailGallery && activeOptionGroup && <button type="button" onClick={showAllVariantThumbnails} className="mt-2 inline-flex min-h-9 items-center gap-1.5 rounded-lg px-2 text-xs font-bold text-clay transition hover:bg-sand hover:text-ink"><RotateCcw size={14} /> Усі декори</button>}
     {palettes.length > 0 && <section className="mt-5 rounded-2xl border border-stone-200 bg-white p-4 shadow-sm">
       <div className="flex items-center gap-2 text-sm font-bold text-ink"><Palette size={17} className="text-clay" /> Кольори та декори</div>
       <p className="mt-1.5 text-xs leading-5 text-stone-600">Оберіть декор під час консультації — наявність і термін виготовлення підтвердить менеджер.</p>
