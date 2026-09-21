@@ -148,7 +148,7 @@ export function ProductConfiguration({ options, variants, onImageChange, activeV
     <div className="flex items-start justify-between gap-3">
       <div>
         <div className="flex items-center gap-2 text-sm font-bold text-ink"><Palette size={17} className="text-clay" /> {isGlassOnly ? "Варіант скла" : isConfigurationProduct ? "Комплектація дверей" : "Декор і комплектація"}</div>
-        <p className="mt-1 text-xs leading-5 text-stone-500">{isGlassOnly ? "Оберіть виконання скла для цієї моделі." : isRodosSteel ? "Оберіть серію та розмір — вибір буде передано менеджеру разом із заявкою." : isStrazh ? "Оберіть заводську комплектацію — вибір буде передано менеджеру разом із заявкою." : "Оберіть колір, скло або кромку для цієї моделі."}</p>
+        <p className="mt-1 text-xs leading-5 text-stone-500">{isGlassOnly ? "Оберіть виконання скла — фото зміниться одразу." : isRodosSteel ? "Оберіть серію та розмір — вибір буде передано менеджеру разом із заявкою." : isStrazh ? "Оберіть заводську комплектацію — вибір буде передано менеджеру разом із заявкою." : "Оберіть доступний декор або скло — головне фото зміниться одразу."}</p>
       </div>
       <span className="rounded-full bg-sand px-2.5 py-1 text-[11px] font-bold text-stone-600">{isConfigurationProduct ? "Підбір" : `${visualVariants.length} з фото`}</span>
     </div>
@@ -160,7 +160,10 @@ export function ProductConfiguration({ options, variants, onImageChange, activeV
           const selectedIndex = selectedIndexFor(group, selected);
           const isVisualColorRow = groupKey === "color";
           return <div key={groupKey}>
-            {!isGlassOnly && <p className="mb-2 text-xs font-bold text-stone-700">{group[0].groupLabel}</p>}
+            <div className="mb-2 flex items-baseline justify-between gap-3">
+              <p className="text-xs font-bold text-stone-700">{isGlassOnly ? "Обраний варіант" : group[0].groupLabel}</p>
+              <p className="max-w-[58%] truncate text-right text-xs font-semibold text-clay">{group[selectedIndex]?.label}</p>
+            </div>
             <div className={isVisualColorRow ? "flex gap-2 overflow-x-auto pb-1" : "grid grid-cols-2 gap-2 sm:grid-cols-3"}>
               {group.map((option, index) => {
                 const isSelected = selectedIndex === index;
@@ -175,7 +178,7 @@ export function ProductConfiguration({ options, variants, onImageChange, activeV
           </div>;
         })}
       </div>
-      <p className="mt-2 text-xs text-stone-500">{isConfigurationProduct ? "Вибір збережеться та потрапить у кошик і заявку. Точний вигляд узгодимо в салоні." : "Натисніть варіант — головне фото й галерея оновляться одразу."}</p>
+      {isConfigurationProduct && <p className="mt-2 text-xs text-stone-500">Вибір збережеться та потрапить у кошик і заявку. Точний вигляд узгодимо в салоні.</p>}
     </> : <>
       <div className="mt-4 flex gap-2 overflow-hidden">
         {selectedOptions.slice(0, 4).map((option) => <span key={`${option.group}-${option.label}`} title={option.label} className="flex h-9 min-w-9 items-center justify-center rounded-xl border border-stone-200 bg-[#faf9f7] px-2">
