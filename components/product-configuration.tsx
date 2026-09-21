@@ -19,7 +19,15 @@ export function ProductConfiguration({ options, variants, onImageChange, activeV
   const visualVariants = useMemo(() => variants.filter((variant) => Boolean(variant.image)), [variants]);
   const groups = useMemo(() => {
     const collection = new Map<string, ProductOption[]>();
-    options.forEach((option) => collection.set(option.group, [...(collection.get(option.group) || []), option]));
+    options.forEach((option) => {
+      const current = collection.get(option.group) || [];
+      // Старі імпорти іноді відрізняються лише пробілом або регістром.
+      // Для покупця це один і той самий декор, тому не дублюємо кнопку.
+      const normalizedLabel = option.label.replace(/\s+/g, " ").trim().toLocaleLowerCase("uk");
+      if (!current.some((item) => item.label.replace(/\s+/g, " ").trim().toLocaleLowerCase("uk") === normalizedLabel)) {
+        collection.set(option.group, [...current, option]);
+      }
+    });
     return [...collection.values()];
   }, [options]);
   const isGlassOnly = groups.length === 1 && groups[0]?.[0]?.group === "glass";
