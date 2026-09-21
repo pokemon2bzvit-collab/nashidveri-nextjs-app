@@ -100,9 +100,10 @@ export function ProductMediaGallery({ product }: { product: Product }) {
   }, []);
   useEffect(() => {
     if (!usesVariantThumbnailGallery || !activeVariant) return;
-    const variantIndex = visualVariants.findIndex((variant) => variant.image === activeVariant.image && JSON.stringify(variant.selections) === JSON.stringify(activeVariant.selections));
-    if (variantIndex >= 0) setSelectedIndex(variantIndex);
-  }, [activeVariant, usesVariantThumbnailGallery, visualVariants]);
+    // Після вибору декору галерея звужується до фото цього виконання,
+    // тому активна мініатюра завжди перша в новому, короткому списку.
+    setSelectedIndex(0);
+  }, [activeVariant, usesVariantThumbnailGallery]);
   const selectConfigurationPhoto = (index: number) => {
     const variant = visualVariants[index];
     if (!variant) return;
@@ -131,7 +132,7 @@ export function ProductMediaGallery({ product }: { product: Product }) {
     <div className="aspect-[4/5] overflow-hidden rounded-[2rem] bg-[#f7f5f1] p-5 sm:p-8">
       <ImageLightbox src={optionImage || selected.image} alt={selectedImageAlt} className="h-full w-full" imageClassName="h-full w-full object-contain" />
     </div>
-    {displayedGallery.length > 1 && <div className="mt-3 flex gap-2 overflow-x-auto pb-1">
+    {(displayedGallery.length > 1 || (Boolean(activeVariant) && (usesActiveVariantGallery || usesVariantThumbnailGallery))) && <div className="mt-3 flex gap-2 overflow-x-auto pb-1">
       {displayedGallery.map((item, index) => usesActiveVariantGallery
         ? <button type="button" key={`${item.image}-${index}`} aria-label={`Обрати фото: ${item.label || index + 1}`} onClick={() => selectActiveVariantPhoto(index)} className={`h-16 w-12 shrink-0 overflow-hidden rounded-lg border-2 bg-[#f7f5f1] transition ${selectedIndex === index ? "border-clay" : "border-transparent hover:border-stone-300"}`}><img src={item.image} alt="" className="h-full w-full object-contain" /></button>
         : usesGlassVariantGallery || usesVariantThumbnailGallery
@@ -146,6 +147,6 @@ export function ProductMediaGallery({ product }: { product: Product }) {
       </div>
     </section>}
     <ProductConfiguration options={product.options || []} variants={product.variants || []} onImageChange={handleConfigurationImage} activeVariant={activeVariant} previewImage={optionImage || selected.image} productName={product.name} productBrand={product.brand} productSlug={product.slug} />
-    {displayedGallery.length > 1 && <p className="mt-3 flex items-center gap-2 text-xs font-medium text-stone-500"><Images size={15} /> {usesActiveVariantGallery ? "Фото обраного виконання." : usesGlassVariantGallery ? "Фото доступних виконань скла." : usesVariantThumbnailGallery ? "Натисніть мініатюру — вибір і головне фото оновляться одразу." : "Натисніть мініатюру, щоб переглянути варіант."}</p>}
+    {(displayedGallery.length > 1 || (Boolean(activeVariant) && (usesActiveVariantGallery || usesVariantThumbnailGallery))) && <p className="mt-3 flex items-center gap-2 text-xs font-medium text-stone-500"><Images size={15} /> {usesActiveVariantGallery ? "Фото обраного виконання." : usesGlassVariantGallery ? "Фото доступних виконань скла." : usesVariantThumbnailGallery ? "Фото обраного декору." : "Натисніть мініатюру, щоб переглянути варіант."}</p>}
   </div>;
 }
