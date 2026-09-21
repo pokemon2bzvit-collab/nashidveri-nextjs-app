@@ -28,7 +28,14 @@ export function ProductConfiguration({ options, variants, onImageChange, activeV
   const isRodosSteel = productBrand === "Rodos Steel";
   const isStrazh = productBrand === "Страж";
   const isConfigurationProduct = isRodosSteel || isStrazh;
-  const usesInstantConfiguration = visualVariants.length > 0 || isConfigurationProduct;
+  // Не показуємо швидкий вибір, якщо в базі є лише частина фото.
+  // Інакше, як у KFD Arkadia, покупець може отримати комбінацію, якої
+  // виробник не підтвердив точним зображенням.
+  const hasCompleteVariantCoverage = Boolean(visualVariants.length) && groups.every((group) => {
+    const groupKey = group[0].group;
+    return group.every((option) => visualVariants.some((variant) => variant.selections[groupKey] === option.label));
+  }) && visualVariants.every((variant) => groups.every((group) => Boolean(variant.selections[group[0].group])));
+  const usesInstantConfiguration = hasCompleteVariantCoverage || isConfigurationProduct;
   const configurationNoun = isGlassOnly ? "скло" : isConfigurationProduct ? "комплектацію" : "декор";
   const [selected, setSelected] = useState<Record<string, number>>({});
   const [draftSelected, setDraftSelected] = useState<Record<string, number>>({});

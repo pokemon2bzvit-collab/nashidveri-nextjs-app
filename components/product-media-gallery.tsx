@@ -4,7 +4,7 @@ import { Images, Palette } from "lucide-react";
 import { useCallback, useEffect, useMemo, useState } from "react";
 import { ImageLightbox } from "@/components/image-lightbox";
 import { ProductConfiguration } from "@/components/product-configuration";
-import type { Product, ProductMedia, ProductVariant } from "@/lib/catalog";
+import type { Product, ProductMedia, ProductOption, ProductVariant } from "@/lib/catalog";
 
 export function ProductMediaGallery({ product }: { product: Product }) {
   const media = product.media || [];
@@ -12,6 +12,15 @@ export function ProductMediaGallery({ product }: { product: Product }) {
   const visualMedia = media.filter((item) => (item.kind === "main" || item.kind === "gallery") && !isTaggedVariantPhoto(item));
   const gallery: ProductMedia[] = visualMedia.length ? visualMedia : [{ kind: "main", label: product.name, image: product.image, sortOrder: 0 }];
   const visualVariants = useMemo(() => (product.variants || []).filter((variant) => Boolean(variant.image)), [product.variants]);
+  const optionGroups = useMemo(() => {
+    const grouped = new Map<string, ProductOption[]>();
+    (product.options || []).forEach((option) => grouped.set(option.group, [...(grouped.get(option.group) || []), option]));
+    return [...grouped.values()];
+  }, [product.options]);
+  const hasCompleteVariantCoverage = Boolean(visualVariants.length) && optionGroups.every((group) => {
+    const groupKey = group[0]?.group;
+    return Boolean(groupKey) && group.every((option) => visualVariants.some((variant) => variant.selections[groupKey] === option.label));
+  }) && visualVariants.every((variant) => optionGroups.every((group) => Boolean(variant.selections[group[0]?.group || ""])));
   const variantGallery: ProductMedia[] = useMemo(() => visualVariants
     .map((variant) => ({
       kind: "gallery",
@@ -49,7 +58,7 @@ export function ProductMediaGallery({ product }: { product: Product }) {
   // Відображаємо точні виконання під головним фото для кожної фабрики,
   // щойно виробник надав фото цих виконань. Це дає однаковий сценарій,
   // як у Rodos: мініатюра = вибір декору й головного фото.
-  const usesVariantThumbnailGallery = !usesActiveVariantGallery && variantGallery.length > 0;
+  const usesVariantThumbnailGallery = !usesActiveVariantGallery && hasCompleteVariantCoverage && variantGallery.length > 0;
   // Галерея показує ракурси тільки одного вибраного виконання. Не змішуємо
   // фото різних кольорів чи видів полотна в один ряд мініатюр.
   const displayedGallery = usesActiveVariantGallery
