@@ -35,6 +35,9 @@ export function ProductMediaGallery({ product }: { product: Product }) {
   const [optionImage, setOptionImage] = useState<string | null>(null);
   const [activeVariant, setActiveVariant] = useState<ProductVariant | null>(null);
   const [activeOptionGroup, setActiveOptionGroup] = useState<string | null>(null);
+  // Клік по мініатюрі повинен лише змінювати головне фото. Він не має
+  // перемикати всю галерею на один точний варіант.
+  const [selectedFromThumbnail, setSelectedFromThumbnail] = useState(false);
   const activeGlassGallery = useMemo(() => {
     const glass = activeVariant?.selections.glass;
     if (!isGlassOnlyConfiguration || !glass) return [];
@@ -55,7 +58,7 @@ export function ProductMediaGallery({ product }: { product: Product }) {
       .map((item) => ({ ...item, label: item.label?.slice(prefix.length) || "Фото" }));
   }, [activeVariant, isGlassOnlyConfiguration, media]);
   const activeVariantGallery = activeConfigurationGallery.length ? activeConfigurationGallery : activeGlassGallery;
-  const usesActiveVariantGallery = activeVariantGallery.length > 0;
+  const usesActiveVariantGallery = !selectedFromThumbnail && activeVariantGallery.length > 0;
   // Відображаємо точні виконання під головним фото для кожної фабрики,
   // щойно виробник надав фото цих виконань. Це дає однаковий сценарій,
   // як у Rodos: мініатюра = вибір декору й головного фото.
@@ -93,6 +96,7 @@ export function ProductMediaGallery({ product }: { product: Product }) {
   const productImageAlt = `${product.category === "windows" ? "Вікна" : `${product.category === "entrance" ? "Вхідні" : "Міжкімнатні"} двері`} ${displayName}, колекція ${product.collection}`;
   const selectedImageAlt = selected.label ? `${productImageAlt} — ${selected.label}` : productImageAlt;
   const handleConfigurationImage = useCallback((image: string | null, variant: ProductVariant | null, changedGroup?: string) => {
+    setSelectedFromThumbnail(false);
     setOptionImage(image);
     setActiveVariant(variant);
     if (changedGroup) setActiveOptionGroup(changedGroup);
@@ -111,6 +115,7 @@ export function ProductMediaGallery({ product }: { product: Product }) {
   const selectConfigurationPhoto = (index: number) => {
     const variant = visualVariants[index];
     if (!variant) return;
+    setSelectedFromThumbnail(false);
     setOptionImage(variant.image);
     setActiveVariant(variant);
     setSelectedIndex(index);
@@ -120,6 +125,7 @@ export function ProductMediaGallery({ product }: { product: Product }) {
     const variantIndex = visualVariants.findIndex((variant) => imageStem(variant.image) === imageStem(item.image));
     if (variantIndex >= 0) {
       selectConfigurationPhoto(variantIndex);
+      if (usesVariantThumbnailGallery) setSelectedFromThumbnail(true);
       return;
     }
     setSelectedIndex(index);
