@@ -53,7 +53,7 @@ export const toCatalogCardProduct = (product: Product): CatalogCardProduct => {
   const description = product.description.replace(/\s+/g, " ").trim().slice(0, 280);
   return {
     slug: product.slug, category: product.category, brand: product.brand, collection: product.collection, name: product.name,
-    material: product.material, style: product.style, color: product.color, price: product.price, image: product.image, description,
+    material: product.material, style: product.style, color: product.color, price: product.price, image: catalogCardImage(product), description,
     highlights: catalogHighlights(product), decorOptions,
     keySpecs: [...(product.specs || [])].sort((left, right) => catalogSpecPriority(left.label) - catalogSpecPriority(right.label) || left.sortOrder - right.sortOrder).slice(0, 3),
     searchText: `${product.name} ${product.brand} ${product.collection} ${product.material} ${product.style} ${product.color} ${product.features.join(" ")} ${product.description.slice(0, 320)}`.toLowerCase(),
@@ -62,6 +62,14 @@ export const toCatalogCardProduct = (product: Product): CatalogCardProduct => {
 
 export type CatalogBrowseQuery = { category?: string; brand?: string; collection?: string; material?: string; style?: string; color?: string; priceRange?: string; search?: string; offset?: number; limit?: number };
 export type CatalogBrowseData = { products: CatalogCardProduct[]; total: number; catalogTotal: number; facets: { categories: string[]; brands: string[]; collections: string[]; materials: string[]; styles: string[]; colors: string[]; hasPrices: boolean } };
+
+// Картка в каталозі має показувати те саме виконання, з якого починається
+// конфігуратор. Головне фото товару лишається запасним для моделей без
+// підтверджених варіантів.
+export const catalogCardImage = (product: Pick<Product, "image" | "variants">) =>
+  [...(product.variants || [])]
+    .sort((left, right) => left.sortOrder - right.sortOrder)
+    .find((variant) => Boolean(variant.image))?.image || product.image;
 
 export async function getCatalogBrowseData(query: CatalogBrowseQuery = {}): Promise<CatalogBrowseData> {
   const all = await getProducts();
