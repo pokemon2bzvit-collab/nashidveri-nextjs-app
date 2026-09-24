@@ -27,6 +27,17 @@ export default async function EntranceBrandPage({ params }: { params: Promise<{ 
   const brand = getEntranceBrand((await params).brand);
   if (!brand) notFound();
   const products = (await getProducts()).filter((product) => product.brand === brand.name);
+  const collectionOrder = brand.name === "Abwehr"
+    ? ["Nova", "Classic Prime", "Megapolis", "Grand", "City", "Frame", "Bionica Combo", "Termix", "Defender"]
+    : [];
+  const collections = [...new Set(products.map((product) => product.collection))]
+    .filter((collection) => !(brand.name === "Abwehr" && ["Квартира", "Вулиця"].includes(collection)))
+    .sort((left, right) => {
+      const leftIndex = collectionOrder.indexOf(left);
+      const rightIndex = collectionOrder.indexOf(right);
+      if (leftIndex >= 0 || rightIndex >= 0) return (leftIndex >= 0 ? leftIndex : Number.MAX_SAFE_INTEGER) - (rightIndex >= 0 ? rightIndex : Number.MAX_SAFE_INTEGER);
+      return left.localeCompare(right, "uk");
+    });
 
   return (
     <SiteShell>
@@ -53,7 +64,7 @@ export default async function EntranceBrandPage({ params }: { params: Promise<{ 
             <p className="eyebrow">Каталог фабрики</p>
             <h2 className="mt-3 font-display text-4xl font-semibold tracking-[-.04em]">Колекції</h2>
             <div className="mt-7 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-              {brand.collections.map((collection) => {
+              {collections.map((collection) => {
                 const preview = products.find((product) => product.collection === collection);
                 return (
                   <Link key={collection} href={`/catalog?brand=${encodeURIComponent(brand.name)}&collection=${encodeURIComponent(collection)}`} className="group overflow-hidden rounded-2xl border bg-white transition hover:border-clay">
