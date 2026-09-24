@@ -1,4 +1,4 @@
-import { notFound } from "next/navigation";
+import { notFound, redirect } from "next/navigation";
 import Link from "next/link";
 import type { Metadata } from "next";
 import { ArrowLeft, ArrowUpRight } from "lucide-react";
@@ -26,6 +26,7 @@ export async function generateMetadata({ params }: { params: Promise<{ brand: st
 export default async function EntranceBrandPage({ params }: { params: Promise<{ brand: string }> }) {
   const brand = getEntranceBrand((await params).brand);
   if (!brand) notFound();
+  if (brand.name === "Страж") redirect(`/catalog?brand=${encodeURIComponent(brand.name)}`);
   const products = (await getProducts()).filter((product) => product.brand === brand.name);
   const collectionOrder = brand.name === "Abwehr"
     ? ["Nova", "Classic Prime", "Megapolis", "Grand", "City", "Frame", "Bionica Combo", "Termix", "Defender"]
