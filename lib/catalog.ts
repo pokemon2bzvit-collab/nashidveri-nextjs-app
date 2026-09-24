@@ -93,8 +93,12 @@ export async function getCatalogBrowseData(query: CatalogBrowseQuery = {}): Prom
   const offset = Math.max(0, query.offset || 0);
   const limit = Math.min(48, Math.max(1, query.limit || 24));
   const unique = (items: string[]) => [...new Set(items)].filter(Boolean);
+  // Не підвантажуємо палітри й усі характеристики для всього каталогу.
+  // За великої кількості моделей це перевантажує Supabase та може віддати 504.
+  // Дані конфігуратора потрібні лише карткам на поточній сторінці.
+  const pageProducts = await withCatalogCardExtras(filtered.slice(offset, offset + limit));
   return {
-    products: filtered.slice(offset, offset + limit).map(toCatalogCardProduct), total: filtered.length, catalogTotal: all.length,
+    products: pageProducts.map(toCatalogCardProduct), total: filtered.length, catalogTotal: all.length,
     facets: { categories: unique(all.map((product) => product.category)), brands: unique(categoryProducts.map((product) => product.brand)), collections: unique(brandProducts.map((product) => product.collection)), materials: unique(brandProducts.map((product) => product.material)), styles: unique(brandProducts.map((product) => product.style)), colors: unique(brandProducts.map((product) => product.color)), hasPrices: all.some((product) => priceValue(product.price) !== null) },
   };
 }
@@ -201,21 +205,16 @@ async function getProductExtras(slug: string) {
   return { media, options, variants, specs };
 }
 
-export async function getProducts(): Promise<Product[]> {
-  if (!supabaseKey) return sortProductsByName(products.map((product) => withGeneratedDescription({ ...product, image: catalogImageUrl(product.image) })));
+async function withCatalogCardExtras(items: Product[]): Promise<Product[]> {
+  if (!supabaseKey || !items.length) return items;
+  const headers = { apikey: supabaseKey, Authorization: `Bearer ${supabaseKey}` };
+  const productFilter = `product_slug=in.(${items.map((item) => encodeURIComponent(item.slug)).join(",")})`;
   try {
-    const headers = { apikey: supabaseKey, Authorization: `Bearer ${supabaseKey}` };
-    // Дані для карток отримуємо пакетними запитами, а не окремим
-    // запитом до кожної моделі. Так каталог лишається швидким, але картки
-    // можуть чесно показати лише декори з підтвердженим фото.
-    const [productsResponse, optionsResponse, variantsResponse, specsResponse] = await Promise.all([
-      fetch(`${supabaseUrl}/rest/v1/products?select=slug,category,brand,collection,name,material,style,color,price,description,features,image_path&is_available=eq.true&order=name.asc`, { headers, next: { revalidate: 300 } }),
-      fetch(`${supabaseUrl}/rest/v1/product_options?select=product_slug,option_group,group_label,label,swatch,image_path,sort_order&is_active=eq.true&order=sort_order.asc`, { headers, next: { revalidate: 300 } }),
-      fetch(`${supabaseUrl}/rest/v1/product_variants?select=product_slug,selections,image_path,sort_order&is_active=eq.true&order=sort_order.asc`, { headers, next: { revalidate: 300 } }),
-      fetch(`${supabaseUrl}/rest/v1/product_specs?select=product_slug,label,value,sort_order&is_active=eq.true&order=sort_order.asc`, { headers, next: { revalidate: 300 } }),
+    const [optionsResponse, variantsResponse, specsResponse] = await Promise.all([
+      fetch(`${supabaseUrl}/rest/v1/product_options?select=product_slug,option_group,group_label,label,swatch,image_path,sort_order&is_active=eq.true&${productFilter}&order=sort_order.asc`, { headers, next: { revalidate: 300 } }),
+      fetch(`${supabaseUrl}/rest/v1/product_variants?select=product_slug,selections,image_path,sort_order&is_active=eq.true&${productFilter}&order=sort_order.asc`, { headers, next: { revalidate: 300 } }),
+      fetch(`${supabaseUrl}/rest/v1/product_specs?select=product_slug,label,value,sort_order&is_active=eq.true&${productFilter}&order=sort_order.asc`, { headers, next: { revalidate: 300 } }),
     ]);
-    if (!productsResponse.ok) throw new Error(`Supabase returned ${productsResponse.status}`);
-    const rows = await productsResponse.json() as ProductRow[];
     const optionRows = optionsResponse.ok ? await optionsResponse.json() as ProductOptionRow[] : [];
     const variantRows = variantsResponse.ok ? await variantsResponse.json() as ProductVariantRow[] : [];
     const specRows = specsResponse.ok ? await specsResponse.json() as ProductSpecRow[] : [];
@@ -225,7 +224,29 @@ export async function getProducts(): Promise<Product[]> {
     optionRows.forEach((option) => optionsByProduct.set(option.product_slug, [...(optionsByProduct.get(option.product_slug) || []), mapOption(option)]));
     variantRows.forEach((variant) => variantsByProduct.set(variant.product_slug, [...(variantsByProduct.get(variant.product_slug) || []), mapVariant(variant)]));
     specRows.forEach((spec) => specsByProduct.set(spec.product_slug, [...(specsByProduct.get(spec.product_slug) || []), mapSpec(spec)]));
-    return sortProductsByName(rows.map((row) => withGeneratedDescription({ ...mapProduct(row), options: optionsByProduct.get(row.slug) || [], variants: variantsByProduct.get(row.slug) || [], specs: specsByProduct.get(row.slug) || [] })));
+    return items.map((item) => withGeneratedDescription({
+      ...item,
+      options: optionsByProduct.get(item.slug) || [],
+      variants: variantsByProduct.get(item.slug) || [],
+      specs: specsByProduct.get(item.slug) || [],
+    }));
+  } catch (error) {
+    console.error("Could not load catalog card extras from Supabase", error);
+    return items;
+  }
+}
+
+export async function getProducts(): Promise<Product[]> {
+  if (!supabaseKey) return sortProductsByName(products.map((product) => withGeneratedDescription({ ...product, image: catalogImageUrl(product.image) })));
+  try {
+    const headers = { apikey: supabaseKey, Authorization: `Bearer ${supabaseKey}` };
+    // Цей список також живить sitemap і сторінки фабрик. Тут достатньо
+    // основних даних товару; опції та характеристики підвантажуються
+    // адресно для 24 карток каталогу або для відкритої картки товару.
+    const productsResponse = await fetch(`${supabaseUrl}/rest/v1/products?select=slug,category,brand,collection,name,material,style,color,price,description,features,image_path&is_available=eq.true&order=name.asc`, { headers, next: { revalidate: 300 } });
+    if (!productsResponse.ok) throw new Error(`Supabase returned ${productsResponse.status}`);
+    const rows = await productsResponse.json() as ProductRow[];
+    return sortProductsByName(rows.map((row) => withGeneratedDescription(mapProduct(row))));
   } catch (error) {
     console.error("Could not load catalog from Supabase", error);
     return sortProductsByName(products.map((product) => withGeneratedDescription({ ...product, image: catalogImageUrl(product.image) })));
