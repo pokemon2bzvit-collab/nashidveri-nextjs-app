@@ -6,7 +6,7 @@ export type ProductMedia = { kind: "main" | "gallery" | "palette"; label: string
 export type ProductOption = { group: "color" | "finish" | "glass" | "edge" | "configuration" | "series" | "size"; groupLabel: string; label: string; swatch: string | null; image: string | null; sortOrder: number };
 export type ProductVariant = { selections: Record<string, string>; image: string; sortOrder: number };
 export type ProductSpec = { label: string; value: string; sortOrder: number };
-export type Product = { slug: string; category: Category; brand: string; collection: string; name: string; material: string; style: string; color: string; price: string; description: string; features: string[]; image: string; media?: ProductMedia[]; options?: ProductOption[]; variants?: ProductVariant[]; specs?: ProductSpec[] };
+export type Product = { slug: string; category: Category; brand: string; collection: string; name: string; material: string; style: string; color: string; price: string; description: string; features: string[]; image: string; sourceUrl?: string; media?: ProductMedia[]; options?: ProductOption[]; variants?: ProductVariant[]; specs?: ProductSpec[] };
 export type CatalogDecorOption = Pick<ProductOption, "group" | "label" | "swatch" | "image">;
 export type CatalogCardProduct = Pick<Product, "slug" | "category" | "brand" | "collection" | "name" | "material" | "style" | "color" | "price" | "description" | "image"> & { highlights: string[]; decorOptions: CatalogDecorOption[]; keySpecs: ProductSpec[]; searchText: string };
 
@@ -127,6 +127,7 @@ type ProductMediaRow = { product_slug: string; kind: ProductMedia["kind"]; label
 type ProductOptionRow = { product_slug: string; option_group: ProductOption["group"]; group_label: string; label: string; swatch: string | null; image_path: string | null; sort_order: number };
 type ProductVariantRow = { product_slug: string; selections: Record<string, string>; image_path: string; sort_order: number };
 type ProductSpecRow = { product_slug: string; label: string; value: string; sort_order: number };
+type ProductSourceRow = { source_url: string };
 const supabaseUrl = (process.env.NEXT_PUBLIC_SUPABASE_URL || "https://vfdfvqlvxkwgizauxusm.supabase.co").replace(/\/$/, "");
 const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
 
@@ -187,22 +188,24 @@ const withGeneratedDescription = (product: Product): Product => {
 };
 
 async function getProductExtras(slug: string) {
-  if (!supabaseKey) return { media: [] as ProductMedia[], options: [] as ProductOption[], variants: [] as ProductVariant[], specs: [] as ProductSpec[] };
+  if (!supabaseKey) return { media: [] as ProductMedia[], options: [] as ProductOption[], variants: [] as ProductVariant[], specs: [] as ProductSpec[], sourceUrl: undefined as string | undefined };
   const filter = `product_slug=eq.${encodeURIComponent(slug)}`;
   const headers = { apikey: supabaseKey, Authorization: `Bearer ${supabaseKey}` };
-  const [mediaResponse, optionsResponse, variantsResponse, specsResponse] = await Promise.all([
+  const [mediaResponse, optionsResponse, variantsResponse, specsResponse, sourcesResponse] = await Promise.all([
     // Кеш на хвилину помітно прискорює перше відкриття картки. Зміни з адмінки
     // потрапляють на сайт максимум через 60 секунд.
     fetch(`${supabaseUrl}/rest/v1/product_media?select=product_slug,kind,label,image_path,sort_order&is_active=eq.true&${filter}&order=sort_order.asc`, { headers, next: { revalidate: 60 } }),
     fetch(`${supabaseUrl}/rest/v1/product_options?select=product_slug,option_group,group_label,label,swatch,image_path,sort_order&is_active=eq.true&${filter}&order=sort_order.asc`, { headers, next: { revalidate: 60 } }),
     fetch(`${supabaseUrl}/rest/v1/product_variants?select=product_slug,selections,image_path,sort_order&is_active=eq.true&${filter}&order=sort_order.asc`, { headers, next: { revalidate: 60 } }),
     fetch(`${supabaseUrl}/rest/v1/product_specs?select=product_slug,label,value,sort_order&is_active=eq.true&${filter}&order=sort_order.asc`, { headers, next: { revalidate: 60 } }),
+    fetch(`${supabaseUrl}/rest/v1/product_sources?select=source_url&verification_status=eq.verified&${filter}&order=verified_at.desc&limit=1`, { headers, next: { revalidate: 60 } }),
   ]);
   const media = mediaResponse.ok ? (await mediaResponse.json() as ProductMediaRow[]).map(mapMedia) : [];
   const options = optionsResponse.ok ? (await optionsResponse.json() as ProductOptionRow[]).map(mapOption) : [];
   const variants = variantsResponse.ok ? (await variantsResponse.json() as ProductVariantRow[]).map(mapVariant) : [];
   const specs = specsResponse.ok ? (await specsResponse.json() as ProductSpecRow[]).map(mapSpec) : [];
-  return { media, options, variants, specs };
+  const sources = sourcesResponse.ok ? await sourcesResponse.json() as ProductSourceRow[] : [];
+  return { media, options, variants, specs, sourceUrl: sources[0]?.source_url };
 }
 
 async function withCatalogCardExtras(items: Product[]): Promise<Product[]> {
@@ -323,9 +326,9 @@ export async function getProduct(slug: string) {
   if (!product) product = products.find((item) => item.slug === slug);
   if (!product) return undefined;
   try {
-    const { media, options, variants, specs } = await getProductExtras(slug);
+    const { media, options, variants, specs, sourceUrl } = await getProductExtras(slug);
     const mainImage = media.find((item) => item.kind === "main");
-    return withGeneratedDescription({ ...product, image: mainImage?.image || product.image, media, options, variants, specs });
+    return withGeneratedDescription({ ...product, image: mainImage?.image || product.image, sourceUrl, media, options, variants, specs });
   } catch (error) {
     console.error(`Could not load product configuration for ${slug}`, error);
     return product;
