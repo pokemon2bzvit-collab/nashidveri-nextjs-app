@@ -1,0 +1,37 @@
+-- Публікація перевірених офіційних моделей Magda 140, 141 і 143.
+
+begin;
+
+do $$
+declare
+  ready_count integer;
+begin
+  select count(*) into ready_count
+  from public.products p
+  where p.slug in ('magda-140-official', 'magda-141-official', 'magda-143-official')
+    and p.is_available = false
+    and exists (
+      select 1 from public.product_sources s
+      where s.product_slug = p.slug and s.verification_status = 'verified'
+    )
+    and exists (
+      select 1 from public.product_media m
+      where m.product_slug = p.slug and m.kind = 'gallery' and m.is_active
+    );
+
+  if ready_count <> 3 then
+    raise exception 'Очікувалось 3 готові чернетки Magda, знайдено % — каталог не змінено', ready_count;
+  end if;
+end $$;
+
+update public.products
+set is_available = true, updated_at = now()
+where slug in ('magda-140-official', 'magda-141-official', 'magda-143-official')
+  and is_available = false;
+
+commit;
+
+select p.slug, p.name as "модель", p.collection as "колекція", p.is_available as "опубліковано"
+from public.products p
+where p.slug in ('magda-140-official', 'magda-141-official', 'magda-143-official')
+order by p.name;
