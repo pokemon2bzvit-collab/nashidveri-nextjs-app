@@ -20,7 +20,7 @@ export function ImageLightbox({ src, alt, className = "", imageClassName = "", m
 
   const openViewer = () => { if (!mobileOnly || window.matchMedia("(max-width: 767px)").matches) setOpen(true); };
   return <>
-    <button type="button" aria-label={`Збільшити фото: ${alt}`} onClick={openViewer} className={`group relative block overflow-hidden ${mobileOnly ? "cursor-zoom-in md:cursor-default" : "cursor-zoom-in"} ${className}`}>
+    <button type="button" aria-label={`Збільшити фото: ${alt}`} onClick={openViewer} className={`group relative block overflow-hidden ${className}`}>
       <img loading="lazy" src={src} alt={alt} className={imageClassName} />
     </button>
     {open && <div role="dialog" aria-modal="true" aria-label={`Перегляд фото: ${alt}`} className="lightbox-backdrop fixed inset-0 z-[100] flex items-center justify-center bg-black/75 p-3 sm:bg-black/90 sm:p-6" onClick={() => setOpen(false)}>
