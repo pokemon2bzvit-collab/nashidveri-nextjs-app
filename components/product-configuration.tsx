@@ -46,6 +46,17 @@ export function ProductConfiguration({ options, variants, onImageChange, activeV
   }) && visualVariants.every((variant) => groups.every((group) => Boolean(variant.selections[group[0].group])));
   const usesInstantConfiguration = hasCompleteVariantCoverage || isConfigurationProduct;
   const configurationNoun = isGlassOnly ? "скло" : isConfigurationProduct ? "комплектацію" : "декор";
+  const hasSeriesSelection = groups.some((group) => group[0]?.group === "series");
+  const hasSizeSelection = groups.some((group) => group[0]?.group === "size");
+  const configurationPrompt = isRodosSteel
+    ? hasSeriesSelection && hasSizeSelection
+      ? "Оберіть серію та розмір дверного блоку — вибір буде передано менеджеру разом із заявкою."
+      : hasSizeSelection
+        ? "Оберіть розмір дверного блоку — вибір буде передано менеджеру разом із заявкою."
+        : hasSeriesSelection
+          ? "Оберіть серію комплектації — вибір буде передано менеджеру разом із заявкою."
+          : "Оберіть доступну комплектацію — вибір буде передано менеджеру разом із заявкою."
+    : "Оберіть заводську комплектацію — вибір буде передано менеджеру разом із заявкою.";
   const [selected, setSelected] = useState<Record<string, number>>({});
   const [draftSelected, setDraftSelected] = useState<Record<string, number>>({});
   const [isOpen, setIsOpen] = useState(false);
@@ -155,14 +166,14 @@ export function ProductConfiguration({ options, variants, onImageChange, activeV
 
   return <details className="mt-4 group">
     <summary className="flex cursor-pointer list-none items-center justify-between rounded-xl border border-stone-200 bg-white px-4 py-3 text-sm font-bold text-ink transition hover:border-clay [&::-webkit-details-marker]:hidden">
-      <span className="flex items-center gap-2"><Palette size={17} className="text-clay" /> Декори та скло</span>
+      <span className="flex items-center gap-2"><Palette size={17} className="text-clay" /> {isConfigurationProduct ? "Комплектація дверей" : "Декори та скло"}</span>
       <ChevronRight size={17} className="text-clay transition group-open:rotate-90" />
     </summary>
     <section className="mt-3 rounded-2xl border border-stone-200 bg-white p-4 shadow-sm sm:p-5">
     <div className="flex items-start justify-between gap-3">
       <div>
-        <div className="flex items-center gap-2 text-sm font-bold text-ink"><Palette size={17} className="text-clay" /> {isGlassOnly ? "Варіант скла" : isConfigurationProduct ? "Комплектація дверей" : "Декор і комплектація"}</div>
-        <p className="mt-1 text-xs leading-5 text-stone-500">{isGlassOnly ? "Оберіть виконання скла — фото зміниться одразу." : isRodosSteel ? "Оберіть серію та розмір — вибір буде передано менеджеру разом із заявкою." : isStrazh ? "Оберіть заводську комплектацію — вибір буде передано менеджеру разом із заявкою." : "Оберіть доступний декор або скло — головне фото зміниться одразу."}</p>
+        <div className="flex items-center gap-2 text-sm font-bold text-ink"><Palette size={17} className="text-clay" /> {isGlassOnly ? "Варіант скла" : isConfigurationProduct ? "Підбір комплектації" : "Декор і комплектація"}</div>
+        <p className="mt-1 text-xs leading-5 text-stone-500">{isGlassOnly ? "Оберіть виконання скла — фото зміниться одразу." : isConfigurationProduct ? configurationPrompt : "Оберіть доступний декор або скло — головне фото зміниться одразу."}</p>
       </div>
       <span className="rounded-full bg-sand px-2.5 py-1 text-[11px] font-bold text-stone-600">{isConfigurationProduct ? "Підбір" : `${visualVariants.length} з фото`}</span>
     </div>
