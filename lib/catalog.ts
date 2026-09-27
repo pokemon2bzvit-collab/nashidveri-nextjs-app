@@ -243,9 +243,21 @@ export async function getProducts(): Promise<Product[]> {
     // Цей список також живить sitemap і сторінки фабрик. Тут достатньо
     // основних даних товару; опції та характеристики підвантажуються
     // адресно для 24 карток каталогу або для відкритої картки товару.
-    const productsResponse = await fetch(`${supabaseUrl}/rest/v1/products?select=slug,category,brand,collection,name,material,style,color,price,description,features,image_path&is_available=eq.true&order=name.asc`, { headers, next: { revalidate: 300 } });
-    if (!productsResponse.ok) throw new Error(`Supabase returned ${productsResponse.status}`);
-    const rows = await productsResponse.json() as ProductRow[];
+    // PostgREST віддає не більше 1000 рядків за один запит. Каталог уже
+    // більший, тому зчитуємо наступні сторінки, інакше частина фабрик може
+    // зникнути з фільтрів та сторінок колекцій.
+    const pageSize = 1000;
+    const rows: ProductRow[] = [];
+    for (let from = 0; ; from += pageSize) {
+      const productsResponse = await fetch(`${supabaseUrl}/rest/v1/products?select=slug,category,brand,collection,name,material,style,color,price,description,features,image_path&is_available=eq.true&order=name.asc`, {
+        headers: { ...headers, Range: `${from}-${from + pageSize - 1}` },
+        next: { revalidate: 300 },
+      });
+      if (!productsResponse.ok) throw new Error(`Supabase returned ${productsResponse.status}`);
+      const page = await productsResponse.json() as ProductRow[];
+      rows.push(...page);
+      if (page.length < pageSize) break;
+    }
     return sortProductsByName(rows.map((row) => withGeneratedDescription(mapProduct(row))));
   } catch (error) {
     console.error("Could not load catalog from Supabase", error);
