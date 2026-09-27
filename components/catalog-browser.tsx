@@ -1,6 +1,6 @@
 "use client";
 
-import { Phone, Ruler, Search, SlidersHorizontal, X } from "lucide-react";
+import { ChevronDown, Phone, Ruler, Search, SlidersHorizontal, X } from "lucide-react";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { ProductGrid } from "./product-grid";
@@ -21,6 +21,7 @@ export function CatalogBrowser({ initialData, initialCategory = "all", initialQu
   const [priceRange, setPriceRange] = useState("all");
   const [query, setQuery] = useState(initialQuery);
   const [filtersOpen, setFiltersOpen] = useState(false);
+  const [advancedOpen, setAdvancedOpen] = useState(false);
   const [loading, setLoading] = useState(false);
 
   const categoryFilters = [{ id: "all", label: "Усі моделі" }, ...Object.entries(categories).filter(([id]) => data.facets.categories.includes(id)).map(([id, item]) => ({ id, label: item.title }))];
@@ -33,6 +34,7 @@ export function CatalogBrowser({ initialData, initialCategory = "all", initialQu
   const styleDuplicatesCollections = styles.length > 0 && styles.every((item) => availableCollections.includes(item.replace(/^Колекція\s+/i, "")));
   const hasPrices = data.facets.hasPrices;
   const result = data.products;
+  const hasAdvancedFilters = material !== "all" || style !== "all" || color !== "all" || priceRange !== "all";
 
   useEffect(() => { const controller = new AbortController(); const params = new URLSearchParams({ category, brand, collection, material, style, color, priceRange, search: query, limit: String(PAGE_SIZE) }); setLoading(true); fetch(`/api/catalog?${params}`, { signal: controller.signal }).then((response) => response.json()).then((next) => setData(next)).catch(() => undefined).finally(() => setLoading(false)); return () => controller.abort(); }, [category, brand, collection, material, style, color, priceRange, query]);
   const visibleProducts = result;
@@ -55,11 +57,8 @@ export function CatalogBrowser({ initialData, initialCategory = "all", initialQu
       <div className="flex items-center justify-between"><p className="flex items-center gap-2 text-sm font-bold"><SlidersHorizontal size={17} className="text-clay" /> Фільтри</p><div className="flex items-center gap-3">{active && <button onClick={reset} className="text-xs font-bold text-clay hover:underline">Очистити</button>}<button aria-label="Закрити фільтри" className="lg:hidden" onClick={() => setFiltersOpen(false)}><X size={19} /></button></div></div>
       <FilterGroup title="Категорія">{categoryFilters.map((filter) => <FilterButton key={filter.id} selected={category === filter.id} onClick={() => { setCategory(filter.id); setBrand("all"); setCollection("all"); setMaterial("all"); setStyle("all"); setColor("all"); }}>{filter.label}</FilterButton>)}</FilterGroup>
       {availableBrands.length > 1 && <FilterGroup title="Фабрика">{availableBrands.map((item) => <FilterButton key={item} selected={brand === item} onClick={() => { setBrand(brand === item ? "all" : item); setCollection("all"); }}>{item}</FilterButton>)}</FilterGroup>}
-      {availableCollections.length > 1 && <FilterGroup title="Колекція">{availableCollections.map((item) => <FilterButton key={item} selected={collection === item} onClick={() => setCollection(collection === item ? "all" : item)}>{item}</FilterButton>)}</FilterGroup>}
-      {materials.length > 1 && !materialDuplicatesCategory && <FilterGroup title="Матеріал">{materials.map((item) => <FilterButton key={item} selected={material === item} onClick={() => setMaterial(material === item ? "all" : item)}>{item}</FilterButton>)}</FilterGroup>}
-      {styles.length > 1 && !styleDuplicatesCollections && <FilterGroup title="Стиль / призначення">{styles.map((item) => <FilterButton key={item} selected={style === item} onClick={() => setStyle(style === item ? "all" : item)}>{item}</FilterButton>)}</FilterGroup>}
-      {colors.length > 1 && <FilterGroup title="Колір">{colors.map((item) => <FilterButton key={item} selected={color === item} onClick={() => setColor(color === item ? "all" : item)}>{item}</FilterButton>)}</FilterGroup>}
-      {hasPrices && <FilterGroup title="Ціновий діапазон">{priceRanges.map((item) => <FilterButton key={item.id} selected={priceRange === item.id} onClick={() => setPriceRange(priceRange === item.id ? "all" : item.id)}>{item.label}</FilterButton>)}</FilterGroup>}
+      {(brand !== "all" || collection !== "all") && availableCollections.length > 1 && <FilterGroup title="Колекція">{availableCollections.map((item) => <FilterButton key={item} selected={collection === item} onClick={() => setCollection(collection === item ? "all" : item)}>{item}</FilterButton>)}</FilterGroup>}
+      {(materials.length > 1 || styles.length > 1 || colors.length > 1 || hasPrices) && <div className="mt-6 border-t pt-5"><button type="button" className="flex w-full items-center justify-between text-left text-xs font-bold uppercase tracking-[.12em] text-stone-500" onClick={() => setAdvancedOpen((current) => !current)} aria-expanded={advancedOpen || hasAdvancedFilters}>Додаткові фільтри <ChevronDown size={16} className={(advancedOpen || hasAdvancedFilters) ? "rotate-180 transition-transform" : "transition-transform"} /></button>{(advancedOpen || hasAdvancedFilters) && <div><p className="mt-2 text-xs leading-5 text-stone-500">Матеріал, стиль, колір і ціна — якщо вже знаєте точні побажання.</p>{materials.length > 1 && !materialDuplicatesCategory && <FilterGroup title="Матеріал">{materials.map((item) => <FilterButton key={item} selected={material === item} onClick={() => setMaterial(material === item ? "all" : item)}>{item}</FilterButton>)}</FilterGroup>}{styles.length > 1 && !styleDuplicatesCollections && <FilterGroup title="Стиль / призначення">{styles.map((item) => <FilterButton key={item} selected={style === item} onClick={() => setStyle(style === item ? "all" : item)}>{item}</FilterButton>)}</FilterGroup>}{colors.length > 1 && <FilterGroup title="Колір">{colors.map((item) => <FilterButton key={item} selected={color === item} onClick={() => setColor(color === item ? "all" : item)}>{item}</FilterButton>)}</FilterGroup>}{hasPrices && <FilterGroup title="Ціновий діапазон">{priceRanges.map((item) => <FilterButton key={item.id} selected={priceRange === item.id} onClick={() => setPriceRange(priceRange === item.id ? "all" : item.id)}>{item.label}</FilterButton>)}</FilterGroup>}</div>}</div>}
       <button className="button-primary mt-7 w-full lg:hidden" onClick={() => setFiltersOpen(false)}>Показати {result.length} моделей</button>
     </aside>
     <div>

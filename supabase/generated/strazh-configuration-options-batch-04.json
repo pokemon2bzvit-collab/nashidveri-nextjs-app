@@ -1,0 +1,318 @@
+{
+  "batch": 4,
+  "records": [
+    {
+      "url": "https://straj.ua/product/galaxy",
+      "name": "Galaxy",
+      "image": "https://straj.ua/assets/product/0x500/500_1051237434.jpg",
+      "collection": "Офіційний каталог — перевірити",
+      "options": [
+        "Lux Securemme",
+        "Lux Mottura",
+        "Lux Prestige",
+        "Premium Rotor",
+        "Premium MyKey",
+        "Premium 3D Key"
+      ]
+    },
+    {
+      "url": "https://straj.ua/product/galicia_spline",
+      "name": "Galicia Spline",
+      "image": "https://straj.ua/assets/product/0x500/94_699276330.png",
+      "collection": "Офіційний каталог — перевірити",
+      "options": [
+        "Lux Securemme",
+        "Lux Mottura",
+        "Lux Prestige",
+        "Premium Rotor",
+        "Premium MyKey",
+        "Premium 3D Key"
+      ]
+    },
+    {
+      "url": "https://straj.ua/product/gardena_proof",
+      "name": "Gardena",
+      "image": "https://straj.ua/assets/product/0x500/273_3490281010.jpg",
+      "dimensions": "870х2050 / 970х2050",
+      "thickness": "85мм",
+      "collection": "Офіційний каталог — перевірити",
+      "options": [
+        "PF Securemme",
+        "PF Mottura",
+        "PF Prestige"
+      ]
+    },
+    {
+      "url": "https://straj.ua/product/gardena_f_glass",
+      "name": "Gardena F Glass",
+      "image": "https://straj.ua/assets/product/0x500/522_4250196517.jpg",
+      "dimensions": "870х2050 / 970х2050",
+      "thickness": "85мм",
+      "collection": "Офіційний каталог — перевірити",
+      "options": [
+        "PF Securemme",
+        "PF Mottura",
+        "PF Prestige"
+      ]
+    },
+    {
+      "url": "https://straj.ua/product/giada_a_glass",
+      "name": "Giada A Glass",
+      "image": "https://straj.ua/assets/product/0x500/588_4043850982.jpg",
+      "dimensions": "870х2050 / 970х2050",
+      "thickness": "85мм",
+      "collection": "Офіційний каталог — перевірити",
+      "options": [
+        "PF Securemme",
+        "PF Mottura",
+        "PF Prestige"
+      ]
+    },
+    {
+      "url": "https://straj.ua/product/giada_d_sk",
+      "name": "Giada D",
+      "image": "https://straj.ua/assets/product/0x500/587_2187697636.png",
+      "dimensions": "870х2050 / 970х2050",
+      "thickness": "85мм",
+      "collection": "Офіційний каталог — перевірити",
+      "options": [
+        "PF Securemme",
+        "PF Mottura",
+        "PF Prestige"
+      ]
+    },
+    {
+      "url": "https://straj.ua/product/giada_e",
+      "name": "Giada E",
+      "image": "https://straj.ua/assets/product/0x500/372_3200892136.jpg",
+      "dimensions": "870х2050 / 970х2050",
+      "thickness": "85мм",
+      "collection": "Офіційний каталог — перевірити",
+      "options": [
+        "PF Securemme",
+        "PF Mottura",
+        "PF Prestige"
+      ]
+    },
+    {
+      "url": "https://straj.ua/product/grand_5",
+      "name": "Grand",
+      "image": "https://straj.ua/assets/product/0x500/507_4089038014.jpg",
+      "collection": "Офіційний каталог — перевірити",
+      "options": [
+        "Optima",
+        "Standard Kale",
+        "Berez Lux",
+        "Premium"
+      ]
+    },
+    {
+      "url": "https://straj.ua/product/grattel_glass",
+      "name": "Grattel Glass",
+      "image": "https://straj.ua/assets/product/0x500/331_4021898149.png",
+      "collection": "Офіційний каталог — перевірити",
+      "options": [
+        "Lux Securemme",
+        "Lux Mottura",
+        "Lux Prestige",
+        "Premium Rotor",
+        "Premium MyKey",
+        "Premium 3D Key"
+      ]
+    },
+    {
+      "url": "https://straj.ua/product/gravita",
+      "name": "Gravita",
+      "image": "https://straj.ua/assets/product/0x500/495_1442534206.jpg",
+      "collection": "Офіційний каталог — перевірити",
+      "options": [
+        "Optima",
+        "Standard Kale",
+        "Berez Lux",
+        "Premium"
+      ]
+    },
+    {
+      "url": "https://straj.ua/product/hardy_15",
+      "name": "HARDY 1.5",
+      "image": "https://straj.ua/assets/product/0x500/824_3677644469.png",
+      "dimensions": "1220x2050 Дверний короб 130мм виготовлений з нержавіючої сталі AISI 430 1,8 мм має посилену планку захисту замкових ригелів та регульований",
+      "collection": "Офіційний каталог — перевірити",
+      "options": [
+        "PF Standard Securemme",
+        "PF Standard Mottura",
+        "PF Prestige"
+      ]
+    },
+    {
+      "url": "https://straj.ua/product/hola",
+      "name": "Hola",
+      "image": "https://straj.ua/assets/product/0x500/290_830094369.jpg",
+      "collection": "Офіційний каталог — перевірити",
+      "options": [
+        "Lux Securemme",
+        "Lux Mottura",
+        "Lux Prestige",
+        "Premium Rotor",
+        "Premium MyKey",
+        "Premium 3D Key"
+      ]
+    },
+    {
+      "url": "https://straj.ua/product/hrd_15_alfa_285____rio",
+      "name": "HRD 1.5 Alfa(285) / Rio",
+      "image": "https://straj.ua/assets/product/0x500/825_4172630851.png",
+      "dimensions": "1220x2050 Дверний короб 130мм виготовлений з нержавіючої сталі AISI 430 1,8 мм має посилену планку захисту замкових ригелів та регульований",
+      "collection": "Офіційний каталог — перевірити",
+      "options": [
+        "PF Standard Securemme",
+        "PF Standard Mottura",
+        "PF Prestige"
+      ]
+    },
+    {
+      "url": "https://straj.ua/product/hrd_15_rio_s___rio",
+      "name": "HRD 1.5 Rio S / Rio",
+      "image": "https://straj.ua/assets/product/0x500/823_2984142478.png",
+      "dimensions": "1220x2050 Дверний короб 130мм виготовлений з нержавіючої сталі AISI 430 1,8 мм має посилену планку захисту замкових ригелів та регульований",
+      "collection": "Офіційний каталог — перевірити",
+      "options": [
+        "PF Standard Securemme",
+        "PF Standard Mottura",
+        "PF Prestige"
+      ]
+    },
+    {
+      "url": "https://straj.ua/product/hrd_15_rio_s_loft___rio",
+      "name": "HRD 1.5 Rio S Loft / Rio",
+      "image": "https://straj.ua/assets/product/0x500/827_1201847373.jpg",
+      "dimensions": "1220x2050 Дверний короб 130мм виготовлений з нержавіючої сталі AISI 430 1,8 мм має посилену планку захисту замкових ригелів та регульований",
+      "collection": "Офіційний каталог — перевірити",
+      "options": [
+        "PF Standard Securemme",
+        "PF Standard Mottura",
+        "PF Prestige"
+      ]
+    },
+    {
+      "url": "https://straj.ua/product/hrd_15_s_loft___rio",
+      "name": "HRD 1.5 S Loft / Rio",
+      "image": "https://straj.ua/assets/product/0x500/828_1895594704.png",
+      "dimensions": "1220x2050 Дверний короб 130мм виготовлений з нержавіючої сталі AISI 430 1,8 мм має посилену планку захисту замкових ригелів та регульований",
+      "collection": "Офіційний каталог — перевірити",
+      "options": [
+        "PF Standard Securemme",
+        "PF Standard Mottura",
+        "PF Prestige"
+      ]
+    },
+    {
+      "url": "https://straj.ua/product/hrd_15_slim_s___slim",
+      "name": "HRD 1.5 Slim S / Slim",
+      "image": "https://straj.ua/assets/product/0x500/826_4232096360.png",
+      "dimensions": "1220x2050 Дверний короб 130мм виготовлений з нержавіючої сталі AISI 430 1,8 мм має посилену планку захисту замкових ригелів та регульований",
+      "collection": "Офіційний каталог — перевірити",
+      "options": [
+        "PF Standard Securemme",
+        "PF Standard Mottura",
+        "PF Prestige"
+      ]
+    },
+    {
+      "url": "https://straj.ua/product/hrd_alfa__285_",
+      "name": "HRD Alfa (285)",
+      "image": "https://straj.ua/assets/product/0x500/812_3893725896.png",
+      "dimensions": "870х2050 / 970х2050 Дверний короб 130мм виготовлений з нержавіючої сталі AISI 430 1,8 мм має посилену планку захисту замкових ригелів та рег",
+      "collection": "Офіційний каталог — перевірити",
+      "options": [
+        "PF Securemme",
+        "PF Mottura",
+        "PF Prestige"
+      ]
+    },
+    {
+      "url": "https://straj.ua/product/hrd_bolonia__285_",
+      "name": "HRD Bolonia (285)",
+      "image": "https://straj.ua/assets/product/0x500/811_3564873894.jpg",
+      "dimensions": "870х2050 / 970х2050 Дверний короб 130мм виготовлений з нержавіючої сталі AISI 430 1,8 мм має посилену планку захисту замкових ригелів та рег",
+      "collection": "Офіційний каталог — перевірити",
+      "options": [
+        "PF Securemme",
+        "PF Mottura",
+        "PF Prestige"
+      ]
+    },
+    {
+      "url": "https://straj.ua/product/hrd_calibri__385_",
+      "name": "HRD Calibri (385)",
+      "image": "https://straj.ua/assets/product/0x500/821_1553736201.png",
+      "dimensions": "870х2050 / 970х2050 Дверний короб 130мм виготовлений з нержавіючої сталі AISI 430 1,8 мм має посилену планку захисту замкових ригелів та рег",
+      "collection": "Офіційний каталог — перевірити",
+      "options": [
+        "PF Securemme",
+        "PF Mottura",
+        "PF Prestige"
+      ]
+    },
+    {
+      "url": "https://straj.ua/product/hrd_diagram",
+      "name": "HRD Diagram",
+      "image": "https://straj.ua/assets/product/0x500/813_3150293861.jpg",
+      "dimensions": "870х2050 / 970х2050 Дверний короб 130мм виготовлений з нержавіючої сталі AISI 430 1,8 мм має посилену планку захисту замкових ригелів та рег",
+      "collection": "Офіційний каталог — перевірити",
+      "options": [
+        "PF Securemme",
+        "PF Mottura",
+        "PF Prestige"
+      ]
+    },
+    {
+      "url": "https://straj.ua/product/hrd_florence__385_",
+      "name": "HRD Florence (385)",
+      "image": "https://straj.ua/assets/product/0x500/822_3597854857.png",
+      "dimensions": "870х2050 / 970х2050 Дверний короб 130мм виготовлений з нержавіючої сталі AISI 430 1,8 мм має посилену планку захисту замкових ригелів та рег",
+      "collection": "Офіційний каталог — перевірити",
+      "options": [
+        "PF Securemme",
+        "PF Mottura",
+        "PF Prestige"
+      ]
+    },
+    {
+      "url": "https://straj.ua/product/hrd_party_a",
+      "name": "HRD Party A",
+      "image": "https://straj.ua/assets/product/0x500/805_1155345858.jpg",
+      "dimensions": "870х2050 / 970х2050 Дверний короб 130мм виготовлений з нержавіючої сталі AISI 430 1,8 мм має посилену планку захисту замкових ригелів та рег",
+      "collection": "Офіційний каталог — перевірити",
+      "options": [
+        "PF Securemme",
+        "PF Mottura",
+        "PF Prestige"
+      ]
+    },
+    {
+      "url": "https://straj.ua/product/hrd_party_b",
+      "name": "HRD Party B",
+      "image": "https://straj.ua/assets/product/0x500/810_463059542.jpg",
+      "dimensions": "870х2050 / 970х2050 Дверний короб 130мм виготовлений з нержавіючої сталі AISI 430 1,8 мм має посилену планку захисту замкових ригелів та рег",
+      "collection": "Офіційний каталог — перевірити",
+      "options": [
+        "PF Securemme",
+        "PF Mottura",
+        "PF Prestige"
+      ]
+    },
+    {
+      "url": "https://straj.ua/product/hrd_party_bp",
+      "name": "HRD Party BP",
+      "image": "https://straj.ua/assets/product/0x500/808_3736404232.jpg",
+      "dimensions": "870х2050 / 970х2050 Дверний короб 130мм виготовлений з нержавіючої сталі AISI 430 1,8 мм має посилену планку захисту замкових ригелів та рег",
+      "collection": "Офіційний каталог — перевірити",
+      "options": [
+        "PF Securemme",
+        "PF Mottura",
+        "PF Prestige"
+      ]
+    }
+  ]
+}

@@ -1,8 +1,9 @@
 import { importedProducts } from "./imported-catalog";
+import { addDurableCoveringDescription, createProductDescription, removeTetraUnsupportedDetails, shouldUseGeneratedDescription } from "./product-description";
 
 export type Category = "interior" | "entrance" | "windows";
 export type ProductMedia = { kind: "main" | "gallery" | "palette"; label: string | null; image: string; sortOrder: number };
-export type ProductOption = { group: "color" | "finish" | "glass" | "edge" | "configuration"; groupLabel: string; label: string; swatch: string | null; image: string | null; sortOrder: number };
+export type ProductOption = { group: "color" | "finish" | "glass" | "edge" | "configuration" | "series" | "size"; groupLabel: string; label: string; swatch: string | null; image: string | null; sortOrder: number };
 export type ProductVariant = { selections: Record<string, string>; image: string; sortOrder: number };
 export type ProductSpec = { label: string; value: string; sortOrder: number };
 export type Product = { slug: string; category: Category; brand: string; collection: string; name: string; material: string; style: string; color: string; price: string; description: string; features: string[]; image: string; media?: ProductMedia[]; options?: ProductOption[]; variants?: ProductVariant[]; specs?: ProductSpec[] };
@@ -52,7 +53,7 @@ export const toCatalogCardProduct = (product: Product): CatalogCardProduct => {
   const description = product.description.replace(/\s+/g, " ").trim().slice(0, 280);
   return {
     slug: product.slug, category: product.category, brand: product.brand, collection: product.collection, name: product.name,
-    material: product.material, style: product.style, color: product.color, price: product.price, image: product.image, description,
+    material: product.material, style: product.style, color: product.color, price: product.price, image: catalogCardImage(product), description,
     highlights: catalogHighlights(product), decorOptions,
     keySpecs: [...(product.specs || [])].sort((left, right) => catalogSpecPriority(left.label) - catalogSpecPriority(right.label) || left.sortOrder - right.sortOrder).slice(0, 3),
     searchText: `${product.name} ${product.brand} ${product.collection} ${product.material} ${product.style} ${product.color} ${product.features.join(" ")} ${product.description.slice(0, 320)}`.toLowerCase(),
@@ -61,6 +62,14 @@ export const toCatalogCardProduct = (product: Product): CatalogCardProduct => {
 
 export type CatalogBrowseQuery = { category?: string; brand?: string; collection?: string; material?: string; style?: string; color?: string; priceRange?: string; search?: string; offset?: number; limit?: number };
 export type CatalogBrowseData = { products: CatalogCardProduct[]; total: number; catalogTotal: number; facets: { categories: string[]; brands: string[]; collections: string[]; materials: string[]; styles: string[]; colors: string[]; hasPrices: boolean } };
+
+// Картка в каталозі має показувати те саме виконання, з якого починається
+// конфігуратор. Головне фото товару лишається запасним для моделей без
+// підтверджених варіантів.
+export const catalogCardImage = (product: Pick<Product, "image" | "variants">) =>
+  [...(product.variants || [])]
+    .sort((left, right) => left.sortOrder - right.sortOrder)
+    .find((variant) => Boolean(variant.image))?.image || product.image;
 
 export async function getCatalogBrowseData(query: CatalogBrowseQuery = {}): Promise<CatalogBrowseData> {
   const all = await getProducts();
@@ -84,8 +93,12 @@ export async function getCatalogBrowseData(query: CatalogBrowseQuery = {}): Prom
   const offset = Math.max(0, query.offset || 0);
   const limit = Math.min(48, Math.max(1, query.limit || 24));
   const unique = (items: string[]) => [...new Set(items)].filter(Boolean);
+  // Не підвантажуємо палітри й усі характеристики для всього каталогу.
+  // За великої кількості моделей це перевантажує Supabase та може віддати 504.
+  // Дані конфігуратора потрібні лише карткам на поточній сторінці.
+  const pageProducts = await withCatalogCardExtras(filtered.slice(offset, offset + limit));
   return {
-    products: filtered.slice(offset, offset + limit).map(toCatalogCardProduct), total: filtered.length, catalogTotal: all.length,
+    products: pageProducts.map(toCatalogCardProduct), total: filtered.length, catalogTotal: all.length,
     facets: { categories: unique(all.map((product) => product.category)), brands: unique(categoryProducts.map((product) => product.brand)), collections: unique(brandProducts.map((product) => product.collection)), materials: unique(brandProducts.map((product) => product.material)), styles: unique(brandProducts.map((product) => product.style)), colors: unique(brandProducts.map((product) => product.color)), hasPrices: all.some((product) => priceValue(product.price) !== null) },
   };
 }
@@ -104,6 +117,10 @@ const normalizeRodosGrand = (product: Product): Product => {
 };
 
 export const products: Product[] = importedProducts.map(normalizeRodosGrand);
+
+const productNameCollator = new Intl.Collator("uk", { numeric: true, sensitivity: "base" });
+const productNameSortKey = (name: string) => name.replace(/[Тт]/g, "T").replace(/\s+/g, " ").trim();
+const sortProductsByName = <T extends Pick<Product, "name">>(items: T[]) => [...items].sort((left, right) => productNameCollator.compare(productNameSortKey(left.name), productNameSortKey(right.name)));
 
 type ProductRow = Omit<Product, "image" | "features"> & { features: string[] | null; image_path: string };
 type ProductMediaRow = { product_slug: string; kind: ProductMedia["kind"]; label: string | null; image_path: string; sort_order: number };
@@ -135,6 +152,39 @@ const mapMedia = (media: ProductMediaRow): ProductMedia => ({ kind: media.kind, 
 const mapOption = (option: ProductOptionRow): ProductOption => ({ group: option.option_group, groupLabel: option.group_label, label: option.label, swatch: option.swatch, image: option.image_path ? catalogImageUrl(option.image_path) : null, sortOrder: option.sort_order });
 const mapVariant = (variant: ProductVariantRow): ProductVariant => ({ selections: variant.selections, image: catalogImageUrl(variant.image_path), sortOrder: variant.sort_order });
 const mapSpec = (spec: ProductSpecRow): ProductSpec => ({ label: spec.label, value: spec.value, sortOrder: spec.sort_order });
+const withGeneratedDescription = (product: Product): Product => {
+  // Tetra — колекція Papa Carlo, для якої погодили автоматичні тексти.
+  // Описи решти каталогу залишаються такими, як їх зберіг менеджер.
+  if (product.collection.trim().toLocaleLowerCase("uk") !== "tetra") return product;
+  const withoutTtr = (value: string) => value.replace(/\bTTR\b/gi, "").replace(/\s{2,}/g, " ").trim();
+  const normalizedSpecs = (product.specs || [])
+    .map((spec) => ({ ...spec, label: withoutTtr(spec.label), value: withoutTtr(spec.value) }))
+    .filter((spec) => spec.label && spec.value)
+    .filter((spec) => !["петлі", "сумісні замки"].includes(spec.label.toLocaleLowerCase("uk")))
+    .filter((spec) => !(spec.label.toLocaleLowerCase("uk") === "покриття" && /декоративн.{0,30}пвх.{0,80}німецьк/i.test(spec.value)));
+  const widthSpec = normalizedSpecs.find((spec) => /ширина.{0,30}полотна/i.test(spec.label));
+  const heightSpec = normalizedSpecs.find((spec) => /висота\s+полотна/i.test(spec.label));
+  const nonstandardSizeSpec = normalizedSpecs.find((spec) => /нестандартн.{0,25}розмір/i.test(spec.label));
+  const currentSpecs = widthSpec
+    ? normalizedSpecs
+      .filter((spec) => spec !== heightSpec && spec !== nonstandardSizeSpec)
+      .map((spec) => spec === widthSpec
+        ? { ...spec, label: "Розміри полотна", value: `ширина: ${spec.value}; висота: ${heightSpec?.value || "2000 мм"}${nonstandardSizeSpec ? ", можливий нестандартний розмір під замовлення" : ""}` }
+        : spec)
+    : normalizedSpecs;
+  const maxSortOrder = Math.max(0, ...currentSpecs.map((spec) => spec.sortOrder));
+  const orderedCurrentSpecs = currentSpecs.map((spec) => spec.label.toLocaleLowerCase("uk") === "гарантія виробника"
+    ? { ...spec, sortOrder: maxSortOrder + 100 }
+    : spec);
+  const specs = orderedCurrentSpecs.some((spec) => /renolit/i.test(spec.value))
+    ? orderedCurrentSpecs
+    : [...orderedCurrentSpecs, { label: "Матеріал покриття", value: "Поліпропіленова плівка Renolit (Німеччина)", sortOrder: maxSortOrder + 1 }];
+  const tetraProduct = { ...product, specs };
+  const description = shouldUseGeneratedDescription(tetraProduct.description, specs, tetraProduct.options || [])
+    ? createProductDescription(tetraProduct, specs, tetraProduct.options || [])
+    : tetraProduct.description;
+  return { ...tetraProduct, description: addDurableCoveringDescription(removeTetraUnsupportedDetails(description)) };
+};
 
 async function getProductExtras(slug: string) {
   if (!supabaseKey) return { media: [] as ProductMedia[], options: [] as ProductOption[], variants: [] as ProductVariant[], specs: [] as ProductSpec[] };
@@ -155,21 +205,16 @@ async function getProductExtras(slug: string) {
   return { media, options, variants, specs };
 }
 
-export async function getProducts(): Promise<Product[]> {
-  if (!supabaseKey) return products.map((product) => ({ ...product, image: catalogImageUrl(product.image) }));
+async function withCatalogCardExtras(items: Product[]): Promise<Product[]> {
+  if (!supabaseKey || !items.length) return items;
+  const headers = { apikey: supabaseKey, Authorization: `Bearer ${supabaseKey}` };
+  const productFilter = `product_slug=in.(${items.map((item) => encodeURIComponent(item.slug)).join(",")})`;
   try {
-    const headers = { apikey: supabaseKey, Authorization: `Bearer ${supabaseKey}` };
-    // Дані для карток отримуємо пакетними запитами, а не окремим
-    // запитом до кожної моделі. Так каталог лишається швидким, але картки
-    // можуть чесно показати лише декори з підтвердженим фото.
-    const [productsResponse, optionsResponse, variantsResponse, specsResponse] = await Promise.all([
-      fetch(`${supabaseUrl}/rest/v1/products?select=slug,category,brand,collection,name,material,style,color,price,description,features,image_path&is_available=eq.true&order=sort_order.asc`, { headers, next: { revalidate: 300 } }),
-      fetch(`${supabaseUrl}/rest/v1/product_options?select=product_slug,option_group,group_label,label,swatch,image_path,sort_order&is_active=eq.true&order=sort_order.asc`, { headers, next: { revalidate: 300 } }),
-      fetch(`${supabaseUrl}/rest/v1/product_variants?select=product_slug,selections,image_path,sort_order&is_active=eq.true&order=sort_order.asc`, { headers, next: { revalidate: 300 } }),
-      fetch(`${supabaseUrl}/rest/v1/product_specs?select=product_slug,label,value,sort_order&is_active=eq.true&order=sort_order.asc`, { headers, next: { revalidate: 300 } }),
+    const [optionsResponse, variantsResponse, specsResponse] = await Promise.all([
+      fetch(`${supabaseUrl}/rest/v1/product_options?select=product_slug,option_group,group_label,label,swatch,image_path,sort_order&is_active=eq.true&${productFilter}&order=sort_order.asc`, { headers, next: { revalidate: 300 } }),
+      fetch(`${supabaseUrl}/rest/v1/product_variants?select=product_slug,selections,image_path,sort_order&is_active=eq.true&${productFilter}&order=sort_order.asc`, { headers, next: { revalidate: 300 } }),
+      fetch(`${supabaseUrl}/rest/v1/product_specs?select=product_slug,label,value,sort_order&is_active=eq.true&${productFilter}&order=sort_order.asc`, { headers, next: { revalidate: 300 } }),
     ]);
-    if (!productsResponse.ok) throw new Error(`Supabase returned ${productsResponse.status}`);
-    const rows = await productsResponse.json() as ProductRow[];
     const optionRows = optionsResponse.ok ? await optionsResponse.json() as ProductOptionRow[] : [];
     const variantRows = variantsResponse.ok ? await variantsResponse.json() as ProductVariantRow[] : [];
     const specRows = specsResponse.ok ? await specsResponse.json() as ProductSpecRow[] : [];
@@ -179,10 +224,44 @@ export async function getProducts(): Promise<Product[]> {
     optionRows.forEach((option) => optionsByProduct.set(option.product_slug, [...(optionsByProduct.get(option.product_slug) || []), mapOption(option)]));
     variantRows.forEach((variant) => variantsByProduct.set(variant.product_slug, [...(variantsByProduct.get(variant.product_slug) || []), mapVariant(variant)]));
     specRows.forEach((spec) => specsByProduct.set(spec.product_slug, [...(specsByProduct.get(spec.product_slug) || []), mapSpec(spec)]));
-    return rows.map((row) => ({ ...mapProduct(row), options: optionsByProduct.get(row.slug) || [], variants: variantsByProduct.get(row.slug) || [], specs: specsByProduct.get(row.slug) || [] }));
+    return items.map((item) => withGeneratedDescription({
+      ...item,
+      options: optionsByProduct.get(item.slug) || [],
+      variants: variantsByProduct.get(item.slug) || [],
+      specs: specsByProduct.get(item.slug) || [],
+    }));
+  } catch (error) {
+    console.error("Could not load catalog card extras from Supabase", error);
+    return items;
+  }
+}
+
+export async function getProducts(): Promise<Product[]> {
+  if (!supabaseKey) return sortProductsByName(products.map((product) => withGeneratedDescription({ ...product, image: catalogImageUrl(product.image) })));
+  try {
+    const headers = { apikey: supabaseKey, Authorization: `Bearer ${supabaseKey}` };
+    // Цей список також живить sitemap і сторінки фабрик. Тут достатньо
+    // основних даних товару; опції та характеристики підвантажуються
+    // адресно для 24 карток каталогу або для відкритої картки товару.
+    // PostgREST віддає не більше 1000 рядків за один запит. Каталог уже
+    // більший, тому зчитуємо наступні сторінки, інакше частина фабрик може
+    // зникнути з фільтрів та сторінок колекцій.
+    const pageSize = 1000;
+    const rows: ProductRow[] = [];
+    for (let from = 0; ; from += pageSize) {
+      const productsResponse = await fetch(`${supabaseUrl}/rest/v1/products?select=slug,category,brand,collection,name,material,style,color,price,description,features,image_path&is_available=eq.true&order=name.asc`, {
+        headers: { ...headers, Range: `${from}-${from + pageSize - 1}` },
+        next: { revalidate: 300 },
+      });
+      if (!productsResponse.ok) throw new Error(`Supabase returned ${productsResponse.status}`);
+      const page = await productsResponse.json() as ProductRow[];
+      rows.push(...page);
+      if (page.length < pageSize) break;
+    }
+    return sortProductsByName(rows.map((row) => withGeneratedDescription(mapProduct(row))));
   } catch (error) {
     console.error("Could not load catalog from Supabase", error);
-    return products.map((product) => ({ ...product, image: catalogImageUrl(product.image) }));
+    return sortProductsByName(products.map((product) => withGeneratedDescription({ ...product, image: catalogImageUrl(product.image) })));
   }
 }
 
@@ -191,12 +270,12 @@ export async function getRelatedProducts(product: Pick<Product, "slug" | "brand"
     .filter((item) => item.brand === product.brand && item.collection === product.collection && item.slug !== product.slug)
     .concat(products.filter((item) => item.brand === product.brand && item.collection !== product.collection && item.slug !== product.slug))
     .slice(0, limit)
-    .map((item) => ({ ...item, image: catalogImageUrl(item.image) }));
+    .map((item) => withGeneratedDescription({ ...item, image: catalogImageUrl(item.image) }));
 
   if (!supabaseKey) return fallback();
   const headers = { apikey: supabaseKey, Authorization: `Bearer ${supabaseKey}` };
   const select = "slug,category,brand,collection,name,material,style,color,price,description,features,image_path";
-  const common = `select=${select}&is_available=eq.true&brand=eq.${encodeURIComponent(product.brand)}&slug=neq.${encodeURIComponent(product.slug)}&order=sort_order.asc&limit=${limit}`;
+  const common = `select=${select}&is_available=eq.true&brand=eq.${encodeURIComponent(product.brand)}&slug=neq.${encodeURIComponent(product.slug)}&order=name.asc&limit=${limit}`;
 
   try {
     const fromCollection = await fetch(`${supabaseUrl}/rest/v1/products?${common}&collection=eq.${encodeURIComponent(product.collection)}`, { headers, next: { revalidate: 300 } });
@@ -226,7 +305,7 @@ export async function getRelatedProducts(product: Pick<Product, "slug" | "brand"
     optionRows.forEach((option) => optionsByProduct.set(option.product_slug, [...(optionsByProduct.get(option.product_slug) || []), mapOption(option)]));
     variantRows.forEach((variant) => variantsByProduct.set(variant.product_slug, [...(variantsByProduct.get(variant.product_slug) || []), mapVariant(variant)]));
     specRows.forEach((spec) => specsByProduct.set(spec.product_slug, [...(specsByProduct.get(spec.product_slug) || []), mapSpec(spec)]));
-    return rows.map((row) => ({ ...mapProduct(row), options: optionsByProduct.get(row.slug) || [], variants: variantsByProduct.get(row.slug) || [], specs: specsByProduct.get(row.slug) || [] }));
+    return sortProductsByName(rows.map((row) => withGeneratedDescription({ ...mapProduct(row), options: optionsByProduct.get(row.slug) || [], variants: variantsByProduct.get(row.slug) || [], specs: specsByProduct.get(row.slug) || [] })));
   } catch (error) {
     console.error(`Could not load related products for ${product.slug}`, error);
     return fallback();
@@ -258,7 +337,7 @@ export async function getProduct(slug: string) {
   try {
     const { media, options, variants, specs } = await getProductExtras(slug);
     const mainImage = media.find((item) => item.kind === "main");
-    return { ...product, image: mainImage?.image || product.image, media, options, variants, specs };
+    return withGeneratedDescription({ ...product, image: mainImage?.image || product.image, media, options, variants, specs });
   } catch (error) {
     console.error(`Could not load product configuration for ${slug}`, error);
     return product;

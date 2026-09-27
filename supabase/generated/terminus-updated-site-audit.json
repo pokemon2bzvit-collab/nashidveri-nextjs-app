@@ -1,0 +1,26 @@
+{
+  "source": "https://terminus.ua/",
+  "checkedAt": "2026-09-21",
+  "officialCollections": [
+    { "name": "SOLID", "photos": 2, "ourCollection": "Solid", "status": "same" },
+    { "name": "FREZZATO", "photos": 4, "ourCollection": "Frezato", "status": "rename" },
+    { "name": "URBAN", "photos": 1, "status": "missing" },
+    { "name": "URBAN Маркетрі", "photos": 1, "status": "missing" },
+    { "name": "CARO", "photos": 1, "ourCollection": "Caro", "status": "same" },
+    { "name": "CLASSIC", "photos": 1, "status": "missing" },
+    { "name": "MODERN", "photos": 1, "status": "missing" },
+    { "name": "LITE", "photos": 2, "ourCollection": "Light", "status": "possible_rename" },
+    { "name": "NEO-CLASSICO", "photos": 1, "ourCollection": "Neoclassico", "status": "rename" },
+    { "name": "ELIT", "photos": 1, "ourCollection": "Elit plus", "status": "needs_review" },
+    { "name": "UKRAINIAN DOORS", "photos": 4, "status": "missing" },
+    { "name": "NANOFLEX", "photos": 1, "status": "missing" }
+  ],
+  "summary": {
+    "officialCollections": 12,
+    "ourCollections": 6,
+    "same": 2,
+    "renamesToReview": 4,
+    "missingCollections": 6,
+    "note": "Оновлений сайт не публікує відкриті картки моделей: доступні лише назви колекцій та обкладинки."
+  }
+}

@@ -1,0 +1,349 @@
+[
+  {
+    "slug": "stildoors-presto-aura-official",
+    "name": "StilDoors Aura",
+    "modelSlug": "aura",
+    "sourceUrl": "https://stildoors.com.ua/dveri/presto/aura/bila-emal-ral-9003/",
+    "imagePath": "https://stildoors.com.ua/images/dveri/presto/aura/bila-emal-ral-9003/dveri-presto-aura-bila-emal-ral-9003.jpg",
+    "specs": [
+      {
+        "label": "Розміри полотна",
+        "value": "60 х 200, 70 х 200, 80 х 200, 90 х 200 см",
+        "sortOrder": 100
+      },
+      {
+        "label": "Товщина полотна",
+        "value": "40 мм",
+        "sortOrder": 110
+      },
+      {
+        "label": "Декори",
+        "value": "біла емаль RAL 9003, RAL 7047 світло-сірий, сірий RAL 7036, тауп, шампань RAL 1013",
+        "sortOrder": 120
+      }
+    ],
+    "colors": [
+      "біла емаль RAL 9003",
+      "RAL 7047 світло-сірий",
+      "сірий RAL 7036",
+      "тауп",
+      "шампань RAL 1013"
+    ],
+    "description": "StilDoors Aura — фарбовані міжкімнатні двері колекції Presto. Доступні стандартні розміри: 60 х 200, 70 х 200, 80 х 200, 90 х 200 см. Товщина полотна 40 мм. Для моделі передбачені заводські декори; актуальну комплектацію й ціну уточнюйте у менеджера."
+  },
+  {
+    "slug": "stildoors-presto-avanti-official",
+    "name": "StilDoors Avanti",
+    "modelSlug": "avanti",
+    "sourceUrl": "https://stildoors.com.ua/dveri/presto/avanti/bila-emal-ral-9003/",
+    "imagePath": "https://stildoors.com.ua/images/dveri/presto/avanti/bila-emal-ral-9003/dveri-presto-avanti-bila-emal-ral-9003.jpg",
+    "specs": [
+      {
+        "label": "Розміри полотна",
+        "value": "40 х 200, 60 х 200, 70 х 200, 80 х 200, 90 х 200 см",
+        "sortOrder": 100
+      },
+      {
+        "label": "Товщина полотна",
+        "value": "40 мм",
+        "sortOrder": 110
+      },
+      {
+        "label": "Декори",
+        "value": "біла емаль RAL 9003, RAL 7047 світло-сірий, сірий RAL 7036, тауп, шампань RAL 1013, антрацит RAL 7016",
+        "sortOrder": 120
+      }
+    ],
+    "colors": [
+      "біла емаль RAL 9003",
+      "RAL 7047 світло-сірий",
+      "сірий RAL 7036",
+      "тауп",
+      "шампань RAL 1013",
+      "антрацит RAL 7016"
+    ],
+    "description": "StilDoors Avanti — фарбовані міжкімнатні двері колекції Presto. Доступні стандартні розміри: 40 х 200, 60 х 200, 70 х 200, 80 х 200, 90 х 200 см. Товщина полотна 40 мм. Для моделі передбачені заводські декори; актуальну комплектацію й ціну уточнюйте у менеджера."
+  },
+  {
+    "slug": "stildoors-presto-diamond-official",
+    "name": "StilDoors Diamond",
+    "modelSlug": "diamond",
+    "sourceUrl": "https://stildoors.com.ua/dveri/presto/diamond/bila-emal-ral-9003/",
+    "imagePath": "https://stildoors.com.ua/images/dveri/presto/diamond/bila-emal-ral-9003/dveri-presto-diamond-bila-emal-ral-9003.jpg",
+    "specs": [
+      {
+        "label": "Розміри полотна",
+        "value": "60 х 200, 70 х 200, 80 х 200, 90 х 200 см",
+        "sortOrder": 100
+      },
+      {
+        "label": "Товщина полотна",
+        "value": "40 мм",
+        "sortOrder": 110
+      },
+      {
+        "label": "Декори",
+        "value": "біла емаль RAL 9003, RAL 7047 світло-сірий, сірий RAL 7036, тауп, шампань RAL 1013",
+        "sortOrder": 120
+      }
+    ],
+    "colors": [
+      "біла емаль RAL 9003",
+      "RAL 7047 світло-сірий",
+      "сірий RAL 7036",
+      "тауп",
+      "шампань RAL 1013"
+    ],
+    "description": "StilDoors Diamond — фарбовані міжкімнатні двері колекції Presto. Доступні стандартні розміри: 60 х 200, 70 х 200, 80 х 200, 90 х 200 см. Товщина полотна 40 мм. Для моделі передбачені заводські декори; актуальну комплектацію й ціну уточнюйте у менеджера."
+  },
+  {
+    "slug": "stildoors-presto-elegante-official",
+    "name": "StilDoors Elegante",
+    "modelSlug": "elegante",
+    "sourceUrl": "https://stildoors.com.ua/dveri/presto/elegante/bila-emal-ral-9003/",
+    "imagePath": "https://stildoors.com.ua/images/dveri/presto/elegante/bila-emal-ral-9003/dveri-presto-elegante-bila-emal-ral-9003.jpg",
+    "specs": [
+      {
+        "label": "Розміри полотна",
+        "value": "40 х 200, 60 х 200, 70 х 200, 80 х 200, 90 х 200 см",
+        "sortOrder": 100
+      },
+      {
+        "label": "Товщина полотна",
+        "value": "40 мм",
+        "sortOrder": 110
+      },
+      {
+        "label": "Декори",
+        "value": "біла емаль RAL 9003, RAL 7047 світло-сірий, сірий RAL 7036, тауп, шампань RAL 1013",
+        "sortOrder": 120
+      }
+    ],
+    "colors": [
+      "біла емаль RAL 9003",
+      "RAL 7047 світло-сірий",
+      "сірий RAL 7036",
+      "тауп",
+      "шампань RAL 1013"
+    ],
+    "description": "StilDoors Elegante — фарбовані міжкімнатні двері колекції Presto. Доступні стандартні розміри: 40 х 200, 60 х 200, 70 х 200, 80 х 200, 90 х 200 см. Товщина полотна 40 мм. Для моделі передбачені заводські декори; актуальну комплектацію й ціну уточнюйте у менеджера."
+  },
+  {
+    "slug": "stildoors-presto-fargo-official",
+    "name": "StilDoors Fargo",
+    "modelSlug": "fargo",
+    "sourceUrl": "https://stildoors.com.ua/dveri/presto/fargo/bila-emal-ral-9003/",
+    "imagePath": "https://stildoors.com.ua/images/dveri/presto/fargo/bila-emal-ral-9003/dveri-presto-fargo-bila-emal-ral-9003.jpg",
+    "specs": [
+      {
+        "label": "Розміри полотна",
+        "value": "40 х 200, 60 х 200, 70 х 200, 80 х 200, 90 х 200 см",
+        "sortOrder": 100
+      },
+      {
+        "label": "Товщина полотна",
+        "value": "40 мм",
+        "sortOrder": 110
+      },
+      {
+        "label": "Декори",
+        "value": "біла емаль RAL 9003, RAL 7047 світло-сірий, сірий RAL 7036, тауп, шампань RAL 1013",
+        "sortOrder": 120
+      }
+    ],
+    "colors": [
+      "біла емаль RAL 9003",
+      "RAL 7047 світло-сірий",
+      "сірий RAL 7036",
+      "тауп",
+      "шампань RAL 1013"
+    ],
+    "description": "StilDoors Fargo — фарбовані міжкімнатні двері колекції Presto. Доступні стандартні розміри: 40 х 200, 60 х 200, 70 х 200, 80 х 200, 90 х 200 см. Товщина полотна 40 мм. Для моделі передбачені заводські декори; актуальну комплектацію й ціну уточнюйте у менеджера."
+  },
+  {
+    "slug": "stildoors-presto-grazia-official",
+    "name": "StilDoors Grazia",
+    "modelSlug": "grazia",
+    "sourceUrl": "https://stildoors.com.ua/dveri/presto/grazia/bila-emal-ral-9003/bez-skla/",
+    "imagePath": "https://stildoors.com.ua/images/dveri/presto/grazia/bila-emal-ral-9003/bez-skla/dveri-presto-grazia-bila-emal-ral-9003-bez-skla.jpg",
+    "specs": [
+      {
+        "label": "Розміри полотна",
+        "value": "60 х 200, 70 х 200, 80 х 200, 90 х 200 см",
+        "sortOrder": 100
+      },
+      {
+        "label": "Товщина полотна",
+        "value": "40 мм",
+        "sortOrder": 110
+      },
+      {
+        "label": "Декори",
+        "value": "біла емаль RAL 9003, тауп, шампань RAL 1013",
+        "sortOrder": 120
+      }
+    ],
+    "colors": [
+      "біла емаль RAL 9003",
+      "тауп",
+      "шампань RAL 1013"
+    ],
+    "description": "StilDoors Grazia — фарбовані міжкімнатні двері колекції Presto. Доступні стандартні розміри: 60 х 200, 70 х 200, 80 х 200, 90 х 200 см. Товщина полотна 40 мм. Для моделі передбачені заводські декори; актуальну комплектацію й ціну уточнюйте у менеджера."
+  },
+  {
+    "slug": "stildoors-presto-grazia-glass-official",
+    "name": "StilDoors Grazia Glass",
+    "modelSlug": "grazia-glass",
+    "sourceUrl": "https://stildoors.com.ua/dveri/presto/grazia-glass/bila-emal-ral-9003/sklo-satin/",
+    "imagePath": "https://stildoors.com.ua/images/dveri/presto/grazia-glass/bila-emal-ral-9003/sklo-satin/dveri-presto-grazia-glass-bila-emal-ral-9003-sklo-satin.jpg",
+    "specs": [
+      {
+        "label": "Розміри полотна",
+        "value": "60 х 200, 70 х 200, 80 х 200, 90 х 200 см",
+        "sortOrder": 100
+      },
+      {
+        "label": "Товщина полотна",
+        "value": "40 мм",
+        "sortOrder": 110
+      },
+      {
+        "label": "Декори",
+        "value": "біла емаль RAL 9003, тауп, шампань RAL 1013, біла емаль RAL 9003",
+        "sortOrder": 120
+      }
+    ],
+    "colors": [
+      "біла емаль RAL 9003",
+      "тауп",
+      "шампань RAL 1013"
+    ],
+    "description": "StilDoors Grazia Glass — фарбовані міжкімнатні двері колекції Presto. Доступні стандартні розміри: 60 х 200, 70 х 200, 80 х 200, 90 х 200 см. Товщина полотна 40 мм. Для моделі передбачені заводські декори; актуальну комплектацію й ціну уточнюйте у менеджера."
+  },
+  {
+    "slug": "stildoors-presto-karyon-official",
+    "name": "StilDoors Karyon",
+    "modelSlug": "karyon",
+    "sourceUrl": "https://stildoors.com.ua/dveri/presto/karyon/ral-7047-svitlo-siriy/",
+    "imagePath": "https://stildoors.com.ua/images/dveri/presto/karyon/ral-7047-svitlo-siriy/dveri-presto-karyon-ral-7047-svitlo-siriy.jpg",
+    "specs": [
+      {
+        "label": "Розміри полотна",
+        "value": "60 х 200, 70 х 200, 80 х 200, 90 х 200 см",
+        "sortOrder": 100
+      },
+      {
+        "label": "Товщина полотна",
+        "value": "40 мм",
+        "sortOrder": 110
+      },
+      {
+        "label": "Декори",
+        "value": "RAL 7047 світло-сірий, біла емаль RAL 9003, сірий RAL 7036, тауп, шампань RAL 1013",
+        "sortOrder": 120
+      }
+    ],
+    "colors": [
+      "RAL 7047 світло-сірий",
+      "біла емаль RAL 9003",
+      "сірий RAL 7036",
+      "тауп",
+      "шампань RAL 1013"
+    ],
+    "description": "StilDoors Karyon — фарбовані міжкімнатні двері колекції Presto. Доступні стандартні розміри: 60 х 200, 70 х 200, 80 х 200, 90 х 200 см. Товщина полотна 40 мм. Для моделі передбачені заводські декори; актуальну комплектацію й ціну уточнюйте у менеджера."
+  },
+  {
+    "slug": "stildoors-presto-palladio-official",
+    "name": "StilDoors Palladio",
+    "modelSlug": "palladio",
+    "sourceUrl": "https://stildoors.com.ua/dveri/presto/palladio/bila-emal-ral-9003/",
+    "imagePath": "https://stildoors.com.ua/images/dveri/presto/palladio/bila-emal-ral-9003/dveri-presto-palladio-bila-emal-ral-9003.jpg",
+    "specs": [
+      {
+        "label": "Розміри полотна",
+        "value": "60 х 200, 70 х 200, 80 х 200, 90 х 200 см",
+        "sortOrder": 100
+      },
+      {
+        "label": "Товщина полотна",
+        "value": "40 мм",
+        "sortOrder": 110
+      },
+      {
+        "label": "Декори",
+        "value": "біла емаль RAL 9003, тауп, шампань RAL 1013",
+        "sortOrder": 120
+      }
+    ],
+    "colors": [
+      "біла емаль RAL 9003",
+      "тауп",
+      "шампань RAL 1013"
+    ],
+    "description": "StilDoors Palladio — фарбовані міжкімнатні двері колекції Presto. Доступні стандартні розміри: 60 х 200, 70 х 200, 80 х 200, 90 х 200 см. Товщина полотна 40 мм. Для моделі передбачені заводські декори; актуальну комплектацію й ціну уточнюйте у менеджера."
+  },
+  {
+    "slug": "stildoors-presto-toledo-official",
+    "name": "StilDoors Toledo",
+    "modelSlug": "toledo",
+    "sourceUrl": "https://stildoors.com.ua/dveri/presto/toledo/bila-emal-ral-9003/",
+    "imagePath": "https://stildoors.com.ua/images/dveri/presto/toledo/bila-emal-ral-9003/dveri-presto-toledo-bila-emal-ral-9003.jpg",
+    "specs": [
+      {
+        "label": "Розміри полотна",
+        "value": "60 х 200, 70 х 200, 80 х 200, 90 х 200 см",
+        "sortOrder": 100
+      },
+      {
+        "label": "Товщина полотна",
+        "value": "40 мм",
+        "sortOrder": 110
+      },
+      {
+        "label": "Декори",
+        "value": "біла емаль RAL 9003, RAL 7047 світло-сірий, сірий RAL 7036, тауп, шампань RAL 1013",
+        "sortOrder": 120
+      }
+    ],
+    "colors": [
+      "біла емаль RAL 9003",
+      "RAL 7047 світло-сірий",
+      "сірий RAL 7036",
+      "тауп",
+      "шампань RAL 1013"
+    ],
+    "description": "StilDoors Toledo — фарбовані міжкімнатні двері колекції Presto. Доступні стандартні розміри: 60 х 200, 70 х 200, 80 х 200, 90 х 200 см. Товщина полотна 40 мм. Для моделі передбачені заводські декори; актуальну комплектацію й ціну уточнюйте у менеджера."
+  },
+  {
+    "slug": "stildoors-presto-wilton-official",
+    "name": "StilDoors Wilton",
+    "modelSlug": "wilton",
+    "sourceUrl": "https://stildoors.com.ua/dveri/presto/wilton/bila-emal-ral-9003/sklo-chorne/",
+    "imagePath": "https://stildoors.com.ua/images/dveri/presto/wilton/bila-emal-ral-9003/sklo-chorne/dveri-presto-wilton-bila-emal-ral-9003-sklo-chorne.jpg",
+    "specs": [
+      {
+        "label": "Розміри полотна",
+        "value": "60 х 200, 70 х 200, 80 х 200, 90 х 200 см",
+        "sortOrder": 100
+      },
+      {
+        "label": "Товщина полотна",
+        "value": "40 мм",
+        "sortOrder": 110
+      },
+      {
+        "label": "Декори",
+        "value": "RAL 7047 світло-сірий, біла емаль RAL 9003, сірий RAL 7036, тауп, шампань RAL 1013",
+        "sortOrder": 120
+      }
+    ],
+    "colors": [
+      "RAL 7047 світло-сірий",
+      "біла емаль RAL 9003",
+      "сірий RAL 7036",
+      "тауп",
+      "шампань RAL 1013"
+    ],
+    "description": "StilDoors Wilton — фарбовані міжкімнатні двері колекції Presto. Доступні стандартні розміри: 60 х 200, 70 х 200, 80 х 200, 90 х 200 см. Товщина полотна 40 мм. Для моделі передбачені заводські декори; актуальну комплектацію й ціну уточнюйте у менеджера."
+  }
+]

@@ -1,0 +1,51 @@
+-- Чернетки Magda: сторінка 10, перші шість офіційних моделей.
+
+begin;
+
+insert into public.products
+  (slug, category, brand, collection, name, material, style, color, price, description, features, image_path, sort_order, is_available)
+values
+  ('magda-536-1-official', 'entrance', 'Magda', 'Квартира', 'Magda Модель №536.1', 'Сталь, МДФ-накладки та заводські покриття', 'Сучасний', 'Заводські декори', 'Ціна за запитом', 'Magda Модель №536.1 — вхідні металеві двері для квартири з надійною конструкцією та доступною комплектацією. Допоможемо підібрати декор і виконання типу 2.24 Kale; актуальну ціну уточнюйте у менеджера.', jsonb_build_array('Офіційна модель Magda', 'Для квартири', 'Тип 2.24 Kale'), 'https://magda.com.ua/storage/app/uploads/public/0da/239/747/thumb__0_0_0_0_auto.jpg', 99013, false),
+  ('magda-544-1-official', 'entrance', 'Magda', 'Квартира', 'Magda Модель №544.1', 'Сталь, МДФ-накладки та заводські покриття', 'Сучасний', 'Заводські декори', 'Ціна за запитом', 'Magda Модель №544.1 — вхідні двері для квартири з тепло- і шумоізоляцією та надійною фурнітурою. Доступні заводські декори і комплектація типу 2.24 Kale; актуальну ціну уточнюйте у менеджера.', jsonb_build_array('Офіційна модель Magda', 'Для квартири', 'Тепло- і шумоізоляція', 'Тип 2.24 Kale'), 'https://magda.com.ua/storage/app/uploads/public/05e/3a8/848/thumb__0_0_0_0_auto.jpg', 99014, false),
+  ('magda-654-1-official', 'entrance', 'Magda', 'Квартира', 'Magda Модель №654.1', 'Сталь, МДФ-накладки та заводські покриття', 'Сучасний', 'Заводські декори', 'Ціна за запитом', 'Magda Модель №654.1 — вхідні двері для квартири в сучасному дизайні. Практична конструкція та комплектація типу 2.24 Kale допоможуть забезпечити комфорт і захист оселі; ціну уточнюйте у менеджера.', jsonb_build_array('Офіційна модель Magda', 'Для квартири', 'Тип 2.24 Kale'), 'https://magda.com.ua/storage/app/uploads/public/fb5/2c0/b02/thumb__0_0_0_0_auto.jpg', 99015, false),
+  ('magda-541-1-official', 'entrance', 'Magda', 'Квартира', 'Magda Модель №541.1', 'Сталь, МДФ-накладки та заводські покриття', 'Сучасний', 'Заводські декори', 'Ціна за запитом', 'Magda Модель №541.1 — вхідні двері для квартири з надійною конструкцією та варіантами комплектації. Для моделі доступні тип 2.24 Kale і тип 3.23, а також заводські декори; точне виконання та ціну уточнюйте у менеджера.', jsonb_build_array('Офіційна модель Magda', 'Для квартири', 'Тип 2.24 Kale або тип 3.23', 'Доступні декоративні молдинги'), 'https://magda.com.ua/storage/app/uploads/public/028/f8d/cf4/thumb__0_0_0_0_auto.jpg', 99016, false),
+  ('magda-546-1-official', 'entrance', 'Magda', 'Квартира', 'Magda Модель №546.1', 'Сталь, МДФ-накладки та заводські покриття', 'Сучасний', 'Заводські декори', 'Ціна за запитом', 'Magda Модель №546.1 — вхідні двері для квартири в сучасному дизайні. Якісна фурнітура, заводські декори й комплектація типу 2.24 Kale допоможуть підібрати практичне рішення; актуальну ціну уточнюйте у менеджера.', jsonb_build_array('Офіційна модель Magda', 'Для квартири', 'Тип 2.24 Kale'), 'https://magda.com.ua/storage/app/uploads/public/797/876/e86/thumb__0_0_0_0_auto.jpg', 99017, false),
+  ('magda-834-1-official', 'entrance', 'Magda', 'Вулиця', 'Magda Модель №834.1', 'Сталь, вологостійкий МДФ та заводські покриття', 'Сучасний', 'Заводські декори', 'Ціна за запитом', 'Magda Модель №834.1 — вхідні двері для приватного будинку. Надійна конструкція та фурнітура Kale доповнюються заводськими варіантами декорів; актуальну комплектацію й ціну уточнюйте у менеджера.', jsonb_build_array('Офіційна модель Magda', 'Для приватного будинку', 'Тип 15', 'Фурнітура Kale'), 'https://magda.com.ua/storage/app/uploads/public/572/d10/33d/thumb__0_0_0_0_auto.jpg', 99018, false)
+on conflict (slug) do update set name = excluded.name, material = excluded.material, style = excluded.style, color = excluded.color, description = excluded.description, features = excluded.features, image_path = excluded.image_path, collection = excluded.collection, updated_at = now();
+
+insert into public.product_specs (product_slug, label, value, sort_order, is_active)
+values
+  ('magda-536-1-official', 'Призначення', 'Для квартири', 10, true), ('magda-536-1-official', 'Доступна комплектація', 'Тип 2.24 (Kale)', 20, true),
+  ('magda-544-1-official', 'Призначення', 'Для квартири', 10, true), ('magda-544-1-official', 'Доступна комплектація', 'Тип 2.24 (Kale)', 20, true),
+  ('magda-654-1-official', 'Призначення', 'Для квартири', 10, true), ('magda-654-1-official', 'Доступна комплектація', 'Тип 2.24 (Kale)', 20, true),
+  ('magda-541-1-official', 'Призначення', 'Для квартири', 10, true), ('magda-541-1-official', 'Доступні комплектації', 'Тип 2.24 (Kale), тип 3.23', 20, true),
+  ('magda-546-1-official', 'Призначення', 'Для квартири', 10, true), ('magda-546-1-official', 'Доступна комплектація', 'Тип 2.24 (Kale)', 20, true),
+  ('magda-834-1-official', 'Призначення', 'Для приватного будинку', 10, true), ('magda-834-1-official', 'Доступна комплектація', 'Тип 15', 20, true)
+on conflict (product_slug, label) do update set value = excluded.value, sort_order = excluded.sort_order, is_active = true;
+
+insert into public.product_sources (product_slug, source_name, source_url, source_product_name, verification_status, verified_at, notes)
+values
+  ('magda-536-1-official', 'Magda', 'https://magda.com.ua/uk/catalog/item/5361', 'Модель №536.1', 'verified', now(), 'Офіційна картка виробника'),
+  ('magda-544-1-official', 'Magda', 'https://magda.com.ua/uk/catalog/item/5441', 'Модель №544.1', 'verified', now(), 'Офіційна картка виробника'),
+  ('magda-654-1-official', 'Magda', 'https://magda.com.ua/uk/catalog/item/6541', 'Модель №654.1', 'verified', now(), 'Офіційна картка виробника'),
+  ('magda-541-1-official', 'Magda', 'https://magda.com.ua/uk/catalog/item/5411', 'Модель №541.1', 'verified', now(), 'Офіційна картка виробника'),
+  ('magda-546-1-official', 'Magda', 'https://magda.com.ua/uk/catalog/item/5461', 'Модель №546.1', 'verified', now(), 'Офіційна картка виробника'),
+  ('magda-834-1-official', 'Magda', 'https://magda.com.ua/uk/catalog/item/8341', 'Модель №834.1', 'verified', now(), 'Офіційна картка виробника')
+on conflict (product_slug, source_url) do update set verification_status = excluded.verification_status, verified_at = excluded.verified_at, notes = excluded.notes;
+
+insert into public.product_media (product_slug, kind, label, image_path, sort_order, is_active)
+values
+  ('magda-536-1-official', 'gallery', 'Magda Модель №536.1 — фото 1', 'https://magda.com.ua/storage/app/uploads/public/0da/239/747/thumb__0_0_0_0_auto.jpg', 10, true), ('magda-536-1-official', 'gallery', 'Magda Модель №536.1 — фото 2', 'https://magda.com.ua/storage/app/uploads/public/887/ebc/cec/thumb__0_0_0_0_auto.jpg', 20, true), ('magda-536-1-official', 'gallery', 'Magda Модель №536.1 — фото 3', 'https://magda.com.ua/storage/app/uploads/public/391/e04/cec/thumb__0_0_0_0_auto.jpg', 30, true),
+  ('magda-544-1-official', 'gallery', 'Magda Модель №544.1 — фото 1', 'https://magda.com.ua/storage/app/uploads/public/05e/3a8/848/thumb__0_0_0_0_auto.jpg', 10, true), ('magda-544-1-official', 'gallery', 'Magda Модель №544.1 — фото 2', 'https://magda.com.ua/storage/app/uploads/public/344/852/c15/thumb__0_0_0_0_auto.jpg', 20, true), ('magda-544-1-official', 'gallery', 'Magda Модель №544.1 — фото 3', 'https://magda.com.ua/storage/app/uploads/public/e33/828/75a/thumb__0_0_0_0_auto.jpg', 30, true), ('magda-544-1-official', 'gallery', 'Magda Модель №544.1 — фото 4', 'https://magda.com.ua/storage/app/uploads/public/e3f/60f/91e/thumb__0_0_0_0_auto.jpg', 40, true),
+  ('magda-654-1-official', 'gallery', 'Magda Модель №654.1 — фото 1', 'https://magda.com.ua/storage/app/uploads/public/fb5/2c0/b02/thumb__0_0_0_0_auto.jpg', 10, true), ('magda-654-1-official', 'gallery', 'Magda Модель №654.1 — фото 2', 'https://magda.com.ua/storage/app/uploads/public/077/1ed/7d2/thumb__0_0_0_0_auto.jpg', 20, true),
+  ('magda-541-1-official', 'gallery', 'Magda Модель №541.1 — фото 1', 'https://magda.com.ua/storage/app/uploads/public/028/f8d/cf4/thumb__0_0_0_0_auto.jpg', 10, true), ('magda-541-1-official', 'gallery', 'Magda Модель №541.1 — фото 2', 'https://magda.com.ua/storage/app/uploads/public/be7/1f0/f95/thumb__0_0_0_0_auto.jpg', 20, true), ('magda-541-1-official', 'gallery', 'Magda Модель №541.1 — фото 3', 'https://magda.com.ua/storage/app/uploads/public/375/c06/eb2/thumb__0_0_0_0_auto.jpg', 30, true), ('magda-541-1-official', 'gallery', 'Magda Модель №541.1 — фото 4', 'https://magda.com.ua/storage/app/uploads/public/72e/89c/049/thumb__0_0_0_0_auto.jpg', 40, true), ('magda-541-1-official', 'gallery', 'Magda Модель №541.1 — фото 5', 'https://magda.com.ua/storage/app/uploads/public/1ca/aac/34b/thumb__0_0_0_0_auto.jpg', 50, true),
+  ('magda-546-1-official', 'gallery', 'Magda Модель №546.1 — фото 1', 'https://magda.com.ua/storage/app/uploads/public/797/876/e86/thumb__0_0_0_0_auto.jpg', 10, true), ('magda-546-1-official', 'gallery', 'Magda Модель №546.1 — фото 2', 'https://magda.com.ua/storage/app/uploads/public/c5d/983/c98/thumb__0_0_0_0_auto.jpg', 20, true),
+  ('magda-834-1-official', 'gallery', 'Magda Модель №834.1 — фото 1', 'https://magda.com.ua/storage/app/uploads/public/572/d10/33d/thumb__0_0_0_0_auto.jpg', 10, true), ('magda-834-1-official', 'gallery', 'Magda Модель №834.1 — фото 2', 'https://magda.com.ua/storage/app/uploads/public/e5e/fde/442/thumb__0_0_0_0_auto.jpg', 20, true)
+on conflict (product_slug, kind, image_path) do update set label = excluded.label, sort_order = excluded.sort_order, is_active = true;
+
+commit;
+
+select p.slug, p.name as "модель", p.collection as "колекція", p.is_available as "опубліковано", count(distinct m.id) filter (where m.kind = 'gallery' and m.is_active) as "фото_в_галереї", count(distinct s.id) filter (where s.verification_status = 'verified') as "офіційних_джерел"
+from public.products p left join public.product_media m on m.product_slug = p.slug left join public.product_sources s on s.product_slug = p.slug
+where p.slug in ('magda-536-1-official','magda-544-1-official','magda-654-1-official','magda-541-1-official','magda-546-1-official','magda-834-1-official')
+group by p.slug, p.name, p.collection, p.is_available order by p.name;

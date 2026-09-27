@@ -1,0 +1,1367 @@
+[
+  {
+    "code": "LN1",
+    "slug": "rodos-official-9fntu5",
+    "url": "https://rodos.ua/mezhkomnatnaya-dver-linea-1",
+    "colors": [
+      {
+        "label": "Білий мат",
+        "swatch": "https://rodos.ua/image/cache/catalog/colors/belyjmat-100x100.png"
+      },
+      {
+        "label": "Колір RAL 1013",
+        "swatch": "https://rodos.ua/image/cache/catalog/1013-1762857295-100x100-1762861337-100x100.jpg"
+      },
+      {
+        "label": "Колір RAL 1015",
+        "swatch": "https://rodos.ua/image/cache/catalog/1015-1762857336-100x100-1762861339-100x100.jpg"
+      },
+      {
+        "label": "Колір RAL 1019",
+        "swatch": "https://rodos.ua/image/cache/catalog/1019-1762857333-100x100-1762861342-100x100.jpg"
+      },
+      {
+        "label": "Колір RAL 4001",
+        "swatch": "https://rodos.ua/image/cache/catalog/4001-1762857330-100x100-1762861344-100x100.jpg"
+      },
+      {
+        "label": "Колір RAL 5010",
+        "swatch": "https://rodos.ua/image/cache/catalog/5010-1762857328-100x100-1762861347-100x100.jpg"
+      },
+      {
+        "label": "Колір RAL 5012",
+        "swatch": "https://rodos.ua/image/cache/catalog/RAL%205012-1570783791-100x100-1762861351-100x100.jpg"
+      },
+      {
+        "label": "Колір RAL 5014",
+        "swatch": "https://rodos.ua/image/cache/catalog/5014-1762857325-100x100-1762861356-100x100.jpg"
+      },
+      {
+        "label": "Колір RAL 5022",
+        "swatch": "https://rodos.ua/image/cache/catalog/5022-1762857322-100x100-1762861358-100x100.jpg"
+      },
+      {
+        "label": "Колір RAL 5024",
+        "swatch": "https://rodos.ua/image/cache/catalog/5024-1762857319-100x100-1762861360-100x100.jpg"
+      },
+      {
+        "label": "Колір RAL 6019",
+        "swatch": "https://rodos.ua/image/cache/catalog/6019-1762857315-100x100-1762861363-100x100.jpg"
+      },
+      {
+        "label": "Колір RAL 7037",
+        "swatch": "https://rodos.ua/image/cache/catalog/7037-1762857313-100x100-1762861369-100x100.jpg"
+      },
+      {
+        "label": "Колір RAL 7040",
+        "swatch": "https://rodos.ua/image/cache/catalog/7040-1762857310-100x100-1762861373-100x100.jpg"
+      },
+      {
+        "label": "Колір RAL 7047",
+        "swatch": "https://rodos.ua/image/cache/catalog/7047-1762857307-100x100-1762861377-100x100.jpg"
+      },
+      {
+        "label": "Колір RAL 8014",
+        "swatch": "https://rodos.ua/image/cache/catalog/8014-1762857304-100x100-1762861379-100x100.jpg"
+      },
+      {
+        "label": "Колір RAL 9001",
+        "swatch": "https://rodos.ua/image/cache/catalog/9001-1762857302-100x100-1762861383-100x100.jpg"
+      },
+      {
+        "label": "Колір RAL 9004",
+        "swatch": "https://rodos.ua/image/cache/catalog/9004-1762857299-100x100-1762861386-100x100.jpg"
+      },
+      {
+        "label": "Колір RAL 9010",
+        "swatch": "https://rodos.ua/image/cache/catalog/9010-1762857341-100x100-1762861389-100x100.jpg"
+      }
+    ],
+    "configurations": [
+      "Глухе"
+    ],
+    "variants": [
+      {
+        "color": "Білий мат",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/L1%200-1727853948-1000x1000.jpg"
+      },
+      {
+        "color": "Колір RAL 1013",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/L1%201-1727853951-1000x1000.jpg"
+      },
+      {
+        "color": "Колір RAL 1015",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/L1%2016-1727853973-1000x1000.jpg"
+      },
+      {
+        "color": "Колір RAL 1019",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/L1%202-1727854141-1000x1000.jpg"
+      },
+      {
+        "color": "Колір RAL 4001",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/L1%2017-1727854154-1000x1000.jpg"
+      },
+      {
+        "color": "Колір RAL 5010",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/L1%2014-1727854167-1000x1000.jpg"
+      },
+      {
+        "color": "Колір RAL 5012",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/L1%2010-1727854175-1000x1000.jpg"
+      },
+      {
+        "color": "Колір RAL 5014",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/L1%2011-1727854196-1000x1000.jpg"
+      },
+      {
+        "color": "Колір RAL 5022",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/L1%2012-1727854204-1000x1000.jpg"
+      },
+      {
+        "color": "Колір RAL 5024",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/L1%209-1727854213-1000x1000.jpg"
+      },
+      {
+        "color": "Колір RAL 6019",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/L1%207-1727854219-1000x1000.jpg"
+      },
+      {
+        "color": "Колір RAL 7037",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/L1%208-1727854235-1000x1000.jpg"
+      },
+      {
+        "color": "Колір RAL 7040",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/L1%203-1727854243-1000x1000.jpg"
+      },
+      {
+        "color": "Колір RAL 7047",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/L1%205-1727854255-1000x1000.jpg"
+      },
+      {
+        "color": "Колір RAL 8014",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/L1%2013-1727854260-1000x1000.jpg"
+      },
+      {
+        "color": "Колір RAL 9001",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/L1%206-1727854274-1000x1000.jpg"
+      },
+      {
+        "color": "Колір RAL 9004",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/L1%2015-1727854289-1000x1000.jpg"
+      },
+      {
+        "color": "Колір RAL 9010",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/L1%204-1727854535-1000x1000.jpg"
+      }
+    ]
+  },
+  {
+    "code": "LN2",
+    "slug": "rodos-official-9fntu6",
+    "url": "https://rodos.ua/mezhkomnatnaya-dver-linea-2",
+    "colors": [
+      {
+        "label": "Білий мат",
+        "swatch": "https://rodos.ua/image/cache/catalog/colors/belyjmat-100x100.png"
+      },
+      {
+        "label": "Колір RAL 1013",
+        "swatch": "https://rodos.ua/image/cache/catalog/1013-1762857295-100x100-1762861337-100x100.jpg"
+      },
+      {
+        "label": "Колір RAL 1015",
+        "swatch": "https://rodos.ua/image/cache/catalog/1015-1762857336-100x100-1762861339-100x100.jpg"
+      },
+      {
+        "label": "Колір RAL 1019",
+        "swatch": "https://rodos.ua/image/cache/catalog/1019-1762857333-100x100-1762861342-100x100.jpg"
+      },
+      {
+        "label": "Колір RAL 4001",
+        "swatch": "https://rodos.ua/image/cache/catalog/4001-1762857330-100x100-1762861344-100x100.jpg"
+      },
+      {
+        "label": "Колір RAL 5010",
+        "swatch": "https://rodos.ua/image/cache/catalog/5010-1762857328-100x100-1762861347-100x100.jpg"
+      },
+      {
+        "label": "Колір RAL 5012",
+        "swatch": "https://rodos.ua/image/cache/catalog/RAL%205012-1570783791-100x100-1762861351-100x100.jpg"
+      },
+      {
+        "label": "Колір RAL 5014",
+        "swatch": "https://rodos.ua/image/cache/catalog/5014-1762857325-100x100-1762861356-100x100.jpg"
+      },
+      {
+        "label": "Колір RAL 5022",
+        "swatch": "https://rodos.ua/image/cache/catalog/5022-1762857322-100x100-1762861358-100x100.jpg"
+      },
+      {
+        "label": "Колір RAL 5024",
+        "swatch": "https://rodos.ua/image/cache/catalog/5024-1762857319-100x100-1762861360-100x100.jpg"
+      },
+      {
+        "label": "Колір RAL 6019",
+        "swatch": "https://rodos.ua/image/cache/catalog/6019-1762857315-100x100-1762861363-100x100.jpg"
+      },
+      {
+        "label": "Колір RAL 7037",
+        "swatch": "https://rodos.ua/image/cache/catalog/7037-1762857313-100x100-1762861369-100x100.jpg"
+      },
+      {
+        "label": "Колір RAL 7040",
+        "swatch": "https://rodos.ua/image/cache/catalog/7040-1762857310-100x100-1762861373-100x100.jpg"
+      },
+      {
+        "label": "Колір RAL 7047",
+        "swatch": "https://rodos.ua/image/cache/catalog/7047-1762857307-100x100-1762861377-100x100.jpg"
+      },
+      {
+        "label": "Колір RAL 8014",
+        "swatch": "https://rodos.ua/image/cache/catalog/8014-1762857304-100x100-1762861379-100x100.jpg"
+      },
+      {
+        "label": "Колір RAL 9001",
+        "swatch": "https://rodos.ua/image/cache/catalog/9001-1762857302-100x100-1762861383-100x100.jpg"
+      },
+      {
+        "label": "Колір RAL 9004",
+        "swatch": "https://rodos.ua/image/cache/catalog/9004-1762857299-100x100-1762861386-100x100.jpg"
+      },
+      {
+        "label": "Колір RAL 9010",
+        "swatch": "https://rodos.ua/image/cache/catalog/9010-1762857341-100x100-1762861389-100x100.jpg"
+      }
+    ],
+    "configurations": [
+      "Глухе"
+    ],
+    "variants": [
+      {
+        "color": "Білий мат",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/L2%200-1727855150-1000x1000.jpg"
+      },
+      {
+        "color": "Колір RAL 1013",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/L2%203-1727855158-1000x1000.jpg"
+      },
+      {
+        "color": "Колір RAL 1015",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/L2%2015-1727855168-1000x1000.jpg"
+      },
+      {
+        "color": "Колір RAL 1019",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/L2%201-1727855178-1000x1000.jpg"
+      },
+      {
+        "color": "Колір RAL 4001",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/L2%202-1727855201-1000x1000.jpg"
+      },
+      {
+        "color": "Колір RAL 5010",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/L2%2013-1727855206-1000x1000.jpg"
+      },
+      {
+        "color": "Колір RAL 5012",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/L2%209-1727855215-1000x1000.jpg"
+      },
+      {
+        "color": "Колір RAL 5014",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/L2%2010-1727855220-1000x1000.jpg"
+      },
+      {
+        "color": "Колір RAL 5022",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/L2%2011-1727855229-1000x1000.jpg"
+      },
+      {
+        "color": "Колір RAL 5024",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/L2%208-1727855238-1000x1000.jpg"
+      },
+      {
+        "color": "Колір RAL 6019",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/L2%206-1727855246-1000x1000.jpg"
+      },
+      {
+        "color": "Колір RAL 7037",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/L2%207-1727855301-1000x1000.jpg"
+      },
+      {
+        "color": "Колір RAL 7040",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/L2%205-1727855310-1000x1000.jpg"
+      },
+      {
+        "color": "Колір RAL 7047",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/L2%204-1727855316-1000x1000.jpg"
+      },
+      {
+        "color": "Колір RAL 8014",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/L2%2012-1727855331-1000x1000.jpg"
+      },
+      {
+        "color": "Колір RAL 9001",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/L2%203-1727855365-1000x1000.jpg"
+      },
+      {
+        "color": "Колір RAL 9004",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/L2%2014-1727855373-1000x1000.jpg"
+      },
+      {
+        "color": "Колір RAL 9010",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/L2%2016-1727855381-1000x1000.jpg"
+      }
+    ]
+  },
+  {
+    "code": "LN3",
+    "slug": "rodos-official-9fntu7",
+    "url": "https://rodos.ua/mezhkomnatnaya-dver-linea-3",
+    "colors": [
+      {
+        "label": "Білий мат",
+        "swatch": "https://rodos.ua/image/cache/catalog/colors/belyjmat-100x100.png"
+      },
+      {
+        "label": "Колір RAL 1013",
+        "swatch": "https://rodos.ua/image/cache/catalog/1013-1762857295-100x100-1762861337-100x100.jpg"
+      },
+      {
+        "label": "Колір RAL 1015",
+        "swatch": "https://rodos.ua/image/cache/catalog/1015-1762857336-100x100-1762861339-100x100.jpg"
+      },
+      {
+        "label": "Колір RAL 1019",
+        "swatch": "https://rodos.ua/image/cache/catalog/1019-1762857333-100x100-1762861342-100x100.jpg"
+      },
+      {
+        "label": "Колір RAL 4001",
+        "swatch": "https://rodos.ua/image/cache/catalog/4001-1762857330-100x100-1762861344-100x100.jpg"
+      },
+      {
+        "label": "Колір RAL 5010",
+        "swatch": "https://rodos.ua/image/cache/catalog/5010-1762857328-100x100-1762861347-100x100.jpg"
+      },
+      {
+        "label": "Колір RAL 5012",
+        "swatch": "https://rodos.ua/image/cache/catalog/RAL%205012-1570783791-100x100-1762861351-100x100.jpg"
+      },
+      {
+        "label": "Колір RAL 5014",
+        "swatch": "https://rodos.ua/image/cache/catalog/5014-1762857325-100x100-1762861356-100x100.jpg"
+      },
+      {
+        "label": "Колір RAL 5022",
+        "swatch": "https://rodos.ua/image/cache/catalog/5022-1762857322-100x100-1762861358-100x100.jpg"
+      },
+      {
+        "label": "Колір RAL 5024",
+        "swatch": "https://rodos.ua/image/cache/catalog/5024-1762857319-100x100-1762861360-100x100.jpg"
+      },
+      {
+        "label": "Колір RAL 6019",
+        "swatch": "https://rodos.ua/image/cache/catalog/6019-1762857315-100x100-1762861363-100x100.jpg"
+      },
+      {
+        "label": "Колір RAL 7037",
+        "swatch": "https://rodos.ua/image/cache/catalog/7037-1762857313-100x100-1762861369-100x100.jpg"
+      },
+      {
+        "label": "Колір RAL 7040",
+        "swatch": "https://rodos.ua/image/cache/catalog/7040-1762857310-100x100-1762861373-100x100.jpg"
+      },
+      {
+        "label": "Колір RAL 7047",
+        "swatch": "https://rodos.ua/image/cache/catalog/7047-1762857307-100x100-1762861377-100x100.jpg"
+      },
+      {
+        "label": "Колір RAL 8014",
+        "swatch": "https://rodos.ua/image/cache/catalog/8014-1762857304-100x100-1762861379-100x100.jpg"
+      },
+      {
+        "label": "Колір RAL 9001",
+        "swatch": "https://rodos.ua/image/cache/catalog/9001-1762857302-100x100-1762861383-100x100.jpg"
+      },
+      {
+        "label": "Колір RAL 9004",
+        "swatch": "https://rodos.ua/image/cache/catalog/9004-1762857299-100x100-1762861386-100x100.jpg"
+      },
+      {
+        "label": "Колір RAL 9010",
+        "swatch": "https://rodos.ua/image/cache/catalog/9010-1762857341-100x100-1762861389-100x100.jpg"
+      }
+    ],
+    "configurations": [
+      "Глухе"
+    ],
+    "variants": [
+      {
+        "color": "Білий мат",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/L3%2000-1727857969-1000x1000.jpg"
+      },
+      {
+        "color": "Колір RAL 1013",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/L3%201-1727857980-1000x1000.jpg"
+      },
+      {
+        "color": "Колір RAL 1015",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/L3%2015-1727857991-1000x1000.jpg"
+      },
+      {
+        "color": "Колір RAL 1019",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/L3%202-1727857999-1000x1000.jpg"
+      },
+      {
+        "color": "Колір RAL 4001",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/L3%2017-1727858006-1000x1000.jpg"
+      },
+      {
+        "color": "Колір RAL 5010",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/L3%2013-1727858074-1000x1000.jpg"
+      },
+      {
+        "color": "Колір RAL 5012",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/L3%2011-1727858080-1000x1000.jpg"
+      },
+      {
+        "color": "Колір RAL 5014",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/L3%2010-1727858088-1000x1000.jpg"
+      },
+      {
+        "color": "Колір RAL 5022",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/L3%209-1727858095-1000x1000.jpg"
+      },
+      {
+        "color": "Колір RAL 5024",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/L3%206-1727858103-1000x1000.jpg"
+      },
+      {
+        "color": "Колір RAL 6019",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/L3%208-1727858111-1000x1000.jpg"
+      },
+      {
+        "color": "Колір RAL 7037",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/L3%207-1727858117-1000x1000.jpg"
+      },
+      {
+        "color": "Колір RAL 7040",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/L3%205-1727858124-1000x1000.jpg"
+      },
+      {
+        "color": "Колір RAL 7047",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/L3%204-1727858135-1000x1000.jpg"
+      },
+      {
+        "color": "Колір RAL 8014",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/L3%2012-1727858141-1000x1000.jpg"
+      },
+      {
+        "color": "Колір RAL 9001",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/L3%200-1727858182-1000x1000.jpg"
+      },
+      {
+        "color": "Колір RAL 9004",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/L3%2014-1727858190-1000x1000.jpg"
+      },
+      {
+        "color": "Колір RAL 9010",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/L3%2016-1727858205-1000x1000.jpg"
+      }
+    ]
+  },
+  {
+    "code": "LN4",
+    "slug": "rodos-official-9fntu0",
+    "url": "https://rodos.ua/mezhkomnatnaya-dver-linea-4",
+    "colors": [
+      {
+        "label": "Білий мат",
+        "swatch": "https://rodos.ua/image/cache/catalog/colors/belyjmat-100x100.png"
+      },
+      {
+        "label": "Колір RAL 1013",
+        "swatch": "https://rodos.ua/image/cache/catalog/1013-1762857295-100x100-1762861337-100x100.jpg"
+      },
+      {
+        "label": "Колір RAL 1015",
+        "swatch": "https://rodos.ua/image/cache/catalog/1015-1762857336-100x100-1762861339-100x100.jpg"
+      },
+      {
+        "label": "Колір RAL 1019",
+        "swatch": "https://rodos.ua/image/cache/catalog/1019-1762857333-100x100-1762861342-100x100.jpg"
+      },
+      {
+        "label": "Колір RAL 4001",
+        "swatch": "https://rodos.ua/image/cache/catalog/4001-1762857330-100x100-1762861344-100x100.jpg"
+      },
+      {
+        "label": "Колір RAL 5010",
+        "swatch": "https://rodos.ua/image/cache/catalog/5010-1762857328-100x100-1762861347-100x100.jpg"
+      },
+      {
+        "label": "Колір RAL 5012",
+        "swatch": "https://rodos.ua/image/cache/catalog/RAL%205012-1570783791-100x100-1762861351-100x100.jpg"
+      },
+      {
+        "label": "Колір RAL 5014",
+        "swatch": "https://rodos.ua/image/cache/catalog/5014-1762857325-100x100-1762861356-100x100.jpg"
+      },
+      {
+        "label": "Колір RAL 5022",
+        "swatch": "https://rodos.ua/image/cache/catalog/5022-1762857322-100x100-1762861358-100x100.jpg"
+      },
+      {
+        "label": "Колір RAL 5024",
+        "swatch": "https://rodos.ua/image/cache/catalog/5024-1762857319-100x100-1762861360-100x100.jpg"
+      },
+      {
+        "label": "Колір RAL 7037",
+        "swatch": "https://rodos.ua/image/cache/catalog/7037-1762857313-100x100-1762861369-100x100.jpg"
+      },
+      {
+        "label": "Колір RAL 7040",
+        "swatch": "https://rodos.ua/image/cache/catalog/7040-1762857310-100x100-1762861373-100x100.jpg"
+      },
+      {
+        "label": "Колір RAL 7047",
+        "swatch": "https://rodos.ua/image/cache/catalog/7047-1762857307-100x100-1762861377-100x100.jpg"
+      },
+      {
+        "label": "Колір RAL 8014",
+        "swatch": "https://rodos.ua/image/cache/catalog/8014-1762857304-100x100-1762861379-100x100.jpg"
+      },
+      {
+        "label": "Колір RAL 9001",
+        "swatch": "https://rodos.ua/image/cache/catalog/9001-1762857302-100x100-1762861383-100x100.jpg"
+      },
+      {
+        "label": "Колір RAL 9004",
+        "swatch": "https://rodos.ua/image/cache/catalog/9004-1762857299-100x100-1762861386-100x100.jpg"
+      },
+      {
+        "label": "Колір RAL 9010",
+        "swatch": "https://rodos.ua/image/cache/catalog/9010-1762857341-100x100-1762861389-100x100.jpg"
+      }
+    ],
+    "configurations": [
+      "Глухе"
+    ],
+    "variants": [
+      {
+        "color": "Білий мат",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/L4%200-1727858747-1000x1000.jpg"
+      },
+      {
+        "color": "Колір RAL 1013",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/L4%203-1727858766-1000x1000.jpg"
+      },
+      {
+        "color": "Колір RAL 1015",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/L4%2014-1727858776-1000x1000.jpg"
+      },
+      {
+        "color": "Колір RAL 1019",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/L4%201-1727858908-1000x1000.jpg"
+      },
+      {
+        "color": "Колір RAL 4001",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/L4%202-1727858915-1000x1000.jpg"
+      },
+      {
+        "color": "Колір RAL 5010",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/L4%2012-1727858926-1000x1000.jpg"
+      },
+      {
+        "color": "Колір RAL 5012",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/L4%2010-1727858942-1000x1000.jpg"
+      },
+      {
+        "color": "Колір RAL 5014",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/L4%209-1727858949-1000x1000.jpg"
+      },
+      {
+        "color": "Колір RAL 5022",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/L4%208-1727858956-1000x1000.jpg"
+      },
+      {
+        "color": "Колір RAL 5024",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/L4%207-1727858981-1000x1000.jpg"
+      },
+      {
+        "color": "Колір RAL 7037",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/L4%206-1727859046-1000x1000.jpg"
+      },
+      {
+        "color": "Колір RAL 7040",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/L4%205-1727859055-1000x1000.jpg"
+      },
+      {
+        "color": "Колір RAL 7047",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/L4%2015-1727859063-1000x1000.jpg"
+      },
+      {
+        "color": "Колір RAL 8014",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/L4%2011-1727859072-1000x1000.jpg"
+      },
+      {
+        "color": "Колір RAL 9001",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/L4%2015-1727859092-1000x1000.jpg"
+      },
+      {
+        "color": "Колір RAL 9004",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/L4%2013-1727859099-1000x1000.jpg"
+      },
+      {
+        "color": "Колір RAL 9010",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/L4%2016-1727859112-1000x1000.jpg"
+      }
+    ]
+  },
+  {
+    "code": "LN5",
+    "slug": "rodos-official-9fntu1",
+    "url": "https://rodos.ua/mezhkomnatnaya-dver-linea-5",
+    "colors": [
+      {
+        "label": "Білий мат",
+        "swatch": "https://rodos.ua/image/cache/catalog/colors/belyjmat-100x100.png"
+      },
+      {
+        "label": "Колір RAL 1013",
+        "swatch": "https://rodos.ua/image/cache/catalog/1013-1762857295-100x100-1762861337-100x100.jpg"
+      },
+      {
+        "label": "Колір RAL 1015",
+        "swatch": "https://rodos.ua/image/cache/catalog/1015-1762857336-100x100-1762861339-100x100.jpg"
+      },
+      {
+        "label": "Колір RAL 1019",
+        "swatch": "https://rodos.ua/image/cache/catalog/1019-1762857333-100x100-1762861342-100x100.jpg"
+      },
+      {
+        "label": "Колір RAL 5010",
+        "swatch": "https://rodos.ua/image/cache/catalog/5010-1762857328-100x100-1762861347-100x100.jpg"
+      },
+      {
+        "label": "Колір RAL 5012",
+        "swatch": "https://rodos.ua/image/cache/catalog/RAL%205012-1570783791-100x100-1762861351-100x100.jpg"
+      },
+      {
+        "label": "Колір RAL 5014",
+        "swatch": "https://rodos.ua/image/cache/catalog/5014-1762857325-100x100-1762861356-100x100.jpg"
+      },
+      {
+        "label": "Колір RAL 5022",
+        "swatch": "https://rodos.ua/image/cache/catalog/5022-1762857322-100x100-1762861358-100x100.jpg"
+      },
+      {
+        "label": "Колір RAL 5024",
+        "swatch": "https://rodos.ua/image/cache/catalog/5024-1762857319-100x100-1762861360-100x100.jpg"
+      },
+      {
+        "label": "Колір RAL 6019",
+        "swatch": "https://rodos.ua/image/cache/catalog/6019-1762857315-100x100-1762861363-100x100.jpg"
+      },
+      {
+        "label": "Колір RAL 7037",
+        "swatch": "https://rodos.ua/image/cache/catalog/7037-1762857313-100x100-1762861369-100x100.jpg"
+      },
+      {
+        "label": "Колір RAL 7040",
+        "swatch": "https://rodos.ua/image/cache/catalog/7040-1762857310-100x100-1762861373-100x100.jpg"
+      },
+      {
+        "label": "Колір RAL 7047",
+        "swatch": "https://rodos.ua/image/cache/catalog/7047-1762857307-100x100-1762861377-100x100.jpg"
+      },
+      {
+        "label": "Колір RAL 8014",
+        "swatch": "https://rodos.ua/image/cache/catalog/8014-1762857304-100x100-1762861379-100x100.jpg"
+      },
+      {
+        "label": "Колір RAL 9001",
+        "swatch": "https://rodos.ua/image/cache/catalog/9001-1762857302-100x100-1762861383-100x100.jpg"
+      },
+      {
+        "label": "Колір RAL 9004",
+        "swatch": "https://rodos.ua/image/cache/catalog/9004-1762857299-100x100-1762861386-100x100.jpg"
+      },
+      {
+        "label": "Колір RAL 9010",
+        "swatch": "https://rodos.ua/image/cache/catalog/9010-1762857341-100x100-1762861389-100x100.jpg"
+      }
+    ],
+    "configurations": [
+      "Глухе"
+    ],
+    "variants": [
+      {
+        "color": "Білий мат",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/L5%200-1727860543-1000x1000.jpg"
+      },
+      {
+        "color": "Колір RAL 1013",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/L5%201-1727860555-1000x1000.jpg"
+      },
+      {
+        "color": "Колір RAL 1015",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/L5%2011-1727860567-1000x1000.jpg"
+      },
+      {
+        "color": "Колір RAL 1019",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/L5%202-1727860575-1000x1000.jpg"
+      },
+      {
+        "color": "Колір RAL 5010",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/L5%2014-1727860589-1000x1000.jpg"
+      },
+      {
+        "color": "Колір RAL 5012",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/L5%2012-1727860601-1000x1000.jpg"
+      },
+      {
+        "color": "Колір RAL 5014",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/L5%2010-1727860613-1000x1000.jpg"
+      },
+      {
+        "color": "Колір RAL 5022",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/L5%209-1727860625-1000x1000.jpg"
+      },
+      {
+        "color": "Колір RAL 5024",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/L5%206-1727860641-1000x1000.jpg"
+      },
+      {
+        "color": "Колір RAL 6019",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/L5%208-1727860650-1000x1000.jpg"
+      },
+      {
+        "color": "Колір RAL 7037",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/L5%207-1727860657-1000x1000.jpg"
+      },
+      {
+        "color": "Колір RAL 7040",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/L5%205-1727860669-1000x1000.jpg"
+      },
+      {
+        "color": "Колір RAL 7047",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/L5%204-1727860682-1000x1000.jpg"
+      },
+      {
+        "color": "Колір RAL 8014",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/L5%2013-1727860690-1000x1000.jpg"
+      },
+      {
+        "color": "Колір RAL 9001",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/L5%2015-1727860697-1000x1000.jpg"
+      },
+      {
+        "color": "Колір RAL 9004",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/L5%2016-1727860704-1000x1000.jpg"
+      },
+      {
+        "color": "Колір RAL 9010",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/L5%2017-1727860710-1000x1000.jpg"
+      }
+    ]
+  },
+  {
+    "code": "LN6",
+    "slug": "rodos-official-9fntu2",
+    "url": "https://rodos.ua/mezhkomnatnaya-dver-linea-6",
+    "colors": [
+      {
+        "label": "Білий мат",
+        "swatch": "https://rodos.ua/image/cache/catalog/colors/belyjmat-100x100.png"
+      },
+      {
+        "label": "Колір RAL 1013",
+        "swatch": "https://rodos.ua/image/cache/catalog/1013-1762857295-100x100-1762861337-100x100.jpg"
+      },
+      {
+        "label": "Колір RAL 1015",
+        "swatch": "https://rodos.ua/image/cache/catalog/1015-1762857336-100x100-1762861339-100x100.jpg"
+      },
+      {
+        "label": "Колір RAL 1019",
+        "swatch": "https://rodos.ua/image/cache/catalog/1019-1762857333-100x100-1762861342-100x100.jpg"
+      },
+      {
+        "label": "Колір RAL 4001",
+        "swatch": "https://rodos.ua/image/cache/catalog/4001-1762857330-100x100-1762861344-100x100.jpg"
+      },
+      {
+        "label": "Колір RAL 5010",
+        "swatch": "https://rodos.ua/image/cache/catalog/5010-1762857328-100x100-1762861347-100x100.jpg"
+      },
+      {
+        "label": "Колір RAL 5012",
+        "swatch": "https://rodos.ua/image/cache/catalog/RAL%205012-1570783791-100x100-1762861351-100x100.jpg"
+      },
+      {
+        "label": "Колір RAL 5014",
+        "swatch": "https://rodos.ua/image/cache/catalog/5014-1762857325-100x100-1762861356-100x100.jpg"
+      },
+      {
+        "label": "Колір RAL 5022",
+        "swatch": "https://rodos.ua/image/cache/catalog/5022-1762857322-100x100-1762861358-100x100.jpg"
+      },
+      {
+        "label": "Колір RAL 5024",
+        "swatch": "https://rodos.ua/image/cache/catalog/5024-1762857319-100x100-1762861360-100x100.jpg"
+      },
+      {
+        "label": "Колір RAL 6019",
+        "swatch": "https://rodos.ua/image/cache/catalog/6019-1762857315-100x100-1762861363-100x100.jpg"
+      },
+      {
+        "label": "Колір RAL 7037",
+        "swatch": "https://rodos.ua/image/cache/catalog/7037-1762857313-100x100-1762861369-100x100.jpg"
+      },
+      {
+        "label": "Колір RAL 7040",
+        "swatch": "https://rodos.ua/image/cache/catalog/7040-1762857310-100x100-1762861373-100x100.jpg"
+      },
+      {
+        "label": "Колір RAL 7047",
+        "swatch": "https://rodos.ua/image/cache/catalog/7047-1762857307-100x100-1762861377-100x100.jpg"
+      },
+      {
+        "label": "Колір RAL 8014",
+        "swatch": "https://rodos.ua/image/cache/catalog/8014-1762857304-100x100-1762861379-100x100.jpg"
+      },
+      {
+        "label": "Колір RAL 9001",
+        "swatch": "https://rodos.ua/image/cache/catalog/9001-1762857302-100x100-1762861383-100x100.jpg"
+      },
+      {
+        "label": "Колір RAL 9004",
+        "swatch": "https://rodos.ua/image/cache/catalog/9004-1762857299-100x100-1762861386-100x100.jpg"
+      },
+      {
+        "label": "Колір RAL 9010",
+        "swatch": "https://rodos.ua/image/cache/catalog/9010-1762857341-100x100-1762861389-100x100.jpg"
+      }
+    ],
+    "configurations": [
+      "Глухе"
+    ],
+    "variants": [
+      {
+        "color": "Білий мат",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/L6%200-1727861726-1000x1000.jpg"
+      },
+      {
+        "color": "Колір RAL 1013",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/L6%201-1727861733-1000x1000.jpg"
+      },
+      {
+        "color": "Колір RAL 1015",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/L6%2016-1727861772-1000x1000.jpg"
+      },
+      {
+        "color": "Колір RAL 1019",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/L6%202-1727861781-1000x1000.jpg"
+      },
+      {
+        "color": "Колір RAL 4001",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/L6%203-1727861788-1000x1000.jpg"
+      },
+      {
+        "color": "Колір RAL 5010",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/L6%2014-1727862221-1000x1000.jpg"
+      },
+      {
+        "color": "Колір RAL 5012",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/L6%2010-1727862233-1000x1000.jpg"
+      },
+      {
+        "color": "Колір RAL 5014",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/L6%2011-1727863778-1000x1000.jpg"
+      },
+      {
+        "color": "Колір RAL 5022",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/L6%2012-1727863783-1000x1000.jpg"
+      },
+      {
+        "color": "Колір RAL 5024",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/L6%209-1727863791-1000x1000.jpg"
+      },
+      {
+        "color": "Колір RAL 6019",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/L6%207-1727863802-1000x1000.jpg"
+      },
+      {
+        "color": "Колір RAL 7037",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/L6%208-1727863896-1000x1000.jpg"
+      },
+      {
+        "color": "Колір RAL 7040",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/L6%204-1727863907-1000x1000.jpg"
+      },
+      {
+        "color": "Колір RAL 7047",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/L6%205-1727863915-1000x1000.jpg"
+      },
+      {
+        "color": "Колір RAL 8014",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/L6%2013-1727863923-1000x1000.jpg"
+      },
+      {
+        "color": "Колір RAL 9001",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/L6%200-1727863938-1000x1000.jpg"
+      },
+      {
+        "color": "Колір RAL 9004",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/L6%2015-1727863949-1000x1000.jpg"
+      },
+      {
+        "color": "Колір RAL 9010",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/L6%2017-1727863957-1000x1000.jpg"
+      }
+    ]
+  },
+  {
+    "code": "LN7",
+    "slug": "rodos-official-9fntu3",
+    "url": "https://rodos.ua/mezhkomnatnaya-dver-linea-7",
+    "colors": [
+      {
+        "label": "Білий мат",
+        "swatch": "https://rodos.ua/image/cache/catalog/colors/belyjmat-100x100.png"
+      },
+      {
+        "label": "Колір RAL 1013",
+        "swatch": "https://rodos.ua/image/cache/catalog/1013-1762857295-100x100-1762861337-100x100.jpg"
+      },
+      {
+        "label": "Колір RAL 1015",
+        "swatch": "https://rodos.ua/image/cache/catalog/1015-1762857336-100x100-1762861339-100x100.jpg"
+      },
+      {
+        "label": "Колір RAL 1019",
+        "swatch": "https://rodos.ua/image/cache/catalog/1019-1762857333-100x100-1762861342-100x100.jpg"
+      },
+      {
+        "label": "Колір RAL 4001",
+        "swatch": "https://rodos.ua/image/cache/catalog/4001-1762857330-100x100-1762861344-100x100.jpg"
+      },
+      {
+        "label": "Колір RAL 5010",
+        "swatch": "https://rodos.ua/image/cache/catalog/5010-1762857328-100x100-1762861347-100x100.jpg"
+      },
+      {
+        "label": "Колір RAL 5012",
+        "swatch": "https://rodos.ua/image/cache/catalog/RAL%205012-1570783791-100x100-1762861351-100x100.jpg"
+      },
+      {
+        "label": "Колір RAL 5014",
+        "swatch": "https://rodos.ua/image/cache/catalog/5014-1762857325-100x100-1762861356-100x100.jpg"
+      },
+      {
+        "label": "Колір RAL 5024",
+        "swatch": "https://rodos.ua/image/cache/catalog/5024-1762857319-100x100-1762861360-100x100.jpg"
+      },
+      {
+        "label": "Колір RAL 6019",
+        "swatch": "https://rodos.ua/image/cache/catalog/6019-1762857315-100x100-1762861363-100x100.jpg"
+      },
+      {
+        "label": "Колір RAL 7037",
+        "swatch": "https://rodos.ua/image/cache/catalog/7037-1762857313-100x100-1762861369-100x100.jpg"
+      },
+      {
+        "label": "Колір RAL 7040",
+        "swatch": "https://rodos.ua/image/cache/catalog/7040-1762857310-100x100-1762861373-100x100.jpg"
+      },
+      {
+        "label": "Колір RAL 7047",
+        "swatch": "https://rodos.ua/image/cache/catalog/7047-1762857307-100x100-1762861377-100x100.jpg"
+      },
+      {
+        "label": "Колір RAL 8014",
+        "swatch": "https://rodos.ua/image/cache/catalog/8014-1762857304-100x100-1762861379-100x100.jpg"
+      },
+      {
+        "label": "Колір RAL 9001",
+        "swatch": "https://rodos.ua/image/cache/catalog/9001-1762857302-100x100-1762861383-100x100.jpg"
+      },
+      {
+        "label": "Колір RAL 9004",
+        "swatch": "https://rodos.ua/image/cache/catalog/9004-1762857299-100x100-1762861386-100x100.jpg"
+      },
+      {
+        "label": "Колір RAL 9010",
+        "swatch": "https://rodos.ua/image/cache/catalog/9010-1762857341-100x100-1762861389-100x100.jpg"
+      }
+    ],
+    "configurations": [
+      "Глухе"
+    ],
+    "variants": [
+      {
+        "color": "Білий мат",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/L7%200-1727865268-1000x1000.jpg"
+      },
+      {
+        "color": "Колір RAL 1013",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/L7%201-1727865284-1000x1000.jpg"
+      },
+      {
+        "color": "Колір RAL 1015",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/L7%202-1727865313-1000x1000.jpg"
+      },
+      {
+        "color": "Колір RAL 1019",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/L7%204-1727865324-1000x1000.jpg"
+      },
+      {
+        "color": "Колір RAL 4001",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/L7%2018-1727865330-1000x1000.jpg"
+      },
+      {
+        "color": "Колір RAL 5010",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/L7%205-1727865337-1000x1000.jpg"
+      },
+      {
+        "color": "Колір RAL 5012",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/L7%207-1727865342-1000x1000.jpg"
+      },
+      {
+        "color": "Колір RAL 5014",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/L7%208-1727865355-1000x1000.jpg"
+      },
+      {
+        "color": "Колір RAL 5024",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/L7%206-1727865385-1000x1000.jpg"
+      },
+      {
+        "color": "Колір RAL 6019",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/L7%209-1727865418-1000x1000.jpg"
+      },
+      {
+        "color": "Колір RAL 7037",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/L7%2010-1727865456-1000x1000.jpg"
+      },
+      {
+        "color": "Колір RAL 7040",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/L7%2011-1727865466-1000x1000.jpg"
+      },
+      {
+        "color": "Колір RAL 7047",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/L7%2012-1727865476-1000x1000.jpg"
+      },
+      {
+        "color": "Колір RAL 8014",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/L7%2013-1727865482-1000x1000.jpg"
+      },
+      {
+        "color": "Колір RAL 9001",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/L7%2016-1727865507-1000x1000.jpg"
+      },
+      {
+        "color": "Колір RAL 9004",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/L7%2015-1727865495-1000x1000.jpg"
+      },
+      {
+        "color": "Колір RAL 9010",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/L7%2017-1727865501-1000x1000.jpg"
+      }
+    ]
+  },
+  {
+    "code": "LN8",
+    "slug": "rodos-official-9fnttw",
+    "url": "https://rodos.ua/mezhkomnatnaya-dver-linea-8",
+    "colors": [
+      {
+        "label": "Білий мат",
+        "swatch": "https://rodos.ua/image/cache/catalog/colors/belyjmat-100x100.png"
+      },
+      {
+        "label": "Колір RAL 1013",
+        "swatch": "https://rodos.ua/image/cache/catalog/1013-1762857295-100x100-1762861337-100x100.jpg"
+      },
+      {
+        "label": "Колір RAL 1015",
+        "swatch": "https://rodos.ua/image/cache/catalog/1015-1762857336-100x100-1762861339-100x100.jpg"
+      },
+      {
+        "label": "Колір RAL 1019",
+        "swatch": "https://rodos.ua/image/cache/catalog/1019-1762857333-100x100-1762861342-100x100.jpg"
+      },
+      {
+        "label": "Колір RAL 4001",
+        "swatch": "https://rodos.ua/image/cache/catalog/4001-1762857330-100x100-1762861344-100x100.jpg"
+      },
+      {
+        "label": "Колір RAL 5010",
+        "swatch": "https://rodos.ua/image/cache/catalog/5010-1762857328-100x100-1762861347-100x100.jpg"
+      },
+      {
+        "label": "Колір RAL 5012",
+        "swatch": "https://rodos.ua/image/cache/catalog/RAL%205012-1570783791-100x100-1762861351-100x100.jpg"
+      },
+      {
+        "label": "Колір RAL 5014",
+        "swatch": "https://rodos.ua/image/cache/catalog/5014-1762857325-100x100-1762861356-100x100.jpg"
+      },
+      {
+        "label": "Колір RAL 5022",
+        "swatch": "https://rodos.ua/image/cache/catalog/5022-1762857322-100x100-1762861358-100x100.jpg"
+      },
+      {
+        "label": "Колір RAL 5024",
+        "swatch": "https://rodos.ua/image/cache/catalog/5024-1762857319-100x100-1762861360-100x100.jpg"
+      },
+      {
+        "label": "Колір RAL 6019",
+        "swatch": "https://rodos.ua/image/cache/catalog/6019-1762857315-100x100-1762861363-100x100.jpg"
+      },
+      {
+        "label": "Колір RAL 7037",
+        "swatch": "https://rodos.ua/image/cache/catalog/7037-1762857313-100x100-1762861369-100x100.jpg"
+      },
+      {
+        "label": "Колір RAL 7040",
+        "swatch": "https://rodos.ua/image/cache/catalog/7040-1762857310-100x100-1762861373-100x100.jpg"
+      },
+      {
+        "label": "Колір RAL 7047",
+        "swatch": "https://rodos.ua/image/cache/catalog/7047-1762857307-100x100-1762861377-100x100.jpg"
+      },
+      {
+        "label": "Колір RAL 8014",
+        "swatch": "https://rodos.ua/image/cache/catalog/8014-1762857304-100x100-1762861379-100x100.jpg"
+      },
+      {
+        "label": "Колір RAL 9001",
+        "swatch": "https://rodos.ua/image/cache/catalog/9001-1762857302-100x100-1762861383-100x100.jpg"
+      },
+      {
+        "label": "Колір RAL 9004",
+        "swatch": "https://rodos.ua/image/cache/catalog/9004-1762857299-100x100-1762861386-100x100.jpg"
+      },
+      {
+        "label": "Колір RAL 9010",
+        "swatch": "https://rodos.ua/image/cache/catalog/9010-1762857341-100x100-1762861389-100x100.jpg"
+      }
+    ],
+    "configurations": [
+      "Глухе"
+    ],
+    "variants": [
+      {
+        "color": "Білий мат",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/L8%200%20alum-1727867784-1000x1000.jpg"
+      },
+      {
+        "color": "Колір RAL 1013",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/L8%201-1727867789-1000x1000.jpg"
+      },
+      {
+        "color": "Колір RAL 1015",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/L8%2016-1727867913-1000x1000.jpg"
+      },
+      {
+        "color": "Колір RAL 1019",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/L8%200%20alum-1727867781-1000x1000.jpg"
+      },
+      {
+        "color": "Колір RAL 4001",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/L8%202-1727867919-1000x1000.jpg"
+      },
+      {
+        "color": "Колір RAL 5010",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/L8%2014-1727867943-1000x1000.jpg"
+      },
+      {
+        "color": "Колір RAL 5012",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/L8%2012-1727867953-1000x1000.jpg"
+      },
+      {
+        "color": "Колір RAL 5014",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/L8%2011-1727867966-1000x1000.jpg"
+      },
+      {
+        "color": "Колір RAL 5022",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/L8%2010-1727867978-1000x1000.jpg"
+      },
+      {
+        "color": "Колір RAL 5024",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/L8%209-1727867987-1000x1000.jpg"
+      },
+      {
+        "color": "Колір RAL 6019",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/L8%207-1727867996-1000x1000.jpg"
+      },
+      {
+        "color": "Колір RAL 7037",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/L8%208-1727868002-1000x1000.jpg"
+      },
+      {
+        "color": "Колір RAL 7040",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/L8%206-1727868007-1000x1000.jpg"
+      },
+      {
+        "color": "Колір RAL 7047",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/L8%205-1727868024-1000x1000.jpg"
+      },
+      {
+        "color": "Колір RAL 8014",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/L8%2013-1727868029-1000x1000.jpg"
+      },
+      {
+        "color": "Колір RAL 9001",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/L8%201-1727868039-1000x1000.jpg"
+      },
+      {
+        "color": "Колір RAL 9004",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/L8%2015-1727868045-1000x1000.jpg"
+      },
+      {
+        "color": "Колір RAL 9010",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/L8%2017-1727868052-1000x1000.jpg"
+      }
+    ]
+  }
+]

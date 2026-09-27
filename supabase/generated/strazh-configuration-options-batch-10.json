@@ -1,0 +1,365 @@
+{
+  "batch": 10,
+  "records": [
+    {
+      "url": "https://straj.ua/product/spalta_spline",
+      "name": "Spalta Spline",
+      "image": "https://straj.ua/assets/product/0x500/121_268653600.png",
+      "dimensions": null,
+      "collection": "Офіційний каталог — перевірити",
+      "options": [
+        "Lux Securemme",
+        "Lux Mottura",
+        "Lux Prestige",
+        "Premium Rotor",
+        "Premium MyKey",
+        "Premium 3D Key"
+      ]
+    },
+    {
+      "url": "https://straj.ua/product/spark",
+      "name": "Spark",
+      "image": "https://straj.ua/assets/product/0x500/388_4256387233.jpg",
+      "dimensions": null,
+      "collection": "Офіційний каталог — перевірити",
+      "options": [
+        "Lux Securemme",
+        "Lux Mottura",
+        "Lux Prestige",
+        "Premium Rotor",
+        "Premium MyKey",
+        "Premium 3D Key"
+      ]
+    },
+    {
+      "url": "https://straj.ua/product/spark_3d",
+      "name": "Spark 3D",
+      "image": "https://straj.ua/assets/product/0x500/389_3180479667.jpg",
+      "dimensions": null,
+      "collection": "Офіційний каталог — перевірити",
+      "options": [
+        "Lux Securemme",
+        "Lux Mottura",
+        "Lux Prestige",
+        "Premium Rotor",
+        "Premium MyKey",
+        "Premium 3D Key"
+      ]
+    },
+    {
+      "url": "https://straj.ua/product/sparta_proof",
+      "name": "Sparta",
+      "image": "https://straj.ua/assets/product/0x500/260_706781948.jpg",
+      "dimensions": "870х2050 / 970х2050",
+      "thickness": "85мм",
+      "collection": "Офіційний каталог — перевірити",
+      "options": [
+        "PF Securemme",
+        "PF Mottura",
+        "PF Prestige"
+      ]
+    },
+    {
+      "url": "https://straj.ua/product/splint",
+      "name": "Splint",
+      "image": "https://straj.ua/assets/product/0x500/295_3274530704.jpg",
+      "dimensions": null,
+      "collection": "Офіційний каталог — перевірити",
+      "options": [
+        "Lux Securemme",
+        "Lux Mottura",
+        "Lux Prestige",
+        "Premium Rotor",
+        "Premium MyKey",
+        "Premium 3D Key"
+      ]
+    },
+    {
+      "url": "https://straj.ua/product/stone",
+      "name": "Stone",
+      "image": "https://straj.ua/assets/product/0x500/225_355037344.png",
+      "dimensions": null,
+      "collection": "Офіційний каталог — перевірити",
+      "options": [
+        "Lux Securemme",
+        "Lux Mottura",
+        "Lux Prestige",
+        "Premium Rotor",
+        "Premium MyKey",
+        "Premium 3D Key"
+      ]
+    },
+    {
+      "url": "https://straj.ua/product/stream",
+      "name": "Stream",
+      "image": "https://straj.ua/assets/product/0x500/168_426155860.png",
+      "dimensions": "870х2050 / 970х2050",
+      "thickness": "85мм",
+      "collection": "Офіційний каталог — перевірити",
+      "options": [
+        "PF Securemme",
+        "PF Mottura",
+        "PF Prestige"
+      ]
+    },
+    {
+      "url": "https://straj.ua/product/stream_sl",
+      "name": "Stream SL",
+      "image": "https://straj.ua/assets/product/0x500/169_212468814.png",
+      "dimensions": "870х2050 / 970х2050",
+      "thickness": "85мм",
+      "collection": "Офіційний каталог — перевірити",
+      "options": [
+        "PF Securemme",
+        "PF Mottura",
+        "PF Prestige"
+      ]
+    },
+    {
+      "url": "https://straj.ua/product/stream_sl_double",
+      "name": "Stream SL Double",
+      "image": "https://straj.ua/assets/product/0x500/254_1376831604.png",
+      "dimensions": "1220х2050 / 1320х2050",
+      "thickness": "85мм",
+      "collection": "Офіційний каталог — перевірити",
+      "options": [
+        "PF Standard Securemme",
+        "PF Standard Mottura",
+        "PF Prestige"
+      ]
+    },
+    {
+      "url": "https://straj.ua/product/style_glass",
+      "name": "Style Glass",
+      "image": "https://straj.ua/assets/product/0x500/114_1156138038.png",
+      "dimensions": null,
+      "collection": "Офіційний каталог — перевірити",
+      "options": [
+        "Lux Securemme",
+        "Lux Mottura",
+        "Lux Prestige",
+        "Premium Rotor",
+        "Premium MyKey",
+        "Premium 3D Key"
+      ]
+    },
+    {
+      "url": "https://straj.ua/product/style_volkano",
+      "name": "Style Volkano",
+      "image": "https://straj.ua/assets/product/0x500/68_3732844405.png",
+      "dimensions": null,
+      "collection": "Офіційний каталог — перевірити",
+      "options": [
+        "Lux Securemme",
+        "Lux Mottura",
+        "Lux Prestige",
+        "Premium Rotor",
+        "Premium MyKey",
+        "Premium 3D Key"
+      ]
+    },
+    {
+      "url": "https://straj.ua/product/suprema",
+      "name": "Suprema",
+      "image": "https://straj.ua/assets/product/0x500/328_395071823.png",
+      "dimensions": null,
+      "collection": "Офіційний каталог — перевірити",
+      "options": [
+        "Lux Securemme",
+        "Lux Mottura",
+        "Lux Prestige",
+        "Premium Rotor",
+        "Premium MyKey",
+        "Premium 3D Key"
+      ]
+    },
+    {
+      "url": "https://straj.ua/product/target",
+      "name": "Target",
+      "image": "https://straj.ua/assets/product/0x500/230_2529996460.jpg",
+      "dimensions": null,
+      "collection": "Офіційний каталог — перевірити",
+      "options": [
+        "Lux Securemme",
+        "Lux Mottura",
+        "Lux Prestige",
+        "Premium Rotor",
+        "Premium MyKey",
+        "Premium 3D Key"
+      ]
+    },
+    {
+      "url": "https://straj.ua/product/techno_door_1200",
+      "name": "Techno door 1200",
+      "image": "https://straj.ua/assets/product/0x500/411_4246862908.jpg",
+      "dimensions": null,
+      "collection": "Офіційний каталог — перевірити",
+      "options": [
+        "Standard"
+      ]
+    },
+    {
+      "url": "https://straj.ua/product/tempo_5",
+      "name": "Tempo",
+      "image": "https://straj.ua/assets/product/0x500/183_1256734299.jpg",
+      "dimensions": null,
+      "collection": "Офіційний каталог — перевірити",
+      "options": [
+        "Lux Securemme",
+        "Lux Mottura",
+        "Lux Prestige",
+        "Premium Rotor",
+        "Premium MyKey",
+        "Premium 3D Key"
+      ]
+    },
+    {
+      "url": "https://straj.ua/product/tenoris",
+      "name": "Tenoris",
+      "image": "https://straj.ua/assets/product/0x500/345_714051829.png",
+      "dimensions": null,
+      "collection": "Офіційний каталог — перевірити",
+      "options": [
+        "Lux Securemme",
+        "Lux Mottura",
+        "Lux Prestige",
+        "Premium Rotor",
+        "Premium MyKey",
+        "Premium 3D Key"
+      ]
+    },
+    {
+      "url": "https://straj.ua/product/terra",
+      "name": "Terra",
+      "image": "https://straj.ua/assets/product/0x500/179_3894909255.png",
+      "dimensions": null,
+      "collection": "Офіційний каталог — перевірити",
+      "options": [
+        "Lux Securemme",
+        "Lux Mottura",
+        "Lux Prestige",
+        "Premium Rotor",
+        "Premium MyKey",
+        "Premium 3D Key"
+      ]
+    },
+    {
+      "url": "https://straj.ua/product/terra_s",
+      "name": "Terra S",
+      "image": "https://straj.ua/assets/product/0x500/231_764204861.png",
+      "dimensions": null,
+      "collection": "Офіційний каталог — перевірити",
+      "options": [
+        "Lux Securemme",
+        "Lux Mottura",
+        "Lux Prestige",
+        "Premium Rotor",
+        "Premium MyKey",
+        "Premium 3D Key"
+      ]
+    },
+    {
+      "url": "https://straj.ua/product/terra_s_new_new",
+      "name": "Terra S New",
+      "image": "https://straj.ua/assets/product/0x500/799_3040653318.png",
+      "dimensions": null,
+      "collection": "Офіційний каталог — перевірити",
+      "options": [
+        "Lux Securemme",
+        "Lux Mottura",
+        "Lux Prestige",
+        "Premium Rotor",
+        "Premium MyKey",
+        "Premium 3D Key"
+      ]
+    },
+    {
+      "url": "https://straj.ua/product/tira",
+      "name": "Tira",
+      "image": "https://straj.ua/assets/product/0x500/796_4187359531.jpg",
+      "dimensions": null,
+      "collection": "Офіційний каталог — перевірити",
+      "options": [
+        "Lux Securemme",
+        "Lux Mottura",
+        "Lux Prestige",
+        "Premium Rotor",
+        "Premium MyKey",
+        "Premium 3D Key"
+      ]
+    },
+    {
+      "url": "https://straj.ua/product/tokio",
+      "name": "Tokio",
+      "image": "https://straj.ua/assets/product/0x500/116_2123596312.png",
+      "dimensions": null,
+      "collection": "Офіційний каталог — перевірити",
+      "options": [
+        "Lux Securemme",
+        "Lux Mottura",
+        "Lux Prestige",
+        "Premium Rotor",
+        "Premium MyKey",
+        "Premium 3D Key"
+      ]
+    },
+    {
+      "url": "https://straj.ua/product/torino",
+      "name": "Torino",
+      "image": "https://straj.ua/assets/product/0x500/182_558831194.png",
+      "dimensions": null,
+      "collection": "Офіційний каталог — перевірити",
+      "options": [
+        "Lux Securemme",
+        "Lux Mottura",
+        "Lux Prestige",
+        "Premium Rotor",
+        "Premium MyKey",
+        "Premium 3D Key"
+      ]
+    },
+    {
+      "url": "https://straj.ua/product/toscana_proof",
+      "name": "Toscana",
+      "image": "https://straj.ua/assets/product/0x500/265_4018842861.jpg",
+      "dimensions": "870х2050 / 970х2050",
+      "thickness": "85мм",
+      "collection": "Офіційний каталог — перевірити",
+      "options": [
+        "PF Securemme",
+        "PF Mottura",
+        "PF Prestige"
+      ]
+    },
+    {
+      "url": "https://straj.ua/product/track_8",
+      "name": "Track",
+      "image": "https://straj.ua/assets/product/0x500/104_1120628751.png",
+      "dimensions": null,
+      "collection": "Офіційний каталог — перевірити",
+      "options": [
+        "Lux Securemme",
+        "Lux Mottura",
+        "Lux Prestige",
+        "Premium Rotor",
+        "Premium MyKey",
+        "Premium 3D Key"
+      ]
+    },
+    {
+      "url": "https://straj.ua/product/tual",
+      "name": "Tual",
+      "image": "https://straj.ua/assets/product/0x500/181_1612482796.png",
+      "dimensions": null,
+      "collection": "Офіційний каталог — перевірити",
+      "options": [
+        "Lux Securemme",
+        "Lux Mottura",
+        "Lux Prestige",
+        "Premium Rotor",
+        "Premium MyKey",
+        "Premium 3D Key"
+      ]
+    }
+  ]
+}

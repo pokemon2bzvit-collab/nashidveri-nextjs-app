@@ -1,0 +1,506 @@
+[
+  {
+    "code": "Prima INSIDE",
+    "slug": "rodos-official-zqeak9",
+    "url": "https://rodos.ua/mezhkomnatnaya-dver-cortes-prima-inside",
+    "colors": [
+      {
+        "label": "Білий мат",
+        "swatch": "https://rodos.ua/image/cache/catalog/colors/belyjmat-100x100.png"
+      },
+      {
+        "label": "Цвет RAL 1013",
+        "swatch": "https://rodos.ua/image/cache/catalog/1013-1762857295-100x100-1762861337-100x100.jpg"
+      },
+      {
+        "label": "Цвет RAL 1015",
+        "swatch": "https://rodos.ua/image/cache/catalog/1015-1762857336-100x100-1762861339-100x100.jpg"
+      },
+      {
+        "label": "Цвет RAL 1019",
+        "swatch": "https://rodos.ua/image/cache/catalog/1019-1762857333-100x100-1762861342-100x100.jpg"
+      },
+      {
+        "label": "Цвет RAL 4001",
+        "swatch": "https://rodos.ua/image/cache/catalog/4001-1762857330-100x100-1762861344-100x100.jpg"
+      },
+      {
+        "label": "Цвет RAL 5010",
+        "swatch": "https://rodos.ua/image/cache/catalog/5010-1762857328-100x100-1762861347-100x100.jpg"
+      },
+      {
+        "label": "Цвет RAL 5012",
+        "swatch": "https://rodos.ua/image/cache/catalog/RAL%205012-1570783791-100x100-1762861351-100x100.jpg"
+      },
+      {
+        "label": "Цвет RAL 5014",
+        "swatch": "https://rodos.ua/image/cache/catalog/5014-1762857325-100x100-1762861356-100x100.jpg"
+      },
+      {
+        "label": "Цвет RAL 5022",
+        "swatch": "https://rodos.ua/image/cache/catalog/5022-1762857322-100x100-1762861358-100x100.jpg"
+      },
+      {
+        "label": "Цвет RAL 5024",
+        "swatch": "https://rodos.ua/image/cache/catalog/5024-1762857319-100x100-1762861360-100x100.jpg"
+      },
+      {
+        "label": "Цвет RAL 6019",
+        "swatch": "https://rodos.ua/image/cache/catalog/6019-1762857315-100x100-1762861363-100x100.jpg"
+      },
+      {
+        "label": "Цвет RAL 7037",
+        "swatch": "https://rodos.ua/image/cache/catalog/7037-1762857313-100x100-1762861369-100x100.jpg"
+      },
+      {
+        "label": "Цвет RAL 7040",
+        "swatch": "https://rodos.ua/image/cache/catalog/7040-1762857310-100x100-1762861373-100x100.jpg"
+      },
+      {
+        "label": "Цвет RAL 7047",
+        "swatch": "https://rodos.ua/image/cache/catalog/7047-1762857307-100x100-1762861377-100x100.jpg"
+      },
+      {
+        "label": "Цвет RAL 8014",
+        "swatch": "https://rodos.ua/image/cache/catalog/8014-1762857304-100x100-1762861379-100x100.jpg"
+      },
+      {
+        "label": "Цвет RAL 9001",
+        "swatch": "https://rodos.ua/image/cache/catalog/9001-1762857302-100x100-1762861383-100x100.jpg"
+      },
+      {
+        "label": "Цвет RAL 9004",
+        "swatch": "https://rodos.ua/image/cache/catalog/9004-1762857299-100x100-1762861386-100x100.jpg"
+      },
+      {
+        "label": "Цвет RAL 9010",
+        "swatch": "https://rodos.ua/image/cache/catalog/9010-1762857341-100x100-1762861389-100x100.jpg"
+      }
+    ],
+    "configurations": [
+      "Глухе"
+    ],
+    "variants": [
+      {
+        "color": "Білий мат",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/cortes%20prima-gluhoe-bel%20mat-1671710962-1000x1000.jpg"
+      },
+      {
+        "color": "Цвет RAL 1013",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/cortes%20prima-gluhoe-bel%20mat-1671710953-1000x1000.jpg"
+      },
+      {
+        "color": "Цвет RAL 1015",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/cortes%20prima-gluhoe-1015-1671716627-1000x1000.jpg"
+      },
+      {
+        "color": "Цвет RAL 1019",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/cortes%20prima-gluhoe-1019-1671716652-1000x1000.jpg"
+      },
+      {
+        "color": "Цвет RAL 4001",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/cortes%20prima-gluhoe-bel%20mat-1671710953-1000x1000.jpg"
+      },
+      {
+        "color": "Цвет RAL 5010",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/cortes%20prima-gluhoe-5010-1671716671-1000x1000.jpg"
+      },
+      {
+        "color": "Цвет RAL 5012",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/cortes%20prima-gluhoe-5012-1671716680-1000x1000.jpg"
+      },
+      {
+        "color": "Цвет RAL 5014",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/cortes%20prima-gluhoe-5014-1671716691-1000x1000.jpg"
+      },
+      {
+        "color": "Цвет RAL 5022",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/cortes%20prima-gluhoe-5022-1671716701-1000x1000.jpg"
+      },
+      {
+        "color": "Цвет RAL 5024",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/cortes%20prima-gluhoe-5024-1671716712-1000x1000.jpg"
+      },
+      {
+        "color": "Цвет RAL 6019",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/cortes%20prima-gluhoe-6019-1671716722-1000x1000.jpg"
+      },
+      {
+        "color": "Цвет RAL 7037",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/cortes%20prima-gluhoe-bel%20mat-1671710953-1000x1000.jpg"
+      },
+      {
+        "color": "Цвет RAL 7040",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/cortes%20prima-gluhoe-7037-1671716731-1000x1000.jpg"
+      },
+      {
+        "color": "Цвет RAL 7047",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/cortes%20prima-gluhoe-7047-1671716751-1000x1000.jpg"
+      },
+      {
+        "color": "Цвет RAL 8014",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/cortes%20prima-gluhoe-8014-1671716765-1000x1000.jpg"
+      },
+      {
+        "color": "Цвет RAL 9001",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/cortes%20prima-gluhoe-9001-1671716773-1000x1000.jpg"
+      },
+      {
+        "color": "Цвет RAL 9004",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/cortes%20prima-gluhoe-9004-1671716786-1000x1000.jpg"
+      },
+      {
+        "color": "Цвет RAL 9010",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/cortes%20prima-gluhoe-9010-1671716796-1000x1000.jpg"
+      }
+    ]
+  },
+  {
+    "code": "Venezia INSIDE",
+    "slug": "rodos-official-1mr5ck",
+    "url": "https://rodos.ua/mezhkomnatnaya-dver-cortes-venezia-inside",
+    "colors": [
+      {
+        "label": "Білий мат",
+        "swatch": "https://rodos.ua/image/cache/catalog/colors/belyjmat-100x100.png"
+      },
+      {
+        "label": "Цвет RAL 1013",
+        "swatch": "https://rodos.ua/image/cache/catalog/1013-1762857295-100x100-1762861337-100x100.jpg"
+      },
+      {
+        "label": "Цвет RAL 1015",
+        "swatch": "https://rodos.ua/image/cache/catalog/1015-1762857336-100x100-1762861339-100x100.jpg"
+      },
+      {
+        "label": "Цвет RAL 1019",
+        "swatch": "https://rodos.ua/image/cache/catalog/1019-1762857333-100x100-1762861342-100x100.jpg"
+      },
+      {
+        "label": "Цвет RAL 4001",
+        "swatch": "https://rodos.ua/image/cache/catalog/4001-1762857330-100x100-1762861344-100x100.jpg"
+      },
+      {
+        "label": "Цвет RAL 5010",
+        "swatch": "https://rodos.ua/image/cache/catalog/5010-1762857328-100x100-1762861347-100x100.jpg"
+      },
+      {
+        "label": "Цвет RAL 5012",
+        "swatch": "https://rodos.ua/image/cache/catalog/RAL%205012-1570783791-100x100-1762861351-100x100.jpg"
+      },
+      {
+        "label": "Цвет RAL 5014",
+        "swatch": "https://rodos.ua/image/cache/catalog/5014-1762857325-100x100-1762861356-100x100.jpg"
+      },
+      {
+        "label": "Цвет RAL 5022",
+        "swatch": "https://rodos.ua/image/cache/catalog/5022-1762857322-100x100-1762861358-100x100.jpg"
+      },
+      {
+        "label": "Цвет RAL 5024",
+        "swatch": "https://rodos.ua/image/cache/catalog/5024-1762857319-100x100-1762861360-100x100.jpg"
+      },
+      {
+        "label": "Цвет RAL 6019",
+        "swatch": "https://rodos.ua/image/cache/catalog/6019-1762857315-100x100-1762861363-100x100.jpg"
+      },
+      {
+        "label": "Цвет RAL 7037",
+        "swatch": "https://rodos.ua/image/cache/catalog/7037-1762857313-100x100-1762861369-100x100.jpg"
+      },
+      {
+        "label": "Цвет RAL 7040",
+        "swatch": "https://rodos.ua/image/cache/catalog/7040-1762857310-100x100-1762861373-100x100.jpg"
+      },
+      {
+        "label": "Цвет RAL 7047",
+        "swatch": "https://rodos.ua/image/cache/catalog/7047-1762857307-100x100-1762861377-100x100.jpg"
+      },
+      {
+        "label": "Цвет RAL 8014",
+        "swatch": "https://rodos.ua/image/cache/catalog/8014-1762857304-100x100-1762861379-100x100.jpg"
+      },
+      {
+        "label": "Цвет RAL 9001",
+        "swatch": "https://rodos.ua/image/cache/catalog/9001-1762857302-100x100-1762861383-100x100.jpg"
+      },
+      {
+        "label": "Цвет RAL 9004",
+        "swatch": "https://rodos.ua/image/cache/catalog/9004-1762857299-100x100-1762861386-100x100.jpg"
+      }
+    ],
+    "configurations": [
+      "Глухе"
+    ],
+    "variants": [
+      {
+        "color": "Білий мат",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/CortesVenezia-1592400920-1000x1000.jpg"
+      },
+      {
+        "color": "Цвет RAL 1013",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/CortesVenezia-1592400920-1000x1000.jpg"
+      },
+      {
+        "color": "Цвет RAL 1015",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/CortesVenezia-1592400920-1000x1000.jpg"
+      },
+      {
+        "color": "Цвет RAL 1019",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/CortesVenezia-1592400920-1000x1000.jpg"
+      },
+      {
+        "color": "Цвет RAL 4001",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/CortesVenezia-1592400920-1000x1000.jpg"
+      },
+      {
+        "color": "Цвет RAL 5010",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/CortesVenezia-1592400920-1000x1000.jpg"
+      },
+      {
+        "color": "Цвет RAL 5012",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/CortesVenezia-1592400920-1000x1000.jpg"
+      },
+      {
+        "color": "Цвет RAL 5014",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/CortesVenezia-1592400920-1000x1000.jpg"
+      },
+      {
+        "color": "Цвет RAL 5022",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/CortesVenezia-1592400920-1000x1000.jpg"
+      },
+      {
+        "color": "Цвет RAL 5024",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/CortesVenezia-1592400920-1000x1000.jpg"
+      },
+      {
+        "color": "Цвет RAL 6019",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/CortesVenezia-1592400920-1000x1000.jpg"
+      },
+      {
+        "color": "Цвет RAL 7037",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/CortesVenezia-1592400920-1000x1000.jpg"
+      },
+      {
+        "color": "Цвет RAL 7040",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/CortesVenezia-1592400920-1000x1000.jpg"
+      },
+      {
+        "color": "Цвет RAL 7047",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/CortesVenezia-1592400920-1000x1000.jpg"
+      },
+      {
+        "color": "Цвет RAL 8014",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/CortesVenezia-1592400920-1000x1000.jpg"
+      },
+      {
+        "color": "Цвет RAL 9001",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/CortesVenezia-1592400920-1000x1000.jpg"
+      },
+      {
+        "color": "Цвет RAL 9004",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/CortesVenezia-1592400920-1000x1000.jpg"
+      }
+    ]
+  },
+  {
+    "code": "Galant INSIDE",
+    "slug": "rodos-official-730thf",
+    "url": "https://rodos.ua/mezhkomnatnye-dveri-cortes-galant-inside",
+    "colors": [
+      {
+        "label": "Білий мат",
+        "swatch": "https://rodos.ua/image/cache/catalog/colors/belyjmat-100x100.png"
+      },
+      {
+        "label": "Цвет RAL 1013",
+        "swatch": "https://rodos.ua/image/cache/catalog/1013-1762857295-100x100-1762861337-100x100.jpg"
+      },
+      {
+        "label": "Цвет RAL 1015",
+        "swatch": "https://rodos.ua/image/cache/catalog/1015-1762857336-100x100-1762861339-100x100.jpg"
+      },
+      {
+        "label": "Цвет RAL 1019",
+        "swatch": "https://rodos.ua/image/cache/catalog/1019-1762857333-100x100-1762861342-100x100.jpg"
+      },
+      {
+        "label": "Цвет RAL 4001",
+        "swatch": "https://rodos.ua/image/cache/catalog/4001-1762857330-100x100-1762861344-100x100.jpg"
+      },
+      {
+        "label": "Цвет RAL 5010",
+        "swatch": "https://rodos.ua/image/cache/catalog/5010-1762857328-100x100-1762861347-100x100.jpg"
+      },
+      {
+        "label": "Цвет RAL 5012",
+        "swatch": "https://rodos.ua/image/cache/catalog/RAL%205012-1570783791-100x100-1762861351-100x100.jpg"
+      },
+      {
+        "label": "Цвет RAL 5014",
+        "swatch": "https://rodos.ua/image/cache/catalog/5014-1762857325-100x100-1762861356-100x100.jpg"
+      },
+      {
+        "label": "Цвет RAL 5022",
+        "swatch": "https://rodos.ua/image/cache/catalog/5022-1762857322-100x100-1762861358-100x100.jpg"
+      },
+      {
+        "label": "Цвет RAL 5024",
+        "swatch": "https://rodos.ua/image/cache/catalog/5024-1762857319-100x100-1762861360-100x100.jpg"
+      },
+      {
+        "label": "Цвет RAL 6019",
+        "swatch": "https://rodos.ua/image/cache/catalog/6019-1762857315-100x100-1762861363-100x100.jpg"
+      },
+      {
+        "label": "Цвет RAL 7037",
+        "swatch": "https://rodos.ua/image/cache/catalog/7037-1762857313-100x100-1762861369-100x100.jpg"
+      },
+      {
+        "label": "Цвет RAL 7040",
+        "swatch": "https://rodos.ua/image/cache/catalog/7040-1762857310-100x100-1762861373-100x100.jpg"
+      },
+      {
+        "label": "Цвет RAL 7047",
+        "swatch": "https://rodos.ua/image/cache/catalog/7047-1762857307-100x100-1762861377-100x100.jpg"
+      },
+      {
+        "label": "Цвет RAL 8014",
+        "swatch": "https://rodos.ua/image/cache/catalog/8014-1762857304-100x100-1762861379-100x100.jpg"
+      },
+      {
+        "label": "Цвет RAL 9001",
+        "swatch": "https://rodos.ua/image/cache/catalog/9001-1762857302-100x100-1762861383-100x100.jpg"
+      },
+      {
+        "label": "Цвет RAL 9004",
+        "swatch": "https://rodos.ua/image/cache/catalog/9004-1762857299-100x100-1762861386-100x100.jpg"
+      }
+    ],
+    "configurations": [
+      "Глухе"
+    ],
+    "variants": [
+      {
+        "color": "Білий мат",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/cortes-gluhoe-galant%20beluy%20mat-1758696853-1000x1000.jpg"
+      },
+      {
+        "color": "Цвет RAL 1013",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/cortes-gluhoe-galant%201013-1758696860-1000x1000.jpg"
+      },
+      {
+        "color": "Цвет RAL 1015",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/cortes-gluhoe-galant%201015-1758696868-1000x1000.jpg"
+      },
+      {
+        "color": "Цвет RAL 1019",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/cortes-gluhoe-galant%20beluy%20mat-1758696849-1000x1000.jpg"
+      },
+      {
+        "color": "Цвет RAL 4001",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/cortes-gluhoe-galant%204001-1758696876-1000x1000.jpg"
+      },
+      {
+        "color": "Цвет RAL 5010",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/cortes-gluhoe-galant%205010-1758696885-1000x1000.jpg"
+      },
+      {
+        "color": "Цвет RAL 5012",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/cortes-gluhoe-galant%205012-1758696896-1000x1000.jpg"
+      },
+      {
+        "color": "Цвет RAL 5014",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/cortes-gluhoe-galant%205014-1758696905-1000x1000.jpg"
+      },
+      {
+        "color": "Цвет RAL 5022",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/cortes-gluhoe-galant%205022-1758696916-1000x1000.jpg"
+      },
+      {
+        "color": "Цвет RAL 5024",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/cortes-gluhoe-galant%205024-1758696925-1000x1000.jpg"
+      },
+      {
+        "color": "Цвет RAL 6019",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/cortes-gluhoe-galant%206019-1758696932-1000x1000.jpg"
+      },
+      {
+        "color": "Цвет RAL 7037",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/cortes-gluhoe-galant%207037-1758696941-1000x1000.jpg"
+      },
+      {
+        "color": "Цвет RAL 7040",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/cortes-gluhoe-galant%207040-1758696948-1000x1000.jpg"
+      },
+      {
+        "color": "Цвет RAL 7047",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/cortes-gluhoe-galant%207047-1758696960-1000x1000.jpg"
+      },
+      {
+        "color": "Цвет RAL 8014",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/cortes-gluhoe-galant%208014-1758696974-1000x1000.jpg"
+      },
+      {
+        "color": "Цвет RAL 9001",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/cortes-gluhoe-galant%209001-1758696981-1000x1000.jpg"
+      },
+      {
+        "color": "Цвет RAL 9004",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/cortes-gluhoe-galant%209004-1758696995-1000x1000.jpg"
+      }
+    ]
+  }
+]

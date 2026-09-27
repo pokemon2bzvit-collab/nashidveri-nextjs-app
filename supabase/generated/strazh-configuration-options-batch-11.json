@@ -1,0 +1,256 @@
+{
+  "batch": 11,
+  "records": [
+    {
+      "url": "https://straj.ua/product/turin_glass",
+      "name": "Turin Glass",
+      "image": "https://straj.ua/assets/product/0x500/69_2020508038.jpg",
+      "dimensions": null,
+      "collection": "Офіційний каталог — перевірити",
+      "options": [
+        "Lux Securemme",
+        "Lux Mottura",
+        "Lux Prestige",
+        "Premium Rotor",
+        "Premium MyKey",
+        "Premium 3D Key"
+      ]
+    },
+    {
+      "url": "https://straj.ua/product/valencia",
+      "name": "Valencia",
+      "image": "https://straj.ua/assets/product/0x500/792_2970359916.png",
+      "dimensions": null,
+      "collection": "Офіційний каталог — перевірити",
+      "options": [
+        "Lux Securemme",
+        "Lux Mottura",
+        "Lux Prestige",
+        "Premium Rotor",
+        "Premium MyKey",
+        "Premium 3D Key"
+      ]
+    },
+    {
+      "url": "https://straj.ua/product/valetta",
+      "name": "Valetta",
+      "image": "https://straj.ua/assets/product/0x500/526_3101389036.jpg",
+      "dimensions": "870х2050 / 970х2050",
+      "thickness": "85мм",
+      "collection": "Офіційний каталог — перевірити",
+      "options": [
+        "PF Securemme",
+        "PF Mottura",
+        "PF Prestige"
+      ]
+    },
+    {
+      "url": "https://straj.ua/product/vega",
+      "name": "Vega",
+      "image": "https://straj.ua/assets/product/0x500/537_17816705.jpg",
+      "dimensions": "870х2050 / 970х2050",
+      "thickness": "85мм",
+      "collection": "Офіційний каталог — перевірити",
+      "options": [
+        "PF Securemme",
+        "PF Mottura",
+        "PF Prestige"
+      ]
+    },
+    {
+      "url": "https://straj.ua/product/vega_maxi_ant2",
+      "name": "Vega Maxi",
+      "image": "https://straj.ua/assets/product/0x500/645_2364621982.jpg",
+      "dimensions": null,
+      "collection": "Офіційний каталог — перевірити",
+      "options": [
+        "PF Securemme",
+        "PF Mottura",
+        "PF Prestige"
+      ]
+    },
+    {
+      "url": "https://straj.ua/product/vela",
+      "name": "Vela",
+      "image": "https://straj.ua/assets/product/0x500/489_2096403890.jpg",
+      "dimensions": null,
+      "collection": "Офіційний каталог — перевірити",
+      "options": [
+        "TM Loft LineStandard",
+        "TM Loft LinePremium"
+      ]
+    },
+    {
+      "url": "https://straj.ua/product/vena",
+      "name": "Vena",
+      "image": "https://straj.ua/assets/product/0x500/200_2325182790.png",
+      "dimensions": null,
+      "collection": "Офіційний каталог — перевірити",
+      "options": [
+        "Optima",
+        "Standard Kale",
+        "Berez Lux",
+        "Premium"
+      ]
+    },
+    {
+      "url": "https://straj.ua/product/vena_glass",
+      "name": "Vena Glass",
+      "image": "https://straj.ua/assets/product/0x500/310_1416773401.jpg",
+      "dimensions": null,
+      "collection": "Офіційний каталог — перевірити",
+      "options": [
+        "Lux Securemme",
+        "Lux Mottura",
+        "Lux Prestige",
+        "Premium Rotor",
+        "Premium MyKey",
+        "Premium 3D Key"
+      ]
+    },
+    {
+      "url": "https://straj.ua/product/verga",
+      "name": "Verga",
+      "image": "https://straj.ua/assets/product/0x500/798_199928035.jpg",
+      "dimensions": null,
+      "collection": "Офіційний каталог — перевірити",
+      "options": [
+        "Lux Securemme",
+        "Lux Mottura",
+        "Lux Prestige",
+        "Premium Rotor",
+        "Premium MyKey",
+        "Premium 3D Key"
+      ]
+    },
+    {
+      "url": "https://straj.ua/product/verona",
+      "name": "Verona",
+      "image": "https://straj.ua/assets/product/0x500/92_3704333756.png",
+      "dimensions": null,
+      "collection": "Офіційний каталог — перевірити",
+      "options": [
+        "Lux Securemme",
+        "Lux Mottura",
+        "Lux Prestige",
+        "Premium Rotor",
+        "Premium MyKey",
+        "Premium 3D Key"
+      ]
+    },
+    {
+      "url": "https://straj.ua/product/versal",
+      "name": "Versal",
+      "image": "https://straj.ua/assets/product/0x500/93_3454351064.png",
+      "dimensions": null,
+      "collection": "Офіційний каталог — перевірити",
+      "options": [
+        "Lux Securemme",
+        "Lux Mottura",
+        "Lux Prestige",
+        "Premium Rotor",
+        "Premium MyKey",
+        "Premium 3D Key"
+      ]
+    },
+    {
+      "url": "https://straj.ua/product/vespa_single",
+      "name": "Vespa Single",
+      "image": "https://straj.ua/assets/product/0x500/408_1445062261.jpg",
+      "dimensions": "870х2050 / 970х2050",
+      "thickness": "85мм",
+      "collection": "Офіційний каталог — перевірити",
+      "options": [
+        "PF Securemme",
+        "PF Mottura",
+        "PF Prestige"
+      ]
+    },
+    {
+      "url": "https://straj.ua/product/vespa_twin",
+      "name": "Vespa Twin",
+      "image": "https://straj.ua/assets/product/0x500/407_2219287156.jpg",
+      "dimensions": "870х2050 / 970х2050",
+      "thickness": "85мм",
+      "collection": "Офіційний каталог — перевірити",
+      "options": [
+        "PF Securemme",
+        "PF Mottura",
+        "PF Prestige"
+      ]
+    },
+    {
+      "url": "https://straj.ua/product/vesta",
+      "name": "Vesta",
+      "image": "https://straj.ua/assets/product/0x500/399_2074059573.jpg",
+      "dimensions": null,
+      "collection": "Офіційний каталог — перевірити",
+      "options": [
+        "Lux Securemme",
+        "Lux Mottura",
+        "Lux Prestige",
+        "Premium Rotor",
+        "Premium MyKey",
+        "Premium 3D Key"
+      ]
+    },
+    {
+      "url": "https://straj.ua/product/vetro_proof",
+      "name": "Vetro",
+      "image": "https://straj.ua/assets/product/0x500/280_4236684712.jpg",
+      "dimensions": "870х2050 / 970х2050",
+      "thickness": "85мм",
+      "collection": "Офіційний каталог — перевірити",
+      "options": [
+        "PF Securemme",
+        "PF Mottura",
+        "PF Prestige"
+      ]
+    },
+    {
+      "url": "https://straj.ua/product/vitrum",
+      "name": "Vitrum",
+      "image": "https://straj.ua/assets/product/0x500/401_2859026907.jpg",
+      "dimensions": null,
+      "collection": "Офіційний каталог — перевірити",
+      "options": [
+        "Lux Securemme",
+        "Lux Mottura",
+        "Lux Prestige",
+        "Premium Rotor",
+        "Premium MyKey",
+        "Premium 3D Key"
+      ]
+    },
+    {
+      "url": "https://straj.ua/product/vitrum_glass",
+      "name": "Vitrum Glass",
+      "image": "https://straj.ua/assets/product/0x500/402_193878540.jpg",
+      "dimensions": null,
+      "collection": "Офіційний каталог — перевірити",
+      "options": [
+        "Lux Securemme",
+        "Lux Mottura",
+        "Lux Prestige",
+        "Premium Rotor",
+        "Premium MyKey",
+        "Premium 3D Key"
+      ]
+    },
+    {
+      "url": "https://straj.ua/product/vodaria",
+      "name": "Vodaria",
+      "image": "https://straj.ua/assets/product/0x500/340_3590242811.png",
+      "dimensions": null,
+      "collection": "Офіційний каталог — перевірити",
+      "options": [
+        "Lux Securemme",
+        "Lux Mottura",
+        "Lux Prestige",
+        "Premium Rotor",
+        "Premium MyKey",
+        "Premium 3D Key"
+      ]
+    }
+  ]
+}

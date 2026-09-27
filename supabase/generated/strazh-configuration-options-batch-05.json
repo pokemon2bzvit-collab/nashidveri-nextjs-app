@@ -1,0 +1,325 @@
+{
+  "batch": 5,
+  "records": [
+    {
+      "url": "https://straj.ua/product/hrd_party_bs",
+      "name": "HRD Party BS",
+      "image": "https://straj.ua/assets/product/0x500/807_1251881973.jpg",
+      "dimensions": null,
+      "collection": "Офіційний каталог — перевірити",
+      "options": [
+        "PF Securemme",
+        "PF Mottura",
+        "PF Prestige"
+      ]
+    },
+    {
+      "url": "https://straj.ua/product/hrd_party_dv",
+      "name": "HRD Party Dv",
+      "image": "https://straj.ua/assets/product/0x500/809_598461291.png",
+      "dimensions": null,
+      "collection": "Офіційний каталог — перевірити",
+      "options": [
+        "PF Securemme",
+        "PF Mottura",
+        "PF Prestige"
+      ]
+    },
+    {
+      "url": "https://straj.ua/product/hrd_passage",
+      "name": "HRD Passage",
+      "image": "https://straj.ua/assets/product/0x500/820_738190724.jpg",
+      "dimensions": null,
+      "collection": "Офіційний каталог — перевірити",
+      "options": [
+        "PF Securemme",
+        "PF Mottura",
+        "PF Prestige"
+      ]
+    },
+    {
+      "url": "https://straj.ua/product/hrd_primo",
+      "name": "HRD Primo",
+      "image": "https://straj.ua/assets/product/0x500/818_1131237236.jpg",
+      "dimensions": null,
+      "collection": "Офіційний каталог — перевірити",
+      "options": [
+        "PF Securemme",
+        "PF Mottura",
+        "PF Prestige"
+      ]
+    },
+    {
+      "url": "https://straj.ua/product/hrd_regola",
+      "name": "HRD Regola",
+      "image": "https://straj.ua/assets/product/0x500/816_2590980646.jpg",
+      "dimensions": null,
+      "collection": "Офіційний каталог — перевірити",
+      "options": [
+        "PF Securemme",
+        "PF Mottura",
+        "PF Prestige"
+      ]
+    },
+    {
+      "url": "https://straj.ua/product/hrd_rio_s",
+      "name": "HRD Rio S",
+      "image": "https://straj.ua/assets/product/0x500/806_2495112174.jpg",
+      "dimensions": null,
+      "collection": "Офіційний каталог — перевірити",
+      "options": [
+        "PF Securemme",
+        "PF Mottura",
+        "PF Prestige"
+      ]
+    },
+    {
+      "url": "https://straj.ua/product/hrd_rio_s_loft_od",
+      "name": "HRD Rio S Loft",
+      "image": "https://straj.ua/assets/product/0x500/844_2912173488.jpg",
+      "dimensions": null,
+      "collection": "Офіційний каталог — перевірити",
+      "options": [
+        "PF Securemme",
+        "PF Mottura",
+        "PF Prestige"
+      ]
+    },
+    {
+      "url": "https://straj.ua/product/hrd_s_loft",
+      "name": "HRD S Loft",
+      "image": "https://straj.ua/assets/product/0x500/804_2208015845.png",
+      "dimensions": null,
+      "collection": "Офіційний каталог — перевірити",
+      "options": [
+        "PF Securemme",
+        "PF Mottura",
+        "PF Prestige"
+      ]
+    },
+    {
+      "url": "https://straj.ua/product/hrd_siena",
+      "name": "HRD Siena",
+      "image": "https://straj.ua/assets/product/0x500/817_3426871126.jpg",
+      "dimensions": null,
+      "collection": "Офіційний каталог — перевірити",
+      "options": [
+        "PF Securemme",
+        "PF Mottura",
+        "PF Prestige"
+      ]
+    },
+    {
+      "url": "https://straj.ua/product/hrd_slim_p_glass_khr",
+      "name": "HRD Slim P Glass",
+      "image": "https://straj.ua/assets/product/0x500/836_1606398458.jpg",
+      "dimensions": null,
+      "collection": "Офіційний каталог — перевірити",
+      "options": [
+        "PF Securemme",
+        "PF Mottura",
+        "PF Prestige"
+      ]
+    },
+    {
+      "url": "https://straj.ua/product/hrd_slim_s",
+      "name": "HRD Slim S",
+      "image": "https://straj.ua/assets/product/0x500/814_317290476.jpg",
+      "dimensions": null,
+      "collection": "Офіційний каталог — перевірити",
+      "options": [
+        "PF Securemme",
+        "PF Mottura",
+        "PF Prestige"
+      ]
+    },
+    {
+      "url": "https://straj.ua/product/hrd_strada",
+      "name": "HRD Strada",
+      "image": "https://straj.ua/assets/product/0x500/819_3261155849.jpg",
+      "dimensions": null,
+      "collection": "Офіційний каталог — перевірити",
+      "options": [
+        "PF Securemme",
+        "PF Mottura",
+        "PF Prestige"
+      ]
+    },
+    {
+      "url": "https://straj.ua/product/impriss_spline",
+      "name": "Impriss Spline",
+      "image": "https://straj.ua/assets/product/0x500/98_323060017.jpg",
+      "dimensions": null,
+      "collection": "Офіційний каталог — перевірити",
+      "options": [
+        "Lux Securemme",
+        "Lux Mottura",
+        "Lux Prestige",
+        "Premium Rotor",
+        "Premium MyKey",
+        "Premium 3D Key"
+      ]
+    },
+    {
+      "url": "https://straj.ua/product/inflex",
+      "name": "Inflex",
+      "image": "https://straj.ua/assets/product/0x500/343_3478744359.png",
+      "dimensions": null,
+      "collection": "Офіційний каталог — перевірити",
+      "options": [
+        "Lux Securemme",
+        "Lux Mottura",
+        "Lux Prestige",
+        "Premium Rotor",
+        "Premium MyKey",
+        "Premium 3D Key"
+      ]
+    },
+    {
+      "url": "https://straj.ua/product/insula",
+      "name": "Insula",
+      "image": "https://straj.ua/assets/product/0x500/349_2722803074.png",
+      "dimensions": null,
+      "collection": "Офіційний каталог — перевірити",
+      "options": [
+        "Lux Securemme",
+        "Lux Mottura",
+        "Lux Prestige",
+        "Premium Rotor",
+        "Premium MyKey",
+        "Premium 3D Key"
+      ]
+    },
+    {
+      "url": "https://straj.ua/product/jardin_proof",
+      "name": "Jardin",
+      "image": "https://straj.ua/assets/product/0x500/528_2621779229.jpg",
+      "dimensions": "870х2050 / 970х2050",
+      "thickness": "85мм",
+      "collection": "Офіційний каталог — перевірити",
+      "options": [
+        "PF Securemme",
+        "PF Mottura",
+        "PF Prestige"
+      ]
+    },
+    {
+      "url": "https://straj.ua/product/kare_",
+      "name": "Kare",
+      "image": "https://straj.ua/assets/product/0x500/245_676370198.png",
+      "dimensions": null,
+      "collection": "Офіційний каталог — перевірити",
+      "options": [
+        "Lux Securemme",
+        "Lux Mottura",
+        "Lux Prestige",
+        "Premium Rotor",
+        "Premium MyKey",
+        "Premium 3D Key"
+      ]
+    },
+    {
+      "url": "https://straj.ua/product/lacio_lv_spline",
+      "name": "Lacio Lv Spline",
+      "image": "https://straj.ua/assets/product/0x500/123_512848298.png",
+      "dimensions": null,
+      "collection": "Офіційний каталог — перевірити",
+      "options": [
+        "Lux Securemme",
+        "Lux Mottura",
+        "Lux Prestige",
+        "Premium Rotor",
+        "Premium MyKey",
+        "Premium 3D Key"
+      ]
+    },
+    {
+      "url": "https://straj.ua/product/libra",
+      "name": "Libra",
+      "image": "https://straj.ua/assets/product/0x500/492_217693303.jpg",
+      "dimensions": null,
+      "collection": "Офіційний каталог — перевірити",
+      "options": [
+        "Optima",
+        "Standard Kale",
+        "Berez Lux",
+        "Premium"
+      ]
+    },
+    {
+      "url": "https://straj.ua/product/line_nd",
+      "name": "Line ND",
+      "image": "https://straj.ua/assets/product/0x500/854_2825834856.png",
+      "dimensions": null,
+      "collection": "Офіційний каталог — перевірити",
+      "options": [
+        "Optima"
+      ]
+    },
+    {
+      "url": "https://straj.ua/product/lion_3",
+      "name": "Lion 3",
+      "image": "https://straj.ua/assets/product/0x500/591_1391937574.png",
+      "dimensions": "870х2050 / 970х2050",
+      "thickness": "80мм",
+      "collection": "Офіційний каталог — перевірити",
+      "options": [
+        "PF Securemme",
+        "PF Mottura",
+        "PF Prestige"
+      ]
+    },
+    {
+      "url": "https://straj.ua/product/lion_4_f",
+      "name": "Lion 4 F",
+      "image": "https://straj.ua/assets/product/0x500/594_160398445.jpg",
+      "dimensions": "870х2050 / 970х2050",
+      "thickness": "85мм",
+      "collection": "Офіційний каталог — перевірити",
+      "options": [
+        "PF Securemme",
+        "PF Mottura",
+        "PF Prestige"
+      ]
+    },
+    {
+      "url": "https://straj.ua/product/lion_4_sl",
+      "name": "Lion 4 SL",
+      "image": "https://straj.ua/assets/product/0x500/592_2365053341.png",
+      "dimensions": "870х2050 / 970х2050",
+      "thickness": "85мм",
+      "collection": "Офіційний каталог — перевірити",
+      "options": [
+        "PF Securemme",
+        "PF Mottura",
+        "PF Prestige"
+      ]
+    },
+    {
+      "url": "https://straj.ua/product/lion_sl_maxi",
+      "name": "Lion SL Maxi",
+      "image": "https://straj.ua/assets/product/0x500/370_3031227962.jpg",
+      "dimensions": "870х2050 / 970х2050",
+      "thickness": "85мм",
+      "collection": "Офіційний каталог — перевірити",
+      "options": [
+        "PF Securemme",
+        "PF Mottura",
+        "PF Prestige"
+      ]
+    },
+    {
+      "url": "https://straj.ua/product/llaves_proof",
+      "name": "Llaves",
+      "image": "https://straj.ua/assets/product/0x500/264_2748675188.jpg",
+      "dimensions": "870х2050 / 970х2050",
+      "thickness": "85мм",
+      "collection": "Офіційний каталог — перевірити",
+      "options": [
+        "PF Securemme",
+        "PF Mottura",
+        "PF Prestige"
+      ]
+    }
+  ]
+}

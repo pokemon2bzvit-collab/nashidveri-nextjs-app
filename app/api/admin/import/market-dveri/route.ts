@@ -68,6 +68,15 @@ function descriptionFor(title: string, facts: Fact[]) {
   return `${title} — двері ${location}. ${parts.length ? `Основні параметри: ${parts.join(", ")}. ` : ""}Комплектацію, декори та актуальну ціну уточнюйте у менеджера.`;
 }
 
+function imageFrom(html: string, baseUrl: URL) {
+  const meta = html.match(/<meta[^>]+(?:property|name)=["'](?:og:image|twitter:image)["'][^>]+content=["']([^"']+)["']/i)
+    || html.match(/<meta[^>]+content=["']([^"']+)["'][^>]+(?:property|name)=["'](?:og:image|twitter:image)["']/i);
+  const raw = meta?.[1]
+    || html.match(/<img[^>]+(?:data-src|data-original|src)=["']([^"']+)["'][^>]*>/i)?.[1];
+  if (!raw) return null;
+  try { return new URL(decode(raw), baseUrl).toString(); } catch { return null; }
+}
+
 async function isAdmin(request: NextRequest) {
   const token = request.headers.get("authorization")?.replace(/^Bearer\s+/i, "");
   if (!token || !supabaseUrl || !supabaseKey) return false;
@@ -90,7 +99,7 @@ export async function GET(request: NextRequest) {
     const title = clean(toText(html.match(/<h1[^>]*>([\s\S]*?)<\/h1>/i)?.[1] || ""));
     const facts = factsFrom(html);
     if (!title || !facts.length) return NextResponse.json({ message: "Не вдалося знайти характеристики. Перевірте, чи це конкретна картка товару." }, { status: 422 });
-    return NextResponse.json({ sourceUrl: source.toString(), title, facts, description: descriptionFor(title, facts) });
+    return NextResponse.json({ sourceUrl: source.toString(), title, facts, description: descriptionFor(title, facts), image: imageFrom(html, source) });
   } catch {
     return NextResponse.json({ message: "Не вдалося прочитати картку Market Dveri. Спробуйте пізніше." }, { status: 502 });
   }

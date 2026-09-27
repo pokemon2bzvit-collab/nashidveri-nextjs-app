@@ -8,6 +8,7 @@ import { getSupabaseBrowserClient } from "@/lib/supabase-browser";
 
 type Product = { slug: string; name: string; brand: string; is_available: boolean; image_path: string | null; description: string | null };
 const actions = [
+  { href: "/admin/quality", title: "Якість каталогу", text: "Знайти прогалини в описах, характеристиках і фото декорів.", icon: Search },
   { href: "/admin/catalog", title: "Редагувати товари", text: "Фото, ціна, опис і характеристики.", icon: Package },
   { href: "/admin/leads", title: "Опрацювати заявки", text: "Контакти клієнтів і статуси звернень.", icon: ClipboardList },
   { href: "/admin/importers", title: "Імпортувати товари", text: "Каталоги виробників і збережені XML-файли.", icon: Download },

@@ -1,0 +1,2270 @@
+[
+  {
+    "code": "S1",
+    "slug": "rodos-official-hxhl5h",
+    "url": "https://rodos.ua/mezhkomnatnaya-dver-style-1",
+    "colors": [
+      {
+        "label": "Cерый дуб",
+        "swatch": "https://rodos.ua/image/cache/catalog/colors/seryy-dub-100x100.png"
+      },
+      {
+        "label": "Сосна крем",
+        "swatch": "https://rodos.ua/image/cache/catalog/colors/sosna-krem-100x100.png"
+      },
+      {
+        "label": "Крем",
+        "swatch": "https://rodos.ua/image/cache/catalog/colors/soskrem-100x100.jpg"
+      },
+      {
+        "label": "Дуб сонома",
+        "swatch": "https://rodos.ua/image/cache/catalog/sonoma-1569525258-100x100.jpg"
+      },
+      {
+        "label": "Венге шоколадний",
+        "swatch": "https://rodos.ua/image/cache/catalog/colors/vengeshokoladnyj-100x100.png"
+      },
+      {
+        "label": "Акація темна",
+        "swatch": "https://rodos.ua/image/cache/catalog/%20%20-1568110641-100x100.jpg"
+      },
+      {
+        "label": "Дуб шале графіт",
+        "swatch": "https://rodos.ua/image/cache/catalog/Bianca-1568052349-100x100.jpg"
+      },
+      {
+        "label": "Мрамор сірий",
+        "swatch": "https://rodos.ua/image/cache/catalog/%20%20-1568198709-100x100.jpg"
+      },
+      {
+        "label": "Каштан білий",
+        "swatch": "https://rodos.ua/image/cache/catalog/%20%20%20NEW-1568299678-100x100.jpg"
+      },
+      {
+        "label": "Каштан сірий",
+        "swatch": "https://rodos.ua/image/cache/catalog/%20%20NEW-1568299737-100x100.jpg"
+      },
+      {
+        "label": "Каштан беж",
+        "swatch": "https://rodos.ua/image/cache/catalog/%20%20-1568299161-100x100.jpg"
+      },
+      {
+        "label": "Сосна браш браун",
+        "swatch": "https://rodos.ua/image/cache/catalog/.jpg-1589976466-100x100.jpg"
+      },
+      {
+        "label": "Сосна браш кобальт",
+        "swatch": "https://rodos.ua/image/cache/catalog/.jpg-1589976454-100x100.jpg"
+      },
+      {
+        "label": "Сосна браш мінт",
+        "swatch": "https://rodos.ua/image/cache/catalog/.jpg-1590395711-100x100.jpg"
+      },
+      {
+        "label": "Белый мат (ПВХ)",
+        "swatch": "https://rodos.ua/image/cache/catalog/%20%20%20-1568619289-100x100.jpg"
+      },
+      {
+        "label": "Бежевий",
+        "swatch": "https://rodos.ua/image/cache/catalog/images-1706520621-100x100.jpg"
+      },
+      {
+        "label": "Світло-сірий",
+        "swatch": "https://rodos.ua/image/cache/catalog/images-1706520848-100x100.png"
+      },
+      {
+        "label": "Канадський дуб",
+        "swatch": "https://rodos.ua/image/cache/catalog/A001%20%20-gluhoe--1715603714-100x100.jpg"
+      },
+      {
+        "label": "Кедр софт графіт",
+        "swatch": "https://rodos.ua/image/cache/catalog/%20-1719479615-100x100.jpg"
+      },
+      {
+        "label": "Кедр софт білий",
+        "swatch": "https://rodos.ua/image/cache/catalog/---1719479692-100x100.jpg"
+      }
+    ],
+    "configurations": [
+      "Глухе",
+      "Напівскло"
+    ],
+    "variants": [
+      {
+        "color": "Cерый дуб",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/MODERN%20STYLE%201%20seruy%20dub-gluhoe-1631785232-1000x1000.jpg"
+      },
+      {
+        "color": "Cерый дуб",
+        "configuration": "Напівскло",
+        "image": "https://rodos.ua/image/cache/catalog/MODERN%20STYLE%201%20seruy%20dub-polusteklo-1631785235-1000x1000.jpg"
+      },
+      {
+        "color": "Сосна крем",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/style1-gluhoe-sosna-krem-1626954168-1000x1000.jpg"
+      },
+      {
+        "color": "Сосна крем",
+        "configuration": "Напівскло",
+        "image": "https://rodos.ua/image/cache/catalog/style1-polusteklo-sosna-krem-1626954170-1000x1000.jpg"
+      },
+      {
+        "color": "Крем",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/MODERN%20STYLE%201%20krem-gluhoe-1631784633-1000x1000.jpg"
+      },
+      {
+        "color": "Крем",
+        "configuration": "Напівскло",
+        "image": "https://rodos.ua/image/cache/catalog/MODERN%20STYLE%201%20krem-polusteklo-1631784637-1000x1000.jpg"
+      },
+      {
+        "color": "Дуб сонома",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/MODERN%20STYLE%201%20dub%20sonoma-gluhoe-1631784185-1000x1000.jpg"
+      },
+      {
+        "color": "Дуб сонома",
+        "configuration": "Напівскло",
+        "image": "https://rodos.ua/image/cache/catalog/MODERN%20STYLE%201%20dub%20sonoma-polusteklo-1631784193-1000x1000.jpg"
+      },
+      {
+        "color": "Венге шоколадний",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/MODERN%20STYLE%201%20venge%20shokoladnuy-gluhoe-1631785776-1000x1000.jpg"
+      },
+      {
+        "color": "Венге шоколадний",
+        "configuration": "Напівскло",
+        "image": "https://rodos.ua/image/cache/catalog/MODERN%20STYLE%201%20venge%20shokol-polusteklo-1631785779-1000x1000.jpg"
+      },
+      {
+        "color": "Акація темна",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/MODERN%20STYLE%201%20akaciya%20temnn-gluhoe-1631783410-1000x1000.jpg"
+      },
+      {
+        "color": "Акація темна",
+        "configuration": "Напівскло",
+        "image": "https://rodos.ua/image/cache/catalog/MODERN%20STYLE%201%20akaciya%20temnf-polusteklo-1631783406-1000x1000.jpg"
+      },
+      {
+        "color": "Дуб шале графіт",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/MODERN%20STYLE%201%20dub%20shale%20graphit-gluhoe-1631784160-1000x1000.jpg"
+      },
+      {
+        "color": "Дуб шале графіт",
+        "configuration": "Напівскло",
+        "image": "https://rodos.ua/image/cache/catalog/MODERN%20STYLE%201%20dub%20shale%20graphit-polusteklo-1631784163-1000x1000.jpg"
+      },
+      {
+        "color": "Мрамор сірий",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/MODERN%20STYLE%201%20mramor%20seruy-gluhoe-1631784800-1000x1000.jpg"
+      },
+      {
+        "color": "Мрамор сірий",
+        "configuration": "Напівскло",
+        "image": "https://rodos.ua/image/cache/catalog/MODERN%20STYLE%201%20mramor%20ser-polusteklo-1631784798-1000x1000.jpg"
+      },
+      {
+        "color": "Каштан білий",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/MODERN%20STYLE%201%20kashtan%20bel-gluhoe-1631784247-1000x1000.jpg"
+      },
+      {
+        "color": "Каштан білий",
+        "configuration": "Напівскло",
+        "image": "https://rodos.ua/image/cache/catalog/MODERN%20STYLE%201%20kashtan%20beluy-polusteklo-1631784249-1000x1000.jpg"
+      },
+      {
+        "color": "Каштан сірий",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/MODERN%20STYLE%201%20kashtan%20seruy-gluhoe-1631783140-1000x1000.jpg"
+      },
+      {
+        "color": "Каштан сірий",
+        "configuration": "Напівскло",
+        "image": "https://rodos.ua/image/cache/catalog/MODERN%20STYLE%201%20%20kashtan%20seruy-polusteklo-1631783130-1000x1000.jpg"
+      },
+      {
+        "color": "Каштан беж",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/MODERN%20STYLE%201%20kashtan%20beg-gluhoe-1631784226-1000x1000.jpg"
+      },
+      {
+        "color": "Каштан беж",
+        "configuration": "Напівскло",
+        "image": "https://rodos.ua/image/cache/catalog/MODERN%20STYLE%201%20kashtan%20beg-polusteklo-1631784228-1000x1000.jpg"
+      },
+      {
+        "color": "Сосна браш браун",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/MODERN%20STYLE%201sosna%20brash%20brown-gluhoe-1631785701-1000x1000.jpg"
+      },
+      {
+        "color": "Сосна браш браун",
+        "configuration": "Напівскло",
+        "image": "https://rodos.ua/image/cache/catalog/MODERN%20STYLE%201%20sosna%20brash%20brown-polusteklo-1631785696-1000x1000.jpg"
+      },
+      {
+        "color": "Сосна браш кобальт",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/MODERN%20STYLE%201%20sosna%20brashkobalt-gluhoe-1631785753-1000x1000.jpg"
+      },
+      {
+        "color": "Сосна браш кобальт",
+        "configuration": "Напівскло",
+        "image": "https://rodos.ua/image/cache/catalog/MODERN%20STYLE%201%20sosna%20brashkobalt-polusteklo-1631785757-1000x1000.jpg"
+      },
+      {
+        "color": "Сосна браш мінт",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/MODERN%20STYLE%201%20sosna%20brash%20mint-gluhoe-1631785720-1000x1000.jpg"
+      },
+      {
+        "color": "Сосна браш мінт",
+        "configuration": "Напівскло",
+        "image": "https://rodos.ua/image/cache/catalog/MODERN%20STYLE%201%20sosna%20brash%20mint-polusteklo-1631785724-1000x1000.jpg"
+      },
+      {
+        "color": "Белый мат (ПВХ)",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/STYLE%201%20%20%20-gluhoe--1720009831-1000x1000.jpg"
+      },
+      {
+        "color": "Белый мат (ПВХ)",
+        "configuration": "Напівскло",
+        "image": "https://rodos.ua/image/cache/catalog/STYLE%201%20%20%20-polusteklo-%20-1720009835-1000x1000.jpg"
+      },
+      {
+        "color": "Бежевий",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/STYLE%201%20-gluhoe--1720009700-1000x1000.jpg"
+      },
+      {
+        "color": "Бежевий",
+        "configuration": "Напівскло",
+        "image": "https://rodos.ua/image/cache/catalog/STYLE%201%20%20-polusteklo--1720009702-1000x1000.jpg"
+      },
+      {
+        "color": "Світло-сірий",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/STYLE%201%20%20-gluhoe--1720009857-1000x1000.jpg"
+      },
+      {
+        "color": "Світло-сірий",
+        "configuration": "Напівскло",
+        "image": "https://rodos.ua/image/cache/catalog/STYLE%201%20%20%20-polusteklo--1720009860-1000x1000.jpg"
+      },
+      {
+        "color": "Канадський дуб",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/STYLE%201%20%20-gluhoe-%20-1715768906-1000x1000.jpg"
+      },
+      {
+        "color": "Кедр софт графіт",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/STYLE%201%20%20%20-gluhoe--1720009786-1000x1000.jpg"
+      },
+      {
+        "color": "Кедр софт графіт",
+        "configuration": "Напівскло",
+        "image": "https://rodos.ua/image/cache/catalog/STYLE%201%20%20%20-polusteklo--1720009790-1000x1000.jpg"
+      },
+      {
+        "color": "Кедр софт білий",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/STYLE%201%20%20%20-gluhoe--1720009757-1000x1000.jpg"
+      },
+      {
+        "color": "Кедр софт білий",
+        "configuration": "Напівскло",
+        "image": "https://rodos.ua/image/cache/catalog/STYLE%201%20%20%20%20-polusteklo--1720009761-1000x1000.jpg"
+      }
+    ]
+  },
+  {
+    "code": "S2",
+    "slug": "rodos-official-wrirzx",
+    "url": "https://rodos.ua/mezhkomnatnaya-dver-style-1-blk",
+    "colors": [
+      {
+        "label": "Венге шоколадный BLK",
+        "swatch": "https://rodos.ua/image/cache/catalog/colors/vengeshokchern-100x100.jpg"
+      },
+      {
+        "label": "Серый мрамор BLK",
+        "swatch": "https://rodos.ua/image/cache/catalog/%20%20%20BLK-1568199915-100x100.jpg"
+      },
+      {
+        "label": "Акация темная BLK",
+        "swatch": "https://rodos.ua/image/cache/catalog/%20%20%20BLK-1568272487-100x100.jpg"
+      },
+      {
+        "label": "Каштан беж BLK",
+        "swatch": "https://rodos.ua/image/cache/catalog/%20%20BLK-1568364848-100x100.jpg"
+      },
+      {
+        "label": "Дуб шале графит BLK",
+        "swatch": "https://rodos.ua/image/cache/catalog/%20%20%20BLK-1568273901-100x100.jpg"
+      },
+      {
+        "label": "Каштан белый BLK",
+        "swatch": "https://rodos.ua/image/cache/catalog/%20%20BLK%20NEW-1568364883-100x100.jpg"
+      },
+      {
+        "label": "Каштан серый BLK",
+        "swatch": "https://rodos.ua/image/cache/catalog/%20%20%20BLK%20NEW-1568364915-100x100.jpg"
+      },
+      {
+        "label": "Сосна браш браун BLK",
+        "swatch": "https://rodos.ua/image/cache/catalog/%20BLK-1590055720-100x100.jpg"
+      },
+      {
+        "label": "Сосна браш кобальт BLK",
+        "swatch": "https://rodos.ua/image/cache/catalog/%20BLK-1590055725-100x100.jpg"
+      },
+      {
+        "label": "Сосна браш минт BLK",
+        "swatch": "https://rodos.ua/image/cache/catalog/%20BLK-1590395798-100x100.jpg"
+      },
+      {
+        "label": "Дуб сонома BLK",
+        "swatch": "https://rodos.ua/image/cache/catalog/sonoma-1569525258-100x100-1618831783-100x100.jpg"
+      },
+      {
+        "label": "Крем BLK",
+        "swatch": "https://rodos.ua/image/cache/catalog/soskrem-100x100-1618831912-100x100.jpg"
+      },
+      {
+        "label": "Сосна Крем BLK",
+        "swatch": "https://rodos.ua/image/cache/catalog/fca240e1-fd4c-458e-a96b-942a14059b5e-1654590086-100x100.jpg"
+      },
+      {
+        "label": "Канадський дуб BLK",
+        "swatch": "https://rodos.ua/image/cache/catalog/A001%20%20%20BLK-1715683038-100x100.jpg"
+      },
+      {
+        "label": "Бежевий BLK",
+        "swatch": "https://rodos.ua/image/cache/catalog/bej-1719832114-100x100.jpg"
+      },
+      {
+        "label": "Светло серый BLK",
+        "swatch": "https://rodos.ua/image/cache/catalog/svetlo%20seruy-1719832136-100x100.jpg"
+      },
+      {
+        "label": "Кедр софт белый BLK",
+        "swatch": "https://rodos.ua/image/cache/catalog/kedr%20soft%20biluy-1719832151-100x100.jpg"
+      },
+      {
+        "label": "Кедр софт графит BLK",
+        "swatch": "https://rodos.ua/image/cache/catalog/%20-1719832154-100x100.jpg"
+      },
+      {
+        "label": "Белый мат (ПВХ) BLK",
+        "swatch": "https://rodos.ua/image/cache/catalog/bel%20mat-1719832628-100x100.jpg"
+      }
+    ],
+    "configurations": [
+      "Напівскло"
+    ],
+    "variants": [
+      {
+        "color": "Венге шоколадный BLK",
+        "configuration": "Напівскло",
+        "image": "https://rodos.ua/image/cache/catalog/MODERN%20STYLE%201%20venge%20shokol%20BLK-1718089929-1000x1000.jpg"
+      },
+      {
+        "color": "Серый мрамор BLK",
+        "configuration": "Напівскло",
+        "image": "https://rodos.ua/image/cache/catalog/MODERN%20STYLE%201%20mramor%20ser%20BLK-1718089890-1000x1000.jpg"
+      },
+      {
+        "color": "Акация темная BLK",
+        "configuration": "Напівскло",
+        "image": "https://rodos.ua/image/cache/catalog/MODERN%20STYLE%201%20akaciya%20temnfBLK-1718089787-1000x1000.jpg"
+      },
+      {
+        "color": "Каштан беж BLK",
+        "configuration": "Напівскло",
+        "image": "https://rodos.ua/image/cache/catalog/MODERN%20STYLE%201%20kashtan%20beg%20BLK-1718089833-1000x1000.jpg"
+      },
+      {
+        "color": "Дуб шале графит BLK",
+        "configuration": "Напівскло",
+        "image": "https://rodos.ua/image/cache/catalog/MODERN%20STYLE%201%20dub%20shale%20graphit%20BLK-1718089803-1000x1000.jpg"
+      },
+      {
+        "color": "Каштан белый BLK",
+        "configuration": "Напівскло",
+        "image": "https://rodos.ua/image/cache/catalog/MODERN%20STYLE%201%20kashtan%20beluy%20BLK-1718089846-1000x1000.jpg"
+      },
+      {
+        "color": "Каштан серый BLK",
+        "configuration": "Напівскло",
+        "image": "https://rodos.ua/image/cache/catalog/MODERN%20STYLE%201%20kashtan%20seruy%20gl%20BLK-1718089859-1000x1000.jpg"
+      },
+      {
+        "color": "Сосна браш браун BLK",
+        "configuration": "Напівскло",
+        "image": "https://rodos.ua/image/cache/catalog/MODERN%20STYLE%201sosna%20brash%20brown%20BLK-1718089950-1000x1000.jpg"
+      },
+      {
+        "color": "Сосна браш кобальт BLK",
+        "configuration": "Напівскло",
+        "image": "https://rodos.ua/image/cache/catalog/MODERN%20STYLE%201%20sosna%20brashkobalt%20BLK-1718089914-1000x1000.jpg"
+      },
+      {
+        "color": "Сосна браш минт BLK",
+        "configuration": "Напівскло",
+        "image": "https://rodos.ua/image/cache/catalog/MODERN%20STYLE%201%20sosna%20brash%20mint%20BLK-1718089903-1000x1000.jpg"
+      },
+      {
+        "color": "Дуб сонома BLK",
+        "configuration": "Напівскло",
+        "image": "https://rodos.ua/image/cache/catalog/MODERN%20STYLE%201%20dub%20sonoma%20BLK-1718089816-1000x1000.jpg"
+      },
+      {
+        "color": "Крем BLK",
+        "configuration": "Напівскло",
+        "image": "https://rodos.ua/image/cache/catalog/MODERN%20STYLE%201%20krem%20BLK-1718089872-1000x1000.jpg"
+      },
+      {
+        "color": "Сосна Крем BLK",
+        "configuration": "Напівскло",
+        "image": "https://rodos.ua/image/cache/catalog/MODERN%20STYLE%201%20%20%20BLK-1718089943-1000x1000.jpg"
+      },
+      {
+        "color": "Канадський дуб BLK",
+        "configuration": "Напівскло",
+        "image": "https://rodos.ua/image/cache/catalog/STYLE%201%20%20%20%20BLK-1718089981-1000x1000.jpg"
+      },
+      {
+        "color": "Бежевий BLK",
+        "configuration": "Напівскло",
+        "image": "https://rodos.ua/image/cache/catalog/STYLE%201%20-polusteklo-BLK-1720010025-1000x1000.jpg"
+      },
+      {
+        "color": "Светло серый BLK",
+        "configuration": "Напівскло",
+        "image": "https://rodos.ua/image/cache/catalog/STYLE%201%20-polusteklo-BLK-1720010025-1000x1000.jpg"
+      },
+      {
+        "color": "Кедр софт белый BLK",
+        "configuration": "Напівскло",
+        "image": "https://rodos.ua/image/cache/catalog/STYLE%201%20%20%20-polusteklo-BLK-1720010046-1000x1000.jpg"
+      },
+      {
+        "color": "Кедр софт графит BLK",
+        "configuration": "Напівскло",
+        "image": "https://rodos.ua/image/cache/catalog/STYLE%201%20-polusteklo-BLK-1720010025-1000x1000.jpg"
+      },
+      {
+        "color": "Белый мат (ПВХ) BLK",
+        "configuration": "Напівскло",
+        "image": "https://rodos.ua/image/cache/catalog/STYLE%201%20%20-polusteklo-BLK-1720010073-1000x1000.jpg"
+      }
+    ]
+  },
+  {
+    "code": "S3",
+    "slug": "rodos-official-1rk5v3e",
+    "url": "https://rodos.ua/mezhkomnatnaya-dver-style-2-1",
+    "colors": [
+      {
+        "label": "Cерый дуб",
+        "swatch": "https://rodos.ua/image/cache/catalog/colors/seryy-dub-100x100.png"
+      },
+      {
+        "label": "Сосна крем",
+        "swatch": "https://rodos.ua/image/cache/catalog/colors/sosna-krem-100x100.png"
+      },
+      {
+        "label": "Крем",
+        "swatch": "https://rodos.ua/image/cache/catalog/colors/soskrem-100x100.jpg"
+      },
+      {
+        "label": "Дуб сонома",
+        "swatch": "https://rodos.ua/image/cache/catalog/sonoma-1569525258-100x100.jpg"
+      },
+      {
+        "label": "Венге шоколадний",
+        "swatch": "https://rodos.ua/image/cache/catalog/colors/vengeshokoladnyj-100x100.png"
+      },
+      {
+        "label": "Акація темна",
+        "swatch": "https://rodos.ua/image/cache/catalog/%20%20-1568110641-100x100.jpg"
+      },
+      {
+        "label": "Дуб шале графіт",
+        "swatch": "https://rodos.ua/image/cache/catalog/Bianca-1568052349-100x100.jpg"
+      },
+      {
+        "label": "Мрамор сірий",
+        "swatch": "https://rodos.ua/image/cache/catalog/%20%20-1568198709-100x100.jpg"
+      },
+      {
+        "label": "Каштан білий",
+        "swatch": "https://rodos.ua/image/cache/catalog/%20%20%20NEW-1568299678-100x100.jpg"
+      },
+      {
+        "label": "Каштан сірий",
+        "swatch": "https://rodos.ua/image/cache/catalog/%20%20NEW-1568299737-100x100.jpg"
+      },
+      {
+        "label": "Каштан беж",
+        "swatch": "https://rodos.ua/image/cache/catalog/%20%20-1568299161-100x100.jpg"
+      },
+      {
+        "label": "Сосна браш браун",
+        "swatch": "https://rodos.ua/image/cache/catalog/.jpg-1589976466-100x100.jpg"
+      },
+      {
+        "label": "Сосна браш кобальт",
+        "swatch": "https://rodos.ua/image/cache/catalog/.jpg-1589976454-100x100.jpg"
+      },
+      {
+        "label": "Сосна браш мінт",
+        "swatch": "https://rodos.ua/image/cache/catalog/.jpg-1590395711-100x100.jpg"
+      },
+      {
+        "label": "Белый мат (ПВХ)",
+        "swatch": "https://rodos.ua/image/cache/catalog/%20%20%20-1568619289-100x100.jpg"
+      },
+      {
+        "label": "Бежевий",
+        "swatch": "https://rodos.ua/image/cache/catalog/images-1706520621-100x100.jpg"
+      },
+      {
+        "label": "Світло-сірий",
+        "swatch": "https://rodos.ua/image/cache/catalog/images-1706520848-100x100.png"
+      },
+      {
+        "label": "Канадський дуб",
+        "swatch": "https://rodos.ua/image/cache/catalog/A001%20%20-gluhoe--1715603714-100x100.jpg"
+      },
+      {
+        "label": "Кедр софт графіт",
+        "swatch": "https://rodos.ua/image/cache/catalog/%20-1719479615-100x100.jpg"
+      },
+      {
+        "label": "Кедр софт білий",
+        "swatch": "https://rodos.ua/image/cache/catalog/---1719479692-100x100.jpg"
+      }
+    ],
+    "configurations": [
+      "Глухе",
+      "Напівскло"
+    ],
+    "variants": [
+      {
+        "color": "Cерый дуб",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/MODERN%20Style%202%20%20seruy%20dub-gluhoe-1631867601-1000x1000.jpg"
+      },
+      {
+        "color": "Cерый дуб",
+        "configuration": "Напівскло",
+        "image": "https://rodos.ua/image/cache/catalog/MODERN%20Style%202%20%20seruy%20dub-polusteklo-1631867604-1000x1000.jpg"
+      },
+      {
+        "color": "Сосна крем",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/style2-gluhoe-dveri-1676444505-1000x1000.jpg"
+      },
+      {
+        "color": "Сосна крем",
+        "configuration": "Напівскло",
+        "image": "https://rodos.ua/image/cache/catalog/style2-polusteklo-dveri-1676449100-1000x1000.jpg"
+      },
+      {
+        "color": "Крем",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/MODERN%20Style%202%20%20krem-gluhoe-1631867553-1000x1000.jpg"
+      },
+      {
+        "color": "Крем",
+        "configuration": "Напівскло",
+        "image": "https://rodos.ua/image/cache/catalog/MODERN%20Style%202%20%20krem-polusteklo-1631867570-1000x1000.jpg"
+      },
+      {
+        "color": "Дуб сонома",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/MODERN%20Style%202%20%20dub%20sonoma-gluhoe-1631867428-1000x1000.jpg"
+      },
+      {
+        "color": "Дуб сонома",
+        "configuration": "Напівскло",
+        "image": "https://rodos.ua/image/cache/catalog/MODERN%20Style%202%20%20dub%20sonoma-polusteklo-1631867434-1000x1000.jpg"
+      },
+      {
+        "color": "Венге шоколадний",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/MODERN%20Style%202%20%20venge%20yugnuy-gluhoe-1631867686-1000x1000.jpg"
+      },
+      {
+        "color": "Венге шоколадний",
+        "configuration": "Напівскло",
+        "image": "https://rodos.ua/image/cache/catalog/MODERN%20Style%202%20%20venge%20yugnuy-polusteklo-1631867694-1000x1000.jpg"
+      },
+      {
+        "color": "Акація темна",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/MODERN%20Style%202%20%20akaciya%20temna-gluhoe-1631865965-1000x1000.jpg"
+      },
+      {
+        "color": "Акація темна",
+        "configuration": "Напівскло",
+        "image": "https://rodos.ua/image/cache/catalog/MODERN%20Style%202%20%20akaciya%20temna-polusteklo-1631865973-1000x1000.jpg"
+      },
+      {
+        "color": "Дуб шале графіт",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/MODERN%20style%202%20%20%20%20-gluhoe-1631867335-1000x1000.jpg"
+      },
+      {
+        "color": "Дуб шале графіт",
+        "configuration": "Напівскло",
+        "image": "https://rodos.ua/image/cache/catalog/MODERN%20style%202%20%20%20%20-polusteklo-1631867353-1000x1000.jpg"
+      },
+      {
+        "color": "Мрамор сірий",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/MODERN%20Style%202%20%20mramor%20seruy-gluhoe-1631867581-1000x1000.jpg"
+      },
+      {
+        "color": "Мрамор сірий",
+        "configuration": "Напівскло",
+        "image": "https://rodos.ua/image/cache/catalog/MODERN%20Style%202%20%20mramor%20seruy-polusteklo-1631867585-1000x1000.jpg"
+      },
+      {
+        "color": "Каштан білий",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/MODERN%20Style%202%20%20kashtan%20bel-gluhoe-1631867511-1000x1000.jpg"
+      },
+      {
+        "color": "Каштан білий",
+        "configuration": "Напівскло",
+        "image": "https://rodos.ua/image/cache/catalog/MODERN%20Style%202%20%20kashtan%20beluy-polusteklo-1631867514-1000x1000.jpg"
+      },
+      {
+        "color": "Каштан сірий",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/MODERN%20Style%202%20%20kashtan%20seruy-gluhoe-1631867528-1000x1000.jpg"
+      },
+      {
+        "color": "Каштан сірий",
+        "configuration": "Напівскло",
+        "image": "https://rodos.ua/image/cache/catalog/MODERN%20Style%202%20%20kashtan%20seruy-polusteklo-1631867533-1000x1000.jpg"
+      },
+      {
+        "color": "Каштан беж",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/MODERN%20Style%202%20%20kashtan%20beg-gluhoe-1631867489-1000x1000.jpg"
+      },
+      {
+        "color": "Каштан беж",
+        "configuration": "Напівскло",
+        "image": "https://rodos.ua/image/cache/catalog/MODERN%20Style%202%20%20kashtan%20beg-polusteklo-1631867495-1000x1000.jpg"
+      },
+      {
+        "color": "Сосна браш браун",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/MODERN%20Style%202%20%20sosna%20brash%20brown-gluhoe-1631867616-1000x1000.jpg"
+      },
+      {
+        "color": "Сосна браш браун",
+        "configuration": "Напівскло",
+        "image": "https://rodos.ua/image/cache/catalog/MODERN%20Style%202%20%20sosna%20brash%20brown-polusteklo-1631867622-1000x1000.jpg"
+      },
+      {
+        "color": "Сосна браш кобальт",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/MODERN%20Style%202%20%20sosna%20brashkobalt-gluhoe-1631867662-1000x1000.jpg"
+      },
+      {
+        "color": "Сосна браш кобальт",
+        "configuration": "Напівскло",
+        "image": "https://rodos.ua/image/cache/catalog/MODERN%20Style%202%20%20sosna%20brashkobalt-polusteklo-1631867666-1000x1000.jpg"
+      },
+      {
+        "color": "Сосна браш мінт",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/MODERN%20Style%202%20%20sosna%20brash%20mint-gluhoe-1631867646-1000x1000.jpg"
+      },
+      {
+        "color": "Сосна браш мінт",
+        "configuration": "Напівскло",
+        "image": "https://rodos.ua/image/cache/catalog/MODERN%20Style%202%20%20sosna%20brash%20mint-polusteklo-1631867649-1000x1000.jpg"
+      },
+      {
+        "color": "Белый мат (ПВХ)",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/STYLE%202%20%20%20-gluhoe--1720011057-1000x1000.jpg"
+      },
+      {
+        "color": "Белый мат (ПВХ)",
+        "configuration": "Напівскло",
+        "image": "https://rodos.ua/image/cache/catalog/STYLE%202%20%20%20-polusteklo-%20-1720011060-1000x1000.jpg"
+      },
+      {
+        "color": "Бежевий",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/STYLE%202%20-gluhoe--1720010962-1000x1000.jpg"
+      },
+      {
+        "color": "Бежевий",
+        "configuration": "Напівскло",
+        "image": "https://rodos.ua/image/cache/catalog/STYLE%202%20%20-polusteklo--1720010965-1000x1000.jpg"
+      },
+      {
+        "color": "Світло-сірий",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/MODERN%20Style%202%20%20akaciya%20temna-gluhoe-1631865953-1000x1000.jpg"
+      },
+      {
+        "color": "Світло-сірий",
+        "configuration": "Напівскло",
+        "image": "https://rodos.ua/image/cache/catalog/MODERN%20Style%202%20%20akaciya%20temna-polusteklo-1631865973-1000x1000.jpg"
+      },
+      {
+        "color": "Канадський дуб",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/STYLE%202%20%20-gluhoe-%20-1715771453-1000x1000.jpg"
+      },
+      {
+        "color": "Канадський дуб",
+        "configuration": "Напівскло",
+        "image": "https://rodos.ua/image/cache/catalog/STYLE%202%20%20%20-polusteklo--1715771477-1000x1000.jpg"
+      },
+      {
+        "color": "Кедр софт графіт",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/STYLE%202%20%20%20-gluhoe--1720011026-1000x1000.jpg"
+      },
+      {
+        "color": "Кедр софт графіт",
+        "configuration": "Напівскло",
+        "image": "https://rodos.ua/image/cache/catalog/STYLE%202%20%20%20-polusteklo--1720011033-1000x1000.jpg"
+      },
+      {
+        "color": "Кедр софт білий",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/STYLE%202%20%20%20-gluhoe--1720010995-1000x1000.jpg"
+      },
+      {
+        "color": "Кедр софт білий",
+        "configuration": "Напівскло",
+        "image": "https://rodos.ua/image/cache/catalog/STYLE%202%20%20%20%20-polusteklo--1720011000-1000x1000.jpg"
+      }
+    ]
+  },
+  {
+    "code": "S4",
+    "slug": "rodos-official-wtq2da",
+    "url": "https://rodos.ua/mezhkomnatnaya-dver-style-2-blk",
+    "colors": [
+      {
+        "label": "Серый мрамор BLK",
+        "swatch": "https://rodos.ua/image/cache/catalog/%20%20%20BLK-1568199915-100x100.jpg"
+      },
+      {
+        "label": "Акация темная BLK",
+        "swatch": "https://rodos.ua/image/cache/catalog/%20%20%20BLK-1568272487-100x100.jpg"
+      },
+      {
+        "label": "Каштан беж BLK",
+        "swatch": "https://rodos.ua/image/cache/catalog/%20%20BLK-1568364848-100x100.jpg"
+      },
+      {
+        "label": "Дуб шале графит BLK",
+        "swatch": "https://rodos.ua/image/cache/catalog/%20%20%20BLK-1568273901-100x100.jpg"
+      },
+      {
+        "label": "Каштан белый BLK",
+        "swatch": "https://rodos.ua/image/cache/catalog/%20%20BLK%20NEW-1568364883-100x100.jpg"
+      },
+      {
+        "label": "Каштан серый BLK",
+        "swatch": "https://rodos.ua/image/cache/catalog/%20%20%20BLK%20NEW-1568364915-100x100.jpg"
+      },
+      {
+        "label": "Сосна браш браун BLK",
+        "swatch": "https://rodos.ua/image/cache/catalog/%20BLK-1590055720-100x100.jpg"
+      },
+      {
+        "label": "Сосна браш кобальт BLK",
+        "swatch": "https://rodos.ua/image/cache/catalog/%20BLK-1590055725-100x100.jpg"
+      },
+      {
+        "label": "Сосна браш минт BLK",
+        "swatch": "https://rodos.ua/image/cache/catalog/%20BLK-1590395798-100x100.jpg"
+      },
+      {
+        "label": "Дуб сонома BLK",
+        "swatch": "https://rodos.ua/image/cache/catalog/sonoma-1569525258-100x100-1618831783-100x100.jpg"
+      },
+      {
+        "label": "Крем BLK",
+        "swatch": "https://rodos.ua/image/cache/catalog/soskrem-100x100-1618831912-100x100.jpg"
+      },
+      {
+        "label": "Серый дуб BLK",
+        "swatch": "https://rodos.ua/image/cache/catalog/044c814e-ff1b-43f1-bbde-cc5a1178e46b-1654590075-100x100.jpg"
+      },
+      {
+        "label": "Сосна Крем BLK",
+        "swatch": "https://rodos.ua/image/cache/catalog/fca240e1-fd4c-458e-a96b-942a14059b5e-1654590086-100x100.jpg"
+      },
+      {
+        "label": "Канадський дуб BLK",
+        "swatch": "https://rodos.ua/image/cache/catalog/A001%20%20%20BLK-1715683038-100x100.jpg"
+      },
+      {
+        "label": "Бежевий BLK",
+        "swatch": "https://rodos.ua/image/cache/catalog/bej-1719832114-100x100.jpg"
+      },
+      {
+        "label": "Светло серый BLK",
+        "swatch": "https://rodos.ua/image/cache/catalog/svetlo%20seruy-1719832136-100x100.jpg"
+      },
+      {
+        "label": "Кедр софт белый BLK",
+        "swatch": "https://rodos.ua/image/cache/catalog/kedr%20soft%20biluy-1719832151-100x100.jpg"
+      },
+      {
+        "label": "Кедр софт графит BLK",
+        "swatch": "https://rodos.ua/image/cache/catalog/%20-1719832154-100x100.jpg"
+      },
+      {
+        "label": "Белый мат (ПВХ) BLK",
+        "swatch": "https://rodos.ua/image/cache/catalog/bel%20mat-1719832628-100x100.jpg"
+      }
+    ],
+    "configurations": [
+      "Напівскло"
+    ],
+    "variants": [
+      {
+        "color": "Серый мрамор BLK",
+        "configuration": "Напівскло",
+        "image": "https://rodos.ua/image/cache/catalog/MODERN%20Style%202%20%20mramor%20seruy%20BLK-1718096708-1000x1000.jpg"
+      },
+      {
+        "color": "Акация темная BLK",
+        "configuration": "Напівскло",
+        "image": "https://rodos.ua/image/cache/catalog/MODERN%20Style%202%20%20akaciya%20temna%20BLK-1718096520-1000x1000.jpg"
+      },
+      {
+        "color": "Каштан беж BLK",
+        "configuration": "Напівскло",
+        "image": "https://rodos.ua/image/cache/catalog/MODERN%20Style%202%20%20kashtan%20beg%20BLK-1718096622-1000x1000.jpg"
+      },
+      {
+        "color": "Дуб шале графит BLK",
+        "configuration": "Напівскло",
+        "image": "https://rodos.ua/image/cache/catalog/MODERN%20Style%202%20%20dub%20shale%20graphit%20BLK-1718096538-1000x1000.jpg"
+      },
+      {
+        "color": "Каштан белый BLK",
+        "configuration": "Напівскло",
+        "image": "https://rodos.ua/image/cache/catalog/MODERN%20Style%202%20%20kashtan%20bel%20BLK-1718096638-1000x1000.jpg"
+      },
+      {
+        "color": "Каштан серый BLK",
+        "configuration": "Напівскло",
+        "image": "https://rodos.ua/image/cache/catalog/MODERN%20Style%202%20%20kashtan%20seruy%20BLK-1718096651-1000x1000.jpg"
+      },
+      {
+        "color": "Сосна браш браун BLK",
+        "configuration": "Напівскло",
+        "image": "https://rodos.ua/image/cache/catalog/MODERN%20Style%202%20%20sosna%20brash%20brown%20BLK-1718096769-1000x1000.jpg"
+      },
+      {
+        "color": "Сосна браш кобальт BLK",
+        "configuration": "Напівскло",
+        "image": "https://rodos.ua/image/cache/catalog/MODERN%20Style%202%20%20sosna%20brashkobalt%20BLK-1718096817-1000x1000.jpg"
+      },
+      {
+        "color": "Сосна браш минт BLK",
+        "configuration": "Напівскло",
+        "image": "https://rodos.ua/image/cache/catalog/MODERN%20Style%202%20%20sosna%20brash%20mint%20BLK-1718096794-1000x1000.jpg"
+      },
+      {
+        "color": "Дуб сонома BLK",
+        "configuration": "Напівскло",
+        "image": "https://rodos.ua/image/cache/catalog/MODERN%20Style%202%20%20dub%20sonoma%20BLK-1718096558-1000x1000.jpg"
+      },
+      {
+        "color": "Крем BLK",
+        "configuration": "Напівскло",
+        "image": "https://rodos.ua/image/cache/catalog/MODERN%20Style%202%20%20krem%20BLK-1718096674-1000x1000.jpg"
+      },
+      {
+        "color": "Серый дуб BLK",
+        "configuration": "Напівскло",
+        "image": "https://rodos.ua/image/cache/catalog/MODERN%20Style%202%20%20seruy%20dub%20BLK-1718096739-1000x1000.jpg"
+      },
+      {
+        "color": "Сосна Крем BLK",
+        "configuration": "Напівскло",
+        "image": "https://rodos.ua/image/cache/catalog/MODERN%20Style%202%20%20sosna%20krem%20BLK-1718096832-1000x1000.jpg"
+      },
+      {
+        "color": "Канадський дуб BLK",
+        "configuration": "Напівскло",
+        "image": "https://rodos.ua/image/cache/catalog/STYLE%202%20%20%20%20BLK-1718096882-1000x1000.jpg"
+      },
+      {
+        "color": "Бежевий BLK",
+        "configuration": "Напівскло",
+        "image": "https://rodos.ua/image/cache/catalog/STYLE%202%20-polusteklo-BLK-1720011170-1000x1000.jpg"
+      },
+      {
+        "color": "Светло серый BLK",
+        "configuration": "Напівскло",
+        "image": "https://rodos.ua/image/cache/catalog/STYLE%202%20%20-polusteklo-BLK-1720011242-1000x1000.jpg"
+      },
+      {
+        "color": "Кедр софт белый BLK",
+        "configuration": "Напівскло",
+        "image": "https://rodos.ua/image/cache/catalog/STYLE%202%20%20%20-polusteklo-BLK-1720011179-1000x1000.jpg"
+      },
+      {
+        "color": "Кедр софт графит BLK",
+        "configuration": "Напівскло",
+        "image": "https://rodos.ua/image/cache/catalog/STYLE%202%20%20%20-polusteklo-BLK-1720011195-1000x1000.jpg"
+      },
+      {
+        "color": "Белый мат (ПВХ) BLK",
+        "configuration": "Напівскло",
+        "image": "https://rodos.ua/image/cache/catalog/STYLE%202%20%20%20BLK-polusteklo--1720011224-1000x1000.jpg"
+      }
+    ]
+  },
+  {
+    "code": "S5",
+    "slug": "rodos-official-1rk5u97",
+    "url": "https://rodos.ua/mezhkomnatnaya-dver-style-3-1",
+    "colors": [
+      {
+        "label": "Cерый дуб",
+        "swatch": "https://rodos.ua/image/cache/catalog/colors/seryy-dub-100x100.png"
+      },
+      {
+        "label": "Крем",
+        "swatch": "https://rodos.ua/image/cache/catalog/colors/soskrem-100x100.jpg"
+      },
+      {
+        "label": "Дуб сонома",
+        "swatch": "https://rodos.ua/image/cache/catalog/sonoma-1569525258-100x100.jpg"
+      },
+      {
+        "label": "Акація темна",
+        "swatch": "https://rodos.ua/image/cache/catalog/%20%20-1568110641-100x100.jpg"
+      },
+      {
+        "label": "Дуб шале графіт",
+        "swatch": "https://rodos.ua/image/cache/catalog/Bianca-1568052349-100x100.jpg"
+      },
+      {
+        "label": "Мрамор сірий",
+        "swatch": "https://rodos.ua/image/cache/catalog/%20%20-1568198709-100x100.jpg"
+      },
+      {
+        "label": "Каштан білий",
+        "swatch": "https://rodos.ua/image/cache/catalog/%20%20%20NEW-1568299678-100x100.jpg"
+      },
+      {
+        "label": "Каштан сірий",
+        "swatch": "https://rodos.ua/image/cache/catalog/%20%20NEW-1568299737-100x100.jpg"
+      },
+      {
+        "label": "Каштан беж",
+        "swatch": "https://rodos.ua/image/cache/catalog/%20%20-1568299161-100x100.jpg"
+      },
+      {
+        "label": "Сосна браш браун",
+        "swatch": "https://rodos.ua/image/cache/catalog/.jpg-1589976466-100x100.jpg"
+      },
+      {
+        "label": "Сосна браш кобальт",
+        "swatch": "https://rodos.ua/image/cache/catalog/.jpg-1589976454-100x100.jpg"
+      },
+      {
+        "label": "Сосна браш мінт",
+        "swatch": "https://rodos.ua/image/cache/catalog/.jpg-1590395711-100x100.jpg"
+      },
+      {
+        "label": "Белый мат (ПВХ)",
+        "swatch": "https://rodos.ua/image/cache/catalog/%20%20%20-1568619289-100x100.jpg"
+      },
+      {
+        "label": "Бежевий",
+        "swatch": "https://rodos.ua/image/cache/catalog/images-1706520621-100x100.jpg"
+      },
+      {
+        "label": "Світло-сірий",
+        "swatch": "https://rodos.ua/image/cache/catalog/images-1706520848-100x100.png"
+      },
+      {
+        "label": "Канадський дуб",
+        "swatch": "https://rodos.ua/image/cache/catalog/A001%20%20-gluhoe--1715603714-100x100.jpg"
+      },
+      {
+        "label": "Кедр софт графіт",
+        "swatch": "https://rodos.ua/image/cache/catalog/%20-1719479615-100x100.jpg"
+      },
+      {
+        "label": "Кедр софт білий",
+        "swatch": "https://rodos.ua/image/cache/catalog/---1719479692-100x100.jpg"
+      }
+    ],
+    "configurations": [
+      "Глухе",
+      "Напівскло"
+    ],
+    "variants": [
+      {
+        "color": "Cерый дуб",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/MODERN%20STYLE%203%20%20%20%20%20%20-gluhoe-1632133420-1000x1000.jpg"
+      },
+      {
+        "color": "Cерый дуб",
+        "configuration": "Напівскло",
+        "image": "https://rodos.ua/image/cache/catalog/MODERN%20STYLE%203%20%20%20%20-polusteklo-1632133422-1000x1000.jpg"
+      },
+      {
+        "color": "Крем",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/MODERN%20STYLE%203%20%20%20-gluhoe-1632133405-1000x1000.jpg"
+      },
+      {
+        "color": "Крем",
+        "configuration": "Напівскло",
+        "image": "https://rodos.ua/image/cache/catalog/MODERN%20STYLE%203%20%20-polusteklo-1632133408-1000x1000.jpg"
+      },
+      {
+        "color": "Дуб сонома",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/MODERN%20STYLE%203%20%20%20%20-gluhoe-1632133251-1000x1000.jpg"
+      },
+      {
+        "color": "Дуб сонома",
+        "configuration": "Напівскло",
+        "image": "https://rodos.ua/image/cache/catalog/MODERN%20STYLE%203%20%20%20%20-polusteklo-1632133258-1000x1000.jpg"
+      },
+      {
+        "color": "Акація темна",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/MODERN%20STYLE%203%20%20%20%20-gluhoe-1632133072-1000x1000.jpg"
+      },
+      {
+        "color": "Акація темна",
+        "configuration": "Напівскло",
+        "image": "https://rodos.ua/image/cache/catalog/MODERN%20STYLE%203%20%20%20%20-polusteklo-1632133105-1000x1000.jpg"
+      },
+      {
+        "color": "Дуб шале графіт",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/MODERN%20STYLE%203%20%20%20%20%20-gluhoe-1632133269-1000x1000.jpg"
+      },
+      {
+        "color": "Дуб шале графіт",
+        "configuration": "Напівскло",
+        "image": "https://rodos.ua/image/cache/catalog/MODERN%20STYLE%203%20%20%20%20%20-polusteklo-1632133273-1000x1000.jpg"
+      },
+      {
+        "color": "Мрамор сірий",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/MODERN%20style%203%20%20%20-gluhoe-1632133520-1000x1000.jpg"
+      },
+      {
+        "color": "Мрамор сірий",
+        "configuration": "Напівскло",
+        "image": "https://rodos.ua/image/cache/catalog/MODERN%20style%203%20%20%20-polusteklo-1632133524-1000x1000.jpg"
+      },
+      {
+        "color": "Каштан білий",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/MODERN%20STYLE%203%20%20%20%20-gluhoe-1632133351-1000x1000.jpg"
+      },
+      {
+        "color": "Каштан білий",
+        "configuration": "Напівскло",
+        "image": "https://rodos.ua/image/cache/catalog/MODERN%20STYLE%203%20%20%20%20-polusteklo-1632133353-1000x1000.jpg"
+      },
+      {
+        "color": "Каштан сірий",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/MODERN%20STYLE%203%20%20%20%20-gluhoe-1632133372-1000x1000.jpg"
+      },
+      {
+        "color": "Каштан сірий",
+        "configuration": "Напівскло",
+        "image": "https://rodos.ua/image/cache/catalog/MODERN%20STYLE%203%20%20%20%20-polusteklo-1632133374-1000x1000.jpg"
+      },
+      {
+        "color": "Каштан беж",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/MODERN%20STYLE%203%20%20%20%20-gluhoe-1632133330-1000x1000.jpg"
+      },
+      {
+        "color": "Каштан беж",
+        "configuration": "Напівскло",
+        "image": "https://rodos.ua/image/cache/catalog/MODERN%20STYLE%203%20%20%20%20%20-polusteklo-1632133327-1000x1000.jpg"
+      },
+      {
+        "color": "Сосна браш браун",
+        "configuration": "Напівскло",
+        "image": "https://rodos.ua/image/cache/catalog/MODERN%20STYLE%203%20%20%20%20-polusteklo-1632133546-1000x1000.jpg"
+      },
+      {
+        "color": "Сосна браш кобальт",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/MODERN%20STYLE%203%20%20%20%20%20-gluhoe-1632133433-1000x1000.jpg"
+      },
+      {
+        "color": "Сосна браш кобальт",
+        "configuration": "Напівскло",
+        "image": "https://rodos.ua/image/cache/catalog/MODERN%20STYLE%203%20%20%20%20-polusteklo-1632133439-1000x1000.jpg"
+      },
+      {
+        "color": "Сосна браш мінт",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/MODERN%20STYLE%203%20%20%20%20%20-gluhoe-1632133467-1000x1000.jpg"
+      },
+      {
+        "color": "Сосна браш мінт",
+        "configuration": "Напівскло",
+        "image": "https://rodos.ua/image/cache/catalog/MODERN%20STYLE%203%20%20%20%20-polusteklo-1632133471-1000x1000.jpg"
+      },
+      {
+        "color": "Белый мат (ПВХ)",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/STYLE%203%20%20%20-gluhoe--1720011734-1000x1000.jpg"
+      },
+      {
+        "color": "Белый мат (ПВХ)",
+        "configuration": "Напівскло",
+        "image": "https://rodos.ua/image/cache/catalog/STYLE%203%20%20%20-polusteklo-%20-1720011737-1000x1000.jpg"
+      },
+      {
+        "color": "Бежевий",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/STYLE%203%20-gluhoe--1720011632-1000x1000.jpg"
+      },
+      {
+        "color": "Бежевий",
+        "configuration": "Напівскло",
+        "image": "https://rodos.ua/image/cache/catalog/STYLE%203%20%20-polusteklo--1720011634-1000x1000.jpg"
+      },
+      {
+        "color": "Світло-сірий",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/STYLE%203%20%20-gluhoe--1720011760-1000x1000.jpg"
+      },
+      {
+        "color": "Світло-сірий",
+        "configuration": "Напівскло",
+        "image": "https://rodos.ua/image/cache/catalog/STYLE%203%20%20%20-polusteklo--1720011763-1000x1000.jpg"
+      },
+      {
+        "color": "Канадський дуб",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/STYLE%203%20%20-gluhoe-%20-1715772024-1000x1000.jpg"
+      },
+      {
+        "color": "Канадський дуб",
+        "configuration": "Напівскло",
+        "image": "https://rodos.ua/image/cache/catalog/STYLE%203%20%20%20-polusteklo--1715772022-1000x1000.jpg"
+      },
+      {
+        "color": "Кедр софт графіт",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/STYLE%203%20%20%20-gluhoe--1720011699-1000x1000.jpg"
+      },
+      {
+        "color": "Кедр софт графіт",
+        "configuration": "Напівскло",
+        "image": "https://rodos.ua/image/cache/catalog/STYLE%203%20%20%20-polusteklo--1720011702-1000x1000.jpg"
+      },
+      {
+        "color": "Кедр софт білий",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/STYLE%203%20%20%20-gluhoe--1720011670-1000x1000.jpg"
+      },
+      {
+        "color": "Кедр софт білий",
+        "configuration": "Напівскло",
+        "image": "https://rodos.ua/image/cache/catalog/STYLE%203%20%20%20%20-polusteklo--1720011673-1000x1000.jpg"
+      }
+    ]
+  },
+  {
+    "code": "S6",
+    "slug": "rodos-official-wsxm0v",
+    "url": "https://rodos.ua/mezhkomnatnaya-dver-style-3-blk",
+    "colors": [
+      {
+        "label": "Серый мрамор BLK",
+        "swatch": "https://rodos.ua/image/cache/catalog/%20%20%20BLK-1568199915-100x100.jpg"
+      },
+      {
+        "label": "Акация темная BLK",
+        "swatch": "https://rodos.ua/image/cache/catalog/%20%20%20BLK-1568272487-100x100.jpg"
+      },
+      {
+        "label": "Каштан беж BLK",
+        "swatch": "https://rodos.ua/image/cache/catalog/%20%20BLK-1568364848-100x100.jpg"
+      },
+      {
+        "label": "Дуб шале графит BLK",
+        "swatch": "https://rodos.ua/image/cache/catalog/%20%20%20BLK-1568273901-100x100.jpg"
+      },
+      {
+        "label": "Каштан белый BLK",
+        "swatch": "https://rodos.ua/image/cache/catalog/%20%20BLK%20NEW-1568364883-100x100.jpg"
+      },
+      {
+        "label": "Сосна браш браун BLK",
+        "swatch": "https://rodos.ua/image/cache/catalog/%20BLK-1590055720-100x100.jpg"
+      },
+      {
+        "label": "Сосна браш кобальт BLK",
+        "swatch": "https://rodos.ua/image/cache/catalog/%20BLK-1590055725-100x100.jpg"
+      },
+      {
+        "label": "Сосна браш минт BLK",
+        "swatch": "https://rodos.ua/image/cache/catalog/%20BLK-1590395798-100x100.jpg"
+      },
+      {
+        "label": "Дуб сонома BLK",
+        "swatch": "https://rodos.ua/image/cache/catalog/sonoma-1569525258-100x100-1618831783-100x100.jpg"
+      },
+      {
+        "label": "Крем BLK",
+        "swatch": "https://rodos.ua/image/cache/catalog/soskrem-100x100-1618831912-100x100.jpg"
+      },
+      {
+        "label": "Серый дуб BLK",
+        "swatch": "https://rodos.ua/image/cache/catalog/044c814e-ff1b-43f1-bbde-cc5a1178e46b-1654590075-100x100.jpg"
+      },
+      {
+        "label": "Сосна Крем BLK",
+        "swatch": "https://rodos.ua/image/cache/catalog/fca240e1-fd4c-458e-a96b-942a14059b5e-1654590086-100x100.jpg"
+      },
+      {
+        "label": "Канадський дуб BLK",
+        "swatch": "https://rodos.ua/image/cache/catalog/A001%20%20%20BLK-1715683038-100x100.jpg"
+      },
+      {
+        "label": "Бежевий BLK",
+        "swatch": "https://rodos.ua/image/cache/catalog/bej-1719832114-100x100.jpg"
+      },
+      {
+        "label": "Светло серый BLK",
+        "swatch": "https://rodos.ua/image/cache/catalog/svetlo%20seruy-1719832136-100x100.jpg"
+      },
+      {
+        "label": "Кедр софт белый BLK",
+        "swatch": "https://rodos.ua/image/cache/catalog/kedr%20soft%20biluy-1719832151-100x100.jpg"
+      },
+      {
+        "label": "Кедр софт графит BLK",
+        "swatch": "https://rodos.ua/image/cache/catalog/%20-1719832154-100x100.jpg"
+      },
+      {
+        "label": "Белый мат (ПВХ) BLK",
+        "swatch": "https://rodos.ua/image/cache/catalog/bel%20mat-1719832628-100x100.jpg"
+      }
+    ],
+    "configurations": [
+      "Напівскло"
+    ],
+    "variants": [
+      {
+        "color": "Серый мрамор BLK",
+        "configuration": "Напівскло",
+        "image": "https://rodos.ua/image/cache/catalog/MODERN%20STYLE%203%20%20%20%20%20BLK-1718102198-1000x1000.jpg"
+      },
+      {
+        "color": "Акация темная BLK",
+        "configuration": "Напівскло",
+        "image": "https://rodos.ua/image/cache/catalog/MODERN%20STYLE%203%20%20%20%20%20BLK-1718102361-1000x1000.jpg"
+      },
+      {
+        "color": "Каштан беж BLK",
+        "configuration": "Напівскло",
+        "image": "https://rodos.ua/image/cache/catalog/MODERN%20STYLE%203%20%20%20%20%20%20BLK-1718102299-1000x1000.jpg"
+      },
+      {
+        "color": "Дуб шале графит BLK",
+        "configuration": "Напівскло",
+        "image": "https://rodos.ua/image/cache/catalog/MODERN%20STYLE%203%20%20%20%20%20%20BLK-1718102357-1000x1000.jpg"
+      },
+      {
+        "color": "Каштан белый BLK",
+        "configuration": "Напівскло",
+        "image": "https://rodos.ua/image/cache/catalog/MODERN%20STYLE%203%20%20%20%20%20BLK-1718102295-1000x1000.jpg"
+      },
+      {
+        "color": "Сосна браш браун BLK",
+        "configuration": "Напівскло",
+        "image": "https://rodos.ua/image/cache/catalog/MODERN%20STYLE%203%20%20%20%20%20BLK-1718102189-1000x1000.jpg"
+      },
+      {
+        "color": "Сосна браш кобальт BLK",
+        "configuration": "Напівскло",
+        "image": "https://rodos.ua/image/cache/catalog/MODERN%20STYLE%203%20%20%20%20%20BLK-1718102182-1000x1000.jpg"
+      },
+      {
+        "color": "Сосна браш минт BLK",
+        "configuration": "Напівскло",
+        "image": "https://rodos.ua/image/cache/catalog/MODERN%20STYLE%203%20%20%20%20%20BLK-1718102185-1000x1000.jpg"
+      },
+      {
+        "color": "Дуб сонома BLK",
+        "configuration": "Напівскло",
+        "image": "https://rodos.ua/image/cache/catalog/MODERN%20STYLE%203%20%20%20%20%20BLK-1718102326-1000x1000.jpg"
+      },
+      {
+        "color": "Крем BLK",
+        "configuration": "Напівскло",
+        "image": "https://rodos.ua/image/cache/catalog/MODERN%20STYLE%203%20%20%20BLK-1718102291-1000x1000.jpg"
+      },
+      {
+        "color": "Серый дуб BLK",
+        "configuration": "Напівскло",
+        "image": "https://rodos.ua/image/cache/catalog/MODERN%20STYLE%203%20%20%20%20%20BLK-1718102195-1000x1000.jpg"
+      },
+      {
+        "color": "Сосна Крем BLK",
+        "configuration": "Напівскло",
+        "image": "https://rodos.ua/image/cache/catalog/MODERN%20STYLE%203%20%20%20%20BLK-1718102143-1000x1000.jpg"
+      },
+      {
+        "color": "Канадський дуб BLK",
+        "configuration": "Напівскло",
+        "image": "https://rodos.ua/image/cache/catalog/STYLE%203%20%20%20%20BLK-1718102175-1000x1000.jpg"
+      },
+      {
+        "color": "Бежевий BLK",
+        "configuration": "Напівскло",
+        "image": "https://rodos.ua/image/cache/catalog/STYLE%203%20-polusteklo-BLK-1720011887-1000x1000.jpg"
+      },
+      {
+        "color": "Светло серый BLK",
+        "configuration": "Напівскло",
+        "image": "https://rodos.ua/image/cache/catalog/STYLE%203%20%20-polusteklo-BLK-1720011946-1000x1000.jpg"
+      },
+      {
+        "color": "Кедр софт белый BLK",
+        "configuration": "Напівскло",
+        "image": "https://rodos.ua/image/cache/catalog/STYLE%203%20%20%20-polusteklo-BLK-1720011899-1000x1000.jpg"
+      },
+      {
+        "color": "Кедр софт графит BLK",
+        "configuration": "Напівскло",
+        "image": "https://rodos.ua/image/cache/catalog/STYLE%203%20%20%20-polusteklo-BLK-1720011908-1000x1000.jpg"
+      },
+      {
+        "color": "Белый мат (ПВХ) BLK",
+        "configuration": "Напівскло",
+        "image": "https://rodos.ua/image/cache/catalog/STYLE%203%20%20%20BLK-polusteklo--1720011934-1000x1000.jpg"
+      }
+    ]
+  },
+  {
+    "code": "S7",
+    "slug": "rodos-official-hxhl5j",
+    "url": "https://rodos.ua/mezhkomnatnaya-dver-style-3",
+    "colors": [
+      {
+        "label": "Cерый дуб",
+        "swatch": "https://rodos.ua/image/cache/catalog/colors/seryy-dub-100x100.png"
+      },
+      {
+        "label": "Крем",
+        "swatch": "https://rodos.ua/image/cache/catalog/colors/soskrem-100x100.jpg"
+      },
+      {
+        "label": "Дуб сонома",
+        "swatch": "https://rodos.ua/image/cache/catalog/sonoma-1569525258-100x100.jpg"
+      },
+      {
+        "label": "Акація темна",
+        "swatch": "https://rodos.ua/image/cache/catalog/%20%20-1568110641-100x100.jpg"
+      },
+      {
+        "label": "Дуб шале графіт",
+        "swatch": "https://rodos.ua/image/cache/catalog/Bianca-1568052349-100x100.jpg"
+      },
+      {
+        "label": "Мрамор сірий",
+        "swatch": "https://rodos.ua/image/cache/catalog/%20%20-1568198709-100x100.jpg"
+      },
+      {
+        "label": "Каштан білий",
+        "swatch": "https://rodos.ua/image/cache/catalog/%20%20%20NEW-1568299678-100x100.jpg"
+      },
+      {
+        "label": "Каштан сірий",
+        "swatch": "https://rodos.ua/image/cache/catalog/%20%20NEW-1568299737-100x100.jpg"
+      },
+      {
+        "label": "Каштан беж",
+        "swatch": "https://rodos.ua/image/cache/catalog/%20%20-1568299161-100x100.jpg"
+      },
+      {
+        "label": "Сосна браш браун",
+        "swatch": "https://rodos.ua/image/cache/catalog/.jpg-1589976466-100x100.jpg"
+      },
+      {
+        "label": "Сосна браш кобальт",
+        "swatch": "https://rodos.ua/image/cache/catalog/.jpg-1589976454-100x100.jpg"
+      },
+      {
+        "label": "Сосна браш мінт",
+        "swatch": "https://rodos.ua/image/cache/catalog/.jpg-1590395711-100x100.jpg"
+      },
+      {
+        "label": "Белый мат (ПВХ)",
+        "swatch": "https://rodos.ua/image/cache/catalog/%20%20%20-1568619289-100x100.jpg"
+      },
+      {
+        "label": "Бежевий",
+        "swatch": "https://rodos.ua/image/cache/catalog/images-1706520621-100x100.jpg"
+      },
+      {
+        "label": "Світло-сірий",
+        "swatch": "https://rodos.ua/image/cache/catalog/images-1706520848-100x100.png"
+      },
+      {
+        "label": "Канадський дуб",
+        "swatch": "https://rodos.ua/image/cache/catalog/A001%20%20-gluhoe--1715603714-100x100.jpg"
+      },
+      {
+        "label": "Кедр софт графіт",
+        "swatch": "https://rodos.ua/image/cache/catalog/%20-1719479615-100x100.jpg"
+      },
+      {
+        "label": "Кедр софт білий",
+        "swatch": "https://rodos.ua/image/cache/catalog/---1719479692-100x100.jpg"
+      }
+    ],
+    "configurations": [
+      "Глухе",
+      "Напівскло"
+    ],
+    "variants": [
+      {
+        "color": "Cерый дуб",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/MODERN%20STYLE%204%20%20%20%20%20-gluhoe-1632142541-1000x1000.jpg"
+      },
+      {
+        "color": "Cерый дуб",
+        "configuration": "Напівскло",
+        "image": "https://rodos.ua/image/cache/catalog/MODERN%20STYLE%204%20%20-polusteklo-1632142553-1000x1000.jpg"
+      },
+      {
+        "color": "Крем",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/MODERN%20STYLE%204%20%20-gluhoe-1632142332-1000x1000.jpg"
+      },
+      {
+        "color": "Крем",
+        "configuration": "Напівскло",
+        "image": "https://rodos.ua/image/cache/catalog/MODERN%20STYLE%204%20-polusteklo-1632142334-1000x1000.jpg"
+      },
+      {
+        "color": "Дуб сонома",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/MODERN%20STYLE%204%20%20%20-gluhoe-1632141930-1000x1000.jpg"
+      },
+      {
+        "color": "Дуб сонома",
+        "configuration": "Напівскло",
+        "image": "https://rodos.ua/image/cache/catalog/MODERN%20STYLE%204%20%20-polusteklo-1632141935-1000x1000.jpg"
+      },
+      {
+        "color": "Акація темна",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/MODERN%20STYLE%204%20%20%20-gluhoe-1632141669-1000x1000.jpg"
+      },
+      {
+        "color": "Акація темна",
+        "configuration": "Напівскло",
+        "image": "https://rodos.ua/image/cache/catalog/MODERN%20STYLE%204%20%20-polusteklo-1632141673-1000x1000.jpg"
+      },
+      {
+        "color": "Дуб шале графіт",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/MODERN%20STYLE%204%20%20%20%20-gluhoe-1632142119-1000x1000.jpg"
+      },
+      {
+        "color": "Дуб шале графіт",
+        "configuration": "Напівскло",
+        "image": "https://rodos.ua/image/cache/catalog/MODERN%20STYLE%204%20%20%20-polusteklo-1632142129-1000x1000.jpg"
+      },
+      {
+        "color": "Мрамор сірий",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/MODERN%20STYLE%204%20%20%20-gluhoe-1632142351-1000x1000.jpg"
+      },
+      {
+        "color": "Мрамор сірий",
+        "configuration": "Напівскло",
+        "image": "https://rodos.ua/image/cache/catalog/MODERN%20STYLE%204%20%20-polusteklo-1632142354-1000x1000.jpg"
+      },
+      {
+        "color": "Каштан білий",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/MODERN%20STYLE%204%20%20-gluhoe-1632142298-1000x1000.jpg"
+      },
+      {
+        "color": "Каштан білий",
+        "configuration": "Напівскло",
+        "image": "https://rodos.ua/image/cache/catalog/MODERN%20STYLE%204%20%20-polusteklo-1632142294-1000x1000.jpg"
+      },
+      {
+        "color": "Каштан сірий",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/MODERN%20STYLE%204%20%20%20-gluhoe-1632142316-1000x1000.jpg"
+      },
+      {
+        "color": "Каштан сірий",
+        "configuration": "Напівскло",
+        "image": "https://rodos.ua/image/cache/catalog/MODERN%20STYLE%204%20%20-polusteklo-1632142318-1000x1000.jpg"
+      },
+      {
+        "color": "Каштан беж",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/MODERN%20STYLE%204%20%20%20-gluhoe-1632142248-1000x1000.jpg"
+      },
+      {
+        "color": "Каштан беж",
+        "configuration": "Напівскло",
+        "image": "https://rodos.ua/image/cache/catalog/MODERN%20STYLE%204%20%20-polusteklo-1632142273-1000x1000.jpg"
+      },
+      {
+        "color": "Сосна браш браун",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/MODERN%20STYLE%204%20%20%20-gluhoe-1632142671-1000x1000.jpg"
+      },
+      {
+        "color": "Сосна браш браун",
+        "configuration": "Напівскло",
+        "image": "https://rodos.ua/image/cache/catalog/MODERN%20STYLE%204%20%20%20%20-polusteklo-1632142667-1000x1000.jpg"
+      },
+      {
+        "color": "Сосна браш кобальт",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/MODERN%20style%204%20%20%20%20-gluhoe-1632141709-1000x1000.jpg"
+      },
+      {
+        "color": "Сосна браш кобальт",
+        "configuration": "Напівскло",
+        "image": "https://rodos.ua/image/cache/catalog/MODERN%20style%204%20%20%20%20-polusteklo-1632141711-1000x1000.jpg"
+      },
+      {
+        "color": "Сосна браш мінт",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/MODERN%20STYLE%204%20%20%20-gluhoe-1632142698-1000x1000.jpg"
+      },
+      {
+        "color": "Сосна браш мінт",
+        "configuration": "Напівскло",
+        "image": "https://rodos.ua/image/cache/catalog/MODERN%20STYLE%204%20%20%20-polusteklo-1632142695-1000x1000.jpg"
+      },
+      {
+        "color": "Белый мат (ПВХ)",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/STYLE%204%20%20%20-gluhoe--1720012640-1000x1000.jpg"
+      },
+      {
+        "color": "Белый мат (ПВХ)",
+        "configuration": "Напівскло",
+        "image": "https://rodos.ua/image/cache/catalog/STYLE%204%20%20%20-polusteklo-%20-1720012642-1000x1000.jpg"
+      },
+      {
+        "color": "Бежевий",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/STYLE%204%20-gluhoe--1720012495-1000x1000.jpg"
+      },
+      {
+        "color": "Бежевий",
+        "configuration": "Напівскло",
+        "image": "https://rodos.ua/image/cache/catalog/STYLE%204%20%20-polusteklo--1720012499-1000x1000.jpg"
+      },
+      {
+        "color": "Світло-сірий",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/STYLE%204%20%20-gluhoe--1720012668-1000x1000.jpg"
+      },
+      {
+        "color": "Світло-сірий",
+        "configuration": "Напівскло",
+        "image": "https://rodos.ua/image/cache/catalog/STYLE%204%20%20%20-polusteklo--1720012671-1000x1000.jpg"
+      },
+      {
+        "color": "Канадський дуб",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/STYLE%204%20%20-gluhoe-%20-1715772880-1000x1000.jpg"
+      },
+      {
+        "color": "Канадський дуб",
+        "configuration": "Напівскло",
+        "image": "https://rodos.ua/image/cache/catalog/STYLE%204%20%20%20-polusteklo--1715772877-1000x1000.jpg"
+      },
+      {
+        "color": "Кедр софт графіт",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/STYLE%204%20%20%20-gluhoe--1720012589-1000x1000.jpg"
+      },
+      {
+        "color": "Кедр софт графіт",
+        "configuration": "Напівскло",
+        "image": "https://rodos.ua/image/cache/catalog/STYLE%204%20%20%20-polusteklo--1720012611-1000x1000.jpg"
+      },
+      {
+        "color": "Кедр софт білий",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/STYLE%204%20%20%20-gluhoe--1720012520-1000x1000.jpg"
+      },
+      {
+        "color": "Кедр софт білий",
+        "configuration": "Напівскло",
+        "image": "https://rodos.ua/image/cache/catalog/STYLE%204%20%20%20%20-polusteklo--1720012524-1000x1000.jpg"
+      }
+    ]
+  },
+  {
+    "code": "S8",
+    "slug": "rodos-official-wpnpq0",
+    "url": "https://rodos.ua/mezhkomnatnaya-dver-style-4-blk",
+    "colors": [
+      {
+        "label": "Серый мрамор BLK",
+        "swatch": "https://rodos.ua/image/cache/catalog/%20%20%20BLK-1568199915-100x100.jpg"
+      },
+      {
+        "label": "Акация темная BLK",
+        "swatch": "https://rodos.ua/image/cache/catalog/%20%20%20BLK-1568272487-100x100.jpg"
+      },
+      {
+        "label": "Каштан беж BLK",
+        "swatch": "https://rodos.ua/image/cache/catalog/%20%20BLK-1568364848-100x100.jpg"
+      },
+      {
+        "label": "Дуб шале графит BLK",
+        "swatch": "https://rodos.ua/image/cache/catalog/%20%20%20BLK-1568273901-100x100.jpg"
+      },
+      {
+        "label": "Каштан белый BLK",
+        "swatch": "https://rodos.ua/image/cache/catalog/%20%20BLK%20NEW-1568364883-100x100.jpg"
+      },
+      {
+        "label": "Сосна браш браун BLK",
+        "swatch": "https://rodos.ua/image/cache/catalog/%20BLK-1590055720-100x100.jpg"
+      },
+      {
+        "label": "Сосна браш кобальт BLK",
+        "swatch": "https://rodos.ua/image/cache/catalog/%20BLK-1590055725-100x100.jpg"
+      },
+      {
+        "label": "Дуб сонома BLK",
+        "swatch": "https://rodos.ua/image/cache/catalog/sonoma-1569525258-100x100-1618831783-100x100.jpg"
+      },
+      {
+        "label": "Крем BLK",
+        "swatch": "https://rodos.ua/image/cache/catalog/soskrem-100x100-1618831912-100x100.jpg"
+      },
+      {
+        "label": "Серый дуб BLK",
+        "swatch": "https://rodos.ua/image/cache/catalog/044c814e-ff1b-43f1-bbde-cc5a1178e46b-1654590075-100x100.jpg"
+      },
+      {
+        "label": "Сосна Крем BLK",
+        "swatch": "https://rodos.ua/image/cache/catalog/fca240e1-fd4c-458e-a96b-942a14059b5e-1654590086-100x100.jpg"
+      },
+      {
+        "label": "Канадський дуб BLK",
+        "swatch": "https://rodos.ua/image/cache/catalog/A001%20%20%20BLK-1715683038-100x100.jpg"
+      },
+      {
+        "label": "Бежевий BLK",
+        "swatch": "https://rodos.ua/image/cache/catalog/bej-1719832114-100x100.jpg"
+      },
+      {
+        "label": "Светло серый BLK",
+        "swatch": "https://rodos.ua/image/cache/catalog/svetlo%20seruy-1719832136-100x100.jpg"
+      },
+      {
+        "label": "Кедр софт белый BLK",
+        "swatch": "https://rodos.ua/image/cache/catalog/kedr%20soft%20biluy-1719832151-100x100.jpg"
+      },
+      {
+        "label": "Кедр софт графит BLK",
+        "swatch": "https://rodos.ua/image/cache/catalog/%20-1719832154-100x100.jpg"
+      },
+      {
+        "label": "Белый мат (ПВХ) BLK",
+        "swatch": "https://rodos.ua/image/cache/catalog/bel%20mat-1719832628-100x100.jpg"
+      }
+    ],
+    "configurations": [
+      "Напівскло"
+    ],
+    "variants": [
+      {
+        "color": "Серый мрамор BLK",
+        "configuration": "Напівскло",
+        "image": "https://rodos.ua/image/cache/catalog/MODERN%20STYLE%204%20%20%20BLK-1718106378-1000x1000.jpg"
+      },
+      {
+        "color": "Акация темная BLK",
+        "configuration": "Напівскло",
+        "image": "https://rodos.ua/image/cache/catalog/MODERN%20STYLE%204%20%20%20BLK-1718106133-1000x1000.jpg"
+      },
+      {
+        "color": "Каштан беж BLK",
+        "configuration": "Напівскло",
+        "image": "https://rodos.ua/image/cache/catalog/MODERN%20STYLE%204%20%20%20BLK-1718106305-1000x1000.jpg"
+      },
+      {
+        "color": "Дуб шале графит BLK",
+        "configuration": "Напівскло",
+        "image": "https://rodos.ua/image/cache/catalog/MODERN%20STYLE%204%20%20%20%20BLK-1718106294-1000x1000.jpg"
+      },
+      {
+        "color": "Каштан белый BLK",
+        "configuration": "Напівскло",
+        "image": "https://rodos.ua/image/cache/catalog/MODERN%20STYLE%204%20%20%20BLK-1718106314-1000x1000.jpg"
+      },
+      {
+        "color": "Сосна браш браун BLK",
+        "configuration": "Напівскло",
+        "image": "https://rodos.ua/image/cache/catalog/MODERN%20STYLE%204%20%20%20%20%20BLK-1718106635-1000x1000.jpg"
+      },
+      {
+        "color": "Сосна браш кобальт BLK",
+        "configuration": "Напівскло",
+        "image": "https://rodos.ua/image/cache/catalog/MODERN%20STYLE%204%20%20%20%20BLK-1718106653-1000x1000.jpg"
+      },
+      {
+        "color": "Дуб сонома BLK",
+        "configuration": "Напівскло",
+        "image": "https://rodos.ua/image/cache/catalog/MODERN%20STYLE%204%20%20%20BLK-1718106275-1000x1000.jpg"
+      },
+      {
+        "color": "Крем BLK",
+        "configuration": "Напівскло",
+        "image": "https://rodos.ua/image/cache/catalog/MODERN%20STYLE%204%20%20BLK-1718106359-1000x1000.jpg"
+      },
+      {
+        "color": "Серый дуб BLK",
+        "configuration": "Напівскло",
+        "image": "https://rodos.ua/image/cache/catalog/MODERN%20STYLE%204%20%20%20%20%20%20BLK-1718106441-1000x1000.jpg"
+      },
+      {
+        "color": "Сосна Крем BLK",
+        "configuration": "Напівскло",
+        "image": "https://rodos.ua/image/cache/catalog/MODERN%20STYLE%204%20%20BLK-1718106669-1000x1000.jpg"
+      },
+      {
+        "color": "Канадський дуб BLK",
+        "configuration": "Напівскло",
+        "image": "https://rodos.ua/image/cache/catalog/STYLE%204%20%20%20%20BLK-1718106740-1000x1000.jpg"
+      },
+      {
+        "color": "Бежевий BLK",
+        "configuration": "Напівскло",
+        "image": "https://rodos.ua/image/cache/catalog/STYLE%204%20-polusteklo-BLK-1720013013-1000x1000.jpg"
+      },
+      {
+        "color": "Светло серый BLK",
+        "configuration": "Напівскло",
+        "image": "https://rodos.ua/image/cache/catalog/STYLE%204%20-polusteklo-%20BLK-1720013050-1000x1000.jpg"
+      },
+      {
+        "color": "Кедр софт белый BLK",
+        "configuration": "Напівскло",
+        "image": "https://rodos.ua/image/cache/catalog/STYLE%204%20%20%20-polusteklo-BLK-1720013023-1000x1000.jpg"
+      },
+      {
+        "color": "Кедр софт графит BLK",
+        "configuration": "Напівскло",
+        "image": "https://rodos.ua/image/cache/catalog/STYLE%204%20%20%20-polusteklo-BLK-1720013033-1000x1000.jpg"
+      },
+      {
+        "color": "Белый мат (ПВХ) BLK",
+        "configuration": "Напівскло",
+        "image": "https://rodos.ua/image/cache/catalog/STYLE%204%20%20%20BLK-polusteklo--1720013042-1000x1000.jpg"
+      }
+    ]
+  },
+  {
+    "code": "S9",
+    "slug": "rodos-official-1rk5pf1",
+    "url": "https://rodos.ua/mezhkomnatnaya-dver-style-5-1",
+    "colors": [
+      {
+        "label": "Cерый дуб",
+        "swatch": "https://rodos.ua/image/cache/catalog/colors/seryy-dub-100x100.png"
+      },
+      {
+        "label": "Крем",
+        "swatch": "https://rodos.ua/image/cache/catalog/colors/soskrem-100x100.jpg"
+      },
+      {
+        "label": "Дуб сонома",
+        "swatch": "https://rodos.ua/image/cache/catalog/sonoma-1569525258-100x100.jpg"
+      },
+      {
+        "label": "Акація темна",
+        "swatch": "https://rodos.ua/image/cache/catalog/%20%20-1568110641-100x100.jpg"
+      },
+      {
+        "label": "Дуб шале графіт",
+        "swatch": "https://rodos.ua/image/cache/catalog/Bianca-1568052349-100x100.jpg"
+      },
+      {
+        "label": "Мрамор сірий",
+        "swatch": "https://rodos.ua/image/cache/catalog/%20%20-1568198709-100x100.jpg"
+      },
+      {
+        "label": "Каштан білий",
+        "swatch": "https://rodos.ua/image/cache/catalog/%20%20%20NEW-1568299678-100x100.jpg"
+      },
+      {
+        "label": "Каштан сірий",
+        "swatch": "https://rodos.ua/image/cache/catalog/%20%20NEW-1568299737-100x100.jpg"
+      },
+      {
+        "label": "Каштан беж",
+        "swatch": "https://rodos.ua/image/cache/catalog/%20%20-1568299161-100x100.jpg"
+      },
+      {
+        "label": "Сосна браш браун",
+        "swatch": "https://rodos.ua/image/cache/catalog/.jpg-1589976466-100x100.jpg"
+      },
+      {
+        "label": "Сосна браш кобальт",
+        "swatch": "https://rodos.ua/image/cache/catalog/.jpg-1589976454-100x100.jpg"
+      },
+      {
+        "label": "Сосна браш мінт",
+        "swatch": "https://rodos.ua/image/cache/catalog/.jpg-1590395711-100x100.jpg"
+      },
+      {
+        "label": "Белый мат (ПВХ)",
+        "swatch": "https://rodos.ua/image/cache/catalog/%20%20%20-1568619289-100x100.jpg"
+      },
+      {
+        "label": "Бежевий",
+        "swatch": "https://rodos.ua/image/cache/catalog/images-1706520621-100x100.jpg"
+      },
+      {
+        "label": "Світло-сірий",
+        "swatch": "https://rodos.ua/image/cache/catalog/images-1706520848-100x100.png"
+      },
+      {
+        "label": "Канадський дуб",
+        "swatch": "https://rodos.ua/image/cache/catalog/A001%20%20-gluhoe--1715603714-100x100.jpg"
+      },
+      {
+        "label": "Кедр софт графіт",
+        "swatch": "https://rodos.ua/image/cache/catalog/%20-1719479615-100x100.jpg"
+      },
+      {
+        "label": "Кедр софт білий",
+        "swatch": "https://rodos.ua/image/cache/catalog/---1719479692-100x100.jpg"
+      }
+    ],
+    "configurations": [
+      "Глухе",
+      "Напівскло"
+    ],
+    "variants": [
+      {
+        "color": "Cерый дуб",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/MODERN%20STYLE%205%20%20%20%20-gluhoe-1632147583-1000x1000.jpg"
+      },
+      {
+        "color": "Cерый дуб",
+        "configuration": "Напівскло",
+        "image": "https://rodos.ua/image/cache/catalog/MODERN%20STYLE%205%20%20-polusteklo-1632147590-1000x1000.jpg"
+      },
+      {
+        "color": "Крем",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/MODERN%20STYLE%205%20%20%20-gluhoe-1632147546-1000x1000.jpg"
+      },
+      {
+        "color": "Крем",
+        "configuration": "Напівскло",
+        "image": "https://rodos.ua/image/cache/catalog/MODERN%20STYLE%205%20%20-polusteklo-1632147548-1000x1000.jpg"
+      },
+      {
+        "color": "Дуб сонома",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/MODERN%20STYLE%205%20%20%20%20%20-gluhoe-1632147271-1000x1000.jpg"
+      },
+      {
+        "color": "Дуб сонома",
+        "configuration": "Напівскло",
+        "image": "https://rodos.ua/image/cache/catalog/MODERN%20STYLE%205%20%20%20%20-polusteklo-1632147278-1000x1000.jpg"
+      },
+      {
+        "color": "Акація темна",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/MODERN%20style%205%20%20-gluhoe-1632147724-1000x1000.jpg"
+      },
+      {
+        "color": "Акація темна",
+        "configuration": "Напівскло",
+        "image": "https://rodos.ua/image/cache/catalog/MODERN%20style%205%20%20-polusteklo-1632147731-1000x1000.jpg"
+      },
+      {
+        "color": "Дуб шале графіт",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/MODERN%20STYLE%205%20%20%20%20%20-gluhoe-1632147325-1000x1000.jpg"
+      },
+      {
+        "color": "Дуб шале графіт",
+        "configuration": "Напівскло",
+        "image": "https://rodos.ua/image/cache/catalog/MODERN%20STYLE%205%20%20%20%20%20-polusteklo-1632147310-1000x1000.jpg"
+      },
+      {
+        "color": "Мрамор сірий",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/MODERN%20STYLE%205%20%20%20-gluhoe-1632147570-1000x1000.jpg"
+      },
+      {
+        "color": "Мрамор сірий",
+        "configuration": "Напівскло",
+        "image": "https://rodos.ua/image/cache/catalog/MODERN%20STYLE%205%20%20%20-polusteklo-1632147565-1000x1000.jpg"
+      },
+      {
+        "color": "Каштан білий",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/MODERN%20STYLE%205%20%20%20%20-gluhoe-1632147511-1000x1000.jpg"
+      },
+      {
+        "color": "Каштан білий",
+        "configuration": "Напівскло",
+        "image": "https://rodos.ua/image/cache/catalog/MODERN%20STYLE%205%20%20%20-polusteklo-1632147514-1000x1000.jpg"
+      },
+      {
+        "color": "Каштан сірий",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/MODERN%20STYLE%205%20%20%20%20-gluhoe-1632147528-1000x1000.jpg"
+      },
+      {
+        "color": "Каштан сірий",
+        "configuration": "Напівскло",
+        "image": "https://rodos.ua/image/cache/catalog/MODERN%20STYLE%205%20%20%20-polusteklo-1632147531-1000x1000.jpg"
+      },
+      {
+        "color": "Каштан беж",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/MODERN%20STYLE%205%20%20%20-gluhoe-1632147497-1000x1000.jpg"
+      },
+      {
+        "color": "Каштан беж",
+        "configuration": "Напівскло",
+        "image": "https://rodos.ua/image/cache/catalog/MODERN%20STYLE%205%20%20%20-polusteklo-1632147489-1000x1000.jpg"
+      },
+      {
+        "color": "Сосна браш браун",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/MODERN%20STYLE%205%20%20%20%20%20-gluhoe-1632147621-1000x1000.jpg"
+      },
+      {
+        "color": "Сосна браш браун",
+        "configuration": "Напівскло",
+        "image": "https://rodos.ua/image/cache/catalog/MODERN%20STYLE%205%20%20%20-polusteklo-1632147625-1000x1000.jpg"
+      },
+      {
+        "color": "Сосна браш кобальт",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/MODERN%20STYLE%205%20%20%20%20%20-gluhoe-1632147646-1000x1000.jpg"
+      },
+      {
+        "color": "Сосна браш кобальт",
+        "configuration": "Напівскло",
+        "image": "https://rodos.ua/image/cache/catalog/MODERN%20STYLE%205%20%20%20-polusteklo-1632147649-1000x1000.jpg"
+      },
+      {
+        "color": "Сосна браш мінт",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/MODERN%20STYLE%205%20%20%20%20%20-gluhoe-1632147689-1000x1000.jpg"
+      },
+      {
+        "color": "Сосна браш мінт",
+        "configuration": "Напівскло",
+        "image": "https://rodos.ua/image/cache/catalog/MODERN%20STYLE%205%20%20%20%20-polusteklo-1632147692-1000x1000.jpg"
+      },
+      {
+        "color": "Белый мат (ПВХ)",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/STYLE%205%20%20%20-gluhoe--1720091759-1000x1000.jpg"
+      },
+      {
+        "color": "Белый мат (ПВХ)",
+        "configuration": "Напівскло",
+        "image": "https://rodos.ua/image/cache/catalog/STYLE%205%20%20%20-polusteklo-%20-1720091763-1000x1000.jpg"
+      },
+      {
+        "color": "Бежевий",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/STYLE%205%20-gluhoe--1720091611-1000x1000.jpg"
+      },
+      {
+        "color": "Бежевий",
+        "configuration": "Напівскло",
+        "image": "https://rodos.ua/image/cache/catalog/STYLE%205%20%20-polusteklo--1720091613-1000x1000.jpg"
+      },
+      {
+        "color": "Світло-сірий",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/STYLE%205%20%20-gluhoe--1720091783-1000x1000.jpg"
+      },
+      {
+        "color": "Світло-сірий",
+        "configuration": "Напівскло",
+        "image": "https://rodos.ua/image/cache/catalog/STYLE%205%20%20-polusteklo-%20-1720091785-1000x1000.jpg"
+      },
+      {
+        "color": "Канадський дуб",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/STYLE%205%20%20-gluhoe-%20-1715774535-1000x1000.jpg"
+      },
+      {
+        "color": "Канадський дуб",
+        "configuration": "Напівскло",
+        "image": "https://rodos.ua/image/cache/catalog/STYLE%205%20%20%20-polusteklo--1715774532-1000x1000.jpg"
+      },
+      {
+        "color": "Кедр софт графіт",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/STYLE%205%20%20%20-gluhoe--1720091739-1000x1000.jpg"
+      },
+      {
+        "color": "Кедр софт графіт",
+        "configuration": "Напівскло",
+        "image": "https://rodos.ua/image/cache/catalog/STYLE%205%20%20%20-polusteklo--1720091742-1000x1000.jpg"
+      },
+      {
+        "color": "Кедр софт білий",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/STYLE%205%20%20%20-gluhoe--1720091643-1000x1000.jpg"
+      },
+      {
+        "color": "Кедр софт білий",
+        "configuration": "Напівскло",
+        "image": "https://rodos.ua/image/cache/catalog/STYLE%205%20%20%20%20-polusteklo--1720091645-1000x1000.jpg"
+      }
+    ]
+  },
+  {
+    "code": "S10",
+    "slug": "rodos-official-wov9dl",
+    "url": "https://rodos.ua/mezhkomnatnaya-dver-style-5-blk",
+    "colors": [
+      {
+        "label": "Венге шоколадный BLK",
+        "swatch": "https://rodos.ua/image/cache/catalog/colors/vengeshokchern-100x100.jpg"
+      },
+      {
+        "label": "Серый мрамор BLK",
+        "swatch": "https://rodos.ua/image/cache/catalog/%20%20%20BLK-1568199915-100x100.jpg"
+      },
+      {
+        "label": "Акация темная BLK",
+        "swatch": "https://rodos.ua/image/cache/catalog/%20%20%20BLK-1568272487-100x100.jpg"
+      },
+      {
+        "label": "Каштан беж BLK",
+        "swatch": "https://rodos.ua/image/cache/catalog/%20%20BLK-1568364848-100x100.jpg"
+      },
+      {
+        "label": "Дуб шале графит BLK",
+        "swatch": "https://rodos.ua/image/cache/catalog/%20%20%20BLK-1568273901-100x100.jpg"
+      },
+      {
+        "label": "Каштан белый BLK",
+        "swatch": "https://rodos.ua/image/cache/catalog/%20%20BLK%20NEW-1568364883-100x100.jpg"
+      },
+      {
+        "label": "Сосна браш браун BLK",
+        "swatch": "https://rodos.ua/image/cache/catalog/%20BLK-1590055720-100x100.jpg"
+      },
+      {
+        "label": "Сосна браш кобальт BLK",
+        "swatch": "https://rodos.ua/image/cache/catalog/%20BLK-1590055725-100x100.jpg"
+      },
+      {
+        "label": "Дуб сонома BLK",
+        "swatch": "https://rodos.ua/image/cache/catalog/sonoma-1569525258-100x100-1618831783-100x100.jpg"
+      },
+      {
+        "label": "Крем BLK",
+        "swatch": "https://rodos.ua/image/cache/catalog/soskrem-100x100-1618831912-100x100.jpg"
+      },
+      {
+        "label": "Графит BLK",
+        "swatch": "https://rodos.ua/image/cache/catalog/colors/grafitblk-100x100.jpg"
+      },
+      {
+        "label": "Серый дуб BLK",
+        "swatch": "https://rodos.ua/image/cache/catalog/044c814e-ff1b-43f1-bbde-cc5a1178e46b-1654590075-100x100.jpg"
+      },
+      {
+        "label": "Сосна Крем BLK",
+        "swatch": "https://rodos.ua/image/cache/catalog/fca240e1-fd4c-458e-a96b-942a14059b5e-1654590086-100x100.jpg"
+      },
+      {
+        "label": "Капучино BLK",
+        "swatch": "https://rodos.ua/image/cache/catalog/a6a0cce1-d725-4a1c-a218-c8dc8d1b0129-1654590940-100x100.jpg"
+      },
+      {
+        "label": "Канадський дуб BLK",
+        "swatch": "https://rodos.ua/image/cache/catalog/A001%20%20%20BLK-1715683038-100x100.jpg"
+      },
+      {
+        "label": "Бежевий BLK",
+        "swatch": "https://rodos.ua/image/cache/catalog/bej-1719832114-100x100.jpg"
+      },
+      {
+        "label": "Светло серый BLK",
+        "swatch": "https://rodos.ua/image/cache/catalog/svetlo%20seruy-1719832136-100x100.jpg"
+      },
+      {
+        "label": "Кедр софт белый BLK",
+        "swatch": "https://rodos.ua/image/cache/catalog/kedr%20soft%20biluy-1719832151-100x100.jpg"
+      },
+      {
+        "label": "Кедр софт графит BLK",
+        "swatch": "https://rodos.ua/image/cache/catalog/%20-1719832154-100x100.jpg"
+      },
+      {
+        "label": "Белый мат (ПВХ) BLK",
+        "swatch": "https://rodos.ua/image/cache/catalog/bel%20mat-1719832628-100x100.jpg"
+      }
+    ],
+    "configurations": [
+      "Напівскло"
+    ],
+    "variants": [
+      {
+        "color": "Венге шоколадный BLK",
+        "configuration": "Напівскло",
+        "image": "https://rodos.ua/image/cache/catalog/MODERN%20STYLE%205%20%20%20BLK13-1718173255-1000x1000.jpg"
+      },
+      {
+        "color": "Серый мрамор BLK",
+        "configuration": "Напівскло",
+        "image": "https://rodos.ua/image/cache/catalog/MODERN%20STYLE%205%20%20%20BLK16-1718173334-1000x1000.jpg"
+      },
+      {
+        "color": "Акация темная BLK",
+        "configuration": "Напівскло",
+        "image": "https://rodos.ua/image/cache/catalog/MODERN%20STYLE%205%20%20%20BLK12-1718173217-1000x1000.jpg"
+      },
+      {
+        "color": "Каштан беж BLK",
+        "configuration": "Напівскло",
+        "image": "https://rodos.ua/image/cache/catalog/MODERN%20STYLE%205%20%20%20BLK15-1718173322-1000x1000.jpg"
+      },
+      {
+        "color": "Дуб шале графит BLK",
+        "configuration": "Напівскло",
+        "image": "https://rodos.ua/image/cache/catalog/STYLE%205%20-polusteklo-BLK-1720091920-1000x1000.jpg"
+      },
+      {
+        "color": "Каштан белый BLK",
+        "configuration": "Напівскло",
+        "image": "https://rodos.ua/image/cache/catalog/MODERN%20STYLE%205%20%20%20%20BLK4-1718171449-1000x1000.jpg"
+      },
+      {
+        "color": "Сосна браш браун BLK",
+        "configuration": "Напівскло",
+        "image": "https://rodos.ua/image/cache/catalog/MODERN%20STYLE%205%20%20%20%20%20BLK8-1718173136-1000x1000.jpg"
+      },
+      {
+        "color": "Сосна браш кобальт BLK",
+        "configuration": "Напівскло",
+        "image": "https://rodos.ua/image/cache/catalog/MODERN%20STYLE%205%20%20%20%20%20BLK9-1718173153-1000x1000.jpg"
+      },
+      {
+        "color": "Дуб сонома BLK",
+        "configuration": "Напівскло",
+        "image": "https://rodos.ua/image/cache/catalog/MODERN%20STYLE%205%20%20%20%20%20BLK1-1718171264-1000x1000.jpg"
+      },
+      {
+        "color": "Крем BLK",
+        "configuration": "Напівскло",
+        "image": "https://rodos.ua/image/cache/catalog/MODERN%20STYLE%205%20%20%20BLK6-1718173083-1000x1000.jpg"
+      },
+      {
+        "color": "Графит BLK",
+        "configuration": "Напівскло",
+        "image": "https://rodos.ua/image/cache/catalog/MODERN%20STYLE%205%20%20%20BLK2-1718171319-1000x1000.jpg"
+      },
+      {
+        "color": "Серый дуб BLK",
+        "configuration": "Напівскло",
+        "image": "https://rodos.ua/image/cache/catalog/MODERN%20STYLE%205%20%20%20%20BLK7-1718173108-1000x1000.jpg"
+      },
+      {
+        "color": "Сосна Крем BLK",
+        "configuration": "Напівскло",
+        "image": "https://rodos.ua/image/cache/catalog/MODERN%20STYLE%205%20%20%20%20BLK11-1718173194-1000x1000.jpg"
+      },
+      {
+        "color": "Капучино BLK",
+        "configuration": "Напівскло",
+        "image": "https://rodos.ua/image/cache/catalog/MODERN%20STYLE%205%20%20BLK14-1718173297-1000x1000.jpg"
+      },
+      {
+        "color": "Канадський дуб BLK",
+        "configuration": "Напівскло",
+        "image": "https://rodos.ua/image/cache/catalog/STYLE%205%20%20%20%20BLK-1720092017-1000x1000.jpg"
+      },
+      {
+        "color": "Бежевий BLK",
+        "configuration": "Напівскло",
+        "image": "https://rodos.ua/image/cache/catalog/STYLE%205%20-polusteklo-BLK-1720091920-1000x1000.jpg"
+      },
+      {
+        "color": "Светло серый BLK",
+        "configuration": "Напівскло",
+        "image": "https://rodos.ua/image/cache/catalog/STYLE%205%20-polusteklo-%20BLK-1720091961-1000x1000.jpg"
+      },
+      {
+        "color": "Кедр софт белый BLK",
+        "configuration": "Напівскло",
+        "image": "https://rodos.ua/image/cache/catalog/STYLE%205%20%20%20-polusteklo-BLK-1720091932-1000x1000.jpg"
+      },
+      {
+        "color": "Кедр софт графит BLK",
+        "configuration": "Напівскло",
+        "image": "https://rodos.ua/image/cache/catalog/STYLE%205%20%20%20-polusteklo-BLK-1720091940-1000x1000.jpg"
+      },
+      {
+        "color": "Белый мат (ПВХ) BLK",
+        "configuration": "Напівскло",
+        "image": "https://rodos.ua/image/cache/catalog/STYLE%205%20%20%20BLK-polusteklo--1720091954-1000x1000.jpg"
+      }
+    ]
+  }
+]

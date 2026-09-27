@@ -11,5 +11,6 @@
 - Страж: https://straj.ua/assets/92af25f1/images/straj_logo.jpg
 - Q Doors: https://qdoors.com.ua/images/logo.png
 - TERMINUS: https://terminus.ua/
+- KORFAD: https://korfad.com.ua/content/images/2/200x42l90nn0/18466388044958.webp
 
 Перед комерційним використанням логотипів перевірте умови співпраці та бренд-гайд кожного виробника.

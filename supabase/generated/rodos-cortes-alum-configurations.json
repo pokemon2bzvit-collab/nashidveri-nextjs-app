@@ -1,0 +1,176 @@
+[
+  {
+    "code": "Alum",
+    "slug": "rodos-official-1989q5s",
+    "url": "https://rodos.ua/mezhkomnatnaya-dver-cortes-prima-alum",
+    "colors": [
+      {
+        "label": "Білий мат",
+        "swatch": "https://rodos.ua/image/cache/catalog/colors/belyjmat-100x100.png"
+      },
+      {
+        "label": "Цвет RAL 1013",
+        "swatch": "https://rodos.ua/image/cache/catalog/1013-1762857295-100x100-1762861337-100x100.jpg"
+      },
+      {
+        "label": "Цвет RAL 1015",
+        "swatch": "https://rodos.ua/image/cache/catalog/1015-1762857336-100x100-1762861339-100x100.jpg"
+      },
+      {
+        "label": "Цвет RAL 1019",
+        "swatch": "https://rodos.ua/image/cache/catalog/1019-1762857333-100x100-1762861342-100x100.jpg"
+      },
+      {
+        "label": "Цвет RAL 4001",
+        "swatch": "https://rodos.ua/image/cache/catalog/4001-1762857330-100x100-1762861344-100x100.jpg"
+      },
+      {
+        "label": "Цвет RAL 5010",
+        "swatch": "https://rodos.ua/image/cache/catalog/5010-1762857328-100x100-1762861347-100x100.jpg"
+      },
+      {
+        "label": "Цвет RAL 5012",
+        "swatch": "https://rodos.ua/image/cache/catalog/RAL%205012-1570783791-100x100-1762861351-100x100.jpg"
+      },
+      {
+        "label": "Цвет RAL 5014",
+        "swatch": "https://rodos.ua/image/cache/catalog/5014-1762857325-100x100-1762861356-100x100.jpg"
+      },
+      {
+        "label": "Цвет RAL 5022",
+        "swatch": "https://rodos.ua/image/cache/catalog/5022-1762857322-100x100-1762861358-100x100.jpg"
+      },
+      {
+        "label": "Цвет RAL 5024",
+        "swatch": "https://rodos.ua/image/cache/catalog/5024-1762857319-100x100-1762861360-100x100.jpg"
+      },
+      {
+        "label": "Цвет RAL 6019",
+        "swatch": "https://rodos.ua/image/cache/catalog/6019-1762857315-100x100-1762861363-100x100.jpg"
+      },
+      {
+        "label": "Цвет RAL 7037",
+        "swatch": "https://rodos.ua/image/cache/catalog/7037-1762857313-100x100-1762861369-100x100.jpg"
+      },
+      {
+        "label": "Цвет RAL 7040",
+        "swatch": "https://rodos.ua/image/cache/catalog/7040-1762857310-100x100-1762861373-100x100.jpg"
+      },
+      {
+        "label": "Цвет RAL 7047",
+        "swatch": "https://rodos.ua/image/cache/catalog/7047-1762857307-100x100-1762861377-100x100.jpg"
+      },
+      {
+        "label": "Цвет RAL 8014",
+        "swatch": "https://rodos.ua/image/cache/catalog/8014-1762857304-100x100-1762861379-100x100.jpg"
+      },
+      {
+        "label": "Цвет RAL 9001",
+        "swatch": "https://rodos.ua/image/cache/catalog/9001-1762857302-100x100-1762861383-100x100.jpg"
+      },
+      {
+        "label": "Цвет RAL 9004",
+        "swatch": "https://rodos.ua/image/cache/catalog/9004-1762857299-100x100-1762861386-100x100.jpg"
+      },
+      {
+        "label": "Цвет RAL 9010",
+        "swatch": "https://rodos.ua/image/cache/catalog/9010-1762857341-100x100-1762861389-100x100.jpg"
+      }
+    ],
+    "configurations": [
+      "Глухе"
+    ],
+    "variants": [
+      {
+        "color": "Білий мат",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/fee9427a-22ac-4862-809b-5ebb1963e006-1718702295-1000x1000.png"
+      },
+      {
+        "color": "Цвет RAL 1013",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/primaalum-RAL-gluhoe-7047-1571144030-1000x1000.jpg"
+      },
+      {
+        "color": "Цвет RAL 1015",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/primaalum-RAL-gluhoe-1015-1571143777-1000x1000.jpg"
+      },
+      {
+        "color": "Цвет RAL 1019",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/primaalum-RAL-gluhoe-1019-1571143781-1000x1000.jpg"
+      },
+      {
+        "color": "Цвет RAL 4001",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/primaalum-RAL-gluhoe-4001-1571143795-1000x1000.jpg"
+      },
+      {
+        "color": "Цвет RAL 5010",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/primaalum-RAL-gluhoe-5010-1571143804-1000x1000.jpg"
+      },
+      {
+        "color": "Цвет RAL 5012",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/primaalum-RAL-gluhoe-5012-1571143817-1000x1000.jpg"
+      },
+      {
+        "color": "Цвет RAL 5014",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/primaalum-RAL-gluhoe-5014-1571143835-1000x1000.jpg"
+      },
+      {
+        "color": "Цвет RAL 5022",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/primaalum-RAL-gluhoe-5022-1571143846-1000x1000.jpg"
+      },
+      {
+        "color": "Цвет RAL 5024",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/primaalum-RAL-gluhoe-5024-1571143853-1000x1000.jpg"
+      },
+      {
+        "color": "Цвет RAL 6019",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/primaalum-RAL-gluhoe-6019-1571143863-1000x1000.jpg"
+      },
+      {
+        "color": "Цвет RAL 7037",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/primaalum-RAL-gluhoe-7037-1571143873-1000x1000.jpg"
+      },
+      {
+        "color": "Цвет RAL 7040",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/primaalum-RAL-gluhoe-7040-1571143887-1000x1000.jpg"
+      },
+      {
+        "color": "Цвет RAL 7047",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/primaalum-RAL-gluhoe-9001-1571144065-1000x1000.jpg"
+      },
+      {
+        "color": "Цвет RAL 8014",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/primaalum-RAL-gluhoe-8014-1571144049-1000x1000.jpg"
+      },
+      {
+        "color": "Цвет RAL 9001",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/primaalum-RAL-gluhoe-1013-1571143774-1000x1000.jpg"
+      },
+      {
+        "color": "Цвет RAL 9004",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/primaalum-RAL-gluhoe-9004-1571145560-1000x1000.jpg"
+      },
+      {
+        "color": "Цвет RAL 9010",
+        "configuration": "Глухе",
+        "image": "https://rodos.ua/image/cache/catalog/cortesprimaalumbelyiymat-gluhoe-bezfrezerovkoy-1566811192-1000x1000.png"
+      }
+    ]
+  }
+]
