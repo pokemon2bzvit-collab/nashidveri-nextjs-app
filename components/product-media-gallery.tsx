@@ -142,11 +142,11 @@ export function ProductMediaGallery({ product }: { product: Product }) {
     setSelectedIndex(0);
   };
 
-  return <div>
+  return <div className="min-w-0 max-w-full">
     <div className="aspect-[4/5] overflow-hidden rounded-[2rem] bg-[#f7f5f1] p-5 sm:p-8">
       <ImageLightbox src={optionImage || selected.image} alt={selectedImageAlt} className="h-full w-full" imageClassName="h-full w-full object-contain" />
     </div>
-    {(displayedGallery.length > 1 || (Boolean(activeVariant) && (usesActiveVariantGallery || usesVariantThumbnailGallery))) && <div className="mt-3 flex gap-2 overflow-x-auto pb-1">
+    {(displayedGallery.length > 1 || (Boolean(activeVariant) && (usesActiveVariantGallery || usesVariantThumbnailGallery))) && <div className="mt-3 flex max-w-full gap-2 overflow-x-auto pb-1">
       {displayedGallery.map((item, index) => usesActiveVariantGallery
         ? <button type="button" key={`${item.image}-${index}`} aria-label={`Обрати фото: ${item.label || index + 1}`} onClick={() => selectActiveVariantPhoto(index)} className={`h-16 w-12 shrink-0 overflow-hidden rounded-lg border-2 bg-[#f7f5f1] transition ${selectedIndex === index ? "border-clay" : "border-transparent hover:border-stone-300"}`}><img src={item.image} alt="" className="h-full w-full object-contain" /></button>
         : usesGlassVariantGallery || usesVariantThumbnailGallery
