@@ -7,7 +7,7 @@ import { ProductGrid } from "@/components/product-grid";
 import { BrandLogo } from "@/components/brand-logo";
 import { getInteriorBrand, interiorBrands } from "@/lib/interior-brands";
 import { catalogImageUrl, getProducts } from "@/lib/catalog";
-import { getCollectionDescription } from "@/lib/collection-descriptions";
+import { getCollectionDescription, getCollectionDisplayName } from "@/lib/collection-descriptions";
 
 export function generateStaticParams() {
   return interiorBrands.map((brand) => ({ brand: brand.slug }));
@@ -64,12 +64,12 @@ export default async function InteriorBrandPage({ params }: { params: Promise<{ 
                   <Link key={collection} href={`/catalog?brand=${encodeURIComponent(brand.name)}&collection=${encodeURIComponent(collection)}`} className="group overflow-hidden rounded-2xl border bg-white transition hover:border-clay">
                     <div className="flex min-h-44 gap-4 p-5">
                       <div className="min-w-0 flex-1">
-                        <p className="text-xl font-bold">{collection}</p>
+                        <p className="text-xl font-bold">{getCollectionDisplayName(brand.name, collection)}</p>
                         <p className="mt-2 text-sm leading-5 text-stone-500">{getCollectionDescription(brand.name, collection, "interior")}</p>
                         <span className="mt-4 inline-flex items-center gap-1 text-sm font-bold text-clay">Переглянути моделі <ArrowUpRight size={16} /></span>
                       </div>
                       {preview && <div className="flex w-24 shrink-0 items-center justify-center rounded-xl bg-sand p-2">
-                        <img src={catalogImageUrl(preview.image)} alt={`${preview.name} — ${collection}`} className="h-32 w-full object-contain transition duration-300 group-hover:scale-105" />
+                        <img src={catalogImageUrl(preview.image)} alt={`${preview.name} — ${getCollectionDisplayName(brand.name, collection)}`} className="h-32 w-full object-contain transition duration-300 group-hover:scale-105" />
                       </div>}
                     </div>
                   </Link>

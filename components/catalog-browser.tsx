@@ -5,6 +5,7 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import { ProductGrid } from "./product-grid";
 import { categories, type CatalogBrowseData } from "@/lib/catalog";
+import { getCollectionDisplayName } from "@/lib/collection-descriptions";
 
 const PAGE_SIZE = 24;
 const priceRanges = [{ id: "under-10000", label: "до 10 000 грн", max: 10000 }, { id: "10000-25000", label: "10 000–25 000 грн", min: 10000, max: 25000 }, { id: "over-25000", label: "від 25 000 грн", min: 25000 }];
@@ -43,7 +44,7 @@ export function CatalogBrowser({ initialData, initialCategory = "all", initialQu
   const activeFilters = [
     category !== "all" && { label: categories[category as keyof typeof categories]?.short || category, clear: () => { setCategory("all"); setBrand("all"); setCollection("all"); } },
     brand !== "all" && { label: brand, clear: () => { setBrand("all"); setCollection("all"); } },
-    collection !== "all" && { label: collection, clear: () => setCollection("all") },
+    collection !== "all" && { label: getCollectionDisplayName(brand, collection), clear: () => setCollection("all") },
     material !== "all" && { label: material, clear: () => setMaterial("all") },
     style !== "all" && { label: style, clear: () => setStyle("all") },
     color !== "all" && { label: color, clear: () => setColor("all") },
@@ -57,7 +58,7 @@ export function CatalogBrowser({ initialData, initialCategory = "all", initialQu
       <div className="flex items-center justify-between"><p className="flex items-center gap-2 text-sm font-bold"><SlidersHorizontal size={17} className="text-clay" /> Фільтри</p><div className="flex items-center gap-3">{active && <button onClick={reset} className="text-xs font-bold text-clay hover:underline">Очистити</button>}<button aria-label="Закрити фільтри" className="lg:hidden" onClick={() => setFiltersOpen(false)}><X size={19} /></button></div></div>
       <FilterGroup title="Категорія">{categoryFilters.map((filter) => <FilterButton key={filter.id} selected={category === filter.id} onClick={() => { setCategory(filter.id); setBrand("all"); setCollection("all"); setMaterial("all"); setStyle("all"); setColor("all"); }}>{filter.label}</FilterButton>)}</FilterGroup>
       {availableBrands.length > 1 && <FilterGroup title="Фабрика">{availableBrands.map((item) => <FilterButton key={item} selected={brand === item} onClick={() => { setBrand(brand === item ? "all" : item); setCollection("all"); }}>{item}</FilterButton>)}</FilterGroup>}
-      {(brand !== "all" || collection !== "all") && availableCollections.length > 1 && <FilterGroup title="Колекція">{availableCollections.map((item) => <FilterButton key={item} selected={collection === item} onClick={() => setCollection(collection === item ? "all" : item)}>{item}</FilterButton>)}</FilterGroup>}
+      {(brand !== "all" || collection !== "all") && availableCollections.length > 1 && <FilterGroup title="Колекція">{availableCollections.map((item) => <FilterButton key={item} selected={collection === item} onClick={() => setCollection(collection === item ? "all" : item)}>{getCollectionDisplayName(brand, item)}</FilterButton>)}</FilterGroup>}
       {(materials.length > 1 || styles.length > 1 || colors.length > 1 || hasPrices) && <div className="mt-6 border-t pt-5"><button type="button" className="flex w-full items-center justify-between text-left text-xs font-bold uppercase tracking-[.12em] text-stone-500" onClick={() => setAdvancedOpen((current) => !current)} aria-expanded={advancedOpen || hasAdvancedFilters}>Додаткові фільтри <ChevronDown size={16} className={(advancedOpen || hasAdvancedFilters) ? "rotate-180 transition-transform" : "transition-transform"} /></button>{(advancedOpen || hasAdvancedFilters) && <div><p className="mt-2 text-xs leading-5 text-stone-500">Матеріал, стиль, колір і ціна — якщо вже знаєте точні побажання.</p>{materials.length > 1 && !materialDuplicatesCategory && <FilterGroup title="Матеріал">{materials.map((item) => <FilterButton key={item} selected={material === item} onClick={() => setMaterial(material === item ? "all" : item)}>{item}</FilterButton>)}</FilterGroup>}{styles.length > 1 && !styleDuplicatesCollections && <FilterGroup title="Стиль / призначення">{styles.map((item) => <FilterButton key={item} selected={style === item} onClick={() => setStyle(style === item ? "all" : item)}>{item}</FilterButton>)}</FilterGroup>}{colors.length > 1 && <FilterGroup title="Колір">{colors.map((item) => <FilterButton key={item} selected={color === item} onClick={() => setColor(color === item ? "all" : item)}>{item}</FilterButton>)}</FilterGroup>}{hasPrices && <FilterGroup title="Ціновий діапазон">{priceRanges.map((item) => <FilterButton key={item.id} selected={priceRange === item.id} onClick={() => setPriceRange(priceRange === item.id ? "all" : item.id)}>{item.label}</FilterButton>)}</FilterGroup>}</div>}</div>}
       <button className="button-primary mt-7 w-full lg:hidden" onClick={() => setFiltersOpen(false)}>Показати {result.length} моделей</button>
     </aside>

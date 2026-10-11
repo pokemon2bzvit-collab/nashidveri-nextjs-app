@@ -1,5 +1,9 @@
 import type { Category } from "@/lib/catalog";
 
+export function getCollectionDisplayName(brand: string, collection: string) {
+  return brand === "Rodos" && collection === "Atlantic ПВХ" ? "Atlantic" : collection;
+}
+
 const descriptions: Record<string, string> = {
   "Papa Carlo::Tetra": "Ламіновані двері з практичним покриттям Renolit і варіантами скла.",
   "Papa Carlo::Plato": "Сучасні моделі з рівними лініями, декорами та варіантами оздоблення.",

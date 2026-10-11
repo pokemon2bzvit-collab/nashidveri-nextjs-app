@@ -3,6 +3,7 @@ import { ArrowUpRight, Palette, Sparkles } from "lucide-react";
 import { catalogCardImage, catalogThumbnailUrl, categories, type CatalogCardProduct, type Product, type ProductOption, type ProductSpec } from "@/lib/catalog";
 import { BrandLogo } from "./brand-logo";
 import { ProductCartButton } from "./product-cart-button";
+import { getCollectionDisplayName } from "@/lib/collection-descriptions";
 
 const visualDecorOptions = (product: Product) => {
   const visualKeys = new Set((product.variants || []).flatMap((variant) => Object.entries(variant.selections)
@@ -51,7 +52,7 @@ const productImageAlt = (product: Pick<Product, "category" | "brand" | "name" | 
   const name = product.name.toLocaleLowerCase("uk").startsWith(product.brand.toLocaleLowerCase("uk"))
     ? product.name
     : `${product.brand} ${product.name}`;
-  return `${category} ${name}, колекція ${product.collection}`;
+  return `${category} ${name}, колекція ${getCollectionDisplayName(product.brand, product.collection)}`;
 };
 
 export function ProductGrid({ products, singleColumn = false, showCart = true }: { products: (Product | CatalogCardProduct)[]; singleColumn?: boolean; showCart?: boolean }) {
@@ -66,7 +67,7 @@ export function ProductGrid({ products, singleColumn = false, showCart = true }:
         <div className="flex flex-1 flex-col p-3 sm:p-5">
           <BrandLogo brand={product.brand} className="h-4 max-w-[125px] sm:h-5 sm:max-w-[145px]" />
           <h3 className="mt-1 line-clamp-2 min-h-10 text-base font-bold leading-tight text-ink sm:min-h-12 sm:text-xl">{product.name}</h3>
-          <p className="mt-1 truncate text-[11px] text-stone-500 sm:text-sm">Колекція: {product.collection}</p>
+          <p className="mt-1 truncate text-[11px] text-stone-500 sm:text-sm">Колекція: {getCollectionDisplayName(product.brand, product.collection)}</p>
           <div className="mt-3 flex min-h-6 flex-wrap gap-1.5">{highlights.map((item) => <span key={item} className="rounded-full bg-sand px-2 py-1 text-[9px] font-bold text-stone-600 sm:text-[10px]">{item}</span>)}</div>
           {decorOptions.length > 0 ? <div className="mt-3 flex items-center gap-2" title={`${decorOptions.length} декорів з підтвердженим фото`}><div className="flex -space-x-1.5">{decorOptions.slice(0, 3).map((option) => <span key={`${option.group}-${option.label}`} className="h-6 w-6 overflow-hidden rounded-full border-2 border-white bg-stone-100 shadow-sm sm:h-7 sm:w-7"><DecorPreview option={option} /></span>)}</div><span className="inline-flex min-w-0 items-center gap-1 text-[10px] font-bold text-clay sm:text-xs"><Palette size={12} /> <span className="truncate">{decorOptions.length} {decorOptions.length === 1 ? "декор з фото" : "декори з фото"}</span></span></div> : <div className="mt-3 min-h-7" />}
           <p className="mt-3 hidden line-clamp-2 min-h-10 text-xs leading-5 text-stone-600 sm:block">{product.description}</p>

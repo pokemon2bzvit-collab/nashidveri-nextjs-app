@@ -4,7 +4,7 @@ import { CatalogBrowser } from "@/components/catalog-browser";
 import { BrandLogo } from "@/components/brand-logo";
 import { SiteShell } from "@/components/site-shell";
 import { categories, getCatalogBrowseData } from "@/lib/catalog";
-import { getCollectionIntroduction } from "@/lib/collection-descriptions";
+import { getCollectionDisplayName, getCollectionIntroduction } from "@/lib/collection-descriptions";
 
 export const metadata: Metadata = {
   title: "Каталог дверей — фабрики, моделі та декори",
@@ -19,7 +19,7 @@ export default async function CatalogPage({ searchParams }: { searchParams: Prom
   const categoryLinks = Object.entries(categories).filter(([id]) => browseData.facets.categories.includes(id));
   const factoryLinks = browseData.facets.brands;
   const collectionIntro = params.brand && params.collection ? getCollectionIntroduction(params.brand, params.collection, current === "entrance" ? "entrance" : "interior") : null;
-  const heading = collectionIntro ? `${params.brand} ${params.collection} — двері` : "Двері для вашого простору";
+  const heading = collectionIntro ? `${params.brand} ${getCollectionDisplayName(params.brand!, params.collection!)} — двері` : "Двері для вашого простору";
   const lead = collectionIntro || "Оберіть категорію, фабрику та колекцію. Допоможемо з комплектацією й прорахунком.";
 
   return <SiteShell><main>

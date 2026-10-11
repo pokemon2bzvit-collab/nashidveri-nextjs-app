@@ -5,6 +5,7 @@ import { useCallback, useEffect, useMemo, useState } from "react";
 import { ImageLightbox } from "@/components/image-lightbox";
 import { ProductConfiguration } from "@/components/product-configuration";
 import type { Product, ProductMedia, ProductOption, ProductVariant } from "@/lib/catalog";
+import { getCollectionDisplayName } from "@/lib/collection-descriptions";
 
 export function ProductMediaGallery({ product }: { product: Product }) {
   const media = product.media || [];
@@ -93,7 +94,7 @@ export function ProductMediaGallery({ product }: { product: Product }) {
   const displayName = product.name.toLocaleLowerCase("uk").startsWith(product.brand.toLocaleLowerCase("uk"))
     ? product.name
     : `${product.brand} ${product.name}`;
-  const productImageAlt = `${product.category === "windows" ? "Вікна" : `${product.category === "entrance" ? "Вхідні" : "Міжкімнатні"} двері`} ${displayName}, колекція ${product.collection}`;
+  const productImageAlt = `${product.category === "windows" ? "Вікна" : `${product.category === "entrance" ? "Вхідні" : "Міжкімнатні"} двері`} ${displayName}, колекція ${getCollectionDisplayName(product.brand, product.collection)}`;
   const selectedImageAlt = selected.label ? `${productImageAlt} — ${selected.label}` : productImageAlt;
   const handleConfigurationImage = useCallback((image: string | null, variant: ProductVariant | null, changedGroup?: string) => {
     setSelectedFromThumbnail(false);
