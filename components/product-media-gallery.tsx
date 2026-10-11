@@ -141,17 +141,46 @@ export function ProductMediaGallery({ product }: { product: Product }) {
     setActiveOptionGroup(null);
     setSelectedIndex(0);
   };
+  const thumbnailCaption = (item: ProductMedia) => {
+    if (usesActiveVariantGallery && activeVariant) {
+      const color = activeVariant.selections.color || activeVariant.selections.finish;
+      const glass = activeVariant.selections.glass;
+      return [color, glass].filter(Boolean).join(" · ");
+    }
+    if (usesGlassVariantGallery || usesVariantThumbnailGallery) return item.label?.trim() || "";
+    const variant = visualVariants.find((entry) => imageStem(entry.image) === imageStem(item.image));
+    if (variant) return Object.values(variant.selections).filter(Boolean).join(" · ");
+    const label = item.label?.trim() || "";
+    return /^(?:головне фото|фото(?:\s*\d+)?|основне фото)$/iu.test(label) ? "" : label;
+  };
 
   return <div className="min-w-0 max-w-full">
     <div className="aspect-[4/5] overflow-hidden rounded-[2rem] bg-[#f7f5f1] p-5 sm:p-8">
       <ImageLightbox src={optionImage || selected.image} alt={selectedImageAlt} className="h-full w-full" imageClassName="h-full w-full object-contain" />
     </div>
     {(displayedGallery.length > 1 || (Boolean(activeVariant) && (usesActiveVariantGallery || usesVariantThumbnailGallery))) && <div className="mt-3 flex max-w-full gap-2 overflow-x-auto pb-1">
-      {displayedGallery.map((item, index) => usesActiveVariantGallery
-        ? <button type="button" key={`${item.image}-${index}`} aria-label={`Обрати фото: ${item.label || index + 1}`} onClick={() => selectActiveVariantPhoto(index)} className={`h-16 w-12 shrink-0 overflow-hidden rounded-lg border-2 bg-[#f7f5f1] transition ${selectedIndex === index ? "border-clay" : "border-transparent hover:border-stone-300"}`}><img src={item.image} alt="" className="h-full w-full object-contain" /></button>
-        : usesGlassVariantGallery || usesVariantThumbnailGallery
-          ? <button type="button" key={`${item.image}-${index}`} aria-label={`Обрати фото варіанту: ${item.label || index + 1}`} onClick={() => usesVariantThumbnailGallery ? selectGalleryPhoto(item, index) : selectConfigurationPhoto(index)} className={`h-16 w-12 shrink-0 overflow-hidden rounded-lg border-2 bg-[#f7f5f1] transition ${selectedIndex === index ? "border-clay" : "border-transparent hover:border-stone-300"}`}><img src={item.image} alt="" className="h-full w-full object-contain" /></button>
-          : <button type="button" key={`${item.image}-${index}`} aria-label={`Обрати фото: ${item.label || index + 1}`} onClick={() => selectGalleryPhoto(item, index)} className={`h-16 w-12 shrink-0 overflow-hidden rounded-lg border-2 bg-[#f7f5f1] transition ${selectedIndex === index ? "border-clay" : "border-transparent hover:border-stone-300"}`}><img src={item.image} alt="" className="h-full w-full object-contain" /></button>)}
+      {displayedGallery.map((item, index) => {
+        const caption = thumbnailCaption(item);
+        const isVariantGallery = usesGlassVariantGallery || usesVariantThumbnailGallery;
+        return <button
+          type="button"
+          key={`${item.image}-${index}`}
+          aria-label={`${isVariantGallery ? "Обрати фото варіанту" : "Обрати фото"}: ${caption || item.label || index + 1}`}
+          onClick={() => usesActiveVariantGallery
+            ? selectActiveVariantPhoto(index)
+            : usesVariantThumbnailGallery
+              ? selectGalleryPhoto(item, index)
+              : usesGlassVariantGallery
+                ? selectConfigurationPhoto(index)
+                : selectGalleryPhoto(item, index)}
+          className="w-24 shrink-0 text-left"
+        >
+          <span className={`flex h-20 w-full overflow-hidden rounded-lg border-2 bg-[#f7f5f1] p-1 transition ${selectedIndex === index ? "border-clay" : "border-transparent hover:border-stone-300"}`}>
+            <img src={item.image} alt="" className="h-full w-full object-contain" />
+          </span>
+          {caption && <span className="mt-1 block line-clamp-2 text-center text-xs font-medium leading-4 text-stone-700" title={caption}>{caption}</span>}
+        </button>;
+      })}
     </div>}
     {usesVariantThumbnailGallery && activeOptionGroup && <button type="button" onClick={showAllVariantThumbnails} className="mt-2 inline-flex min-h-9 items-center gap-1.5 rounded-lg px-2 text-xs font-bold text-clay transition hover:bg-sand hover:text-ink"><RotateCcw size={14} /> Усі декори</button>}
     {palettes.length > 0 && <section className="mt-5 rounded-2xl border border-stone-200 bg-white p-4 shadow-sm">
