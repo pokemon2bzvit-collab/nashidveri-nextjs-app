@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <title>Наші двері</title>
+  <defs>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#f7d453"/>
+      <stop offset="1" stop-color="#e3aa16"/>
+    </linearGradient>
+    <linearGradient id="blue" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#103a7c"/>
+      <stop offset="1" stop-color="#031b4d"/>
+    </linearGradient>
+  </defs>
+  <path fill="url(#gold)" d="M5 5h90v81L68 63V25H34v17L5 16V5Z"/>
+  <path fill="url(#blue)" d="m5 19 29 26v38h34V66l27 23v6H5V19Z"/>
+</svg>
