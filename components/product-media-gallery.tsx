@@ -95,7 +95,6 @@ export function ProductMediaGallery({ product }: { product: Product }) {
     ? product.name
     : `${product.brand} ${product.name}`;
   const productImageAlt = `${product.category === "windows" ? "Вікна" : `${product.category === "entrance" ? "Вхідні" : "Міжкімнатні"} двері`} ${displayName}, колекція ${getCollectionDisplayName(product.brand, product.collection)}`;
-  const selectedImageAlt = selected.label ? `${productImageAlt} — ${selected.label}` : productImageAlt;
   const handleConfigurationImage = useCallback((image: string | null, variant: ProductVariant | null, changedGroup?: string) => {
     setSelectedFromThumbnail(false);
     setOptionImage(image);
@@ -152,12 +151,19 @@ export function ProductMediaGallery({ product }: { product: Product }) {
     const variant = visualVariants.find((entry) => imageStem(entry.image) === imageStem(item.image));
     if (variant) return Object.values(variant.selections).filter(Boolean).join(" · ");
     const label = item.label?.trim() || "";
-    return /^(?:головне фото|фото(?:\s*\d+)?|основне фото)$/iu.test(label) ? "" : label;
+    return label.toLocaleLowerCase("uk") === product.name.toLocaleLowerCase("uk")
+      || /^(?:головне фото|фото(?:\s*\d+)?|основне фото)$/iu.test(label) ? "" : label;
   };
+  const shownImage = optionImage || selected.image;
+  const shownPhoto = displayedGallery.find((item) => item.image === shownImage)
+    || variantGallery.find((item) => item.image === shownImage)
+    || selected;
+  const shownCaption = thumbnailCaption(shownPhoto);
+  const selectedImageAlt = shownCaption ? `${productImageAlt} — ${shownCaption}` : productImageAlt;
 
   return <div className="min-w-0 max-w-full">
     <div className="aspect-[4/5] overflow-hidden rounded-[2rem] bg-[#f7f5f1] p-5 sm:p-8">
-      <ImageLightbox src={optionImage || selected.image} alt={selectedImageAlt} className="h-full w-full" imageClassName="h-full w-full object-contain" />
+      <ImageLightbox src={shownImage} alt={selectedImageAlt} caption={shownCaption} className="h-full w-full" imageClassName="h-full w-full object-contain" />
     </div>
     {(displayedGallery.length > 1 || (Boolean(activeVariant) && (usesActiveVariantGallery || usesVariantThumbnailGallery))) && <div className="mt-3 flex max-w-full gap-2 overflow-x-auto pb-1">
       {displayedGallery.map((item, index) => {
@@ -188,7 +194,7 @@ export function ProductMediaGallery({ product }: { product: Product }) {
       <div className="flex items-center gap-2 text-sm font-bold text-ink"><Palette size={17} className="text-clay" /> Кольори та декори</div>
       <p className="mt-1.5 text-xs leading-5 text-stone-600">Оберіть декор під час консультації — наявність і термін виготовлення підтвердить менеджер.</p>
       <div className="mt-3 flex gap-3 overflow-x-auto pb-1">
-        {palettes.map((item, index) => <div key={`${item.image}-${index}`} className="w-24 shrink-0"><ImageLightbox src={item.image} alt={item.label || "Палітра кольорів"} className="h-20 w-24 rounded-lg bg-sand" imageClassName="h-full w-full rounded-lg object-cover" /><p className="mt-1 line-clamp-2 text-xs font-semibold text-stone-700">{item.label || "Палітра"}</p></div>)}
+        {palettes.map((item, index) => <div key={`${item.image}-${index}`} className="w-24 shrink-0"><ImageLightbox src={item.image} alt={item.label || "Палітра кольорів"} caption={item.label || undefined} className="h-20 w-24 rounded-lg bg-sand" imageClassName="h-full w-full rounded-lg object-cover" /><p className="mt-1 line-clamp-2 text-xs font-semibold text-stone-700">{item.label || "Палітра"}</p></div>)}
       </div>
     </section>}
     {!usesVariantThumbnailGallery && <ProductConfiguration options={product.options || []} variants={product.variants || []} onImageChange={handleConfigurationImage} activeVariant={activeVariant} previewImage={optionImage || selected.image} productName={product.name} productBrand={product.brand} productSlug={product.slug} />}
