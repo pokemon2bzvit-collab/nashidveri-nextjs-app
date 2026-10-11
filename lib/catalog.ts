@@ -169,7 +169,7 @@ const withGeneratedDescription = (product: Product): Product => {
     ? normalizedSpecs
       .filter((spec) => spec !== heightSpec && spec !== nonstandardSizeSpec)
       .map((spec) => spec === widthSpec
-        ? { ...spec, label: "Розміри полотна", value: `ширина: ${spec.value}; висота: ${heightSpec?.value || "2000 мм"}${nonstandardSizeSpec ? ", можливий нестандартний розмір під замовлення" : ""}` }
+        ? { ...spec, label: "Розміри полотна", value: `ширина: ${spec.value}; висота: 2000 мм` }
         : spec)
     : normalizedSpecs;
   const maxSortOrder = Math.max(0, ...currentSpecs.map((spec) => spec.sortOrder));
