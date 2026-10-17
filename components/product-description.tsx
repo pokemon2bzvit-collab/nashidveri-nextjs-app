@@ -21,7 +21,7 @@ export function ProductDescription({ description }: { description: string }) {
       </button>
       <div className={`grid transition-[grid-template-rows,opacity,margin] duration-300 ease-out lg:mt-0 lg:grid-rows-[1fr] lg:opacity-100 ${isOpen ? "mt-4 grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"}`}>
         <div className="overflow-hidden">
-          <p className="max-w-lg text-base leading-7 text-stone-600 lg:text-lg lg:leading-8">{description}</p>
+          <p className="max-w-lg whitespace-pre-line text-base leading-7 text-stone-600 lg:text-lg lg:leading-8">{description}</p>
         </div>
       </div>
     </section>
