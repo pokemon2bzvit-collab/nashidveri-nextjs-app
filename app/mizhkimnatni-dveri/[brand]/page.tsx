@@ -56,7 +56,7 @@ export default async function InteriorBrandPage({ params }: { params: Promise<{ 
 
           <div className="mt-12">
             <p className="eyebrow">Каталог фабрики</p>
-            <h2 className="mt-3 font-display text-4xl font-semibold tracking-[-.04em]">Колекції</h2>
+            <h2 className="mt-3 font-display text-4xl font-semibold tracking-[-.04em]">{brand.slug === "darumi" ? "Моделі Darumi" : "Колекції"}</h2>
             <div className="mt-7 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
               {brand.collections.map((collection) => {
                 const preview = products.find((product) => product.collection === collection);
