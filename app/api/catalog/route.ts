@@ -1,6 +1,8 @@
 import { NextRequest, NextResponse } from "next/server";
 import { getCatalogBrowseData } from "@/lib/catalog";
 
+export const dynamic = "force-dynamic";
+
 export async function GET(request: NextRequest) {
   const params = request.nextUrl.searchParams;
   const data = await getCatalogBrowseData({
@@ -10,5 +12,5 @@ export async function GET(request: NextRequest) {
     priceRange: params.get("priceRange") || undefined, search: params.get("search") || undefined,
     offset: Number(params.get("offset") || 0), limit: Number(params.get("limit") || 24),
   });
-  return NextResponse.json(data, { headers: { "Cache-Control": "public, s-maxage=300, stale-while-revalidate=600" } });
+  return NextResponse.json(data, { headers: { "Cache-Control": "no-store, max-age=0" } });
 }
