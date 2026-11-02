@@ -7,7 +7,7 @@ import { ProductGrid } from "@/components/product-grid";
 import { BrandLogo } from "@/components/brand-logo";
 import { entranceBrands, getEntranceBrand } from "@/lib/entrance-brands";
 import { catalogImageUrl, getProducts } from "@/lib/catalog";
-import { getCollectionDescription } from "@/lib/collection-descriptions";
+import { getCollectionDescription, getCollectionDisplayName } from "@/lib/collection-descriptions";
 
 export function generateStaticParams() {
   return entranceBrands.map((brand) => ({ brand: brand.slug }));
@@ -67,9 +67,7 @@ export default async function EntranceBrandPage({ params }: { params: Promise<{ 
             <div className="mt-7 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
               {collections.map((collection) => {
                 const preview = products.find((product) => product.collection === collection);
-                const displayCollection = brand.slug === "rodos-steel"
-                  ? collection === "Квартира" ? "Вулиця" : collection === "Вулиця" ? "Квартира" : collection
-                  : collection;
+                const displayCollection = getCollectionDisplayName(brand.name, collection);
                 return (
                   <Link key={collection} href={`/catalog?brand=${encodeURIComponent(brand.name)}&collection=${encodeURIComponent(collection)}`} className="group overflow-hidden rounded-2xl border bg-white transition hover:border-clay">
                     <div className="flex min-h-44 gap-4 p-5">

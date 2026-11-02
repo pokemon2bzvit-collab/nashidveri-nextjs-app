@@ -3,6 +3,8 @@ import type { Category } from "@/lib/catalog";
 export function getCollectionDisplayName(brand: string, collection: string) {
   if (brand === "Rodos" && collection === "Atlantic ПВХ") return "Atlantic";
   if (brand === "Rodos" && collection === "Style ПВХ") return "Style";
+  if (brand === "Rodos Steel" && collection === "Квартира") return "Вулиця";
+  if (brand === "Rodos Steel" && collection === "Вулиця") return "Квартира";
   return collection;
 }
 
