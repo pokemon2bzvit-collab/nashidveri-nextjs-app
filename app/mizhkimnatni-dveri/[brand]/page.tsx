@@ -57,34 +57,38 @@ export default async function InteriorBrandPage({ params }: { params: Promise<{ 
           <div className="mt-12">
             <p className="eyebrow">Каталог фабрики</p>
             <h2 className="mt-3 font-display text-4xl font-semibold tracking-[-.04em]">{brand.slug === "darumi" ? "Моделі Darumi" : "Колекції"}</h2>
-            <div className="mt-7 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-              {brand.collections.map((collection) => {
-                const preview = products.find((product) => product.collection === collection);
-                return (
-                  <Link key={collection} href={`/catalog?brand=${encodeURIComponent(brand.name)}&collection=${encodeURIComponent(collection)}`} className="group overflow-hidden rounded-2xl border bg-white transition hover:border-clay">
-                    <div className="flex min-h-44 gap-4 p-5">
-                      <div className="min-w-0 flex-1">
-                        <p className="text-xl font-bold">{getCollectionDisplayName(brand.name, collection)}</p>
-                        <p className="mt-2 text-sm leading-5 text-stone-500">{getCollectionDescription(brand.name, collection, "interior")}</p>
-                        <span className="mt-4 inline-flex items-center gap-1 text-sm font-bold text-clay">Переглянути моделі <ArrowUpRight size={16} /></span>
+            {brand.slug === "darumi" ? (
+              products.length ? <div className="mt-7"><ProductGrid products={products} /></div> : <p className="mt-7 text-stone-600">Моделі цієї фабрики незабаром з’являться в каталозі.</p>
+            ) : (
+              <div className="mt-7 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+                {brand.collections.map((collection) => {
+                  const preview = products.find((product) => product.collection === collection);
+                  return (
+                    <Link key={collection} href={`/catalog?brand=${encodeURIComponent(brand.name)}&collection=${encodeURIComponent(collection)}`} className="group overflow-hidden rounded-2xl border bg-white transition hover:border-clay">
+                      <div className="flex min-h-44 gap-4 p-5">
+                        <div className="min-w-0 flex-1">
+                          <p className="text-xl font-bold">{getCollectionDisplayName(brand.name, collection)}</p>
+                          <p className="mt-2 text-sm leading-5 text-stone-500">{getCollectionDescription(brand.name, collection, "interior")}</p>
+                          <span className="mt-4 inline-flex items-center gap-1 text-sm font-bold text-clay">Переглянути моделі <ArrowUpRight size={16} /></span>
+                        </div>
+                        {preview && <div className="flex w-24 shrink-0 items-center justify-center rounded-xl bg-sand p-2">
+                          <img src={catalogImageUrl(preview.image)} alt={`${preview.name} — ${getCollectionDisplayName(brand.name, collection)}`} className="h-32 w-full object-contain transition duration-300 group-hover:scale-105" />
+                        </div>}
                       </div>
-                      {preview && <div className="flex w-24 shrink-0 items-center justify-center rounded-xl bg-sand p-2">
-                        <img src={catalogImageUrl(preview.image)} alt={`${preview.name} — ${getCollectionDisplayName(brand.name, collection)}`} className="h-32 w-full object-contain transition duration-300 group-hover:scale-105" />
-                      </div>}
-                    </div>
-                  </Link>
-                );
-              })}
-            </div>
+                    </Link>
+                  );
+                })}
+              </div>
+            )}
           </div>
 
-          <div className="mt-16">
+          {brand.slug !== "darumi" && <div className="mt-16">
             <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
               <div><BrandLogo brand={brand.name} className="h-7 max-w-[150px]" /><h2 className="mt-3 font-display text-4xl font-semibold tracking-[-.04em]">Популярні двері</h2></div>
               <Link href={`/catalog?brand=${encodeURIComponent(brand.name)}`} className="inline-flex items-center gap-2 text-sm font-bold text-clay">Усі моделі фабрики <ArrowUpRight size={16} /></Link>
             </div>
             {products.length ? <div className="mt-8"><ProductGrid products={products.slice(0, 9)} /></div> : <p className="mt-7 text-stone-600">Моделі цієї фабрики незабаром з’являться в каталозі.</p>}
-          </div>
+          </div>}
 
           <div className="mt-12 rounded-[1.5rem] border border-stone-200 bg-sand px-7 py-8 sm:flex sm:items-center sm:justify-between sm:px-9">
             <p className="max-w-xl font-display text-2xl leading-tight text-ink">Потрібна допомога з вибором дверей {brand.name}?</p>
