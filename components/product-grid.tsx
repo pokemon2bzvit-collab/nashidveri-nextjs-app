@@ -21,8 +21,9 @@ const productHighlights = (product: Product) => {
   if (/екошпон/.test(source)) highlights.push("Екошпон");
   if (/пвх/.test(source)) highlights.push("ПВХ");
   if (/фарб/.test(source) && !highlights.includes("ПВХ")) highlights.push("Фарба");
-  if (!highlights.length && product.category === "entrance" && product.collection === "Квартира") highlights.push("Для квартири");
-  if (!highlights.length && product.category === "entrance" && product.collection === "Вулиця") highlights.push("Для будинку");
+  const displayCollection = getCollectionDisplayName(product.brand, product.collection);
+  if (!highlights.length && product.category === "entrance" && displayCollection === "Квартира") highlights.push("Для квартири");
+  if (!highlights.length && product.category === "entrance" && displayCollection === "Вулиця") highlights.push("Для будинку");
   if (!highlights.length && product.category === "interior") highlights.push("Міжкімнатні");
   return highlights.slice(0, 2);
 };
