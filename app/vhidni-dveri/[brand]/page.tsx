@@ -67,12 +67,15 @@ export default async function EntranceBrandPage({ params }: { params: Promise<{ 
             <div className="mt-7 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
               {collections.map((collection) => {
                 const preview = products.find((product) => product.collection === collection);
+                const displayCollection = brand.slug === "rodos-steel"
+                  ? collection === "Квартира" ? "Вулиця" : collection === "Вулиця" ? "Квартира" : collection
+                  : collection;
                 return (
                   <Link key={collection} href={`/catalog?brand=${encodeURIComponent(brand.name)}&collection=${encodeURIComponent(collection)}`} className="group overflow-hidden rounded-2xl border bg-white transition hover:border-clay">
                     <div className="flex min-h-44 gap-4 p-5">
                       <div className="min-w-0 flex-1">
-                        <p className="text-xl font-bold">{collection}</p>
-                        <p className="mt-2 text-sm leading-5 text-stone-500">{getCollectionDescription(brand.name, collection, "entrance")}</p>
+                        <p className="text-xl font-bold">{displayCollection}</p>
+                        <p className="mt-2 text-sm leading-5 text-stone-500">{getCollectionDescription(brand.name, displayCollection, "entrance")}</p>
                         <span className="mt-4 inline-flex items-center gap-1 text-sm font-bold text-clay">Переглянути моделі <ArrowUpRight size={16} /></span>
                       </div>
                       {preview && <div className="flex w-24 shrink-0 items-center justify-center rounded-xl bg-sand p-2">
