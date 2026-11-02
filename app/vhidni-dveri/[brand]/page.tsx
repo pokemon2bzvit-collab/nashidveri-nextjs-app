@@ -39,6 +39,7 @@ export default async function EntranceBrandPage({ params }: { params: Promise<{ 
       if (leftIndex >= 0 || rightIndex >= 0) return (leftIndex >= 0 ? leftIndex : Number.MAX_SAFE_INTEGER) - (rightIndex >= 0 ? rightIndex : Number.MAX_SAFE_INTEGER);
       return left.localeCompare(right, "uk");
     });
+  const isRodosSteel = brand.slug === "rodos-steel";
 
   return (
     <SiteShell>
@@ -64,28 +65,32 @@ export default async function EntranceBrandPage({ params }: { params: Promise<{ 
           <div className="mt-12">
             <p className="eyebrow">Каталог фабрики</p>
             <h2 className="mt-3 font-display text-4xl font-semibold tracking-[-.04em]">Колекції</h2>
-            <div className="mt-7 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            <div className={`mt-7 grid gap-4 sm:grid-cols-2 ${isRodosSteel ? "lg:grid-cols-2" : "lg:grid-cols-3"}`}>
               {collections.map((collection) => {
                 const preview = products.find((product) => product.collection === collection);
                 const displayCollection = getCollectionDisplayName(brand.name, collection);
-                const previewSize = brand.slug === "rodos-steel"
-                  ? { container: "w-32", image: "h-40" }
-                  : { container: "w-24", image: "h-32" };
-                const previewImageFit = brand.slug === "rodos-steel" && collection !== "Складська програма"
-                  ? "object-cover"
-                  : "object-contain";
+                const isStockProgram = collection === "Складська програма";
                 return (
-                  <Link key={collection} href={`/catalog?brand=${encodeURIComponent(brand.name)}&collection=${encodeURIComponent(collection)}`} className="group overflow-hidden rounded-2xl border bg-white transition hover:border-clay">
-                    <div className="flex min-h-44 gap-4 p-5">
+                  <Link key={collection} href={`/catalog?brand=${encodeURIComponent(brand.name)}&collection=${encodeURIComponent(collection)}`} className={`group overflow-hidden rounded-2xl border bg-white transition hover:border-clay ${isRodosSteel && isStockProgram ? "sm:col-span-2" : ""}`}>
+                    {isRodosSteel ? <>
+                      <div className={`flex w-full items-center justify-center bg-[#f7f5f1] p-3 ${isStockProgram ? "aspect-[2/1]" : "aspect-[4/3]"}`}>
+                        {preview && <img src={catalogImageUrl(preview.image)} alt={`${preview.name} — ${displayCollection}`} className="h-full w-full object-contain transition duration-300 group-hover:scale-[1.02]" />}
+                      </div>
+                      <div className="p-5 sm:p-6">
+                        <p className="text-xl font-bold">{displayCollection}</p>
+                        <p className="mt-2 text-sm leading-5 text-stone-500">{getCollectionDescription(brand.name, displayCollection, "entrance")}</p>
+                        <span className="mt-4 inline-flex items-center gap-1 text-sm font-bold text-clay">Переглянути моделі <ArrowUpRight size={16} /></span>
+                      </div>
+                    </> : <div className="flex min-h-44 gap-4 p-5">
                       <div className="min-w-0 flex-1">
                         <p className="text-xl font-bold">{displayCollection}</p>
                         <p className="mt-2 text-sm leading-5 text-stone-500">{getCollectionDescription(brand.name, displayCollection, "entrance")}</p>
                         <span className="mt-4 inline-flex items-center gap-1 text-sm font-bold text-clay">Переглянути моделі <ArrowUpRight size={16} /></span>
                       </div>
-                      {preview && <div className={`flex ${previewSize.container} shrink-0 items-center justify-center rounded-xl bg-sand p-1.5`}>
-                        <img src={catalogImageUrl(preview.image)} alt={`${preview.name} — ${displayCollection}`} className={`${previewSize.image} w-full ${previewImageFit} transition duration-300 group-hover:scale-105`} />
+                      {preview && <div className="flex w-24 shrink-0 items-center justify-center rounded-xl bg-sand p-2">
+                        <img src={catalogImageUrl(preview.image)} alt={`${preview.name} — ${displayCollection}`} className="h-32 w-full object-contain transition duration-300 group-hover:scale-105" />
                       </div>}
-                    </div>
+                    </div>}
                   </Link>
                 );
               })}
