@@ -105,11 +105,26 @@ export default async function EntranceBrandPage({ params }: { params: Promise<{ 
                   </Link>
                 );
               })}
+              {brand.slug === "rodos-steel" && stockProgramProducts.length > 0 && (() => {
+                const preview = stockProgramProducts[0];
+                return <Link href="#rodos-steel-stock-program" className="group overflow-hidden rounded-2xl border bg-white transition hover:border-clay">
+                  <div className="flex min-h-44 gap-4 p-5">
+                    <div className="min-w-0 flex-1">
+                      <p className="text-xl font-bold">Складська програма</p>
+                      <p className="mt-2 text-sm leading-5 text-stone-500">Моделі Rodos Steel зі складської програми. Актуальну наявність уточнюйте у менеджера.</p>
+                      <span className="mt-4 inline-flex items-center gap-1 text-sm font-bold text-clay">Переглянути моделі <ArrowUpRight size={16} /></span>
+                    </div>
+                    <div className="flex w-24 shrink-0 items-center justify-center rounded-xl bg-sand p-2">
+                      <img src={catalogImageUrl(preview.image)} alt={`${preview.name} — складська програма Rodos Steel`} className="h-32 w-full object-contain transition duration-300 group-hover:scale-105" />
+                    </div>
+                  </div>
+                </Link>;
+              })()}
             </div>
             {brand.slug === "rodos-steel" && stockProgramProducts.length > 0 && <div className="mt-12">
               <div className="max-w-2xl">
-                <h3 className="font-display text-3xl font-semibold tracking-[-.04em]">Складська програма</h3>
-                <p className="mt-2 text-sm leading-6 text-stone-600">Моделі серії «Склад RS». Актуальну наявність, розмір і комплектацію уточнюйте у менеджера.</p>
+                <h3 id="rodos-steel-stock-program" className="font-display text-3xl font-semibold tracking-[-.04em]">Складська програма</h3>
+                <p className="mt-2 text-sm leading-6 text-stone-600">Актуальну наявність, розмір і комплектацію моделей уточнюйте у менеджера.</p>
               </div>
               <div className="mt-6"><ProductGrid products={stockProgramProducts} /></div>
             </div>}
