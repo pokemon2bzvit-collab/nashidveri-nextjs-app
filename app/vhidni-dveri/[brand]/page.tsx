@@ -6,7 +6,7 @@ import { SiteShell } from "@/components/site-shell";
 import { ProductGrid } from "@/components/product-grid";
 import { BrandLogo } from "@/components/brand-logo";
 import { entranceBrands, getEntranceBrand } from "@/lib/entrance-brands";
-import { catalogImageUrl, getProducts } from "@/lib/catalog";
+import { catalogImageUrl, getProducts, getProductsWithSpecs } from "@/lib/catalog";
 import { getCollectionDescription } from "@/lib/collection-descriptions";
 
 export function generateStaticParams() {
@@ -28,6 +28,10 @@ export default async function EntranceBrandPage({ params }: { params: Promise<{ 
   if (!brand) notFound();
   if (brand.name === "Страж") redirect(`/catalog?brand=${encodeURIComponent(brand.name)}`);
   const products = (await getProducts()).filter((product) => product.brand === brand.name);
+  const productsWithSpecs = brand.slug === "rodos-steel" ? await getProductsWithSpecs(products) : products;
+  const stockProgramProducts = productsWithSpecs.filter((product) => product.specs?.some((spec) =>
+    spec.label.trim().toLocaleLowerCase("uk") === "серія" && /склад\s*rs|складська програма/i.test(spec.value),
+  ));
   const collectionOrder = brand.name === "Abwehr"
     ? ["Nova", "Classic Prime", "Megapolis", "Grand", "City", "Frame", "Bionica Combo", "Termix", "Defender"]
     : [];
@@ -64,6 +68,13 @@ export default async function EntranceBrandPage({ params }: { params: Promise<{ 
           <div className="mt-12">
             <p className="eyebrow">Каталог фабрики</p>
             <h2 className="mt-3 font-display text-4xl font-semibold tracking-[-.04em]">Колекції</h2>
+            {brand.slug === "rodos-steel" && stockProgramProducts.length > 0 && <div className="mt-9">
+              <div className="max-w-2xl">
+                <h3 className="font-display text-3xl font-semibold tracking-[-.04em]">Складська програма</h3>
+                <p className="mt-2 text-sm leading-6 text-stone-600">Моделі серії «Склад RS». Актуальну наявність, розмір і комплектацію уточнюйте у менеджера.</p>
+              </div>
+              <div className="mt-6"><ProductGrid products={stockProgramProducts} /></div>
+            </div>}
             <div className="mt-7 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
               {collections.map((collection) => {
                 const preview = products.find((product) => product.collection === collection);
