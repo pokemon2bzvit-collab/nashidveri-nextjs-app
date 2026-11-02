@@ -30,7 +30,7 @@ export default async function EntranceBrandPage({ params }: { params: Promise<{ 
   const products = (await getProducts()).filter((product) => product.brand === brand.name);
   const collectionOrder = brand.name === "Abwehr"
     ? ["Nova", "Classic Prime", "Megapolis", "Grand", "City", "Frame", "Bionica Combo", "Termix", "Defender"]
-    : brand.slug === "rodos-steel" ? ["Вулиця", "Квартира", "Складська програма"] : [];
+    : brand.slug === "rodos-steel" ? ["Квартира", "Вулиця", "Складська програма"] : [];
   const collections = [...new Set(products.map((product) => product.collection))]
     .filter((collection) => !(brand.name === "Abwehr" && ["Квартира", "Вулиця"].includes(collection)))
     .sort((left, right) => {
