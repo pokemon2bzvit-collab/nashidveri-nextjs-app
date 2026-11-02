@@ -9,23 +9,6 @@ import { entranceBrands, getEntranceBrand } from "@/lib/entrance-brands";
 import { catalogImageUrl, getProducts } from "@/lib/catalog";
 import { getCollectionDescription } from "@/lib/collection-descriptions";
 
-// Окремий список «Складська програма» з офіційного каталогу Rodos Steel.
-// Це група каталогу, а не перевірка поточної фізичної наявності.
-const rodosSteelStockProgramSlugs = new Set([
-  "rodos-official-1n92ed9", // F114
-  "rodos-official-t7a3qa", // F124 LTL 6515
-  "rodos-official-1rhs1v", // F124 LTL 6908
-  "rodos-official-1vzimf6", // F144
-  "rodos-official-1n92ec3", // F129
-  "rodos-official-1jb31c9", // F162 RAL 7016
-  "rodos-official-ug219x", // F162 RAL 8017
-  "rodos-official-vr68i9", // F166 Ardesia Nero
-  "rodos-official-1va3l7w", // F203 Графіт
-  "rodos-official-1xykyfg", // F203 Дерево
-  "rodos-official-1lx612j", // F204 Графіт
-  "rodos-official-1mfx6ff", // F204 Дерево
-]);
-
 export function generateStaticParams() {
   return entranceBrands.map((brand) => ({ brand: brand.slug }));
 }
@@ -45,12 +28,9 @@ export default async function EntranceBrandPage({ params }: { params: Promise<{ 
   if (!brand) notFound();
   if (brand.name === "Страж") redirect(`/catalog?brand=${encodeURIComponent(brand.name)}`);
   const products = (await getProducts()).filter((product) => product.brand === brand.name);
-  const stockProgramProducts = brand.slug === "rodos-steel"
-    ? products.filter((product) => rodosSteelStockProgramSlugs.has(product.slug))
-    : [];
   const collectionOrder = brand.name === "Abwehr"
     ? ["Nova", "Classic Prime", "Megapolis", "Grand", "City", "Frame", "Bionica Combo", "Termix", "Defender"]
-    : [];
+    : brand.slug === "rodos-steel" ? ["Вулиця", "Квартира", "Складська програма"] : [];
   const collections = [...new Set(products.map((product) => product.collection))]
     .filter((collection) => !(brand.name === "Abwehr" && ["Квартира", "Вулиця"].includes(collection)))
     .sort((left, right) => {
@@ -105,29 +85,7 @@ export default async function EntranceBrandPage({ params }: { params: Promise<{ 
                   </Link>
                 );
               })}
-              {brand.slug === "rodos-steel" && stockProgramProducts.length > 0 && (() => {
-                const preview = stockProgramProducts[0];
-                return <Link href="#rodos-steel-stock-program" className="group overflow-hidden rounded-2xl border bg-white transition hover:border-clay">
-                  <div className="flex min-h-44 gap-4 p-5">
-                    <div className="min-w-0 flex-1">
-                      <p className="text-xl font-bold">Складська програма</p>
-                      <p className="mt-2 text-sm leading-5 text-stone-500">Моделі Rodos Steel зі складської програми. Актуальну наявність уточнюйте у менеджера.</p>
-                      <span className="mt-4 inline-flex items-center gap-1 text-sm font-bold text-clay">Переглянути моделі <ArrowUpRight size={16} /></span>
-                    </div>
-                    <div className="flex w-24 shrink-0 items-center justify-center rounded-xl bg-sand p-2">
-                      <img src={catalogImageUrl(preview.image)} alt={`${preview.name} — складська програма Rodos Steel`} className="h-32 w-full object-contain transition duration-300 group-hover:scale-105" />
-                    </div>
-                  </div>
-                </Link>;
-              })()}
             </div>
-            {brand.slug === "rodos-steel" && stockProgramProducts.length > 0 && <div className="mt-12">
-              <div className="max-w-2xl">
-                <h3 id="rodos-steel-stock-program" className="font-display text-3xl font-semibold tracking-[-.04em]">Складська програма</h3>
-                <p className="mt-2 text-sm leading-6 text-stone-600">Актуальну наявність, розмір і комплектацію моделей уточнюйте у менеджера.</p>
-              </div>
-              <div className="mt-6"><ProductGrid products={stockProgramProducts} /></div>
-            </div>}
           </div>
 
           <div className="mt-16">
