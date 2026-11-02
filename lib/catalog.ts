@@ -265,26 +265,6 @@ export async function getProducts(): Promise<Product[]> {
   }
 }
 
-export async function getProductsWithSpecs(items: Product[]): Promise<Product[]> {
-  if (!supabaseKey || !items.length) return items;
-  const headers = { apikey: supabaseKey, Authorization: `Bearer ${supabaseKey}` };
-  const productFilter = `product_slug=in.(${items.map((item) => encodeURIComponent(item.slug)).join(",")})`;
-  try {
-    const response = await fetch(`${supabaseUrl}/rest/v1/product_specs?select=product_slug,label,value,sort_order&is_active=eq.true&${productFilter}&order=sort_order.asc`, {
-      headers,
-      next: { revalidate: 300 },
-    });
-    if (!response.ok) throw new Error(`Supabase returned ${response.status}`);
-    const rows = await response.json() as ProductSpecRow[];
-    const specsByProduct = new Map<string, ProductSpec[]>();
-    rows.forEach((row) => specsByProduct.set(row.product_slug, [...(specsByProduct.get(row.product_slug) || []), mapSpec(row)]));
-    return items.map((item) => ({ ...item, specs: specsByProduct.get(item.slug) || [] }));
-  } catch (error) {
-    console.error("Could not load product specs for brand page", error);
-    return items;
-  }
-}
-
 export async function getRelatedProducts(product: Pick<Product, "slug" | "brand" | "collection">, limit = 3): Promise<Product[]> {
   const fallback = () => products
     .filter((item) => item.brand === product.brand && item.collection === product.collection && item.slug !== product.slug)

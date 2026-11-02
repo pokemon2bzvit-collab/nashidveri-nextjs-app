@@ -6,8 +6,25 @@ import { SiteShell } from "@/components/site-shell";
 import { ProductGrid } from "@/components/product-grid";
 import { BrandLogo } from "@/components/brand-logo";
 import { entranceBrands, getEntranceBrand } from "@/lib/entrance-brands";
-import { catalogImageUrl, getProducts, getProductsWithSpecs } from "@/lib/catalog";
+import { catalogImageUrl, getProducts } from "@/lib/catalog";
 import { getCollectionDescription } from "@/lib/collection-descriptions";
+
+// Окремий список «Складська програма» з офіційного каталогу Rodos Steel.
+// Це група каталогу, а не перевірка поточної фізичної наявності.
+const rodosSteelStockProgramSlugs = new Set([
+  "rodos-official-1n92ed9", // F114
+  "rodos-official-t7a3qa", // F124 LTL 6515
+  "rodos-official-1rhs1v", // F124 LTL 6908
+  "rodos-official-1vzimf6", // F144
+  "rodos-official-1n92ec3", // F129
+  "rodos-official-1jb31c9", // F162 RAL 7016
+  "rodos-official-ug219x", // F162 RAL 8017
+  "rodos-official-vr68i9", // F166 Ardesia Nero
+  "rodos-official-1va3l7w", // F203 Графіт
+  "rodos-official-1xykyfg", // F203 Дерево
+  "rodos-official-1lx612j", // F204 Графіт
+  "rodos-official-1mfx6ff", // F204 Дерево
+]);
 
 export function generateStaticParams() {
   return entranceBrands.map((brand) => ({ brand: brand.slug }));
@@ -28,10 +45,9 @@ export default async function EntranceBrandPage({ params }: { params: Promise<{ 
   if (!brand) notFound();
   if (brand.name === "Страж") redirect(`/catalog?brand=${encodeURIComponent(brand.name)}`);
   const products = (await getProducts()).filter((product) => product.brand === brand.name);
-  const productsWithSpecs = brand.slug === "rodos-steel" ? await getProductsWithSpecs(products) : products;
-  const stockProgramProducts = productsWithSpecs.filter((product) => product.specs?.some((spec) =>
-    spec.label.trim().toLocaleLowerCase("uk") === "серія" && /склад\s*rs|складська програма/i.test(spec.value),
-  ));
+  const stockProgramProducts = brand.slug === "rodos-steel"
+    ? products.filter((product) => rodosSteelStockProgramSlugs.has(product.slug))
+    : [];
   const collectionOrder = brand.name === "Abwehr"
     ? ["Nova", "Classic Prime", "Megapolis", "Grand", "City", "Frame", "Bionica Combo", "Termix", "Defender"]
     : [];
